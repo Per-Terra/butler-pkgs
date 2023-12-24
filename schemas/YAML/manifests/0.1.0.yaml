@@ -89,7 +89,7 @@ definitions:
         $ref: "#/definitions/InstallMethod"
         default: SymbolicLink
     required:
-      - Path
+      - TargetPath
   FileInArchive:
     type: object
     properties:
