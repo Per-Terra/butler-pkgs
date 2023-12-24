@@ -1,0 +1,41 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: exedit
+DisplayName: 拡張編集
+Version: 0.71b
+ReleaseDate: 2009-05-12
+Section: Core
+Architecture: x86
+Depends:
+- aviutl (>> 0.99f)
+InstalledSize: 419
+Developer:
+- KEN-kun
+Description: |-
+  編集機能を追加するプラグインです。
+  AviUtlで複数の映像、画像、テキスト等を任意の場所に表示したり、フィルタを任意の場所に指定したりすることが出来るプラグインです。SSE2が使えるCPUが必要です。
+Website:
+- https://spring-fragrance.mints.ne.jp/aviutl/
+Files:
+- SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/exedit71b.zip
+  SHA256: 4be91d877c3902c7b6867a417036f0fbdbd651d7f57d95d812d8783fe365b94a
+  Files:
+  - Path: exedit.auf
+    SHA256: 9b8f283af39308da1e594f9d93bb78e1a6e1a04ec3599ffdae63e7f005b431f9
+    Install:
+      TargetPath: exedit.auf
+  - Path: exedit.aui
+    SHA256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
+    Install:
+      TargetPath: exedit.aui
+  - Path: exedit.auo
+    SHA256: ee3c6e0217681adba63b6b7b738d1d57230ac66bb5c721f06546c633734587e2
+    Install:
+      TargetPath: exedit.auo
+  - Path: exedit.ini
+    SHA256: 062b8ed86357167b43c9f2b17b14e2542597afc17efea0b90bf6ca9d40381545
+    Install:
+      TargetPath: exedit.ini
+  - Path: exedit.txt
+    SHA256: 2b2dd10251d8b04c10716e1c04f057cbdf00004dfa4c4232ddff92e7f3096e32

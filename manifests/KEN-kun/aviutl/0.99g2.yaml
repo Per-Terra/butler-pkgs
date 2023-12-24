@@ -1,0 +1,33 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: aviutl
+DisplayName: AviUtl
+Version: 0.99g2
+ReleaseDate: 2008-12-07
+Section: Core
+Architecture: x86
+InstalledSize: 871
+Developer:
+- KEN-kun
+Description: |-
+  AVIファイルにフィルタ等をかけるツールです。
+  簡単な編集や他のcodecのAVIに変換も出来ます。
+  フィルタ部分にMMXを使っていますのでMMX専用です。
+  皆さんの動画作成のお役に立てば幸いです。
+  (aviutl.txtより)
+Website:
+- https://spring-fragrance.mints.ne.jp/aviutl/
+Files:
+- SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/aviutl99g2.zip
+  SHA256: eec590093cb37e86cd872d3ebd20c4102cc70e011c587c4bb32a32e8ec6d8a74
+  Files:
+  - Path: aviutl.exe
+    SHA256: b7d7f82260e337c54d4e0ada4fcd9ecd3e648727b9a02217cfb678958689185f
+    Install:
+      TargetPath: aviutl.exe
+      Method: Copy
+  - Path: aviutl.txt
+    SHA256: 22855b28a57d6a0e3905fe6c0da792f147637531965ead9e4fd110089040e03b
+  - Path: aviutl.vfp
+    SHA256: dbc0b3fdb63102e78ee0a949c43ba235ac06183c72e7a143128eae43fa1c99a2

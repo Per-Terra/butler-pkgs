@@ -1,0 +1,63 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: exedit
+DisplayName: 拡張編集
+Version: 0.89l
+ReleaseDate: 2011-12-26
+Section: Core
+Architecture: x86
+Depends:
+- aviutl (>> 0.99k)
+InstalledSize: 1200
+Developer:
+- KEN-kun
+Description: |-
+  編集機能を追加するプラグインです。
+  AviUtlで複数の映像、画像、テキスト等を任意の場所に表示したり、フィルタを任意の場所に指定したりすることが出来るプラグインです。SSE2が使えるCPUが必要です。
+Website:
+- https://spring-fragrance.mints.ne.jp/aviutl/
+Files:
+- SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/exedit89l.zip
+  SHA256: 20dbb7eaaa1fea619dd3498bbd4c65377bebc493a530be424f1f8b5ab0c79f60
+  Files:
+  - Path: exedit.anm
+    SHA256: 11b574f6998b8ba46695e8a0208907665713ed3762468e900c53ac98439b0794
+    Install:
+      TargetPath: exedit.anm
+  - Path: exedit.auf
+    SHA256: c807395894341c14bf55625d5de95e2fe68cff37d8087af11e0ebd16d0951da2
+    Install:
+      TargetPath: exedit.auf
+  - Path: exedit.aui
+    SHA256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
+    Install:
+      TargetPath: exedit.aui
+  - Path: exedit.auo
+    SHA256: b021b4e6f93140cb15121c064f7410d5d41fa078d70040ea3dd5a119955970de
+    Install:
+      TargetPath: exedit.auo
+  - Path: exedit.cam
+    SHA256: 5587c585dc64f3ed4ad07b756012a2014d9a5a3a5e021c1780f6787d2125bda4
+    Install:
+      TargetPath: exedit.cam
+  - Path: exedit.ini
+    SHA256: 87fc467bde664fdbb6b2ae19b549396746c21925d9e62f5decf32d8bd15a37f8
+    Install:
+      TargetPath: exedit.ini
+  - Path: exedit.obj
+    SHA256: 737aacd8a0642a1dde15585df0a70a0f84cf1ead236f0a4a12a7ea40ef3a8d75
+    Install:
+      TargetPath: exedit.obj
+  - Path: exedit.scn
+    SHA256: 6c074392b68d690d28359797cfc277df1175a73ea89f6522986d6c3cc7220d5c
+    Install:
+      TargetPath: exedit.scn
+  - Path: exedit.txt
+    SHA256: d5d49395c8261b1d3d96724066e56a4607e11f7a2fc82e3e724b023ae3bfda51
+  - Path: lua.txt
+    SHA256: 6cdeb8d92e46d3ca55805aff120ccd967d78380229c5b6fef4a09667f1bba1e2
+  - Path: lua51.dll
+    SHA256: f726b46ef35a9aee5d08752c2b4ef6f568067033360070e09a5a4f924ab422d1
+    Install:
+      TargetPath: lua51.dll

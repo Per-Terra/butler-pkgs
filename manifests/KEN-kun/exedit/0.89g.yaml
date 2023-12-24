@@ -1,0 +1,59 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: exedit
+DisplayName: 拡張編集
+Version: 0.89g
+ReleaseDate: 2011-10-02
+Section: Core
+Architecture: x86
+Depends:
+- aviutl (>> 0.99k)
+InstalledSize: 1130
+Developer:
+- KEN-kun
+Description: |-
+  編集機能を追加するプラグインです。
+  AviUtlで複数の映像、画像、テキスト等を任意の場所に表示したり、フィルタを任意の場所に指定したりすることが出来るプラグインです。SSE2が使えるCPUが必要です。
+Website:
+- https://spring-fragrance.mints.ne.jp/aviutl/
+Files:
+- SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/exedit89g.zip
+  SHA256: 58c94f58b3b90bfdfdbc8d117b1a2cb85cb55230d2ab75d5447557043d73ae1b
+  Files:
+  - Path: exedit.anm
+    SHA256: 070cfdab324be1f5992d63686a8d5b01bdbc288d0686561f89781dffdfa768c2
+    Install:
+      TargetPath: exedit.anm
+  - Path: exedit.auf
+    SHA256: 4b1f4f8ed796ef632886042f9782d0ccf4664668ba4e902fc0d0c47328efd0dd
+    Install:
+      TargetPath: exedit.auf
+  - Path: exedit.aui
+    SHA256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
+    Install:
+      TargetPath: exedit.aui
+  - Path: exedit.auo
+    SHA256: b021b4e6f93140cb15121c064f7410d5d41fa078d70040ea3dd5a119955970de
+    Install:
+      TargetPath: exedit.auo
+  - Path: exedit.ini
+    SHA256: 87fc467bde664fdbb6b2ae19b549396746c21925d9e62f5decf32d8bd15a37f8
+    Install:
+      TargetPath: exedit.ini
+  - Path: exedit.obj
+    SHA256: 985fec710553660671fe9cb38f8de2af9a5bf605c7df6d2373937bb03395b2bd
+    Install:
+      TargetPath: exedit.obj
+  - Path: exedit.scn
+    SHA256: 0d75628dd7b5788e7ec7070d483d7a6f0eb8d1148dbb02ff2e854b88022b5e27
+    Install:
+      TargetPath: exedit.scn
+  - Path: exedit.txt
+    SHA256: e6d048c7acf6db8f974c49df7fe2671b1f334d888e69ead4104e61442118af1a
+  - Path: lua.txt
+    SHA256: 14e296b2633e764f375ee059e08ac272c953d388fcb425a5fbc64f527db2ad6a
+  - Path: lua51.dll
+    SHA256: f726b46ef35a9aee5d08752c2b4ef6f568067033360070e09a5a4f924ab422d1
+    Install:
+      TargetPath: lua51.dll
