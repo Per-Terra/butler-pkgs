@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=http://json-schema.org/draft-07/schema#
+
+$schema: http://json-schema.org/draft-07/schema#
+$id: https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+title: BUtler Developer Schema v0.1.0
+
+definitions:
+  Identifier:
+    # 英数字と記号(+-.)の組み合わせ, 記号を連続して使うことはできない
+    type: string
+    pattern: ^[0-9A-Za-z]+(?:[+\-.][0-9A-Za-z]+)*$
+  DisplayName:
+    # 先頭と末尾に空白を含まない
+    type: string
+    pattern: ^\S(?:.*\S)?$
+  Url:
+    type: string
+    pattern: ^https?://.+$
+
+type: object
+
+properties:
+  Identifier:
+    $ref: "#/definitions/Identifier"
+  DisplayName:
+    $ref: "#/definitions/DisplayName"
+  Website:
+    type: array
+    items:
+      $ref: "#/definitions/Url"
+  ManifestVersion:
+    type: integer
+    minimum: 0
+    maximum: 0
+    default: 0
+
+required:
+  - Identifier
