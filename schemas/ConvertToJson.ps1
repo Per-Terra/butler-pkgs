@@ -36,7 +36,7 @@ $yamlFiles | ForEach-Object {
     Get-Content -Path $_.FullName -Raw |
     ConvertFrom-Yaml -Ordered |
     ConvertTo-JSON -Depth 100 |
-    Out-File -FilePath $jsonPath -Encoding $Utf8NoBomEncoding
+    Out-File -FilePath $jsonPath -Encoding $Utf8NoBomEncoding -Force
   } catch {
     throw "Failed to convert $_ to JSON"
   }
