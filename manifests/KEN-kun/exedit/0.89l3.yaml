@@ -61,3 +61,4 @@ Files:
     SHA256: f726b46ef35a9aee5d08752c2b4ef6f568067033360070e09a5a4f924ab422d1
     Install:
       TargetPath: lua51.dll
+ManifestVersion: 0

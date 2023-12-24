@@ -39,3 +39,4 @@ Files:
       TargetPath: exedit.ini
   - Path: exedit.txt
     SHA256: 5420815db3756c6379bb1377438b34024513caa6840539389fe6ae21df9f8650
+ManifestVersion: 0
