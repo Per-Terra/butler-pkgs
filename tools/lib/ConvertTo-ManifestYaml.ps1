@@ -92,7 +92,7 @@ function ConvertTo-ManifestYaml {
   }
 
   foreach ($key in $Schema.properties.psobject.Properties.Name) {
-    if ($Manifest[$key]) {
+    if ($null -ne $Manifest[$key]) {
       if ($key -eq 'Files') {
         $orderedManifest[$key] = @()
         foreach ($file in $Manifest[$key]) {
@@ -121,9 +121,11 @@ function ConvertTo-ManifestYaml {
       }
       else {
         if ($Schema.properties.$key.type -eq 'array') {
-          $orderedManifest[$key] = @()
-          foreach ($item in $Manifest[$key]) {
-            $orderedManifest[$key] += $item
+          if ($Manifest[$key]) {
+            $orderedManifest[$key] = @()
+            foreach ($item in $Manifest[$key]) {
+              $orderedManifest[$key] += $item
+            }
           }
         }
         else {
