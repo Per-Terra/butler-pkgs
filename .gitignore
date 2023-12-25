@@ -1,1 +1,5 @@
-tools/tmp/
+/tools/tmp/
+
+# release
+/contents.json*
+/release.yaml
