@@ -69,4 +69,4 @@ Files:
     SHA256: b91933c86abd5e90bdfeb1302a1b60fabfb5a4b2d1f3306876dcde52b4b15698
     Install:
       TargetPath: lua51jit.dll
-ManifestVersion: 0
+ManifestVersion: 0.1.0

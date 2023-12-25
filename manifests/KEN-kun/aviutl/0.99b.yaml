@@ -31,4 +31,4 @@ Files:
     SHA256: 964fda26fc5e7168fdea94c6c2abfddf8d1c45c9625c038b90f3c3940a3b0737
   - Path: aviutl.vfp
     SHA256: 1453e8542ca34be25e01f7ee1077e26ee58bd802f58f4e47797c8eaf54937ae6
-ManifestVersion: 0
+ManifestVersion: 0.1.0

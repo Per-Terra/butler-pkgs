@@ -313,10 +313,9 @@ properties:
   ManifestVersion:
     description: |-
       (必須) パッケージマニフェストのバージョンです。
-    type: integer
-    minimum: 0
-    maximum: 0
-    default: 0
+    type: string
+    enum:
+      - 0.1.0
 
 required:
   - Identifier

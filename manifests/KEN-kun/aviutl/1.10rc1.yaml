@@ -29,4 +29,4 @@ Files:
       Method: Copy
   - Path: aviutl.txt
     SHA256: 80ef85c3575fd4db72818a6600e59f2f916500a72df4d8c1ee6ee3b2c885cb38
-ManifestVersion: 0
+ManifestVersion: 0.1.0
