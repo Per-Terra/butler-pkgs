@@ -122,8 +122,8 @@ function Test-PackageManifest {
 
   if ($Manifest) {
     foreach ($field in $Schema.properties.psobject.Properties.Name) {
-      $value = $Manifest[$field]
-      if ([string]::IsNullOrEmpty($value)) {
+      $v = $Manifest[$field]
+      if ([string]::IsNullOrEmpty($v)) {
         if ($Schema.required -contains $field) {
           Write-Warning -Message "必須フィールドがありません: '$field'"
           $isValid = $false
@@ -132,22 +132,22 @@ function Test-PackageManifest {
       }
       if ($Patterns.ContainsKey($field)) {
         $pattern = $Patterns[$field]
-        if ($value -is [string]) {
+        if ($v -is [string]) {
           if ($pattern -is [array]) {
-            if ($pattern -notcontains $value) {
-              Write-Warning -Message "フィールド '$field' の値が正しくありません: $value"
+            if ($pattern -notcontains $v) {
+              Write-Warning -Message "フィールド '$field' の値が正しくありません: $v"
               Write-Warning -Message "次の値のいずれかに一致する必要があります: $($pattern -join ', ')"
               $isValid = $false
             }
           }
-          elseif ($value -notmatch $pattern) {
-            Write-Warning -Message "フィールド '$field' の値が正しくありません: $value"
+          elseif ($v -notmatch $pattern) {
+            Write-Warning -Message "フィールド '$field' の値が正しくありません: $v"
             Write-Warning -Message "次の正規表現に一致する必要があります: $pattern"
             $isValid = $false
           }
         }
-        elseif ($value -is [array]) {
-          foreach ($item in $value) {
+        elseif ($v -is [array]) {
+          foreach ($item in $v) {
             if ($item -is [string]) {
               if ($pattern -is [array]) {
                 if ($pattern -notcontains $item) {
