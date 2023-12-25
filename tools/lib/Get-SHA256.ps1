@@ -7,17 +7,19 @@ filter Get-SHA256 {
   )
 
   $Path | ForEach-Object {
-    Write-Verbose -Message "Getting SHA256 hash for: $_"
+    Write-Verbose -Message "ファイルのSHA256ハッシュ値を計算しています: $_"
     if (Test-Path -Path $_) {
       try {
-        return (Get-FileHash -Path $_ -Algorithm SHA256).Hash.ToLower()
+        $hash = (Get-FileHash -Path $_ -Algorithm SHA256).Hash.ToLower()
+        Write-Verbose -Message "ファイルのSHA256ハッシュ値を計算しました: $hash"
+        return $hash
       }
       catch {
-        Write-Error -Message "Failed to get SHA256 hash for: $_"
+        throw "ファイルのSHA256ハッシュ値の計算に失敗しました: $_"
       }
     }
     else {
-      Write-Error -Message "Path does not exist: $_"
+      throw [System.IO.FileNotFoundException]::new("指定されたファイルが見つかりません: $_")
     }
   }
 }

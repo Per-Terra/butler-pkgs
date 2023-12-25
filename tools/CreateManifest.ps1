@@ -25,13 +25,32 @@ param (
   [switch]$Force
 )
 
+### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
+# powershell-yaml のインストール
+if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
+  try {
+    Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
+  }
+  catch {
+    throw "'powershell-yaml' のインストールに失敗しました"
+  }
+  finally {
+    # Double check that it was installed properly
+    if (-not(Get-Module -ListAvailable -Name powershell-yaml)) {
+      throw "'powershell-yaml' が見つかりません"
+    }
+  }
+}
+###
+
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/ConvertTo-ManifestYaml.ps1')
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Get-FileFromUrl.ps1')
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Get-SHA256.ps1')
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-PackageManifest.ps1')
-. (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-Url.ps1')
+. (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-UrlFormat.ps1')
 
 $ScriptVersion = '0.1.0'
+$ManifestVersion = '0.1.0'
 $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 
 # $test = @{
@@ -63,31 +82,11 @@ $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 #     }
 #   )
 #   ConfFiles       = @('test')
-#   ManifestVersion = 0
+#   ManifestVersion = $ManifestVersion
 # }
 
 # ConvertTo-ManifestYaml -Manifest $test
 # exit 0
-
-### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
-### modified: Remove the NuGet installation and throw without type
-# Installs `7Zip4Powershell` as a dependency for parsing yaml content
-if (-not(Get-Module -ListAvailable -Name '7Zip4Powershell')) {
-  try {
-    Install-Module -Name '7Zip4Powershell' -Force -Repository PSGallery -Scope CurrentUser
-  }
-  catch {
-    # If there was an exception while installing 7Zip4Powershell, pass it as an InternalException for further debugging
-    throw "'7Zip4Powershell' unable to be installed successfully"
-  }
-  finally {
-    # Double check that it was installed properly
-    if (-not(Get-Module -ListAvailable -Name 7Zip4Powershell)) {
-      throw "'7Zip4Powershell' is not found"
-    }
-  }
-}
-###
 
 function Get-FilesInArchive {
   param (
@@ -98,7 +97,7 @@ function Get-FilesInArchive {
     [string]$TargetPath
   )
 
-  Write-Information -MessageData "アーカイブを展開しています: $ArchiveFileName" -InformationAction Continue
+  Write-Host -Object "アーカイブを展開しています: $ArchiveFileName"
   Expand-7Zip -ArchiveFileName $ArchiveFileName -TargetPath $TargetPath
 
   $files = Get-ChildItem -Path $TargetPath -Recurse -File
@@ -106,7 +105,7 @@ function Get-FilesInArchive {
 
   $filesInArchive = @()
 
-  Write-Information -MessageData "アーカイブ内のファイルのSHA256ハッシュ値を計算しています: $ArchiveFileName" -InformationAction Continue
+  Write-Host -Object "アーカイブ内のファイルのSHA256ハッシュ値を計算しています: $ArchiveFileName"
   $files | ForEach-Object {
     $file = @{
       Path   = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
@@ -144,7 +143,7 @@ function Get-SourceFileFromUrl {
   $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory
   $fileName = Split-Path -Path $filePath -Leaf
 
-  Write-Information -MessageData "ファイルのSHA256ハッシュ値を計算しています: $filePath" -InformationAction Continue
+  Write-Host -Object "ファイルのSHA256ハッシュ値を計算しています: $filePath"
   $file = @{
     SourceUrl = $Url
     SHA256    = $filePath | Get-SHA256
@@ -199,12 +198,12 @@ $sourceUrls = @()
 
 if ([string]::IsNullOrEmpty($SourceUrl)) {
   do {
-    Write-Host -ForegroundColor Yellow -Object '[任意] ' -NoNewline
+    Write-Host -Object '[任意] ' -NoNewline
     $urls = Read-Host -Prompt 'ソースファイルのURLを入力してください (複数入力する場合はカンマで区切ってください)'
     $sourceUrls = $urls -split ','
     $isValid = $true
     foreach ($url in $sourceUrls) {
-      if (-not (Test-Url -Url $url)) {
+      if (-not (Test-UrlFormat -Url $url)) {
         $isValid = $false
       }
     }
@@ -213,7 +212,7 @@ if ([string]::IsNullOrEmpty($SourceUrl)) {
 else {
   $sourceUrls = $SourceUrl
   foreach ($url in $sourceUrls) {
-    if (-not (Test-Url -Url $url)) {
+    if (-not (Test-UrlFormat -Url $url)) {
       throw "URLの形式が正しくありません: $url"
     }
   }
@@ -223,7 +222,7 @@ $script:installedSize = 0
 $files = @()
 
 $sourceUrls | ForEach-Object {
-  Write-Information -MessageData "ファイルをダウンロードしています: $_" -InformationAction Continue
+  Write-Host -Object "ファイルをダウンロードしています: $_"
   $files += $_ | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory
 }
 
@@ -252,7 +251,7 @@ $manifest = [ordered]@{
   Website         = [string[]]$Website
   Files           = @($files)
   ConfFiles       = @($confFiles)
-  ManifestVersion = 0
+  ManifestVersion = [string]$ManifestVersion
 }
 
 # Collection was modified; enumeration operation may not execute. というエラーが出るので、
@@ -260,7 +259,7 @@ $manifest = [ordered]@{
 foreach ($field in [array]$manifest.Keys) {
   if ([string]::IsNullOrEmpty($manifest[$field])) {
     if ($field -eq 'Description') {
-      Write-Information -MessageData "'Description' はマニフェストの作成後に手動で編集してください" -InformationAction Continue
+      Write-Host -Object "'Description' はマニフェストの作成後に手動で編集してください"
       $manifest[$field] = "<enter description here>`n<enter description here>"
       continue
     }
@@ -346,11 +345,17 @@ if (-not $Force) {
   }
 }
 
-Write-Information -MessageData "マニフェストを作成しています: $manifestPath" -InformationAction Continue
+Write-Host -Object "マニフェストを作成しています: $manifestPath"
+
+$Header = @"
+# Created using CreateManifest.ps1 v$ScriptVersion
+# yaml-language-server: `$schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/$ManifestVersion.json
+
+"@
 
 try {
   ($manifest |
-  ConvertTo-ManifestYaml) -replace "`r`n", "`n" |
+  ConvertTo-ManifestYaml -Header $Header) -replace "`r`n", "`n" |
   Out-File -FilePath $manifestPath -Encoding utf8NoBOM -Force -NoNewline
 }
 catch {

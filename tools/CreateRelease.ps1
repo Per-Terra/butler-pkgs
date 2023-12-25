@@ -1,30 +1,32 @@
 ### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
-# Installs `powershell-yaml` as a dependency for parsing yaml content
+# powershell-yaml のインストール
 if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
   try {
     Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
   }
   catch {
-    # If there was an exception while installing powershell-yaml, pass it as an InternalException for further debugging
-    throw [UnmetDependencyException]::new("'powershell-yaml' unable to be installed successfully", $_.Exception)
+    throw "'powershell-yaml' のインストールに失敗しました"
   }
   finally {
     # Double check that it was installed properly
     if (-not(Get-Module -ListAvailable -Name powershell-yaml)) {
-      throw [UnmetDependencyException]::new("'powershell-yaml' is not found")
+      throw "'powershell-yaml' が見つかりません"
     }
   }
 }
 ###
 
+$ManifestVersion = '0.1.0'
+
 $begin = Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC
 
-$contents = [ordered]@{ '$manifestVersion' = 0 }
+$contents = [ordered]@{ '$manifestVersion' = $ManifestVersion }
 
-# get all manifests
+Write-Host -Object 'YAMLファイルを探しています...' -NoNewline
 $manifests = Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath '../manifests') -Filter '*.yaml' -Recurse
+Write-Host -Object " $($manifests.Count) 件のYAMLファイルが見つかりました"
 
-# parse manifests
+Write-Host -Object 'YAMLファイルを読み込んでいます...' -NoNewline
 foreach ($manifest in $manifests) {
   if ($manifest.Name -eq 'developer.yaml') {
     $developer = Get-Content -Path $manifest.FullName -Raw | ConvertFrom-Yaml -Ordered
@@ -59,11 +61,12 @@ foreach ($manifest in $manifests) {
     }
   }
 }
+Write-Host -Object ' 完了'
 
-# sort by name
+Write-Host -Object 'YAMLファイルをソートしています...' -NoNewline
 $contents = $contents | Sort-Object -Property Name
 
-# sort by release date
+# ReleaseDate でソート
 foreach ($developer in [array]$contents.Keys) {
   foreach ($identifier in [array]$contents[$developer].Keys) {
     $sortedPackages = [ordered]@{}
@@ -85,32 +88,37 @@ foreach ($developer in [array]$contents.Keys) {
     $contents[$developer][$identifier] = $sortedPackages
   }
 }
+Write-Host -Object ' 完了'
 
-# convert to json
+Write-Host -Object 'JSONに変換しています...' -NoNewline
 $json = ($contents | ConvertTo-Json -Depth 100 -Compress) + "`n"
+Write-Host -Object ' 完了'
 
-# gzip compress
+Write-Host -Object 'JSONを圧縮しています...' -NoNewline
 $bytes = [System.Text.Encoding]::UTF8.GetBytes($json)
 $stream = [System.IO.MemoryStream]::new()
 $gzip = [System.IO.Compression.GzipStream]::new($stream, [System.IO.Compression.CompressionMode]::Compress)
 $gzip.Write($bytes, 0, $bytes.Length)
 $gzip.Close()
 $stream.Close()
+Write-Host -Object ' 完了'
 
-# get sha256 hash
+Write-Host -Object 'SHA256ハッシュ値を計算しています...' -NoNewline
 $hash = [System.Security.Cryptography.SHA256]::Create()
 $hashBytes = $hash.ComputeHash($stream.ToArray())
 $hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
+Write-Host -Object ' 完了'
 
-# write contents.json.gz
+Write-Host -Object 'contents.json.gz を書き込んでいます...' -NoNewline
 $stream.ToArray() | Set-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath '../contents.json.gz') -Force -AsByteStream
+Write-Host -Object ' 完了'
 
-# create release.yaml
+Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline
 $release = [ordered]@{
-  Date    = $begin
-  SHA256  = $hashString
+  Date            = $begin
+  SHA256          = $hashString
+  ManifestVersion = $ManifestVersion
 }
-
-# write release.yaml
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |
 Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath '../release.yaml') -Encoding utf8NoBOM -Force -NoNewline
+Write-Host -Object ' 完了'

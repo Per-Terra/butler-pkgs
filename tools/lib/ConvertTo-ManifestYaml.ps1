@@ -1,32 +1,32 @@
 . (Join-Path -Path $PSScriptRoot -ChildPath 'Test-PackageManifest.ps1')
 
 ### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
-### modified: Remove the NuGet installation and throw without type
-# Installs `powershell-yaml` as a dependency for parsing yaml content
+# powershell-yaml のインストール
 if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
   try {
     Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
   }
   catch {
-    # If there was an exception while installing powershell-yaml, pass it as an InternalException for further debugging
-    throw "'powershell-yaml' unable to be installed successfully"
+    throw "'powershell-yaml' のインストールに失敗しました"
   }
   finally {
     # Double check that it was installed properly
     if (-not(Get-Module -ListAvailable -Name powershell-yaml)) {
-      throw "'powershell-yaml' is not found"
+      throw "'powershell-yaml' が見つかりません"
     }
   }
 }
 ###
 
 $ManifestVersion = '0.1.0'
+$schemaPath = Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifests/$ManifestVersion.json"
+$Schema = $null
 
 try {
-  $Schema = Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifests/$ManifestVersion.json") -Raw -ErrorAction Stop | ConvertFrom-Json
+  $Schema = Get-Content -Path $schemaPath -Raw -ErrorAction Stop | ConvertFrom-Json
 }
 catch {
-  throw "Failed to load schema for manifest version $ManifestVersion"
+  throw "スキーマの読み込みに失敗しました: $schemaPath"
 }
 
 function ConvertTo-ManifestYaml {
@@ -34,11 +34,13 @@ function ConvertTo-ManifestYaml {
   param (
     [Parameter(Mandatory = $true,
       ValueFromPipeline = $true)]
-    [object]$Manifest
+    [object]$Manifest,
+    [Parameter(Mandatory = $false)]
+    [string]$Header
   )
 
   if (-not (Test-PackageManifest -Manifest $Manifest)) {
-    throw "Invalid manifest"
+    throw "パッケージマニフェストの検証に失敗しました"
   }
 
   $orderedManifest = [ordered]@{}
@@ -135,13 +137,7 @@ function ConvertTo-ManifestYaml {
     }
   }
 
-  $Header = @"
-# Created using CreateManifest.ps1 v$ScriptVersion
-# yaml-language-server: `$schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/$ManifestVersion.json
-
-"@
-
-  $yaml = ($Header + "`n" + ($orderedManifest | ConvertTo-Yaml)) -replace "`r`n", "`n"
+  $yaml = (if ($Header) { $Header + "`n" } + ($orderedManifest | ConvertTo-Yaml)) -replace "`r`n", "`n"
 
   return $yaml
 }

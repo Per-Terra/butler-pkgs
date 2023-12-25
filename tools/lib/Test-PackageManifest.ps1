@@ -1,10 +1,11 @@
 $ManifestVersion = '0.1.0'
+$schemaPath = Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifests/$ManifestVersion.json"
 
 try {
-  $Schema = Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifests/$ManifestVersion.json") -Raw -ErrorAction Stop | ConvertFrom-Json
+  $Schema = Get-Content -Path $schemaPath -Raw -ErrorAction Stop | ConvertFrom-Json
 }
 catch {
-  throw "Failed to load schema for manifest version $ManifestVersion"
+  throw "スキーマの読み込みに失敗しました: $schemaPath"
 }
 
 $Patterns = @{
@@ -25,7 +26,7 @@ $Patterns = @{
   Developer       = $Schema.definitions.Identifier.pattern
   Website         = $Schema.definitions.Url.pattern
   ConfFiles       = $Schema.definitions.Path.pattern
-  ManifestVersion = 0
+  ManifestVersion = $Schema.properties.ManifestVersion.enum
 }
 
 function Test-PackageManifest {
@@ -53,20 +54,21 @@ function Test-PackageManifest {
     $isValid = $true
 
     if ($null -eq $Install.TargetPath) {
-      Write-Warning -Message "Missing required field 'TargetPath'"
+      Write-Warning -Message "必須フィールドがありません: 'TargetPath'"
       $isValid = $false
     }
     elseif ($Install.TargetPath -notmatch $Schema.definitions.Path.pattern) {
-      Write-Warning -Message "Invalid value '$($Install.TargetPath)' for field 'TargetPath'"
-      Write-Warning -Message "Valid pattern is: $($Schema.definitions.Path.pattern)"
+      Write-Warning -Message "フィールド 'TargetPath' の値が正しくありません: $($Install.TargetPath)"
+      Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Path.pattern)"
+
       $isValid = $false
     }
     if ($null -eq $Install.Method) {
       # do nothing
     }
     elseif ($Schema.definitions.InstallMethod.enum -notcontains $Install.Method) {
-      Write-Warning -Message "Invalid value '$($Install.Method)' for field 'Method'"
-      Write-Warning -Message "Valid values are: $($Schema.definitions.InstallMethod.enum -join ', ')"
+      Write-Warning -Message "フィールド 'Method' の値が正しくありません: $($Install.Method)"
+      Write-Warning -Message "次の値のいずれかに一致する必要があります: $($Schema.definitions.InstallMethod.enum -join ', ')"
       $isValid = $false
     }
 
@@ -83,25 +85,25 @@ function Test-PackageManifest {
     $isValid = $true
 
     if ($null -eq $File.Path) {
-      Write-Warning -Message "Missing required field 'Path'"
+      Write-Warning -Message "必須フィールドがありません: 'Path'"
       $isValid = $false
     }
     elseif ($File.Path -notmatch $Schema.definitions.Path.pattern) {
-      Write-Warning -Message "Invalid value '$($File.Path)' for field 'Path'"
-      Write-Warning -Message "Valid pattern is: $($Schema.definitions.Path.pattern)"
+      Write-Warning -Message "フィールド 'Path' の値が正しくありません: $($File.Path)"
+      Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Path.pattern)"
       $isValid = $false
     }
     if ($null -eq $File.SHA256) {
-      Write-Warning -Message "Missing required field 'SHA256'"
+      Write-Warning -Message "必須フィールドがありません: 'SHA256'"
       $isValid = $false
     }
-    elseif ($File.SHA256 -notmatch $Patterns.Sha256) {
-      Write-Warning -Message "Invalid value '$($File.SHA256)' for field 'SHA256'"
-      Write-Warning -Message "Valid pattern is: $($Patterns.Sha256)"
+    elseif ($File.SHA256 -notmatch $Schema.definitions.SHA256.pattern) {
+      Write-Warning -Message "フィールド 'SHA256' の値が正しくありません: $($File.SHA256)"
+      Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.SHA256.pattern)"
       $isValid = $false
     }
     if ($File.Files -and $File.Install) {
-      Write-Warning -Message "File cannot have both 'Files' and 'Install' fields"
+      Write-Warning -Message "フィールド 'Files' と 'Install' は同時に指定できません"
       $isValid = $false
     }
     if ($File.Files) {
@@ -123,7 +125,7 @@ function Test-PackageManifest {
       $value = $Manifest[$field]
       if ([string]::IsNullOrEmpty($value)) {
         if ($Schema.required -contains $field) {
-          Write-Warning -Message "Missing required field '$field'"
+          Write-Warning -Message "必須フィールドがありません: '$field'"
           $isValid = $false
         }
         continue
@@ -133,14 +135,14 @@ function Test-PackageManifest {
         if ($value -is [string]) {
           if ($pattern -is [array]) {
             if ($pattern -notcontains $value) {
-              Write-Warning -Message "Invalid value '$value' for field '$field'"
-              Write-Warning -Message "Valid values are: $($pattern -join ', ')"
+              Write-Warning -Message "フィールド '$field' の値が正しくありません: $value"
+              Write-Warning -Message "次の値のいずれかに一致する必要があります: $($pattern -join ', ')"
               $isValid = $false
             }
           }
           elseif ($value -notmatch $pattern) {
-            Write-Warning -Message "Invalid value '$value' for field '$field'"
-            Write-Warning -Message "Valid pattern is: $pattern"
+            Write-Warning -Message "フィールド '$field' の値が正しくありません: $value"
+            Write-Warning -Message "次の正規表現に一致する必要があります: $pattern"
             $isValid = $false
           }
         }
@@ -149,20 +151,20 @@ function Test-PackageManifest {
             if ($item -is [string]) {
               if ($pattern -is [array]) {
                 if ($pattern -notcontains $item) {
-                  Write-Warning -Message "Invalid value '$item' for field '$field'"
-                  Write-Warning -Message "Valid values are: $($pattern -join ', ')"
+                  Write-Warning -Message "フィールド '$field' の値が正しくありません: $item"
+                  Write-Warning -Message "次の値のいずれかに一致する必要があります: $($pattern -join ', ')"
                   $isValid = $false
                 }
               }
               elseif ($item -notmatch $pattern) {
-                Write-Warning -Message "Invalid value '$item' for field '$field'"
-                Write-Warning -Message "Valid pattern is: $pattern"
+                Write-Warning -Message "フィールド '$field' の値が正しくありません: $item"
+                Write-Warning -Message "次の正規表現に一致する必要があります: $pattern"
                 $isValid = $false
               }
             }
             else {
-              Write-Warning -Message "Invalid value '$item' for field '$field'"
-              Write-Warning -Message "Value must be a string"
+              Write-Warning -Message "フィールド '$field' の値が正しくありません: $item"
+              Write-Warning -Message "値は string である必要があります"
               $isValid = $false
             }
           }
@@ -177,30 +179,30 @@ function Test-PackageManifest {
           for ($index = 0; $index -lt $files.Count; $index++) {
             $file = $files[$index]
             if ($null -eq $file.SourceUrl) {
-              Write-Warning -Message "Missing required field 'SourceUrl' for file $index"
+              Write-Warning -Message "Files[$index] の必須フィールドがありません: 'SourceUrl'"
               $isValid = $false
             }
             elseif ($file.SourceUrl -notmatch $Patterns.Url) {
-              Write-Warning -Message "Invalid value '$($file.SourceUrl)' for field 'SourceUrl' for file $index"
-              Write-Warning -Message "Valid pattern is: $($Patterns.Url)"
+              Write-Warning -Message "Files[$index] のフィールド 'SourceUrl' の値が正しくありません: $($file.SourceUrl)"
+              Write-Warning -Message "次の正規表現に一致する必要があります: $($Patterns.Url)"
               $isValid = $false
             }
             if ($FileName -and ($FileName -notmatch $Schema.definitions.FileName.pattern)) {
-              Write-Warning -Message "Invalid value '$($file.FileName)' for field 'FileName' for file $index"
-              Write-Warning -Message "Valid pattern is: $($Schema.definitions.FileName.pattern)"
+              Write-Warning -Message "Files[$index] のフィールド 'FileName' の値が正しくありません: $($FileName)"
+              Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.FileName.pattern)"
               $isValid = $false
             }
             if ($null -eq $file.SHA256) {
-              Write-Warning -Message "Missing required field 'SHA256' for file $index"
+              Write-Warning -Message "Files[$index] の必須フィールドがありません: 'SHA256'"
               $isValid = $false
             }
-            elseif ($file.SHA256 -notmatch $Patterns.Sha256) {
-              Write-Warning -Message "Invalid value '$($file.SHA256)' for field 'SHA256' for file $index"
-              Write-Warning -Message "Valid pattern is: $($Patterns.Sha256)"
+            elseif ($file.SHA256 -notmatch $Schema.definitions.SHA256.pattern) {
+              Write-Warning -Message "Files[$index] のフィールド 'SHA256' の値が正しくありません: $($file.SHA256)"
+              Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.SHA256.pattern)"
               $isValid = $false
             }
             if ($file.Files -and $file.Install) {
-              Write-Warning -Message "File $index cannot have both 'Files' and 'Install' fields"
+              Write-Warning -Message "Files[$index] のフィールド 'Files' と 'Install' は同時に指定できません"
               $isValid = $false
             }
             if ($file.Files) {
@@ -215,8 +217,8 @@ function Test-PackageManifest {
         }
       }
       elseif ($Schema.properties.psobject.Properties.Name -notcontains $field) {
-        Write-Warning -Message "Invalid field '$field'"
-        Write-Warning -Message "Valid fields are: $($Schema.properties.psobject.Properties.Name -join ', ')"
+        Write-Warning -Message "フィールド '$field' は定義されていません"
+        Write-Warning -Message "定義されているフィールドは次の通りです: $($Schema.properties.psobject.Properties.Name -join ', ')"
         $isValid = $false
       }
     }
@@ -229,14 +231,14 @@ function Test-PackageManifest {
         if ($Value -is [string]) {
           if ($pattern -is [array]) {
             if ($pattern -notcontains $Value) {
-              Write-Warning -Message "Invalid value '$Value' for field '$Field'"
-              Write-Warning -Message "Valid values are: $($pattern -join ', ')"
+              Write-Warning -Message "フィールド '$Field' の値が正しくありません: $Value"
+              Write-Warning -Message "次の値のいずれかに一致する必要があります: $($pattern -join ', ')"
               $isValid = $false
             }
           }
           elseif ($Value -notmatch $pattern) {
-            Write-Warning -Message "Invalid value '$Value' for field '$Field'"
-            Write-Warning -Message "Valid pattern is: $pattern"
+            Write-Warning -Message "フィールド '$Field' の値が正しくありません: $Value"
+            Write-Warning -Message "次の正規表現に一致する必要があります: $pattern"
             $isValid = $false
           }
         }
@@ -245,27 +247,27 @@ function Test-PackageManifest {
             if ($item -is [string]) {
               if ($pattern -is [array]) {
                 if ($pattern -notcontains $item) {
-                  Write-Warning -Message "Invalid value '$item' for field '$Field'"
-                  Write-Warning -Message "Valid values are: $($pattern -join ', ')"
+                  Write-Warning -Message "フィールド '$Field' の値が正しくありません: $item"
+                  Write-Warning -Message "次の値のいずれかに一致する必要があります: $($pattern -join ', ')"
                   $isValid = $false
                 }
               }
               elseif ($item -notmatch $pattern) {
-                Write-Warning -Message "Invalid value '$item' for field '$Field'"
-                Write-Warning -Message "Valid pattern is: $pattern"
+                Write-Warning -Message "フィールド '$Field' の値が正しくありません: $item"
+                Write-Warning -Message "次の正規表現に一致する必要があります: $pattern"
                 $isValid = $false
               }
             }
             else {
-              Write-Warning -Message "Invalid value '$item' for field '$Field'"
-              Write-Warning -Message "Value must be a string"
+              Write-Warning -Message "フィールド '$Field' の値が正しくありません: $item"
+              Write-Warning -Message "値は string である必要があります"
               $isValid = $false
             }
           }
         }
       }
       elseif ($Schema.required -contains $Field) {
-        Write-Warning -Message "Value for required field '$Field' cannot be null"
+        Write-Warning -Message "必須フィールドがありません: '$Field'"
         $isValid = $false
       }
     }
@@ -273,8 +275,8 @@ function Test-PackageManifest {
       continue
     }
     else {
-      Write-Warning -Message "Invalid field '$Field'"
-      Write-Warning -Message "Valid fields are: $($Schema.properties.psobject.Properties.Name -join ', ')"
+      Write-Warning -Message "フィールド '$Field' は定義されていません"
+      Write-Warning -Message "定義されているフィールドは次の通りです: $($Schema.properties.psobject.Properties.Name -join ', ')"
       $isValid = $false
     }
   }

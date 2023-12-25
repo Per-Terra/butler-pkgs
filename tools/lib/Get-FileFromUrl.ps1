@@ -1,5 +1,5 @@
 . (Join-Path -Path $PSScriptRoot -ChildPath 'Get-FileNameFromUrl.ps1')
-. (Join-Path -Path $PSScriptRoot -ChildPath 'Test-Url.ps1')
+. (Join-Path -Path $PSScriptRoot -ChildPath 'Test-UrlFormat.ps1')
 
 function Get-FileFromUrl {
   [CmdletBinding()]
@@ -11,30 +11,47 @@ function Get-FileFromUrl {
     [string]$OutDirectory
   )
 
-  Write-Verbose "Downloading '$Url'..."
+  Write-Verbose -Message "ファイルをダウンロードしています: $Url"
 
-  if (-not (Test-Url -Url $Url)) {
-    throw "Invalid Url: $Url"
+  if (-not (Test-UrlFormat -Url $Url)) {
+    throw "URLの形式が正しくありません: $Url"
   }
 
+  Write-Verbose -Message "ファイル名を取得しています: $Url"
   $fileName = Get-FileNameFromUrl -Url $Url
 
   if (-not $fileName) {
-    Write-Verbose "No file name found in url: $Url"
+    Write-Verbose -Message "ファイル名を取得できませんでした: $Url"
     $fileName = [System.IO.Path]::GetRandomFileName() + '.tmp'
-    Write-Verbose "Generated random file name: $fileName"
+    Write-Verbose -Message "ランダムなファイル名を生成しました: $fileName"
+  }
+
+  if (-not (Test-Path -Path $OutDirectory)) {
+    Write-Verbose -Message "出力先ディレクトリを作成しています: $OutDirectory"
+    try {
+      New-Item -Path $OutDirectory -ItemType Directory -Force
+    }
+    catch {
+      throw "出力先ディレクトリの作成に失敗しました: $OutDirectory"
+    }
   }
 
   $filePath = Join-Path -Path $OutDirectory -ChildPath $fileName
-  Write-Verbose "File path: $filePath"
+  Write-Verbose -Message "ファイルの保存先: $filePath"
 
   if (-not (Test-Path -Path $filePath)) {
-    Invoke-WebRequest -Uri $Url -OutFile $filePath
-    Write-Verbose "Downloaded '$Url' to '$filePath'."
+    Write-Verbose -Message "ファイルをダウンロードしています: $Url"
+    try {
+      Invoke-WebRequest -Uri $Url -OutFile $filePath
+    }
+    catch {
+      throw "ファイルのダウンロードに失敗しました: $Url"
+    }
   }
   else {
-    Write-Information -MessageData "'$filePath' already exists." -InformationAction Continue
+    Write-Verbose -Message "ファイルが既に存在します: $filePath"
   }
+  Write-Verbose -Message "ファイルをダウンロードしました: $Url"
 
   return $filePath
 }
