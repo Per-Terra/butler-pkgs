@@ -137,7 +137,13 @@ function ConvertTo-ManifestYaml {
     }
   }
 
-  $yaml = (if ($Header) { $Header + "`n" } + ($orderedManifest | ConvertTo-Yaml)) -replace "`r`n", "`n"
+  $yaml = $orderedManifest | ConvertTo-Yaml
+
+  if ($Header) {
+    $yaml = $Header + "`n" + $yaml
+  }
+
+  $yaml = $yaml -replace "`r`n", "`n"
 
   return $yaml
 }

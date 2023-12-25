@@ -360,6 +360,6 @@ try {
   Out-File -FilePath $manifestPath -Encoding utf8NoBOM -Force -NoNewline
 }
 catch {
-  Write-Error -MessageData $_.Exception.Message
+  Write-Error -Message $_.Exception.Message
   exit 1
 }
