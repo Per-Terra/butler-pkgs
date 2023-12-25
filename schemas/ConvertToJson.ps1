@@ -3,10 +3,12 @@
 if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
   try {
     Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
-  } catch {
+  }
+  catch {
     # If there was an exception while installing powershell-yaml, pass it as an InternalException for further debugging
     throw [UnmetDependencyException]::new("'powershell-yaml' unable to be installed successfully", $_.Exception)
-  } finally {
+  }
+  finally {
     # Double check that it was installed properly
     if (-not(Get-Module -ListAvailable -Name powershell-yaml)) {
       throw [UnmetDependencyException]::new("'powershell-yaml' is not found")
@@ -14,8 +16,6 @@ if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
   }
 }
 ###
-
-$Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $false
 
 $yamlFolder = Join-Path -Path $PSScriptRoot -ChildPath YAML
 $jsonFolder = Join-Path -Path $PSScriptRoot -ChildPath JSON
@@ -33,11 +33,12 @@ $yamlFiles | ForEach-Object {
   }
 
   try {
-    Get-Content -Path $_.FullName -Raw |
-    ConvertFrom-Yaml -Ordered |
-    ConvertTo-JSON -Depth 100 |
-    Out-File -FilePath $jsonPath -Encoding $Utf8NoBomEncoding -Force
-  } catch {
+    ((Get-Content -Path $_.FullName -Raw |
+      ConvertFrom-Yaml -Ordered |
+      ConvertTo-JSON -Depth 100) + "`n") -replace "`r`n", "`n" |
+    Out-File -FilePath $jsonPath -Encoding utf8NoBOM -Force -NoNewline
+  }
+  catch {
     throw "Failed to convert $_ to JSON"
   }
 }

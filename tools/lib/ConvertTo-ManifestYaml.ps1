@@ -141,7 +141,7 @@ function ConvertTo-ManifestYaml {
 
 "@
 
-  $yaml = $Header + "`n" + ($orderedManifest | ConvertTo-Yaml)
+  $yaml = ($Header + "`n" + ($orderedManifest | ConvertTo-Yaml)) -replace "`r`n", "`n"
 
   return $yaml
 }

@@ -32,7 +32,6 @@ param (
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-Url.ps1')
 
 $ScriptVersion = '0.1.0'
-$Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
 $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 
 # $test = @{
@@ -350,7 +349,9 @@ if (-not $Force) {
 Write-Information -MessageData "マニフェストを作成しています: $manifestPath" -InformationAction Continue
 
 try {
-  $manifest | ConvertTo-ManifestYaml | Out-File -FilePath $manifestPath -Encoding $Utf8NoBomEncoding -NoNewline -Force
+  ($manifest |
+  ConvertTo-ManifestYaml) -replace "`r`n", "`n" |
+  Out-File -FilePath $manifestPath -Encoding utf8NoBOM -Force -NoNewline
 }
 catch {
   Write-Error -MessageData $_.Exception.Message
