@@ -14,15 +14,15 @@ filter Test-Url {
           return $true
         }
         else {
-          Write-Verbose -Message "Url scheme is not http or https: $_"
+          Write-Warning -Message "Url scheme is not http or https: $_"
         }
       }
       else {
-        Write-Verbose -Message "Url is not well formed: $_"
+        Write-Warning -Message "Url is not well formed: $_"
       }
     }
     catch {
-      Write-Verbose -Message "Url is not well formed: $_"
+      Write-Warning -Message "Url is not well formed: $_"
     }
     return $false
   }
