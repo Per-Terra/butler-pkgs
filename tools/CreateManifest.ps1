@@ -258,6 +258,7 @@ $manifest = [ordered]@{
 # array にキャストしてから foreach で回す
 foreach ($field in [array]$manifest.Keys) {
   if ([string]::IsNullOrEmpty($manifest[$field])) {
+    $value = $null
     if ($field -eq 'Description') {
       Write-Host -Object "'Description' はマニフェストの作成後に手動で編集してください"
       $manifest[$field] = "<enter description here>`n<enter description here>"
