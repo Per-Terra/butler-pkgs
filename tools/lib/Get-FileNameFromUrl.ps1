@@ -17,7 +17,7 @@ filter Get-FileNameFromUrl {
 
     $extension = Split-Path -Path $_ -Extension
 
-    if ($extension -and $extension -match '^\.(php)') {
+    if ($extension -and ($extension -notmatch '^\.(php)')) {
       Write-Verbose -Message "URLにファイル名が含まれています: $_"
       $fileName = Split-Path -Path $_ -Leaf
       Write-Verbose -Message "ファイル名を取得しました: $fileName"
