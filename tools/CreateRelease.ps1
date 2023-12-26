@@ -1,3 +1,8 @@
+param (
+  [Parameter(Mandatory = $false)]
+  [string]$ReleaseDirectory = (Join-Path -Path $PSScriptRoot -ChildPath '../release')
+)
+
 ### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
 # powershell-yaml のインストール
 if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
@@ -109,8 +114,14 @@ $hashBytes = $hash.ComputeHash($stream.ToArray())
 $hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
 Write-Host -Object ' 完了'
 
+if (-not(Test-Path -Path $ReleaseDirectory)) {
+  Write-Host -Object 'ディレクトリを作成しています...' -NoNewline
+  New-Item -Path $ReleaseDirectory -ItemType Directory -Force | Out-Null
+  Write-Host -Object ' 完了'
+}
+
 Write-Host -Object 'contents.json.gz を書き込んでいます...' -NoNewline
-$stream.ToArray() | Set-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath '../release/contents.json.gz') -Force -AsByteStream
+$stream.ToArray() | Set-Content -Path (Join-Path -Path $ReleaseDirectory -ChildPath 'contents.json.gz') -Force -AsByteStream
 Write-Host -Object ' 完了'
 
 Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline
@@ -120,5 +131,5 @@ $release = [ordered]@{
   ManifestVersion = $ManifestVersion
 }
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |
-Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath '../release/release.yaml') -Encoding utf8NoBOM -Force -NoNewline
+Out-File -FilePath (Join-Path -Path $ReleaseDirectory -ChildPath 'release.yaml') -Encoding utf8NoBOM -Force -NoNewline
 Write-Host -Object ' 完了'
