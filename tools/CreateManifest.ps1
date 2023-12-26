@@ -53,40 +53,10 @@ $ScriptVersion = '0.1.0'
 $ManifestVersion = '0.1.0'
 $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 
-# $test = @{
-#   Identifier      = 'test-package'
-#   DisplayName     = 'Test Package'
-#   Version         = '1.0.0'
-#   ReleaseDate     = Get-Date -Format 'yyyy-MM-dd'
-#   Section         = 'Core'
-#   Architecture    = 'x86'
-#   Depends         = @('test-dependency')
-#   InstalledSize   = 100
-#   Developer       = @('test-developer')
-#   Description     = @('test-description')
-#   Website         = @('https://example.com')
-#   Files           = @(
-#     @{
-#       SourceUrl = 'https://example.com'
-#       SHA256    = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-#       Files     = @(
-#         @{
-#           Path    = 'test'
-#           SHA256  = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-#           Install = @{
-#             TargetPath = 'test'
-#             Method     = 'Copy'
-#           }
-#         }
-#       )
-#     }
-#   )
-#   ConfFiles       = @('test')
-#   ManifestVersion = $ManifestVersion
-# }
-
-# ConvertTo-ManifestYaml -Manifest $test
-# exit 0
+$ArchiveExtensions = @('.zip', '.7z')
+$PluginExtensions = @('.exe', '.dll', '.auf', '.aui', '.auo', '.auc', '.aul', '.ini')
+$ScriptExtensions = @('.anm', '.obj', '.scn', '.cam', '.tra', '.lua')
+$ConfExtensions = @('.ini')
 
 function Get-FilesInArchive {
   param (
@@ -105,23 +75,24 @@ function Get-FilesInArchive {
 
   $filesInArchive = @()
 
-  Write-Host -Object "アーカイブ内のファイルのSHA256ハッシュ値を計算しています: $ArchiveFileName"
+  Write-Host -Object "アーカイブ内のファイルの情報を取得しています: $ArchiveFileName"
   $files | ForEach-Object {
     $file = @{
       Path   = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
       SHA256 = $_.FullName | Get-SHA256
     }
-    if ($_.Extension -in @(
-        '.exe', '.dll',
-        '.auf', '.aui', '.auo', '.auc', '.aul',
-        '.anm', '.obj', '.scn', '.cam', '.tra', '.lua',
-        '.ini'
-      )) {
+
+    if ($_.Extension -in $PluginExtensions) {
       $file.Add('Install', @{
-          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', '')
+          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', '{{plugins}}/')
         })
     }
-    elseif ($_.Extention -in @('.zip', '.7z')) {
+    elseif ($_.Extension -in $ScriptExtensions) {
+      $file.Add('Install', @{
+          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', '{{script}}/')
+        })
+    }
+    elseif ($_.Extention -in $ArchiveExtensions) {
       $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $TargetPath))
     }
 
@@ -143,7 +114,7 @@ function Get-SourceFileFromUrl {
   $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory
   $fileName = Split-Path -Path $filePath -Leaf
 
-  Write-Host -Object "ファイルのSHA256ハッシュ値を計算しています: $filePath"
+  Write-Host -Object "ファイルの情報を取得しています: $Url"
   $file = @{
     SourceUrl = $Url
     SHA256    = $filePath | Get-SHA256
@@ -152,7 +123,7 @@ function Get-SourceFileFromUrl {
     $file.Add('FileName', $fileName)
   }
 
-  if (-not (Split-Path -Path $filePath -Extension) -in @('.zip', '.7z')) {
+  if (-not (Split-Path -Path $filePath -Extension) -in $ArchiveExtensions) {
     $script:installedSize += [math]::Ceiling((Get-Item -Path $filePath).Length / 1024)
     $file.Add('Install', @{
         TargetPath = $fileName
@@ -180,7 +151,7 @@ function Get-ConfFiles {
   $confFiles = @()
 
   if ($File.Install.Path) {
-    if ((Split-Path -Path $File.Install.Path -Extension) -in @('.ini')) {
+    if ((Split-Path -Path $File.Install.Path -Extension) -in $ConfExtensions) {
       $confFiles += $File.Install.Path
     }
   }

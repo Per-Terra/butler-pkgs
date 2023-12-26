@@ -146,3 +146,37 @@ function ConvertTo-ManifestYaml {
 
   return $yaml
 }
+
+# $test = @{
+#   Identifier      = 'test-package'
+#   DisplayName     = 'Test Package'
+#   Version         = '1.0.0'
+#   ReleaseDate     = Get-Date -Format 'yyyy-MM-dd'
+#   Section         = 'Core'
+#   Architecture    = 'x86'
+#   Depends         = @('test-dependency')
+#   InstalledSize   = 100
+#   Developer       = @('test-developer')
+#   Description     = @('test-description')
+#   Website         = @('https://example.com')
+#   Files           = @(
+#     @{
+#       SourceUrl = 'https://example.com'
+#       SHA256    = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+#       Files     = @(
+#         @{
+#           Path    = 'test'
+#           SHA256  = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+#           Install = @{
+#             TargetPath = 'test'
+#             Method     = 'Copy'
+#           }
+#         }
+#       )
+#     }
+#   )
+#   ConfFiles       = @('test')
+#   ManifestVersion = $ManifestVersion
+# }
+
+# ConvertTo-ManifestYaml -Manifest $test
