@@ -1,5 +1,2 @@
+/release/
 /tools/tmp/
-
-# release
-/contents.json*
-/release.yaml

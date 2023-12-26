@@ -110,7 +110,7 @@ $hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLow
 Write-Host -Object ' 完了'
 
 Write-Host -Object 'contents.json.gz を書き込んでいます...' -NoNewline
-$stream.ToArray() | Set-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath '../contents.json.gz') -Force -AsByteStream
+$stream.ToArray() | Set-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath '../release/contents.json.gz') -Force -AsByteStream
 Write-Host -Object ' 完了'
 
 Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline
@@ -120,5 +120,5 @@ $release = [ordered]@{
   ManifestVersion = $ManifestVersion
 }
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |
-Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath '../release.yaml') -Encoding utf8NoBOM -Force -NoNewline
+Out-File -FilePath (Join-Path -Path $PSScriptRoot -ChildPath '../release/release.yaml') -Encoding utf8NoBOM -Force -NoNewline
 Write-Host -Object ' 完了'
