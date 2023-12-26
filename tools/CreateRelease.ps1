@@ -1,6 +1,8 @@
 param (
   [Parameter(Mandatory = $false)]
-  [string]$ReleaseDirectory = (Join-Path -Path $PSScriptRoot -ChildPath '../release')
+  [string]$ReleaseDirectory = (Join-Path -Path $PSScriptRoot -ChildPath '../release'),
+  [Parameter(Mandatory = $false)]
+  [string]$Date = (Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC)
 )
 
 ### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
@@ -22,8 +24,6 @@ if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
 ###
 
 $ManifestVersion = '0.1.0'
-
-$begin = Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC
 
 $contents = [ordered]@{ '$manifestVersion' = $ManifestVersion }
 
@@ -126,7 +126,7 @@ Write-Host -Object ' 完了'
 
 Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline
 $release = [ordered]@{
-  Date            = $begin
+  Date            = $Date
   SHA256          = $hashString
   ManifestVersion = $ManifestVersion
 }
