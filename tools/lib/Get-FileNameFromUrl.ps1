@@ -16,36 +16,37 @@ filter Get-FileNameFromUrl {
     }
 
     $extension = Split-Path -Path $_ -Extension
-    $response = $null
 
-    if ($_ -match 'https://hazumurhythm\.com/php/amazon_download\.php\?name=(.+)') {
-      Write-Verbose -Message "Amazonっぽい のダウンロードリンクを検出しました: $_"
-      $id = $Matches[1]
-      Write-Verbose -Message "ファイルのID: $id"
-      Write-Verbose -Message "ヘッダーを取得しています: $_"
-      try {
-        $response = Invoke-WebRequest -Uri $_ -Method Head -Headers @{ Referer = "https://hazumurhythm.com/wev/amazon/?script=$id" }
-      }
-      catch {
-        Write-Verbose -Message "ヘッダーの取得に失敗しました: $_"
-      }
-    }
-    elseif ($extension -and $extension -notmatch '^\.(php)') {
+    if ($extension -and $extension -match '^\.(php)') {
       Write-Verbose -Message "URLにファイル名が含まれています: $_"
       $fileName = Split-Path -Path $_ -Leaf
       Write-Verbose -Message "ファイル名を取得しました: $fileName"
       return $fileName
     }
+
+    $params = @{
+      Uri    = $_
+      Method = 'Head'
+    }
+
+    if ($_ -match 'https://hazumurhythm\.com/php/amazon_download\.php\?name=(.+)') {
+      Write-Verbose -Message "Amazonっぽい のダウンロードリンクを検出しました: $_"
+      $id = $Matches[1]
+      Write-Verbose -Message "ファイルのID: $id"
+      $params.Add('Headers', @{ Referer = "https://hazumurhythm.com/wev/amazon/?script=$id" })
+    }
     else {
       Write-Verbose -Message "URLにファイル名が含まれていません: $_"
-      Write-Verbose -Message "ヘッダーを取得しています: $_"
-      try {
-        $response = Invoke-WebRequest -Uri $_ -Method Head
-      }
-      catch {
-        Write-Verbose -Message "ヘッダーの取得に失敗しました: $_"
-      }
     }
+
+    Write-Verbose -Message "ヘッダーを取得しています: $_"
+    try {
+      $response = Invoke-WebRequest @params
+    }
+    catch {
+      Write-Verbose -Message "ヘッダーの取得に失敗しました: $_"
+    }
+    Write-Verbose -Message "ヘッダーの取得に成功しました: $_"
 
     # $response.Headers['Content-Disposition'] は配列なので最初の要素を取得
     if ($response.Headers['Content-Disposition'][0]) {
@@ -54,6 +55,9 @@ filter Get-FileNameFromUrl {
         Write-Verbose -Message "ファイル名を取得しました: $($Matches[1])"
         return $Matches[1]
       }
+    }
+    else {
+      Write-Verbose -Message "Content-Dispositionヘッダーを検出できませんでした: $_"
     }
 
     Write-Verbose -Message "ファイル名を取得できませんでした: $_"

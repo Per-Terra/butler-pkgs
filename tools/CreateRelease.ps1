@@ -27,9 +27,9 @@ $manifests = Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath '../m
 Write-Host -Object " $($manifests.Count) 件のYAMLファイルが見つかりました"
 
 Write-Host -Object 'YAMLファイルを読み込んでいます...' -NoNewline
-foreach ($manifest in $manifests) {
-  if ($manifest.Name -eq 'developer.yaml') {
-    $developer = Get-Content -Path $manifest.FullName -Raw | ConvertFrom-Yaml -Ordered
+$manifests | ForEach-Object {
+  if ($_.Name -eq 'developer.yaml') {
+    $developer = Get-Content -Path $_.FullName -Raw | ConvertFrom-Yaml -Ordered
     $identifier = $developer.Identifier
     $developer.Remove('Identifier')
     $developer.Remove('ManifestVersion')
@@ -41,7 +41,7 @@ foreach ($manifest in $manifests) {
     }
   }
   else {
-    $package = Get-Content -Path $manifest.FullName -Raw | ConvertFrom-Yaml -Ordered
+    $package = Get-Content -Path $_.FullName -Raw | ConvertFrom-Yaml -Ordered
     $identifier = $package.Identifier
     $version = $package.Version
     $developer = $package.Developer[0]
