@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json",
-  "title": "BUtler Developer Schema v0.1.0",
+  "title": "BUtler Developer v0.1.0",
   "definitions": {
     "Identifier": {
       "type": "string",
