@@ -1,4 +1,5 @@
 param (
+  [switch]$Update,
   [string[]]$SourceUrl,
   [string]$Identifier,
   [AllowEmptyString()]
@@ -64,7 +65,10 @@ function Get-FilesInArchive {
       ValueFromPipeline = $true)]
     [string]$ArchiveFileName,
     [Parameter(Mandatory = $true)]
-    [string]$TargetPath
+    [string]$TargetPath,
+    [Parameter(Mandatory = $false)]
+    [AllowNull()]
+    [object]$PreviousFile
   )
 
   Write-Host -Object "アーカイブを展開しています: $ArchiveFileName"
@@ -82,27 +86,52 @@ function Get-FilesInArchive {
       SHA256 = $_.FullName | Get-SHA256
     }
 
+    if ($PreviousFile) {
+      $previousFileInArchive = $PreviousFile.Files | Where-Object { $_.Path -eq $file.Path }
+    }
+
     if ($_.Extension -in $PluginExtensions) {
-      $file.Add('Install', @{
-          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', '{{plugins}}/')
-        })
+      if ($previousFileInArchive) {
+        if ($previousFileInArchive.Install) {
+          $file.Add('Install', $previousFileInArchive.Install)
+        }
+      }
+      else {
+        $file.Add('Install', @{
+            TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', '{{plugins}}/')
+          })
+      }
     }
     elseif ($_.Extension -in $ScriptExtensions) {
-      $file.Add('Install', @{
-          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', '{{script}}/')
-        })
+      if ($previousFileInArchive) {
+        if ($previousFileInArchive.Install) {
+          $file.Add('Install', $previousFileInArchive.Install)
+        }
+      }
+      else {
+        $file.Add('Install', @{
+            TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', '{{script}}/')
+          })
+      }
     }
     elseif ($_.Extension -eq '.exa') {
-      # サブディレクトリまで保持
-      $path = $_.FullName.Replace($TargetPath, '').Replace('\', '/')
-      $path = $path -split '/'
-      $path = if ($path[-2]) { $path[-2] + '/' + $path[-1] } else { $path[-1] }
-      $file.Add('Install', @{
-          TargetPath = $path
-        })
+      if ($previousFileInArchive) {
+        if ($previousFileInArchive.Install) {
+          $file.Add('Install', $previousFileInArchive.Install)
+        }
+      }
+      else {
+        # サブディレクトリまで保持
+        $path = $_.FullName.Replace($TargetPath, '').Replace('\', '/')
+        $path = $path -split '/'
+        $path = if ($path[-2]) { $path[-2] + '/' + $path[-1] } else { $path[-1] }
+        $file.Add('Install', @{
+            TargetPath = $path
+          })
+      }
     }
     elseif ($_.Extention -in $ArchiveExtensions) {
-      $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $TargetPath))
+      $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $TargetPath -PreviousFile $previousFileInArchive))
     }
 
     $filesInArchive += $file
@@ -117,7 +146,10 @@ function Get-SourceFileFromUrl {
       ValueFromPipeline = $true)]
     [string]$Url,
     [Parameter(Mandatory = $true)]
-    [string]$WorkingDirectory
+    [string]$WorkingDirectory,
+    [parameter(Mandatory = $false)]
+    [AllowNull()]
+    [object]$PreviousFile
   )
 
   if ($Url -match 'https://drive.google.com/file/d/([^/]+)') {
@@ -125,8 +157,14 @@ function Get-SourceFileFromUrl {
     $Url = "https://drive.google.com/uc?id=$($Matches[1])"
   }
 
-  $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory
+  $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory -Force:$Force
   $fileName = Split-Path -Path $filePath -Leaf
+
+  if ($previousFile) {
+    if ($previousFile.SHA256 -eq ($filePath | Get-SHA256)) {
+      throw "ファイルが変更されていません: $Url"
+    }
+  }
 
   Write-Host -Object "ファイルの情報を取得しています: $Url"
   $file = @{
@@ -139,9 +177,16 @@ function Get-SourceFileFromUrl {
 
   if (-not ((Split-Path -Path $filePath -Extension) -in $ArchiveExtensions)) {
     $script:installedSize += [math]::Ceiling((Get-Item -Path $filePath).Length / 1024)
-    $file.Add('Install', @{
-        TargetPath = $fileName
-      })
+    if ($previousFile) {
+      if ($previousFile.Install) {
+        $file.Add('Install', $previousFile.Install)
+      }
+    }
+    else {
+      $file.Add('Install', @{
+          TargetPath = $fileName
+        })
+    }
 
     return $file
   }
@@ -150,7 +195,7 @@ function Get-SourceFileFromUrl {
   if (Test-Path $expandPath) {
     Remove-Item -Path $expandPath -Recurse -Force
   }
-  $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandPath))
+  $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandPath -PreviousFile $previousFile))
 
   return $file
 }
@@ -177,6 +222,73 @@ function Get-ConfFiles {
   }
 
   return $confFiles
+}
+
+if (-not $Update) {
+  do {
+    $answer = Read-Host -Prompt '既存のパッケージを更新しますか? [Y/n]'
+  } until ([string]::IsNullOrEmpty($answer) -or ($answer -in @('Y', 'n')))
+  if ($answer -eq 'n') {
+    $Update = $false
+  }
+  else {
+    $Update = $true
+  }
+}
+
+if ($Update) {
+  if ([string]::IsNullOrEmpty($Identifier) -or [string]::IsNullOrEmpty($Developer)) {
+    do {
+      $package = Read-Host -Prompt '更新するパッケージを Developer/Identifier の形式で入力してください'
+    } while ([string]::IsNullOrEmpty($package))
+    $manifestsPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($package.Split('/')[0])/$($package.Split('/')[1])"
+  }
+  else {
+    $manifestsPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($Developer)/$($Identifier)"
+  }
+
+  if (-not (Test-Path -Path $manifestsPath)) {
+    throw "マニフェストが見つかりません: $manifestsPath"
+  }
+
+  $manifests = Get-ChildItem -Path $manifestsPath -Filter '*.yaml' -Recurse
+  if ($manifests.Count -eq 0) {
+    throw "マニフェストが見つかりません: $manifestsPath"
+  }
+
+  # ReleaseDate が最新のマニフェストを取得
+  $manifest = $manifests | Sort-Object -Property Name | ForEach-Object {
+    $manifest = Get-Content -Path $_.FullName -Raw | ConvertFrom-Yaml -Ordered
+    if ($manifest.ReleaseDate) {
+      $manifest
+    }
+  } | Sort-Object -Property ReleaseDate -Descending | Select-Object -First 1
+
+  if (-not $manifest) {
+    throw "マニフェストが見つかりません: $manifestsPath"
+  }
+
+  if ($manifest.Files -and $manifest.Files.Count -gt 2) {
+    throw "マニフェストに複数のファイルが含まれています: $manifestsPath"
+  }
+
+  $Identifier = $manifest.Identifier
+  $DisplayName = $manifest.DisplayName
+  $Section = $manifest.Section
+  $Architecture = $manifest.Architecture
+  $Depends = $manifest.Depends
+  $Recommends = $manifest.Recommends
+  $Suggests = $manifest.Suggests
+  $Enhances = $manifest.Enhances
+  $Breaks = $manifest.Breaks
+  $Conflicts = $manifest.Conflicts
+  $Provides = $manifest.Provides
+  $Replaces = $manifest.Replaces
+  $Developer = $manifest.Developer
+  $Description = $manifest.Description
+  $Website = $manifest.Website
+  $previousFile = $manifest.Files
+  $ConfFiles = $manifest.ConfFiles
 }
 
 $sourceUrls = @()
@@ -208,11 +320,11 @@ $files = @()
 
 $sourceUrls | ForEach-Object {
   Write-Host -Object "ファイルをダウンロードしています: $_"
-  $files += $_ | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory
+  $files += $_ | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory -PreviousFile $previousFile
 }
 
-$confFiles = $files | ForEach-Object {
-  $_ | Get-ConfFiles
+if ($null -eq $ConfFiles) {
+  $ConfFiles = $files | ForEach-Object { $_ | Get-ConfFiles }
 }
 
 $manifest = [ordered]@{
@@ -235,7 +347,7 @@ $manifest = [ordered]@{
   Description     = [string]$Description
   Website         = [string[]]$Website
   Files           = @($files)
-  ConfFiles       = @($confFiles)
+  ConfFiles       = @($ConfFiles)
   ManifestVersion = [string]$ManifestVersion
 }
 

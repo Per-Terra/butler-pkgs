@@ -8,7 +8,9 @@ function Get-FileFromUrl {
       ValueFromPipeline = $true)]
     [string]$Url,
     [Parameter(Mandatory = $false)]
-    [string]$OutDirectory
+    [string]$OutDirectory,
+    [Parameter(Mandatory = $false)]
+    [switch]$Force
   )
 
   Write-Verbose -Message "ファイルをダウンロードしています: $Url"
@@ -39,10 +41,9 @@ function Get-FileFromUrl {
   $filePath = Join-Path -Path $OutDirectory -ChildPath $fileName
   Write-Verbose -Message "ファイルの保存先: $filePath"
 
-  if (Test-Path -Path $filePath) {
-    Write-Host -Object "'$filePath' は既に存在します。上書きしますか? [Y/n]"
+  if ((Test-Path -Path $filePath) -and (-not $Force)) {
     do {
-      $overwrite = Read-Host -Prompt "'$manifestPath' は既に存在します。上書きしますか? [Y/n]"
+      $overwrite = Read-Host -Prompt "'$filePath' は既に存在します。上書きしますか? [Y/n]"
     } until ([string]::IsNullOrEmpty($overwrite) -or ($overwrite -in @('Y', 'n')))
     if ($overwrite -eq 'n') {
       return $filePath
