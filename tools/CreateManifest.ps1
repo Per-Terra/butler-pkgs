@@ -119,7 +119,7 @@ function Get-SourceFileFromUrl {
     SourceUrl = $Url
     SHA256    = $filePath | Get-SHA256
   }
-  if ($fileName -eq (Split-Path -Path $Url -Leaf)) {
+  if ($fileName -ne (Split-Path -Path $Url -Leaf)) {
     $file.Add('FileName', $fileName)
   }
 
