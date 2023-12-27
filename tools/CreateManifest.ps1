@@ -84,12 +84,21 @@ function Get-FilesInArchive {
 
     if ($_.Extension -in $PluginExtensions) {
       $file.Add('Install', @{
-          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', '{{plugins}}/')
+          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', '{{plugins}}/')
         })
     }
     elseif ($_.Extension -in $ScriptExtensions) {
       $file.Add('Install', @{
-          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', '{{script}}/')
+          TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', '{{script}}/')
+        })
+    }
+    elseif ($_.Extension -eq '.exa') {
+      # サブディレクトリまで保持
+      $path = $_.FullName.Replace($TargetPath, '').Replace('\', '/')
+      $path = $path -split '/'
+      $path = if ($path[-2]) { $path[-2] + '/' + $path[-1] } else { $path[-1] }
+      $file.Add('Install', @{
+          TargetPath = $path
         })
     }
     elseif ($_.Extention -in $ArchiveExtensions) {
