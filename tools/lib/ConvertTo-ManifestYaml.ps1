@@ -109,7 +109,7 @@ function ConvertTo-ManifestYaml {
                   }
                 }
                 'Files' {
-                  $orderedFile.Add($fileKey, (Get-OrderedFilesInArchive -FilesInArchive $file[$fileKey]))
+                  $orderedFile.Add($fileKey, @((Get-OrderedFilesInArchive -FilesInArchive $file[$fileKey])))
                 }
                 'Install' {
                   $orderedFile.Add($fileKey, (Get-OrderedInstall -Install $file[$fileKey]))
