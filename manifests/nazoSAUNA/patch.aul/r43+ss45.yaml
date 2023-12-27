@@ -13,7 +13,7 @@ Developer:
 - nazoSAUNA
 - ePi
 Description: |-
-  AviUtlや拡張編集のバグを直したり高速化をしたり新機能を追加したりするプラグインです。
+  AviUtlや拡張編集のバグを直したり高速化をしたり新機能を追加したりするプラグイン
 Website:
 - https://github.com/nazonoSAUNA/patch.aul
 Files:
@@ -32,4 +32,6 @@ Files:
     SHA256: 1918125cefc1267282557fd80c46a90264f7f24fed46389e173236b0d09b9131
     Install:
       TargetPath: patch.aul
+ConfFiles:
+  - patch.aul.json
 ManifestVersion: 0.1.0

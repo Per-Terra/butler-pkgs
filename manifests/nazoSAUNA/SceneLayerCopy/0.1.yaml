@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: SceneLayerCopy
+DisplayName: シーンのレイヤー情報コピペプラグイン
+Version: "0.1"
+ReleaseDate: 2022-11-26
+Section: Plugin/Filter
+Architecture: x86
+Depends:
+- exedit (= 0.92)
+InstalledSize: 11
+Developer:
+- nazoSAUNA
+Description: |-
+  現在のシーンのレイヤー情報を[ペースト先]トラックのシーンへコピペします
+  ## 仕様
+  - 現在のシーンのレイヤー情報を[ペースト先]トラックのシーンへコピペします
+  - AviUtl上部メニューにある設定＞レイヤー情報コピペの設定よりプラグインウィンドウが表示されます
+  - レイヤー名もしくはその他のチェックボックスをクリックすると確認メッセージが出た後、コピペを実施します
+  - その他とは[レイヤーのロック][レイヤーの表示][座標のリンク][上のオブジェクトでクリッピング]です
+Website:
+- https://github.com/nazonoSAUNA/SceneLayerCopy
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/SceneLayerCopy/releases/download/0.1/SceneLayerCopy.zip
+  SHA256: bde9d1c9a22790cae624fe5df2e0520a5140b4a56d95b782ea0c97f5177bc31c
+  Files:
+  - Path: Credit.md
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+  - Path: SceneLayerCopy.auf
+    SHA256: faa2fd1e643082ffe33487760c06e8a0e7c1ece6d15cab148ab125762f94272b
+    Install:
+      TargetPath: '{{plugins}}/SceneLayerCopy.auf'
+ManifestVersion: 0.1.0

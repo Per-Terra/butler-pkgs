@@ -1,0 +1,44 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: xCameraAssist
+DisplayName: カメラ補助プラグイン
+Version: "1.7"
+ReleaseDate: 2022-01-15
+Section: Plugin/Filter
+Architecture: x86
+Depends:
+- exedit (= 0.92)
+InstalledSize: 26
+Developer:
+- nazoSAUNA
+Description: |-
+  カメラ制御の右クリック動作を変更するプラグイン
+Website:
+- https://www.nicovideo.jp/watch/sm39701988
+- https://drive.google.com/drive/folders/1VcrWV_HF1fL2V_FfoV5wo5QBxzQuycMB
+- https://scrapbox.io/nazosauna/作ったpluginまとめ#63b3ce40500bf00000125fe2
+Files:
+- SourceUrl: https://drive.google.com/uc?id=1Hyh1f6kpblxwI7-eESj-Kxd_FU4Abpb0
+  FileName: v1.7要ランタイム(省メモリ).zip
+  SHA256: 423f7eae91953fa4d0c792b5d1cef570032ee4dceae25edec52834e2d08376bd
+  Files:
+  - Path: readme.txt
+    SHA256: 2c606a857fd3350d00d64691335bccc3222a31d92cedce869af896c803c90aa9
+  - Path: CameraAssist一式/plugins/xCameraAssist.auf
+    SHA256: 5b9e4379812d655fb70bc44f1b6ebc9aef3f49a587bb889f5dd4a2d0e1e8c975
+    Install:
+      TargetPath: '{{plugins}}/xCameraAssist.auf'
+  - Path: CameraAssist一式/script/上方向ベクトル.cam
+    SHA256: e532e308815f4364fd98b69995f648cfd2760cf2b50d552414bc61362bec97fd
+    Install:
+      TargetPath: '{{script}}/上方向ベクトル.cam'
+  - Path: CameraAssist一式/カメラ制御/カメラ制御(視点).exa
+    SHA256: 69f3cb27e2610057d3ca0ed3227cc87e92cbb4763764a8e4a8c7d526d5f68bcd
+    Install:
+      TargetPath: カメラ制御/カメラ制御(視点).exa
+  - Path: CameraAssist一式/カメラ制御/カメラ制御(視点移動).exa
+    SHA256: 54ef285a63f5ccb2ab96f19ff7a6cacf412fc3a7d7d2b2b0db491b89a71a4bbb
+    Install:
+      TargetPath: カメラ制御/カメラ制御(視点移動).exa
+ManifestVersion: 0.1.0

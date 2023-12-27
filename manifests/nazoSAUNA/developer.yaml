@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: nazoSAUNA
+DisplayName: 謎の生物
+Website:
+  - https://scrapbox.io/nazosauna/
+  - https://twitter.com/nazono22
+  - https://www.youtube.com/channel/UCbuwkQcm-6PLuwWJmo7aILQ
+ManifestVersion: 0.1.0

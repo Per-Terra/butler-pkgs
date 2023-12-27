@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: DlgSceneJmp
+DisplayName: シーンジャンプ
+Version: "0.1"
+ReleaseDate: 2023-09-21
+Section: Plugin/Filter
+Architecture: x86
+Depends:
+- exedit (= 0.92)
+InstalledSize: 12
+Developer:
+- nazoSAUNA
+Description: |-
+  設定ダイアログ表示中のシーンオブジェクトのシーンを表示する
+  ## 仕様
+  - ショートカットに[シーンジャンプ]が追加されます
+  - シーンオブジェクトを選択中（設定ダイアログ表示中）に[シーンジャンプ]ショートカットを押すことでそのシーンの再生位置（トラックバー左の値）のフレームを表示します
+Website:
+- https://github.com/nazonoSAUNA/DlgSceneJmp
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/DlgSceneJmp/releases/download/v0.1/dlgscenejmp.zip
+  SHA256: 01884ebbc3b694906ff45ac56527c60f3d54ef18eaa9b1c40a40d2636b491f30
+  Files:
+  - Path: Credit.md
+    SHA256: 8e0c86e9c8de58ea6ab034964620b88af31d45e3d32ade0e6b6df7c70dbc759f
+  - Path: dlgscenejmp.auf
+    SHA256: 157295ed724152e22b3906a75147dcfa0bb0b04546aacdfa91cd30d1f4a36716
+    Install:
+      TargetPath: '{{plugins}}/dlgscenejmp.auf'
+ManifestVersion: 0.1.0

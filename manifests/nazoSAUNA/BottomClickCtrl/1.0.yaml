@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: BottomClickCtrl
+DisplayName: メインウィンドウのボタン周辺の判定を無効化するプラグイン
+Version: "1.0"
+ReleaseDate: 2023-12-06
+Section: Plugin/Filter
+Architecture: x86
+InstalledSize: 11
+Developer:
+- nazoSAUNA
+Description: |-
+  メインウィンドウのボタン周辺の判定を無効化するプラグイン
+  ●動作
+  ・メインウィンドウのボタン周辺を押したときにオブジェクトが動かないようにする
+  ・「オーディオ波形の表示」の部分にある判定にも適応
+  ・拡張編集の「フレーム領域外の表示」機能によって出てくるグレーの部分の判定はそのまま
+Website:
+- https://www.nicovideo.jp/watch/sm39078844
+- https://drive.google.com/drive/folders/1dRm45jVONuG2JrUuTabl3oRQY9RfxSQd
+- https://scrapbox.io/nazosauna/作ったpluginまとめ#63b3cee7500bf00000125fe5
+Files:
+- SourceUrl: https://drive.google.com/uc?id=1HgCTjXN3u1jXvUFOXIlHg61I8d-JxB-1
+  FileName: 要ランタイム(省メモリ).zip
+  SHA256: 21148751e84779e3b1f93ae09fe9cb9e16b83f5a751eab61abaca2ce5e34de51
+  Files:
+  - Path: BottomClickCtrl.auf
+    SHA256: b968e56f46422bf0f606dfdcab1a309207e6daecfe711b818d4a7eb170dcc809
+    Install:
+      TargetPath: '{{plugins}}/BottomClickCtrl.auf'
+  - Path: readme.txt
+    SHA256: 41d378ed9c63212caffa23e3cff34c68e19e61d5a9436e776e2c6e1193a67a44
+ManifestVersion: 0.1.0

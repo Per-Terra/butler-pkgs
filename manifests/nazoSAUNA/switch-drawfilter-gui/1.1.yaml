@@ -1,0 +1,33 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: switch-drawfilter-gui
+DisplayName: 標準描画 等のGUIを非表示にするプラグイン
+Version: "1.1"
+ReleaseDate: 2022-12-17
+Section: Plugin/Filter
+Architecture: x86
+Depends:
+- exedit (= 0.92)
+InstalledSize: 12
+Developer:
+- nazoSAUNA
+Description: |-
+  標準描画等で中間点を多用した時に出てくる点線の表示/非表示を切り替えられるようにする
+  # 使い方
+  設定＞描画GUI非表示の設定 のチェックをオンにすることで有効。
+Website:
+- https://github.com/nazonoSAUNA/switch_drawfilter_gui
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/switch_drawfilter_gui/releases/download/v1.1/switch_drawfilter_gui.zip
+  SHA256: ca633cc53b6b38b57e6319660ac2bb23b17e15681712bf3490640e65378cc38f
+  Files:
+  - Path: Credit.md
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+  - Path: LICENSE
+    SHA256: c6dc4e84d8046203587c69aa5f8cccd4dcb55c8fb341023449004bcdc802f3c4
+  - Path: switch_drawfilter_gui.auf
+    SHA256: 9ab022591507e7a6b6d709312c59ee75e9e45f78e171e5ec71e66bbd0ea91b3b
+    Install:
+      TargetPath: '{{plugins}}/switch_drawfilter_gui.auf'
+ManifestVersion: 0.1.0

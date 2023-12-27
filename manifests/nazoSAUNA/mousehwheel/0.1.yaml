@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: mousehwheel
+DisplayName: 拡張編集マウス横ホイールプラグイン
+Version: "0.1"
+ReleaseDate: 2022-11-21
+Section: Plugin/Filter
+Architecture: x86
+Depends:
+- exedit (= 0.92)
+InstalledSize: 9
+Developer:
+- nazoSAUNA
+Description: |-
+  拡張編集タイムラインでマウスホイールを動かした際の挙動を変更する
+  ## 仕様
+  - 通常のホイール：従来は横スクロール　→　縦スクロールに変更
+  - Alt押しながらホイール：従来は縦スクロール　→　横スクロールに変更
+  - (マウスによっては存在する)横ホイールで横スクロールされるようにする
+Website:
+- https://github.com/nazonoSAUNA/mousehwheel
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/mousehwheel/releases/download/0.1/mousehwheeltest.zip
+  SHA256: fdc606a3bf8c259d5cda17ef32a989862e057cbcd8fb99732d0a4639bb726127
+  Files:
+  - Path: mousehwheel.auf
+    SHA256: d00afd0f649a62372e5b8f22a59595e7a0667080d55e9ede9c11537212f696d8
+    Install:
+      TargetPath: '{{plugins}}/mousehwheel.auf'
+ManifestVersion: 0.1.0

@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: buttonsc92
+DisplayName: 拡張編集設定LRボタンショートカット追加プラグイン
+Version: "0.1"
+ReleaseDate: 2023-02-03
+Section: Plugin/Filter
+Architecture: x86
+Depends:
+- exedit (= 0.92)
+InstalledSize: 11
+Developer:
+- nazoSAUNA
+Description: |-
+  設定ダイアログの開始フレーム、終了フレームに移動するボタンのショートカットを追加する
+  ## 仕様
+  - ショートカットキーの設定に追加されます
+Website:
+- https://github.com/nazonoSAUNA/buttonsc92
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/buttonsc92/releases/download/v0.1/buttonsc92.zip
+  SHA256: 8f527f5edabddcdb606fd037024f09ace55ee0c6fd7ae46aaeea3747a5f23f45
+  Files:
+  - Path: buttonsc92.auf
+    SHA256: ae25c07ddb7f9c2a975c78333ab3a4ce6b35966d1b9f66d761661345b25679e4
+    Install:
+      TargetPath: '{{plugins}}/buttonsc92.auf'
+  - Path: Credit.md
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+ManifestVersion: 0.1.0
