@@ -100,8 +100,14 @@ function ConvertTo-ManifestYaml {
           $orderedFile = [ordered]@{}
           foreach ($fileKey in $Schema.definitions.File.properties.psobject.Properties.Name) {
             if ($file[$fileKey]) {
-              if ($fileKey -eq 'FileName' -and ($file[$fileKey] -eq (Split-Path -Path $file['SourceUrl'] -Leaf))) {
+              if ($fileKey -eq 'FileName') {
+                if ($file[$fileKey] -eq (Split-Path -Path $file['SourceUrl'] -Leaf)) {
+                  continue
+                }
+                else {
+                  $orderedFile.Add($fileKey, $file[$fileKey])
                 continue
+                }
               }
               elseif ($fileKey -eq 'Files') {
                 $orderedFile.Add($fileKey, (Get-OrderedFilesInArchive -FilesInArchive $file[$fileKey]))
