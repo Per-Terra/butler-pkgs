@@ -111,6 +111,11 @@ function Get-SourceFileFromUrl {
     [string]$WorkingDirectory
   )
 
+  if ($Url -match 'https://drive.google.com/file/d/([^/]+)') {
+    Write-Host -Object "Google Drive のリンクを検出しました: $Url"
+    $Url = "https://drive.google.com/uc?id=$($Matches[1])"
+  }
+
   $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory
   $fileName = Split-Path -Path $filePath -Leaf
 
