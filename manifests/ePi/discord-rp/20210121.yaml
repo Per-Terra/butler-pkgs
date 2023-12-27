@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: discord-rp
+DisplayName: Discord Rich Presence Plugin
+Version: "20210121"
+ReleaseDate: 2021-01-21
+Section: Plugin/Filter
+Architecture: x86
+InstalledSize: 3153
+Developer:
+- ePi
+Description: |-
+  AviUtlを起動するとDiscordのRich Presence(https://discord.com/rich-presence)を適用するプラグイン.
+Website:
+- https://scrapbox.io/ePi5131/%E3%80%90AviUtl%E3%80%91Discord_Rich_Presence_Plugin
+Files:
+- SourceUrl: https://scrapbox.io/files/600984f8e78b710022533169.zip?title=discord_rp.zip
+  FileName: discord_rp.zip
+  SHA256: 7384f03d2122fca5f6e7a1f39e4542e64de83aecee894272fb5d37777a4ce792
+  Files:
+  - Path: discord_game_sdk.dll
+    SHA256: d8e7d9feb3de8482b186ae44fd1c9abb41fe2b3b3d2c7cd3a4d742ebbad30cdf
+    Install:
+      TargetPath: '{{plugins}}/discord_game_sdk.dll'
+  - Path: discord_rp.auf
+    SHA256: 84f997a569f622761f5dbbfad357f06f5ff6f6dca2c4dc033ff72740f1afd4c2
+    Install:
+      TargetPath: '{{plugins}}/discord_rp.auf'
+  - Path: discord_rp.txt
+    SHA256: a0699b6d69250e417b2fd0668ef8dfa8b7cac433ee295aaa714ae6a7d41b8939
+ManifestVersion: 0.1.0

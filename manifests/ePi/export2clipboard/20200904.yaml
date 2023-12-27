@@ -1,0 +1,23 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: export2clipboard
+Version: "20200904"
+ReleaseDate: 2020-09-04
+Section: Plugin/Filter
+Architecture: x86
+InstalledSize: 12
+Developer:
+- ePi
+Description: |-
+  ファイルに出力するのと等価なイメージをクリップボードに転送します
+  つまりオブジェクトの周りの点線や補助GUIが無い状態の画像を作れます
+  ショートカットキーも設定できます(私は Ctrl+P にしてます) Twitterとかにぶん投げるとき便利
+Website:
+- https://scrapbox.io/ePi5131/export2clipboard
+Files:
+- SourceUrl: https://scrapbox.io/files/5f5148a3e8bb29001e0f2bd9.auf?title=export2clipboard.auf
+  SHA256: 8941f6335547d18349b387488cb69d0fbf51e1ae7192992cae00ba8796540081
+  Install:
+    TargetPath: export2clipboard.auf
+ManifestVersion: 0.1.0

@@ -1,0 +1,30 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: auls-outputpng
+DisplayName: AulsPNG出力
+Version: fix2
+ReleaseDate: 2022-08-16
+Section: Plugin/Filter
+Architecture: x86
+InstalledSize: 16
+Developer:
+- ePi
+- Auls
+Description: |-
+  <enter description here>
+  <enter description here>
+Website:
+- https://scrapbox.io/ePi5131/AulsPNG出力_バグ修正
+Files:
+- SourceUrl: https://scrapbox.io/files/62fb8409b235df00223497e5.zip?title=auls_outputpng_fix2.zip
+  FileName: auls_outputpng_fix2.zip
+  SHA256: c0446ed2d9b2b9f0386c78af933effa937a838fa9acd4a4367ac88047958d6be
+  Files:
+  - Path: auls_outputpng.auf
+    SHA256: 38d23614b0c1f37299bbaeff714e0681e8742aa62699a8ca9bf7b75bda5eeb3a
+    Install:
+      TargetPath: '{{plugins}}/auls_outputpng.auf'
+  - Path: 説明 - コピー.txt
+    SHA256: a891139b38a76f25dfddb96408220861502f2e506306a68e84dd5f01a7fa714e
+ManifestVersion: 0.1.0
