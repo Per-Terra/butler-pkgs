@@ -100,24 +100,24 @@ function ConvertTo-ManifestYaml {
           $orderedFile = [ordered]@{}
           foreach ($fileKey in $Schema.definitions.File.properties.psobject.Properties.Name) {
             if ($file[$fileKey]) {
-              if ($fileKey -eq 'FileName') {
-                if ($file[$fileKey] -eq (Split-Path -Path $file['SourceUrl'] -Leaf)) {
-                  continue
+              switch ($fileKey) {
+                'FileName' {
+                  if ($file[$fileKey] -eq (Split-Path -Path $file['SourceUrl'] -Leaf)) {
+                  }
+                  else {
+                    $orderedFile.Add($fileKey, $file[$fileKey])
+                  }
                 }
-                else {
+                'Files' {
+                  $orderedFile.Add($fileKey, (Get-OrderedFilesInArchive -FilesInArchive $file[$fileKey]))
+                }
+                'Install' {
+                  $orderedFile.Add($fileKey, (Get-OrderedInstall -Install $file[$fileKey]))
+                }
+                default {
                   $orderedFile.Add($fileKey, $file[$fileKey])
-                continue
                 }
               }
-              elseif ($fileKey -eq 'Files') {
-                $orderedFile.Add($fileKey, (Get-OrderedFilesInArchive -FilesInArchive $file[$fileKey]))
-                continue
-              }
-              elseif ($fileKey -eq 'Install') {
-                $orderedFile.Add($fileKey, (Get-OrderedInstall -Install $file[$fileKey]))
-                continue
-              }
-              $orderedFile.Add($fileKey, $file[$fileKey])
             }
           }
           $orderedManifest[$key] += $orderedFile
