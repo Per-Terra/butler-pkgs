@@ -17,6 +17,13 @@ filter Get-FileNameFromUrl {
 
     $extension = Split-Path -Path $_ -Extension
 
+    if ($_ -match 'https://scrapbox.io/files/(?:.+)\?title=(.+)') {
+      Write-Verbose -Message "Scrapbox のダウンロードリンクを検出しました: $_"
+      $fileName = $Matches[1]
+      Write-Verbose -Message "ファイル名を取得しました: $fileName"
+      return $fileName
+    }
+
     if ($extension -and ($extension -notmatch '^\.(php)')) {
       Write-Verbose -Message "URLにファイル名が含まれています: $_"
       $fileName = Split-Path -Path $_ -Leaf
