@@ -58,9 +58,15 @@ filter Get-FileNameFromUrl {
     # $response.Headers['Content-Disposition'] は配列なので最初の要素を取得
     if ($response.Headers['Content-Disposition'][0]) {
       Write-Verbose -Message "Content-Dispositionヘッダーを検出しました: $($response.Headers['Content-Disposition'][0])"
-      if ($response.Headers['Content-Disposition'][0] -match 'filename="(.+)"') {
-        Write-Verbose -Message "ファイル名を取得しました: $($Matches[1])"
-        return $Matches[1]
+      if ($response.Headers['Content-Disposition'][0] -match "filename\*=UTF-8''(.+);?") {
+        $fileName = [System.Web.HttpUtility]::UrlDecode($Matches[1])
+        Write-Verbose -Message "ファイル名を取得しました: $fileName"
+        return $fileName
+      }
+      elseif ($response.Headers['Content-Disposition'][0] -match 'filename="(.+)"') {
+        $fileName = $Matches[1]
+        Write-Verbose -Message "ファイル名を取得しました: $fileName"
+        return $fileName
       }
     }
     else {
