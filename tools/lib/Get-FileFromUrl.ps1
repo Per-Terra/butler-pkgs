@@ -41,8 +41,21 @@ function Get-FileFromUrl {
 
   if (-not (Test-Path -Path $filePath)) {
     Write-Verbose -Message "ファイルをダウンロードしています: $Url"
+
+    $params = @{
+      Uri     = $Url
+      OutFile = $filePath
+    }
+
+    if ($_ -match 'https://hazumurhythm\.com/php/amazon_download\.php\?name=(.+)') {
+      Write-Verbose -Message "Amazonっぽい のダウンロードリンクを検出しました: $_"
+      $id = $Matches[1]
+      Write-Verbose -Message "ファイルのID: $id"
+      $params.Add('Headers', @{ Referer = "https://hazumurhythm.com/wev/amazon/?script=$id" })
+    }
+
     try {
-      Invoke-WebRequest -Uri $Url -OutFile $filePath
+      Invoke-WebRequest @params
     }
     catch {
       throw "ファイルのダウンロードに失敗しました: $Url"
