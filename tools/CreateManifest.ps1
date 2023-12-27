@@ -123,7 +123,7 @@ function Get-SourceFileFromUrl {
     $file.Add('FileName', $fileName)
   }
 
-  if (-not (Split-Path -Path $filePath -Extension) -in $ArchiveExtensions) {
+  if (-not ((Split-Path -Path $filePath -Extension) -in $ArchiveExtensions)) {
     $script:installedSize += [math]::Ceiling((Get-Item -Path $filePath).Length / 1024)
     $file.Add('Install', @{
         TargetPath = $fileName
