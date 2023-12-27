@@ -1,0 +1,66 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+
+Identifier: LuaJIT
+Version: "2.1"
+ReleaseDate: 2023-12-27
+Section: Core
+Architecture: x86
+Replaces:
+- exedit
+InstalledSize: 1185
+Developer:
+- Per-Terra
+Description: |-
+  Per-TerraによるLuaJITの自動ビルド
+Website:
+- https://github.com/Per-Terra/LuaJIT-Auto-Builds
+Files:
+- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/latest/download/LuaJIT_2.1_Win_x86.zip
+  SHA256: 4eb8ffd77a97948a5e751e471611775fc1ae9ae699315ae6c6f4eeb483cb433d
+  Files:
+  - Path: About-This-Build.txt
+    SHA256: 2012f91214b73c4060df1737989094f6cb0a92f644075485ba98fab992aae4d1
+  - Path: COPYRIGHT
+    SHA256: 4e546dc0556ca5f1514ae9d9bad723501a51da556342590b7076fb42f2930f25
+  - Path: lua51.dll
+    SHA256: 1d266ab69692efb1e72330b98032a908c45449b8b9449d7876b16a853c310ef8
+    Install:
+      TargetPath: lua51.dll
+  - Path: luajit.exe
+    SHA256: af80ca70715965365549bd430ba91f28a81a7829e9a944e3054d97e304074562
+  - Path: README
+    SHA256: dad6aa1f8fca498b4bacac8b19d9a1d7b0eb021eed569eb4d76e968c3ea67c87
+  - Path: doc/bluequad-print.css
+    SHA256: ffbbb7f09ade928758ef126cce208e1e1b1b3771a13f53a63df181192a3ee74d
+  - Path: doc/bluequad.css
+    SHA256: 13c0f197e8d0d8721880942cc9baf4a10726edfcdbfcd731614d54a19d3382af
+  - Path: doc/contact.html
+    SHA256: d21d53d5aa52cb662092fbd63da276ac34620c6b2fb495f106540b8c76ee2fe6
+  - Path: doc/ext_buffer.html
+    SHA256: 54cbea2eae651f7e8988ef569e6a11ea333f4d6febe7bafba35aff0c1ad95556
+  - Path: doc/ext_c_api.html
+    SHA256: 0b60d161100b37121eb7d3651f1bf626a4570c30ce71788b5aaf9177a4a8f9c3
+  - Path: doc/ext_ffi_api.html
+    SHA256: 3041a8b539b5e67f77976bf5dd83a78c8e2b29bbf87ea05e2ed238cb86d9c1ce
+  - Path: doc/ext_ffi_semantics.html
+    SHA256: f160e0e6e0540c8d36098238a1b44b8dcd20b2ef3bea5a025cb9078c35d77ab7
+  - Path: doc/ext_ffi_tutorial.html
+    SHA256: 00486856af194bc273b7103b0a51d77231c3b3095906c618cd5b02e87dbfc2f0
+  - Path: doc/ext_ffi.html
+    SHA256: 027b88b085186f519c192f88fd0e2c0a1dbad5a18f8bb647d8b1322e59d2001a
+  - Path: doc/ext_jit.html
+    SHA256: 6b056e1e9dbc557504bcfd23fa137d79dcaffccd7d03db5702f598d22f8e0d1f
+  - Path: doc/ext_profiler.html
+    SHA256: e685bdd980785a5fb7fa32ac3feec5576015f2c3fdcf7405088854f96bf9f8b8
+  - Path: doc/extensions.html
+    SHA256: 12bffbae1c61e47573db420a4f05b562e1d16bc1551fe1ccd39cfb03de6450a1
+  - Path: doc/install.html
+    SHA256: f64aa02eae7d5668a5d87ac8ce461c9d906f513081d10c24cae7b927813b2d19
+  - Path: doc/luajit.html
+    SHA256: 436489baf37ef605b888f3e2bae1a4f6605bff4d27ccdd25e7a3ec3d1d2d4907
+  - Path: doc/running.html
+    SHA256: 3452fcc70be4f59da84605f8b488f246f5b502b06b5fa66e74734bfd333fb41f
+  - Path: doc/img/contact.png
+    SHA256: 9b89eddcb7af5b0cc62a4cba4f878dcde584f378763e4d74621d44130a1ebec0
+ManifestVersion: 0.1.0
