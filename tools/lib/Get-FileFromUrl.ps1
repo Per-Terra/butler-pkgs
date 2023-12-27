@@ -39,31 +39,35 @@ function Get-FileFromUrl {
   $filePath = Join-Path -Path $OutDirectory -ChildPath $fileName
   Write-Verbose -Message "ファイルの保存先: $filePath"
 
-  if (-not (Test-Path -Path $filePath)) {
-    Write-Verbose -Message "ファイルをダウンロードしています: $Url"
-
-    $params = @{
-      Uri     = $Url
-      OutFile = $filePath
-    }
-
-    if ($_ -match 'https://hazumurhythm\.com/php/amazon_download\.php\?name=(.+)') {
-      Write-Verbose -Message "Amazonっぽい のダウンロードリンクを検出しました: $_"
-      $id = $Matches[1]
-      Write-Verbose -Message "ファイルのID: $id"
-      $params.Add('Headers', @{ Referer = "https://hazumurhythm.com/wev/amazon/?script=$id" })
-    }
-
-    try {
-      Invoke-WebRequest @params
-    }
-    catch {
-      throw "ファイルのダウンロードに失敗しました: $Url"
+  if (Test-Path -Path $filePath) {
+    Write-Host -Object "'$filePath' は既に存在します。上書きしますか? [Y/n]"
+    do {
+      $overwrite = Read-Host -Prompt "'$manifestPath' は既に存在します。上書きしますか? [Y/n]"
+    } until ([string]::IsNullOrEmpty($overwrite) -or ($overwrite -in @('Y', 'n')))
+    if ($overwrite -eq 'n') {
+      return $filePath
     }
   }
-  else {
-    Write-Verbose -Message "ファイルが既に存在します: $filePath"
+
+  $params = @{
+    Uri     = $Url
+    OutFile = $filePath
   }
+
+  if ($_ -match 'https://hazumurhythm\.com/php/amazon_download\.php\?name=(.+)') {
+    Write-Verbose -Message "Amazonっぽい のダウンロードリンクを検出しました: $_"
+    $id = $Matches[1]
+    Write-Verbose -Message "ファイルのID: $id"
+    $params.Add('Headers', @{ Referer = "https://hazumurhythm.com/wev/amazon/?script=$id" })
+  }
+
+  try {
+    Invoke-WebRequest @params
+  }
+  catch {
+    throw "ファイルのダウンロードに失敗しました: $Url"
+  }
+
   Write-Verbose -Message "ファイルをダウンロードしました: $Url"
 
   return $filePath
