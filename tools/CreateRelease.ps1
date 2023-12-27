@@ -25,7 +25,10 @@ if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
 
 $ManifestVersion = '0.1.0'
 
-$contents = [ordered]@{ '$manifestVersion' = $ManifestVersion }
+$contents = [ordered]@{
+  '$manifestVersion' = $ManifestVersion
+  '$date'            = $Date
+}
 
 Write-Host -Object 'YAMLファイルを探しています...' -NoNewline
 $manifests = Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath '../manifests') -Filter '*.yaml' -Recurse
