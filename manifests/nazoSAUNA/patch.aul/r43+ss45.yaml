@@ -10,7 +10,7 @@ Depends:
 - exedit (= 0.92)
 InstalledSize: 865
 Developer:
-- nazonoSAUNA
+- nazoSAUNA
 - ePi
 Description: |-
   AviUtlや拡張編集のバグを直したり高速化をしたり新機能を追加したりするプラグインです。
