@@ -1,3 +1,4 @@
+[CmdletBinding()]
 param (
   [Parameter(Mandatory = $false)]
   [string]$ReleaseDirectory = (Join-Path -Path $PSScriptRoot -ChildPath '../release'),
