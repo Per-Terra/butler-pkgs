@@ -31,7 +31,7 @@ function Get-FileFromUrl {
   if (-not (Test-Path -Path $OutDirectory)) {
     Write-Verbose -Message "出力先ディレクトリを作成しています: $OutDirectory"
     try {
-      New-Item -Path $OutDirectory -ItemType Directory -Force
+      $null = New-Item -Path $OutDirectory -ItemType Directory -Force
     }
     catch {
       throw "出力先ディレクトリの作成に失敗しました: $OutDirectory"

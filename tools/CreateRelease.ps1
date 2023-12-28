@@ -120,7 +120,7 @@ Write-Host -Object ' 完了'
 
 if (-not(Test-Path -Path $ReleaseDirectory)) {
   Write-Host -Object 'ディレクトリを作成しています...' -NoNewline
-  New-Item -Path $ReleaseDirectory -ItemType Directory -Force | Out-Null
+  $null = New-Item -Path $ReleaseDirectory -ItemType Directory -Force
   Write-Host -Object ' 完了'
 }
 

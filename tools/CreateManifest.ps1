@@ -164,7 +164,7 @@ function Get-SourceFileFromUrl {
   $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory -Force:$Force
   $fileName = Split-Path -Path $filePath -Leaf
 
-  Write-Host -Object "ファイルの情報を取得しています: $Url"
+  Write-Host -Object "ファイルの情報を取得しています: $filePath"
   $file = @{
     SourceUrl = $Url
     SHA256    = $filePath | Get-SHA256
