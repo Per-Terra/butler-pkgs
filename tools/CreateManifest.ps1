@@ -28,18 +28,21 @@ param (
 )
 
 ### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
-# powershell-yaml のインストール
-if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
+# 必要なモジュールのインストール
+$scriptDependencies = @('7Zip4Powershell', 'powershell-yaml')
+$scriptDependencies | ForEach-Object {
+  if (-not(Get-Module -ListAvailable -Name $_)) {
   try {
-    Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
+      Install-Module -Name $_ -Force -Repository PSGallery -Scope CurrentUser
   }
   catch {
-    throw "'powershell-yaml' のインストールに失敗しました"
+      throw "'$_' のインストールに失敗しました"
   }
   finally {
     # Double check that it was installed properly
-    if (-not(Get-Module -ListAvailable -Name powershell-yaml)) {
-      throw "'powershell-yaml' が見つかりません"
+      if (-not(Get-Module -ListAvailable -Name $_)) {
+        throw "'$_' が見つかりません"
+      }
     }
   }
 }
