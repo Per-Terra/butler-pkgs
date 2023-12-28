@@ -130,9 +130,11 @@ Write-Host -Object ' 完了'
 
 Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline
 $release = [ordered]@{
-  Date            = $Date
-  SHA256          = $hashString
-  ManifestVersion = $ManifestVersion
+  Date  = $Date
+  Files = @( [ordered]@{
+      Name   = 'contents.json.gz'
+      SHA256 = $hashString
+    })
 }
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |
 Out-File -FilePath (Join-Path -Path $ReleaseDirectory -ChildPath 'release.yaml') -Encoding utf8NoBOM -Force -NoNewline
