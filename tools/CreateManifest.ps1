@@ -32,14 +32,14 @@ param (
 $scriptDependencies = @('7Zip4Powershell', 'powershell-yaml')
 $scriptDependencies | ForEach-Object {
   if (-not(Get-Module -ListAvailable -Name $_)) {
-  try {
+    try {
       Install-Module -Name $_ -Force -Repository PSGallery -Scope CurrentUser
-  }
-  catch {
+    }
+    catch {
       throw "'$_' のインストールに失敗しました"
-  }
-  finally {
-    # Double check that it was installed properly
+    }
+    finally {
+      # Double check that it was installed properly
       if (-not(Get-Module -ListAvailable -Name $_)) {
         throw "'$_' が見つかりません"
       }
@@ -164,12 +164,6 @@ function Get-SourceFileFromUrl {
   $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory -Force:$Force
   $fileName = Split-Path -Path $filePath -Leaf
 
-  if ($previousFile) {
-    if ($previousFile.SHA256 -eq ($filePath | Get-SHA256)) {
-      throw "ファイルが変更されていません: $Url"
-    }
-  }
-
   Write-Host -Object "ファイルの情報を取得しています: $Url"
   $file = @{
     SourceUrl = $Url
@@ -177,6 +171,12 @@ function Get-SourceFileFromUrl {
   }
   if ($fileName -ne (Split-Path -Path $Url -Leaf)) {
     $file.Add('FileName', $fileName)
+  }
+
+  if ($previousFile) {
+    if ($previousFile.SHA256 -eq $file.SHA256) {
+      throw "ファイルが変更されていません: $Url"
+    }
   }
 
   if (-not ((Split-Path -Path $filePath -Extension) -in $ArchiveExtensions)) {
