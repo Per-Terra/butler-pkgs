@@ -298,7 +298,6 @@ required:
   - Identifier
   - Version
   - Section
-  - Architecture
   - Developer
   - Description
   - ManifestVersion
