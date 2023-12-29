@@ -1,0 +1,37 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: patch.aul
+Version: r42+4-test
+ReleaseDate: 2022-10-09
+Section: Plugin/Language
+Depends:
+- exedit (= 0.92)
+InstalledSize: 723
+Developer:
+- nazoSAUNA
+- ePi
+Description: AviUtlや拡張編集のバグを直したり高速化をしたり新機能を追加したりするプラグイン
+Website:
+- https://github.com/nazonoSAUNA/patch.aul
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/patch.aul/releases/download/r42.4test/patch.aul_r42.4.zip
+  Sha256: 275678fb98a8a3f957e7f5f30fe0e15c3383f63490a7a85248a5833df293015c
+  Files:
+  - Path: COPYING
+    Sha256: 230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809
+  - Path: COPYING.LESSER
+    Sha256: 7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059
+  - Path: credits.md
+    Sha256: 5cb4e7b5c9c85b99fd37f93c1c2fbe15a41e892f399f3c7f50ef5e4dae952865
+  - Path: LICENSE
+    Sha256: d6e18807844e259d920fb95fffb3ee0bf96f046f0a9f7cf7459941aed63b373b
+  - Path: patch.aul
+    Sha256: 13a12efb3a74d3e4ccf9418c0b7f633a3bca4170139bca61a1fbe2c26a499269
+    Install:
+      TargetPath: patch.aul
+  - Path: patch.aul.txt
+    Sha256: 0dd087a3961ba153e2c3e0a02af9128575182029b98e0702fd72cb33bf1afd0d
+ConfFiles:
+- patch.aul.json
+ManifestVersion: 0.1.0
