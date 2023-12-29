@@ -128,12 +128,12 @@ Files:
   - Path: plugins/SortEffect_Setting.txt
     Sha256: 2b306d22f3a05541e883ca771c3acc1422fc1e046756047dacfebd24941df627
     Install:
-      TargetPath: '{{plugins}}/SortEffect_Setting.txt'
+      TargetPath: plugins/SortEffect_Setting.txt
       Method: Copy
   - Path: plugins/SortEffect.auf
     Sha256: 6316b0b15355da12f06ae3dd41ad764bcc5fc50066ad78890df33b987d5a06c4
     Install:
-      TargetPath: '{{plugins}}/SortEffect.auf'
+      TargetPath: plugins/SortEffect.auf
 ConfFiles:
-  - '{{plugins}}/SortEffect_Setting.txt'
+  - plugins/SortEffect_Setting.txt
 ManifestVersion: 0.1.0

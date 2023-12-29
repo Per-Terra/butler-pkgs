@@ -25,7 +25,7 @@ Files:
   - Path: auls_framesound_fix.auf
     Sha256: 46f763ea40124acec993d4f8cdbbe2df2c44925fe4746877c5ea76b29aefb407
     Install:
-      TargetPath: '{{plugins}}/auls_framesound_fix.auf'
+      TargetPath: plugins/auls_framesound_fix.auf
   - Path: aviutl_framesound.cpp
     Sha256: 52e40f32d59faf5a001b25d55dea61c1101c6b3d379120fed4e552f640a97650
   - Path: 説明.txt

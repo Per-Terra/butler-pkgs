@@ -23,7 +23,7 @@ Files:
   - Path: auls_addshortcut/auls_addshortcut.auf
     Sha256: f43358619536cc9c60c02c8f8b4a7c8eef868733a9f295172e89c8ce5b4c4ea0
     Install:
-      TargetPath: '{{plugins}}/auls_addshortcut.auf'
+      TargetPath: plugins/auls_addshortcut.auf
   - Path: auls_addshortcut/説明.txt
     Sha256: 2c9ca960373d022fe3c647497fdf412098541424306c4299f54a6f1bdccb36fa
   - Path: auls_addshortcut/src/auls_addshortcut.cpp

@@ -24,7 +24,7 @@ Files:
   - Path: buttonsc92.auf
     Sha256: ae25c07ddb7f9c2a975c78333ab3a4ce6b35966d1b9f66d761661345b25679e4
     Install:
-      TargetPath: '{{plugins}}/buttonsc92.auf'
+      TargetPath: plugins/buttonsc92.auf
   - Path: Credit.md
     Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
 ManifestVersion: 0.1.0

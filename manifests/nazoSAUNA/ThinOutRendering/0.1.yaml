@@ -26,5 +26,5 @@ Files:
   - Path: ThinOutRendering.auf
     Sha256: 26594f1f22d35df205f47e3b8d84f74bb87c2aa18df61d64ae7358ec1d6796c0
     Install:
-      TargetPath: '{{plugins}}/ThinOutRendering.auf'
+      TargetPath: plugins/ThinOutRendering.auf
 ManifestVersion: 0.1.0

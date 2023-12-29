@@ -25,5 +25,5 @@ Files:
   - Path: tl_Item_cut.auf
     Sha256: a62d699c1141737f4d96a1f65707f5a48093b015fd76e3059631f9e56297a94a
     Install:
-      TargetPath: '{{plugins}}/tl_Item_cut.auf'
+      TargetPath: plugins/tl_Item_cut.auf
 ManifestVersion: 0.1.0

@@ -25,7 +25,7 @@ Files:
   - Path: auls_memref.auf
     Sha256: c6a4e2ac843b8b9b054ca6b581214d88566d27b2ddc4201e569f467913b33100
     Install:
-      TargetPath: '{{plugins}}/auls_memref.auf'
+      TargetPath: plugins/auls_memref.auf
   - Path: 説明.txt
     Sha256: b8d17421741d2622f8af1c094ec8e6621e1c796cc9dd38857742a77f687b4d9e
   - Path: src/auls_memref.cpp

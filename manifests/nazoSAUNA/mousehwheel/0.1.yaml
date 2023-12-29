@@ -26,5 +26,5 @@ Files:
   - Path: mousehwheel.auf
     Sha256: d00afd0f649a62372e5b8f22a59595e7a0667080d55e9ede9c11537212f696d8
     Install:
-      TargetPath: '{{plugins}}/mousehwheel.auf'
+      TargetPath: plugins/mousehwheel.auf
 ManifestVersion: 0.1.0

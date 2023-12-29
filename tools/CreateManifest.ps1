@@ -100,12 +100,12 @@ function Get-FilesInArchive {
       }
       elseif ($_.Extension -in $PluginExtensions) {
         $file.Add('Install', @{
-            TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', '{{plugins}}/')
+            TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', 'plugins/')
           })
       }
       elseif ($_.Extension -in $ScriptExtensions) {
         $file.Add('Install', @{
-            TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', '{{script}}/')
+            TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', 'script/')
           })
       }
       elseif ($_.Extension -eq '.exa') {
@@ -176,12 +176,12 @@ function Get-SourceFileFromUrl {
     }
     elseif ($fileExtension -in $PluginExtensions) {
       $file.Add('Install', @{
-          TargetPath = ($fileName -replace '^', '{{plugins}}/')
+          TargetPath = ($fileName -replace '^', 'plugins/')
         })
     }
     elseif ($fileExtension -in $ScriptExtensions) {
       $file.Add('Install', @{
-          TargetPath = ($fileName -replace '^', '{{script}}/')
+          TargetPath = ($fileName -replace '^', 'script/')
         })
     }
     else {

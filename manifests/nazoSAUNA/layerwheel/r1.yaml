@@ -24,5 +24,5 @@ Files:
   - Path: layerwheel.auf
     Sha256: 054fd74c91cf730481ae58b8eb1afeed94e467bb035d6bbc02f05071b2549213
     Install:
-      TargetPath: '{{plugins}}/layerwheel.auf'
+      TargetPath: plugins/layerwheel.auf
 ManifestVersion: 0.1.0

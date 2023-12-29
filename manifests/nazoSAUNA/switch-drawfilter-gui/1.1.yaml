@@ -28,5 +28,5 @@ Files:
   - Path: switch_drawfilter_gui.auf
     Sha256: 9ab022591507e7a6b6d709312c59ee75e9e45f78e171e5ec71e66bbd0ea91b3b
     Install:
-      TargetPath: '{{plugins}}/switch_drawfilter_gui.auf'
+      TargetPath: plugins/switch_drawfilter_gui.auf
 ManifestVersion: 0.1.0

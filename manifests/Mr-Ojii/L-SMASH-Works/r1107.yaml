@@ -24,23 +24,23 @@ Files:
   - Path: lwcolor.auc
     Sha256: 063298587801e753a749db6921a73898cc82118f50f6b09fbf8449be2d57eea4
     Install:
-      TargetPath: '{{plugins}}/lwcolor.auc'
+      TargetPath: plugins/lwcolor.auc
   - Path: lwdumper.auf
     Sha256: de690b8049dda4fbf2cfc723e3ae4cdb167e03f3b0372d2d15d52216e8909d2c
     Install:
-      TargetPath: '{{plugins}}/lwdumper.auf'
+      TargetPath: plugins/lwdumper.auf
   - Path: lwinput.aui
     Sha256: bf4a57c9424cae68b1dc140e105391c3189398020a99d370f71d7c3747722768
     Install:
-      TargetPath: '{{plugins}}/lwinput.aui'
+      TargetPath: plugins/lwinput.aui
   - Path: lwinput64.aui
     Sha256: 8ba0a2ce8854ad4ed97623cdad1b3285943bd36efa9b5f710f64ec008cf95c05
     Install:
-      TargetPath: '{{plugins}}/lwinput64.aui'
+      TargetPath: plugins/lwinput64.aui
   - Path: lwmuxer.auf
     Sha256: 30a9bffe88ba8310432716e9bc02c6bd9b7d16bc1a9c8a5078eebf0e23cc2524
     Install:
-      TargetPath: '{{plugins}}/lwmuxer.auf'
+      TargetPath: plugins/lwmuxer.auf
   - Path: README
     Sha256: f36f1bbcfebaafaa511d214f9048cefeb303e591f052f66d050bb284ecec66c8
   - Path: README.ja

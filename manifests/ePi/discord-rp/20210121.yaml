@@ -21,11 +21,11 @@ Files:
   - Path: discord_game_sdk.dll
     Sha256: d8e7d9feb3de8482b186ae44fd1c9abb41fe2b3b3d2c7cd3a4d742ebbad30cdf
     Install:
-      TargetPath: '{{plugins}}/discord_game_sdk.dll'
+      TargetPath: plugins/discord_game_sdk.dll
   - Path: discord_rp.auf
     Sha256: 84f997a569f622761f5dbbfad357f06f5ff6f6dca2c4dc033ff72740f1afd4c2
     Install:
-      TargetPath: '{{plugins}}/discord_rp.auf'
+      TargetPath: plugins/discord_rp.auf
   - Path: discord_rp.txt
     Sha256: a0699b6d69250e417b2fd0668ef8dfa8b7cac433ee295aaa714ae6a7d41b8939
 ManifestVersion: 0.1.0

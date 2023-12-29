@@ -27,11 +27,11 @@ Files:
   - Path: CameraAssist一式/plugins/xCameraAssist.auf
     Sha256: 5b9e4379812d655fb70bc44f1b6ebc9aef3f49a587bb889f5dd4a2d0e1e8c975
     Install:
-      TargetPath: '{{plugins}}/xCameraAssist.auf'
+      TargetPath: plugins/xCameraAssist.auf
   - Path: CameraAssist一式/script/上方向ベクトル.cam
     Sha256: e532e308815f4364fd98b69995f648cfd2760cf2b50d552414bc61362bec97fd
     Install:
-      TargetPath: '{{script}}/上方向ベクトル.cam'
+      TargetPath: script/上方向ベクトル.cam
   - Path: CameraAssist一式/カメラ制御/カメラ制御(視点).exa
     Sha256: 69f3cb27e2610057d3ca0ed3227cc87e92cbb4763764a8e4a8c7d526d5f68bcd
     Install:

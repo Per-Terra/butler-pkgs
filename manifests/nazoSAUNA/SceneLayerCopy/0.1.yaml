@@ -29,5 +29,5 @@ Files:
   - Path: SceneLayerCopy.auf
     Sha256: faa2fd1e643082ffe33487760c06e8a0e7c1ece6d15cab148ab125762f94272b
     Install:
-      TargetPath: '{{plugins}}/SceneLayerCopy.auf'
+      TargetPath: plugins/SceneLayerCopy.auf
 ManifestVersion: 0.1.0

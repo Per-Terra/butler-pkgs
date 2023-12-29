@@ -27,5 +27,5 @@ Files:
   - Path: dlgscenejmp.auf
     Sha256: 157295ed724152e22b3906a75147dcfa0bb0b04546aacdfa91cd30d1f4a36716
     Install:
-      TargetPath: '{{plugins}}/dlgscenejmp.auf'
+      TargetPath: plugins/dlgscenejmp.auf
 ManifestVersion: 0.1.0

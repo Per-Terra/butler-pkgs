@@ -27,7 +27,7 @@ Files:
   - Path: BottomClickCtrl.auf
     Sha256: b968e56f46422bf0f606dfdcab1a309207e6daecfe711b818d4a7eb170dcc809
     Install:
-      TargetPath: '{{plugins}}/BottomClickCtrl.auf'
+      TargetPath: plugins/BottomClickCtrl.auf
   - Path: readme.txt
     Sha256: 41d378ed9c63212caffa23e3cff34c68e19e61d5a9436e776e2c6e1193a67a44
 ManifestVersion: 0.1.0
