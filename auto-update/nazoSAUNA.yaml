@@ -1,0 +1,12 @@
+- Enable: true
+  Identifier: patch.aul
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: patch.aul
+  Asset: ^patch.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^(r\d+)_(\d+)$' | Out-Null
+      $version = $Matches[1] + '+ss' + $Matches[2]
