@@ -1,0 +1,16 @@
+- Enable: false
+  Identifier: patch.aul
+  Developer: ePi
+  Type: GitHub
+  Owner: ePi5131
+  Repository: patch.aul
+  Asset: ^patch.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '(r\d+)(?:_(.*))?$' | Out-Null
+      $version = if ($Matches[2]) {
+        $Matches[1] + '-' + $Matches[2]
+      } else {
+        $Matches[1]
+      }
