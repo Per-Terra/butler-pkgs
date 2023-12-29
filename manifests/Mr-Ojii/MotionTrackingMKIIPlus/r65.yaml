@@ -1,0 +1,46 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: MotionTrackingMKIIPlus
+DisplayName: MotionTracking MK-II Plus
+Version: r65
+ReleaseDate: 2023-08-05
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 22750
+Developer:
+- Mr-Ojii
+Description: AviUtlでオブジェクトトラッキングを行うプラグイン
+Website:
+- https://github.com/Mr-Ojii/MotionTracking_MKII_Plus
+Files:
+- SourceUrl: https://github.com/Mr-Ojii/MotionTracking_MKII_Plus/releases/download/r65/MotionTrackingMKIIPlus.zip
+  Sha256: 4cdde51c0b20153458d95420f063db394b346345b413e3ad64154ca9467e864b
+  Files:
+  - Path: haarcascade_frontalface_default.xml
+    Sha256: 0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0
+    Install:
+      TargetPath: haarcascade_frontalface_default.xml
+  - Path: haarcascade_profileface.xml
+    Sha256: b39a4a3be45539db146a7fc1d3e761a292c196eb88421185e6a615b3055e612d
+    Install:
+      TargetPath: haarcascade_profileface.xml
+  - Path: MotionTrackingMKIIPlus.auf
+    Sha256: c6380d7fe490cb29089703386761180543471dc56a32486d5d175489a82863a0
+    Install:
+      TargetPath: MotionTrackingMKIIPlus.auf
+  - Path: README.ja.md
+    Sha256: 64b2b4449bd0de0f8c5fcc1c6b8ec3506d5c581b535f9e40e4912042a535aebc
+  - Path: README.md
+    Sha256: bc55dd491e5a1f2509b28dfade49c359a23d0d4990afe668ce660336d096e3a6
+  - Path: Licenses/aviutl_plugin_sdk.txt
+    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+  - Path: Licenses/MotionTracking_MKII.txt
+    Sha256: 3136d18fd1604cbc0cc09f4390338bde28fa99be8c8a46d062c44c8366bf5c09
+  - Path: Licenses/opencv_contrib.txt
+    Sha256: 3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5
+  - Path: Licenses/opencv.txt
+    Sha256: 3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5
+ManifestVersion: 0.1.0
