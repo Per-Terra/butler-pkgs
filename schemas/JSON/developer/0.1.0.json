@@ -4,33 +4,40 @@
   "title": "BUtler Developer v0.1.0",
   "definitions": {
     "Identifier": {
+      "description": "英数字と連続しない記号(+-.)で構成される文字列",
       "type": "string",
       "pattern": "^[0-9A-Za-z]+(?:[+\\-.][0-9A-Za-z]+)*$"
     },
     "DisplayName": {
+      "description": "前後に空白を含まない文字列",
       "type": "string",
       "pattern": "^\\S(?:.*\\S)?$"
     },
     "Url": {
+      "description": "httpまたはhttpsで始まるURL",
       "type": "string",
-      "pattern": "^https?://.+$"
+      "pattern": "^[Hh][Tt][Tt][Pp][Ss]?://"
     }
   },
   "type": "object",
   "properties": {
     "Identifier": {
+      "description": "開発者ごとに一意に与えられる識別子",
       "$ref": "#/definitions/Identifier"
     },
     "DisplayName": {
+      "description": "開発者の表示名 (Identifierと同じ場合は省略可)",
       "$ref": "#/definitions/DisplayName"
     },
     "Website": {
+      "description": "開発者に関連するウェブサイト",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Url"
       }
     },
     "ManifestVersion": {
+      "description": "マニフェストのバージョン",
       "type": "string",
       "enum": [
         "0.1.0"
