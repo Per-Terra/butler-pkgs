@@ -1,3 +1,9 @@
+[CmdletBinding()]
+param (
+  [Parameter(Mandatory = $false)]
+  [string[]]$YamlPath
+)
+
 ### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
 # powershell-yaml のインストール
 if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
@@ -16,13 +22,21 @@ if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
 }
 ###
 
-$yamls = Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath "../auto-update") -Filter '*.yaml' -Recurse -File
-
 $targets = @()
 
-$yamls | ForEach-Object {
-  $_ | Get-Content -Raw | ConvertFrom-Yaml | ForEach-Object {
-    $targets += $_
+if ($YamlPath) {
+  $YamlPath | ForEach-Object {
+    Get-Item -Path $_ | Get-Content -Raw | ConvertFrom-Yaml | ForEach-Object {
+      $targets += $_
+    }
+  }
+}
+else {
+  $yamls = Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath "../auto-update") -Filter '*.yaml' -Recurse -File
+  $yamls | ForEach-Object {
+    $_ | Get-Content -Raw | ConvertFrom-Yaml | ForEach-Object {
+      $targets += $_
+    }
   }
 }
 
