@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: patch.aul
+Version: r29
+ReleaseDate: 2022-06-02
+Section: Plugin/Other
+Depends:
+- exedit (= 0.92)
+InstalledSize: 618
+Developer:
+- ePi
+Description: AviUtlや拡張編集のバグを直したり高速化をしたり新機能を追加したりするプラグイン
+Website:
+- https://github.com/ePi5131/patch.aul
+Files:
+- SourceUrl: https://github.com/ePi5131/patch.aul/releases/download/r29/patch.zip
+  Sha256: 8da3289c992817f3913c68955a60582716a5d79e493da3ddbd80169e18df23de
+  Files:
+  - Path: COPYING
+    Sha256: 230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809
+  - Path: COPYING.LESSER
+    Sha256: 7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059
+  - Path: credits.md
+    Sha256: 5cb4e7b5c9c85b99fd37f93c1c2fbe15a41e892f399f3c7f50ef5e4dae952865
+  - Path: LICENSE
+    Sha256: d6e18807844e259d920fb95fffb3ee0bf96f046f0a9f7cf7459941aed63b373b
+  - Path: patch.aul
+    Sha256: e80a36bbb75ac40891d1c7a15a224bac205fef164d2081e991ff4148dae37058
+    Install:
+      TargetPath: patch.aul
+  - Path: patch.aul.txt
+    Sha256: d602c3a11d5be42fd2932b9a4bf011c146310b4e7be99bf3291819c24ea6ccad
+ManifestVersion: 0.1.0
