@@ -57,8 +57,10 @@ function Get-GitHubReleases {
     $uri += '/latest'
   }
 
+  $uri += '?per_page=10'
+
   try {
-    $response = Invoke-RestMethod -Uri $uri -Method Get -ContentType 'application/json'
+    $response = Invoke-RestMethod -Uri $uri -Method Get
   }
   catch {
     throw "GitHub API へのリクエストに失敗しました: $_"
