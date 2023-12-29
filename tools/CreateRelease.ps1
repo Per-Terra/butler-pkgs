@@ -26,78 +26,73 @@ if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
 
 $ManifestVersion = '0.1.0'
 
-$contents = [ordered]@{
-  '$manifestVersion' = $ManifestVersion
-  '$date'            = $Date
-}
-
 Write-Host -Object 'YAMLファイルを探しています...' -NoNewline
 $manifests = Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath '../manifests') -Filter '*.yaml' -Recurse
 Write-Host -Object " $($manifests.Count) 件のYAMLファイルが見つかりました"
 
+$packages = [ordered]@{}
+$developers = [ordered]@{}
+
 Write-Host -Object 'YAMLファイルを読み込んでいます...' -NoNewline
 $manifests | ForEach-Object {
+  $manifest = Get-Content -Path $_.FullName -Raw | ConvertFrom-Yaml -Ordered
   if ($_.Name -eq 'developer.yaml') {
-    $developer = Get-Content -Path $_.FullName -Raw | ConvertFrom-Yaml -Ordered
-    $identifier = $developer.Identifier
-    $developer.Remove('Identifier')
-    $developer.Remove('ManifestVersion')
-    if ($contents[$identifier]) {
-      $contents[$identifier].Add('$developer', $developer)
+    $developer = $manifest.Identifier
+    $manifest.Remove('Identifier')
+    $manifest.Remove('ManifestVersion')
+    if ($developers[$developer]) {
+      throw "開発者名が重複しています: $developer"
     }
-    else {
-      $contents[$identifier] = [ordered]@{ '$developer' = $developer }
-    }
+    $developers.Add($developer, $manifest)
   }
   else {
-    $package = Get-Content -Path $_.FullName -Raw | ConvertFrom-Yaml -Ordered
-    $identifier = $package.Identifier
-    $version = $package.Version
-    $developer = $package.Developer[0]
-    $package.Remove('Identifier')
-    $package.Remove('Version')
-    $package.Remove('ManifestVersion')
-    if ($contents[$developer]) {
-      if ($contents[$developer][$identifier]) {
-        $contents[$developer][$identifier].Add($version, $package)
+    $identifier = $manifest.Identifier
+    $version = $manifest.Version
+    $manifest.Remove('Identifier')
+    $manifest.Remove('Version')
+    $manifest.Remove('ManifestVersion')
+    if ($packages[$identifier]) {
+      if ($packages[$identifier][$version]) {
+        throw "バージョンが重複しています: $identifier ($version)"
       }
-      else {
-        $contents[$developer][$identifier] = [ordered]@{ $version = $package }
-      }
+      $packages[$identifier].Add($version, $manifest)
     }
     else {
-      $contents[$developer] = [ordered]@{ $identifier = [ordered]@{ $version = $package } }
+      $packages.Add($identifier, [ordered]@{ $version = $manifest })
     }
   }
 }
 Write-Host -Object ' 完了'
 
 Write-Host -Object 'YAMLファイルをソートしています...' -NoNewline
-$contents = $contents | Sort-Object -Property Name
 
-# ReleaseDate でソート
-foreach ($developer in [array]$contents.Keys) {
-  foreach ($identifier in [array]$contents[$developer].Keys) {
-    $sortedPackages = [ordered]@{}
-    $contents[$developer][$identifier].GetEnumerator() |
-    Sort-Object -Property @{
-      Expression = {
-        if ($null -ne $_.Value.ReleaseDate) {
-          [datetime]::ParseExact($_.Value.ReleaseDate, 'yyyy-MM-dd', $null)
+$sortedPackages = [ordered]@{}
+foreach ($identifier in ($packages.Keys | Sort-Object)) {
+  $sortedPackages.Add($identifier, [ordered]@{})
+  # ReleaseDate でソート
+  foreach ($version in ($packages[$identifier].Keys | Sort-Object -Property @{
+        Expression = {
+          if ($null -ne $packages[$identifier][$_].ReleaseDate) {
+            [datetime]::ParseExact($packages[$identifier][$_].ReleaseDate, 'yyyy-MM-dd', $null)
+          }
+          else {
+            [datetime]::MinValue
+          }
         }
-        else {
-          [datetime]::MinValue
-        }
-      }
-      Descending = $true
-    } |
-    ForEach-Object {
-      $sortedPackages.Add($_.Key, $_.Value)
-    }
-    $contents[$developer][$identifier] = $sortedPackages
+        Descending = $true
+      })) {
+    $sortedPackages[$identifier].Add($version, $packages[$identifier][$version])
   }
 }
+
 Write-Host -Object ' 完了'
+
+$contents = [ordered]@{
+  Date            = $Date
+  Packages        = $sortedPackages
+  Developers      = $developers
+  ManifestVersion = $ManifestVersion
+}
 
 Write-Host -Object 'JSONに変換しています...' -NoNewline
 $json = ($contents | ConvertTo-Json -Depth 100 -Compress) + "`n"
@@ -106,7 +101,7 @@ Write-Host -Object ' 完了'
 Write-Host -Object 'JSONを圧縮しています...' -NoNewline
 $bytes = [System.Text.Encoding]::UTF8.GetBytes($json)
 $stream = [System.IO.MemoryStream]::new()
-$gzip = [System.IO.Compression.GzipStream]::new($stream, [System.IO.Compression.CompressionMode]::Compress)
+$gzip = [System.IO.Compression.GzipStream]::new($stream, [System.IO.Compression.CompressionLevel]::SmallestSize)
 $gzip.Write($bytes, 0, $bytes.Length)
 $gzip.Close()
 $stream.Close()
@@ -118,7 +113,7 @@ $hashBytes = $hash.ComputeHash($stream.ToArray())
 $hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
 Write-Host -Object ' 完了'
 
-if (-not(Test-Path -Path $ReleaseDirectory)) {
+if (-not (Test-Path -Path $ReleaseDirectory)) {
   Write-Host -Object 'ディレクトリを作成しています...' -NoNewline
   $null = New-Item -Path $ReleaseDirectory -ItemType Directory -Force
   Write-Host -Object ' 完了'
