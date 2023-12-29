@@ -69,8 +69,19 @@ Write-Host -Object 'YAMLファイルをソートしています...' -NoNewline
 $sortedPackages = [ordered]@{}
 foreach ($identifier in ($packages.Keys | Sort-Object)) {
   $sortedPackages.Add($identifier, [ordered]@{})
-  # ReleaseDate でソート
   foreach ($version in ($packages[$identifier].Keys | Sort-Object -Property @{
+        # Version でソート
+        Expression = {
+          if ($null -ne $packages[$identifier][$_].Version) {
+            $packages[$identifier][$_].Version
+          }
+          else {
+            ''
+          }
+        }
+        Descending = $true
+      }, @{
+        # ReleaseDate でソート
         Expression = {
           if ($null -ne $packages[$identifier][$_].ReleaseDate) {
             [datetime]::ParseExact($packages[$identifier][$_].ReleaseDate, 'yyyy-MM-dd', $null)
