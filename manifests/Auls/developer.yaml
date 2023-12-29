@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: Auls
+Website:
+  - https://auls.client.jp/
+  - https://twitter.com/yu_noimage_
+ManifestVersion: 0.1.0
