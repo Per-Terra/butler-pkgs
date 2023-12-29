@@ -118,7 +118,11 @@ function Get-FilesInArchive {
           })
       }
       elseif ($_.Extention -in $ArchiveExtensions) {
-        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $TargetPath -PreviousFiles $previousFile.Files))
+        $expandPath = Join-Path -Path (Split-Path -Path $_.FullName -Parent) -ChildPath (Split-Path -Path $_.FullName -LeafBase)
+        if (Test-Path $expandPath) {
+          Remove-Item -Path $expandPath -Recurse -Force
+        }
+        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
 
@@ -163,12 +167,22 @@ function Get-SourceFileFromUrl {
     }
   }
 
-  if (-not ((Split-Path -Path $filePath -Extension) -in $ArchiveExtensions)) {
+  $fileExtension = Split-Path -Path $filePath -Extension
+
+  if (-not ($fileExtension -in $ArchiveExtensions)) {
     $script:installedSize += [math]::Ceiling((Get-Item -Path $filePath).Length / 1024)
-    if ($previousFile) {
-      if ($previousFile.Install) {
-        $file.Add('Install', $previousFile.Install)
-      }
+    if ($previousFile.Install) {
+      $file.Add('Install', $previousFile.Install)
+    }
+    elseif ($fileExtension -in $PluginExtensions) {
+      $file.Add('Install', @{
+          TargetPath = ($fileName -replace '^', '{{plugins}}/')
+        })
+    }
+    elseif ($fileExtension -in $ScriptExtensions) {
+      $file.Add('Install', @{
+          TargetPath = ($fileName -replace '^', '{{script}}/')
+        })
     }
     else {
       $file.Add('Install', @{
