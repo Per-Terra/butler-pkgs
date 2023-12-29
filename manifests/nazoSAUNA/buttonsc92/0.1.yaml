@@ -5,7 +5,7 @@ Identifier: buttonsc92
 DisplayName: 拡張編集設定LRボタンショートカット追加プラグイン
 Version: "0.1"
 ReleaseDate: 2023-02-03
-Section: Plugin/Filter
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 11

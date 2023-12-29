@@ -5,7 +5,7 @@ Identifier: BottomClickCtrl
 DisplayName: メインウィンドウのボタン周辺の判定を無効化するプラグイン
 Version: "1.0"
 ReleaseDate: 2023-12-06
-Section: Plugin/Filter
+Section: Plugin/Other
 InstalledSize: 11
 Developer:
 - nazoSAUNA

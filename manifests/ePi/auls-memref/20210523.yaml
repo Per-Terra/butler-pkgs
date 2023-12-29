@@ -5,7 +5,7 @@ Identifier: auls-memref
 DisplayName: Aulsメモリ参照プラグイン
 Version: "20210523"
 ReleaseDate: 2021-05-23
-Section: Plugin/Filter
+Section: Plugin/Other
 Depends:
 - aviutl (>= 1.00)
 - exedit (= 0.92)

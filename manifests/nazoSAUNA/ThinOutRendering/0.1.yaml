@@ -5,7 +5,7 @@ Identifier: ThinOutRendering
 DisplayName: 間引いて描画
 Version: "0.1"
 ReleaseDate: 2023-09-11
-Section: Plugin/Filter
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 11

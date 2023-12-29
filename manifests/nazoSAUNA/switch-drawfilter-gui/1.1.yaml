@@ -5,7 +5,7 @@ Identifier: switch-drawfilter-gui
 DisplayName: 標準描画 等のGUIを非表示にするプラグイン
 Version: "1.1"
 ReleaseDate: 2022-12-17
-Section: Plugin/Filter
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 12

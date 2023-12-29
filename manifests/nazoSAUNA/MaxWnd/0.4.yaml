@@ -5,7 +5,7 @@ Identifier: MaxWnd
 DisplayName: 最大化時メインウィンドウのみ表示プラグイン
 Version: "0.4"
 ReleaseDate: 2021-12-16
-Section: Plugin/Filter
+Section: Plugin/Other
 InstalledSize: 11
 Developer:
 - nazoSAUNA

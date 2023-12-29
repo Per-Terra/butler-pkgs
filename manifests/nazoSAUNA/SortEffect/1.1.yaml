@@ -5,7 +5,7 @@ Identifier: SortEffect
 DisplayName: エフェクト並び替えプラグイン
 Version: "1.1"
 ReleaseDate: 2022-09-03
-Section: Plugin/Filter
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 22

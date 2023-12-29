@@ -5,7 +5,7 @@ Identifier: tl-item-cut
 DisplayName: 切り取りプラグイン
 Version: "5.0"
 ReleaseDate: 2023-09-08
-Section: Plugin/Filter
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 14

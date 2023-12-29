@@ -5,7 +5,7 @@ Identifier: SceneLayerCopy
 DisplayName: シーンのレイヤー情報コピペプラグイン
 Version: "0.1"
 ReleaseDate: 2022-11-26
-Section: Plugin/Filter
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 11

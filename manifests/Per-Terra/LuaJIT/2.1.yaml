@@ -4,7 +4,7 @@
 Identifier: LuaJIT
 Version: "2.1"
 ReleaseDate: 2023-12-28
-Section: Core
+Section: Other
 Replaces:
 - exedit
 InstalledSize: 1185

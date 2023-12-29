@@ -5,7 +5,7 @@ Identifier: xCameraAssist
 DisplayName: カメラ補助プラグイン
 Version: "1.7"
 ReleaseDate: 2022-01-15
-Section: Plugin/Filter
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 26
