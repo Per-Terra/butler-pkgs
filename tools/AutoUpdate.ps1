@@ -91,6 +91,9 @@ foreach ($target in $targets) {
         if ($target.Version.regex -and $version -match $target.Version.regex.find) {
           $version = $version -replace $target.Version.regex.find, $target.Version.regex.replace
         }
+        if ($target.Version.script) {
+          Invoke-Expression -Command $target.Version.script
+        }
         if ([string]::IsNullOrEmpty($version)) {
           Write-Warning -Message "バージョンが見つかりません: $($target.Developer)/$($target.Identifier)"
           Write-Warning -Message "バージョンの取得元: $($target.Version.from)"
