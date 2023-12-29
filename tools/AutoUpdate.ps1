@@ -115,7 +115,7 @@ foreach ($target in $targets) {
         }
 
         try {
-          . (Join-Path -Path $PSScriptRoot -ChildPath "./CreateManifest.ps1") -Update -SourceUrl $url -Identifier $target.Identifier -Version $version -ReleaseDate $date.toString('yyyy-MM-dd') -Developer $target.Developer -SkipPrompt -Force
+          . (Join-Path -Path $PSScriptRoot -ChildPath "./CreateManifest.ps1") -Update -SourceUrl $url -Identifier $target.Identifier -Version $version -ReleaseDate $date -Developer $target.Developer -SkipPrompt -Force
         }
         catch {
           Write-Warning -Message "マニフェストは作成されませんでした: $_"
