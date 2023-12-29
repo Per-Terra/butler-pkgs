@@ -1,4 +1,4 @@
-filter Get-SHA256 {
+filter Get-Sha256 {
   [CmdletBinding()]
   param (
     [Parameter(Mandatory = $true,

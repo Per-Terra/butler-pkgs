@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: export2clipboard
 Version: "20200904"
@@ -17,7 +17,7 @@ Website:
 - https://scrapbox.io/ePi5131/export2clipboard
 Files:
 - SourceUrl: https://scrapbox.io/files/5f5148a3e8bb29001e0f2bd9.auf?title=export2clipboard.auf
-  SHA256: 8941f6335547d18349b387488cb69d0fbf51e1ae7192992cae00ba8796540081
+  Sha256: 8941f6335547d18349b387488cb69d0fbf51e1ae7192992cae00ba8796540081
   Install:
     TargetPath: export2clipboard.auf
 ManifestVersion: 0.1.0

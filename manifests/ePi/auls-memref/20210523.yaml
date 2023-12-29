@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: auls-memref
 DisplayName: Aulsメモリ参照プラグイン
@@ -21,14 +21,14 @@ Website:
 - https://auls.client.jp/
 Files:
 - SourceUrl: https://scrapbox.io/files/60a97027a8a637001c326378.zip?title=auls_memref.zip
-  SHA256: be2ff6920b2bb7df3350595a0f2dbccec3db92c74e4d403492382177d62d966c
+  Sha256: be2ff6920b2bb7df3350595a0f2dbccec3db92c74e4d403492382177d62d966c
   Files:
   - Path: auls_memref.auf
-    SHA256: c6a4e2ac843b8b9b054ca6b581214d88566d27b2ddc4201e569f467913b33100
+    Sha256: c6a4e2ac843b8b9b054ca6b581214d88566d27b2ddc4201e569f467913b33100
     Install:
       TargetPath: '{{plugins}}/auls_memref.auf'
   - Path: 説明.txt
-    SHA256: b8d17421741d2622f8af1c094ec8e6621e1c796cc9dd38857742a77f687b4d9e
+    Sha256: b8d17421741d2622f8af1c094ec8e6621e1c796cc9dd38857742a77f687b4d9e
   - Path: src/auls_memref.cpp
-    SHA256: 3d06360c892d58c561b741c1e2f410eeec7046ed1e0a7dc414cda764ea9a63d5
+    Sha256: 3d06360c892d58c561b741c1e2f410eeec7046ed1e0a7dc414cda764ea9a63d5
 ManifestVersion: 0.1.0

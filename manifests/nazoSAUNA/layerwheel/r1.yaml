@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: layerwheel
 DisplayName: LayerWheel
@@ -18,12 +18,12 @@ Website:
 - https://github.com/nazonoSAUNA/LayerWheel
 Files:
 - SourceUrl: https://github.com/nazonoSAUNA/LayerWheel/releases/download/r1/layerwheel.zip
-  SHA256: 385b69f95db40ec260f8dc54673ee335092561c403a9341f1e85ffd4d0e4eaf3
+  Sha256: 385b69f95db40ec260f8dc54673ee335092561c403a9341f1e85ffd4d0e4eaf3
   Files:
   - Path: Credit.md
-    SHA256: 8e0c86e9c8de58ea6ab034964620b88af31d45e3d32ade0e6b6df7c70dbc759f
+    Sha256: 8e0c86e9c8de58ea6ab034964620b88af31d45e3d32ade0e6b6df7c70dbc759f
   - Path: layerwheel.auf
-    SHA256: 054fd74c91cf730481ae58b8eb1afeed94e467bb035d6bbc02f05071b2549213
+    Sha256: 054fd74c91cf730481ae58b8eb1afeed94e467bb035d6bbc02f05071b2549213
     Install:
       TargetPath: '{{plugins}}/layerwheel.auf'
 ManifestVersion: 0.1.0

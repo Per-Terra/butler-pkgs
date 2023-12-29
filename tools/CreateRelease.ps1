@@ -133,7 +133,7 @@ $release = [ordered]@{
   Date  = $Date
   Files = @( [ordered]@{
       Name   = 'contents.json.gz'
-      SHA256 = $hashString
+      Sha256 = $hashString
     })
 }
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |

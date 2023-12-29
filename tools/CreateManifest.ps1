@@ -50,7 +50,7 @@ $scriptDependencies | ForEach-Object {
 
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/ConvertTo-ManifestYaml.ps1')
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Get-FileFromUrl.ps1')
-. (Join-Path -Path $PSScriptRoot -ChildPath './lib/Get-SHA256.ps1')
+. (Join-Path -Path $PSScriptRoot -ChildPath './lib/Get-Sha256.ps1')
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-PackageManifest.ps1')
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-UrlFormat.ps1')
 
@@ -87,7 +87,7 @@ function Get-FilesInArchive {
   $files | ForEach-Object {
     $file = @{
       Path   = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
-      SHA256 = $_.FullName | Get-SHA256
+      Sha256 = $_.FullName | Get-Sha256
     }
 
     if ($PreviousFile) {
@@ -167,14 +167,14 @@ function Get-SourceFileFromUrl {
   Write-Host -Object "ファイルの情報を取得しています: $filePath"
   $file = @{
     SourceUrl = $Url
-    SHA256    = $filePath | Get-SHA256
+    Sha256    = $filePath | Get-Sha256
   }
   if ($fileName -ne (Split-Path -Path $Url -Leaf)) {
     $file.Add('FileName', $fileName)
   }
 
   if ($previousFile) {
-    if ($previousFile.SHA256 -eq $file.SHA256) {
+    if ($previousFile.Sha256 -eq $file.Sha256) {
       throw "ファイルが変更されていません: $Url"
     }
   }
@@ -451,7 +451,7 @@ Write-Host -Object "マニフェストを作成しています: $manifestPath"
 
 $Header = @"
 # Created using CreateManifest.ps1 v$ScriptVersion
-# yaml-language-server: `$schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/$ManifestVersion.json
+# yaml-language-server: `$schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/$ManifestVersion.json
 
 "@
 

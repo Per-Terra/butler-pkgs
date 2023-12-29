@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: exedit
 DisplayName: 拡張編集
@@ -19,54 +19,54 @@ Website:
 - https://spring-fragrance.mints.ne.jp/aviutl/
 Files:
 - SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/exedit93rc1.zip
-  SHA256: 642b2ad95db205ddcc7baaffd79461a109110d5a79afa62f078965dcf23f7b84
+  Sha256: 642b2ad95db205ddcc7baaffd79461a109110d5a79afa62f078965dcf23f7b84
   Files:
   - Path: exedit.anm
-    SHA256: c4f4a05bdbb428ac33297c259013a65d285c33b0b0d28a91fa120ed3a2a18ac0
+    Sha256: c4f4a05bdbb428ac33297c259013a65d285c33b0b0d28a91fa120ed3a2a18ac0
     Install:
       TargetPath: exedit.anm
   - Path: exedit.auf
-    SHA256: 319ba428c4528a528171a8f898da7ad2d246e4a6a7fdf9136c3296986c015e05
+    Sha256: 319ba428c4528a528171a8f898da7ad2d246e4a6a7fdf9136c3296986c015e05
     Install:
       TargetPath: exedit.auf
   - Path: exedit.aui
-    SHA256: 38dc2e541d4bea24f283bc2e7108cee96c042018d38a5d06daf9f87ecabbca44
+    Sha256: 38dc2e541d4bea24f283bc2e7108cee96c042018d38a5d06daf9f87ecabbca44
     Install:
       TargetPath: exedit.aui
   - Path: exedit.auo
-    SHA256: 8b9c9d4d0d19961803fa578751e480e52a554ad8bf0dbafb301cc5ec917208f7
+    Sha256: 8b9c9d4d0d19961803fa578751e480e52a554ad8bf0dbafb301cc5ec917208f7
     Install:
       TargetPath: exedit.auo
   - Path: exedit.cam
-    SHA256: 9fe9a7db79310d5ea5a65a6aabea963730893447e14492652610b029677fa6bd
+    Sha256: 9fe9a7db79310d5ea5a65a6aabea963730893447e14492652610b029677fa6bd
     Install:
       TargetPath: exedit.cam
   - Path: exedit.ini
-    SHA256: f64ea668c16ac5f849c209050fdf779daa6c2ce12f6a0e53fa75ad0f6ff224bb
+    Sha256: f64ea668c16ac5f849c209050fdf779daa6c2ce12f6a0e53fa75ad0f6ff224bb
     Install:
       TargetPath: exedit.ini
   - Path: exedit.obj
-    SHA256: 1a63d1f7eccdffbc32ce259227214771aec1849dfa1ce5bae90c266610b3d03b
+    Sha256: 1a63d1f7eccdffbc32ce259227214771aec1849dfa1ce5bae90c266610b3d03b
     Install:
       TargetPath: exedit.obj
   - Path: exedit.scn
-    SHA256: f354d51df0fa29b7c73d58aa64de92e4e898428c132fe9e27926a2da59e8df3f
+    Sha256: f354d51df0fa29b7c73d58aa64de92e4e898428c132fe9e27926a2da59e8df3f
     Install:
       TargetPath: exedit.scn
   - Path: exedit.tra
-    SHA256: d398dcb55046975e5e8f59d792a4831b9ad05f467d0af6c2cbf8b72bc2512b4b
+    Sha256: d398dcb55046975e5e8f59d792a4831b9ad05f467d0af6c2cbf8b72bc2512b4b
     Install:
       TargetPath: exedit.tra
   - Path: exedit.txt
-    SHA256: c009389c708ccda90c222e4f9a43e23d06e6c6fc0f7df172329e1f1b4235cbe4
+    Sha256: c009389c708ccda90c222e4f9a43e23d06e6c6fc0f7df172329e1f1b4235cbe4
   - Path: lua.txt
-    SHA256: 644ee8d5b33e1f244fa79f18e27ac8bf862049331b35071b3b5d19ec268e781b
+    Sha256: 644ee8d5b33e1f244fa79f18e27ac8bf862049331b35071b3b5d19ec268e781b
   - Path: lua51.dll
-    SHA256: f726b46ef35a9aee5d08752c2b4ef6f568067033360070e09a5a4f924ab422d1
+    Sha256: f726b46ef35a9aee5d08752c2b4ef6f568067033360070e09a5a4f924ab422d1
     Install:
       TargetPath: lua51.dll
   - Path: lua51jit.dll
-    SHA256: b91933c86abd5e90bdfeb1302a1b60fabfb5a4b2d1f3306876dcde52b4b15698
+    Sha256: b91933c86abd5e90bdfeb1302a1b60fabfb5a4b2d1f3306876dcde52b4b15698
     Install:
       TargetPath: lua51jit.dll
 ManifestVersion: 0.1.0

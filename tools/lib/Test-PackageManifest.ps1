@@ -93,13 +93,13 @@ function Test-PackageManifest {
       Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Path.pattern)"
       $isValid = $false
     }
-    if ($null -eq $File.SHA256) {
+    if ($null -eq $File.Sha256) {
       Write-Warning -Message "必須フィールドがありません: 'SHA256'"
       $isValid = $false
     }
-    elseif ($File.SHA256 -notmatch $Schema.definitions.SHA256.pattern) {
-      Write-Warning -Message "フィールド 'SHA256' の値が正しくありません: $($File.SHA256)"
-      Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.SHA256.pattern)"
+    elseif ($File.Sha256 -notmatch $Schema.definitions.Sha256.pattern) {
+      Write-Warning -Message "フィールド 'SHA256' の値が正しくありません: $($File.Sha256)"
+      Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Sha256.pattern)"
       $isValid = $false
     }
     if ($File.Files -and $File.Install) {
@@ -192,13 +192,13 @@ function Test-PackageManifest {
               Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.FileName.pattern)"
               $isValid = $false
             }
-            if ($null -eq $file.SHA256) {
-              Write-Warning -Message "Files[$index] の必須フィールドがありません: 'SHA256'"
+            if ($null -eq $file.Sha256) {
+              Write-Warning -Message "Files[$index] の必須フィールドがありません: 'Sha256'"
               $isValid = $false
             }
-            elseif ($file.SHA256 -notmatch $Schema.definitions.SHA256.pattern) {
-              Write-Warning -Message "Files[$index] のフィールド 'SHA256' の値が正しくありません: $($file.SHA256)"
-              Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.SHA256.pattern)"
+            elseif ($file.Sha256 -notmatch $Schema.definitions.Sha256.pattern) {
+              Write-Warning -Message "Files[$index] のフィールド 'Sha256' の値が正しくありません: $($file.Sha256)"
+              Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Sha256.pattern)"
               $isValid = $false
             }
             if ($file.Files -and $file.Install) {

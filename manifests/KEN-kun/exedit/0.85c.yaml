@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: exedit
 DisplayName: 拡張編集
@@ -19,24 +19,24 @@ Website:
 - https://spring-fragrance.mints.ne.jp/aviutl/
 Files:
 - SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/exedit85c.zip
-  SHA256: d4824435fe7cee90e20c2d845643bd666b7fe10a260f9079622957026a86bc27
+  Sha256: d4824435fe7cee90e20c2d845643bd666b7fe10a260f9079622957026a86bc27
   Files:
   - Path: exedit.auf
-    SHA256: ed97e18f87c6c9bc299c5934374f6a435393e93b5cbabfe5c87c6e46981d2616
+    Sha256: ed97e18f87c6c9bc299c5934374f6a435393e93b5cbabfe5c87c6e46981d2616
     Install:
       TargetPath: exedit.auf
   - Path: exedit.aui
-    SHA256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
+    Sha256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
     Install:
       TargetPath: exedit.aui
   - Path: exedit.auo
-    SHA256: d1cf24cf3ef6572ccdc197e0b03c8f18b3983eede792b89cbb250104a49ed37b
+    Sha256: d1cf24cf3ef6572ccdc197e0b03c8f18b3983eede792b89cbb250104a49ed37b
     Install:
       TargetPath: exedit.auo
   - Path: exedit.ini
-    SHA256: 161ad25ea1a74754e7e4f5603384d7acccdc6eb87b9fdec7da0ea8c44a579720
+    Sha256: 161ad25ea1a74754e7e4f5603384d7acccdc6eb87b9fdec7da0ea8c44a579720
     Install:
       TargetPath: exedit.ini
   - Path: exedit.txt
-    SHA256: 2ce9b1dda217a5d1ea0a55862d2aea2b30eb731cdbf9cac3091ec61996065407
+    Sha256: 2ce9b1dda217a5d1ea0a55862d2aea2b30eb731cdbf9cac3091ec61996065407
 ManifestVersion: 0.1.0

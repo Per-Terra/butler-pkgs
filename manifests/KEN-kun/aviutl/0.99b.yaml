@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: aviutl
 DisplayName: AviUtl
@@ -20,15 +20,15 @@ Website:
 - https://spring-fragrance.mints.ne.jp/aviutl/
 Files:
 - SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/aviutl99b.zip
-  SHA256: 8d7a969b203515a9c148acb33d81c4aca9e97ffa8350fa7bb7c63d9560aee553
+  Sha256: 8d7a969b203515a9c148acb33d81c4aca9e97ffa8350fa7bb7c63d9560aee553
   Files:
   - Path: aviutl.exe
-    SHA256: 1e100e90ba74c5bf563da0bfa82104df86528695f928f6e9b2813707db5865fe
+    Sha256: 1e100e90ba74c5bf563da0bfa82104df86528695f928f6e9b2813707db5865fe
     Install:
       TargetPath: aviutl.exe
       Method: Copy
   - Path: aviutl.txt
-    SHA256: 964fda26fc5e7168fdea94c6c2abfddf8d1c45c9625c038b90f3c3940a3b0737
+    Sha256: 964fda26fc5e7168fdea94c6c2abfddf8d1c45c9625c038b90f3c3940a3b0737
   - Path: aviutl.vfp
-    SHA256: 1453e8542ca34be25e01f7ee1077e26ee58bd802f58f4e47797c8eaf54937ae6
+    Sha256: 1453e8542ca34be25e01f7ee1077e26ee58bd802f58f4e47797c8eaf54937ae6
 ManifestVersion: 0.1.0

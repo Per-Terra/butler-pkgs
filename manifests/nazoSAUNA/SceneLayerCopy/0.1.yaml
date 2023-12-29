@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: SceneLayerCopy
 DisplayName: シーンのレイヤー情報コピペプラグイン
@@ -23,12 +23,12 @@ Website:
 - https://github.com/nazonoSAUNA/SceneLayerCopy
 Files:
 - SourceUrl: https://github.com/nazonoSAUNA/SceneLayerCopy/releases/download/0.1/SceneLayerCopy.zip
-  SHA256: bde9d1c9a22790cae624fe5df2e0520a5140b4a56d95b782ea0c97f5177bc31c
+  Sha256: bde9d1c9a22790cae624fe5df2e0520a5140b4a56d95b782ea0c97f5177bc31c
   Files:
   - Path: Credit.md
-    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
   - Path: SceneLayerCopy.auf
-    SHA256: faa2fd1e643082ffe33487760c06e8a0e7c1ece6d15cab148ab125762f94272b
+    Sha256: faa2fd1e643082ffe33487760c06e8a0e7c1ece6d15cab148ab125762f94272b
     Install:
       TargetPath: '{{plugins}}/SceneLayerCopy.auf'
 ManifestVersion: 0.1.0

@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifests/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: BottomClickCtrl
 DisplayName: メインウィンドウのボタン周辺の判定を無効化するプラグイン
@@ -23,12 +23,12 @@ Website:
 Files:
 - SourceUrl: https://drive.google.com/uc?id=1HgCTjXN3u1jXvUFOXIlHg61I8d-JxB-1
   FileName: 要ランタイム(省メモリ).zip
-  SHA256: 21148751e84779e3b1f93ae09fe9cb9e16b83f5a751eab61abaca2ce5e34de51
+  Sha256: 21148751e84779e3b1f93ae09fe9cb9e16b83f5a751eab61abaca2ce5e34de51
   Files:
   - Path: BottomClickCtrl.auf
-    SHA256: b968e56f46422bf0f606dfdcab1a309207e6daecfe711b818d4a7eb170dcc809
+    Sha256: b968e56f46422bf0f606dfdcab1a309207e6daecfe711b818d4a7eb170dcc809
     Install:
       TargetPath: '{{plugins}}/BottomClickCtrl.auf'
   - Path: readme.txt
-    SHA256: 41d378ed9c63212caffa23e3cff34c68e19e61d5a9436e776e2c6e1193a67a44
+    Sha256: 41d378ed9c63212caffa23e3cff34c68e19e61d5a9436e776e2c6e1193a67a44
 ManifestVersion: 0.1.0
