@@ -29,7 +29,9 @@
         "Plugin/Color",
         "Plugin/Language",
         "Plugin/Other",
-        "Script"
+        "Script",
+        "Config",
+        "Other"
       ]
     },
     "Architecture": {

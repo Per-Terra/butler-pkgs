@@ -43,6 +43,8 @@ definitions:
       - Plugin/Language
       - Plugin/Other
       - Script
+      - Config
+      - Other
   Architecture:
     description: パッケージが対応するアーキテクチャ
     type: string
