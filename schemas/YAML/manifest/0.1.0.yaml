@@ -52,9 +52,10 @@ definitions:
     examples:
       - aviutl (>= 1.00)
       - exedit (= 0.92)
-      - rikkymodule
+      - rikkymodule-memory
     type: string
-    pattern: "^([0-9A-Za-z]+(?:[+\\-.][0-9A-Za-z]+)*)(?: *\\( *(<<|<=|=|>=|>>) *([0-9A-Za-z]+(?:[+\\-.][0-9A-Za-z]+)*) *\\))?$"
+    pattern: |- # エスケープが面倒なのでわざと改行
+      ^([0-9A-Za-z]+(?:[+\-.][0-9A-Za-z]+)*)(?: *\( *(<<|<=|=|>=|>>) *([0-9A-Za-z]+(?:[+\-.][0-9A-Za-z]+)*) *\))?$
   Url:
     description: httpまたはhttpsで始まるURL
     type: string
@@ -174,7 +175,8 @@ properties:
     description: パッケージの分類
     $ref: "#/definitions/Section"
   Architecture:
-    description: パッケージが対応するアーキテクチャ
+    description: |- # エスケープが面倒なのでわざと改行
+      パッケージが対応するアーキテクチャ (既定: x86)
     $ref: "#/definitions/Architecture"
     default: x86
 
