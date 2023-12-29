@@ -94,11 +94,16 @@ function Get-FilesInArchive {
       $previousFile = $previousFiles | Where-Object { $_.Path -eq $file.Path }
     }
 
-    if ($previousFile.Files -or $previousFile.Install) {
+    if ($PreviousFile) {
       if ($PreviousFile.Install) {
         $file.Add('Install', $previousFile.Install)
       }
-      elseif ($_.Extension -in $PluginExtensions) {
+      elseif ($PreviousFile.Files) {
+        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
+      }
+    }
+    else {
+      if ($_.Extension -in $PluginExtensions) {
         $file.Add('Install', @{
             TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', 'plugins/')
           })
@@ -122,7 +127,7 @@ function Get-FilesInArchive {
         if (Test-Path $expandPath) {
           Remove-Item -Path $expandPath -Recurse -Force
         }
-        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
+        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath))
       }
     }
 
@@ -169,7 +174,14 @@ function Get-SourceFileFromUrl {
 
   $fileExtension = Split-Path -Path $filePath -Extension
 
-  if (-not ($fileExtension -in $ArchiveExtensions)) {
+  if ($fileExtension -in $ArchiveExtensions) {
+    $expandPath = Join-Path -Path (Split-Path -Path $filePath -Parent) -ChildPath (Split-Path -Path $filePath -LeafBase)
+    if (Test-Path $expandPath) {
+      Remove-Item -Path $expandPath -Recurse -Force
+    }
+    $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
+  }
+  else {
     $script:installedSize += [math]::Ceiling((Get-Item -Path $filePath).Length / 1024)
     if ($previousFile.Install) {
       $file.Add('Install', $previousFile.Install)
@@ -189,15 +201,7 @@ function Get-SourceFileFromUrl {
           TargetPath = $fileName
         })
     }
-
-    return $file
   }
-
-  $expandPath = Join-Path -Path (Split-Path -Path $filePath -Parent) -ChildPath (Split-Path -Path $filePath -LeafBase)
-  if (Test-Path $expandPath) {
-    Remove-Item -Path $expandPath -Recurse -Force
-  }
-  $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
 
   return $file
 }
