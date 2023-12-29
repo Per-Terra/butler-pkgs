@@ -124,15 +124,15 @@ if (-not(Test-Path -Path $ReleaseDirectory)) {
   Write-Host -Object ' 完了'
 }
 
-Write-Host -Object 'contents.json.gz を書き込んでいます...' -NoNewline
-$stream.ToArray() | Set-Content -Path (Join-Path -Path $ReleaseDirectory -ChildPath 'contents.json.gz') -Force -AsByteStream
+Write-Host -Object 'contents-all.json.gz を書き込んでいます...' -NoNewline
+$stream.ToArray() | Set-Content -Path (Join-Path -Path $ReleaseDirectory -ChildPath 'contents-all.json.gz') -Force -AsByteStream
 Write-Host -Object ' 完了'
 
 Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline
 $release = [ordered]@{
   Date  = $Date
   Files = @( [ordered]@{
-      Name   = 'contents.json.gz'
+      Name   = 'contents-all.json.gz'
       Sha256 = $hashString
     })
 }
