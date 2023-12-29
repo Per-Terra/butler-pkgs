@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: rikky
+Website:
+  - https://hazumurhythm.com/wev/
+  - https://twitter.com/rikky_mausu
+  - https://www.youtube.com/@rikkymouse3414
+  - https://www.nicovideo.jp/user/14059878
+ManifestVersion: 0.1.0
