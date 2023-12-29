@@ -6,7 +6,6 @@ DisplayName: メインウィンドウのボタン周辺の判定を無効化す�
 Version: "1.0"
 ReleaseDate: 2023-12-06
 Section: Plugin/Filter
-Architecture: x86
 InstalledSize: 11
 Developer:
 - nazoSAUNA

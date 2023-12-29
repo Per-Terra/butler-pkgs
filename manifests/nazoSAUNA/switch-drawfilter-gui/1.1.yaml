@@ -6,7 +6,6 @@ DisplayName: 標準描画 等のGUIを非表示にするプラグイン
 Version: "1.1"
 ReleaseDate: 2022-12-17
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 12

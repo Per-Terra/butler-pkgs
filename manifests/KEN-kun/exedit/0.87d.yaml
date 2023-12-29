@@ -6,7 +6,6 @@ DisplayName: 拡張編集
 Version: 0.87d
 ReleaseDate: 2011-01-31
 Section: Core
-Architecture: x86
 Depends:
 - aviutl (>> 0.99f)
 InstalledSize: 920

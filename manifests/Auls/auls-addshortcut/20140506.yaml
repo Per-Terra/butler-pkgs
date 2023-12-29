@@ -6,7 +6,6 @@ DisplayName: ショートカット追加
 Version: "20140506"
 ReleaseDate: 2014-05-06
 Section: Plugin/Other
-Architecture: x86
 Depends:
 - auls-memref
 InstalledSize: 71

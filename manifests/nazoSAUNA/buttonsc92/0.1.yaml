@@ -6,7 +6,6 @@ DisplayName: 拡張編集設定LRボタンショートカット追加プラグ�
 Version: "0.1"
 ReleaseDate: 2023-02-03
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 11

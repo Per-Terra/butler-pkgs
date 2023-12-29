@@ -6,7 +6,6 @@ DisplayName: AviUtl
 Version: "1.10"
 ReleaseDate: 2019-10-03
 Section: Core
-Architecture: x86
 InstalledSize: 678
 Developer:
 - KEN-kun

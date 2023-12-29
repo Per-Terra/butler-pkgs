@@ -6,7 +6,6 @@ DisplayName: AulsPNG出力
 Version: fix2
 ReleaseDate: 2022-08-16
 Section: Plugin/Filter
-Architecture: x86
 InstalledSize: 16
 Developer:
 - ePi

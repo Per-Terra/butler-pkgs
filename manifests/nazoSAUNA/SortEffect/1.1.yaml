@@ -6,7 +6,6 @@ DisplayName: エフェクト並び替えプラグイン
 Version: "1.1"
 ReleaseDate: 2022-09-03
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 22

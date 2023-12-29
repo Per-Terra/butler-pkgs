@@ -5,7 +5,6 @@ Identifier: export2clipboard
 Version: "20200904"
 ReleaseDate: 2020-09-04
 Section: Plugin/Filter
-Architecture: x86
 InstalledSize: 12
 Developer:
 - ePi

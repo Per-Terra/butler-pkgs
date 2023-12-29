@@ -6,7 +6,6 @@ DisplayName: シーンのレイヤー情報コピペプラグイン
 Version: "0.1"
 ReleaseDate: 2022-11-26
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 11

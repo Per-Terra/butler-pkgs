@@ -6,7 +6,6 @@ DisplayName: rikkymodule&memory
 Version: 1.4b-0.6
 ReleaseDate: 2020-01-13
 Section: Plugin/Other
-Architecture: x86
 Depends:
 - aviutl (<= 1.10)
 - exedit (<= 0.92)

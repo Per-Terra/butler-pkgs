@@ -6,7 +6,6 @@ DisplayName: 切り取りプラグイン
 Version: "5.0"
 ReleaseDate: 2023-09-08
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 14

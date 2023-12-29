@@ -6,7 +6,6 @@ DisplayName: LayerWheel
 Version: r1
 ReleaseDate: 2023-05-04
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 12

@@ -6,7 +6,6 @@ DisplayName: カメラ補助プラグイン
 Version: "1.7"
 ReleaseDate: 2022-01-15
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 26

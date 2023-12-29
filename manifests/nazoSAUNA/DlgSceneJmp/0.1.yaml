@@ -6,7 +6,6 @@ DisplayName: シーンジャンプ
 Version: "0.1"
 ReleaseDate: 2023-09-21
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 12

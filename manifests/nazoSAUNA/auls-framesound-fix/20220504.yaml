@@ -6,7 +6,6 @@ DisplayName: フレーム移動時に音を鳴らす_改
 Version: "20220504"
 ReleaseDate: 2022-05-04
 Section: Plugin/Filter
-Architecture: x86
 Provides:
 - auls-framesound
 InstalledSize: 12

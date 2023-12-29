@@ -5,7 +5,6 @@ Identifier: patch.aul
 Version: r43+ss45
 ReleaseDate: 2023-12-17
 Section: Plugin/Language
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 865

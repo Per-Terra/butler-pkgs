@@ -6,7 +6,6 @@ DisplayName: AviUtl
 Version: "0.97"
 ReleaseDate: 2002-01-05
 Section: Core
-Architecture: x86
 InstalledSize: 610
 Developer:
 - KEN-kun

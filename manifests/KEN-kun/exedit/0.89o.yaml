@@ -6,7 +6,6 @@ DisplayName: 拡張編集
 Version: 0.89o
 ReleaseDate: 2012-03-04
 Section: Core
-Architecture: x86
 Depends:
 - aviutl (>> 0.99k)
 InstalledSize: 1242

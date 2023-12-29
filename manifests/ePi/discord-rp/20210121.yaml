@@ -6,7 +6,6 @@ DisplayName: Discord Rich Presence Plugin
 Version: "20210121"
 ReleaseDate: 2021-01-21
 Section: Plugin/Filter
-Architecture: x86
 InstalledSize: 3153
 Developer:
 - ePi

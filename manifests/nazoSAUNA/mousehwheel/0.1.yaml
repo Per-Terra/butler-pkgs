@@ -6,7 +6,6 @@ DisplayName: 拡張編集マウス横ホイールプラグイン
 Version: "0.1"
 ReleaseDate: 2022-11-21
 Section: Plugin/Filter
-Architecture: x86
 Depends:
 - exedit (= 0.92)
 InstalledSize: 9
