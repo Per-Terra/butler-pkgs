@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: Mr-Ojii
+Website:
+  - https://github.com/Mr-Ojii
+  - https://scrapbox.io/Mr-Ojii/
+  - https://twitter.com/Mr_Ojii
+  - https://misskey.io/@Mr_Ojii
+ManifestVersion: 0.1.0
