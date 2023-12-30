@@ -26,13 +26,13 @@ $targets = @()
 
 if ($YamlPath) {
   $YamlPath | ForEach-Object {
-    Get-Item -Path $_ | Get-Content -Raw | ConvertFrom-Yaml | ForEach-Object {
+    Get-Item -LiteralPath $_ | Get-Content -Raw | ConvertFrom-Yaml | ForEach-Object {
       $targets += $_
     }
   }
 }
 else {
-  $yamls = Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath "../auto-update") -Filter '*.yaml' -Recurse -File
+  $yamls = Get-ChildItem -LiteralPath (Join-Path -Path $PSScriptRoot -ChildPath "../auto-update") -Filter '*.yaml' -Recurse -File
   $yamls | ForEach-Object {
     $_ | Get-Content -Raw | ConvertFrom-Yaml | ForEach-Object {
       $targets += $_
@@ -122,8 +122,8 @@ foreach ($target in $targets) {
 
         $manifestPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($target.Developer)/$($target.Identifier)/$version.yaml"
 
-        if (Test-Path -Path $manifestPath) {
-          $manifest = Get-Content -Path $manifestPath -Raw | ConvertFrom-Yaml
+        if (Test-Path -LiteralPath $manifestPath) {
+          $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Yaml
           if ($manifest.ReleaseDate -ge $date) {
             Write-Host -Object "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"
             Write-Host -Object "作成中のマニフェストのリリース日: $($date)"

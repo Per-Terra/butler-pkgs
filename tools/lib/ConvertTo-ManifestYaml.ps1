@@ -22,7 +22,7 @@ $ManifestVersion = '0.1.0'
 $schemaPath = Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifest/$ManifestVersion.json"
 
 try {
-  $Schema = Get-Content -Path $schemaPath -Raw -ErrorAction Stop | ConvertFrom-Json
+  $Schema = Get-Content -LiteralPath $schemaPath -Raw -ErrorAction Stop | ConvertFrom-Json
 }
 catch {
   throw "スキーマの読み込みに失敗しました: $schemaPath"

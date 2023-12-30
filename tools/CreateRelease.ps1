@@ -27,7 +27,7 @@ if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
 $ManifestVersion = '0.1.0'
 
 Write-Host -Object 'YAMLファイルを探しています...' -NoNewline
-$manifests = Get-ChildItem -Path (Join-Path -Path $PSScriptRoot -ChildPath '../manifests') -Filter '*.yaml' -Recurse -File
+$manifests = Get-ChildItem -LiteralPath (Join-Path -Path $PSScriptRoot -ChildPath '../manifests') -Filter '*.yaml' -Recurse -File
 Write-Host -Object " $($manifests.Count) 件のYAMLファイルが見つかりました"
 
 $packages = [ordered]@{}
@@ -35,7 +35,7 @@ $developers = [ordered]@{}
 
 Write-Host -Object 'YAMLファイルを読み込んでいます...' -NoNewline
 $manifests | ForEach-Object {
-  $manifest = Get-Content -Path $_.FullName -Raw | ConvertFrom-Yaml -Ordered
+  $manifest = Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Yaml -Ordered
   if ($_.Name -eq 'developer.yaml') {
     $developer = $manifest.Identifier
     $manifest.Remove('Identifier')
@@ -124,14 +124,14 @@ $hashBytes = $hash.ComputeHash($stream.ToArray())
 $hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
 Write-Host -Object ' 完了'
 
-if (-not (Test-Path -Path $ReleaseDirectory)) {
+if (-not (Test-Path -LiteralPath $ReleaseDirectory)) {
   Write-Host -Object 'ディレクトリを作成しています...' -NoNewline
   $null = New-Item -Path $ReleaseDirectory -ItemType Directory -Force
   Write-Host -Object ' 完了'
 }
 
 Write-Host -Object 'contents-all.json.gz を書き込んでいます...' -NoNewline
-$stream.ToArray() | Set-Content -Path (Join-Path -Path $ReleaseDirectory -ChildPath 'contents-all.json.gz') -Force -AsByteStream
+$stream.ToArray() | Set-Content -LiteralPath (Join-Path -Path $ReleaseDirectory -ChildPath 'contents-all.json.gz') -Force -AsByteStream
 Write-Host -Object ' 完了'
 
 Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline

@@ -21,7 +21,7 @@ Write-Host -Object "YAMLファイルのディレクトリ: $yamlDirectory"
 $jsonDirectory = Join-Path -Path $PSScriptRoot -ChildPath JSON
 Write-Host -Object "JSONファイルのディレクトリ: $jsonDirectory"
 
-if (-not (Test-Path $jsonDirectory)) {
+if (-not (Test-Path -LiteralPath $jsonDirectory)) {
   Write-Host -Object "JSONファイルのディレクトリを作成しています: $jsonDirectory"
   try {
     $null = New-Item -Path $jsonDirectory -ItemType Directory
@@ -32,18 +32,18 @@ if (-not (Test-Path $jsonDirectory)) {
 }
 
 Write-Host -Object 'YAMLファイルを探しています...' -NoNewline
-$yamlFiles = Get-ChildItem -Path $yamlDirectory -Filter '*.yaml' -Recurse -File
+$yamlFiles = Get-ChildItem -LiteralPath $yamlDirectory -Filter '*.yaml' -Recurse -File
 Write-Host -Object " $($yamlFiles.Count) 件のYAMLファイルが見つかりました"
 
 Write-Host -Object 'YAMLファイルをJSONファイルに変換しています...' -NoNewline
 $yamlFiles | ForEach-Object {
   $jsonPath = $_.FullName.Replace($yamlDirectory, $jsonDirectory).Replace('.yaml', '.json')
-  if (-not (Test-Path (Split-Path -Path $jsonPath -Parent))) {
+  if (-not (Test-Path -LiteralPath (Split-Path -Path $jsonPath -Parent))) {
     $null = New-Item -Path (Split-Path -Path $jsonPath -Parent) -ItemType Directory
   }
 
   try {
-    ((Get-Content -Path $_.FullName -Raw |
+    ((Get-Content -LiteralPath $_.FullName -Raw |
       ConvertFrom-Yaml -Ordered |
       ConvertTo-JSON -Depth 100) + "`n") -replace "`r`n", "`n" |
     Out-File -FilePath $jsonPath -Encoding utf8NoBOM -Force -NoNewline

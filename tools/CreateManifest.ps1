@@ -78,7 +78,7 @@ function Get-FilesInArchive {
   Write-Host -Object "アーカイブを展開しています: $ArchiveFileName"
   Expand-7Zip -ArchiveFileName $ArchiveFileName -TargetPath $TargetPath
 
-  $files = Get-ChildItem -Path $TargetPath -Recurse -File
+  $files = Get-ChildItem -LiteralPath $TargetPath -Recurse -File
   $script:installedSize += [math]::Ceiling(($files | Measure-Object -Property Length -Sum).Sum / 1024)
 
   $filesInArchive = @()
@@ -124,8 +124,8 @@ function Get-FilesInArchive {
       }
       elseif ($_.Extention -in $ArchiveExtensions) {
         $expandPath = Join-Path -Path (Split-Path -Path $_.FullName -Parent) -ChildPath (Split-Path -Path $_.FullName -LeafBase)
-        if (Test-Path $expandPath) {
-          Remove-Item -Path $expandPath -Recurse -Force
+        if (Test-Path -LiteralPath $expandPath) {
+          Remove-Item -LiteralPath $expandPath -Recurse -Force
         }
         $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath))
       }
@@ -176,13 +176,13 @@ function Get-SourceFileFromUrl {
 
   if ($fileExtension -in $ArchiveExtensions) {
     $expandPath = Join-Path -Path (Split-Path -Path $filePath -Parent) -ChildPath (Split-Path -Path $filePath -LeafBase)
-    if (Test-Path $expandPath) {
-      Remove-Item -Path $expandPath -Recurse -Force
+    if (Test-Path -LiteralPath $expandPath) {
+      Remove-Item -LiteralPath $expandPath -Recurse -Force
     }
     $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
   }
   else {
-    $script:installedSize += [math]::Ceiling((Get-Item -Path $filePath).Length / 1024)
+    $script:installedSize += [math]::Ceiling((Get-Item -LiteralPath $filePath).Length / 1024)
     if ($previousFile.Install) {
       $file.Add('Install', $previousFile.Install)
     }
@@ -253,12 +253,12 @@ if ($Update) {
     $manifestsPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($Developer)/$($Identifier)"
   }
 
-  if (-not (Test-Path -Path $manifestsPath)) {
+  if (-not (Test-Path -LiteralPath $manifestsPath)) {
     throw "マニフェストが見つかりません: $manifestsPath"
   }
 
-  $manifests = Get-ChildItem -Path $manifestsPath -Filter '*.yaml' -Recurse -File | ForEach-Object {
-    Get-Content -Path $_.FullName -Raw | ConvertFrom-Yaml
+  $manifests = Get-ChildItem -LiteralPath $manifestsPath -Filter '*.yaml' -Recurse -File | ForEach-Object {
+    Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Yaml
   }
 
   if ($manifests.Count -eq 0) {
@@ -337,8 +337,8 @@ $script:installedSize = 0
 $files = @()
 
 if ($previousFiles) {
-for ($index = 0; $index -lt $sourceUrls.Count; $index++) {
-  $files += $sourceUrls[$index] | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory -PreviousFile $previousFiles[$index]
+  for ($index = 0; $index -lt $sourceUrls.Count; $index++) {
+    $files += $sourceUrls[$index] | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory -PreviousFile $previousFiles[$index]
   }
 }
 else {
@@ -452,12 +452,12 @@ if (-not (Test-PackageManifest -Manifest $manifest)) {
 }
 
 $manifestPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($manifest['Developer'][0])/$($manifest.Identifier)/$($manifest.Version).yaml"
-if (-not (Test-Path -Path (Split-Path -Path $manifestPath -Parent))) {
+if (-not (Test-Path -LiteralPath (Split-Path -Path $manifestPath -Parent))) {
   $null = New-Item -Path (Split-Path -Path $manifestPath -Parent) -ItemType Directory
 }
 
 if (-not $Force) {
-  if (Test-Path -Path $manifestPath) {
+  if (Test-Path -LiteralPath $manifestPath) {
     do {
       $overwrite = Read-Host -Prompt "'$manifestPath' は既に存在します。上書きしますか? [Y/n]"
     } until ([string]::IsNullOrEmpty($overwrite) -or ($overwrite -in @('Y', 'n')))
