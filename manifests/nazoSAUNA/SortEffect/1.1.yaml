@@ -11,8 +11,7 @@ Depends:
 InstalledSize: 22
 Developer:
 - nazoSAUNA
-Description: |-
-  エフェクトのメニューをまとめたり並び替えたりする
+Description: エフェクトのメニューをまとめたり並び替えたりするプラグイン
 Website:
 - https://github.com/nazonoSAUNA/SortEffect
 Files:
@@ -134,6 +133,4 @@ Files:
     Sha256: 6316b0b15355da12f06ae3dd41ad764bcc5fc50066ad78890df33b987d5a06c4
     Install:
       TargetPath: plugins/SortEffect.auf
-ConfFiles:
-  - plugins/SortEffect_Setting.txt
 ManifestVersion: 0.1.0

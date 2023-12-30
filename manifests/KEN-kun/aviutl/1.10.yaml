@@ -27,4 +27,8 @@ Files:
       Method: Copy
   - Path: aviutl.txt
     Sha256: 15d6ce48959e7d302c5772bf9f115107e456e1c1b010b5217ed8e5c92caf5838
+ConfFiles:
+- aviutl.ini
+- aviutl.sav
+- デフォルト.cfg
 ManifestVersion: 0.1.0

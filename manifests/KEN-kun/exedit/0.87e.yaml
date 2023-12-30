@@ -40,6 +40,7 @@ Files:
     Sha256: f0165c9fd7c6d1e0fcaa71dbc481a76c52b368315c6eaff353586d034cb2e9e8
     Install:
       TargetPath: exedit.ini
+      ConfFile: true
   - Path: exedit.txt
     Sha256: 479134cce3ef29c8584dc744c99107562821a880c2c3b8d7b45dede148205a96
   - Path: lua.txt

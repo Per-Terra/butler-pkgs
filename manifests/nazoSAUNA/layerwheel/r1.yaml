@@ -11,8 +11,7 @@ Depends:
 InstalledSize: 12
 Developer:
 - nazoSAUNA
-Description: |-
-  拡張編集のレイヤーの部分でマウスホイールすると縦スクロールになるプラグイン
+Description: 拡張編集のレイヤーの部分でマウスホイールすると縦スクロールになるプラグイン
 Website:
 - https://github.com/nazonoSAUNA/LayerWheel
 Files:

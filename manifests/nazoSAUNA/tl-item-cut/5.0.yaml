@@ -11,8 +11,7 @@ Depends:
 InstalledSize: 14
 Developer:
 - nazoSAUNA
-Description: |-
-  拡張編集の「切り取り」が特殊な為、皆が思うような切り取りを実装 リップル切り取りとグループ分割も実装
+Description: 拡張編集の「切り取り」が特殊な為、皆が思うような切り取りを実装 リップル切り取りとグループ分割も実装
 Website:
 - https://github.com/nazonoSAUNA/tl_Item_cut
 - https://www.nicovideo.jp/watch/sm41787566

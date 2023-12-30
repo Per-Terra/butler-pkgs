@@ -36,6 +36,7 @@ Files:
     Sha256: 161ad25ea1a74754e7e4f5603384d7acccdc6eb87b9fdec7da0ea8c44a579720
     Install:
       TargetPath: exedit.ini
+      ConfFile: true
   - Path: exedit.txt
     Sha256: 2ce9b1dda217a5d1ea0a55862d2aea2b30eb731cdbf9cac3091ec61996065407
 ManifestVersion: 0.1.0

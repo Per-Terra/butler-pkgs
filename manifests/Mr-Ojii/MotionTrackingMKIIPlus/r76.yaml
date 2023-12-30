@@ -12,8 +12,7 @@ Depends:
 InstalledSize: 22756
 Developer:
 - Mr-Ojii
-Description: |-
-  AviUtlでオブジェクトトラッキングを行うプラグイン
+Description: AviUtlでオブジェクトトラッキングを行うプラグイン
 Website:
 - https://github.com/Mr-Ojii/MotionTracking_MKII_Plus
 Files:

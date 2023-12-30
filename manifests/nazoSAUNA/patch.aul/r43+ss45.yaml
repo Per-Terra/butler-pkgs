@@ -11,8 +11,7 @@ InstalledSize: 865
 Developer:
 - nazoSAUNA
 - ePi
-Description: |-
-  AviUtlや拡張編集のバグを直したり高速化をしたり新機能を追加したりするプラグイン
+Description: AviUtlや拡張編集のバグを直したり高速化をしたり新機能を追加したりするプラグイン
 Website:
 - https://github.com/nazonoSAUNA/patch.aul
 Files:

@@ -30,4 +30,8 @@ Files:
     Sha256: ed618d8f3076d8946dfc9efc758fdc5c1eed709c3551e2bdc341ba87b8c5e430
   - Path: aviutl.vfp
     Sha256: 590c117935225e9fbfb58750079ee289e371b588fb8b561d7fdb09e516843be0
+ConfFiles:
+- aviutl.ini
+- aviutl.sav
+- デフォルト.cfg
 ManifestVersion: 0.1.0
