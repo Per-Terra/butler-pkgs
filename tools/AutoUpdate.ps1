@@ -40,6 +40,8 @@ else {
   }
 }
 
+Write-Host -Object "$($targets.Count) 件の処理を開始します"
+
 function Get-GitHubReleases {
   [CmdletBinding()]
   param (
@@ -76,7 +78,7 @@ function Get-GitHubReleases {
 
 foreach ($target in $targets) {
   if ($target.Enable) {
-    Write-Host -Object "更新中: $($target.Developer)/$($target.Identifier)"
+    Write-Host -Object "処理中: $($target.Developer)/$($target.Identifier)"
   }
   else {
     Write-Host -Object "無効: $($target.Developer)/$($target.Identifier)"
