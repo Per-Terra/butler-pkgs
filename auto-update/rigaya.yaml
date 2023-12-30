@@ -1,9 +1,89 @@
-- Enable: true
-  Identifier: clfilters
+- Identifier: clfilters
   Developer: rigaya
+  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: Aviutl-clfilters
   Asset: ^clfilters_\d.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: ffmpegOut
+  Developer: rigaya
+  Enable: true
+  Type: GitHub
+  Owner: rigaya
+  Repository: ffmpegOut
+  Asset: ^ffmpegOut_.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: NVEnc
+  Developer: rigaya
+  Enable: true
+  Type: GitHub
+  Owner: rigaya
+  Repository: NVEnc
+  Asset: ^AviUtl_.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: QSVEnc
+  Developer: rigaya
+  Enable: true
+  Type: GitHub
+  Owner: rigaya
+  Repository: QSVEnc
+  Asset: ^AviUtl_.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: svtAV1guiEx
+  Developer: rigaya
+  Enable: true
+  Type: GitHub
+  Owner: rigaya
+  Repository: svtAV1guiEx
+  Asset: ^svtAV1guiEx_.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: VCEEnc
+  Developer: rigaya
+  Enable: true
+  Type: GitHub
+  Owner: rigaya
+  Repository: VCEEnc
+  Asset: ^AviUtl_.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: VVenCguiEx
+  Developer: rigaya
+  Enable: true
+  Type: GitHub
+  Owner: rigaya
+  Repository: VVenCguiEx
+  Asset: ^VVenCguiEx_.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: x264guiEx
+  Developer: rigaya
+  Enable: true
+  Type: GitHub
+  Owner: rigaya
+  Repository: x264guiEx
+  Asset: ^x264guiEx_.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: x265guiEx
+  Developer: rigaya
+  Enable: true
+  Type: GitHub
+  Owner: rigaya
+  Repository: x265guiEx
+  Asset: ^x265guiEx_.*\.zip$
   Version:
     from: tag_name

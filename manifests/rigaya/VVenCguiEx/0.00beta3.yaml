@@ -1,0 +1,101 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: VVenCguiEx
+DisplayName: 拡張 VVenC 出力(GUI) Ex
+Version: 0.00beta3
+ReleaseDate: 2023-03-18
+Section: Plugin/Output
+Replaces:
+- ffmpegOut
+- NVEnc
+- QSVEnc
+- svtAV1guiEx
+- VCEEnc
+- x264guiEx
+- x265guiEx
+InstalledSize: 43085
+Developer:
+- rigaya
+Description: VVenCを使用してエンコードを行う出力プラグイン
+Website:
+- https://github.com/rigaya/VVenCguiEx
+Files:
+- SourceUrl: https://github.com/rigaya/VVenCguiEx/releases/download/0.00beta3/VVenCguiEx_0.00beta3.zip
+  Sha256: 9649b41338daa5283f485438ddcc3a1aaedebbb743bf6dfccf8dff098e0138f4
+  Files:
+  - Path: VVenCguiEx_readme.txt
+    Sha256: 3df8f3174dbca47abda5a826d1e8751572a135778ba6c32f853ee1683b1fea2a
+  - Path: exe_files/auo_check_fileopen.exe
+    Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
+    Install:
+      TargetPath: exe_files/auo_check_fileopen.exe
+  - Path: exe_files/auo_setup.exe
+    Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
+    Install:
+      TargetPath: exe_files/auo_setup.exe
+  - Path: exe_files/auo_setup.ini
+    Sha256: d6aaff6e91287f5f78905ecad8a40367473920a794bbed9000e4e3d7f7204746
+    Install:
+      TargetPath: exe_files/auo_setup.ini
+      ConfFile: true
+  - Path: exe_files/check_dotnet.dll
+    Sha256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
+    Install:
+      TargetPath: exe_files/check_dotnet.dll
+  - Path: exe_files/check_vc.dll
+    Sha256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
+    Install:
+      TargetPath: exe_files/check_vc.dll
+  - Path: exe_files/ffmpeg_audenc.exe
+    Sha256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
+    Install:
+      TargetPath: exe_files/ffmpeg_audenc.exe
+  - Path: exe_files/mp4box.exe
+    Sha256: 1b530460196d9465c007aebae2fe34c1941816c29d523d2874b768a3bc0e114c
+    Install:
+      TargetPath: exe_files/mp4box.exe
+  - Path: exe_files/ndp48-web.exe
+    Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
+    Install:
+      TargetPath: exe_files/ndp48-web.exe
+  - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
+    Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
+    Install:
+      TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+  - Path: exe_files/VC_redist.x86.exe
+    Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
+    Install:
+      TargetPath: exe_files/VC_redist.x86.exe
+  - Path: exe_files/vvdecapp.exe
+    Sha256: f739d151bb523d272ad4c21371a3b4752c8b28a7d266a87cd508ddf40fd56147
+    Install:
+      TargetPath: exe_files/vvdecapp.exe
+  - Path: exe_files/vvencFFapp.exe
+    Sha256: 287aeb6461c08bf95a9d9913bd46bfdf29936e6ba3aa2f242bfe7aaefa07597f
+    Install:
+      TargetPath: exe_files/vvencFFapp.exe
+  - Path: plugins/auo_setup.auf
+    Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
+    Install:
+      TargetPath: plugins/auo_setup.auf
+  - Path: plugins/VVenCguiEx.auo
+    Sha256: 4ec942a8ce883d206cb219e5192a87f1e6c31923c13b983b2666ced152d5c1c0
+    Install:
+      TargetPath: plugins/VVenCguiEx.auo
+  - Path: plugins/VVenCguiEx.en.ini
+    Sha256: 300913f0ed70e11a8587f4be8721d8c1af705fd1343b6172a55e1fffe6d9d300
+    Install:
+      TargetPath: plugins/VVenCguiEx.en.ini
+      ConfFile: true
+  - Path: plugins/VVenCguiEx.ini
+    Sha256: 9037330c0030625905fb5d3bcf4d7b98030700d78ef42c6590488786da1831af
+    Install:
+      TargetPath: plugins/VVenCguiEx.ini
+      ConfFile: true
+  - Path: plugins/VVenCguiEx.zh.ini
+    Sha256: edeb9addb472ea8bcf2851b6d931ea6cac9b8fa37390ac27fb57e32541fe859d
+    Install:
+      TargetPath: plugins/VVenCguiEx.zh.ini
+      ConfFile: true
+ManifestVersion: 0.1.0
