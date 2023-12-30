@@ -3,7 +3,7 @@ param (
   [Parameter(Mandatory = $false)]
   [string]$ReleaseDirectory = (Join-Path -Path $PSScriptRoot -ChildPath '../release'),
   [Parameter(Mandatory = $false)]
-  [string]$Date = (Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUTC)
+  [datetime]$Date = [datetime](git -C $PSScriptRoot log -1 --format=%cI)
 )
 
 ### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
@@ -99,7 +99,7 @@ foreach ($identifier in ($packages.Keys | Sort-Object)) {
 Write-Host -Object ' 完了'
 
 $contents = [ordered]@{
-  Date            = $Date
+  Date            = $Date.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
   Packages        = $sortedPackages
   Developers      = $developers
   ManifestVersion = $ManifestVersion
@@ -136,7 +136,7 @@ Write-Host -Object ' 完了'
 
 Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline
 $release = [ordered]@{
-  Date  = $Date
+  Date  = $Date.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
   Files = @( [ordered]@{
       Name   = 'contents-all.json.gz'
       Sha256 = $hashString
