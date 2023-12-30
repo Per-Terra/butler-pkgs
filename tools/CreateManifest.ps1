@@ -221,9 +221,9 @@ function Get-ConfFiles {
 
   $confFiles = @()
 
-  if ($File.Install.Path) {
-    if ((Split-Path -Path $File.Install.Path -Extension) -in $ConfExtensions) {
-      $confFiles += $File.Install.Path
+  if ($File.Install.TargetPath) {
+    if ((Split-Path -Path $File.Install.TargetPath -Extension) -in $ConfExtensions) {
+      $confFiles += $File.Install.TargetPath
     }
   }
 
