@@ -3,7 +3,7 @@
 
 Identifier: auls-memref
 DisplayName: Aulsメモリ参照プラグイン
-Version: "20210523"
+Version: 2021-05-23
 ReleaseDate: 2021-05-23
 Section: Plugin/Other
 Depends:

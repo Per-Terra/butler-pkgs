@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: export2clipboard
-Version: "20200904"
+Version: 2020-09-04
 ReleaseDate: 2020-09-04
 Section: Plugin/Other
 InstalledSize: 12

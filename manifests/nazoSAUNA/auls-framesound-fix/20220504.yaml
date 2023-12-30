@@ -3,7 +3,7 @@
 
 Identifier: auls-framesound-fix
 DisplayName: フレーム移動時に音を鳴らす_改
-Version: "20220504"
+Version: 2022-05-04
 ReleaseDate: 2022-05-04
 Section: Plugin/Other
 Provides:
