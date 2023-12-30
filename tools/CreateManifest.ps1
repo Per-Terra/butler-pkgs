@@ -85,8 +85,9 @@ function Get-FilesInArchive {
 
   Write-Host -Object "アーカイブ内のファイルの情報を取得しています: $ArchiveFileName"
   $files | ForEach-Object {
+    $relativePath = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
     $file = @{
-      Path   = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
+      Path   = $relativePath
       Sha256 = $_.FullName | Get-Sha256
     }
 
@@ -102,20 +103,25 @@ function Get-FilesInArchive {
         $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
+    elseif ($relativePath.StartsWith('plugins/') -or $relativePath.StartsWith('script/') -or $relativePath.StartsWith('exe_files/')) {
+      $file.Add('Install', @{
+          TargetPath = $relativePath
+        })
+    }
     else {
       if ($_.Extension -in $PluginExtensions) {
         $file.Add('Install', @{
-            TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', 'plugins/')
+            TargetPath = ($relativePath -replace '^([^/]+/)*', 'plugins/')
           })
       }
       elseif ($_.Extension -in $ScriptExtensions) {
         $file.Add('Install', @{
-            TargetPath = ($_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/([^/]+/)*', 'script/')
+            TargetPath = ($relativePath -replace '^([^/]+/)*', 'script/')
           })
       }
       elseif ($_.Extension -eq '.exa') {
         # サブディレクトリまで保持
-        $path = $_.FullName.Replace($TargetPath, '').Replace('\', '/')
+        $path = $relativePath
         $path = $path -split '/'
         $path = if ($path[-2]) { $path[-2] + '/' + $path[-1] } else { $path[-1] }
         $file.Add('Install', @{
