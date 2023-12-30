@@ -336,8 +336,15 @@ else {
 $script:installedSize = 0
 $files = @()
 
+if ($previousFiles) {
 for ($index = 0; $index -lt $sourceUrls.Count; $index++) {
   $files += $sourceUrls[$index] | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory -PreviousFile $previousFiles[$index]
+  }
+}
+else {
+  $sourceUrls | ForEach-Object {
+    $files += $_ | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory
+  }
 }
 
 if ($null -eq $ConfFiles) {
