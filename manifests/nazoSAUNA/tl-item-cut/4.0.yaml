@@ -3,7 +3,7 @@
 
 Identifier: tl-Item-cut
 DisplayName: 切り取りプラグイン
-Version: "5.0"
+Version: "4.0"
 ReleaseDate: 2023-09-08
 Section: Plugin/Other
 Depends:
@@ -16,13 +16,13 @@ Website:
 - https://github.com/nazonoSAUNA/tl_Item_cut
 - https://www.nicovideo.jp/watch/sm41787566
 Files:
-- SourceUrl: https://github.com/nazonoSAUNA/tl_Item_cut/releases/download/v5.0/tl_item_cut5.0.zip
-  Sha256: a79a2a9e3538ddd93b964e367d34699ea6dbb0258bac00f6b74dbfdf8d547f7e
+- SourceUrl: https://github.com/nazonoSAUNA/tl_Item_cut/releases/download/v4.0/tl_item_cut4.0.zip
+  Sha256: ab289138a32c2f7ee8aedd4bf5ea445a4b9df411744a1bb199d733c36597d775
   Files:
   - Path: Credit.md
     Sha256: 8e0c86e9c8de58ea6ab034964620b88af31d45e3d32ade0e6b6df7c70dbc759f
   - Path: tl_Item_cut.auf
-    Sha256: a62d699c1141737f4d96a1f65707f5a48093b015fd76e3059631f9e56297a94a
+    Sha256: 8f2483857f73d1b5b52b9efc4771df507f4aec985cd88b70f2cf0dbc873d5887
     Install:
       TargetPath: plugins/tl_Item_cut.auf
 ManifestVersion: 0.1.0

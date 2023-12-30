@@ -1,6 +1,52 @@
-- Enable: true
-  Identifier: patch.aul
+- Identifier: buttonsc92
   Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: buttonsc92
+  Asset: ^buttonsc92\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: DlgSceneJmp
+  Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: DlgSceneJmp
+  Asset: ^dlgscenejmp\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: LayerWheel
+  Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: LayerWheel
+  Asset: ^layerwheel\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: mousehwheel
+  Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: mousehwheel
+  Asset: ^mousehwheel.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: patch.aul
+  Developer: nazoSAUNA
+  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: patch.aul
@@ -10,3 +56,62 @@
     script: |
       $version -match '^(r\d+)_(\d+)$' | Out-Null
       $version = $Matches[1] + '+ss' + $Matches[2]
+
+- Identifier: SceneLayerCopy
+  Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: SceneLayerCopy
+  Asset: ^SceneLayerCopy\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: SortEffect
+  Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: SortEffect
+  Asset: ^SortEffect_.*\.zip$
+  Version:
+    from: tag_name
+
+- Identifier: switch-drawfilter-gui
+  Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: switch_drawfilter_gui
+  Asset: ^switch_drawfilter_gui\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: ThinOutRendering
+  Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: ThinOutRendering
+  Asset: ^ThinOutRendering\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: tl-Item-cut
+  Developer: nazoSAUNA
+  Enable: true
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: tl_Item_cut
+  Asset: ^tl_item_cut.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1

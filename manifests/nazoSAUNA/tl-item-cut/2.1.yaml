@@ -3,12 +3,12 @@
 
 Identifier: tl-Item-cut
 DisplayName: 切り取りプラグイン
-Version: "5.0"
-ReleaseDate: 2023-09-08
+Version: "2.1"
+ReleaseDate: 2023-04-04
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 14
+InstalledSize: 13
 Developer:
 - nazoSAUNA
 Description: 拡張編集の「切り取り」が特殊な為、皆が思うような切り取りを実装 リップル切り取りとグループ分割も実装
@@ -16,13 +16,13 @@ Website:
 - https://github.com/nazonoSAUNA/tl_Item_cut
 - https://www.nicovideo.jp/watch/sm41787566
 Files:
-- SourceUrl: https://github.com/nazonoSAUNA/tl_Item_cut/releases/download/v5.0/tl_item_cut5.0.zip
-  Sha256: a79a2a9e3538ddd93b964e367d34699ea6dbb0258bac00f6b74dbfdf8d547f7e
+- SourceUrl: https://github.com/nazonoSAUNA/tl_Item_cut/releases/download/v2.1/tl_item_cut2.1.zip
+  Sha256: f5565815fbd0519d4ac64a6f49736858fad77f0857e592189315c8d51b8e6e85
   Files:
   - Path: Credit.md
     Sha256: 8e0c86e9c8de58ea6ab034964620b88af31d45e3d32ade0e6b6df7c70dbc759f
   - Path: tl_Item_cut.auf
-    Sha256: a62d699c1141737f4d96a1f65707f5a48093b015fd76e3059631f9e56297a94a
+    Sha256: ec6a8424298c7e861a72e15fe56713ec2785745e6bb8a5225d7147b3c393e0b6
     Install:
       TargetPath: plugins/tl_Item_cut.auf
 ManifestVersion: 0.1.0
