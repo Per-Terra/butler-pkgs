@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: auls-outputpng
+DisplayName: AulsPNG出力
+Version: "20140406"
+ReleaseDate: 2014-04-06
+Section: Plugin/Other
+InstalledSize: 215
+Developer:
+- Auls
+Description: |-
+  現在フレームの画像をPNG形式で出力します。
+  AviUtl本体メニューの『設定』→『PNG出力の設定』から設定ウィンドウのボタンを押すか、『編集』→『PNG出力』内の項目にショートカットを割り当てて使用してください。
+  アルファチャンネルありの場合、画像の合成モードによっては正しく出力できない場合があります。
+Website:
+- https://auls.client.jp/
+Files:
+- SourceUrl: https://auls.client.jp/plugin/auls_outputpng.zip
+  Sha256: aa5c3e90781b022638f2d25c973ac3b2f4be6bde16b596aa932d2b2e548e3d3a
+  Files:
+  - Path: auls_outputpng/auls_outputpng.auf
+    Sha256: 172f6194ba761edb3c7dc12b6b22658ccc857dc2c4c5a1cc7a27d4cbc018122a
+    Install:
+      TargetPath: plugins/auls_outputpng.auf
+  - Path: auls_outputpng/説明.txt
+    Sha256: 6bea0ccc6b4838ed89fd77b29e96901abbea7b256f7ce5ac81e6b49bf76a3c89
+  - Path: auls_outputpng/src/auls_outputpng.cpp
+    Sha256: 98f5ff65aa58965d78e17d147175f37ce3e41375ac6a5403a21f08f5d33ae02e
+  - Path: auls_outputpng/src/auls_outputpng.vcproj
+    Sha256: 18e381a4744f3c04dbf85fcba0992d1acf6e19f5958ba2f00e933ee1d6de9b65
+ManifestVersion: 0.1.0

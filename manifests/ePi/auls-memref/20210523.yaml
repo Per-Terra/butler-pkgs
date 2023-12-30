@@ -17,6 +17,7 @@ Description: |-
   他のプラグインやDLLにメモリアドレス情報を渡します。
   このプラグイン単体では何もしません。
 Website:
+- https://scrapbox.io/ePi5131/Aulsメモリ参照プラグイン
 - https://auls.client.jp/
 Files:
 - SourceUrl: https://scrapbox.io/files/60a97027a8a637001c326378.zip?title=auls_memref.zip

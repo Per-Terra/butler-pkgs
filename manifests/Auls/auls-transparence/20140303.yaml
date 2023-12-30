@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: auls-transparence
+DisplayName: 拡張編集を半透明化
+Version: "20140303"
+ReleaseDate: 2014-03-03
+Section: Plugin/Other
+InstalledSize: 46
+Developer:
+- Auls
+Description: 拡張編集タイムラインを半透明にするプラグイン
+Website:
+- https://auls.client.jp/
+Files:
+- SourceUrl: https://auls.client.jp/plugin/auls_transparence.zip
+  Sha256: 44226f83b93225f1c5efbcc16f8d3b5cf88a2cc03e8db5238ea3461dd1ffc219
+  Files:
+  - Path: auls_transparence/auls_transparence.auf
+    Sha256: a9311df59cec3b3ced633ce0c850f8c32a348087996f32d37ae50961bd192f13
+    Install:
+      TargetPath: plugins/auls_transparence.auf
+  - Path: auls_transparence/auls_transparence.cpp
+    Sha256: f638b0269888c859af26365f6b6aca93199471a4ffb3e90c7cfb826574b7cab7
+  - Path: auls_transparence/説明.txt
+    Sha256: 02693d3cbd436edca8c6ccfbd16d15471916710485b28f961872b1c645cc2779
+ManifestVersion: 0.1.0

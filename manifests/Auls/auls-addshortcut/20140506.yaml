@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
 Identifier: auls-addshortcut
-DisplayName: ショートカット追加
+DisplayName: Aulsショートカット追加
 Version: "20140506"
 ReleaseDate: 2014-05-06
 Section: Plugin/Other
@@ -12,8 +12,19 @@ InstalledSize: 71
 Developer:
 - Auls
 Description: |-
+  拡張編集用のショートカットを追加するプラグイン
   拡張編集関連のショートカットが追加されます。
   AviUtl 本体メニューの『ファイル』→『環境設定』→『ショートカットキーの設定』からショートカットキーを割り当てて使用してください。
+
+  標準描画、拡張描画、パーティクル出力は
+  常に設定ダイアログ表示中のオブジェクトを変更します。
+  (図形[パーティクル出力]をタイムラインに直接配置することはできなくなりました)
+
+  グループ制御、カメラ制御、時間制御は
+  常にタイムラインに配置します。
+
+  ある種類のオブジェクトに通常設定できないフィルタを追加できてしまいます。
+  フィルタによってはエラーが発生します。
 Website:
 - https://auls.client.jp/
 Files:

@@ -1,0 +1,38 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: auls-confirmclose
+DisplayName: 改変版Auls終了確認
+Version: "1.2"
+ReleaseDate: 2022-02-10
+Section: Plugin/Other
+Depends:
+- exedit (= 0.92)
+InstalledSize: 20
+Developer:
+- karoterra
+- Auls
+Description: |-
+  拡張編集に未保存のデータがある場合、プロジェクトを閉じる前に確認メッセージを表示するプラグイン
+  拡張編集上でアンドゥの対象となる操作を行った後、保存しないでプロジェクトを閉じようとすると確認メッセージが出るようになります。
+
+  これはAviUtl用プラグイン「Auls終了確認」を改変したものです。
+Website:
+- https://scrapbox.io/karoterra/改変版Auls終了確認
+- https://auls.client.jp/
+Files:
+- SourceUrl: https://scrapbox.io/files/620515640c5402001dd03aa6.zip?title=auls_confirmclose_v1.2.zip
+  FileName: auls_confirmclose_v1.2.zip
+  Sha256: 5ad3b4532a9932f5ed86a8715e4367998042a06de9de0365344be5891c3e0e6e
+  Files:
+  - Path: auls_confirmclose.auf
+    Sha256: ac83c837c557950cf48d9e8ec26f961e6f48a92e1702ee77f6b015c5af131614
+    Install:
+      TargetPath: plugins/auls_confirmclose.auf
+  - Path: CMakeLists.txt
+    Sha256: d809c8d4191c53600a4477ebdea2bfdc176055d7f0ecdd5e29a7e00ffe3b6b06
+  - Path: 説明.txt
+    Sha256: ac5ee24ff6bf255db07d06840525271f0d67bb7244d2fc99657d0c8aa9e74949
+  - Path: src/auls_confirmclose.cpp
+    Sha256: 9b17c0d79dce1064cbdb0ae1f82da87d3748cf849ac47d420db1f9ddb0eeb41e
+ManifestVersion: 0.1.0

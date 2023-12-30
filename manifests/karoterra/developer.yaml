@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: karoterra
+DisplayName: かろてら
+Website:
+  - https://github.com/karoterra
+  - https://scrapbox.io/karoterra
+  - https://twitter.com/karoterra2008
+  - https://www.nicovideo.jp/user/17745173
+ManifestVersion: 0.1.0

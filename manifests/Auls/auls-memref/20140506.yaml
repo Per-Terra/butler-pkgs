@@ -1,0 +1,35 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: auls-memref
+DisplayName: Aulsメモリ参照プラグイン
+Version: "20140506"
+ReleaseDate: 2014-05-06
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.00)
+- exedit (= 0.92)
+InstalledSize: 52
+Developer:
+- Auls
+Description: |-
+  他のメモリを参照するプラグインやDLLで必要なプラグイン
+  他のプラグインやDLLにメモリアドレス情報を渡します。
+  このプラグイン単体では何もしません。
+Website:
+- https://auls.client.jp/
+Files:
+- SourceUrl: https://auls.client.jp/plugin/auls_memref.zip
+  Sha256: fe4cc708524b30a8635563970dd65dba2d85e04a5f7ca769f052ab04af1df7dc
+  Files:
+  - Path: auls_memref/auls_memref.auf
+    Sha256: b57c243d5ed3a617c115d54b69c2fc302ebc35f78fdd2fe0d1e34f4901dd6357
+    Install:
+      TargetPath: plugins/auls_memref.auf
+  - Path: auls_memref/説明.txt
+    Sha256: 107c24268175dc57018ef6b719c9cd7c264272df8ed35873aebac533f9459d74
+  - Path: auls_memref/src/auls_memref.cpp
+    Sha256: 7ded306f695a8ba20f1885c92251e245d0ccbe06b2bc091e5f94823f0e3060da
+  - Path: auls_memref/src/auls_memref.vcproj
+    Sha256: 8b049473e461c3d702891145f4a3cebb3b6fa87bfbf897c33bd689684958a904
+ManifestVersion: 0.1.0

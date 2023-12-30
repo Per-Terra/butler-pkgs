@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: auls-rendermask
+DisplayName: Auls出力マスク
+Version: "20140415"
+ReleaseDate: 2014-04-15
+Section: Plugin/Other
+InstalledSize: 70
+Developer:
+- Auls
+Description: |-
+  オブジェクトを配置した範囲の出力をキャンセルするプラグイン
+  AviUtl本体メニューの、『設定』→『フィルタ順序の設定』→『ビデオフィルタ順序の設定』から、『出力マスク』を『拡張編集』より上に設定してください。
+  同様に『オーディオフィルタ順序の設定』から、『出力マスク(音声)』を『拡張編集(音声)』より上に設定してください。
+  拡張編集タイムラインを右クリック →『フィルタオブジェクトの追加』から、『出力マスク』を選択してタイムラインに配置してください。
+  動画出力時、配置した範囲のフレームが出力されなくなります。
+Website:
+- https://auls.client.jp/
+Files:
+- SourceUrl: https://auls.client.jp/plugin/auls_rendermask.zip
+  Sha256: 6a854ee5d54b38500accc7072ebfd181d5c4fe136f0b5443036b28f0df9df6ba
+  Files:
+  - Path: auls_rendermask/auls_rendermask.auf
+    Sha256: 08f7bffcfb5468c996fa5e29be19d0449d23e7ef496729b37bcfdce21eaa97b1
+    Install:
+      TargetPath: plugins/auls_rendermask.auf
+  - Path: auls_rendermask/説明.txt
+    Sha256: 5a834111a67805c1df9cf3e8c60d35801078fae2da637b9eb717bce6756b8b10
+  - Path: auls_rendermask/src/auls_rendermask.cpp
+    Sha256: bac2b03dab79dd7dd77fa431128bbf6caa4bc2543c2fbac537b1d5614beaa4af
+  - Path: auls_rendermask/src/auls_rendermask.vcproj
+    Sha256: b57728eed4b1629b501611d3c7f7de42c4c89e55ad8afb8694dd6671fa31aa29
+ManifestVersion: 0.1.0
