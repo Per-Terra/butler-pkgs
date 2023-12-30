@@ -88,10 +88,17 @@ definitions:
       Method:
         description: |-
           ファイルのインストール方法
-          - SymbolicLink: シンボリックリンクを作成する(既定)
-          - Copy: ファイルをコピーする
+          - SymbolicLink: シンボリックリンクを作成する (既定)
+          - Copy: ファイルをコピーする (設定ファイルの既定)
         $ref: "#/definitions/InstallMethod"
         default: SymbolicLink
+      ConfFile:
+        description: |-
+          ファイルが設定ファイル(ユーザーによる変更が想定されている)かどうか
+          InstallのMethodは指定されていない限りCopyになる
+          ユーザーによって変更された設定ファイルは、ユーザーが望まない限りアップグレードの際などに上書きされず、通常のアンインストール時にも削除されない
+        type: boolean
+        default: false
     required:
       - TargetPath
   FileInArchive:
@@ -288,8 +295,8 @@ properties:
       $ref: "#/definitions/File"
   ConfFiles:
     description: |-
-      パッケージに含まれる、またはパッケージによって生成される設定ファイルのパス
-      このフィールドに列挙されたファイルはユーザーが望まない限りアップグレードの際などに上書きされず、通常のアンインストール時にも削除されない
+      パッケージに含まれていないが、パッケージによって生成される設定ファイルのパス
+      このフィールドに列挙されたファイルは、パッケージの完全アンインストール時の削除対象となる
     type: array
     items:
       $ref: "#/definitions/Path"

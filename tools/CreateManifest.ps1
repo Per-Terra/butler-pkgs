@@ -104,9 +104,17 @@ function Get-FilesInArchive {
       }
     }
     elseif ($relativePath.StartsWith('plugins/') -or $relativePath.StartsWith('script/') -or $relativePath.StartsWith('exe_files/')) {
-      $file.Add('Install', @{
-          TargetPath = $relativePath
-        })
+      if ($_.Extension -in $ConfExtensions) {
+        $file.Add('Install', @{
+            TargetPath = $relativePath
+            ConfFile   = $true
+          })
+      }
+      else {
+        $file.Add('Install', @{
+            TargetPath = $relativePath
+          })
+      }
     }
     else {
       if ($_.Extension -in $PluginExtensions) {
@@ -117,6 +125,12 @@ function Get-FilesInArchive {
       elseif ($_.Extension -in $ScriptExtensions) {
         $file.Add('Install', @{
             TargetPath = ($relativePath -replace '^([^/]+/)*', 'script/')
+          })
+      }
+      elseif ($_.Extension -in $ConfExtensions) {
+        $file.Add('Install', @{
+            TargetPath = $relativePath
+            ConfFile   = $true
           })
       }
       elseif ($_.Extension -eq '.exa') {
@@ -202,6 +216,12 @@ function Get-SourceFileFromUrl {
           TargetPath = ($fileName -replace '^', 'script/')
         })
     }
+    elseif ($fileExtension -in $ConfExtensions) {
+      $file.Add('Install', @{
+          TargetPath = $fileName
+          ConfFile   = $true
+        })
+    }
     else {
       $file.Add('Install', @{
           TargetPath = $fileName
@@ -210,30 +230,6 @@ function Get-SourceFileFromUrl {
   }
 
   return $file
-}
-
-function Get-ConfFiles {
-  param (
-    [Parameter(Mandatory = $true,
-      ValueFromPipeline = $true)]
-    [object]$File
-  )
-
-  $confFiles = @()
-
-  if ($File.Install.TargetPath) {
-    if ((Split-Path -Path $File.Install.TargetPath -Extension) -in $ConfExtensions) {
-      $confFiles += $File.Install.TargetPath
-    }
-  }
-
-  if ($File.Files) {
-    $File.Files | ForEach-Object {
-      $confFiles += $_ | Get-ConfFiles
-    }
-  }
-
-  return $confFiles
 }
 
 if (-not $Update) {
@@ -351,10 +347,6 @@ else {
   $sourceUrls | ForEach-Object {
     $files += $_ | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory
   }
-}
-
-if ($null -eq $ConfFiles) {
-  $ConfFiles = $files | ForEach-Object { $_ | Get-ConfFiles }
 }
 
 $manifest = [ordered]@{

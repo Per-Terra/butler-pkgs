@@ -89,9 +89,14 @@
           "$ref": "#/definitions/Path"
         },
         "Method": {
-          "description": "ファイルのインストール方法\n- SymbolicLink: シンボリックリンクを作成する(既定)\n- Copy: ファイルをコピーする",
+          "description": "ファイルのインストール方法\n- SymbolicLink: シンボリックリンクを作成する (既定)\n- Copy: ファイルをコピーする (設定ファイルの既定)",
           "$ref": "#/definitions/InstallMethod",
           "default": "SymbolicLink"
+        },
+        "ConfFile": {
+          "description": "ファイルが設定ファイル(ユーザーによる変更が想定されている)かどうか\nInstallのMethodは指定されていない限りCopyになる\nユーザーによって変更された設定ファイルは、ユーザーが望まない限りアップグレードの際などに上書きされず、通常のアンインストール時にも削除されない",
+          "type": "boolean",
+          "default": false
         }
       },
       "required": [
@@ -310,7 +315,7 @@
       }
     },
     "ConfFiles": {
-      "description": "パッケージに含まれる、またはパッケージによって生成される設定ファイルのパス\nこのフィールドに列挙されたファイルはユーザーが望まない限りアップグレードの際などに上書きされず、通常のアンインストール時にも削除されない",
+      "description": "パッケージに含まれていないが、パッケージによって生成される設定ファイルのパス\nこのフィールドに列挙されたファイルは、パッケージの完全アンインストール時の削除対象となる",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Path"
