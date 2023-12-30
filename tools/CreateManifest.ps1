@@ -61,7 +61,7 @@ $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 $ArchiveExtensions = @('.zip', '.7z')
 $PluginExtensions = @('.exe', '.dll', '.auf', '.aui', '.auo', '.auc', '.aul', '.ini')
 $ScriptExtensions = @('.anm', '.obj', '.scn', '.cam', '.tra', '.lua')
-$ConfExtensions = @('.ini')
+$ConfExtensions = @('.ini', '.stg')
 
 function Get-FilesInArchive {
   param (
