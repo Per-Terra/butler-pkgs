@@ -1,0 +1,26 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: clfilters
+Version: "0.01"
+ReleaseDate: 2022-05-20
+Section: Plugin/Filter
+Depends:
+- aviutl (>= 1.00)
+InstalledSize: 14320
+Developer:
+- rigaya
+Description: |-
+  Aviutl用のOpenCLによるGPUフィルタ
+  複数のフィルタ処理をGPU上で連続して行うことで、フィルタをそれぞれ実行するのと比べてCPU - GPU間のデータ転送を削減でき、高速化が期待できます。
+Website:
+- https://github.com/rigaya/Aviutl-clfilters
+Files:
+- SourceUrl: https://github.com/rigaya/Aviutl-clfilters/releases/download/0.01/clfilters_0.01.zip
+  Sha256: 3f5f68aed1728cf90152b5432de8eccb3407c4603fd752f76f991adafb1e012b
+  Files:
+  - Path: clfilters.auf
+    Sha256: b9eb158e36db3fcf76cd7b1365b7a97be1824b126363667319df7e2dd2cbcbe1
+    Install:
+      TargetPath: plugins/clfilters.auf
+ManifestVersion: 0.1.0

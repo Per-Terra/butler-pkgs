@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: rigaya
+Website:
+  - https://rigaya34589.blog.fc2.com/
+  - https://github.com/rigaya
+  - https://twitter.com/rigaya34589
+ManifestVersion: 0.1.0

@@ -1,0 +1,9 @@
+- Enable: true
+  Identifier: clfilters
+  Developer: rigaya
+  Type: GitHub
+  Owner: rigaya
+  Repository: Aviutl-clfilters
+  Asset: ^clfilters_\d.*\.zip$
+  Version:
+    from: tag_name
