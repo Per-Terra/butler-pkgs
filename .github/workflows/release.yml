@@ -27,6 +27,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cd ${{ github.workspace }}
-          $date = git log -1 --format=%cd --date=format:%Y%m%dT%H%M%SZ
-          gh release create $date (Get-Item -Path .\release\*) --title $date
+          $date = [datetime](git log -1 --format=%cI)
+          gh release create $date.ToUniversalTime().ToString('yyyyMMddTHHmmssZ') (Get-Item -Path .\release\*) --title $date.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
         # https://github.com/cli/cli/issues/5099
