@@ -1,0 +1,36 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: WaveformPreview
+DisplayName: 波形プレビュー
+Version: 0.3.0
+ReleaseDate: 2021-09-21
+Section: Plugin/Other
+InstalledSize: 106
+Developer:
+- karoterra
+Description: 編集中の音声波形を確認するためのプラグイン
+Website:
+- https://github.com/karoterra/aviutl_WaveformPreview
+- https://www.nicovideo.jp/watch/sm39258128
+Files:
+- SourceUrl: https://github.com/karoterra/aviutl_WaveformPreview/releases/download/v0.3.0/aviutl_WaveformPreview_v0.3.0.zip
+  Sha256: e4280d5fc67be5278fe4a4851ffcd5e154cc95fa0cd1f8edc566cecf8ca3d6a9
+  Files:
+  - Path: aviutl_WaveformPreview_v0.3.0/CHANGELOG.md
+    Sha256: 1e9e04ee027474ec970f7f87b7f8d377ace22f0483bfb367b6777a1ea14a9cab
+  - Path: aviutl_WaveformPreview_v0.3.0/CREDITS.md
+    Sha256: e592aa146f0f23f876eaeb64b6cd4d39d1eb3444755b6c5e02dd1f7fc45d0e65
+  - Path: aviutl_WaveformPreview_v0.3.0/LICENSE
+    Sha256: 7d50704a82cf8fec7eef4390ff4bc34bd198b446d45c20eb6e2f78842ab04ff8
+  - Path: aviutl_WaveformPreview_v0.3.0/README.md
+    Sha256: cf5079ad82a38c67503b10d445527152441c4b6686d97834989cab4de6236529
+  - Path: aviutl_WaveformPreview_v0.3.0/WaveformPreview.auf
+    Sha256: 27ac144353ec900011abb87331cd521cb2a9d090442cae1306e653293ac2d22f
+    Install:
+      TargetPath: plugins/WaveformPreview.auf
+  - Path: aviutl_WaveformPreview_v0.3.0/WaveformPreview.exe
+    Sha256: 567e873281c7c097eed67f4f558ec3e090520f563fdb2cde2185189b36a0fe30
+    Install:
+      TargetPath: plugins/WaveformPreview.exe
+ManifestVersion: 0.1.0

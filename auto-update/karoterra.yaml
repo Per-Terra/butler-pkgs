@@ -1,0 +1,25 @@
+- Identifier: WaveformPreview
+  Developer: karoterra
+  Enable: true
+  Type: GitHub
+  Owner: karoterra
+  Repository: aviutl_WaveformPreview
+  Asset: ^aviutl_WaveformPreview_.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: MarkdownEX
+  Developer: karoterra
+  Enable: true
+  Type: GitHub
+  Owner: karoterra
+  Repository: aviutl-markdownex
+  Asset: ^aviutl\-markdownex\-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
