@@ -1,0 +1,39 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: MFVideoReader
+Version: "1.0"
+ReleaseDate: 2020-02-24
+Section: Plugin/Input
+Depends:
+- aviutl (>= 1.00)
+- exedit (>= 0.92)
+InstalledSize: 3826
+Developer:
+- amate
+Description: |-
+  Media Foundationを利用した入力プラグイン
+  これは "L-SMASH Works File Reader"、"DirectShow File Reader"に代わる、第三のファイル入力プラグインとして製作した AviUtlの入力プラグインです
+  ファイルの入力、分離、デコードに、Media Foundation を使っており、DXVA2(GPU)を利用した高速なデコードが可能です (シークはそんなに速くない...)
+  VideoReaderとありますが、音声ファイルも入力できます (Media Foundationが対応していれば)
+Website:
+- https://github.com/amate/MFVideoReader
+Files:
+- SourceUrl: https://github.com/amate/MFVideoReader/releases/download/v1.0/MFVideoReader_1.0.zip
+  Sha256: 115168a7a9cd0ed9241f38e304626bc8a44e83f3310eb4ecb3cf965a892f741c
+  Files:
+  - Path: MFVideoReader/LICENSE
+    Sha256: 82843db9158df4c72018d91d0520ac2af5fef44683731a9b2f6e62d492dcb78c
+  - Path: MFVideoReader/MFVideoReader.exe
+    Sha256: a76ec1640c5a9017d00258f89a60bb4a20b90d5a797d1f5e2f001e22cd39b0a2
+    Install:
+      TargetPath: plugins/MFVideoReader.exe
+  - Path: MFVideoReader/MFVideoReaderPlugin.aui
+    Sha256: 592fad080d153f2a98a342d225bca56015d3c48a0d83f7bef4d962135c295f20
+    Install:
+      TargetPath: plugins/MFVideoReaderPlugin.aui
+  - Path: MFVideoReader/Readme.md
+    Sha256: 71f68c4f3913de8b9d026a2ec123c3f5822ea4b81d487c9bc627786fac68120d
+ConfFiles:
+  - plugins/MFVideoReaderConfig.ini
+ManifestVersion: 0.1.0

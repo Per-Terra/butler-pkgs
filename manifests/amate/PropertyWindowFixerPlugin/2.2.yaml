@@ -1,0 +1,38 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: PropertyWindowFixerPlugin
+DisplayName: 設定ダイアログ画面サイズ固定化プラグイン
+Version: "2.2"
+ReleaseDate: 2020-04-15
+Section: Plugin/Other
+Depends:
+- aviutl (>= 1.00)
+- exedit (= 0.92)
+InstalledSize: 824
+Developer:
+- amate
+Description: |-
+  拡張編集の設定ダイアログのウィンドウサイズを固定化するプラグイン
+  このプラグインは、拡張編集の設定ダイアログのウィンドウサイズが長くなったり短くなったりするのを阻止し常に同じウィンドウサイズに固定化するプラグインである
+Website:
+- https://github.com/amate/PropertyWindowFixerPlugin
+- https://www.nicovideo.jp/watch/sm36085428
+Files:
+- SourceUrl: https://github.com/amate/PropertyWindowFixerPlugin/releases/download/v2.2/PropertyWindowFixerPlugin_2.2.zip
+  Sha256: c0dbc7136ded7364a1bc67d0471b4f38b4d2643b63aa5bd4e593769cb1046caf
+  Files:
+  - Path: PropertyWindowFixerPlugin/LICENSE
+    Sha256: dcba112ac2d8bdeedf450b5e11e8ac76eda054c9b6823e356be0d1df36b1dc61
+  - Path: PropertyWindowFixerPlugin/PropertyWindowFixerPlugin.auf
+    Sha256: 7e00ff484f1d4747bc4522cfb4d53bb5c6e88d4ac6e939c2c841dfbc002089dc
+    Install:
+      TargetPath: plugins/PropertyWindowFixerPlugin.auf
+  - Path: PropertyWindowFixerPlugin/PropertyWindowFixerPluginConfig.ini
+    Sha256: 92d4efefa11f84c3584521e76ffe0e69d33d4218ebfd18a10806ffee3e60bda6
+    Install:
+      TargetPath: plugins/PropertyWindowFixerPluginConfig.ini
+      ConfFile: true
+  - Path: PropertyWindowFixerPlugin/Readme.md
+    Sha256: 4117203dbaf87020bd0dde57b1a9839ea5dca7671fa6c2f10df0ab6e26579cce
+ManifestVersion: 0.1.0

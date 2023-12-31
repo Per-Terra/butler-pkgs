@@ -1,0 +1,25 @@
+- Identifier: InputPipePlugin
+  Developer: amate
+  Enable: true
+  Type: GitHub
+  Owner: amate
+  Repository: InputPipePlugin
+  Asset: ^InputPipePlugin_.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: PropertyWindowFixerPlugin
+  Developer: amate
+  Enable: false
+  Type: GitHub
+  Owner: amate
+  Repository: PropertyWindowFixerPlugin
+  Asset: ^PropertyWindowFixerPlugin_.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
