@@ -17,7 +17,7 @@
   Type: GitHub
   Owner: karoterra
   Repository: aviutl-markdownex
-  Asset: ^aviutl\-markdownex\-.*\.zip$
+  Asset: ^aviutl-markdownex-.*\.zip$
   Version:
     from: tag_name
     regex:
