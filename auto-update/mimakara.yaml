@@ -1,0 +1,38 @@
+- Identifier: CurveEditor
+  Developer: mimaraka
+  Enable: true
+  Type: GitHub
+  Owner: mimaraka
+  Repository: aviutl-plugin-curve_editor
+  Asset: ^curve_editor-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: editbox-font-changer
+  Developer: mimaraka
+  Enable: true
+  Type: GitHub
+  Owner: mimaraka
+  Repository: aviutl-plugin-editbox_font_changer
+  Asset: ^editbox_font_changer-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: loupe361
+  Developer: mimaraka
+  Enable: true
+  Type: GitHub
+  Owner: mimaraka
+  Repository: aviutl-plugin-loupe361
+  Asset: ^loupe361\.auf$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
