@@ -1,4 +1,4 @@
-- Enable: false
+- Enable: true
   Identifier: patch.aul
   Developer: ePi
   Type: GitHub
