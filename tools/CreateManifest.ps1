@@ -118,9 +118,17 @@ function Get-FilesInArchive {
     }
     else {
       if ($_.Extension -in $PluginExtensions) {
-        $file.Add('Install', @{
-            TargetPath = ($relativePath -replace '^([^/]+/)*', 'plugins/')
-          })
+        if ($_.Extension -in $ConfExtensions) {
+          $file.Add('Install', @{
+              TargetPath = ($relativePath -replace '^([^/]+/)*', 'plugins/')
+              ConfFile   = $true
+            })
+        }
+        else {
+          $file.Add('Install', @{
+              TargetPath = ($relativePath -replace '^([^/]+/)*', 'plugins/')
+            })
+        }
       }
       elseif ($_.Extension -in $ScriptExtensions) {
         $file.Add('Install', @{
