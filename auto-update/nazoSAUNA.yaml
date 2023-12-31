@@ -54,7 +54,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^(r\d+)_(\d+)$' | Out-Null
+      $null = $version -match '^(r\d+)_(\d+)$'
       $version = $Matches[1] + '+ss' + $Matches[2]
 
 - Identifier: SceneLayerCopy

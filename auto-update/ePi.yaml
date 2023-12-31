@@ -8,7 +8,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '(r\d+)(?:_(.*))?$' | Out-Null
+      $null = $version -match '(r\d+)(?:_(.*))?$'
       $version = if ($Matches[2]) {
         $Matches[1] + '-' + $Matches[2]
       } else {

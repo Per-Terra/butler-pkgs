@@ -8,7 +8,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: aviutl-browser
@@ -21,7 +21,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: aviutl-browser-glb
@@ -34,7 +34,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: bridge.dll
@@ -47,7 +47,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: CacheText
@@ -60,7 +60,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: Extram2
@@ -74,7 +74,7 @@
     from: tag_name
     # https://github.com/oov/aviutl_extram2/blob/fa75ad390bbe4adb91ce384a0f2801243a8a42e9/.github/workflows/releaser.yml#L6-L9
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: ffmpeg-input
@@ -87,7 +87,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: forcepser
@@ -100,7 +100,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: GCMZDrops
@@ -113,7 +113,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: PSDToolKit
@@ -126,7 +126,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: RamPreview
@@ -139,7 +139,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: RelMovieHandle
@@ -152,7 +152,7 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
 
 - Identifier: textassist
@@ -165,5 +165,5 @@
   Version:
     from: tag_name
     script: |
-      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
