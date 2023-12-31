@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: loupe360
+DisplayName: 虫眼鏡プラグイン
+Version: r10
+ReleaseDate: 2023-03-21
+Section: Plugin/Other
+InstalledSize: 118
+Developer:
+- wepon
+Description: |-
+  既存の「拡大ツール」を改造したプラグイン
+  googleマップみたいにドラッグできるようにしたり、ドットの大きさが揃ってなかったのを修正したり、マウスのホイールでも拡大縮小できるようにしたり、中心をウインドウの真ん中にしたり、YUY2フィルタモードでも使えるようにしたりしました。
+Website:
+- http://auf.jpn.xxxxxxxx.jp/
+- https://wepon.blog.jp/archives/60309079.html
+Files:
+- SourceUrl: http://auf.jpn.xxxxxxxx.jp/loupe360r10.zip
+  Sha256: 173bf2e6b2d06f6d8a8710b112d1164ff59e00b5ed809831516785f1d85a42da
+  Files:
+  - Path: loupe360.auf
+    Sha256: 7927075e80e113ccc41d592b3f7987168fe2dff5aa569965ad7baf96bb045967
+    Install:
+      TargetPath: plugins/loupe360.auf
+  - Path: loupe360.txt
+    Sha256: 6d54abacee3fc3829640b42f5af14df92463cb6af5f4da36946a83b007fff79a
+  - Path: src/filter.h
+    Sha256: 7eb641762463e9f69eeaf38046898b6ac6fa656642cdb2f734a1bf87d5342417
+  - Path: src/loupe360.cpp
+    Sha256: 1da51341fb0d9294bd9630864ea24f8e741669d71d351888d691c926f30880cf
+  - Path: src/make_bat.bat
+    Sha256: 51f6f7462e598a903835068961ab75c8fca3c83cd3e8e4e846d4b01e55d0fd7b
+ManifestVersion: 0.1.0

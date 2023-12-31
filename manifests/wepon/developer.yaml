@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: wepon
+DisplayName: うえぽん
+Website:
+  - http://auf.jpn.xxxxxxxx.jp/
+  - https://wepon.blog.jp/
+ManifestVersion: 0.1.0
