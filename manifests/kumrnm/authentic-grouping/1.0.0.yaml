@@ -1,0 +1,23 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: authentic-grouping
+DisplayName: 真・グループ制御
+Version: 1.0.0
+ReleaseDate: 2021-12-18
+Section: Plugin/Other
+Depends:
+- exedit (= 0.92)
+InstalledSize: 172
+Developer:
+- kumrnm
+Description: 拡張編集のグループ制御の機能を改善するプラグイン
+Website:
+- https://github.com/kumrnm/aviutl-authentic-grouping
+- https://www.nicovideo.jp/watch/sm39776727
+Files:
+- SourceUrl: https://github.com/kumrnm/aviutl-authentic-grouping/releases/download/v1.0.0/authentic_grouping.auf
+  Sha256: 8ffe4b4dff572716c4fbc01180c72ccee2a035611a351628febe8f624dc75d2a
+  Install:
+    TargetPath: plugins/authentic_grouping.auf
+ManifestVersion: 0.1.0

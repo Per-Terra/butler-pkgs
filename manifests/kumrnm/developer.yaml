@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: kumrnm
+DisplayName: 蝙蝠の目
+Website:
+  - https://twitter.com/kumrnm
+  - https://www.nicovideo.jp/user/119196563
+ManifestVersion: 0.1.0

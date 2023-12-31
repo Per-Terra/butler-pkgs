@@ -1,0 +1,38 @@
+- Identifier: AdvancedMouseOperation
+  Developer: kumrnm
+  Enable: true
+  Type: GitHub
+  Owner: kumrnm
+  Repository: aviutl-advanced-mouse-operation
+  Asset: ^AdvancedMouseOperation\.auf$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: authentic-grouping
+  Developer: kumrnm
+  Enable: true
+  Type: GitHub
+  Owner: kumrnm
+  Repository: aviutl-authentic-grouping
+  Asset: ^authentic_grouping\.auf$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: easing-quick-setup
+  Developer: kumrnm
+  Enable: true
+  Type: GitHub
+  Owner: kumrnm
+  Repository: aviutl-easing-quick-setup
+  Asset: ^easing_quick_setup\.auf$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
