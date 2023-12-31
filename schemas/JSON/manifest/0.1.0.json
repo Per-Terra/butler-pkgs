@@ -47,7 +47,7 @@
       "examples": [
         "aviutl (>= 1.00)",
         "exedit (= 0.92)",
-        "rikkymodule-memory"
+        "rikkymodule"
       ],
       "type": "string",
       "pattern": "^([0-9A-Za-z]+(?:[+\\-.][0-9A-Za-z]+)*)(?: *\\( *(<<|<=|=|>=|>>) *([0-9A-Za-z]+(?:[+\\-.][0-9A-Za-z]+)*) *\\))?$"

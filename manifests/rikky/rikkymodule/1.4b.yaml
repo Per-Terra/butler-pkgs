@@ -1,14 +1,15 @@
 # Created using CreateManifest.ps1 v0.1.0
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
 
-Identifier: rikkymodule-memory
-DisplayName: rikkymodule&memory
-Version: 1.4b-0.6
+Identifier: rikkymodule
+DisplayName: rikkymodule
+Version: 1.4b
 ReleaseDate: 2020-01-13
-Section: Plugin/Other
+Section: Other
 Depends:
 - aviutl (<= 1.10)
 - exedit (<= 0.92)
+- rikkymemory
 InstalledSize: 1165
 Developer:
 - rikky
@@ -23,8 +24,6 @@ Files:
   Files:
   - Path: dll_v_12/rikky_memory.auf
     Sha256: ab428cc7d99674532322667bf66e3a79a0fad91232f75a7060e5577d55f6cf90
-    Install:
-      TargetPath: rikky_memory.auf
   - Path: dll_v_12/rikky_memoryについて.txt
     Sha256: 5d181257db67d209be6fde68d4ad14a363a4ce9b59f000a7bb16e1b88ca7e99e
   - Path: dll_v_12/rikky_module.dll

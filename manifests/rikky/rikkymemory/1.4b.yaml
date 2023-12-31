@@ -1,0 +1,48 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: rikkymemory
+DisplayName: rikkymemory
+Version: "0.6b"
+ReleaseDate: 2020-01-13
+Section: Plugin/Other
+Depends:
+- aviutl (<= 1.10)
+- exedit (<= 0.92)
+InstalledSize: 1165
+Developer:
+- rikky
+Description: rikky氏ののプラグインやrikky_module.dllなどで必要になるプラグイン
+Website:
+- https://hazumurhythm.com/wev/amazon/?script=rikkymodulea2Z
+- https://www.nicovideo.jp/watch/sm34776162
+Files:
+- SourceUrl: https://hazumurhythm.com/php/amazon_download.php?name=rikkymodulea2Z
+  FileName: rikkymodule&memory.zip
+  Sha256: 1cfbb6c809b14a09f712f0bdf00ffbc523711a81390ffa2f952756d95a726438
+  Files:
+  - Path: dll_v_12/rikky_memory.auf
+    Sha256: ab428cc7d99674532322667bf66e3a79a0fad91232f75a7060e5577d55f6cf90
+    Install:
+      TargetPath: rikky_memory.auf
+  - Path: dll_v_12/rikky_memoryについて.txt
+    Sha256: 5d181257db67d209be6fde68d4ad14a363a4ce9b59f000a7bb16e1b88ca7e99e
+  - Path: dll_v_12/rikky_module.dll
+    Sha256: 174bd7c878c490fb38c7b138e29a41657fc2374bd978710394bff0e33a6def38
+  - Path: dll_v_12/rikky_moduleの使い方.txt
+    Sha256: 3eab18f625d9813a9e81b264ee1e16f64ec84beb871cd29b3b6f494ec5b66cdd
+  - Path: dll_v_12/where_is_rikky_module.dll.exe
+    Sha256: 491c24744775137c8c710b401c48a75868a96dc3afc87ebb348c45af987f4c31
+  - Path: dll_v_12/where_isについて.txt
+    Sha256: 62a917071de90ffd2ff3ea52cacb69609c6339f2ea139ed92016d36562a17fa9
+  - Path: dll_v_12/license/libjpeg.txt
+    Sha256: 141d0d8ef2a3d6e289d80310848b82df38403d7057e3fde6e522fe64d13c525a
+  - Path: dll_v_12/license/libpng.txt
+    Sha256: 49a8097f812ecbd73d0216a76281e88131d8db2cda023576269d2d9cc5b6b600
+  - Path: dll_v_12/license/zlib.txt
+    Sha256: 3db68ca348d89b079f7132eb0a2a4a905123036eca8be3d55668ae042f927a31
+  - Path: dll_v_12/license/lsd/COPYING
+    Sha256: 57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6
+  - Path: dll_v_12/license/lsd/src/aviutl_lsd.c
+    Sha256: 388d4454d572fdfd096e9d893e9b088cab62e0ceefb711699c1b7e69ded5a768
+ManifestVersion: 0.1.0
