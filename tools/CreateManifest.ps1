@@ -148,16 +148,16 @@ function Get-FilesInArchive {
         }
       }
     }
-    elseif ($relativePath.StartsWith('plugins/') -or $relativePath.StartsWith('script/') -or $relativePath.StartsWith('exe_files/')) {
+    elseif ($relativePath -match '^(?:[^/]+/)?((?:plugins|script|exe_files)/.+)$') {
       if ($_.Extension -in $ConfExtensions) {
         $file.Add('Install', @{
-            TargetPath = $relativePath
+            TargetPath = $Matches[1]
             ConfFile   = $true
           })
       }
       else {
         $file.Add('Install', @{
-            TargetPath = $relativePath
+            TargetPath = $Matches[1]
           })
       }
     }
