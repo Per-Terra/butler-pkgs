@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: dummy
+DisplayName: ダミーファイル入力
+Version: "0.1"
+ReleaseDate: 2016-02-11
+Section: Plugin/Input
+InstalledSize: 7
+Developer:
+- aoytsk
+Description: テキストファイルで指定した設定で空の動画を読み込む入力プラグイン
+Website:
+- https://aoytsk.blog.jp/aviutl/1559137.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/dummy.zip
+  Sha256: 0247981709b34e33fffc7130e4ee843295fb412646dc2afe1ad625f42fbbf313
+  Files:
+  - Path: dummy.aui
+    Sha256: 24144fb2364cb3b1bb1f9cbf0da70e9f45401415ad0d0e6fbd961815aca65955
+    Install:
+      TargetPath: plugins/dummy.aui
+  - Path: dummy.txt
+    Sha256: 40ef6c415fbb1e54a929934a815aa088a1c209365ae0423e5e5dacad5df114ec
+  - Path: sample.dmy
+    Sha256: e0a10482722c3f9e0c9a6200e4b1f9ca7316b24965dcc0641f7db474e0444fdb
+  - Path: simple.dmy
+    Sha256: 341fc751c43654f4b26307393661305a135bca9e46c2644805f1ad81f073c88a
+ManifestVersion: 0.1.0

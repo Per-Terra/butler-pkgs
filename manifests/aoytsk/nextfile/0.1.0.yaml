@@ -1,0 +1,48 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: nextfile
+DisplayName: 次のファイル
+Version: 0.1.0
+ReleaseDate: 2021-09-14
+Section: Plugin/Other
+InstalledSize: 198
+Developer:
+- aoytsk
+Description: 次・前のファイルを開く、開いているファイルを開きなおす機能を追加するプラグイン
+Website:
+- https://aoytsk.blog.jp/aviutl/38698431.html
+- https://aoytsk.blog.jp/aviutl/1607088.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/misc.zip
+  Sha256: 39673bac6b7a922ca5e9765fbeef88a613a40673293bda32afc439772dadb71d
+  Files:
+  - Path: _readme.txt
+    Sha256: 45033cea1dae95fbbd943f920b497f101891c621396c1d9ad3e9297b63ae5c64
+  - Path: audiopreview.auf
+    Sha256: 28405e53102654ff01d9029f2db8a40318cf2b515d3cb809fc1ddac1893bf86b
+  - Path: blacken.auf
+    Sha256: 5a2db4731cafb9ed84fab5b5190d26d45d4ddb05d8753ef3666a5da81d71c93e
+  - Path: editx.auf
+    Sha256: 1067c4bfb6363b540eb38250b1fb2c348c319657feca773fcfa6e3aef97dab98
+  - Path: exlayerjump.auf
+    Sha256: 1ac57aa2c21f10ea24f017e379998aa19d75cd96b1d65bf3318d4badd2c3ed5b
+  - Path: exlayerswitch.auf
+    Sha256: a04a537471d97514c8ae26e6d60378370c8802df5ae652cbee776db1673cdf67
+  - Path: exscale.auf
+    Sha256: cfdb981bb60a5ba9ede0f0c326dee2e62235348db9a9dd619d6e58e89b1f8afe
+  - Path: exsceneswitch.auf
+    Sha256: 1bb673f158514ac86170d21d7efa2236af69b24b16640a7fe24744fdcae7f23a
+  - Path: memo.auf
+    Sha256: ade5c567b7540becaafb50d21a0d05effe64717b2d5bc0315b5ab99ee1dbe754
+  - Path: nextfile.auf
+    Sha256: f4a2d499f1e9954d30e5d7bdbdc516721a34c3cbba49b960d862810613ae45c0
+    Install:
+      TargetPath: plugins/nextfile.auf
+  - Path: pointmute.auf
+    Sha256: ca7623cb7f0ae62eb9a87036ae66f29acba3859d15dbef9b04399db3d624b199
+  - Path: selector.auf
+    Sha256: 254c799e6eb6183ed6afb65a12c2b687fccc2800d91fc86aefe5cc3e2f768803
+  - Path: timestamp.auf
+    Sha256: 0938c0e94b619f4076960593ea3e849a8881b89035a1cd84924bf05e2dd30af0
+ManifestVersion: 0.1.0

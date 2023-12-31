@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: extext
+DisplayName: 字幕アシスト
+Version: "0.1"
+ReleaseDate: 2016-02-02
+Section: Plugin/Other
+Conflicts:
+- GCMZDrops
+InstalledSize: 79
+Developer:
+- aoytsk
+Description: エディタやブラウザなどから、選択した文章を直接タイムラインに追加できるプラグイン
+Website:
+  - https://aoytsk.blog.jp/aviutl/1412254.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/extext.zip
+  Sha256: 7e6c1ce11d971e17304f494dcce24e3807151b8082e28e43c5815da666558dee
+  Files:
+  - Path: extext.auf
+    Sha256: 0b5254fc53332ecd979ad08e724bd5276e5e68d046f29faac105ca5c5e20b34a
+    Install:
+      TargetPath: plugins/extext.auf
+  - Path: extext.txt
+    Sha256: 16f9ce155f90965dd5110f452d57585b8a648b8e6dbd65448d7d364d02a4e155
+ManifestVersion: 0.1.0

@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: pluginlist
+DisplayName: プラグインリスト
+Version: "0.1"
+ReleaseDate: 2016-02-13
+Section: Plugin/Other
+InstalledSize: 48
+Developer:
+- aoytsk
+Description: プラグインとスクリプトの一覧を、エクセルなどで閲覧できるtsvファイルに保存するプラグイン
+Website:
+- https://aoytsk.blog.jp/aviutl/1592487.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/pluginlist.zip
+  Sha256: e3c8520a296cf4b6bc2214b8e6378be4e88145e9a0a19c58959707718111756b
+  Files:
+  - Path: pluginlist.auf
+    Sha256: 6f47a040e2481814a21a5624fc8b0955da5d41e810b9446ee155e12a0733fdef
+    Install:
+      TargetPath: plugins/pluginlist.auf
+  - Path: pluginlist.txt
+    Sha256: ce52acfca8cdcba4816ff806b9cabc2a801f3f52801a96ed45332f2b35de952e
+ManifestVersion: 0.1.0

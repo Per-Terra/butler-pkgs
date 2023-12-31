@@ -1,0 +1,28 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: rec
+DisplayName: 簡易録音
+Version: "0.2"
+ReleaseDate: 2016-03-13
+Section: Plugin/Other
+InstalledSize: 19
+Developer:
+- aoytsk
+Description: |-
+  録音をするプラグイン
+  プレビューを再生しながら録音したり、拡張編集のタイムラインに自動で追加することができます。
+  最大192kHz, 32bit, 8チャンネルまでのハイレゾフォーマットに対応。
+Website:
+- https://aoytsk.blog.jp/aviutl/1677824.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/rec.zip
+  Sha256: d9d4222a25a739384df8b5d67d676d692a8bbdf9d292f0cc55f0cc2d603b2690
+  Files:
+  - Path: rec.auf
+    Sha256: 1b1515ca9bc56b8817506b4835b0a557fe59c3adcaa13c86abc88177b611c749
+    Install:
+      TargetPath: plugins/rec.auf
+  - Path: rec.txt
+    Sha256: a9f19d7ade01ecba37ef70caf4c7bc9f1f0cc22bbd184af38b90288b6ee76e7a
+ManifestVersion: 0.1.0

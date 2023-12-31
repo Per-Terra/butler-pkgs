@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: jumpdlg32
+DisplayName: ジャンプダイアログ (増量版)
+Version: "0.4"
+ReleaseDate: 2015-12-05
+Section: Plugin/Other
+InstalledSize: 18
+Developer:
+- aoytsk
+Description: |-
+  指定した位置に簡単にジャンプできるダイアログを追加するプラグイン
+  10ヶ所まで登録できる通常版(jumpdlg)と、32ヶ所まで登録できる増量版(jumpdlg32)があります。
+Website:
+- https://aoytsk.blog.jp/aviutl/445066.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/jumpdlg.zip
+  Sha256: a3c5a40b4dad4f4e1f7f4078ed0323087f2099944a9efcc0cf49f5d35c6281b1
+  Files:
+  - Path: jumpdlg.auf
+    Sha256: bf6f3363d410339ed8c403598a6a90ef598ba2657b11dadc89b717e860690e5e
+  - Path: jumpdlg32.auf
+    Sha256: 0fa8df5ba84468a184cf4050142a00d9df99f710f7f3f67fe896962a1310bbe0
+    Install:
+      TargetPath: plugins/jumpdlg32.auf
+  - Path: readme.txt
+    Sha256: 6211917bd2bfc943dadd99639a6d46000cb0ff10ad7840d1cf5f9d5386fb57d2
+ManifestVersion: 0.1.0

@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: exeditbutton
+DisplayName: 拡張編集が...消えた?
+Version: "1.0"
+ReleaseDate: 2016-01-01
+Section: Plugin/Other
+InstalledSize: 8
+Developer:
+- aoytsk
+Description: |-
+  拡張編集のウィンドウをメニューから素早く表示するプラグイン
+  拡張編集のウィンドウが消えてももう大丈夫。メニューから素早く表示できます。
+  ・メインウィンドウに拡張編集を表示を切り替えるメニューを追加
+  ・画面外に消えた拡張編集ウィンドウを起動時に画面内に移動させる。(既に本体で実装されている模様)
+Website:
+- https://aoytsk.blog.jp/Aviutl/891011.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/exeditbutton.zip
+  Sha256: cc8dddf932b70a8a7c009771f843f3ceeae9240349c8912c4e973adf02eab2b6
+  Files:
+  - Path: exeditbutton.auf
+    Sha256: 5c0203fe26366fc4d323bf30fa4c2b1a72ac5e86e419d6a8c6c3c8bcf153104b
+    Install:
+      TargetPath: plugins/exeditbutton.auf
+ManifestVersion: 0.1.0

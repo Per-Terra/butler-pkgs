@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: recovery
+DisplayName: リカバリ
+Version: 0.1.0
+ReleaseDate: 2020-03-21
+Section: Plugin/Other
+InstalledSize: 121
+Developer:
+- aoytsk
+Description: AviUtlが落ちた時の編集状態を復元し、再起動するプラグイン
+Website:
+- https://aoytsk.blog.jp/aviutl/34739355.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/recovery.zip
+  Sha256: ba86b0b21f6c88d192b831c8962560a440affa436b189a5be38477e3cdf9b37a
+  Files:
+  - Path: recovery.auf
+    Sha256: 31bb91fbf8432dc51d215894138f6985ea6967ddd4a97f99de6e1b7d1c6fd9fb
+    Install:
+      TargetPath: plugins/recovery.auf
+  - Path: recovery.txt
+    Sha256: f2afc3f1358ab5207efda623bd28c3a50060aab3ebdf8782d9b3cf380d2610c7
+ManifestVersion: 0.1.0

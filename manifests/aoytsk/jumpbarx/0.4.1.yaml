@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: jumpbarx
+DisplayName: ジャンプバー＋
+Version: 0.4.1
+ReleaseDate: 2016-02-03
+Section: Plugin/Other
+InstalledSize: 19
+Developer:
+- aoytsk
+Description: |-
+  様々なジャンプ機能を提供するプラグイン
+  フレーム・秒単位の相対位置ジャンプや、編集点・プロファイル変更位置へのジャンプ、マークやコピーしながらのジャンプなどが可能です。
+Website:
+- https://aoytsk.blog.jp/Aviutl/719123.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/jumpbarx.zip
+  Sha256: 15d1769960bd41df40196354fd983aa4348d9f5108de9f6c230deca967590b44
+  Files:
+  - Path: jumpbarx.auf
+    Sha256: 23b2f6603d63a239ff9c67f5348480e38b76f9576a9889f94f6fa520fe380c03
+    Install:
+      TargetPath: plugins/jumpbarx.auf
+  - Path: readme.txt
+    Sha256: b6a0259d6cb3efbe77c772581677d3982e31c1783e06434273778ec55d65ef81
+ManifestVersion: 0.1.0

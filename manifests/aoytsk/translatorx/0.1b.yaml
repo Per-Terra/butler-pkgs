@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: translatorx
+DisplayName: 翻訳＋
+Version: 0.1b
+ReleaseDate: 2015-12-21
+Section: Plugin/Other
+InstalledSize: 29
+Developer:
+- aoytsk
+Description: プラグインの文字列を実行時に置き換えることでプラグインの国際化を行うプラグイン
+Website:
+- https://aoytsk.blog.jp/Aviutl/745925.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/translatorx.zip
+  Sha256: 9fe82522200f81d637c508ddcda2a946a3a5ea0590066afb6578c53f77807d4a
+  Files:
+  - Path: translatorx.auf
+    Sha256: 5c08a394a4bfa5e4501f8b05dcfc0d788e81f5e00946979750caf3e55a361d3e
+    Install:
+      TargetPath: plugins/translatorx.auf
+  - Path: translatorx.txt
+    Sha256: 38b27edcc9da6f56f8a7e3c355425f13ab9e39fb5f02f8a46969e561bc976753
+ManifestVersion: 0.1.0

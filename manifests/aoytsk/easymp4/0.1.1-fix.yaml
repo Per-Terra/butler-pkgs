@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: easymp4
+DisplayName: かんたんMP4出力
+Version: 0.1.1-fix
+ReleaseDate: 2020-04-23
+Section: Plugin/Output
+Depends:
+- aviutl (>= 1.00)
+InstalledSize: 119
+Developer:
+- aoytsk
+Description: MP4でエンコードする出力プラグイン
+Website:
+- https://aoytsk.blog.jp/aviutl/34586383.html
+Files:
+- SourceUrl: https://aoytsk.blog.jp/aviutl/easymp4.zip
+  Sha256: 3c74f05437eb932e37d8a31df48a76365994f030a3b98b08f4faad3541b450ad
+  Files:
+  - Path: easymp4.auo
+    Sha256: 54c41c832b45642a85e8912fa82c544e4ed46e5a49a98dfbc888b5b6be37fa68
+    Install:
+      TargetPath: plugins/easymp4.auo
+  - Path: easymp4.txt
+    Sha256: d4420e681ebe4f95b81393ab8f83e9459dcbcbf7ba08696d5ed16083604b3273
+  - Path: license.txt
+    Sha256: e6cdde9b8ee4106b47ba5a75583fa470ae7de7e8997a33564069d10d2bc7fbc2
+ManifestVersion: 0.1.0
