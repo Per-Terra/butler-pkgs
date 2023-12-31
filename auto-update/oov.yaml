@@ -1,0 +1,169 @@
+- Identifier: AudioMixer
+  Developer: oov
+  Enable: true
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_audiomixer
+  Asset: ^AudioMixer_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: aviutl-browser
+  Developer: oov
+  Enable: false
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_browser
+  Asset: ^aviutl_browser_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: aviutl-browser-glb
+  Developer: oov
+  Enable: false
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_browser_glb
+  Asset: ^aviutl_browser_glb_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: bridge.dll
+  Developer: oov
+  Enable: false
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_bridge
+  Asset: ^aviutl_bridge_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: CacheText
+  Developer: oov
+  Enable: false
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_cachetext
+  Asset: ^CacheText.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: Extram2
+  Developer: oov
+  Enable: true
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_extram2
+  Asset: ^extram2_.*\.zip$
+  Version:
+    from: tag_name
+    # https://github.com/oov/aviutl_extram2/blob/fa75ad390bbe4adb91ce384a0f2801243a8a42e9/.github/workflows/releaser.yml#L6-L9
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: ffmpeg-input
+  Developer: oov
+  Enable: true
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_ffmpeg_input
+  Asset: ^ffmpeg_input_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: forcepser
+  Developer: oov
+  Enable: true
+  Type: GitHub
+  Owner: oov
+  Repository: forcepser
+  Asset: ^forcepser_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: GCMZDrops
+  Developer: oov
+  Enable: true
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_gcmzdrops
+  Asset: ^gcmzdrops_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: PSDToolKit
+  Developer: oov
+  Enable: true
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_psdtoolkit
+  Asset: ^psdtoolkit_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: RamPreview
+  Developer: oov
+  Enable: false
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_rampreview
+  Asset: ^rampreview_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: RelMovieHandle
+  Developer: oov
+  Enable: false
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_relmoviehandle
+  Asset: ^relmoviehandle_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
+- Identifier: textassist
+  Developer: oov
+  Enable: true
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_textassist
+  Asset: ^aviutl_textassist_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $version -match '^v(.*?)((?:alpha|beta|rc).*)?$' | Out-Null
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }

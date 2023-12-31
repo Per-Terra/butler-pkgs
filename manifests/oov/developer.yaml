@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: oov
+DisplayName: Masanobu YOSHIOKA
+Website:
+  - https://oov.ch/
+  - https://github.com/oov
+  - https://www.nicovideo.jp/user/10984
+  - https://twitter.com/oovch
+ManifestVersion: 0.1.0

@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: RamPreview
+DisplayName: 拡張編集RAMプレビュー
+Version: 0.1-alpha
+ReleaseDate: 2018-01-27
+Section: Plugin/Output
+InstalledSize: 1647
+Developer:
+- oov
+Description: 描画結果をキャッシュし、キャッシュからの再生を行えるようにするためのプラグイン
+Website:
+- https://github.com/oov/aviutl_rampreview
+Files:
+- SourceUrl: https://github.com/oov/aviutl_rampreview/releases/download/v0.1alpha/rampreview_v0.1alpha.zip
+  Sha256: 6ef8891b4c88832f4dc1bd1b07b95ba8920c376441cef578caedb03d4c0923b3
+  Files:
+  - Path: README.txt
+    Sha256: 49e139014f4368233054e7662d321779362c9a860a6f77cb9d565057fe5c6599
+  - Path: ZRamPreview.auf
+    Sha256: 8127c4d78e569dc135b01fbed8a7d50fe4090e98e2d65060d4a259d3c2b63b16
+    Install:
+      TargetPath: ZRamPreview.auf
+  - Path: ZRamPreview.exe
+    Sha256: 02577f44de98ac90c3e292e7cd992020bd9742687dba680e3eb45bd2a013f850
+    Install:
+      TargetPath: ZRamPreview.exe
+ManifestVersion: 0.1.0

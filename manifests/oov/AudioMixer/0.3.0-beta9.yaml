@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: AudioMixer
+Version: 0.3.0-beta9
+ReleaseDate: 2022-07-21
+Section: Plugin/Filter
+Depends:
+- aviutl(>= 1.00)
+- exedit (>= 0.92)
+InstalledSize: 138
+Developer:
+- oov
+Description: 拡張編集上でイコライザーやコンプレッサーを使えるようになるプラグイン
+Website:
+- https://github.com/oov/aviutl_audiomixer
+Files:
+- SourceUrl: https://github.com/oov/aviutl_audiomixer/releases/download/v0.3.0beta9/AudioMixer_v0.3.0beta9.zip
+  Sha256: 7c5af45dff32deec9c4786dc821eac05ee1ee129970a2f3bf1508e35882b3b97
+  Files:
+  - Path: AudioMixer.auf
+    Sha256: 448b0bf2d35fec8c9272deabab21f6a00cef1fe6af745716fd297b6533da4a86
+    Install:
+      TargetPath: AudioMixer.auf
+  - Path: AudioMixer.txt
+    Sha256: d4a62b6e54b536c36c47ea69cf91f5d084d06b9e89cc1f3b0f2c5f842f52faae
+ManifestVersion: 0.1.0

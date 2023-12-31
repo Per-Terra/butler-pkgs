@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: RelMovieHandle
+DisplayName: 動画ハンドル開放
+Version: "1.1"
+ReleaseDate: 2019-10-04
+Section: Plugin/Other
+InstalledSize: 128
+Developer:
+- oov
+Description: 動画のハンドルを開放するプラグイン
+Website:
+- https://github.com/oov/aviutl_relmoviehandle
+Files:
+- SourceUrl: https://github.com/oov/aviutl_relmoviehandle/releases/download/v1.1/relmoviehandle_v1.1.zip
+  Sha256: 0790be8acd2f45334c207eb11b0504e9025bef4c9edef09fbf7ff6570b5a724c
+  Files:
+  - Path: RelMovieHandle.auf
+    Sha256: a36393cc2e5ae5c7d9f75d2ffcc6f98d7a1c78a81dbfe2c7225a066996bd6767
+    Install:
+      TargetPath: RelMovieHandle.auf
+  - Path: RelMovieHandle.txt
+    Sha256: 2d6f12bdcffa4f7b4f72a15913436c0969cacd9ea0b50995365bbb5752471489
+ManifestVersion: 0.1.0

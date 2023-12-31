@@ -1,0 +1,37 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: RamPreview
+DisplayName: 拡張編集RAMプレビュー
+Version: 0.3-rc
+ReleaseDate: 2018-03-06
+Section: Plugin/Output
+InstalledSize: 1823
+Developer:
+- oov
+Description: 描画結果をキャッシュし、キャッシュからの再生を行えるようにするためのプラグイン
+Website:
+- https://github.com/oov/aviutl_rampreview
+Files:
+- SourceUrl: https://github.com/oov/aviutl_rampreview/releases/download/v0.3rc/rampreview_v0.3rc.zip
+  Sha256: a747565ff3b36147d706d70b206922db3ceb25b31e0137d20fc1a80d85240ada
+  Files:
+  - Path: ZRamPreview.auf
+    Sha256: 887f754c88842e1db41e320f87f8bf200cc902d3060a537be9e9b173d33c8651
+    Install:
+      TargetPath: ZRamPreview.auf
+  - Path: ZRamPreview.auo
+    Sha256: 472ec56d9c48c1f1d97b493b7caf91a6827efa43514e8533f5b5124510821696
+    Install:
+      TargetPath: ZRamPreview.auo
+  - Path: ZRamPreview.exe
+    Sha256: 63454e9257dd21d7eff96928746a362277beec66e97ada4605f05d9c9f816a99
+    Install:
+      TargetPath: ZRamPreview.exe
+  - Path: ZRamPreview.txt
+    Sha256: 4a3f49bb9fdfa31c72620136f1e93d3ee4e7f04578845c7822d6dbdef688a140
+  - Path: script/Extram.dll
+    Sha256: b70c05b2fa7cf9bc668819514aabbf35a546b4203bca6639929017131d24f9fa
+    Install:
+      TargetPath: script/Extram.dll
+ManifestVersion: 0.1.0

@@ -1,0 +1,26 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: bridge.dll
+Version: "0.13"
+ReleaseDate: 2021-05-18
+Section: Other
+InstalledSize: 39
+Developer:
+- oov
+Description: |-
+  拡張編集でLuaから外部プログラムを使って処理をしやすくするためのプラグイン
+  外部プログラムは stdin / stdout を使って通信するものを作成する必要があります。
+Website:
+- https://github.com/oov/aviutl_bridge
+Files:
+- SourceUrl: https://github.com/oov/aviutl_bridge/releases/download/v0.13/aviutl_bridge_v0.13.zip
+  Sha256: 54edd4928273339696b127d28d4e352547a31840574b8fd77a71d42644bce521
+  Files:
+  - Path: bridge.dll
+    Sha256: bbabaaaa0bbc029a76c838530b3a161975e469676a32260b5847d80e99438aef
+    Install:
+      TargetPath: bridge.dll
+  - Path: bridge.txt
+    Sha256: 5d565c3cdbdd8281f4920d51f7824240bd89fe5a757449c8895423c59b18875f
+ManifestVersion: 0.1.0

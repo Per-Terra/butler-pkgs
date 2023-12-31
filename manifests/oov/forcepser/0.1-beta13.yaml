@@ -1,0 +1,38 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: forcepser
+DisplayName: かんしくん
+Version: 0.1-beta13
+ReleaseDate: 2020-06-25
+Section: Other
+Depends:
+- GCMZDrops
+InstalledSize: 3481
+Developer:
+- oov
+Description: 指定されたフォルダーを監視して、同じ名前の*.wavと*.txtが追加された時にごちゃまぜドロップスの外部連携APIに投げつけるプログラム
+Website:
+- https://github.com/oov/forcepser
+Files:
+- SourceUrl: https://github.com/oov/forcepser/releases/download/v0.1beta13/forcepser_v0.1beta13.zip
+  Sha256: c05c7125376ead6d97212488796e502cb30d235a0c43b6d6c2e722b154495841
+  Files:
+  - Path: _entrypoint.lua
+    Sha256: 56c15874d19f08ecfe2881918b2b5f3a4c7fa82b36b5f7a5fdb22df6d3921bbe
+    Install:
+      TargetPath: かんしくん/_entrypoint.lua
+  - Path: forcepser.exe
+    Sha256: e565139cc7762900b511b4e98f5f73cf5f31e0d925f7cfd95a84dcf3965c47ef
+    Install:
+      TargetPath: かんしくん/forcepser.exe
+  - Path: forcepser.txt
+    Sha256: 9c679f3dcf4ee6ed2afce1a4a752c4498215f314722c8ffa31f58b17a2cacb7b
+    Install:
+      TargetPath: かんしくん/forcepser.txt
+  - Path: setting.txt-template
+    Sha256: 52ea21006a6be378e0cab99c0554436ba29ac591ae384bf9b7ac92fe1328dea2
+    Install:
+      TargetPath: かんしくん/setting.txt-template
+      ConfFile: true
+ManifestVersion: 0.1.0

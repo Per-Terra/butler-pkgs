@@ -103,6 +103,44 @@ function Get-FilesInArchive {
         $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
+    elseif ($Url.StartsWith('https://github.com/oov/aviutl_ffmpeg_input') -and $relativePath.StartsWith('ffmpeg64/')) { # oov/aviutl_ffmpeg_input用の例外
+      $file.Add('Install', @{
+        TargetPath = $relativePath
+      })
+    }
+    elseif ($Url.StartsWith('https://github.com/oov/aviutl_gcmzdrops') -and $relativePath.StartsWith('GCMZDrops/')) { # oov/aviutl_ffmpeg_input用の例外
+      $file.Add('Install', @{
+        TargetPath = $relativePath
+      })
+    }
+    elseif ($Url.StartsWith('https://github.com/oov/aviutl_psdtoolkit')) { # oov/PSDToolKit用の例外
+      if ($relativePath.StartsWith('GCMZDrops/')) {
+        # do nothing
+      }
+      elseif ($relativePath.StartsWith('PSDToolKit/')) {
+        $file.Add('Install', @{
+            TargetPath = $relativePath
+          })
+      }
+      elseif ($relativePath.StartsWith('PSDToolKitDocs/')) {
+        # do nothing
+      }
+      elseif ($relativePath.StartsWith('script/PSDToolKit')) {
+        $file.Add('Install', @{
+            TargetPath = $relativePath
+          })
+      }
+      elseif ($relativePath.StartsWith('かんしくん')) {
+        # do nothing
+      }
+      else {
+        if ($relativePath -eq 'PSDToolKit.auf') {
+          $file.Add('Install', @{
+              TargetPath = $relativePath
+            })
+        }
+      }
+    }
     elseif ($relativePath.StartsWith('plugins/') -or $relativePath.StartsWith('script/') -or $relativePath.StartsWith('exe_files/')) {
       if ($_.Extension -in $ConfExtensions) {
         $file.Add('Install', @{

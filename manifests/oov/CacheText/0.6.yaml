@@ -1,0 +1,38 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: CacheText
+DisplayName: キャッシュテキスト
+Version: "0.6"
+ReleaseDate: 2020-10-22
+Section: Script
+Depends:
+- RamPreview
+InstalledSize: 14
+Developer:
+- oov
+Description: |-
+  生成したテキストを画像としてキャッシュすることで描画処理を効率化するスクリプト
+  画像としてキャッシュするため、表示速度を利用したアニメーション、サイズのリアルタイムな変更などのような機能は使用できません。
+  静的なテキストを表示する際の軽量化にお使いください。
+Website:
+- https://github.com/oov/aviutl_cachetext
+Files:
+- SourceUrl: https://github.com/oov/aviutl_cachetext/releases/download/v0.6/CacheText20201023.zip
+  Sha256: 43b1032b970fa7dad66a86ae2602cf1608e6d12eea58f08c08dcd0460048ed36
+  Files:
+  - Path: キャッシュテキスト.exa
+    Sha256: f8d948d89009e9fe79dcf8208e620971beee606d0caecbfb28bcdcbced7856f7
+    Install:
+      TargetPath: キャッシュテキスト.exa
+  - Path: キャッシュテキスト.txt
+    Sha256: b88b7530452a9e57ad393b660d2a012c654a6ddc3f513b48fe20ae4ad0883511
+  - Path: script/CacheText.anm
+    Sha256: 0e5ac73c0da77e767dab9eb43b34827472dc4591abe114bf42d461bae4e41e85
+    Install:
+      TargetPath: script/CacheText.anm
+  - Path: script/CacheText.lua
+    Sha256: d9de220aa4a5efc084dfc4985c0d0101586af09e447a21961cddfc45af3da719
+    Install:
+      TargetPath: script/CacheText.lua
+ManifestVersion: 0.1.0

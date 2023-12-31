@@ -1,0 +1,108 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: PSDToolKit
+Version: 0.1.2-rc5
+ReleaseDate: 2017-10-24
+Section: Plugin/Other
+Architecture: x64
+Depends:
+- AudioMixer
+- CacheText
+- exedit (= 0.92)
+- forcepser
+- GCMZDrops
+- RamPreview
+InstalledSize: 8008
+Developer:
+- oov
+Description: 拡張編集プラグイン上でPSDファイルを扱えるようにするためのツールキット
+Website:
+- https://github.com/oov/aviutl_psdtoolkit
+Files:
+- SourceUrl: https://github.com/oov/aviutl_psdtoolkit/releases/download/v0.1.2rc5/psdtoolkit_v0.1.2rc5.zip
+  Sha256: 357216b2de4573bbcd9d82c9af0d505e58759eefe928faa31724cdf265182027
+  Files:
+  - Path: AudioMixer.auf
+    Sha256: 1b8fe0d7706f8e9a4417ab96334dd4388dd30aab45f6e19fa7717a84abe1c54d
+  - Path: GCMZDrops.auf
+    Sha256: b17f9dac08a997dc4d5b45af0ce4a5c641fd6f977e7330026d208978eb9cfb14
+  - Path: PSDToolKit.auf
+    Sha256: 8bcf0201df91efd0b294949139c89b6a060eefdfa0e449fa1a1ddd431654064f
+    Install:
+      TargetPath: PSDToolKit.auf
+  - Path: README.txt
+    Sha256: fa42f7701ea1cc5d2f21bca5108847bcc5d0ee82d9c7a301b93ecb14cdcf4ebc
+  - Path: GCMZDrops/_entrypoint.lua
+    Sha256: a333214d0922f2ca238147f0812654f6abb21deffe9588cf47e2725346dc62ad
+  - Path: GCMZDrops/avoiddup.lua
+    Sha256: 00b64fa8a3b367b15955ad258008bc2667c3ec416f06f354f378bc85bfc44426
+  - Path: GCMZDrops/example.lua
+    Sha256: e1c719fab6b29a98f73865d92cdc4b1586735f97ad2087c0b9a767eefc06caee
+  - Path: GCMZDrops/generic.lua
+    Sha256: 6535137136e8bf96fb503f89255e7d4cde714d290cb61ac6c71de0ee0178bad6
+  - Path: GCMZDrops/psdtoolkit_psd.lua
+    Sha256: 392d70e41181bd9784a51c30d980c94474b1086c83cb96cc2fba4c754dec84ec
+  - Path: GCMZDrops/psdtoolkit_srt.lua
+    Sha256: a286e70df81e898ad27ad8d3568d6d23151e1fd53578e0eca8f3c8925f987de5
+  - Path: GCMZDrops/psdtoolkit_wav.lua
+    Sha256: e78d78605bc21817875dcf5716685e03a5215f984e58d0698ef7dbcd6ba03fc4
+  - Path: GCMZDrops/textsjis.lua
+    Sha256: e451b1bd623d9590275cd937d491e3aecab5750e6025d5b97afddab3c8ac95e7
+  - Path: PSDToolKit/PSDToolKitオブジェクト.exa
+    Sha256: 75d8414fdeda0ad98b37516dc9601dcc1147f1079df4cc69c1d7a5678dd33c4b
+    Install:
+      TargetPath: PSDToolKit/PSDToolKitオブジェクト.exa
+  - Path: PSDToolKit/オブジェクト描画.exa
+    Sha256: c2fa67870126b84c260e64a636cc4116c9e23a1d6bf9babcb65efa3da4c282b2
+    Install:
+      TargetPath: PSDToolKit/オブジェクト描画.exa
+  - Path: PSDToolKit/テキスト　字幕表示用・文字送り.exa
+    Sha256: 30433f4f767f9783f082f88a4379f5adf6d4611caae49af58b8735474a4c7211
+    Install:
+      TargetPath: PSDToolKit/テキスト　字幕表示用・文字送り.exa
+  - Path: PSDToolKit/テキスト　字幕表示用.exa
+    Sha256: 158e962cb69ad33d766c6b8a18e460714332f076c85db3edf2a8bfc1f7c68d7f
+    Install:
+      TargetPath: PSDToolKit/テキスト　字幕表示用.exa
+  - Path: PSDToolKit/パーツ差し替え.exa
+    Sha256: 06a67b302318169235543ffbe0cc506d91beb9159413a70a3ced90fe3525964e
+    Install:
+      TargetPath: PSDToolKit/パーツ差し替え.exa
+  - Path: PSDToolKit/口パク　あいうえお.exa
+    Sha256: 5ee77135d6e2f398cbeb5fb84dc990e407e1736c018a27d66c9678824b72b930
+    Install:
+      TargetPath: PSDToolKit/口パク　あいうえお.exa
+  - Path: PSDToolKit/口パク　開閉のみ.exa
+    Sha256: 262ef3fbb675fcbb0c64d9dbc7ac258b4a19929b7c88ea7d06a4cc66acf183dd
+    Install:
+      TargetPath: PSDToolKit/口パク　開閉のみ.exa
+  - Path: PSDToolKit/口パク準備.exa
+    Sha256: e0f0a719d332b6d6b172ea3119ff7c481327659401db47b9e50f32b72985a39b
+    Install:
+      TargetPath: PSDToolKit/口パク準備.exa
+  - Path: PSDToolKit/目パチ.exa
+    Sha256: 6378a3271cba7fee9f637e0204543490ffa3e1b403ad0ff60e6c569d7178e758
+    Install:
+      TargetPath: PSDToolKit/目パチ.exa
+  - Path: script/PSDToolKit/@PSDToolKit.anm
+    Sha256: 52f7db5e502cef5e992b6522d7aa0f2f1dd9b535fcfa282b10dfc864daee8907
+    Install:
+      TargetPath: script/PSDToolKit/@PSDToolKit.anm
+  - Path: script/PSDToolKit/@PSDToolKit.obj
+    Sha256: e8a26fd472908af483ad7859b33a3015a57bcf227f2e117e9161a59dc128af6e
+    Install:
+      TargetPath: script/PSDToolKit/@PSDToolKit.obj
+  - Path: script/PSDToolKit/PSDToolKit.dll
+    Sha256: 122d2efd29ef7954ee0c7d5d116ffda965ddcd4cbba57bbc07ee5bbbbf98ad47
+    Install:
+      TargetPath: script/PSDToolKit/PSDToolKit.dll
+  - Path: script/PSDToolKit/PSDToolKit.exe
+    Sha256: 868b533c43d4f0a1f0f48c496a7d711b455dc46e7f8ca9616afab509bec31a4f
+    Install:
+      TargetPath: script/PSDToolKit/PSDToolKit.exe
+  - Path: script/PSDToolKit/PSDToolKitLib.lua
+    Sha256: 791c2a5ab74bbae0611635dc4a15625adc9c62e88d5e48b62cc447de6b0e6c80
+    Install:
+      TargetPath: script/PSDToolKit/PSDToolKitLib.lua
+ManifestVersion: 0.1.0
