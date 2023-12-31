@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: hebiiro
+DisplayName: 蛇色
+Website:
+  - https://github.com/hebiiro
+  - https://twitter.com/io_hebiiro
+ManifestVersion: 0.1.0

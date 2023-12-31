@@ -1,0 +1,9 @@
+- Identifier: Ultimate
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: anti.aviutl.ultimate.plugin
+  Asset: ^ultimate_.*\.zip$
+  Version:
+    from: tag_name

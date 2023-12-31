@@ -103,6 +103,13 @@ function Get-FilesInArchive {
         $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
+    elseif ($Url.StartsWith('https://github.com/hebiiro/anti.aviutl.ultimate.plugin')) { # hebiiro/anti.aviutl.ultimate.plugin用の例外
+      if (($relativePath -in 'Ultimate.auf', 'Ultimate.aul') -or $relativePath.StartsWith('UltimateAddin/') -or $relativePath.StartsWith('UltimateConfig/')) {
+        $file.Add('Install', @{
+            TargetPath = ($relativePath -replace '^', 'plugins/')
+          })
+      }
+    }
     elseif ($Url.StartsWith('https://github.com/oov/aviutl_ffmpeg_input') -and $relativePath.StartsWith('ffmpeg64/')) { # oov/aviutl_ffmpeg_input用の例外
       $file.Add('Install', @{
         TargetPath = $relativePath
