@@ -12,8 +12,8 @@ InstalledSize: 115
 Developer:
 - oov
 Description: |-
-  <enter description here>
-  <enter description here>
+  マインクラフト風モデルを描画するカスタムオブジェクト
+  スキン画像を読み込みで適用することができます。
 Website:
 - https://github.com/oov/aviutl_browser_minecraft_skin
 Files:
