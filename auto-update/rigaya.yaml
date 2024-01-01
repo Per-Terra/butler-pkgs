@@ -67,6 +67,9 @@
   Asset: ^VVenCguiEx_.*\.zip$
   Version:
     from: tag_name
+    script: |
+      $null = $version -match '^([\.\d]+)(.*)$'
+      $version = if ($Matches[2]) { $Matches[1] + '-' + $Matches[2] } else { $Matches[1] }
 
 - Identifier: x264guiEx
   Developer: rigaya

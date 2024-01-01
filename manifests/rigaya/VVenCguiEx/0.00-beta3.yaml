@@ -3,8 +3,8 @@
 
 Identifier: VVenCguiEx
 DisplayName: 拡張 VVenC 出力(GUI) Ex
-Version: 0.00beta1
-ReleaseDate: 2022-10-15
+Version: 0.00-beta3
+ReleaseDate: 2023-03-18
 Section: Plugin/Output
 Replaces:
 - ffmpegOut
@@ -21,11 +21,11 @@ Description: VVenCを使用してエンコードを行う出力プラグイン
 Website:
 - https://github.com/rigaya/VVenCguiEx
 Files:
-- SourceUrl: https://github.com/rigaya/VVenCguiEx/releases/download/0.00beta1/VVenCguiEx_0.00beta1.zip
-  Sha256: b02d46f281a2d53181512c35c2afce65f909bbaeec3dcf7b7283d14ee61199f5
+- SourceUrl: https://github.com/rigaya/VVenCguiEx/releases/download/0.00beta3/VVenCguiEx_0.00beta3.zip
+  Sha256: 9649b41338daa5283f485438ddcc3a1aaedebbb743bf6dfccf8dff098e0138f4
   Files:
   - Path: VVenCguiEx_readme.txt
-    Sha256: da8493db1c268cec0bab3b2c16bfccb3862de66b8b510351e141a757d9ca0aa5
+    Sha256: 3df8f3174dbca47abda5a826d1e8751572a135778ba6c32f853ee1683b1fea2a
   - Path: exe_files/auo_check_fileopen.exe
     Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
     Install:
@@ -80,7 +80,7 @@ Files:
     Install:
       TargetPath: plugins/auo_setup.auf
   - Path: plugins/VVenCguiEx.auo
-    Sha256: 33179ee8b594b0288424af9f6826eb7ca45e02e2cd671f09776c30003e43d55b
+    Sha256: 4ec942a8ce883d206cb219e5192a87f1e6c31923c13b983b2666ced152d5c1c0
     Install:
       TargetPath: plugins/VVenCguiEx.auo
   - Path: plugins/VVenCguiEx.en.ini
