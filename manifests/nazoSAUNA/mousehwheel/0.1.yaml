@@ -11,12 +11,7 @@ Depends:
 InstalledSize: 9
 Developer:
 - nazoSAUNA
-Description: |-
-  拡張編集タイムラインでマウスホイールを動かした際の挙動を変更する
-  ## 仕様
-  - 通常のホイール：従来は横スクロール　→　縦スクロールに変更
-  - Alt押しながらホイール：従来は縦スクロール　→　横スクロールに変更
-  - (マウスによっては存在する)横ホイールで横スクロールされるようにする
+Description: 拡張編集タイムラインでマウスホイールを動かした際の挙動を変更するプラグイン
 Website:
 - https://github.com/nazonoSAUNA/mousehwheel
 Files:

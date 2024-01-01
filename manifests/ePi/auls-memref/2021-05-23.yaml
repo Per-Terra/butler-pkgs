@@ -14,6 +14,7 @@ Developer:
 - ePi
 - Auls
 Description: |-
+  他のメモリを参照するプラグインやDLLで必要なプラグイン
   他のプラグインやDLLにメモリアドレス情報を渡します。
   このプラグイン単体では何もしません。
 Website:

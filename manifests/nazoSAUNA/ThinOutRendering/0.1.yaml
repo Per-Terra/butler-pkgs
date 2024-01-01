@@ -11,10 +11,7 @@ Depends:
 InstalledSize: 11
 Developer:
 - nazoSAUNA
-Description: |-
-  出力中であっても拡大率縮小などのレンダリング処理が「画像処理を間引いて表示」と同じ処理になるAviUtlプラグイン
-  - フィルタ効果などは間引かれず出力されます
-  - 拡張編集の設定で「画像処理を間引いて表示」がオフのときは無効となります
+Description: 出力中であっても拡大率縮小などのレンダリング処理が「画像処理を間引いて表示」と同じ処理になるプラグイン
 Website:
 - https://github.com/nazonoSAUNA/ThinOutRendering
 Files:

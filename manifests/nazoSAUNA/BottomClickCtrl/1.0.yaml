@@ -9,12 +9,7 @@ Section: Plugin/Other
 InstalledSize: 11
 Developer:
 - nazoSAUNA
-Description: |-
-  メインウィンドウのボタン周辺の判定を無効化するプラグイン
-  ●動作
-  ・メインウィンドウのボタン周辺を押したときにオブジェクトが動かないようにする
-  ・「オーディオ波形の表示」の部分にある判定にも適応
-  ・拡張編集の「フレーム領域外の表示」機能によって出てくるグレーの部分の判定はそのまま
+Description: メインウィンドウのボタン周辺の判定を無効化するプラグイン
 Website:
 - https://www.nicovideo.jp/watch/sm39078844
 - https://drive.google.com/drive/folders/1dRm45jVONuG2JrUuTabl3oRQY9RfxSQd

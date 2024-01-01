@@ -12,7 +12,7 @@ InstalledSize: 910
 Developer:
 - KEN-kun
 Description: |-
-  編集機能を追加するプラグインです。
+  編集機能を追加するプラグイン
   AviUtlで複数の映像、画像、テキスト等を任意の場所に表示したり、フィルタを任意の場所に指定したりすることが出来るプラグインです。SSE2が使えるCPUが必要です。
 Website:
 - https://spring-fragrance.mints.ne.jp/aviutl/

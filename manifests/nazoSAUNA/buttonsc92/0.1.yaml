@@ -11,10 +11,7 @@ Depends:
 InstalledSize: 11
 Developer:
 - nazoSAUNA
-Description: |-
-  設定ダイアログの開始フレーム、終了フレームに移動するボタンのショートカットを追加する
-  ## 仕様
-  - ショートカットキーの設定に追加されます
+Description: 設定ダイアログの開始フレーム、終了フレームに移動するボタンのショートカットを追加するプラグイン
 Website:
 - https://github.com/nazonoSAUNA/buttonsc92
 Files:

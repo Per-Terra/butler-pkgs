@@ -9,14 +9,7 @@ Section: Plugin/Other
 InstalledSize: 11
 Developer:
 - nazoSAUNA
-Description: |-
-  メインウィンドウを最大化したときにメインウィンドウ以外を非表示にするプラグイン
-  ●やってること
-  ・メインウィンドウを最大化した時
-  　→その他ウィンドウの位置を画面外（下の方）に移動
-
-  ・最大化以外の状態にした時・チェックを外した時
-  　→ウィンドウの位置を元に戻す
+Description: メインウィンドウを最大化したときにメインウィンドウ以外を非表示にするプラグイン
 Website:
 - https://www.nicovideo.jp/watch/sm38900149
 - https://drive.google.com/drive/folders/1UxrosZrfiQ54hcDb9rfING6KvQhke-1P
