@@ -21,7 +21,7 @@ Write-Host -Object "YAMLファイルのディレクトリ: $yamlDirectory"
 $jsonDirectory = Join-Path -Path $PSScriptRoot -ChildPath JSON
 Write-Host -Object "JSONファイルのディレクトリ: $jsonDirectory"
 
-if (-not (Test-Path -LiteralPath $jsonDirectory)) {
+if (-not (Test-Path -LiteralPath $jsonDirectory -PathType Container)) {
   Write-Host -Object "JSONファイルのディレクトリを作成しています: $jsonDirectory"
   try {
     $null = New-Item -Path $jsonDirectory -ItemType Directory
@@ -38,7 +38,7 @@ Write-Host -Object " $($yamlFiles.Count) 件のYAMLファイルが見つかり�
 Write-Host -Object 'YAMLファイルをJSONファイルに変換しています...' -NoNewline
 $yamlFiles | ForEach-Object {
   $jsonPath = $_.FullName.Replace($yamlDirectory, $jsonDirectory).Replace('.yaml', '.json')
-  if (-not (Test-Path -LiteralPath (Split-Path -Path $jsonPath -Parent))) {
+  if (-not (Test-Path -LiteralPath (Split-Path -Path $jsonPath -Parent) -PathType Leaf)) {
     $null = New-Item -Path (Split-Path -Path $jsonPath -Parent) -ItemType Directory
   }
 

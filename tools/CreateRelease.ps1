@@ -124,7 +124,7 @@ $hashBytes = $hash.ComputeHash($stream.ToArray())
 $hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
 Write-Host -Object ' 完了'
 
-if (-not (Test-Path -LiteralPath $ReleaseDirectory)) {
+if (-not (Test-Path -LiteralPath $ReleaseDirectory -PathType Container)) {
   Write-Host -Object 'ディレクトリを作成しています...' -NoNewline
   $null = New-Item -Path $ReleaseDirectory -ItemType Directory -Force
   Write-Host -Object ' 完了'

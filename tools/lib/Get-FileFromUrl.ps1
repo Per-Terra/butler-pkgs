@@ -28,7 +28,7 @@ function Get-FileFromUrl {
     Write-Verbose -Message "ランダムなファイル名を生成しました: $fileName"
   }
 
-  if (-not (Test-Path -LiteralPath $OutDirectory)) {
+  if (-not (Test-Path -LiteralPath $OutDirectory -PathType Container)) {
     Write-Verbose -Message "出力先ディレクトリを作成しています: $OutDirectory"
     try {
       $null = New-Item -Path $OutDirectory -ItemType Directory -Force
@@ -41,7 +41,7 @@ function Get-FileFromUrl {
   $filePath = Join-Path -Path $OutDirectory -ChildPath $fileName
   Write-Verbose -Message "ファイルの保存先: $filePath"
 
-  if ((Test-Path -LiteralPath $filePath) -and (-not $Force)) {
+  if ((Test-Path -LiteralPath $filePath -PathType Leaf) -and (-not $Force)) {
     do {
       $overwrite = Read-Host -Prompt "'$filePath' は既に存在します。上書きしますか? [Y/n]"
     } until ([string]::IsNullOrEmpty($overwrite) -or ($overwrite -in @('Y', 'n')))

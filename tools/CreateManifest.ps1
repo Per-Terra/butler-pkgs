@@ -196,11 +196,11 @@ function Get-FilesInArchive {
           })
       }
       elseif ($_.Extention -in $ArchiveExtensions) {
-        $expandPath = Join-Path -Path (Split-Path -Path $_.FullName -Parent) -ChildPath (Split-Path -Path $_.FullName -LeafBase)
-        if (Test-Path -LiteralPath $expandPath) {
-          Remove-Item -LiteralPath $expandPath -Recurse -Force
+        $expandDirectory = Join-Path -Path (Split-Path -Path $_.FullName -Parent) -ChildPath (Split-Path -Path $_.FullName -LeafBase)
+        if (Test-Path -LiteralPath $expandDirectory -PathType Container) {
+          Remove-Item -LiteralPath $expandDirectory -Recurse -Force
         }
-        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath))
+        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandDir))
       }
     }
 
@@ -248,11 +248,11 @@ function Get-SourceFileFromUrl {
   $fileExtension = Split-Path -Path $filePath -Extension
 
   if ($fileExtension -in $ArchiveExtensions) {
-    $expandPath = Join-Path -Path (Split-Path -Path $filePath -Parent) -ChildPath (Split-Path -Path $filePath -LeafBase)
-    if (Test-Path -LiteralPath $expandPath) {
-      Remove-Item -LiteralPath $expandPath -Recurse -Force
+    $expandDirectory = Join-Path -Path (Split-Path -Path $filePath -Parent) -ChildPath (Split-Path -Path $filePath -LeafBase)
+    if (Test-Path -LiteralPath $expandDirectory -PathType Container) {
+      Remove-Item -LiteralPath $expandDirectory -Recurse -Force
     }
-    $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
+    $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandDirectory -PreviousFiles $previousFile.Files))
   }
   else {
     $script:installedSize += [math]::Ceiling((Get-Item -LiteralPath $filePath).Length / 1024)
@@ -302,22 +302,22 @@ if ($Update) {
     do {
       $package = Read-Host -Prompt '更新するパッケージを Developer/Identifier の形式で入力してください'
     } while ([string]::IsNullOrEmpty($package))
-    $manifestsPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($package.Split('/')[0])/$($package.Split('/')[1])"
+    $manifestsDirectory = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($package.Split('/')[0])/$($package.Split('/')[1])"
   }
   else {
-    $manifestsPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($Developer)/$($Identifier)"
+    $manifestsDirectory = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($Developer)/$($Identifier)"
   }
 
-  if (-not (Test-Path -LiteralPath $manifestsPath)) {
-    throw "マニフェストが見つかりません: $manifestsPath"
+  if (-not (Test-Path -LiteralPath $manifestsDirectory -PathType Container)) {
+    throw "マニフェストが見つかりません: $manifestsDir"
   }
 
-  $manifests = Get-ChildItem -LiteralPath $manifestsPath -Filter '*.yaml' -Recurse -File | ForEach-Object {
+  $manifests = Get-ChildItem -LiteralPath $manifestsDirectory -Filter '*.yaml' -Recurse -File | ForEach-Object {
     Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Yaml
   }
 
   if ($manifests.Count -eq 0) {
-    throw "マニフェストが見つかりません: $manifestsPath"
+    throw "マニフェストが見つかりません: $manifestsDir"
   }
 
   # 最新のマニフェストを取得
@@ -503,12 +503,12 @@ if (-not (Test-PackageManifest -Manifest $manifest)) {
 }
 
 $manifestPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($manifest['Developer'][0])/$($manifest.Identifier)/$($manifest.Version).yaml"
-if (-not (Test-Path -LiteralPath (Split-Path -Path $manifestPath -Parent))) {
+if (-not (Test-Path -LiteralPath (Split-Path -Path $manifestPath -Parent) -PathType Container)) {
   $null = New-Item -Path (Split-Path -Path $manifestPath -Parent) -ItemType Directory
 }
 
 if (-not $Force) {
-  if (Test-Path -LiteralPath $manifestPath) {
+  if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
     do {
       $overwrite = Read-Host -Prompt "'$manifestPath' は既に存在します。上書きしますか? [Y/n]"
     } until ([string]::IsNullOrEmpty($overwrite) -or ($overwrite -in @('Y', 'n')))

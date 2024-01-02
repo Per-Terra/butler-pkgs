@@ -124,7 +124,7 @@ foreach ($target in $targets) {
 
         $manifestPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($target.Developer)/$($target.Identifier)/$version.yaml"
 
-        if (Test-Path -LiteralPath $manifestPath) {
+        if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
           $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Yaml
           if ($manifest.ReleaseDate -ge $date) {
             Write-Host -Object "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"

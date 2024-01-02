@@ -8,7 +8,7 @@ filter Get-Sha256 {
 
   $Path | ForEach-Object {
     Write-Verbose -Message "ファイルのSHA256ハッシュ値を計算しています: $_"
-    if (Test-Path -LiteralPath $_) {
+    if (Test-Path -LiteralPath $_ -PathType Leaf) {
       try {
         $hash = (Get-FileHash -LiteralPath $_ -Algorithm SHA256).Hash.ToLower()
         Write-Verbose -Message "ファイルのSHA256ハッシュ値を計算しました: $hash"
