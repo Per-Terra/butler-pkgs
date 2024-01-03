@@ -128,9 +128,9 @@ foreach ($target in $targets) {
           $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Yaml
           if ($manifest.ReleaseDate -ge $date) {
             Write-Host -Object "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"
-            Write-Host -Object "作成中のマニフェストのリリース日: $($date)"
-            Write-Host -Object "既存のマニフェストのリリース日: $($manifest.ReleaseDate)"
-            Write-Warning -Message "マニフェストの作成はスキップされました"
+            Write-Debug -Message "作成中のマニフェストのリリース日: $($date)"
+            Write-Debug -Message "既存のマニフェストのリリース日: $($manifest.ReleaseDate)"
+            Write-Debug -Message "マニフェストの作成はスキップされました"
             continue
           }
         }
