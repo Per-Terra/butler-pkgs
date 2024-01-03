@@ -33,53 +33,59 @@ Files:
   - Path: UltimateAddin/EditBoxTweaker.aua
     Sha256: 099f2912049e0ebd962a1a9524e6f792dd21fd6ca0eb592863172da056fdd4df
     Install:
-      TargetPath: UltimateAddin/EditBoxTweaker.aua
+      TargetPath: plugins/UltimateAddin/EditBoxTweaker.aua
   - Path: UltimateAddin/ExEditTweaker.aua
     Sha256: e6f8506c99ef1c089f9d12ca0f8fe37a48ab662b63054796ec0d8746425505d1
     Install:
-      TargetPath: UltimateAddin/ExEditTweaker.aua
+      TargetPath: plugins/UltimateAddin/ExEditTweaker.aua
   - Path: UltimateAddin/Filer.aua
     Sha256: fec403094ee07a152e11676a87b59272526493db057a3ceabe4c9e3ba7f4255a
     Install:
-      TargetPath: UltimateAddin/Filer.aua
+      TargetPath: plugins/UltimateAddin/Filer.aua
   - Path: UltimateAddin/FilerGui.exe
     Sha256: 110a79e27aea3a638ee8e8580a22c701305097ac502a44c7d0a7bf782e5afcf0
     Install:
-      TargetPath: UltimateAddin/FilerGui.exe
+      TargetPath: plugins/UltimateAddin/FilerGui.exe
   - Path: UltimateAddin/FilterCopy.aua
     Sha256: 3df89f187124bc6e012ad68ee5ea1f98e375db50bfc11b50660709fa9bc244b8
     Install:
-      TargetPath: UltimateAddin/FilterCopy.aua
+      TargetPath: plugins/UltimateAddin/FilterCopy.aua
   - Path: UltimateAddin/FilterDrag.aua
     Sha256: 98e75d5f42dfbdf05b4fff0861a67ea8fa8889990a00dba7cd2e6b729edb35ae
     Install:
-      TargetPath: UltimateAddin/FilterDrag.aua
+      TargetPath: plugins/UltimateAddin/FilterDrag.aua
   - Path: UltimateAddin/Nest.aua
     Sha256: 8cb9101b1081526572ffab0875b34194fbc84b89f9f3983f087ef6a757c220de
     Install:
-      TargetPath: UltimateAddin/Nest.aua
+      TargetPath: plugins/UltimateAddin/Nest.aua
   - Path: UltimateConfig/AddinOnOff.ini
     Sha256: 55fed83aa0dcca3bf5364359a29df88df5d23af75dab6d3d3257e231a85a3071
     Install:
-      TargetPath: UltimateConfig/AddinOnOff.ini
+      TargetPath: plugins/UltimateConfig/AddinOnOff.ini
+      ConfFile: true
   - Path: UltimateConfig/EditBoxTweaker.ini
     Sha256: 0a3da4aae8f2f54fc6368c47137e0c609be2ef75cd0bde4ebf85640ed1abb33b
     Install:
-      TargetPath: UltimateConfig/EditBoxTweaker.ini
+      TargetPath: plugins/UltimateConfig/EditBoxTweaker.ini
+      ConfFile: true
   - Path: UltimateConfig/ExEditTweaker.ini
     Sha256: a8e622c5bcb2860234b175e70bf12292224c707d6403a2547487576c8af69354
     Install:
-      TargetPath: UltimateConfig/ExEditTweaker.ini
+      TargetPath: plugins/UltimateConfig/ExEditTweaker.ini
+      ConfFile: true
   - Path: UltimateConfig/Filer.xml
     Sha256: ec5f63623a1c0bab1b078732e92d8ba311c0842ea01b7e851c02eacf68ac00c6
     Install:
-      TargetPath: UltimateConfig/Filer.xml
+      TargetPath: plugins/UltimateConfig/Filer.xml
+      ConfFile: true
   - Path: UltimateConfig/FilterDrag.ini
     Sha256: 1b0e75ced70f4cdf7acd03de068601722c3c177cb2e112532f6439460cc5d6d6
     Install:
-      TargetPath: UltimateConfig/FilterDrag.ini
+      TargetPath: plugins/UltimateConfig/FilterDrag.ini
+      ConfFile: true
   - Path: UltimateConfig/Nest.ini
     Sha256: 9c45891da1d8362ffdef7181b48c2815c09eff982acf6fbcc086745246aa659c
     Install:
-      TargetPath: UltimateConfig/Nest.ini
+      TargetPath: plugins/UltimateConfig/Nest.ini
+      ConfFile: true
 ManifestVersion: 0.1.0

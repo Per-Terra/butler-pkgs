@@ -61,7 +61,7 @@ $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 $ArchiveExtensions = @('.zip', '.7z')
 $PluginExtensions = @('.exe', '.dll', '.auf', '.aui', '.auo', '.auc', '.aul', '.ini')
 $ScriptExtensions = @('.anm', '.obj', '.scn', '.cam', '.tra', '.lua')
-$ConfExtensions = @('.ini', '.stg')
+$ConfExtensions = @('.ini', '.stg', '.xml')
 
 function Get-FilesInArchive {
   param (
@@ -105,9 +105,17 @@ function Get-FilesInArchive {
     }
     elseif ($Url.StartsWith('https://github.com/hebiiro/anti.aviutl.ultimate.plugin')) { # hebiiro/anti.aviutl.ultimate.plugin用の例外
       if (($relativePath -in 'Ultimate.auf', 'Ultimate.aul') -or $relativePath.StartsWith('UltimateAddin/') -or $relativePath.StartsWith('UltimateConfig/')) {
-        $file.Add('Install', @{
-            TargetPath = ($relativePath -replace '^', 'plugins/')
-          })
+        if ($_.Extension -in $ConfExtensions -and -not $relativePath.StartsWith('UltimateConfig/Skin/')) {
+          $file.Add('Install', @{
+              TargetPath = ($relativePath -replace '^', 'plugins/')
+              ConfFile   = $true
+            })
+        }
+        else {
+          $file.Add('Install', @{
+              TargetPath = ($relativePath -replace '^', 'plugins/')
+            })
+        }
       }
     }
     elseif ($Url.StartsWith('https://github.com/oov/aviutl_ffmpeg_input') -and $relativePath.StartsWith('ffmpeg64/')) { # oov/aviutl_ffmpeg_input用の例外
@@ -115,7 +123,7 @@ function Get-FilesInArchive {
         TargetPath = $relativePath
       })
     }
-    elseif ($Url.StartsWith('https://github.com/oov/aviutl_gcmzdrops') -and $relativePath.StartsWith('GCMZDrops/')) { # oov/aviutl_ffmpeg_input用の例外
+    elseif ($Url.StartsWith('https://github.com/oov/aviutl_gcmzdrops') -and $relativePath.StartsWith('GCMZDrops/')) { # oov/aviutl_gcmzdrops用の例外
       $file.Add('Install', @{
         TargetPath = $relativePath
       })
