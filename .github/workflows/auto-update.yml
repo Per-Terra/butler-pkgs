@@ -1,0 +1,38 @@
+name: Auto Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  auto_update:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install and cache PowerShell modules
+        uses: potatoqualitee/psmodulecache@v6.0
+        with:
+          modules-to-cache: 7Zip4Powershell, powershell-yaml
+
+      - name: Update Package Manifests
+        run: ${{ github.workspace }}/tools/AutoUpdate.ps1
+
+      - name: Check Diff
+        id: diff
+        run: |
+          git add -N .
+          git diff --exit-code
+        continue-on-error: true
+
+      - name: Commit and Push
+        if: steps.diff.outcome == 'failure'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "[自動更新] $(Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUtc)"
+          git push
