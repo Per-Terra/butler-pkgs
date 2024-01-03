@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: sigma-axis
+Website:
+  - https://github.com/sigma-axis
+  - https://twitter.com/sigma_axis
+  - https://misskey.io/@sigma_axis
+  - https://www.nicovideo.jp/user/51492481
+ManifestVersion: 0.1.0

@@ -1,0 +1,12 @@
+- Enable: true
+  Identifier: color-loupe
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_color_loupe
+  Asset: ^aviutl_color_loupe-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
