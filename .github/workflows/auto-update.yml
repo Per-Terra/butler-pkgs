@@ -19,6 +19,8 @@ jobs:
           modules-to-cache: 7Zip4Powershell, powershell-yaml
 
       - name: Update Package Manifests
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: ${{ github.workspace }}/tools/AutoUpdate.ps1
 
       - name: Create Pull Request

@@ -62,7 +62,12 @@ function Get-GitHubReleases {
   $uri += '?per_page=10'
 
   try {
-    $response = Invoke-RestMethod -Uri $uri -Method Get
+    if ($env:GH_TOKEN) {
+      $response = Invoke-RestMethod -Uri $uri -Authentication Bearer -Token $env:GH_TOKEN
+    }
+    else {
+      $response = Invoke-RestMethod -Uri $uri
+    }
   }
   catch {
     throw "GitHub API へのリクエストに失敗しました: $_"
