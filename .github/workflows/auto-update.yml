@@ -26,12 +26,12 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: パッケージの自動更新
+          commit-message: "[パッケージ更新] 自動更新"
           committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           branch: auto-update
           delete-branch: true
-          title: パッケージの自動更新
+          title: "[パッケージ更新] 自動更新"
           labels: auto-update
           assignees: Per-Terra
           reviewers: Per-Terra
