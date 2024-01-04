@@ -63,7 +63,7 @@ function Get-GitHubReleases {
 
   try {
     if ($env:GH_TOKEN) {
-      $response = Invoke-RestMethod -Uri $uri -Authentication Bearer -Token $env:GH_TOKEN
+      $response = Invoke-RestMethod -Uri $uri -Authentication Bearer -Token (ConvertTo-SecureString -String $env:GH_TOKEN -AsPlainText -Force)
     }
     else {
       $response = Invoke-RestMethod -Uri $uri
