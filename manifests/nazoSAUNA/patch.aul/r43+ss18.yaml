@@ -4,7 +4,7 @@
 Identifier: patch.aul
 Version: r43+ss18
 ReleaseDate: 2023-04-23
-Section: Plugin/Language
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 776

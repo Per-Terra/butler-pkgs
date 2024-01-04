@@ -4,7 +4,7 @@
 Identifier: patch.aul
 Version: r41+4-test
 ReleaseDate: 2022-08-13
-Section: Plugin/Language
+Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
 InstalledSize: 701
