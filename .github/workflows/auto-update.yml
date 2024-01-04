@@ -21,18 +21,15 @@ jobs:
       - name: Update Package Manifests
         run: ${{ github.workspace }}/tools/AutoUpdate.ps1
 
-      - name: Check Diff
-        id: diff
-        run: |
-          git add -N .
-          git diff --exit-code
-        continue-on-error: true
-
-      - name: Commit and Push
-        if: steps.diff.outcome == 'failure'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "[自動更新] $(Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ' -AsUtc)"
-          git push
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: パッケージの自動更新
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          branch: auto-update
+          delete-branch: true
+          title: パッケージの自動更新
+          labels: auto-update
+          assignees: Per-Terra
+          reviewers: Per-Terra
