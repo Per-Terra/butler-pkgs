@@ -125,11 +125,12 @@ foreach ($target in $targets) {
         $manifestPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($target.Developer)/$($target.Identifier)/$version.yaml"
 
         if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
-          $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Yaml
-          if ($manifest.ReleaseDate -ge $date) {
+          $null = (Get-Content -LiteralPath $manifestPath -Raw) -match "`nReleaseDate: (.*)`n"
+          $releaseDate = $Matches[1]
+          if ($releaseDate -and $releaseDate -ge $date) {
             Write-Host -Object "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"
-            Write-Debug -Message "作成中のマニフェストのリリース日: $($date)"
-            Write-Debug -Message "既存のマニフェストのリリース日: $($manifest.ReleaseDate)"
+            Write-Debug -Message "作成中のマニフェストのリリース日: $date"
+            Write-Debug -Message "既存のマニフェストのリリース日: $releaseDate"
             Write-Debug -Message "マニフェストの作成はスキップされました"
             continue
           }
