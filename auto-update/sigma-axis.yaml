@@ -1,3 +1,16 @@
+- Identifier: allow-arrow
+  Developer: sigma-axis
+  Enable: true
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_allow_arrow
+  Asset: ^aviutl_allow_arrow-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: color-loupe
   Developer: sigma-axis
   Enable: true
