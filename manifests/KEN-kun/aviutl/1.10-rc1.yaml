@@ -24,7 +24,6 @@ Files:
     Sha256: c5c427604f01606697a6227fc577f1d615e9dcd90d259817c367a861ffabf535
     Install:
       TargetPath: aviutl.exe
-      Method: Copy
   - Path: aviutl.txt
     Sha256: 80ef85c3575fd4db72818a6600e59f2f916500a72df4d8c1ee6ee3b2c885cb38
 ConfFiles:
