@@ -4,11 +4,11 @@
   Type: GitHub
   Owner: Mr-Ojii
   Repository: L-SMASH-Works-Auto-Builds
-  Asset: ^L-SMASH-Works_r\d+_Mr-Ojii_Mr-Ojii_AviUtl\.zip$
+  Asset: ^L-SMASH-Works_r\d+_Mr-Ojii_Mr-Ojii(?:_AviUtl)?\.zip$
   Version:
     from: asset.name
     regex:
-      find: ^L-SMASH-Works_(r\d+)_Mr-Ojii_Mr-Ojii_AviUtl\.zip$
+      find: ^L-SMASH-Works_(r\d+)_Mr-Ojii_Mr-Ojii(?:_AviUtl)?\.zip$
       replace: $1
 
 - Enable: true
