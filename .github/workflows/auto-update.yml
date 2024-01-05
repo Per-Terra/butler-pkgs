@@ -26,7 +26,7 @@ jobs:
       - name: Check for changes
         run: |
           $files = [array](git diff --name-only)
-          "commit_message=[パッケージ更新] $($files.Count)個のファイルを追加" Out-File -FilePath $env:GITHUB_ENV -Append
+          "commit_message=[パッケージ更新] $($files.Count)個のファイルを追加" | Out-File -FilePath $env:GITHUB_ENV -Append
           $EOF = -join (1..15 | ForEach {[char]((48..57)+(65..90)+(97..122) | Get-Random)})
           "pr_description<<$EOF" | Out-File -FilePath $env:GITHUB_ENV -Append
           @"
