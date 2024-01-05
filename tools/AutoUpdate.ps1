@@ -58,8 +58,9 @@ function Get-GitHubReleases {
   if ($Latest) {
     $uri += '/latest'
   }
-
-  $uri += '?per_page=10'
+  else {
+    $uri += '?per_page=10'
+  }
 
   try {
     if ($env:GH_TOKEN) {
