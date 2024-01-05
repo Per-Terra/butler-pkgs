@@ -3,7 +3,7 @@
 
 Identifier: InputPipePlugin
 Version: "2.0"
-ReleaseDate: 2023-01-26
+ReleaseDate: 2023-06-25
 Section: Plugin/Input
 Depends:
 - aviutl (>= 1.00)
@@ -36,5 +36,5 @@ Files:
   - Path: InputPipePlugin/Readme.md
     Sha256: 83deb289524325da8917023756b7d99ef8b348cf0eb4bdf9b96ddba0c79f8bf6
 ConfFiles:
-  - plugins/InputPipePluginConfig.ini
+- plugins/InputPipePluginConfig.ini
 ManifestVersion: 0.1.0
