@@ -1,0 +1,49 @@
+# Created using CreateManifest.ps1 v0.1.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+
+Identifier: Extram2
+Version: 0.1.0-beta5
+ReleaseDate: 2024-01-04
+Section: Other
+Depends:
+- exedit (= 0.92)
+InstalledSize: 105
+Developer:
+- oov
+Description: |-
+  拡張編集でLuaからデータを外部プログラムに一時保存し、再利用できるようにするためのプログラム
+  以前の Extram.dll は拡張編集RAMプレビューの付属品でしたが、Extram2 では独立して動作します。
+  Extram2 を活用するスクリプトとして、キャッシュテキスト2 と キャッシュエフェクト2 が付属しています。
+Website:
+- https://github.com/oov/aviutl_extram2
+Files:
+- SourceUrl: https://github.com/oov/aviutl_extram2/releases/download/v0.1.0beta5/extram2_v0.1.0beta5.zip
+  Sha256: 29fc933e5ffbfa9e884952ef7eb8d4102af914907d65ab3525e25079926c59ad
+  Files:
+  - Path: Extram2.txt
+    Sha256: bcc14312a3d3f6659e03423a3d76e6f2e51d4c7a4ce631606fbf1845d030aa3e
+  - Path: キャッシュテキスト2.exa
+    Sha256: 8615f42aad5d3ece22635c5759d6515b75072e5f885b3eed9caa1f377f778e02
+    Install:
+      TargetPath: キャッシュテキスト2.exa
+  - Path: script/@Cache2.anm
+    Sha256: 1bdbb06105dd8eaf7acd51543278ef0cf7dc327335f271103479cea0fa8f28b9
+    Install:
+      TargetPath: script/@Cache2.anm
+  - Path: script/Cache2.lua
+    Sha256: b7190e81d01aaff09ea450c1065c8358b554196ff8e590543cca9017004cf8ff
+    Install:
+      TargetPath: script/Cache2.lua
+  - Path: script/Extram2.dll
+    Sha256: 934bd6087d0ee04288cedbacdc7eb199879ddccf3709fb4feec4f4e31dda8c4f
+    Install:
+      TargetPath: script/Extram2.dll
+  - Path: script/Extram2.exe
+    Sha256: 196ec45b07d68f762c53448644c8cbbb57469c55b8b8e8af595d62f92616f780
+    Install:
+      TargetPath: script/Extram2.exe
+  - Path: script/Intram2.dll
+    Sha256: a451ec402c27170f3cf71eac0c75ad42ebd636c80184721b23c9b3a819fcbfc4
+    Install:
+      TargetPath: script/Intram2.dll
+ManifestVersion: 0.1.0
