@@ -14,31 +14,31 @@ Description: AviUtl用入力プラグインその他
 Website:
 - https://github.com/Mr-Ojii/L-SMASH-Works-Auto-Builds
 Files:
-- SourceUrl: https://github.com/Mr-Ojii/L-SMASH-Works-Auto-Builds/releases/download/build-2024-01-04-02-29-09/L-SMASH-Works_r1107_Mr-Ojii_Mr-Ojii_AviUtl.zip
-  Sha256: a80b90ef8ed0bf3f29d8102496266b159ec32d9318e127030c39dc015ed1611a
+- SourceUrl: https://github.com/Mr-Ojii/L-SMASH-Works-Auto-Builds/releases/download/build-2024-01-04-09-41-27/L-SMASH-Works_r1107_Mr-Ojii_Mr-Ojii.zip
+  Sha256: fd875c0f8ffde8fdff67905878fa04efaaf46b38fe68d90d5217ef8ea7aa36c2
   Files:
   - Path: About-this-build.txt
-    Sha256: b75b6885a53ce654f7658732f1afa2772b8be5d5f2c4d46d46a67381a36aba3e
+    Sha256: 37e72bf5c482cd6520f356c9b6fc8eca29beeb74dd9ebabc621c994a9c39169b
   - Path: LICENSE
     Sha256: 5ec6a5ca2e945b59be4c71cb2955575ae615532a8af201efd79b79d467421e5f
   - Path: lwcolor.auc
-    Sha256: 556874a52699579d5fb6bd11e27f8742b3916062d2c4f02384d31bfe738e833c
+    Sha256: 348f68dba699531d023f429b116900a2e4078371076a8b4d0b72f7c2dd1e5d33
     Install:
       TargetPath: plugins/lwcolor.auc
   - Path: lwdumper.auf
-    Sha256: 5b3b5a0acb3023d6a8edf35665474f0d8a53864073c91a2d0dbd4236249d527d
+    Sha256: 53c78c847a841ae712be823873d147b08b3c78850c809e093ac56efe5f0c5e5d
     Install:
       TargetPath: plugins/lwdumper.auf
   - Path: lwinput.aui
-    Sha256: 4f5c7f3477a975de0bf61f5867cadf73e2f1b5f2a0cdd09da78524a7959b02e0
+    Sha256: 1093b93654083478f738875a1af4f64231b8106582896d07b763002ec4317fc8
     Install:
       TargetPath: plugins/lwinput.aui
   - Path: lwinput64.aui
-    Sha256: d9cc2c65f8668e4857c660a99e591dec23d0e21466575b6929d54de02ecaa186
+    Sha256: f202490d845187e41bcd3b7595c1560a763caade3ba55fc7a6bbe932cc9e934f
     Install:
       TargetPath: plugins/lwinput64.aui
   - Path: lwmuxer.auf
-    Sha256: 16b846e26570ca601027e24b2546b649f44c51e18ea540c2a768ec80fe6d3d64
+    Sha256: c5a16f7d4b46d997d1f09b4f72780e3f201b009f2d8305143c3b894d44f2b094
     Install:
       TargetPath: plugins/lwmuxer.auf
   - Path: README
