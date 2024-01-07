@@ -1,8 +1,8 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
 
 Identifier: Extram2
-Version: 0.1.0-beta3
+Version: 0.2.0-beta3
 ReleaseDate: 2023-12-26
 Section: Other
 Depends:
@@ -30,21 +30,26 @@ Files:
     Sha256: 1f8fa886bd9cdaf5a11c8487e9aba42e2fafc9d34982af489564e2b6e900f376
     Install:
       TargetPath: script/@Cache2.anm
+      Strict: true
   - Path: script/Cache2.lua
     Sha256: a5ba25d3cf44c267da0501f6f33aaa65087b0ba2bcdbc9d4bd1160ac5f9ea841
     Install:
       TargetPath: script/Cache2.lua
+      Strict: true
   - Path: script/Extram2.dll
     Sha256: 357ae207eafe9dd1afe778dfb9b8c3f7808d2c4b4593497e44e7ccb16269d769
     Install:
       TargetPath: script/Extram2.dll
+      Strict: true
   - Path: script/Extram2.exe
     Sha256: e966b8e6543a0e451068b0b14a84c50d14732d7c893a6ca034478479cd60e7d3
     Install:
       TargetPath: script/Extram2.exe
+      Strict: true
       Method: Copy
   - Path: script/Intram2.dll
     Sha256: 6d78d42243094b44d427a49578cf74d9e6b218bf394ae7b69d929201efeaca0e
     Install:
       TargetPath: script/Intram2.dll
-ManifestVersion: 0.1.0
+      Strict: true
+ManifestVersion: 0.2.0

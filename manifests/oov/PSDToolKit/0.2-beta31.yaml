@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
 
 Identifier: PSDToolKit
 Version: 0.2-beta31
@@ -317,6 +317,7 @@ Files:
     Sha256: 5fd423f223cf98c47e0005457984cf3b851fdfb1b2a756c6a31d5049f9f6cb80
     Install:
       TargetPath: script/PSDToolKit.lua
+      Strict: true
   - Path: script/PSDToolKit/@PSD.anm
     Sha256: 0b60bffd594e7658586b90cfdb3f831eb71fb37379c64caae69a0972772b3502
     Install:
@@ -382,4 +383,4 @@ Files:
     Sha256: 4d168975368b37eb9c9610bfcf89174cf7e17506dc9652e89b135602b2e3bc81
   - Path: かんしくん/setting.txt-template
     Sha256: d4b55d6716f7c08e439f7411ce803b22c0ffa89eee640ec57b57ffe7db034385
-ManifestVersion: 0.1.0
+ManifestVersion: 0.2.0

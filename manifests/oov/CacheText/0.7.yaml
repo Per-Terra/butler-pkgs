@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
 
 Identifier: CacheText
 DisplayName: キャッシュテキスト
@@ -31,8 +31,10 @@ Files:
     Sha256: a87dc89eb393be35e674329ec0924910176ecbb606c6ac91adac37ae25326945
     Install:
       TargetPath: script/CacheText.anm
+      Strict: true
   - Path: script/CacheText.lua
     Sha256: 75bb245d6c7eaf2c68c74f9bd0ce6cab9cc351c5b3e0a03d0178e92c1f5f2259
     Install:
       TargetPath: script/CacheText.lua
-ManifestVersion: 0.1.0
+      Strict: true
+ManifestVersion: 0.2.0

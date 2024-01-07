@@ -35,4 +35,5 @@ Files:
     Sha256: 93ac1684cae6c443be04fb7f8ac43009030fc0e624c04269380d1009337c6b3a
     Install:
       TargetPath: script/Extram.dll
+      Strict: true
 ManifestVersion: 0.1.0

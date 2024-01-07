@@ -1,8 +1,8 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
 
 Identifier: Extram2
-Version: 0.1.0-beta1
+Version: 0.2.0-beta1
 ReleaseDate: 2023-12-07
 Section: Other
 Depends:
@@ -30,17 +30,21 @@ Files:
     Sha256: 499dba478752cdbdecd13c60390ff409c8b118d3a7e83fc46965ecfc853ed4d2
     Install:
       TargetPath: script/@Cache2.anm
+      Strict: true
   - Path: script/Cache2.lua
     Sha256: cf2a6ed9cee2535e0102a278fc8ffacde266cb93fe45f952130ab0f8f1480bd3
     Install:
       TargetPath: script/Cache2.lua
+      Strict: true
   - Path: script/Extram2.exe
     Sha256: c8002ced6bcb597a2de4d9aac10cb1e2f8fe36fd7212be2bbeda58dddff4d9b6
     Install:
       TargetPath: script/Extram2.exe
+      Strict: true
       Method: Copy
   - Path: script/Extram2.lua
     Sha256: f7e0ba5a5bb3d7e9d074615d5a0df15e65121cb1d7b72dd443063345aaaf90db
     Install:
       TargetPath: script/Extram2.lua
-ManifestVersion: 0.1.0
+      Strict: true
+ManifestVersion: 0.2.0

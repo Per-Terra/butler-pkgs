@@ -1,5 +1,5 @@
 # Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
 
 Identifier: bridge.dll
 Version: "0.12"
@@ -27,4 +27,5 @@ Files:
     Sha256: dcadd72d20477c66194a1eeebce4dc31ab9f1c72b190be53eae0cc5a23d41ab1
     Install:
       TargetPath: script/bridge.dll
-ManifestVersion: 0.1.0
+      Strict: true
+ManifestVersion: 0.2.0
