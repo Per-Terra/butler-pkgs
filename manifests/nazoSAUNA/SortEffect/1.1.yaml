@@ -132,4 +132,5 @@ Files:
     Sha256: 6316b0b15355da12f06ae3dd41ad764bcc5fc50066ad78890df33b987d5a06c4
     Install:
       TargetPath: plugins/SortEffect.auf
+      ConfFile: true
 ManifestVersion: 0.1.0
