@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Shake
+DisplayName: ゆらめき
+Version: 2012-03-04
+ReleaseDate: 2012-03-04
+Section: Script
+InstalledSize: 2
+Developer:
+- Tim
+Description: 画像をゆらゆらとゆらめかせます。海の中の表現とかに使えるかも？
+Website:
+- http://www.nicovideo.jp/watch/sm17156271
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Shake.zip
+  Sha256: 88be6156f29e302d12f6e0db44c99976df512711a1eda7538cbe6d600b58ab8e
+  Files:
+  - Path: Shake/ゆらめき.anm
+    Sha256: 2bb1840abc709d8aee694778a03ff52137857e9741aec349ef0ecc73be56a04b
+    Install:
+      TargetPath: script/ゆらめき.anm
+ManifestVersion: 0.2.0

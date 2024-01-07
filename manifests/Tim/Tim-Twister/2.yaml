@@ -1,0 +1,26 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Twister
+DisplayName: ツイスター
+Version: "2"
+ReleaseDate: 2018-08-25
+Section: Script
+InstalledSize: 9
+Developer:
+- Tim
+Description: きしめんエフェクトセット第１段。画像をくるりとひねります。
+Website:
+- http://www.nicovideo.jp/watch/sm18580953
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/k1-TwisterV2.zip
+  Sha256: d8244edbd9d138bacc615cae4991134bd7616837fb27829b32334676471d5aeb
+  Files:
+  - Path: k1-TwisterV2/ReadMe.txt
+    Sha256: fceab5ad9c00f5e9e91c788fd7c1e82a6d12725c0bf49e11b3e8799f4eb2f240
+  - Path: k1-TwisterV2/ツイスター.anm
+    Sha256: e3241ddab6041a2b2facd732c2ead6156e63e294232ed397292eff6fe11b92cc
+    Install:
+      TargetPath: script/ツイスター.anm
+ManifestVersion: 0.2.0

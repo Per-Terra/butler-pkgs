@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-PolCon
+DisplayName: 極座標変換＋ぼかしミラー
+Version: 2012-03-04
+ReleaseDate: 2012-03-04
+Section: Script
+InstalledSize: 65
+Developer:
+- Tim
+Description: 本家の極座標変換とはできることが違います。スカイドームの背景画像作成にも応用可能です。
+Website:
+- http://www.nicovideo.jp/watch/sm17154269
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/PolCon.zip
+  Sha256: 61bcbe075be9a3ea382162ee07e95e527cfa4ce6489b81240ecf7cbc60480b68
+  Files:
+  - Path: 公開Rep/T_PolarConversion_Module.dll
+    Sha256: fe369b9286c521584916233ad64e7e6d54e62d548cbe9b5e3d81b1195a01164c
+    Install:
+      TargetPath: script/T_PolarConversion_Module.dll
+  - Path: 公開Rep/ぼかしミラー.anm
+    Sha256: e563529336674d0232776266d62240d731bc6d07af48338dbd65ef0b22636dcd
+    Install:
+      TargetPath: script/ぼかしミラー.anm
+  - Path: 公開Rep/極座標変換T.anm
+    Sha256: ca3bc3e2b58e3fcb5627eee5dd1e22d32abf136e431c04982af36777b4a0e525
+    Install:
+      TargetPath: script/極座標変換T.anm
+ManifestVersion: 0.2.0

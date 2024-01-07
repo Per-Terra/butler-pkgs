@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-RuledL
+DisplayName: 罫線T
+Version: 2021-02-20
+ReleaseDate: 2021-02-20
+Section: Script
+InstalledSize: 9
+Developer:
+- Tim
+Description: 罫線を作るスクリプトです。
+Website:
+- https://www.nicovideo.jp/watch/sm38304163
+- https://youtu.be/X0XphEz3y2k
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/RuledL.zip
+  Sha256: 1b8393d1adf3f52b9286241d7c96a5b54159d00934399c65beb505fec53628e2
+  Files:
+  - Path: RuledL/@罫線T.anm
+    Sha256: cc2c83a9479c7f96dd1a4839e38fbd4ea09cee27bb4647e2571ec543c8593c0e
+    Install:
+      TargetPath: script/@罫線T.anm
+ManifestVersion: 0.2.0

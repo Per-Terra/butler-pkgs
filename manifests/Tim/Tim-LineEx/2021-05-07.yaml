@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-LineEx
+DisplayName: ライン抽出T
+Version: 2021-05-07
+ReleaseDate: 2021-05-07
+Section: Script
+InstalledSize: 85
+Developer:
+- Tim
+Description: 画像の画線を抽出します。ネガっぽい画像では上手くいかないときがあります。
+Website:
+- https://www.nicovideo.jp/watch/sm38701215
+- https://youtu.be/iFSltADJdt0
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/LineEx.zip
+  Sha256: b35af401c6064e2151d23c4440d297e5bf68fb95c722b8f65c08b0f3f1f1910b
+  Files:
+  - Path: LineEx/T_LineExtra_Module.dll
+    Sha256: 4679315ea9adde8d8ee8a2b302103e1a22ea2c861464aea178e5ffb177753fa6
+    Install:
+      TargetPath: script/T_LineExtra_Module.dll
+  - Path: LineEx/ライン抽出T.anm
+    Sha256: a8263b442bd8e88b4049849f7fe31ff1b8a5c1bbf0987dafd01cb10f54658ba8
+    Install:
+      TargetPath: script/ライン抽出T.anm
+ManifestVersion: 0.2.0

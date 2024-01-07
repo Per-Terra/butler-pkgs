@@ -1,0 +1,26 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-TmpPre
+DisplayName: 一時保存読込
+Version: 2011-10-03
+ReleaseDate: 2011-10-03
+Section: Script
+InstalledSize: 3
+Developer:
+- Tim
+Description: 画像を一時的に保存しますが、相性が悪いスクリプトが多いです。現在では他に手段が幾つかありますので、それらを推奨します。
+Website:
+- http://www.nicovideo.jp/watch/sm15784672
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/TmpPre.zip
+  Sha256: 87d8096db1fa7d5f4f75fb022ebbabf08963292954213fce1a744d616c97b5fb
+  Files:
+  - Path: 公開/@一時保存読込.obj
+    Sha256: 48deb1900b8293eea3feeff5d4ba1019dee55e6916af99b17950e84be8b1ba27
+    Install:
+      TargetPath: script/@一時保存読込.obj
+  - Path: 公開/ReadMe.txt
+    Sha256: 00af623b9666a6657d45f678890d3e0eca260d6899b426107af756fc790a3f29
+ManifestVersion: 0.2.0

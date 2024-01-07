@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-LinFil
+DisplayName: ジグザグ塗りT
+Version: 2020-02-12
+ReleaseDate: 2020-02-12
+Section: Script
+InstalledSize: 70
+Developer:
+- Tim
+Description: 画像を線で塗りつぶしたり、切り抜いたりします。
+Website:
+- https://www.nicovideo.jp/watch/sm36355165
+- https://youtu.be/7nqOpCYao1w
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/LinFil.zip
+  Sha256: 1f00391e456078d87f20eb79367deced1506dfe16331f512a705a39e44f327ad
+  Files:
+  - Path: LinFil/@ジグザグ塗りT.anm
+    Sha256: 9e08c247a5de5c715737f14886484bcc47323ef1dd9e2e3afa9205e9e0cdeec6
+    Install:
+      TargetPath: script/@ジグザグ塗りT.anm
+  - Path: LinFil/T_LineFill_Module.dll
+    Sha256: c1b1d4223cbda81c21540d8996e9b4c5aa1f5be8ef959b065163508b66bcf0d3
+    Install:
+      TargetPath: script/T_LineFill_Module.dll
+ManifestVersion: 0.2.0

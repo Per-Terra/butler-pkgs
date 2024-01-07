@@ -1,0 +1,28 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-RadPar
+DisplayName: 放射分布 変色パーティクル
+Version: 2012-10-13
+ReleaseDate: 2012-10-13
+Section: Script
+InstalledSize: 3
+Developer:
+- Tim
+Description: きしめんエフェクトセット第６段。オブジェクトを放射状に分布させるものと、パーティクルの色を発生してから消えるまでの間に変えるものです。
+Website:
+- http://www.nicovideo.jp/watch/sm19109766
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/k6-RadPar.zip
+  Sha256: 805efe7a5cd5d9e4ea56337c9173a305bab924c48d93b4a1d7b2c9ec5b8dc0f2
+  Files:
+  - Path: 変色パーティクル.anm
+    Sha256: e0f57d8d49d5dcf29cdbd9d7910de10cbc70d7cea39fa73e5432b2ab5d6fbc6e
+    Install:
+      TargetPath: script/変色パーティクル.anm
+  - Path: 放射分布.anm
+    Sha256: 50320cf8e9a376f3b49559402237691028afc3e4cd38ee942c1c1ade5bc063e5
+    Install:
+      TargetPath: script/放射分布.anm
+ManifestVersion: 0.2.0

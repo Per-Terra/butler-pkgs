@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-WindShk
+DisplayName: 風揺れT
+Version: 2020-01-24
+ReleaseDate: 2020-01-24
+Section: Script
+InstalledSize: 6
+Developer:
+- Tim
+Description: 風に吹かれたように揺らめきます。髪の毛などを揺らす時に便利です。
+Website:
+- http://www.nicovideo.jp/watch/sm21864731
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/WindShk.zip
+  Sha256: 85b1586e7b99ed7c206c431d7b8ef20037057a012545a19d6dcfbcb44064ed1a
+  Files:
+  - Path: WindShk/風揺れT.anm
+    Sha256: f190d41a2217071f3596450721bc2f9df444d0b0586842224cf2a0c8960e7484
+    Install:
+      TargetPath: script/風揺れT.anm
+ManifestVersion: 0.2.0

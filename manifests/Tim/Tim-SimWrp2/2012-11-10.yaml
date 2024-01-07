@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-SimWrp2
+DisplayName: 簡易ワープ(改)
+Version: 2012-11-10
+ReleaseDate: 2012-11-10
+Section: Script
+InstalledSize: 5
+Developer:
+- Tim
+Description: 画像を歪ませます。
+Website:
+- http://www.nicovideo.jp/watch/sm19322218
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/SimWrp2.zip
+  Sha256: 725d0daa9b7ba91a87c9ae905b3127caef752b0832b3e6d054ffd6fe42a57eff
+  Files:
+  - Path: 簡易ワープV2.anm
+    Sha256: 5498316b8e07d5fa5b888ca3b3e6e9e64e6dcc71839b07fde1542676ba749935
+    Install:
+      TargetPath: script/簡易ワープV2.anm
+ManifestVersion: 0.2.0

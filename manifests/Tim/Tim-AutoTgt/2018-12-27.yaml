@@ -1,0 +1,36 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-AutoTgt
+DisplayName: オートターゲット
+Version: 2018-12-27
+ReleaseDate: 2018-12-27
+Section: Script
+InstalledSize: 9
+Developer:
+- Tim
+Description: オブジェクトの位置と角度にあわせてカメラが自動で移動するカメラ効果です。AEで言う無料プラグインSure Targetのマネです。
+Website:
+- http://www.nicovideo.jp/watch/sm16555929
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/AutoTgt.zip
+  Sha256: fd9a9b4ff128e6c16fc4732a6085df9c04507456dfcc6a2cdf5c5f61c6798479
+  Files:
+  - Path: AutoTgt/オートターゲット.cam
+    Sha256: 90df30c179b2a3d74ca9fa34d63c198709ba2a824e16ae82d5da3e58860ee818
+    Install:
+      TargetPath: script/オートターゲット.cam
+  - Path: AutoTgt/オートターゲット100.cam
+    Sha256: 22a5501d74394ea05e12f1ecb8789cc68351e6196c1d62775bf53be12a243c32
+    Install:
+      TargetPath: script/オートターゲット100.cam
+  - Path: AutoTgt/位置補正.cam
+    Sha256: c07cd9341325bbdb6440a80a8d399b499f5838071f5a96e2a8e15f39061ea508
+    Install:
+      TargetPath: script/位置補正.cam
+  - Path: AutoTgt/位置補正R.cam
+    Sha256: cef39b6f98100010f76c53e70d184453a2b493f34559a8fc2633959a1c5915fa
+    Install:
+      TargetPath: script/位置補正R.cam
+ManifestVersion: 0.2.0

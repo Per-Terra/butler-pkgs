@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-LightNg
+DisplayName: 稲妻
+Version: 2012-02-10
+ReleaseDate: 2012-02-10
+Section: Script
+InstalledSize: 4
+Developer:
+- Tim
+Description: 稲妻風なカスタムオブジェクトです。
+Website:
+- http://www.nicovideo.jp/watch/sm16931205
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/LightNg.zip
+  Sha256: 02bd691a20d5a2c88a2e3be8d3d6e8c7d9d1f5a9636c56ff1793157c3d5422c6
+  Files:
+  - Path: 稲妻.obj
+    Sha256: 4432e54e387195b3dfc4262bc6cf7b55033f44222b669d63644f67a5936d2d90
+    Install:
+      TargetPath: script/稲妻.obj
+ManifestVersion: 0.2.0

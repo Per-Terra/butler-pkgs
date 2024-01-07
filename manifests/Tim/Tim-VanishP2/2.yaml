@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-VanishP2
+DisplayName: バニシングポイント2
+Version: "2"
+ReleaseDate: 2011-12-18
+Section: Script
+InstalledSize: 6
+Developer:
+- Tim
+Description: 平面画像を３Ｄに変形させるスクリプトです。
+Website:
+- http://www.nicovideo.jp/watch/sm16461298
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/VanishP2_V2.zip
+  Sha256: fbe8b1c67f9be5d56a88d0b323102ca9576da2942b7c9089bd55b1c5f9547b8f
+  Files:
+  - Path: バニシングポイント2.anm
+    Sha256: 616848e61f45932b80b8058c6be179ac171429942dae2154d636549ff97cccea
+    Install:
+      TargetPath: script/バニシングポイント2.anm
+ManifestVersion: 0.2.0

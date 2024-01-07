@@ -1,0 +1,30 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-RotBlur
+DisplayName: 回転ブラー
+Version: "2"
+ReleaseDate: 2023-10-28
+Section: Script
+InstalledSize: 106
+Developer:
+- Tim
+Description: |-
+  回転、放射、ハードブラーをかけます。ハードブラーは呼び名はともかくブラーかどうかも怪しいのですが・・。
+  回転放射ブラーはメモリ使用量の削減、計算速度アップさせましたが、若干計算精度が落ちてます。
+Website:
+- http://www.nicovideo.jp/watch/sm31700000
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/RotBlurV3.zip
+  Sha256: e9675e99c5b764fcdaa647e7de624470cbdf4c72ee63949666b1ccfbc21322f6
+  Files:
+  - Path: RotBlurV3/@T_RotBlur_Module.anm
+    Sha256: 7ac9bd36e96cc7839d2fa0aef407d7a374ab667953fbf7adbe126b0f16e1ebd5
+    Install:
+      TargetPath: script/@T_RotBlur_Module.anm
+  - Path: RotBlurV3/T_RotBlur_Module.dll
+    Sha256: 0af51b247abba9d8744ff582ee16bebf49d335bf2dd6f4d5a5f070e216c6965b
+    Install:
+      TargetPath: script/T_RotBlur_Module.dll
+ManifestVersion: 0.2.0

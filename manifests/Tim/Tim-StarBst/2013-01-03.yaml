@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-StarBst
+DisplayName: スターバースト
+Version: 2013-01-03
+ReleaseDate: 2013-01-03
+Section: Script
+InstalledSize: 1
+Developer:
+- Tim
+Description: 画像にスターバーストを付与します。暗い所で光が十字に輝くアレです。
+Website:
+- http://www.nicovideo.jp/watch/sm19745635
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/StarBst.zip
+  Sha256: baa53f364a140fc91e48dafbcbeaf16a241e9893348969be9bd297a9308c06f9
+  Files:
+  - Path: スターバースト.anm
+    Sha256: 2f06b4eaa61bd3ebcdd7c02707f9890ddd5ced7594195fdb2c1cc335f0f00cd9
+    Install:
+      TargetPath: script/スターバースト.anm
+ManifestVersion: 0.2.0

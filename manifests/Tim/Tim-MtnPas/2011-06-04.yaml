@@ -1,0 +1,28 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-MtnPas
+DisplayName: 簡易モーションパス
+Version: 2011-06-04
+ReleaseDate: 2011-06-04
+Section: Script
+InstalledSize: 12
+Developer:
+- Tim
+Description: 画像をパスにそって伸ばしていきます。↑に改良版が同梱されているので、そちらを利用して下さい。
+Website:
+- http://www.nicovideo.jp/watch/sm14647929
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/MtnPas.zip
+  Sha256: 2f463d1ab566e3f47547b674f4dffa18baeed186d20cd0ac0cb0df65f2ce9a1a
+  Files:
+  - Path: AB公開時/@モーションパスA.anm
+    Sha256: 74f9dd759b2c761d7080b752bf2e6dc06ad9937e8ba4b3c8d735eff634d0c51a
+    Install:
+      TargetPath: script/@モーションパスA.anm
+  - Path: AB公開時/@モーションパスB.anm
+    Sha256: 75bf528e2c32fa0e328d63a397c3376ba654d17dfa79090bce321d424e5bd178
+    Install:
+      TargetPath: script/@モーションパスB.anm
+ManifestVersion: 0.2.0

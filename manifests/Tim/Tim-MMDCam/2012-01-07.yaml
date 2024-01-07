@@ -1,0 +1,30 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-MMDCam
+DisplayName: MMDカメラデータ読込
+Version: 2012-01-07
+ReleaseDate: 2012-01-07
+Section: Script
+InstalledSize: 176
+Developer:
+- Tim
+Description: MMDのカメラデータをAviUtlに取り込むスクリプトです。
+Website:
+- http://www.nicovideo.jp/watch/sm16630776
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/MMDCam.zip
+  Sha256: 54585c41b535720d6326db22e29d1080ec7b312109af4c88e66fa838cb5a9dd3
+  Files:
+  - Path: 公開2/MMD2AviUtl.dll
+    Sha256: b3c92bbf0ce54754d922f74d14e41e412da3a82b5c7e3cd9305b3eb3acc1754b
+    Install:
+      TargetPath: script/MMD2AviUtl.dll
+  - Path: 公開2/MMDカメラデータ読込VMD.cam
+    Sha256: bc2708a1c1b62fd7773d6932eb08e96d8dbb808ed4af6fa57e58873f06268db7
+    Install:
+      TargetPath: script/MMDカメラデータ読込VMD.cam
+  - Path: 公開2/ReadMe(必ずお読み下さい).txt
+    Sha256: e51a2839ec84a53fafc157c5c930d904557c33f7e3c622684a9eef3dde6d3f33
+ManifestVersion: 0.2.0

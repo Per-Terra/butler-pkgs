@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-MltLine
+DisplayName: マルチラインT
+Version: 2014-02-26
+ReleaseDate: 2014-02-26
+Section: Script
+InstalledSize: 3
+Developer:
+- Tim
+Description: 複数の矢印を同時に作ります。折れ線矢印も可能です。スナップ機構は地味に便利です。
+Website:
+- http://www.nicovideo.jp/watch/sm22974710
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/MltLine.zip
+  Sha256: 43352577b1f1e3f9e575d054d52ee0d365ef4efd5e5efa16124ed393d70b72ec
+  Files:
+  - Path: マルチラインT.obj
+    Sha256: 1d0be89b98110f7710337f9529b92d617c8e1064483da7843ac3a7bcdcafadc4
+    Install:
+      TargetPath: script/マルチラインT.obj
+ManifestVersion: 0.2.0

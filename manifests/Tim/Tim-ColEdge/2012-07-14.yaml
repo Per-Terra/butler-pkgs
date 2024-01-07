@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-ColEdge
+DisplayName: 色付きエッジ抽出
+Version: 2012-07-14
+ReleaseDate: 2012-07-14
+Section: Script
+InstalledSize: 2
+Developer:
+- Tim
+Description: 色付きでエッジ抽出します。工夫すると綺麗な演出にすることもできます。
+Website:
+- http://www.nicovideo.jp/watch/sm18348885
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/ColEdge.zip
+  Sha256: 3e527b756653688145f1b77041da409a330b61693b691fd4108750d4ddbcd024
+  Files:
+  - Path: 色付きエッジ抽出.anm
+    Sha256: a94153a71d879f75020ebb268614f0d391e96e93245f2a19f358f06fb77706da
+    Install:
+      TargetPath: script/色付きエッジ抽出.anm
+ManifestVersion: 0.2.0

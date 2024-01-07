@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-BloLus
+DisplayName: ブロックラスターT
+Version: 2018-07-28
+ReleaseDate: 2018-07-28
+Section: Script
+InstalledSize: 3
+Developer:
+- Tim
+Description: 画像にブロック単位でラスターをかけます。本家のラスターより若干多彩な表現ができます。
+Website:
+- http://www.nicovideo.jp/watch/sm33598240
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/BloLus.zip
+  Sha256: 6dc25b7759a2e317603c7319d2db90ef9e7d62e56324fb4b992fcb8a95d13fce
+  Files:
+  - Path: BloLus/ブロックラスターT.anm
+    Sha256: 91ca9ed276a74c620be1eeb55d52188d9dc7928e60abff61c1ddb09ee59ca473
+    Install:
+      TargetPath: script/ブロックラスターT.anm
+ManifestVersion: 0.2.0

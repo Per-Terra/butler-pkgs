@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-RCube2
+DisplayName: ルービックキューブ配置
+Version: 2011-05-27
+ReleaseDate: 2011-05-27
+Section: Script
+InstalledSize: 7
+Developer:
+- Tim
+Description: ルービックキューブの配置にします。配置だけでなく、任意の回転を加えることができます。
+Website:
+- http://www.nicovideo.jp/watch/sm14573891
+- http://www.nicovideo.jp/watch/sm14460366
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/RCube2.zip
+  Sha256: d8d0e02f42f1c6dd3d42a158e3edb146c3ed77a27d87f89ae29283d30ce29d3f
+  Files:
+  - Path: ルービックキューブ配置V2.anm
+    Sha256: 12041a779e8143c95ae3424ff7782b269b44925d4a9e862dff589236e0f64cb0
+    Install:
+      TargetPath: script/ルービックキューブ配置V2.anm
+ManifestVersion: 0.2.0

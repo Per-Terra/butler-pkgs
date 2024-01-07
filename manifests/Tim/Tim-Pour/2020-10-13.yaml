@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Pour
+DisplayName: 注ぎT
+Version: 2020-10-13
+ReleaseDate: 2020-10-13
+Section: Script
+InstalledSize: 3
+Developer:
+- Tim
+Description: オブジェクトに水を注ぐような効果です。
+Website:
+- https://www.nicovideo.jp/watch/sm37665519
+- https://youtu.be/u55Ro0ye6KM
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Pour.zip
+  Sha256: 4af00a4eaca23306bd34ab977d19db469c4c3097c351534c4c7304b6d8e72f79
+  Files:
+  - Path: Pour/注ぎT.anm
+    Sha256: 98dddf2587995b3101e6831aae49795bd22b7c88b61976b316ed92b68e3e8531
+    Install:
+      TargetPath: script/注ぎT.anm
+ManifestVersion: 0.2.0

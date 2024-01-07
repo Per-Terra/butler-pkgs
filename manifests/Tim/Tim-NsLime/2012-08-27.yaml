@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-NsLime
+DisplayName: な～さりい☆らいむ風TA
+Version: 2012-08-27
+ReleaseDate: 2012-08-27
+Section: Script
+InstalledSize: 1
+Developer:
+- Tim
+Description: きしめんエフェクトセット第４段。きしめんでお馴染みのTAです。オブジェクト分割と併用すれば画像にも使えます。
+Website:
+- http://www.nicovideo.jp/watch/sm18731552
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/k4-NsLime.zip
+  Sha256: 9df1c1b8f1d49c652d0e305571ec333eb514bf3b1b4501b16d3c888d40f80471
+  Files:
+  - Path: な～さりい☆らいむ風TA.anm
+    Sha256: b86c0b9440f8e8ca1e683b9363f659f3de139c2c489fcea9266f4fa34e3fd315
+    Install:
+      TargetPath: script/な～さりい☆らいむ風TA.anm
+ManifestVersion: 0.2.0

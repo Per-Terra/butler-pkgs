@@ -1,0 +1,163 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-CstFla
+DisplayName: カスタムフレア
+Version: 2021-12-06
+ReleaseDate: 2021-12-06
+Section: Script
+InstalledSize: 489
+Developer:
+- Tim
+Description: 細かな指定ができるフレアです。かなり重いです。
+Website:
+- https://timnoheya.fc2.net/blog-entry-7.html
+- http://www.nicovideo.jp/watch/sm17476172
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/CstFlaV3.zip
+  Sha256: 59528b5c45404ae9da95472f0e09ebe4a6636b38a09b32e40167b94ceca21b75
+  Files:
+  - Path: CstFlaV3/@カスタムフレア.anm
+    Sha256: 095fbe7677830cd433adb8c4b100155c113ab118f51ed9ace63bc6bb6820a969
+    Install:
+      TargetPath: script/@カスタムフレア.anm
+  - Path: CstFlaV3/更新点.txt
+    Sha256: 89536ee2c5f4c859f7f94711721ba751030657c86ac22b869d64b55c212240ef
+  - Path: CstFlaV3/CF-image/ctc1.png
+    Sha256: 99782e9b97a5a2681f2d926f4d387adc19a4750ddad16398e3137acabbb59fd0
+  - Path: CstFlaV3/CF-image/ctc2.png
+    Sha256: df784fb894485daf165286caea81536cf625128719ca0585e21671faca2e737f
+  - Path: CstFlaV3/CF-image/hoop1.png
+    Sha256: bb1eca549af3f7a62dca4ddf09d776848675d64d8c3197598582cbebcbccc1ff
+  - Path: CstFlaV3/CF-image/hoop2.png
+    Sha256: abdfc5f67c67ea69a06461a15724e1c3b558a0c2e278841e0d6d7ccdf8875523
+  - Path: CstFlaV3/CF-image/hoop3.png
+    Sha256: 0a3dc162a21e7c57005791d91b774c372398bd52b7e1ad5387b0206eafc03291
+  - Path: CstFlaV3/CF-image/hoop4.png
+    Sha256: d97572c617744cfd3f3680c45d6d8952ce5d249c5c8a79ab131e60b27a8bc052
+  - Path: CstFlaV3/CF-image/I1.png
+    Sha256: d08c66db269961c35ff6bafed7a439e8ac0e7f224e3c39b461a3b25b680fe9a7
+  - Path: CstFlaV3/CF-image/I10.png
+    Sha256: 5378a912415c8883cbe4c0d06e82773d8d49239844ca5ba25992a0af2ad33cdb
+  - Path: CstFlaV3/CF-image/I11.png
+    Sha256: 230a81be91b0522ccea49db69976af83b974ed43b4e2b7b750da4b688bcc0db9
+  - Path: CstFlaV3/CF-image/I12.png
+    Sha256: cb068e1095bb09d816ac9102f3a8977f147e2e970e03d4927b69f0f17d1661b7
+  - Path: CstFlaV3/CF-image/I13.png
+    Sha256: 036c841db002c1c9205ce8e8339a0f57d2e878364db5f75874c95ce9e7c2ebdf
+  - Path: CstFlaV3/CF-image/I14.png
+    Sha256: 44f8291e4fc82a23376101c12abb14c7f64c7404829b749020e56cb6d2eaa517
+  - Path: CstFlaV3/CF-image/I2.png
+    Sha256: 414605650136822cd37329510038857c0e72a40e0e50b702f0490a9ff50971d2
+  - Path: CstFlaV3/CF-image/I3.png
+    Sha256: 1a6a132cffaf3a2bd4ac6ed7305a3ff8c94aa9dc1e4480d28b9cc270a34321b8
+  - Path: CstFlaV3/CF-image/I4.png
+    Sha256: 47da11835cd88fa0da55d8519a5ec25fc7d3b39d76e0aed7f0335d6925ff9146
+  - Path: CstFlaV3/CF-image/I5.png
+    Sha256: 0aac4196cc24b7187e751fd2883ba74c3ab58d4bbd83edf3221ab0cdae30e48a
+  - Path: CstFlaV3/CF-image/I6.png
+    Sha256: 06b6fd5269774f44e0fba9bbe26ae8d229f0532ca0794285397f0acb295623d7
+  - Path: CstFlaV3/CF-image/I7.png
+    Sha256: 333e5495dac311d5cc9385b4b67300ed3a159bdf246a875b1c9ae57f259f635b
+  - Path: CstFlaV3/CF-image/I8.png
+    Sha256: f88ac9d3fb2af1d0d06f288a9717a2003632df0f5d47bad1c8e81dcd884197b8
+  - Path: CstFlaV3/CF-image/I9.png
+    Sha256: 42656895d4c80d367312c01d46a4aa430494d9355bffc22cc9a6028f156673df
+  - Path: CstFlaV3/CF-image/leaf.png
+    Sha256: d9e1e7045c5c1141d9d23cd782b81e13d4720a3b2af6a97e79a436d9f56d5a56
+  - Path: CstFlaV3/CF-image/leafc1.png
+    Sha256: a4b58d7833b08fb3640bd829aa9077a618a7620f1b6b3b995d553603666006db
+  - Path: CstFlaV3/CF-image/leafc2.png
+    Sha256: ba2132897b772a63f8e3da09b0a07df256cde9d85773f88fc01950440cd43cd6
+  - Path: CstFlaV3/CF-image/leafc3.png
+    Sha256: ecf773fbfaf6e781ebf2f5806fe7875d9a40bb6a7671440b95eabb32705a0cb6
+  - Path: CstFlaV3/CF-image/leafc4.png
+    Sha256: f67e155ef810b41b2c037ba11950e60db3ea3a8a7352081c94b20b497bdea48e
+  - Path: CstFlaV3/CF-image/leafc5.png
+    Sha256: 3dbc933fee34b6604397c5c2d1f4749b205683e9578f1f9bab9de5477a718fab
+  - Path: CstFlaV3/CF-image/spike1.png
+    Sha256: be7334b7e6c3b32c5c370387f77660adf121869bcb8d88fbdd8270dc88f8d3a8
+  - Path: CstFlaV3/CF-image/spike2.png
+    Sha256: 3772d4eb46740e49605ea1099066e18d0878a143692443e3a920291f646c3a02
+  - Path: CstFlaV3/CF-image/spike3.png
+    Sha256: f14750f528f576ae8586a1cfd0d8bd1262240c4a607cf1a256df0fc9b48a6988
+  - Path: CstFlaV3/CF-image/spike4.png
+    Sha256: ac0f56e16f233a8bfe59ecaea07ecef1e520ee05bbf6f194a9fcbe4ade720752
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット01.exa
+    Sha256: 57650de9368ad2e1744d0be80a3f3ec39da2bf5104e66782285af38e0692597d
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット01.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット02.exa
+    Sha256: fac69868cedf97cd21e63ff5d12c1661f9d7475a3d2d5c7f07f857a14ec8d6a4
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット02.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット03-1.exa
+    Sha256: 3c151c48cf5014991047e2627170c008e95173df4e20bb632ce885bc40f02e5f
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット03-1.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット03-2.exa
+    Sha256: 726e3c3b6bfc618f3ac7a923b1fcabdcfb06cb6cfd778cbb7ec4dc84d8552658
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット03-2.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット04.exa
+    Sha256: 774bb63f29ffd925b5338d2366a1afc204de50e71791c5487e88db34d8ef1bf8
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット04.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット05.exa
+    Sha256: 5861696ef056f6eda3600faeeed95e60a6dc1f3dd61a19bcba228d8d18e84740
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット05.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット06.exa
+    Sha256: cbd7b5f403a674d61d170db349b4c6891b482ccdfaf8aa5994d3bc6d8ac6d306
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット06.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット07.exa
+    Sha256: 5b532c8593c0060edc50fca5308a294732e5af7fdde0773914dabf072dbce80e
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット07.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット08.exa
+    Sha256: 321b44198f7a72628235f5651cad84deb9f3169264a6992818c9035bc64469f4
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット08.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット09.exa
+    Sha256: e961b91cc07ba65097603985421c34f6a069162539eaf4431edae44016dfdb62
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット09.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット10.exa
+    Sha256: 6feb08b9a3fd789eeed4aca493da97cedff7f5a40d8b3e6ac99c1ed9e6014207
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット10.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット11.exa
+    Sha256: 5030e0a9f6aaedd6c6099058bc56ad53c3ec1a34e5959c86517e347ea8469f0d
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット11.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット12-1.exa
+    Sha256: c1a9b65805f893ade291393fa82c17b8a97ac6cf5d484617532a7370f28ce686
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット12-1.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット12-2.exa
+    Sha256: 79e41501d30264efb94c2664287124092a7ef362aaf605c3aaf312ed2481d059
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット12-2.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット13-1.exa
+    Sha256: d0f0d16445fb239a3fe1369d37bae55a55d46cf301559be7f7d359f1fc3a92d8
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット13-1.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット13-2.exa
+    Sha256: f9902262c03da5fd6f37341ecea70e219842b871ef44a96c8d671b8720a99430
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット13-2.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット14.exa
+    Sha256: e8a5f88c8007e09ae68ae4b078d80b45ecca13569b6cd1c669282d026d976a1f
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット14.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット15.exa
+    Sha256: 8e86643f8464f258ea5de183469052834b5a7bbdbf948b1d2442e2db53a6beee
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット15.exa
+  - Path: CstFlaV3/カスタムフレア・プリセット/プリセット16.exa
+    Sha256: c7c2cb7534662687cd600d92aed2fa5177a515d8e91118963f0243abc073b30b
+    Install:
+      TargetPath: カスタムフレア・プリセット/プリセット16.exa
+ManifestVersion: 0.2.0

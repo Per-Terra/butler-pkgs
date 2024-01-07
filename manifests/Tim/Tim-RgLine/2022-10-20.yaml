@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-RgLine
+DisplayName: ラフ画線T
+Version: 2022-10-20
+ReleaseDate: 2022-10-20
+Section: Script
+InstalledSize: 86
+Developer:
+- Tim
+Description: 画像を特定角度の画線の集合に変換するスクリプトです。
+Website:
+- https://www.nicovideo.jp/watch/sm41257973
+- https://youtu.be/PgP8MDKffiQ
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/RgLine.zip
+  Sha256: 48bd0fca4679e65774f51d77c03505f9b29289360994f3db63fb8c23a7647087
+  Files:
+  - Path: RgLine/T_RoughLine_Module.dll
+    Sha256: 3be961737165e81354d0ebc541b81d2baa2bf39e3366bdf5ec5c6ab5b4893b9e
+    Install:
+      TargetPath: script/T_RoughLine_Module.dll
+  - Path: RgLine/ラフ画線T.anm
+    Sha256: c1c3b3f0e80e4fb58d84ec7b3e245bed107fcf60353a8cb4cd34d4cf7c6c6ea0
+    Install:
+      TargetPath: script/ラフ画線T.anm
+ManifestVersion: 0.2.0

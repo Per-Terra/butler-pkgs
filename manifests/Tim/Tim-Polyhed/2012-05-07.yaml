@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Polyhed
+DisplayName: 正多面体
+Version: 2012-05-07
+ReleaseDate: 2012-05-07
+Section: Script
+InstalledSize: 7
+Developer:
+- Tim
+Description: 正４，６，８，１２，２４面体ができます。アニメ効果なので適当なオブジェクトにつけてください。
+Website:
+- http://www.nicovideo.jp/watch/sm17765571
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Polyhed.zip
+  Sha256: 938bcab0231393864a960527c614605e34fad0b867f0bba42d612c384b2991d7
+  Files:
+  - Path: 正多面体.anm
+    Sha256: eb877ec4ba6656cbda63cab9644ccdd47a97ef4974fccd18a44384e5596b666d
+    Install:
+      TargetPath: script/正多面体.anm
+ManifestVersion: 0.2.0

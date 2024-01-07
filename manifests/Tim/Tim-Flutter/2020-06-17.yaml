@@ -1,0 +1,26 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Flutter
+DisplayName: はためき
+Version: 2020-06-17
+ReleaseDate: 2020-06-17
+Section: Script
+InstalledSize: 2
+Developer:
+- Tim
+Description: 画像を立体的にはためかせます。
+Website:
+- http://www.nicovideo.jp/watch/sm14441618
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Flutter.zip
+  Sha256: 97cb2bbb1c2b11321f78da96800b53829c770a3394a7a98ae69bae69df4f4b56
+  Files:
+  - Path: Flutter/はためき.anm
+    Sha256: a484356a5ec0825f0cb160976e51bbf375355f357aa12a9863d416f2d4d9d95d
+    Install:
+      TargetPath: script/はためき.anm
+  - Path: Flutter/変更点.txt
+    Sha256: 22486a4b33a0eb8b86faee261bcad9aa713b75266f56357a5e0a7d8151acbd71
+ManifestVersion: 0.2.0

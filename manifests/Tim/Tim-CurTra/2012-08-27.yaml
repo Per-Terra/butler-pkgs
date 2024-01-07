@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-CurTra
+DisplayName: 曲面変形
+Version: 2012-08-27
+ReleaseDate: 2012-08-27
+Section: Script
+InstalledSize: 4
+Developer:
+- Tim
+Description: きしめんエフェクトセット第５段。3次元的に曲面変形させます。パーティクルのように大量に発生させることもできます。
+Website:
+- http://www.nicovideo.jp/watch/sm18731596
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/k5-CurTra.zip
+  Sha256: 25a1827b4ed1bfdc62bedb6710ef7810fab3da50850b4c073f39ee3b66b6ac0f
+  Files:
+  - Path: 曲面変形.anm
+    Sha256: 40a41735e3b5a067aaae098659e9f482ab31c80e8ee036a6d7180734a946530d
+    Install:
+      TargetPath: script/曲面変形.anm
+ManifestVersion: 0.2.0

@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-HalfRes
+DisplayName: 網点分解T
+Version: 2017-01-18
+ReleaseDate: 2017-01-18
+Section: Script
+InstalledSize: 8
+Developer:
+- Tim
+Description: CMY網点分解します。特色分解もできます。
+Website:
+- http://www.nicovideo.jp/watch/sm30453526
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/HalfRes.zip
+  Sha256: f284b6cca298b0f26abd179cd7b93f7cb6cfb7432258082a8fe2e98fb5155811
+  Files:
+  - Path: '@網点分解T.anm'
+    Sha256: cf030b29c66ff0f35c4e490bbf1f2e00d249cc98f047ad3baeac7e838dd880eb
+    Install:
+      TargetPath: script/@網点分解T.anm
+ManifestVersion: 0.2.0

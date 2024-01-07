@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Broken
+DisplayName: 砕け散る(改)
+Version: 2011-08-05
+ReleaseDate: 2011-08-05
+Section: Script
+InstalledSize: 7
+Developer:
+- Tim
+Description: 本家砕け散るを立体化しました。
+Website:
+- http://www.nicovideo.jp/watch/sm15221902
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Broken.zip
+  Sha256: cd61a5a310171539a9a196b26401b1b38a46c62feff1b73957d01fd0f39df0d5
+  Files:
+  - Path: 砕け散るT.anm
+    Sha256: e9c097ed65466b90223ba1b73c982574c0f3f2131e2b7a8f092c0d6c28c97c96
+    Install:
+      TargetPath: script/砕け散るT.anm
+ManifestVersion: 0.2.0

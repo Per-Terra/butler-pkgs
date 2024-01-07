@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-SceChg
+DisplayName: シーンチェンジセット
+Version: 2013-01-09
+ReleaseDate: 2013-01-09
+Section: Script
+InstalledSize: 10
+Developer:
+- Tim
+Description: シーンチェンジの詰め合わせです。
+Website:
+- http://www.nicovideo.jp/watch/sm19788901
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/SceChg.zip
+  Sha256: b93b8696493ced963ddd8c3da42e5dae4ff68f03d57eebb0b014ea2ad95ee47a
+  Files:
+  - Path: '@シーンチェンジセットT.scn'
+    Sha256: baa3a530996f430e20c09e4f959c9fe7cb1a28191323d1411944f7ee920b669b
+    Install:
+      TargetPath: script/@シーンチェンジセットT.scn
+ManifestVersion: 0.2.0

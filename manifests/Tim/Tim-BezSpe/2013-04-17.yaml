@@ -1,0 +1,28 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-BezSpe
+DisplayName: ベジエ曲線による軌道調整
+Version: 2013-04-17
+ReleaseDate: 2013-04-17
+Section: Script
+InstalledSize: 3
+Developer:
+- Tim
+Description: MMD同様、グラフィカルにトラックバーの調整ができます。
+Website:
+- http://www.nicovideo.jp/watch/sm20632293
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/BezSpe.zip
+  Sha256: 6d4379287c362144b27a581d65ef956e5260130a7b5be41b46dce685d5cd1202
+  Files:
+  - Path: ベジエ軌道Ｔ.obj
+    Sha256: c43bcf8ff6df7367ff6fd37c183eb11ca0f4c5e6d5684eab6bd119bf9aa4da4e
+    Install:
+      TargetPath: script/ベジエ軌道Ｔ.obj
+  - Path: ベジエ軌道Ｔ.tra
+    Sha256: a267c08e95564aa04232a82b8c5faf7d8987533e0dbc663cd42840ccf74041fd
+    Install:
+      TargetPath: script/ベジエ軌道Ｔ.tra
+ManifestVersion: 0.2.0

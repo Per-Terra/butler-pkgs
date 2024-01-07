@@ -1,0 +1,30 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Combst
+DisplayName: 燃焼
+Version: 2018-08-30
+ReleaseDate: 2018-08-30
+Section: Script
+InstalledSize: 66
+Developer:
+- Tim
+Description: 画像が燃えていくようなエフェクトです。色調調整セットがいらなくなりました。
+Website:
+- http://www.nicovideo.jp/watch/sm20042712
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Combst2.zip
+  Sha256: 961281dd88192de91e3db157c7bf4cb3246422e11015b163a21665a561d02cba
+  Files:
+  - Path: Combst2/T_burning_Module.dll
+    Sha256: 52f6128b099e14acd982aaee3ddfa1c2b0266b65eed114ecb29e8fa38ec3697a
+    Install:
+      TargetPath: script/T_burning_Module.dll
+  - Path: Combst2/注意.txt
+    Sha256: b6fe389565a981bb77ce2f1cc890c36629b15b82ab3728410d846ad492345df1
+  - Path: Combst2/燃焼T.anm
+    Sha256: 9fecb54494a5bc0ba99d0c91cda140846269128d57d823b188bbe9722fc16cb0
+    Install:
+      TargetPath: script/燃焼T.anm
+ManifestVersion: 0.2.0

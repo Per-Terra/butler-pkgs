@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-BriWipe
+DisplayName: 輝度ワイプ
+Version: 2018-12-28
+ReleaseDate: 2018-12-28
+Section: Script
+InstalledSize: 1
+Developer:
+- Tim
+Description: きしめんエフェクトセット第３段。輝度値を参考に画像を切り替えます。シーンチェンジのルミナンスTとは少し違います。一時保存読込EXT不要に修正。レイヤー番号指定です。
+Website:
+- http://www.nicovideo.jp/watch/sm18581114
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/k3-BriWipe.zip
+  Sha256: 41f77fa32342cd1f64fb8a38aae5cd2f59bd1d961c0410516a18eda26b543b15
+  Files:
+  - Path: 輝度ワイプ.anm
+    Sha256: 829ebf3772108632077e49bb992ea0e0c70dce045a86b29a9bec3ea1b40c6e51
+    Install:
+      TargetPath: script/輝度ワイプ.anm
+ManifestVersion: 0.2.0

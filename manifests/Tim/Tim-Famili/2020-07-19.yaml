@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Famili
+DisplayName: カメレオン効果
+Version: 2020-07-19
+ReleaseDate: 2020-07-19
+Section: Script
+InstalledSize: 56
+Developer:
+- Tim
+Description: 画像を背景に馴染むように色調を調整します。
+Website:
+- http://www.nicovideo.jp/watch/sm34225787
+- https://timnoheya.fc2.net/blog-entry-9.html
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Famili.zip
+  Sha256: 84d4b822c15a703f0b7182387973bd18fd71540f70f058fd33872e78914c2f4f
+  Files:
+  - Path: Famili/@カメレオン効果.anm
+    Sha256: a15326ce869dc0d4220df7d5ffba947922c4ade09f4ad46185e6207b39b74847
+    Install:
+      TargetPath: script/@カメレオン効果.anm
+  - Path: Famili/T_Familiar_Module.dll
+    Sha256: 9b1ac5dc88a37c8ad949986a3eaf90d16ed72551baf80bf2fb0c1c20029954f4
+    Install:
+      TargetPath: script/T_Familiar_Module.dll
+ManifestVersion: 0.2.0

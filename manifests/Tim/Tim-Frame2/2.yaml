@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Frame2
+DisplayName: 領域枠
+Version: "2"
+ReleaseDate: 2012-11-10
+Section: Script
+InstalledSize: 16
+Developer:
+- Tim
+Description: 枠を付けます。
+Website:
+- http://www.nicovideo.jp/watch/sm19322302
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Frame2.zip
+  Sha256: c343eaebfc34018b446faa5f265b5538965591b6f2e10d2d99fdac54555a8f30
+  Files:
+  - Path: '@領域枠.anm'
+    Sha256: 02052777737303659fa7e1f428e2f27e9356a169103a91436d0dbeec2a3a7bd7
+    Install:
+      TargetPath: script/@領域枠.anm
+ManifestVersion: 0.2.0

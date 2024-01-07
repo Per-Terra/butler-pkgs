@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/developer/0.1.0.json
+
+Identifier: Tim
+DisplayName: ティム
+Website:
+  - https://tim3.web.fc2.com/index.html
+  - https://timnoheya.fc2.net/
+  - https://twitter.com/TimNoHeya
+  - https://www.youtube.com/channel/UCIftxC4T8vqvmIYqbVJGjew
+  - https://www.nicovideo.jp/user/1366031
+ManifestVersion: 0.1.0

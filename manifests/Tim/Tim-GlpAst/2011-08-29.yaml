@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-GlpAst
+DisplayName: グループ補助
+Version: 2011-08-29
+ReleaseDate: 2011-08-29
+Section: Script
+InstalledSize: 1
+Developer:
+- Tim
+Description: グループ制御に追加することで、グループ制御を補助します。が、現在は本体に追加された「基本効果」エフェクトで同じことができます。
+Website:
+- http://www.nicovideo.jp/watch/sm15454862
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/GlpAst.zip
+  Sha256: 407b8e58fe94e5f48ddbfe874174d4abb7e70483321fc8f90c4f35370de0b000
+  Files:
+  - Path: '@グループ補助.anm'
+    Sha256: 0dc40e50a2be793250ec06c5ead6186fedfaa8e7114b34b787a4f99c65e654c8
+    Install:
+      TargetPath: script/@グループ補助.anm
+ManifestVersion: 0.2.0

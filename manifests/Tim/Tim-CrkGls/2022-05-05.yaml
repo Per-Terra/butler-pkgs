@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-CrkGls
+DisplayName: ひび割れガラスT
+Version: 2022-05-05
+ReleaseDate: 2022-05-05
+Section: Script
+InstalledSize: 54
+Developer:
+- Tim
+Description: 画像にひび割れたガラス越しに見たような効果を付与します。
+Website:
+- https://www.nicovideo.jp/watch/sm38361197
+- https://youtu.be/dgIBbKmEYtM
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/CrkGls.zip
+  Sha256: 6f75158e00f68a9c83a48d661a96d5db3828607b792b0ab4c00167c6d1b9c03b
+  Files:
+  - Path: CrkGls/T_CrackedGlass_Module.dll
+    Sha256: 91a5240e2450a220e170a29bc102a9782284f9648d429d05aca19f1d834d7983
+    Install:
+      TargetPath: script/T_CrackedGlass_Module.dll
+  - Path: CrkGls/ひび割れガラスT.anm
+    Sha256: 537cfdaeda98d5a72242a682814b5cffb3416b145d3eac6b79f4e01db4e07d6e
+    Install:
+      TargetPath: script/ひび割れガラスT.anm
+ManifestVersion: 0.2.0

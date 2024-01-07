@@ -1,0 +1,28 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-TraSpe
+DisplayName: 透明度指定
+Version: 2013-04-29
+ReleaseDate: 2013-04-29
+Section: Script
+InstalledSize: 53
+Developer:
+- Tim
+Description: 透明度を指定＆コピーできます。
+Website:
+- http://www.nicovideo.jp/watch/sm20729870
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/TraSpe.zip
+  Sha256: 99c63e94684dad32c28fdf5e6ab64162589fd9e5df2fd51db6ac26f6502a27e2
+  Files:
+  - Path: T_Alpha_Module.dll
+    Sha256: 32d92b19935725131395d0276d0fd0f1abc7e585c02827c60df3611007ec742b
+    Install:
+      TargetPath: script/T_Alpha_Module.dll
+  - Path: 透明度指定.anm
+    Sha256: e59ddd3b7db06d15e014e3acbea16bf9363c693f66143896287ceae9491796ce
+    Install:
+      TargetPath: script/透明度指定.anm
+ManifestVersion: 0.2.0

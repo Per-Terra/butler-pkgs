@@ -1,0 +1,36 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Access
+DisplayName: 小物(カメラデータコピー等)
+Version: 2012-02-11
+ReleaseDate: 2012-02-11
+Section: Script
+InstalledSize: 8
+Developer:
+- Tim
+Description: カメラデータコピー等、いくつかの小物スクリプトの詰め合わせです。
+Website:
+- http://www.nicovideo.jp/watch/sm16943422
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Access.zip
+  Sha256: 9c5617e0fed52ba3f0b0584fb48701e1c544a624d76f3c8723e239cce0c9c0e3
+  Files:
+  - Path: Access/@カメラデータコピー.cam
+    Sha256: aa3b56496b7adf1d268ce3fbb744d3133ecb6b3ae3b337313f763c12dc3b7d00
+    Install:
+      TargetPath: script/@カメラデータコピー.cam
+  - Path: Access/@けいおんグッズ.obj
+    Sha256: c05d043ea5ede85bcb7937ab3a901cc51fec122f7b0623d88abee65723bed71d
+    Install:
+      TargetPath: script/@けいおんグッズ.obj
+  - Path: Access/@サイズ修正T.anm
+    Sha256: 074e497d29768dbab09b4b0a1d038790519d4d24eb36b54f1d326e8242e42232
+    Install:
+      TargetPath: script/@サイズ修正T.anm
+  - Path: Access/ミラーT.anm
+    Sha256: 071d38779c005e6e2ef72a735d76ea302ee0546eaad1d38c8c7f47b7de3c35f0
+    Install:
+      TargetPath: script/ミラーT.anm
+ManifestVersion: 0.2.0

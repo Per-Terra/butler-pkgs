@@ -1,0 +1,28 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Framing
+DisplayName: 縁取りT
+Version: 2018-07-28
+ReleaseDate: 2018-07-28
+Section: Script
+InstalledSize: 63
+Developer:
+- Tim
+Description: 輪郭から等距離で縁取りします。他のものと多少差別化してあります。
+Website:
+- http://www.nicovideo.jp/watch/sm33598259
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Framing.zip
+  Sha256: cf6fabbfce059a4deb86c6950b77c3ec807e937cc17057642123780de28ee1ab
+  Files:
+  - Path: Framing/T_Framing_Module.dll
+    Sha256: bb3c3d9f29b2bc4d6ddc5dd372e4c67b0ba2143e4b58f2866d7625a08e4e7cb3
+    Install:
+      TargetPath: script/T_Framing_Module.dll
+  - Path: Framing/縁取りT.anm
+    Sha256: bda665a255d10d6d5c39d5b9494a933628d7958cf606397d0c9cb386eca3c278
+    Install:
+      TargetPath: script/縁取りT.anm
+ManifestVersion: 0.2.0

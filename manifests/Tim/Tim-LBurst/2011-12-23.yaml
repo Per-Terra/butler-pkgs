@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-LBurst
+DisplayName: ライトバースト
+Version: 2011-12-23
+ReleaseDate: 2011-12-23
+Section: Script
+InstalledSize: 2
+Developer:
+- Tim
+Description: 後方から光が差し込む効果です。
+Website:
+- http://www.nicovideo.jp/watch/sm16497408
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/LBurst.zip
+  Sha256: ce5d86a16e8df1b95d0a88c230f9e38f0cc5faef527d6e6d8563d11833a46723
+  Files:
+  - Path: '@ライトバースト.anm'
+    Sha256: 7b69d1655d00cb6767e164fdb8b8a69ad42dc66faa07e8f911ff61133769e1a8
+    Install:
+      TargetPath: script/@ライトバースト.anm
+ManifestVersion: 0.2.0

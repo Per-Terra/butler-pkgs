@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-HevBunR
+DisplayName: ヘブバン風音声波形T
+Version: 2022-07-24
+ReleaseDate: 2022-07-24
+Section: Script
+InstalledSize: 5
+Developer:
+- Tim
+Description: ヘブンバーンズレッド風の音声波形スクリプトです。
+Website:
+- https://www.nicovideo.jp/watch/sm40816069
+- https://youtu.be/508A8hwtFsA
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/HevBunR.zip
+  Sha256: bb947aabd983406f809922f398ac3b56837142454edf67f0264db63ae2a12408
+  Files:
+  - Path: HevBunR/ヘブバン風音声波形T.obj
+    Sha256: 3add8c7f7ffb6f78a123046fee4b80bb073b644a2936699ece253e745efc5780
+    Install:
+      TargetPath: script/ヘブバン風音声波形T.obj
+ManifestVersion: 0.2.0

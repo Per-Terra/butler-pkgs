@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Bubble
+DisplayName: 泡
+Version: 2011-11-07
+ReleaseDate: 2011-11-07
+Section: Script
+InstalledSize: 2
+Developer:
+- Tim
+Description: 泡っぽいものを複数生成します。
+Website:
+- http://www.nicovideo.jp/watch/sm16108745
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Bubble.zip
+  Sha256: d95068184f1cb7394f419b4e690297f7fde9c2a4fb08c239db7ee2c26b975996
+  Files:
+  - Path: 泡.obj
+    Sha256: b2c10a2cfbc52804ea5d06195dac027449caa5e46794f7ed7ba766cf3b00ecf5
+    Install:
+      TargetPath: script/泡.obj
+ManifestVersion: 0.2.0

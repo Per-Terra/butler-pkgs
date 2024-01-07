@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-CogWhl
+DisplayName: 歯車変形
+Version: 2011-06-02
+ReleaseDate: 2011-06-02
+Section: Script
+InstalledSize: 3
+Developer:
+- Tim
+Description: 画像から立体的な歯車を生成します。
+Website:
+- http://www.nicovideo.jp/watch/sm14632269
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/CogWhl.zip
+  Sha256: 19395070f846a1d4e2884c57b6cae1a2f333d75562b7f5fc54a7448c8fd0cd8c
+  Files:
+  - Path: 歯車.anm
+    Sha256: 73f473b2ba15d131811d3de2767f395e3549cdb594ac770c9c73c92bc3f54be9
+    Install:
+      TargetPath: script/歯車.anm
+ManifestVersion: 0.2.0

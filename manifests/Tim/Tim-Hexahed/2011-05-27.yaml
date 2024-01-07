@@ -1,0 +1,24 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-Hexahed
+DisplayName: 直方体展開
+Version: 2011-05-27
+ReleaseDate: 2011-05-27
+Section: Script
+InstalledSize: 4
+Developer:
+- Tim
+Description: 直方体に変形しますが、展開図からの変形も可能です。
+Website:
+- http://www.nicovideo.jp/watch/sm14573964
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/Hexahed.zip
+  Sha256: ddc999fc3e223678640d4369e8e783089a8d2f4f211105ddf39e6c21b93f791c
+  Files:
+  - Path: 直方体展開.anm
+    Sha256: 699f550d64890f3041d18c8467aa61a4606ef9d56b9b99c7c461da828c00e655
+    Install:
+      TargetPath: script/直方体展開.anm
+ManifestVersion: 0.2.0

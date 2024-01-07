@@ -1,0 +1,28 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Tim-RbwGra
+DisplayName: 虹色グラデーション
+Version: 2012-11-24
+ReleaseDate: 2012-11-24
+Section: Script
+InstalledSize: 65
+Developer:
+- Tim
+Description: 画像に虹色のグラデーションをかけます。
+Website:
+- http://www.nicovideo.jp/watch/sm19425542
+- https://tim3.web.fc2.com/sidx.htm
+Files:
+- SourceUrl: https://tim3.web.fc2.com/script/RbwGra.zip
+  Sha256: fc0637d790db09cd087e0f453692b4bd1f8f63c3a6af2b68abf6ea2d2f73f851
+  Files:
+  - Path: RbwGra/T_R_gradation.dll
+    Sha256: 8c35729c646a9eb5c4f1255b647d2682d4c4e0f40d375cd76a22f3e9cadf78d5
+    Install:
+      TargetPath: script/T_R_gradation.dll
+  - Path: RbwGra/虹色グラデーション.anm
+    Sha256: 2f47c8d3bddbbb54be52dcedf5757a3ba63e7fa306740ceb916c3a9304aee4c3
+    Install:
+      TargetPath: script/虹色グラデーション.anm
+ManifestVersion: 0.2.0
