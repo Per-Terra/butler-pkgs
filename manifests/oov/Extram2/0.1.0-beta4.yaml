@@ -42,6 +42,7 @@ Files:
     Sha256: 2b640661b743e48c04be73040d3763063d532918fc886fff53b563110d7d998b
     Install:
       TargetPath: script/Extram2.exe
+      Method: Copy
   - Path: script/Intram2.dll
     Sha256: e6f6d3ed9fb640702515d2fc3ceddc64691240986c71228e9c5037477e689b8f
     Install:

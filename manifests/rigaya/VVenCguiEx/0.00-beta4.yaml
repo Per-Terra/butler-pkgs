@@ -30,10 +30,12 @@ Files:
     Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
     Install:
       TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
   - Path: exe_files/auo_setup.exe
     Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
     Install:
       TargetPath: exe_files/auo_setup.exe
+      Method: Copy
   - Path: exe_files/auo_setup.ini
     Sha256: d6aaff6e91287f5f78905ecad8a40367473920a794bbed9000e4e3d7f7204746
     Install:
@@ -51,30 +53,37 @@ Files:
     Sha256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
     Install:
       TargetPath: exe_files/ffmpeg_audenc.exe
+      Method: Copy
   - Path: exe_files/mp4box.exe
     Sha256: 1b530460196d9465c007aebae2fe34c1941816c29d523d2874b768a3bc0e114c
     Install:
       TargetPath: exe_files/mp4box.exe
+      Method: Copy
   - Path: exe_files/ndp48-web.exe
     Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
     Install:
       TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
   - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
     Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
     Install:
       TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
   - Path: exe_files/VC_redist.x86.exe
     Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
     Install:
       TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
   - Path: exe_files/vvdecapp.exe
     Sha256: f739d151bb523d272ad4c21371a3b4752c8b28a7d266a87cd508ddf40fd56147
     Install:
       TargetPath: exe_files/vvdecapp.exe
+      Method: Copy
   - Path: exe_files/vvencFFapp.exe
     Sha256: 15a3798be1e07511706c11f9c5ff42c6579f30382bc4fb94e85de11df7f1dda9
     Install:
       TargetPath: exe_files/vvencFFapp.exe
+      Method: Copy
   - Path: plugins/auo_setup.auf
     Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
     Install:

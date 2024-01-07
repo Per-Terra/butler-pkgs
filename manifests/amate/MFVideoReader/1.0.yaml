@@ -28,6 +28,7 @@ Files:
     Sha256: a76ec1640c5a9017d00258f89a60bb4a20b90d5a797d1f5e2f001e22cd39b0a2
     Install:
       TargetPath: plugins/MFVideoReader.exe
+      Method: Copy
   - Path: MFVideoReader/MFVideoReaderPlugin.aui
     Sha256: 592fad080d153f2a98a342d225bca56015d3c48a0d83f7bef4d962135c295f20
     Install:

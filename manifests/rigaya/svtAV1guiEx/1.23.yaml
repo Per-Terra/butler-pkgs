@@ -30,10 +30,12 @@ Files:
     Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
     Install:
       TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
   - Path: exe_files/auo_setup.exe
     Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
     Install:
       TargetPath: exe_files/auo_setup.exe
+      Method: Copy
   - Path: exe_files/auo_setup.ini
     Sha256: 42e843bdd31d303a840512b219884e5b7cbec0747feab16096429f637814eff1
     Install:
@@ -51,34 +53,42 @@ Files:
     Sha256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
     Install:
       TargetPath: exe_files/ffmpeg_audenc.exe
+      Method: Copy
   - Path: exe_files/mp4box.exe
     Sha256: fe7dda3529eefdf8cfa18838b864db68b8ab8e98ec814046b01f28cb5d5e4744
     Install:
       TargetPath: exe_files/mp4box.exe
+      Method: Copy
   - Path: exe_files/ndp48-web.exe
     Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
     Install:
       TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
   - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
     Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
     Install:
       TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
   - Path: exe_files/SvtAv1EncApp_v1.7.0_x64.exe
     Sha256: 41d2ae92d070b7d8a7d6614e2f854ca6ef7498ce6232f92ceef18b3d75fc7c97
     Install:
       TargetPath: exe_files/SvtAv1EncApp_v1.7.0_x64.exe
+      Method: Copy
   - Path: exe_files/timelineeditor_x64.exe
     Sha256: 121358105ff5cba291ee666d4e7b06f2184509202516af93858371bb2ca79869
     Install:
       TargetPath: exe_files/timelineeditor_x64.exe
+      Method: Copy
   - Path: exe_files/timelineeditor_x86.exe
     Sha256: 056a0c08b9fa94a07d997408a3691de27322e89d8efe2aa996a460ccb2f0c112
     Install:
       TargetPath: exe_files/timelineeditor_x86.exe
+      Method: Copy
   - Path: exe_files/VC_redist.x86.exe
     Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
     Install:
       TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
   - Path: plugins/auo_setup.auf
     Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
     Install:

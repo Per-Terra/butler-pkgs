@@ -59,14 +59,17 @@ Files:
     Sha256: 53e50f54ee60082c93784df3c0203004eee344ff8c2f1fa423307d41e66516f6
     Install:
       TargetPath: ffmpeg64/bin/ffmpeg.exe
+      Method: Copy
   - Path: ffmpeg64/bin/ffplay.exe
     Sha256: 1241e2a9878f968113a90844db218991819e3d693a3c26e964c63464488260a1
     Install:
       TargetPath: ffmpeg64/bin/ffplay.exe
+      Method: Copy
   - Path: ffmpeg64/bin/ffprobe.exe
     Sha256: dc7c32de914a46afe6b377273428410bb54fa35d0603e8befb842088957f7df7
     Install:
       TargetPath: ffmpeg64/bin/ffprobe.exe
+      Method: Copy
   - Path: ffmpeg64/bin/openh264-2.3.1-win64.dll
     Sha256: c733d1fe250e4bc05b1265a5fa206289c5f1f4ddc4f03a4e6455ae934b6b5d31
     Install:

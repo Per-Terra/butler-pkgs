@@ -36,10 +36,12 @@ Files:
     Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
     Install:
       TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
   - Path: exe_files/auo_setup.exe
     Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
     Install:
       TargetPath: exe_files/auo_setup.exe
+      Method: Copy
   - Path: exe_files/auo_setup.ini
     Sha256: 55df63b85948f203d1b52bf7459b1198686adfc90cdcdc2b2b067553fda8d9c0
     Install:
@@ -57,14 +59,17 @@ Files:
     Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
     Install:
       TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
   - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
     Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
     Install:
       TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
   - Path: exe_files/VC_redist.x86.exe
     Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
     Install:
       TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
   - Path: exe_files/QSVEncC/x64/avcodec-59.dll
     Sha256: 63940aa6d9c50b1de894858509863a2630752f36d47693034e5a2f3ff081e20e
     Install:
@@ -85,6 +90,7 @@ Files:
     Sha256: fdb1fbbe20f10035632b91964152f9ccf473c3b896b7957c7588fe46c86eb74d
     Install:
       TargetPath: exe_files/QSVEncC/x64/hdr10plus_gen.exe
+      Method: Copy
   - Path: exe_files/QSVEncC/x64/libass-9.dll
     Sha256: f2c2f76c87550be7f931667b92b77a5fa2fabcf1f276c2deedb84b029ad97193
     Install:
@@ -93,6 +99,7 @@ Files:
     Sha256: da2c2ada349270177f10b666ebb421b032669e205b052f655533acfa0e85112f
     Install:
       TargetPath: exe_files/QSVEncC/x64/QSVEncC64.exe
+      Method: Copy
   - Path: exe_files/QSVEncC/x64/swresample-4.dll
     Sha256: 783eab6b893c8abaa8b59d9017be1fdd07db1a08864ae920053d25801013a9ec
     Install:
@@ -117,6 +124,7 @@ Files:
     Sha256: 032f694c813223a5bde933bdc9c68144390d1dba7917ac2962b9acae923bb099
     Install:
       TargetPath: exe_files/QSVEncC/x86/hdr10plus_gen.exe
+      Method: Copy
   - Path: exe_files/QSVEncC/x86/libass-9.dll
     Sha256: 0e06d38bb1de3d432c1cd452ad6a04b42f52663f5ec5ee0ff4f9777914dd7579
     Install:
@@ -125,6 +133,7 @@ Files:
     Sha256: ae1df7f2bc71d23b5d64833914bb40a701f4060b96cee0b0a9122db0730e542f
     Install:
       TargetPath: exe_files/QSVEncC/x86/QSVEncC.exe
+      Method: Copy
   - Path: exe_files/QSVEncC/x86/swresample-4.dll
     Sha256: f7dc2347fea15b8ed8d8c666228d181442308cab023f06e911869b281c834b61
     Install:

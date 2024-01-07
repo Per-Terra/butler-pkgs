@@ -32,10 +32,12 @@ Files:
     Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
     Install:
       TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
   - Path: exe_files/auo_setup.exe
     Sha256: e077e00129c905d4c03f69392d716a7ec3c5ce16327ef2937d3bdc1d81ebb0e5
     Install:
       TargetPath: exe_files/auo_setup.exe
+      Method: Copy
   - Path: exe_files/auo_setup.ini
     Sha256: ab69252a213054d979d8a47408ae66a6d08dd035a228cdb27db3978d60b9aa88
     Install:
@@ -53,50 +55,62 @@ Files:
     Sha256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
     Install:
       TargetPath: exe_files/ffmpeg_audenc.exe
+      Method: Copy
   - Path: exe_files/muxer_x64.exe
     Sha256: bc07ad5d9a445c1b8fd74b7edc71cad7bbd909226d4f57cb1068a1370ab073e5
     Install:
       TargetPath: exe_files/muxer_x64.exe
+      Method: Copy
   - Path: exe_files/muxer_x86.exe
     Sha256: ffb5e2a661cafe2442a81b139130fcc43cf2d02c0991e76fe6f63ddb784216b7
     Install:
       TargetPath: exe_files/muxer_x86.exe
+      Method: Copy
   - Path: exe_files/ndp48-web.exe
     Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
     Install:
       TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
   - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
     Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
     Install:
       TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
   - Path: exe_files/remuxer_x64.exe
     Sha256: 9a74238807f77b7ddf54d8b5574c7c57a7df62b99e107b45c06ee6c9612d9f4e
     Install:
       TargetPath: exe_files/remuxer_x64.exe
+      Method: Copy
   - Path: exe_files/remuxer_x86.exe
     Sha256: 3cfc6570550069ade3bfb999e539ed1ea91cb75643a3a30079e7126e5ca65cf8
     Install:
       TargetPath: exe_files/remuxer_x86.exe
+      Method: Copy
   - Path: exe_files/timelineeditor_x64.exe
     Sha256: 121358105ff5cba291ee666d4e7b06f2184509202516af93858371bb2ca79869
     Install:
       TargetPath: exe_files/timelineeditor_x64.exe
+      Method: Copy
   - Path: exe_files/timelineeditor_x86.exe
     Sha256: 056a0c08b9fa94a07d997408a3691de27322e89d8efe2aa996a460ccb2f0c112
     Install:
       TargetPath: exe_files/timelineeditor_x86.exe
+      Method: Copy
   - Path: exe_files/VC_redist.x86.exe
     Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
     Install:
       TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
   - Path: exe_files/x264_3094_x64.exe
     Sha256: 8f50d98d51a6a7c89c53b1b89f858da6232f139bcf2d95dfb61b2d51c69267cd
     Install:
       TargetPath: exe_files/x264_3094_x64.exe
+      Method: Copy
   - Path: exe_files/x264_3094_x86.exe
     Sha256: 9e6a778f727fc1e4486468936dfffd059c268fefecf592e25e8a10127819898c
     Install:
       TargetPath: exe_files/x264_3094_x86.exe
+      Method: Copy
   - Path: plugins/auo_setup.auf
     Sha256: 65ab97d6eeb7dee40daf7f97c13786db9bd9effd90a836944ae7d6a0ef8e667d
     Install:

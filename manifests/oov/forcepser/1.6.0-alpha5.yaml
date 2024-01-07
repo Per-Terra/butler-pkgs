@@ -26,6 +26,7 @@ Files:
     Sha256: 57049f561af29be388f1928baf1149425fcc32278803eb982fc40b44d8717471
     Install:
       TargetPath: かんしくん/forcepser.exe
+      Method: Copy
   - Path: forcepser.txt
     Sha256: daff62797510aecc56de8a169f781fe6dbbe30244f9a4a1414c1942af8852388
     Install:
@@ -44,6 +45,7 @@ Files:
     Sha256: 52bd4e6c0408118e6ac17fbb5f87a55274b7be91a3e655b79996a09719695353
     Install:
       TargetPath: かんしくん/asas/asas.exe
+      Method: Copy
   - Path: asas/asas.txt
     Sha256: 852c9bafd2ca12e5b55a3f802603c53455a82bf88c8adf08cea45fbf380ff46f
     Install:

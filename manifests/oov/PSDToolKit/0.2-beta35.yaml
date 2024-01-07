@@ -343,6 +343,7 @@ Files:
     Sha256: e41cd58204dc17fbf8cede7d3b4cc4b26eed5abdec793d14f33ef1e79b578f6f
     Install:
       TargetPath: script/PSDToolKit/PSDToolKit.exe
+      Method: Copy
   - Path: script/PSDToolKit/PSDToolKit.lua
     Sha256: 6c56f3383626740dffe905cb79dd98f355033ecfa8bd19933357f727c5457458
     Install:

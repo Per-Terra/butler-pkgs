@@ -23,10 +23,12 @@ Files:
     Sha256: 48b497db58dedb4b9cde1bbf4c1af07b0f04110f0830c5ae4a62c780b9e80c77
     Install:
       TargetPath: plugins/InputPipeMain.exe
+      Method: Copy
   - Path: InputPipePlugin/InputPipeMain64.exe
     Sha256: baa75508d61e674051138b0d1ec11d1d98623b6dc489aac142e42ee2e54d1dca
     Install:
       TargetPath: plugins/InputPipeMain64.exe
+      Method: Copy
   - Path: InputPipePlugin/InputPipePlugin.aui
     Sha256: a5b0cb9a8b08aea5cfe594fff475c8c6fbca8f0f1c36c09cf12408694c3d5602
     Install:
