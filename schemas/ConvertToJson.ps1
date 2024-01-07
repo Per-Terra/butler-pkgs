@@ -38,7 +38,7 @@ Write-Host -Object " $($yamlFiles.Count) 件のYAMLファイルが見つかり�
 Write-Host -Object 'YAMLファイルをJSONファイルに変換しています...' -NoNewline
 $yamlFiles | ForEach-Object {
   $jsonPath = $_.FullName.Replace($yamlDirectory, $jsonDirectory).Replace('.yaml', '.json')
-  if (-not (Test-Path -LiteralPath (Split-Path -Path $jsonPath -Parent) -PathType Leaf)) {
+  if (-not (Test-Path -LiteralPath (Split-Path -Path $jsonPath -Parent) -PathType Container)) {
     $null = New-Item -Path (Split-Path -Path $jsonPath -Parent) -ItemType Directory
   }
 
