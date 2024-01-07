@@ -33,4 +33,5 @@ Files:
     Sha256: 567e873281c7c097eed67f4f558ec3e090520f563fdb2cde2185189b36a0fe30
     Install:
       TargetPath: plugins/WaveformPreview.exe
+      Method: Copy
 ManifestVersion: 0.1.0

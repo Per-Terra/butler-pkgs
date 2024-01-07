@@ -26,4 +26,5 @@ Files:
     Sha256: 6e3525e38dbd07807d0f07e45c867053277d631c299951b59103e9ecd6f1d819
     Install:
       TargetPath: ZRamPreview.exe
+      Method: Copy
 ManifestVersion: 0.1.0

@@ -26,6 +26,7 @@ Files:
     Sha256: 6d0f21e7c347d9e8be9574ce67e741e0c6396a13c41d6b6b747cabf858859cda
     Install:
       TargetPath: かんしくん/forcepser.exe
+      Method: Copy
   - Path: forcepser.txt
     Sha256: fe529266420a383bb035b85bf7fb36dc9e9c498d4e18065e5f882456a4e1d2ba
     Install:

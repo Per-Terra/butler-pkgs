@@ -13514,6 +13514,7 @@ Files:
     Sha256: b7ec06929fd26d2e68884d430060960fed228d8af59f623a0797993da744672a
     Install:
       TargetPath: script/browser/exe/aviutl_browser.exe
+      Method: Copy
   - Path: script/browser/exe/chrome_100_percent.pak
     Sha256: 2b1888eb0adbcaad6776b02ff9fe2e8a096eb0941e4758dccf22070060cd91cd
     Install:

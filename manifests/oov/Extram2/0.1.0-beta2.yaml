@@ -38,6 +38,7 @@ Files:
     Sha256: 86fa3bb90327b68cefca858ba065749557d9f93d61d0a28710d0a2209f225edd
     Install:
       TargetPath: script/Extram2.exe
+      Method: Copy
   - Path: script/Extram2.lua
     Sha256: 90b97be33ea7e77df7c893c8fb4e6a2b92c7396dd4a2731b62a69c1e8d144b69
     Install:

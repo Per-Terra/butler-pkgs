@@ -31,10 +31,12 @@ Files:
     Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
     Install:
       TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
   - Path: exe_files/auo_setup.exe
     Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
     Install:
       TargetPath: exe_files/auo_setup.exe
+      Method: Copy
   - Path: exe_files/auo_setup.ini
     Sha256: 19bd7fd8f7320e137cdf58e08a314e64153dc8e809778f289e0316b31761bce1
     Install:
@@ -52,14 +54,17 @@ Files:
     Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
     Install:
       TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
   - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
     Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
     Install:
       TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
   - Path: exe_files/VC_redist.x86.exe
     Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
     Install:
       TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
   - Path: exe_files/VCEEncC/x64/avcodec-59.dll
     Sha256: 63940aa6d9c50b1de894858509863a2630752f36d47693034e5a2f3ff081e20e
     Install:
@@ -80,6 +85,7 @@ Files:
     Sha256: fdb1fbbe20f10035632b91964152f9ccf473c3b896b7957c7588fe46c86eb74d
     Install:
       TargetPath: exe_files/VCEEncC/x64/hdr10plus_gen.exe
+      Method: Copy
   - Path: exe_files/VCEEncC/x64/libass-9.dll
     Sha256: f2c2f76c87550be7f931667b92b77a5fa2fabcf1f276c2deedb84b029ad97193
     Install:
@@ -92,6 +98,7 @@ Files:
     Sha256: fd8032ee026cdd9294bbf22b11aeebab011f8de99a16df8178f9c3daa573c4fd
     Install:
       TargetPath: exe_files/VCEEncC/x64/VCEEncC64.exe
+      Method: Copy
   - Path: exe_files/VCEEncC/x86/avcodec-59.dll
     Sha256: 385b41af27fdbef86b04b70966fcad59ef2439e8e9513a9c777485942dae7479
     Install:
@@ -112,6 +119,7 @@ Files:
     Sha256: 032f694c813223a5bde933bdc9c68144390d1dba7917ac2962b9acae923bb099
     Install:
       TargetPath: exe_files/VCEEncC/x86/hdr10plus_gen.exe
+      Method: Copy
   - Path: exe_files/VCEEncC/x86/libass-9.dll
     Sha256: 0e06d38bb1de3d432c1cd452ad6a04b42f52663f5ec5ee0ff4f9777914dd7579
     Install:
@@ -124,6 +132,7 @@ Files:
     Sha256: dba968d31ccae8c7c622f841bd988a92ed7cb609ab4fa627bee38c05a8dbb5f7
     Install:
       TargetPath: exe_files/VCEEncC/x86/VCEEncC.exe
+      Method: Copy
   - Path: plugins/auo_setup.auf
     Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
     Install:

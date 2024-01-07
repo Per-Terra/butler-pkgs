@@ -28,6 +28,7 @@ Files:
     Sha256: eb6bad97da9dc65a1ee92bf407790a899a467384c6c2c5b5846fc637ffa6d27b
     Install:
       TargetPath: ZRamPreview.exe
+      Method: Copy
   - Path: ZRamPreview.txt
     Sha256: 9dd966d6cb399180be1dd90c092df3d1d2f925b1c0ec4240394f4df46265bc1b
   - Path: script/Extram.dll

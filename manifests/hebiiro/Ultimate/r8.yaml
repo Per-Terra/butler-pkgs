@@ -66,6 +66,7 @@ Files:
     Sha256: fc40de9f0fbfb886d5f955bd509c9c5fa217bc12122f63fee6be34f807124621
     Install:
       TargetPath: plugins/UltimateAddin/FilerGui.exe
+      Method: Copy
   - Path: UltimateAddin/FilterCopy.aua
     Sha256: 4203292c82fca4168b2fc55f824b787dda319b86cf86babd27313d77d193bc58
     Install:

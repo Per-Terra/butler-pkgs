@@ -62,6 +62,7 @@ Files:
     Sha256: 4194ce3ac93035016d2cd63394108b637cdc0291a30aa5e535a22d451e9ee748
     Install:
       TargetPath: plugins/UltimateAddin/EasingSelectGui.exe
+      Method: Copy
   - Path: UltimateAddin/EditBoxTweaker.aua
     Sha256: 4cf879d987aa29ae955edc6c825bbb38c2db5dc5d0410d12789a4df9a242c723
     Install:
@@ -82,6 +83,7 @@ Files:
     Sha256: 78661b9dfc950daf18c938d12366635407f0409faf7d74bbe31197e3c4525144
     Install:
       TargetPath: plugins/UltimateAddin/FilerGui.exe
+      Method: Copy
   - Path: UltimateAddin/FilterCopy.aua
     Sha256: 27f658ea8092314b0c03015662a2ee0049bedceec7818986cbee46d80289fc32
     Install:
