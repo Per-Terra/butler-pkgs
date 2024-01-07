@@ -299,7 +299,7 @@ function Get-SourceFileFromUrl {
   return $file
 }
 
-if (-not $Update) {
+if (-not $SkipPrompt -and -not $Update) {
   do {
     $answer = Read-Host -Prompt '既存のパッケージを更新しますか? [Y/n]'
   } until ([string]::IsNullOrEmpty($answer) -or ($answer -in @('Y', 'n')))
