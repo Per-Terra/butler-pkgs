@@ -2,7 +2,7 @@
 
 [![Create Release](https://github.com/Per-Terra/butler-pkgs/actions/workflows/release.yml/badge.svg)](https://github.com/Per-Terra/butler-pkgs/actions/workflows/release.yml)
 
-現在利用可能なパッケージ数: ≧ 100
+現在利用可能なパッケージ数: ≧ 200
 
 [日本語(Japanese)](/README.md) • [English](/docs/README-en.md)
 
