@@ -54,8 +54,8 @@ $scriptDependencies | ForEach-Object {
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-PackageManifest.ps1')
 . (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-UrlFormat.ps1')
 
-$ScriptVersion = '0.1.0'
-$ManifestVersion = '0.1.0'
+$ScriptVersion = '0.2.0'
+$ManifestVersion = '0.2.0'
 $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 
 $ArchiveExtensions = @('.zip', '.7z')

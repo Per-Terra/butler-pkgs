@@ -1,0 +1,323 @@
+# yaml-language-server: $schema=http://json-schema.org/draft-07/schema#
+
+$id: https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+$schema: http://json-schema.org/draft-07/schema#
+
+title: BUtler Package Manifest v0.2.0
+
+###################################################################################################
+# このファイルはBUtlerで用いられるパッケージマニフェストのスキーマであり、
+# かつ現時点で唯一のドキュメントです。
+# これはDebian Policy及びWindows Package ManagerのManifest Schemaを参考に作成されました。
+#
+# v0.1.0からの変更点:
+#   - Install.Strictを追加
+#
+# Debian Policy:
+#   - https://www.debian.org/doc/debian-policy/
+#   - https://www.debian.or.jp/community/devel/debian-policy-ja/policy.ja.html/
+# Windows Package Manager:
+#   - https://learn.microsoft.com/en-us/windows/package-manager/package/manifest
+#   - https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.5.0
+###################################################################################################
+
+definitions:
+  Identifier:
+    description: 英数字と連続しない記号(+-.)で構成される文字列
+    type: string
+    pattern: ^[0-9A-Za-z]+(?:[+\-.][0-9A-Za-z]+)*$
+  DisplayName:
+    description: 前後に空白を含まない文字列
+    type: string
+    pattern: ^\S(?:.*\S)?$
+  FullDate:
+    description: ISO 8601形式(YYYY-MM-DD)の日付
+    type: string
+    pattern: ^\d{4}-\d{2}-\d{2}$
+  Section:
+    description: パッケージの分類
+    type: string
+    enum:
+      - Core
+      - Plugin/Filter
+      - Plugin/Input
+      - Plugin/Output
+      - Plugin/Color
+      - Plugin/Language
+      - Plugin/Other
+      - Script
+      - Config
+      - Other
+  Architecture:
+    description: パッケージが対応するアーキテクチャ
+    type: string
+    enum: [x86, x64]
+  PackageRelationship:
+    description: パッケージの相互関係を示す文字列
+    examples:
+      - aviutl (>= 1.00)
+      - exedit (= 0.92)
+      - rikkymodule
+    type: string
+    pattern: |- # エスケープが面倒なのでわざと改行
+      ^([0-9A-Za-z]+(?:[+\-.][0-9A-Za-z]+)*)(?: *\( *(<<|<=|=|>=|>>) *([0-9A-Za-z]+(?:[+\-.][0-9A-Za-z]+)*) *\))?$
+  Url:
+    description: httpまたはhttpsで始まるURL
+    type: string
+    pattern: ^[Hh][Tt][Tt][Pp][Ss]?://
+  Path:
+    description: ファイルのパスを示す文字列
+    type: string
+    pattern: ^[^"*/:<>?\\|]+(?:/[^"*/:<>?\\|]+)*$
+  FileName:
+    description: ファイル名を示す文字列
+    type: string
+    pattern: ^[^"*/:<>?\\|]+$
+  Sha256:
+    description: SHA256ハッシュ値を示す文字列
+    type: string
+    pattern: ^[0-9a-f]{64}$
+  InstallMethod:
+    description: ファイルのインストール方法
+    type: string
+    enum: [SymbolicLink, Copy]
+  Install:
+    description: ファイルのインストールに必要な情報
+    type: object
+    properties:
+      TargetPath:
+        description: ファイルのインストール先のパス
+        $ref: "#/definitions/Path"
+      Strict:
+        description: |-
+          ファイルのインストール先のパスに厳密に従うかどうか
+          例えば、パッケージマネージャーは通常TargetPathに関わらずscriptフォルダー直下にファイルをインストールしないが、このフィールドがtrueのときはインストールする
+        type: boolean
+        default: false
+      Method:
+        description: |-
+          ファイルのインストール方法
+          - SymbolicLink: シンボリックリンクを作成する (既定)
+          - Copy: ファイルをコピーする (設定ファイルの既定)
+        $ref: "#/definitions/InstallMethod"
+        default: SymbolicLink
+      ConfFile:
+        description: |-
+          ファイルが設定ファイル(ユーザーによる変更が想定されている)かどうか
+          このフィールドがtrueのとき、InstallのMethodは指定されていない限りCopyになる
+          ユーザーによって変更された設定ファイルは、ユーザーが望まない限りアップグレードの際などに上書きされず、通常のアンインストール時にも削除されない
+        type: boolean
+        default: false
+    required:
+      - TargetPath
+  FileInArchive:
+    description: アーカイブ内のファイルの情報
+    type: object
+    properties:
+      Path:
+        description: アーカイブ内のファイルのパス
+        $ref: "#/definitions/Path"
+      Sha256:
+        description: |-
+          ファイルのSHA256ハッシュ値
+        $ref: "#/definitions/Sha256"
+      Files:
+        description: アーカイブ内のファイルの情報
+        type: array
+        items:
+          $ref: "#/definitions/FileInArchive"
+      Install:
+        $ref: "#/definitions/Install"
+    required:
+      - Path
+      - Sha256
+    anyOf:
+      - oneOf:
+          - required:
+              - Files
+          - required:
+              - Install
+      - not:
+          required:
+            - Files
+            - Install
+  File:
+    description: パッケージを構成するファイルの情報
+    type: object
+    properties:
+      SourceUrl:
+        description: httpまたはhttpsで始まるファイルのURL
+        $ref: "#/definitions/Url"
+      FileName:
+        description: ファイル名 (SourceUrlの末尾と一致する場合は省略可)
+        $ref: "#/definitions/FileName"
+      Sha256:
+        description: ファイルのSHA256ハッシュ値
+        $ref: "#/definitions/Sha256"
+      Files:
+        description: アーカイブ内のファイルの情報
+        type: array
+        items:
+          $ref: "#/definitions/FileInArchive"
+      Install:
+        $ref: "#/definitions/Install"
+    required:
+      - SourceUrl
+      - Sha256
+    oneOf:
+      - required:
+          - Install
+      - required:
+          - Files
+
+type: object
+
+properties:
+  Identifier:
+    description: |-
+      パッケージごとに一意に与えられる識別子
+      英数字と連続しない記号(+-.)で構成される
+    $ref: "#/definitions/Identifier"
+  DisplayName:
+    description: パッケージの表示名 (Identifierと同じ場合は省略可)
+    $ref: "#/definitions/DisplayName"
+  Version:
+    description: |-
+      パッケージのバージョン
+      英数字と連続しない記号(+-.)で構成される
+    $ref: "#/definitions/Identifier"
+  ReleaseDate:
+    description: パッケージのリリース日 (YYYY-MM-DD)
+    $ref: "#/definitions/FullDate"
+  Section:
+    description: パッケージの分類
+    $ref: "#/definitions/Section"
+  Architecture:
+    description: |- # エスケープが面倒なのでわざと改行
+      パッケージが対応するアーキテクチャ (既定: x86)
+    $ref: "#/definitions/Architecture"
+    default: x86
+
+  # 以下のフィールドはパッケージの相互関係を表します。
+  # それぞれの意味はDebian Policyに準拠します。
+  # ref:
+  #   - https://manpages.debian.org/wheezy/dpkg-dev/deb-control.5.ja.html
+  #   - https://www.debian.org/doc/debian-policy/ch-relationships.html
+  #   - https://www.debian.or.jp/community/devel/debian-policy-ja/policy.ja.html/ch-relationships.html
+
+  Depends:
+    description: |-
+      このパッケージが完全に依存するパッケージ
+      パッケージは、このフィールドに列挙されたパッケージがすべてインストールされていなければ動作しない
+      パッケージマネージャーは、このフィールドに列挙されたパッケージが全てインストールされない限り、このパッケージをインストールしない
+    type: array
+    items:
+      $ref: "#/definitions/PackageRelationship"
+  Recommends:
+    description: |-
+      このパッケージが強く依存するパッケージ
+      パッケージは、このフィールドに列挙されたパッケージがインストールされていなくても動作するが、理由がない限りインストールすることが推奨される
+      例えば、あるスクリプトはrikkymoduleが無くても動作するが、動作速度のためにrikkymoduleのインストールを推奨している
+    type: array
+    items:
+      $ref: "#/definitions/PackageRelationship"
+  Suggests:
+    description: |-
+      インストールされているとよりこのパッケージがより便利になるパッケージ
+      このフィールドに列挙されたパッケージによってこのパッケージの有用性が(おそらく)向上するけれども、それらをインストールしない選択もまた完全に合理的であることを示す
+    type: array
+    items:
+      $ref: "#/definitions/PackageRelationship"
+  Enhances:
+    description: |-
+      このパッケージが有用性を向上させるであろうパッケージ
+      Suggestsと似ているが、逆向きに作用する
+    type: array
+    items:
+      $ref: "#/definitions/PackageRelationship"
+  Breaks:
+    description: |-
+      このパッケージが破壊するパッケージ
+      パッケージは、このフィールドに列挙されたパッケージの動作を妨げる
+      通常はパッケージの以前のバージョンを指定し、ユーザーがそれをアップグレードすることを期待する
+      パッケージマネージャーは、このフィールドに列挙されたパッケージがインストールされている限り、このパッケージをインストールしない
+      このパッケージが今後も動作を妨げ続ける、またはパッケージが既にメンテンナンスされていないなど、アップグレードによって解決する見込みがない場合はConflictsを使用する
+    type: array
+    items:
+      $ref: "#/definitions/PackageRelationship"
+  Conflicts:
+    description: |-
+      このパッケージが競合するパッケージ
+      パッケージは、このフィールドに列挙されたパッケージと同名のファイル、または同じ機能を提供し続け、互いの動作を妨げる
+      パッケージマネージャーは、このフィールドに列挙されたパッケージがインストールされている限り、このパッケージをインストールしない
+    type: array
+    items:
+      $ref: "#/definitions/PackageRelationship"
+  Provides:
+    description: |-
+      このパッケージが提供する仮想パッケージです。
+      このフィールドに列挙されたパッケージはインストールされているものとして扱われ、依存関係を満たしたり競合したりするようになります。
+      例えば、あるパッケージの改善版がリリースされたとき、元のパッケージをProvidesすれば、元のパッケージに依存しているパッケージの依存関係も満たすことができる
+    type: array
+    items:
+      $ref: "#/definitions/PackageRelationship"
+  Replaces:
+    description: |-
+      このパッケージによって一部のファイルが上書きされるパッケージ
+      通常は既に他のパッケージによって提供されているファイルを上書きすることはできないが、このフィールドに列挙されたパッケージによって提供されているファイルは上書きすることができる
+      例えば、LuaJITは拡張編集によって提供されているlua51.dllを上書きする
+      すべてのファイルが上書きされる場合はConflictsを使用する
+    type: array
+    items:
+      $ref: "#/definitions/PackageRelationship"
+
+  InstalledSize:
+    description: パッケージのインストールに必要なディスク容量 (KiB)
+    type: integer
+    minimum: 0
+  Developer:
+    description: |-
+      パッケージの開発者
+      パッケージマニフェストの作成者は含まない
+    type: array
+    items:
+      $ref: "#/definitions/Identifier"
+  Description:
+    description: |-
+      パッケージの説明
+      一行目はパッケージの概要として利用される
+    type: string
+  Website:
+    description: |-
+      パッケージの開発者によって提供されるウェブサイト
+      パッケージを入手できたり、詳細を知ることができたりするウェブサイトのURLを指定する
+    type: array
+    items:
+      type: string
+      $ref: "#/definitions/Url"
+  Files:
+    description: |-
+      パッケージを構成するファイルの情報
+      パッケージがファイルを含まない場合(メタパッケージなど)は省略可
+    type: array
+    items:
+      $ref: "#/definitions/File"
+  ConfFiles:
+    description: |-
+      パッケージに含まれていないが、パッケージによって生成される設定ファイルのパス
+      このフィールドに列挙されたファイルは、パッケージの完全アンインストール時の削除対象となる
+    type: array
+    items:
+      $ref: "#/definitions/Path"
+  ManifestVersion:
+    description: パッケージマニフェストのバージョン
+    type: string
+    enum: [0.1.0]
+
+required:
+  - Identifier
+  - Version
+  - Section
+  - Developer
+  - Description
+  - ManifestVersion

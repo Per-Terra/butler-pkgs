@@ -1,4 +1,4 @@
-$ManifestVersion = '0.1.0'
+$ManifestVersion = '0.2.0'
 $schemaPath = Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifest/$ManifestVersion.json"
 
 try {
