@@ -22,7 +22,7 @@ Files:
   - Path: MotionTrackingMKIIPlus.auf
     Sha256: 6abafbc790c9e660e5bc7ebd3c7ffc8083deb11d8cda45bfdc2adc424a2c1fba
     Install:
-      TargetPath: MotionTrackingMKIIPlus.auf
+      TargetPath: plugins/MotionTrackingMKIIPlus.auf
   - Path: README.ja.md
     Sha256: 79bccdbcb3f191a728c4863a07fdea6f39e0734466b58a730ccdc46e1ba8d220
   - Path: README.md
@@ -38,11 +38,9 @@ Files:
   - Path: MotionTracking_model/haarcascade_frontalface_default.xml
     Sha256: 0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0
     Install:
-      TargetPath: MotionTracking_model/haarcascade_frontalface_default.xml
-      ConfFile: true
+      TargetPath: plugins/MotionTracking_model/haarcascade_frontalface_default.xml
   - Path: MotionTracking_model/haarcascade_profileface.xml
     Sha256: b39a4a3be45539db146a7fc1d3e761a292c196eb88421185e6a615b3055e612d
     Install:
-      TargetPath: MotionTracking_model/haarcascade_profileface.xml
-      ConfFile: true
+      TargetPath: plugins/MotionTracking_model/haarcascade_profileface.xml
 ManifestVersion: 0.2.0
