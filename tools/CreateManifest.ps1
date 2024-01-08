@@ -210,7 +210,7 @@ function Get-FilesInArchive {
         }
         $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandDir))
       }
-      if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '.exe$')) {
+      if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
         $file.Install.Add('Method', 'Copy')
       }
     }
