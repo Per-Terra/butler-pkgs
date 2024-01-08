@@ -24,6 +24,7 @@ Files:
     Sha256: fb27c3ab520bad83edfcbb43587379e5a8cf4b51cc51d3fd8c87eaa5219608e5
     Install:
       TargetPath: CreateDark.exe
+      Method: Copy
   - Path: CREDITS.md
     Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: DarkenWindow.aul
