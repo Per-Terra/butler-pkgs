@@ -1,0 +1,50 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: ShowWaveform
+DisplayName: アイテム内音声波形
+Version: 5.0.0
+ReleaseDate: 2023-03-25
+Section: Plugin/Other
+Conflicts:
+- NoScrollText
+InstalledSize: 321
+Developer:
+- hebiiro
+Description: 拡張編集ウィンドウの音声アイテム内に音声波形を表示するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-ShowWaveform
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-ShowWaveform/releases/download/5.0.0/ShowWaveform.5.0.0.zip
+  Sha256: b82952084cc08494cede67546d850e08b78b6fec3a7b6c0bf1ae57308bd016ea
+  Files:
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 59e219fa86e710eae82fb488364679fa6bbab847b812bcf040c0b675466dec45
+  - Path: ShowWaveform.auf
+    Sha256: 2f5e243c1b2b1d56e24dc0e27d92417b88fb3ad7a2f36bd47c6c3be1615a0cff
+    Install:
+      TargetPath: plugins/ShowWaveform.auf
+  - Path: ShowWaveform/Config.ini
+    Sha256: 37da38e54f8576187b502c42c3a99fc2cfc31a2a4d3d2eda36e046cc4d710af7
+    Install:
+      TargetPath: plugins/ShowWaveform/Config.ini
+      ConfFile: true
+  - Path: ShowWaveform/NanoVGd32.dll
+    Sha256: 68aa05e5c9e57aed9a2c550c1cda3b00f1cc93b4b57257c07f06c8fb4fca6a63
+    Install:
+      TargetPath: plugins/ShowWaveform/NanoVGd32.dll
+  - Path: ShowWaveform/ShowWaveform.exe
+    Sha256: 6bcad96f1de765027d44d83e4c488c7545e1d5c7720626898aa1451be26e1fc6
+    Install:
+      TargetPath: plugins/ShowWaveform/ShowWaveform.exe
+      Method: Copy
+  - Path: ShowWaveform/ShowWaveform.ini
+    Sha256: eb97f20ca066693e23bee7b51974d2b3bcef67651d5fb532f0279e7f71f7375f
+    Install:
+      TargetPath: plugins/ShowWaveform/ShowWaveform.ini
+      ConfFile: true
+ManifestVersion: 0.2.0

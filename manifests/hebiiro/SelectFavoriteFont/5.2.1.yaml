@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: SelectFavoriteFont
+DisplayName: お気に入りフォント選択
+Version: 5.2.1
+ReleaseDate: 2022-02-26
+Section: Plugin/Other
+InstalledSize: 67
+Developer:
+- hebiiro
+Description: お気に入り、または最近使ったフォントからフォントを選択できるようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-SelectFavoriteFont
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SelectFavoriteFont/releases/download/5.2.1/SelectFavoriteFont.5.2.1.7z
+  Sha256: 2a123d0b0e2c0b65e09fbe094b91e17bf69daf73aa462ae091928009d3ec208a
+  Files:
+  - Path: LICENSE
+    Sha256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
+  - Path: README.md
+    Sha256: 2e1c0b428c2554a2f00acfe48166d77b510f20edb7f9157f0687ffba91521792
+  - Path: SelectFavoriteFont.auf
+    Sha256: 9b28d8ed217feb08ae693cd549ba788887fcb3b8b1315ae1ff5d1cd0afb25d13
+    Install:
+      TargetPath: plugins/SelectFavoriteFont.auf
+  - Path: SelectFavoriteFont.xml
+    Sha256: d11adeaa3f10978ac65f397f3b629dfb7bb93683a655bb4718d9e04136a87e3e
+    Install:
+      TargetPath: plugins/SelectFavoriteFont.xml
+      ConfFile: true
+ManifestVersion: 0.2.0

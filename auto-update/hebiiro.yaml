@@ -1,3 +1,367 @@
+- Identifier: AddColorCode
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-AddColorCode
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: AdjustDialogPosition
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-AdjustDialogPosition
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: AdjustLastFrame
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-AdjustLastFrame
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: AutoVolume
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-AutoVolume
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: BigDialog
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-BigDialog
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: BuildStairs
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-BuildStairs
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: ConfigChecker
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-ConfigChecker
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: CopyFilter
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-CopyFilter
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: DarkenWindow
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-DarkenWindow
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: DragFilter
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-DragFilter
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: LevelMeter
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-LevelMeter
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: ManyView
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-ManyView
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: NoScrollText
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-NoScrollText
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: ObjectExplorer
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-ObjectExplorer
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: OptimizeEditBox
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-OptimizeEditBox
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: OutputSeq
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-OutputSeq
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SaveImage
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SaveImage
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: script-sort-patch
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-script_sort_patch
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SelectAliasFolder
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SelectAliasFolder
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SelectEasing
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SelectEasing
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SelectFavoriteFont
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SelectFavoriteFont
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SelectScene
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SelectScene
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SetZoom
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SetZoom
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: ShowWaveform
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-ShowWaveform
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SplitText
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SplitText
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SplitWindow
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SplitWindow
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: SwitchSettings
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-SwitchSettings
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
+- Identifier: Toumei
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-Toumei
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1
+
 - Identifier: Ultimate
   Developer: hebiiro
   Enable: true
@@ -7,3 +371,16 @@
   Asset: ^ultimate_.*\.zip$
   Version:
     from: tag_name
+
+- Identifier: UniteWindow
+  Developer: hebiiro
+  Enable: true
+  Type: GitHub
+  Owner: hebiiro
+  Repository: AviUtl-Plugin-UniteWindow
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+    regex:
+      find: ^.*?(\d[\d.]*\d).*$
+      replace: $1

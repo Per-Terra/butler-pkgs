@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: AdjustLastFrame
+DisplayName: 最終フレーム自動調整
+Version: 2.0.0
+ReleaseDate: 2022-05-11
+Section: Plugin/Other
+InstalledSize: 12
+Developer:
+- hebiiro
+Description: タイムラインを編集したとき、最終フレームを自動的に調整するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-AdjustLastFrame
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-AdjustLastFrame/releases/download/2.0.0/AdjustLastFrame.2.0.0.zip
+  Sha256: 6ec01f049d4d4d67533bdbe7d67a4ec1f10fc961866982c89b48ba728d684bfa
+  Files:
+  - Path: AdjustLastFrame.auf
+    Sha256: 2e7c9917d5611b58a3ef7562b9d711957c369e54616eeb70cc64359e349acbe1
+    Install:
+      TargetPath: plugins/AdjustLastFrame.auf
+  - Path: LICENSE
+    Sha256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
+  - Path: README.md
+    Sha256: 2c8ff166fdd7f01c06b192d3a08396dc1136061d858aa10ab7dac7a4f0c99211
+ManifestVersion: 0.2.0

@@ -103,9 +103,9 @@ function Get-FilesInArchive {
         $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
-    elseif ($Url.StartsWith('https://github.com/hebiiro/anti.aviutl.ultimate.plugin')) { # hebiiro/anti.aviutl.ultimate.plugin用の例外
-      if (($relativePath -in 'Ultimate.auf', 'Ultimate.aul') -or $relativePath.StartsWith('UltimateAddin/') -or $relativePath.StartsWith('UltimateConfig/')) {
-        if ($_.Extension -in $ConfExtensions -and -not $relativePath.StartsWith('UltimateConfig/Skin/')) {
+    elseif ($Url.StartsWith('https://github.com/hebiiro/')) { # hebiiro氏用の例外
+      if ($_.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($_.Extension -ne '.wav'))) {
+        if ($_.Extension -in $ConfExtensions -and -not ($relativePath -match '/Skin/')) {
           $file.Add('Install', @{
               TargetPath = ($relativePath -replace '^', 'plugins/')
               ConfFile   = $true

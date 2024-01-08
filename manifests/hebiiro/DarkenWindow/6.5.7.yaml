@@ -1,0 +1,290 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: DarkenWindow
+DisplayName: 黒窓
+Version: 6.5.7
+ReleaseDate: 2022-07-28
+Section: Plugin/Other
+InstalledSize: 1121
+Developer:
+- hebiiro
+Description: AviUtlの見た目をダークモードにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow/releases/download/6.5.7/DarkenWindow.6.5.7.zip
+  Sha256: 92dac4105429bb507ef77d4bfcf9fd22fc050da74c36f2224723dcb0c44c1613
+  Files:
+  - Path: CreateDark.exe
+    Sha256: fb27c3ab520bad83edfcbb43587379e5a8cf4b51cc51d3fd8c87eaa5219608e5
+    Install:
+      TargetPath: CreateDark.exe
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: DarkenWindow.aul
+    Sha256: ebbccea04e846b072b1a9a0bd6f2bacdfbe0c58c6f40f1c8f6e628afc7dfdfb7
+    Install:
+      TargetPath: plugins/DarkenWindow.aul
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 3c83c9ca1c9576b5700747901685afe1e0cf12c295541ebdda55ad9a579fede9
+  - Path: DarkenWindow/DarkenWindowSettings.xml
+    Sha256: 4d2c4af1dad897a180053e4e1d01f34e6cbcdd214e4a33ce80590f6b50d4a65b
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSettings.xml
+      ConfFile: true
+  - Path: DarkenWindow/README.txt
+    Sha256: 5b30e2beb722b53fd24794422e23add4d4ad6c926a8cf54a8a7b4fe7e2edef54
+    Install:
+      TargetPath: plugins/DarkenWindow/README.txt
+  - Path: DarkenWindow/Skin/AstroDark.xml
+    Sha256: 13444fb5fbbc63dfd5c53489009824bd77f7e711ce93d031515c265e450dd053
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/AstroDark.xml
+  - Path: DarkenWindow/Skin/CherryDark.xml
+    Sha256: 2f2fa812ed5420bbe71a8e321d281f41acf2a5179a4c17185a3241a71204819d
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/CherryDark.xml
+  - Path: DarkenWindow/Skin/DiscordDark.xml
+    Sha256: 6eda385afb5be819fe95d1418dca55b3fc2870ccd46b9f4254145119ff57a193
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/DiscordDark.xml
+  - Path: DarkenWindow/Skin/DiscordLight.xml
+    Sha256: 7d9cbbbd7c209660c65d97357726e95a730749f779215067b2041fdfd81a65a7
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/DiscordLight.xml
+  - Path: DarkenWindow/Skin/minaDark.xml
+    Sha256: e61fdb7a61a215295909745d88555f8906a96838b0252826b6dc1351e54894e1
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaDark.xml
+  - Path: DarkenWindow/Skin/minaLight.xml
+    Sha256: e7ce1b6c6819d67e71cf92a3478cc858891d57f16dfeb8a8356a812955b980f6
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaLight.xml
+  - Path: DarkenWindow/Skin/RoundDarkLime.xml
+    Sha256: 0f2ba93457b06447fa2b60de8a01f4f60d60f6cfd755701aa893495c12b228a7
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/RoundDarkLime.xml
+  - Path: DarkenWindow/Skin/RoundDarkPink.xml
+    Sha256: bf57abb307cc3e1f7e6267ca1d9c5ea51ef180133298743d0ef72d8b232d3e1a
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/RoundDarkPink.xml
+  - Path: DarkenWindow/Skin/RoundDarkSky.xml
+    Sha256: 299f90721081ccaccbbcf21b4cbde96c925c5ba5cdb49e1f377ff85df2a08285
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/RoundDarkSky.xml
+  - Path: DarkenWindow/Skin/Vivid Light.xml
+    Sha256: 10de2f43a41bac4d719233c4b23fb253d124a35b4b7d9eaf46aaad513643762e
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Vivid Light.xml
+  - Path: DarkenWindow/Skin/黒窓・暗.xml
+    Sha256: f526606e5fc442b22d6b78a32d474be87aa80800cb9d0f679372a2383447003b
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/黒窓・暗.xml
+  - Path: DarkenWindow/Skin/黒窓・明.xml
+    Sha256: 3bdc0ed33f4c5a3326511d3e22dd2a5db50e387432e356a640efea9789e0a78c
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/黒窓・明.xml
+  - Path: DarkenWindow/Skin/AstroDark/_Settings.xml
+    Sha256: 13014b7f31ef715606bb3d7a8c2761e87d6099cac74b5329652c0adb8ad3fac0
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/AstroDark/_Settings.xml
+  - Path: DarkenWindow/Skin/AstroDark/Button.xml
+    Sha256: e63a0f783419f3fdfeab5eb31809a4c0749038f1c7413da0526326b4d4fe045c
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/AstroDark/Button.xml
+  - Path: DarkenWindow/Skin/CherryDark/_Settings.xml
+    Sha256: e440d905cc9f9583e60048996d00eac03d3aa3d98b72a242ac40dd0757dbb465
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/CherryDark/_Settings.xml
+  - Path: DarkenWindow/Skin/Common/3D_Button.xml
+    Sha256: 4c2bcfa1bd8d81080b695f9762f58a2332cf961f3c50879099ad5a5e4a4b9b8c
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/3D_Button.xml
+  - Path: DarkenWindow/Skin/Common/3D_Header.xml
+    Sha256: 62d9e6b2ea2f1c9518d381df04de351ff1edbbd7ee038ccf1a8b624affd6f85a
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/3D_Header.xml
+  - Path: DarkenWindow/Skin/Common/3D_ScrollBar.xml
+    Sha256: ce0bc0b4d006115e6cd96f3fc26cc34c82c22756f248c8014d8bfcbab156147c
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/3D_ScrollBar.xml
+  - Path: DarkenWindow/Skin/Common/3D_Spin.xml
+    Sha256: 47af567b2ac6e907681e37cd639d29252f109c722c19fe4f764744e7f4aed4ff
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/3D_Spin.xml
+  - Path: DarkenWindow/Skin/Common/3D_Static.xml
+    Sha256: 5e0b34c3c2205be0f75ac7650b608d6e625d85ddf8c2400317bb00181605da18
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/3D_Static.xml
+  - Path: DarkenWindow/Skin/Common/Button.xml
+    Sha256: 3090f57049b12a6ecc7676e554f30f2368a044677fa0950413b1f6d8835d22f4
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Button.xml
+  - Path: DarkenWindow/Skin/Common/ComboBox.xml
+    Sha256: c687c2d8a67f3974d340342172bfe853588d26f148e1c38e751f3a93f661f9ea
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/ComboBox.xml
+  - Path: DarkenWindow/Skin/Common/CommandModule.xml
+    Sha256: f41466aa1a2d4faff0d459ed5226250f73301d61d42f762a33f11a846b07fe63
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/CommandModule.xml
+  - Path: DarkenWindow/Skin/Common/CommonItemsDialog.xml
+    Sha256: 4f174a5763b181545ef3c0aeb39e44737b425d53d62929e750ba1bdd137abbec
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/CommonItemsDialog.xml
+  - Path: DarkenWindow/Skin/Common/Dialog.xml
+    Sha256: ba1ba3d2b30535b675c5e7555cd3281503aa16dfb374f144626c951495bc9c28
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Dialog.xml
+  - Path: DarkenWindow/Skin/Common/Edit.xml
+    Sha256: d6e9bec9e4d516c34e738adce31cc613c9987643384cfcd130fd54540be276c0
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Edit.xml
+  - Path: DarkenWindow/Skin/Common/ExEdit.xml
+    Sha256: 1b5c3c1186458b71c92dcf1d84bcaef042d4c36a0c9beef2a1f96e751bfee881
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/ExEdit.xml
+  - Path: DarkenWindow/Skin/Common/Header.xml
+    Sha256: dc5a067b9e4712e91f105f63b1a0eb44d4dcde76a65bf22360c363dd241bde85
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Header.xml
+  - Path: DarkenWindow/Skin/Common/ListBox.xml
+    Sha256: d41dbf8d9b28547c18ab1be55697ce59de6ec001b6603adc4e27f293a23d9cf7
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/ListBox.xml
+  - Path: DarkenWindow/Skin/Common/ListView.xml
+    Sha256: 6510be3c5e5700573db54e9f45f68c811b4506b6e0879dc4b4ab3bc69a45ff8d
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/ListView.xml
+  - Path: DarkenWindow/Skin/Common/Menu.xml
+    Sha256: cc3f2a7dc6a7956138ee2e65f404c5d00f078c65d7db842b099a6957830a6b3f
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Menu.xml
+  - Path: DarkenWindow/Skin/Common/PreviewPane.xml
+    Sha256: 3fca9e51beb735aae4180de76b0da524b32a3f3f560d49cbec18814643fb656c
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/PreviewPane.xml
+  - Path: DarkenWindow/Skin/Common/ScrollBar.xml
+    Sha256: 44b477769e40cc2eacc6e176df6673bbd6e6a9427c395f3d5582240650cb24db
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/ScrollBar.xml
+  - Path: DarkenWindow/Skin/Common/Spin.xml
+    Sha256: 3c13c0cf55a4eb91958ed0d3b550530e64ef098aa67fb3789873563b51d7f2e3
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Spin.xml
+  - Path: DarkenWindow/Skin/Common/Static.xml
+    Sha256: 41c67488e589c853222df9412c6e4f8a1a241083c4085d8a099629838eb1c181
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Static.xml
+  - Path: DarkenWindow/Skin/Common/Tab.xml
+    Sha256: 589bfb357734365488a1275f35d233fc06482beb2a6f98698aa59f42092774cb
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Tab.xml
+  - Path: DarkenWindow/Skin/Common/ToolBar.xml
+    Sha256: d8a2200d10e32f74c70be8c5f72f936e61e723b1a39794a5739547f368319ea2
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/ToolBar.xml
+  - Path: DarkenWindow/Skin/Common/ToolTip.xml
+    Sha256: 0d188074144470315245d8110480972dd72fe19bd805d40738b3355b0ca9ed12
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/ToolTip.xml
+  - Path: DarkenWindow/Skin/Common/TrackBar.xml
+    Sha256: 38f7c219a87c54e885020a2adb155fa239dfeebaafe68452b21eb8c2eb748bac
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/TrackBar.xml
+  - Path: DarkenWindow/Skin/Common/TreeView.xml
+    Sha256: 2a0588044092871f35c373c445e5f7d081bdff23ecb85fcfb2623412db1e771e
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/TreeView.xml
+  - Path: DarkenWindow/Skin/Common/Window.xml
+    Sha256: 3eafda84b97425bacd4f0315537ac767b9b1fae2d163620dd87bc3058eeb5195
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Common/Window.xml
+  - Path: DarkenWindow/Skin/DiscordDark/_Settings.xml
+    Sha256: 7749135d03e3342d322279926387dfbcce0a7a83fa8e0695348fd93cf88b7935
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/DiscordDark/_Settings.xml
+  - Path: DarkenWindow/Skin/DiscordLight/_Settings.xml
+    Sha256: c2c26c54327ee39cde44edc7f34a2dfb93ac7bfcd57a7c67cc5a923b9d0c1c4f
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/DiscordLight/_Settings.xml
+  - Path: DarkenWindow/Skin/minaDark/_Settings.xml
+    Sha256: 926f2ed2ee12bacfdb51ab7b2f866591fa2575f6f40ebcada6c7fac374873e2e
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaDark/_Settings.xml
+  - Path: DarkenWindow/Skin/minaDark/Button.xml
+    Sha256: ae19a85c23ce665574c522798a9ed1a965217c67d595d53ff20ec499ed34e26b
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaDark/Button.xml
+  - Path: DarkenWindow/Skin/minaDark/ComboBox.xml
+    Sha256: bf415d8ba22b834b762aa86d3b45a96e51b73303bc78eef4c4f99618729d6590
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaDark/ComboBox.xml
+  - Path: DarkenWindow/Skin/minaDark/Menu.xml
+    Sha256: 79d50508ed77b0a66e06f8a8c3da8886ffcbdadf9e8d34e37b724645606768e3
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaDark/Menu.xml
+  - Path: DarkenWindow/Skin/minaDark/ScrollBar.xml
+    Sha256: 1daac5d399dd6fb374a3c96a49270312f6ba8f71b1bb2b1214640d422947d8a9
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaDark/ScrollBar.xml
+  - Path: DarkenWindow/Skin/minaDark/TrackBar.xml
+    Sha256: f565fdeeab15b3b8ecba155826f1b843943b6ebb6bdd041c7faf2a07f3cc45c5
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaDark/TrackBar.xml
+  - Path: DarkenWindow/Skin/minaLight/_Settings.xml
+    Sha256: d4412ddae8ff20b2c31fa3b4475129505719bc9f68b43a7d2a48284fda797528
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaLight/_Settings.xml
+  - Path: DarkenWindow/Skin/minaLight/Button.xml
+    Sha256: ae19a85c23ce665574c522798a9ed1a965217c67d595d53ff20ec499ed34e26b
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaLight/Button.xml
+  - Path: DarkenWindow/Skin/minaLight/ComboBox.xml
+    Sha256: bf415d8ba22b834b762aa86d3b45a96e51b73303bc78eef4c4f99618729d6590
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaLight/ComboBox.xml
+  - Path: DarkenWindow/Skin/minaLight/Menu.xml
+    Sha256: 79d50508ed77b0a66e06f8a8c3da8886ffcbdadf9e8d34e37b724645606768e3
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaLight/Menu.xml
+  - Path: DarkenWindow/Skin/minaLight/ScrollBar.xml
+    Sha256: 1daac5d399dd6fb374a3c96a49270312f6ba8f71b1bb2b1214640d422947d8a9
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaLight/ScrollBar.xml
+  - Path: DarkenWindow/Skin/minaLight/TrackBar.xml
+    Sha256: f565fdeeab15b3b8ecba155826f1b843943b6ebb6bdd041c7faf2a07f3cc45c5
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/minaLight/TrackBar.xml
+  - Path: DarkenWindow/Skin/RoundDarkLime/_Settings.xml
+    Sha256: 05815314bc3a47ec48bbdcbadabfea42e26275ea86d1fbb2dad339905cd26c44
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/RoundDarkLime/_Settings.xml
+  - Path: DarkenWindow/Skin/RoundDarkPink/_Settings.xml
+    Sha256: 3d24d69cda06db98ce28e0195773e9a41423a3e98441cc3b92f7ba3d047f430e
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/RoundDarkPink/_Settings.xml
+  - Path: DarkenWindow/Skin/RoundDarkSky/_Settings.xml
+    Sha256: f674aca0854cb1ef6e4752bd4031582e8f7758b1078bf9ed2bb81a4b621b9cca
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/RoundDarkSky/_Settings.xml
+  - Path: DarkenWindow/Skin/Vivid Light/_Settings.xml
+    Sha256: b83738e7582bd341733d6d756398ee5c0333ef1815216ab0c4442f44980f473b
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/Vivid Light/_Settings.xml
+  - Path: DarkenWindow/Skin/黒窓・明/_Settings.xml
+    Sha256: 6cf01184eda80d6751d9afda004198029691a234b1aa3cb65f2c219ee1bfa5d9
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/黒窓・明/_Settings.xml
+  - Path: DarkenWindow/Skin/黒窓・明/ScrollBar.xml
+    Sha256: 7cfd2616b9020284f747bdbc54bca57c36a97c330f552d7a038426d3c752c6f1
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/黒窓・明/ScrollBar.xml
+  - Path: DarkenWindow/Skin/黒窓・暗/_Settings.xml
+    Sha256: 50acb97ec0582788816a1bc3fbe689c281b993776c65ec336b90ba4c1a31b424
+    Install:
+      TargetPath: plugins/DarkenWindow/Skin/黒窓・暗/_Settings.xml
+ManifestVersion: 0.2.0

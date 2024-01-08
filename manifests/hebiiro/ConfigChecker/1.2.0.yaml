@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: ConfigChecker
+DisplayName: コンフィグチェッカー
+Version: 1.2.0
+ReleaseDate: 2023-06-24
+Section: Plugin/Other
+InstalledSize: 41
+Developer:
+- hebiiro
+Description: 動画を出力するとき、設定が適正かどうかチェックするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-ConfigChecker
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-ConfigChecker/releases/download/1.2.0/ConfigChecker.1.2.0.zip
+  Sha256: fbb831393022aa978b505255f56d35409884c0a11590eaebfd847918d6fdf8d9
+  Files:
+  - Path: ConfigChecker.auf
+    Sha256: c37b5f41a91bd882c438f306635a29f40efe0e58934b71023530aebc04d29981
+    Install:
+      TargetPath: plugins/ConfigChecker.auf
+  - Path: CREDITS.md
+    Sha256: 90ff525ea6cc3c4a4cf4a01e87b2c9ff19616d92904af595d466540d5c79ffd5
+  - Path: LICENSE
+    Sha256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
+  - Path: README.md
+    Sha256: 49622c34debff8eaa21e684f8dcd18aaff471fd67f76acefe8d641432cedc162
+ManifestVersion: 0.2.0

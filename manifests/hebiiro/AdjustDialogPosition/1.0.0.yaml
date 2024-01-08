@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: AdjustDialogPosition
+DisplayName: ダイアログ位置調整
+Version: 1.0.0
+ReleaseDate: 2022-07-12
+Section: Plugin/Other
+InstalledSize: 38
+Developer:
+- hebiiro
+Description: ダイアログの表示位置がモニタからはみ出さないように調整するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-AdjustDialogPosition
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-AdjustDialogPosition/releases/download/1.0.0/AdjustDialogPosition.1.0.0.zip
+  Sha256: 4e8ead7c7d8a9e04f4fa17c93f073cabf33151386414bbdc12005209f8b26b3f
+  Files:
+  - Path: AdjustDialogPosition.auf
+    Sha256: fffe9878828d20666d04667f6e23ed41cae6351ea7d4fcdcb022c5d13a8e339c
+    Install:
+      TargetPath: plugins/AdjustDialogPosition.auf
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 349eb07b208c59a90f1132a0c87a7fea220682b32a3431fa2eb2acc54245f82d
+ManifestVersion: 0.2.0

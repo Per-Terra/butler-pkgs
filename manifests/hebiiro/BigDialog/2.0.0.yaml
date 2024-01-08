@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: BigDialog
+DisplayName: ダイアログ巨大化
+Version: 2.0.0
+ReleaseDate: 2022-02-24
+Section: Plugin/Other
+InstalledSize: 56
+Developer:
+- hebiiro
+Description: AviUtlのダイアログを巨大化してテキストが途切れないようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-BigDialog
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-BigDialog/releases/download/2.0.0/BigDialog.2.0.0.7z
+  Sha256: 4a60703194b880c775acdcb36d8908467f444bcf7d68ba8ca3f3afde53f63a97
+  Files:
+  - Path: BigDialog.aul
+    Sha256: 7b5fef6424e42ede3d75e06fc70d17908466533727742955979cabacad1de46c
+    Install:
+      TargetPath: plugins/BigDialog.aul
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 6552a536ec0e18dc63cd80a83d183fdacb098a817865298b54ec56417e88fe7b
+ManifestVersion: 0.2.0

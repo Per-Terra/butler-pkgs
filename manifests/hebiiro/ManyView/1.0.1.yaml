@@ -1,0 +1,46 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: ManyView
+DisplayName: 複数ビューア
+Version: 1.0.1
+ReleaseDate: 2022-03-15
+Section: Plugin/Other
+InstalledSize: 273
+Developer:
+- hebiiro
+Description: 映像確認用の複数のビューアを表示するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-ManyView
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-ManyView/releases/download/1.0.1/ManyView.1.0.1.zip
+  Sha256: d2cccfaccb88b7868d6a0fda8db042d1428b23601ca3b17cedddaff48caeb366
+  Files:
+  - Path: auls_memref.ini
+    Sha256: d329a1de0cedc02390ac7d56eb9099442b789730b41a27209fa7119dd6a4e937
+    Install:
+      TargetPath: plugins/auls_memref.ini
+  - Path: LICENSE
+    Sha256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
+  - Path: ManyView.auf
+    Sha256: 87ddd8f66d92ddebd6b8ab7ac5c647de46bb9611df67592aa1ab31293530e5da
+    Install:
+      TargetPath: plugins/ManyView.auf
+  - Path: README.md
+    Sha256: 91448ee97a6da93fee8a46f37aba038d64fd31241334fdc89ac5b4a6f3a30125
+  - Path: ManyView/ManyView.exe
+    Sha256: f5263113ab74e39666f238dd80060cb280c6a9b75274d8d047382f8bce4e0e92
+    Install:
+      TargetPath: plugins/ManyView/ManyView.exe
+      Method: Copy
+  - Path: ManyView/ManyViewSettings.xml
+    Sha256: 9c45e9c6506d3a109d87b20a63711ddbaf7ec5ea7bbf14d7a18e7cc32ac1f312
+    Install:
+      TargetPath: plugins/ManyView/ManyViewSettings.xml
+      ConfFile: true
+  - Path: ManyView/ManyViewSystemSettings.xml
+    Sha256: 6bebedf5833e96854acc638137c93a0d98eec95541d531e723fb8f59b972f061
+    Install:
+      TargetPath: plugins/ManyView/ManyViewSystemSettings.xml
+      ConfFile: true
+ManifestVersion: 0.2.0

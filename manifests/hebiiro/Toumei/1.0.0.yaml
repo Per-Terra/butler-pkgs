@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Toumei
+DisplayName: 拡張編集透明化
+Version: 1.0.0
+ReleaseDate: 2022-03-14
+Section: Plugin/Other
+InstalledSize: 16
+Developer:
+- hebiiro
+Description: 拡張編集のウィンドウを透明化するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-Toumei
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-Toumei/releases/download/1.0.0/Toumei.1.0.0.zip
+  Sha256: 686d6a638e0977f1c34c267bf8e1fc5e471498a0e471359b4170ee75d17a7608
+  Files:
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 34b41f3b22f4d372884f9f39664457d97b57bfe6fd93578b6440cffc290b5251
+  - Path: Toumei.auf
+    Sha256: db707aa87160f5989bfeb12d0e7b26953e8edb3d15aea181b44c657fb41b1bad
+    Install:
+      TargetPath: plugins/Toumei.auf
+  - Path: Toumei.ini
+    Sha256: 094dddba13999c63db79fe350fc483c32ae362187576c99cf4a8cb9891250159
+    Install:
+      TargetPath: plugins/Toumei.ini
+      ConfFile: true
+ManifestVersion: 0.2.0

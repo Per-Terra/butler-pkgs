@@ -1,0 +1,126 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: DarkenWindow
+DisplayName: 黒窓
+Version: 3.1.0
+ReleaseDate: 2022-03-26
+Section: Plugin/Other
+InstalledSize: 308
+Developer:
+- hebiiro
+Description: AviUtlの見た目をダークモードにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow/releases/download/3.1.0/DarkenWindow.3.1.0.zip
+  Sha256: 43e8e2765ad228a00536500e5bc4be57556d12d7c0d716f44bf64621f3035a97
+  Files:
+  - Path: aviutl_dark.exe.manifest
+    Sha256: e3a7df934042614be2fd1c35023c35b9d95a9b0e6cff5b3cde91d406fad9bb5e
+    Install:
+      TargetPath: aviutl_dark.exe.manifest
+  - Path: DarkenWindow.aul
+    Sha256: 38a48cf3c0b6d7718606b7fa1be32ca4406adbd39b3288d5ffd086c175a6f2b4
+    Install:
+      TargetPath: plugins/DarkenWindow.aul
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: a3e0c2b09e9a02e34c80d769925d250818d7be6835fad87a4c358e6a4341ae31
+  - Path: DarkenWindow/DarkenWindowSettings.xml
+    Sha256: a668fbc46c91ab39a1009c0913a98acda009319e2998252131056208dbe83be6
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSettings.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_Button.xml
+    Sha256: 8044375869b75674ef3b6e78acdadc3203bbd275303ad79ce343b386005bd790
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_Button.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_ComboBox.xml
+    Sha256: 0159bb9ffd2bf8b0243ba0fe5208002625d6a8d4ad7ce68c1741468883f302c0
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_ComboBox.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_CommandModule.xml
+    Sha256: b1d75ee70f05988d16f60fcdd81a014edede39fb27e793c50b9bc88e25c3af2e
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_CommandModule.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_Dialog.xml
+    Sha256: 01a65cdce150341d6ca7309783a3206bbcf173f70b0a093c717c292d838d7687
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_Dialog.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_Edit.xml
+    Sha256: f4cb1e8b2cff7b3b65a07e50ed5f02557adc5124e881b1617ff4a5505767a0a7
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_Edit.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_ExEdit.xml
+    Sha256: fb2b2c605d069f09fbd68e123d8f4c0d72b2cbc49876726844758355fa53c092
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_ExEdit.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_Header.xml
+    Sha256: 3d6ae6eedba4701414e879a035183b6a0fc172cc90f4a0105e6acca70402a0c8
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_Header.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_ListBox.xml
+    Sha256: bf9ba4ce9fcd64a6ed3f05369b0e7c9950bdbf936824cb92dc187b97fd7723fa
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_ListBox.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_ListView.xml
+    Sha256: cde1d0bb8835a492a9d5b6e8eaa6b1a80f0314b9053d518edbbb09cb4f81cdbd
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_ListView.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_Menu.xml
+    Sha256: c9340adee1d0cc30c0191f96d1bd0fe8b2fe42fd9c5458f0c3b7af6a87f2c1d1
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_Menu.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_ScrollBar.xml
+    Sha256: 23cde2ee4453755f9735488b2ffc08434c8aa80828e4f2c685e8b6732265e7d2
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_ScrollBar.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_Spin.xml
+    Sha256: 52864720739df4723881fbd2d74a74b514d0926699742812c66aed0d9c384d9d
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_Spin.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_Static.xml
+    Sha256: 6864fe61f26e9a4969c46ceac9649d4f6143b20d79614d09a951adc81a1f7ac9
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_Static.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_ToolBar.xml
+    Sha256: 9a19a8ac1f867809ca1269c1cffefe123e9fb0c1aac2cbbc8c553bb1463df723
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_ToolBar.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_ToolTip.xml
+    Sha256: 7b9819c3529f57e02a1b96aed000b3df1f5fc404e2dce2cffe1fb2072ea000e4
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_ToolTip.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_TrackBar.xml
+    Sha256: 362962c6ad442c2121fdd5681178d68e138f360a5742cd12ed61ae4c9f774269
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_TrackBar.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin_TreeView.xml
+    Sha256: e417ce1a34affed79836324c4548d30cc8ed847ccebd8641a8c78b249e6a0c32
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin_TreeView.xml
+      ConfFile: true
+  - Path: DarkenWindow/DarkenWindowSkin.xml
+    Sha256: 946791bdc05a658b40c3ca21fe904817ff1559d54e803be1f0f70151bb28df14
+    Install:
+      TargetPath: plugins/DarkenWindow/DarkenWindowSkin.xml
+      ConfFile: true
+ManifestVersion: 0.2.0

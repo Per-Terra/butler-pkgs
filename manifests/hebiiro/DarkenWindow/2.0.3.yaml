@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: DarkenWindow
+DisplayName: 黒窓
+Version: 2.0.3
+ReleaseDate: 2022-02-21
+Section: Plugin/Other
+InstalledSize: 105
+Developer:
+- hebiiro
+Description: AviUtlの見た目をダークモードにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow/releases/download/2.0.3/DarkenWindow.2.0.3.7z
+  Sha256: 571d24369f45d9bd292445d48b0ed02bd7c7db856e98df00facf82db34a88985
+  Files:
+  - Path: aviutl_dark.exe.manifest
+    Sha256: e3a7df934042614be2fd1c35023c35b9d95a9b0e6cff5b3cde91d406fad9bb5e
+    Install:
+      TargetPath: aviutl_dark.exe.manifest
+  - Path: DarkenWindow.aul
+    Sha256: f7a9dcefd94aa985ac5bdedf080a536c9db506133585805fa91343c73ba5299a
+    Install:
+      TargetPath: plugins/DarkenWindow.aul
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: d34f51d165f5739b04325be070a242d438f1f19dfd7343daab64c0e950a138a9
+ManifestVersion: 0.2.0

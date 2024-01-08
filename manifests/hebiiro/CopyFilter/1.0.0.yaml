@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: CopyFilter
+DisplayName: フィルタのコピペ
+Version: 1.0.0
+ReleaseDate: 2022-04-28
+Section: Plugin/Other
+InstalledSize: 37
+Developer:
+- hebiiro
+Description: 設定ダイアログのフィルタをコピペできるようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-CopyFilter
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-CopyFilter/releases/download/CopyFilter.1.0.0.src/CopyFilter.1.0.0.zip
+  Sha256: 162288639e7fc668705ba4559b27036f9c6036feac52619272330048f38c61bc
+  Files:
+  - Path: CopyFilter.auf
+    Sha256: 0be0195f38ad1b19244c89fbc7b74e976217d1fae233e64e5f6caf874f5876bb
+    Install:
+      TargetPath: plugins/CopyFilter.auf
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 22f7c0a97b6fc8a2ad189a78bc389d056d1b64507aa29b9245b0cd13b61b4c7d
+ManifestVersion: 0.2.0

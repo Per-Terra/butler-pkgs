@@ -1,0 +1,41 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: SelectEasing
+DisplayName: イージング簡単選択
+Version: 1.0.0
+ReleaseDate: 2022-03-17
+Section: Plugin/Other
+InstalledSize: 484
+Developer:
+- hebiiro
+Description: イージング番号を画像から選択できるようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-SelectEasing
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SelectEasing/releases/download/1.0.0/SelectEasing.1.0.0.zip
+  Sha256: 7b62ef9b100f067870b525ca69ca09af8015bda023a2f0f95eb69854909c7b3b
+  Files:
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: f265221dd8560b28a4c0da7c5cb5f9ca523cce8c3c40f585aabc870298c4b083
+  - Path: SelectEasing.auf
+    Sha256: 3ae028a61a1179e081a8ab3c8db5b70a9c6f9204a5d6e0aa92b73616dce0904a
+    Install:
+      TargetPath: plugins/SelectEasing.auf
+  - Path: SelectEasing/easing.png
+    Sha256: e126e0a167f6f1d2771631254125861bd59faf9271d673bc2c9c729d6af81999
+    Install:
+      TargetPath: plugins/SelectEasing/easing.png
+  - Path: SelectEasing/SelectEasing.exe
+    Sha256: d50cd25f1cc57b3ddde37ecf4aabd6342173c13b9ed276314829aa9a245facc8
+    Install:
+      TargetPath: plugins/SelectEasing.exe
+      Method: Copy
+  - Path: SelectEasing/SelectEasing.ini
+    Sha256: 5d75e11a3c6667a895f6f19cd6408d025cc6c808062b188f14b6d7a0ee145868
+    Install:
+      TargetPath: plugins/SelectEasing/SelectEasing.ini
+      ConfFile: true
+ManifestVersion: 0.2.0

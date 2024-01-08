@@ -1,0 +1,38 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: LevelMeter
+DisplayName: レベルメーター
+Version: 2.1.0
+ReleaseDate: 2023-02-21
+Section: Plugin/Other
+InstalledSize: 574
+Developer:
+- hebiiro
+Description: 音量のレベルメーターを表示するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-LevelMeter
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-LevelMeter/releases/download/2.1.0/LevelMeter.2.1.0.zip
+  Sha256: 26c5eeda71fc23957d41620baa951838d279b5158d22c9493cafccb79a9c9c5e
+  Files:
+  - Path: CREDITS.md
+    Sha256: 5910f408d17aec47add03479895f6fa43dbe14cc56d2833bd0775a4646310551
+  - Path: LevelMeter.auf
+    Sha256: d8c303904a54b880ce05e71021e07b620b84a1811cc9ca4082268d97c4a1ef5e
+    Install:
+      TargetPath: plugins/LevelMeter.auf
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: d82a3f1a48c8c15456c386c1fd96936e58ff64a173945d14f03c47affba48c37
+  - Path: LevelMeter/glew32.dll
+    Sha256: 8c7805a05a321fab37a31822ea2d2a6997ddfd130cf0a09a54a428d6e6995700
+    Install:
+      TargetPath: plugins/glew32.dll
+  - Path: LevelMeter/LevelMeter.exe
+    Sha256: d5ffda58d8646078209a5440bd4f5dfad7fa7b85e6fa39d3f2e17f342de9a361
+    Install:
+      TargetPath: plugins/LevelMeter.exe
+      Method: Copy
+ManifestVersion: 0.2.0

@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: DragFilter
+DisplayName: フィルタドラッグ移動
+Version: 9.2.0
+ReleaseDate: 2022-12-15
+Section: Plugin/Other
+InstalledSize: 64
+Developer:
+- hebiiro
+Description: オブジェクトダイアログのフィルタをドラッグして移動できるようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-DragFilter
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-DragFilter/releases/download/9.2.0/DragFilter.9.2.0.zip
+  Sha256: a995a150bc78211f34f4e33687908fc347df386acc73a0f010ebe5ffada42203
+  Files:
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: DragFilter.auf
+    Sha256: 06733584130a8c73323ef338be38f3f257023c012b9925abe08f1b39e85975cb
+    Install:
+      TargetPath: plugins/DragFilter.auf
+  - Path: DragFilter.ini
+    Sha256: cdc252ce206b4e027339c09a666c47355c36296160ddda9b4fbff2cd63579fa9
+    Install:
+      TargetPath: plugins/DragFilter.ini
+      ConfFile: true
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: e119c768030e8e0144450076e7b87300f77f7cadcb175e64bf1f5cb69954ce79
+ManifestVersion: 0.2.0

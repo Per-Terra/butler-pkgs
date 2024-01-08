@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: SaveImage
+DisplayName: 画像保存
+Version: 1.1.0
+ReleaseDate: 2022-10-16
+Section: Plugin/Other
+InstalledSize: 29
+Developer:
+- hebiiro
+Description: 現在のフレーム、または選択アイテムを画像として保存するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-SaveImage
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SaveImage/releases/download/1.1.0/SaveImage.1.1.0.zip
+  Sha256: a2ca52689aca392d176a74851295a816cd467cb3e0eaf7da29765e71c7dd1df1
+  Files:
+  - Path: CREDITS.md
+    Sha256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 5b546a7b4b36d4b737218bdda4eb7e4949512bd8d34edf1613a09b5c280387ce
+  - Path: SaveImage.auf
+    Sha256: 5dab26acede5efb2a86fe2d0bcb2df26c51aa713e152eaf7f3a11f8c9b6f265b
+    Install:
+      TargetPath: plugins/SaveImage.auf
+ManifestVersion: 0.2.0

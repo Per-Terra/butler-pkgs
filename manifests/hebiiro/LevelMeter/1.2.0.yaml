@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: LevelMeter
+DisplayName: レベルメーター
+Version: 1.2.0
+ReleaseDate: 2022-07-16
+Section: Plugin/Other
+InstalledSize: 36
+Developer:
+- hebiiro
+Description: 音量のレベルメーターを表示するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-LevelMeter
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-LevelMeter/releases/download/1.2.0/LevelMeter.1.2.0.zip
+  Sha256: fbb01b36b6d342cd6ecd1cc7fa94d7eedb5caa56b406008092cbd3dcb1866ab9
+  Files:
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: LevelMeter.auf
+    Sha256: 095df3255f75956f72ee5ebca1a6ba3dba4b86640c8716de588d2a06cfc423cf
+    Install:
+      TargetPath: plugins/LevelMeter.auf
+  - Path: LevelMeter.ini
+    Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    Install:
+      TargetPath: plugins/LevelMeter.ini
+      ConfFile: true
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: bc5d51b184d74f84fd8eeba05af0cdbf5902c0b58591c9bf8f6bded2b1365f57
+ManifestVersion: 0.2.0

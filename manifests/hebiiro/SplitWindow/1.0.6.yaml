@@ -1,0 +1,35 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: SplitWindow
+Version: 1.0.6
+ReleaseDate: 2022-06-25
+Section: Plugin/Other
+Conflicts:
+- UniteWindow
+InstalledSize: 110
+Developer:
+- hebiiro
+Description: AviUtlのウィンドウを再帰分割可能なペインに貼り付けられるようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-SplitWindow
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SplitWindow/releases/download/1.0.6/SplitWindow.1.0.6.zip
+  Sha256: c97f4b1bbb97635eba9e91047a8dc70209485978b072d31a51930f5afdd4986a
+  Files:
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 77cf2886b7de3be77dc383b7fcf2864b4b14ef107074cff4f2d3ac4ff24f93f0
+  - Path: SplitWindow.aul
+    Sha256: b28cd314b0c9d69e5e759c3d4991bc34bdebb41ca189985c599e64fa8c777f2c
+    Install:
+      TargetPath: plugins/SplitWindow.aul
+  - Path: SplitWindow.xml
+    Sha256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
+    Install:
+      TargetPath: plugins/SplitWindow.xml
+      ConfFile: true
+ManifestVersion: 0.2.0

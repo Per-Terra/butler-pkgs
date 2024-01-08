@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: DragFilter
+DisplayName: フィルタドラッグ移動
+Version: 5.0.1
+ReleaseDate: 2022-02-05
+Section: Plugin/Other
+InstalledSize: 36
+Developer:
+- hebiiro
+Description: オブジェクトダイアログのフィルタをドラッグして移動できるようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-DragFilter
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-DragFilter/releases/download/5.0.1/DragFilter.5.0.1.7z
+  Sha256: db116c6885c62c02ad7db50709f6fcc106e144cea97a02af25748d0c75c36c43
+  Files:
+  - Path: DragFilter.auf
+    Sha256: b47a9e6ee523c85895de4b979aec6f07fbc997da36635acfa7fb02c48f10db6f
+    Install:
+      TargetPath: plugins/DragFilter.auf
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: f6d69ec7584caede6e51d3cd5fa4dcb5a1bb7135242509a28fe5af051805428f
+ManifestVersion: 0.2.0

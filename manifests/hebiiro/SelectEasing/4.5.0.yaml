@@ -1,0 +1,51 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: SelectEasing
+DisplayName: イージング簡単選択
+Version: 4.5.0
+ReleaseDate: 2022-07-27
+Section: Plugin/Other
+InstalledSize: 1088
+Developer:
+- hebiiro
+Description: イージング番号を画像から選択できるようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-SelectEasing
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SelectEasing/releases/download/4.5.0/SelectEasing.4.5.0.zip
+  Sha256: a1d82fa0131c47053d256d629c4ee03f8a8cd7a0c8bf6f373db6989372669227
+  Files:
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 7954ed258e448714488308038dc212750d935f9034da48158bc7e3b43466a5c3
+  - Path: SelectEasing.auf
+    Sha256: a7f83958ac98ca29607a009b169c3ae5c3ae0deea3561b4f3f6c243edb5337a6
+    Install:
+      TargetPath: plugins/SelectEasing.auf
+  - Path: SelectEasing/easing.png
+    Sha256: e126e0a167f6f1d2771631254125861bd59faf9271d673bc2c9c729d6af81999
+    Install:
+      TargetPath: plugins/SelectEasing/easing.png
+  - Path: SelectEasing/easing2.png
+    Sha256: b68a9d4b8e5315451e596ab0ae19f373b767a80d0718c7f806ce43ddcec997f2
+    Install:
+      TargetPath: plugins/SelectEasing/easing2.png
+  - Path: SelectEasing/easing3.png
+    Sha256: f7234fe1eea22711c254a0d793b3f1309b21d41be7785e58fd1d906c27c0b34e
+    Install:
+      TargetPath: plugins/SelectEasing/easing3.png
+  - Path: SelectEasing/SelectEasing.exe
+    Sha256: 430c1fe48b89d6603a4c9d86cb5049423810bbf2402053d1464503dff364a7da
+    Install:
+      TargetPath: plugins/SelectEasing.exe
+      Method: Copy
+  - Path: SelectEasing/SelectEasing.xml
+    Sha256: c654a71c5ac3b304245031c57395a29bc71bca0f89dfa87a4412c94e1688a699
+    Install:
+      TargetPath: plugins/SelectEasing/SelectEasing.xml
+      ConfFile: true
+ManifestVersion: 0.2.0

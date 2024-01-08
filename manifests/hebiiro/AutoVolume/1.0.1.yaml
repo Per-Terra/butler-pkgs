@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: AutoVolume
+DisplayName: オートボリューム
+Version: 1.0.1
+ReleaseDate: 2023-05-18
+Section: Plugin/Other
+InstalledSize: 22
+Developer:
+- hebiiro
+Description: |-
+  指定されたレイヤーに音声アイテムがある場合に音量を自動で調整するプラグイン
+  例えば「セリフの所だけ BGM を小さくする」といったことができます。
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-AutoVolume
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-AutoVolume/releases/download/1.0.1/AutoVolume.1.0.1.zip
+  Sha256: 8dedbd5ec6750158ca1eccf274be6f093cfbe351080fba679c2923b2bccbe8a0
+  Files:
+  - Path: AutoVolume.auf
+    Sha256: cc520edeb60e3c6ec0952bc4b6c15597bca2123ce80bb35d0fc94d60862ab66a
+    Install:
+      TargetPath: plugins/AutoVolume.auf
+  - Path: CREDITS.md
+    Sha256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
+  - Path: LICENSE
+    Sha256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
+  - Path: README.md
+    Sha256: fb833f95f5d9dfcb88438b9d4c0ad59a7677a1e3bf4aa7696ae9f67bc062c97f
+ManifestVersion: 0.2.0

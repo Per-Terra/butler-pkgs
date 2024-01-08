@@ -1,0 +1,33 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: UniteWindow
+Version: 1.1.0
+ReleaseDate: 2022-05-05
+Section: Plugin/Other
+Conflicts:
+- SplitWindow
+InstalledSize: 77
+Developer:
+- hebiiro
+Description: AviUtl のウィンドウを結合してシングルウィンドウにまとめるプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-UniteWindow
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-UniteWindow/releases/download/UniteWindow.1.1.0.src/UniteWindow.1.1.0.zip
+  Sha256: 6c9d5bfb7e313c53e21b38bf701d20008da96a61111edf186db6f03135b9c0a5
+  Files:
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 6149e1d1d10c2d4bef5a72376edb268811c4bfd07a6a5771fa2e77fd6592839b
+  - Path: UniteWindow.aul
+    Sha256: f8f3089c11b37963e9af6c26d94516bba99150c62cb68d4bda2ac20bfafaa00e
+    Install:
+      TargetPath: plugins/UniteWindow.aul
+  - Path: UniteWindow.xml
+    Sha256: 9310bf16dd426a9202146f1700a2da07f10e04d5e7f4793c8db7a99489be0615
+    Install:
+      TargetPath: plugins/UniteWindow.xml
+      ConfFile: true
+ManifestVersion: 0.2.0

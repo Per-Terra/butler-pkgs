@@ -1,0 +1,919 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: ObjectExplorer
+DisplayName: オブジェクトエクスプローラ
+Version: 3.6.0
+ReleaseDate: 2023-02-16
+Section: Plugin/Other
+InstalledSize: 1087
+Developer:
+- hebiiro
+Description: エクスプローラを表示してエイリアス、オブジェクト、素材ファイルを使いやすくするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-ObjectExplorer
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-ObjectExplorer/releases/download/3.6.0/ObjectExplorer.3.6.0.zip
+  Sha256: c8a7fb5790e757720d38de70144aaefa4ee9b38749e911b96d2dcb238d63aec1
+  Files:
+  - Path: CREDITS.md
+    Sha256: dc61e8138af404971a7b6aeb4e137ffc7222255c4748adfe3e0a7cbf131e0b2d
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: ObjectExplorer.auf
+    Sha256: bcaf0934be506171a8942f945b0d24aa66ca2c0ac444f26c2f3e75588e64fa6f
+    Install:
+      TargetPath: plugins/ObjectExplorer.auf
+  - Path: README.md
+    Sha256: 00d3bca077533f7c29bfd06c00ba75ebdbbc2bf8371879001b13aa78dd4fe941
+  - Path: セカンドエクスプローラ.auf
+    Sha256: bcaf0934be506171a8942f945b0d24aa66ca2c0ac444f26c2f3e75588e64fa6f
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ.auf
+  - Path: ObjectExplorer/AddFavorite.wav
+    Sha256: 5d878105c705a2f2085c800aee3432c58d77840b5da593fa5a067fbb7f621b18
+    Install:
+      TargetPath: plugins/ObjectExplorer/AddFavorite.wav
+  - Path: ObjectExplorer/DeleteFavorite.wav
+    Sha256: e3e5a5e19618c19fd010e5095e2470bfb30a9d370f5cb65ca9766615e8295b6b
+    Install:
+      TargetPath: plugins/ObjectExplorer/DeleteFavorite.wav
+  - Path: ObjectExplorer/Get.wav
+    Sha256: b6af43c868026641d782c99ac8b3ca011ec1d58d44ed96c0836005bc7c260a93
+    Install:
+      TargetPath: plugins/ObjectExplorer/Get.wav
+  - Path: ObjectExplorer/Next.wav
+    Sha256: a0957e26601a1f7adbab6face9b82431c50374b34b27af230f43618a4bd8683f
+    Install:
+      TargetPath: plugins/ObjectExplorer/Next.wav
+  - Path: ObjectExplorer/ObjectExplorer.exe
+    Sha256: 0e57ce6fd08031241c2375059a4887222b7fdf2b67900c6b3e386f1bd781a1b0
+    Install:
+      TargetPath: plugins/ObjectExplorer/ObjectExplorer.exe
+      Method: Copy
+  - Path: ObjectExplorer/ObjectExplorerSettings.xml
+    Sha256: 5ea53bc92f65df222a3a52211ff8d150359103e03665c061595f2e895fc3a3f1
+    Install:
+      TargetPath: plugins/ObjectExplorer/ObjectExplorerSettings.xml
+      ConfFile: true
+  - Path: ObjectExplorer/ObjectExplorerSystemSettings.xml
+    Sha256: 6aa22662892b373dc624de368faff6ab720873c1742df2c678f1920cb39c9158
+    Install:
+      TargetPath: plugins/ObjectExplorer/ObjectExplorerSystemSettings.xml
+      ConfFile: true
+  - Path: ObjectExplorer/Prev.wav
+    Sha256: 9130db26bad84a21902c78d2bd398eb6cbd343373aed14fab8278aa8641a4faf
+    Install:
+      TargetPath: plugins/ObjectExplorer/Prev.wav
+  - Path: ObjectExplorer/Up.wav
+    Sha256: 384ec58378d9c220d85784ea9ef4ae35930af591535178e395eed2522d667dac
+    Install:
+      TargetPath: plugins/ObjectExplorer/Up.wav
+  - Path: ObjectExplorer/フィルタオブジェクト/クリッピング＆リサイズ.exa
+    Sha256: 0ef2c01524d58c3e281c6798b7a25b8e16fbd7fa15a0cdc0501b66bb827351da
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/クリッピング＆リサイズ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/グロー.exa
+    Sha256: 37566c5c32d5efb0ecf1a4e073eccfcb79e101efdd421f647e38bf1ddd046a6b
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/グロー.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/シーンチェンジ.exa
+    Sha256: 6aba7827056b08fc72395baa9418cf57a498bcb1d6056b9eef428cc639740637
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/シーンチェンジ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/シャープフィルタ.exa
+    Sha256: 4922c76d1c2166f14fb2ac32f6d1f93bdd72258ff2c19a8ccaf50d71e64fcc4c
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/シャープフィルタ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/ノイズ除去フィルタ.exa
+    Sha256: 581ccaba99a3f62666a055c850e53f45bc05c69aa813d98ef23b8176c72a9d89
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/ノイズ除去フィルタ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/ぼかし.exa
+    Sha256: 6d82f7862eccbaf97b09cb625af8eac85e609f2955e082e596113aa4e75f8a5e
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/ぼかし.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/ぼかしフィルタ.exa
+    Sha256: af718c2f5b1234427b1c48005a3906bb6d1f6c9df8e9e8af3f1a19289c138803
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/ぼかしフィルタ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/モーションブラー.exa
+    Sha256: b01fc33ee06af376f727cbc3f27ab9821fd7b6cde887da292b20bd4e06852075
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/モーションブラー.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/モザイク.exa
+    Sha256: 7cc14f0e5e15e1d45d049992afd3082d98f6e05a276e674d666fb7c0474ea404
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/モザイク.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/ラスター.exa
+    Sha256: 7c000f3724501ceb7c5a35fef4e73678da4c20062af2bb61c9d51cd69f5c9aa3
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/ラスター.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/レンズブラー.exa
+    Sha256: 7c319c746922cf1381b4d52a3ac3a57818c44a17285aab64187177d6becf5059
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/レンズブラー.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/縁塗りつぶし.exa
+    Sha256: 362335a9c5f11cc801b9aa4fa3fc6f48acbc479686d3d654263361556e38797c
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/縁塗りつぶし.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/音声ディレイ.exa
+    Sha256: 2e785fdb480cbbf652ebcc3833617126e10ab234cf1ae6b0708a657cba5e4420
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/音声ディレイ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/音量の調整.exa
+    Sha256: e14bda060a9d0206950547fb61b12ef75150bc0ec90c388ef0dc5b6f26665810
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/音量の調整.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/画像ループ.exa
+    Sha256: c866f55136e1d0ed17da3d17e7be2390b01a0e577d64b1a01ce08ccad47cf374
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/画像ループ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/拡散光.exa
+    Sha256: 8634315aa12f86595a62e39aa2af826b643ec07394346348e9e09032dda7e5ee
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/拡散光.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/拡張色設定.exa
+    Sha256: 7f1bac4bee75b96701aae089b6297d40f64eb7d14961feb7c3ba47df0e0355ab
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/拡張色設定.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/拡張色調補正.exa
+    Sha256: 719e3fae856d78164b0f13affcfa4d127c87cf328850f9b10e54905863883205
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/拡張色調補正.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/色ずれ.exa
+    Sha256: 7d3ebdd0fcbf6bfc05009269a3ea69ce7b2a4c85738b6325ba4b36e21aac7663
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/色ずれ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/色調補正.exa
+    Sha256: 8bb3228d87346553b3662764361008c3eb5a431f59947e0d816e3df95985aab7
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/色調補正.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/色調補正2.exa
+    Sha256: df31d3e84b3dc3f63079b45b77516e071e7b5f64c4bcf1eaeb3eaf59bf14037e
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/色調補正2.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/振動.exa
+    Sha256: 83b53475e08a383a7ad479baa23a62f0815ecb96d8d0cee9f7d7aff0614810b6
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/振動.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/単色化.exa
+    Sha256: 35b21dcf80d008107a5a4d673c963261001e93413379b2426714f970bfaabff0
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/単色化.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/発光.exa
+    Sha256: dc48a620dd598b6a142f1de5fe8ea8be1fafcd370b5af1f5507bc1e330c49d9e
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/発光.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/反転.exa
+    Sha256: 2adc081a1902a6c3351de945af9161d752ca247f0f3baa0dbad569a6b18a6853
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/反転.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/部分フィルタ.exa
+    Sha256: 1d911d584f4147b3414b1821756e2130628954d80e651faac107d58fbbc136b0
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/部分フィルタ.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/放射ブラー.exa
+    Sha256: dfe1ea6bbb3ac831d35a070ba89f62d1ddb55e0815d77de5fa02879bccda82bc
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/放射ブラー.exa
+  - Path: ObjectExplorer/フィルタオブジェクト/方向ブラー.exa
+    Sha256: 8bb75c398f4a4f282d0d1b5a8418c30125760dd0d3be5c1de210bfa507563af7
+    Install:
+      TargetPath: plugins/ObjectExplorer/フィルタオブジェクト/方向ブラー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/カスタムオブジェクト.exa
+    Sha256: 1012fc8cd12a984ce356cb0226af7f49390a65fcada2194280fb967e9c5d690c
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/カスタムオブジェクト.exa
+  - Path: ObjectExplorer/メディアオブジェクト/グループ制御.exa
+    Sha256: 61c90ebe5a4539aa39aa7860bc6a634326c73553e69878d1d64fe9982fa2d161
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/グループ制御.exa
+  - Path: ObjectExplorer/メディアオブジェクト/シーン.exa
+    Sha256: 397d8cac752789cd54dd244d62dcf900d0114cdf6d1908687fd8c48a6161f0b9
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/シーン.exa
+  - Path: ObjectExplorer/メディアオブジェクト/シーン(音声).exa
+    Sha256: 89d4549dc0d4cc9a6a9bc9dc9af34f0fa021addfed858fc757b1f976bc0126ab
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/シーン(音声).exa
+  - Path: ObjectExplorer/メディアオブジェクト/テキスト.exa
+    Sha256: 0db3509d3d7dd4303241d6aa989a64538c29d6967f1cee31da685e17e475d611
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/テキスト.exa
+  - Path: ObjectExplorer/メディアオブジェクト/パーティクル出力.exa
+    Sha256: cda257fdfcdab3b7b24ff6331aba0ea92deb66dc4fb09cdaf1d63cdc2ae9ff01
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/パーティクル出力.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フレームバッファ.exa
+    Sha256: 3c24f452cad013325b8ee43afa60035c02fe565fab204db9b057f39a411a10e3
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フレームバッファ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/音声ファイル.exa
+    Sha256: 6f2614a13c0439f83c84c3a153ddc76162e60a4af359ada023785c3be0f50481
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/音声ファイル.exa
+  - Path: ObjectExplorer/メディアオブジェクト/音声波形表示.exa
+    Sha256: 9504fc7367257212814ca7f161146ed5f05c962b17fd8f55d467731498ca8c72
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/音声波形表示.exa
+  - Path: ObjectExplorer/メディアオブジェクト/画像ファイル.exa
+    Sha256: cb5d8015027fa3c0e45aa51e41aba7c703ad54517692d3bda3c0f6415f6e6093
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/画像ファイル.exa
+  - Path: ObjectExplorer/メディアオブジェクト/時間制御.exa
+    Sha256: ad3d3ec0c31b8a0901847f3253b122c1979b5ed2e5e888c2bf430448fcc1d2e2
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/時間制御.exa
+  - Path: ObjectExplorer/メディアオブジェクト/図形.exa
+    Sha256: c703d505dba3feb4c271757789852a04cd66111fff840a9696eb84c6987d88dc
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/図形.exa
+  - Path: ObjectExplorer/メディアオブジェクト/直前オブジェクト.exa
+    Sha256: c1460344972204c6520df564d641d389040ff41417cf68bb794c1a4e4bdd48c4
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/直前オブジェクト.exa
+  - Path: ObjectExplorer/メディアオブジェクト/動画ファイル.exa
+    Sha256: 6bad7237f5ac38f2bb678956c8af69eb61670696ce97164065109199c816ee67
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/動画ファイル.exa
+  - Path: ObjectExplorer/メディアオブジェクト/カメラ制御/カメラ効果.exa
+    Sha256: 18cbc54c14853f3f62a6fd494327ca598940ca8931a5f142cb471d049017b19f
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/カメラ制御/カメラ効果.exa
+  - Path: ObjectExplorer/メディアオブジェクト/カメラ制御/カメラ制御.exa
+    Sha256: 00c78e037faa479fdf5c4e832bd00554e7ee767f6fc148e1385139b9ea23ca3c
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/カメラ制御/カメラ制御.exa
+  - Path: ObjectExplorer/メディアオブジェクト/カメラ制御/シャドー(カメラ制御).exa
+    Sha256: 957bd6bde055ebe9436984d65104e0853437196816551fda403d1108de509593
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/カメラ制御/シャドー(カメラ制御).exa
+  - Path: ObjectExplorer/メディアオブジェクト/カメラ制御/スクリプト(カメラ制御).exa
+    Sha256: fc0ff8365e88f520d531b0cb376e4c8497a642f5d521a6d189c3b3989326cb39
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/カメラ制御/スクリプト(カメラ制御).exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/アニメーション効果.exa
+    Sha256: 047f342accf163a59cd81006e318492d62d2235936e5dc67c7263070dace3bb7
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/アニメーション効果.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/インターレース解除.exa
+    Sha256: 73d1768c4566994ad3b89864bc21732a3b3dbc8082d8801de5f7b666265a89fd
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/インターレース解除.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/エッジ抽出.exa
+    Sha256: 029afb7b7fbd8569055587f65ed350743a3d73bd28a6949f4e8a005288692a29
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/エッジ抽出.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/オブジェクト分割.exa
+    Sha256: 2b8aa9435d69868daa2d50fa74faaed0c940cbbc5b825012bb97ca042d841c3e
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/オブジェクト分割.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/オフスクリーン描画.exa
+    Sha256: c685757bdff9cab7661278cd68012754f87bf6b1285037fafc39350d21e175b4
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/オフスクリーン描画.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/カメラ制御オプション.exa
+    Sha256: e893c239beead8c2b2f876885a4e08b615d816b37edccff5ca5de51c9152f548
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/カメラ制御オプション.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/カラーキー.exa
+    Sha256: 2a523e0f0d4416ce1ecf3e14ddfa5c1d5d5dd3944fb727dc316b2defa43fe2db
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/カラーキー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/グラデーション.exa
+    Sha256: 46776ca9b2b0200af9a7211804f3f2130de5212a5b4e21bd528b9f5ce4b49fee
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/グラデーション.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/クリッピング.exa
+    Sha256: 8c4fcfbc01283fb57945f05601a56aa924abc2812367ab00ebaa484b28ce91b7
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/クリッピング.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/グロー.exa
+    Sha256: 3aa406c9126ed86512958dcc5ceaf9457c7ecf8e4eedacbaf3eb4963289d390b
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/グロー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/クロマキー.exa
+    Sha256: 411813f787c6401b6e6d1923854800131d6b971e266b5fea11448ff4d7099717
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/クロマキー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/シャープ.exa
+    Sha256: af4a1f922595c0114465a11ffe21ec9dc367d3e857e05dd6c9d8f3a61f58ebe6
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/シャープ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/シャドー.exa
+    Sha256: d43a9cf7d89d4255c806e0998a8255886592496e09c9767513c6debbb9a3c1a2
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/シャドー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/スクリプト制御.exa
+    Sha256: 46a9831dee3c07e30cbc03ddf9f5e642a298214f0f6cac5e20a908338b00fada
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/スクリプト制御.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/ディスプレイスメントマップ.exa
+    Sha256: 305f25d53c6f3f640c6d637089cc21d119c97ad77957f277643932ca1fd68739
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/ディスプレイスメントマップ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/ノイズ.exa
+    Sha256: 2a932267b7513e23a87c435e7057f4e3ccdabcf2fc518961d3c9261a161f030f
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/ノイズ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/フェード.exa
+    Sha256: 927f2e6e95dc9a477cb2e3f93c54df6a29ba2cbb149946d1c3c459019495a997
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/フェード.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/ぼかし.exa
+    Sha256: b5a92dcf05a7846e73c520c0a584a19c4bc9a20bc8a187e588dd197531aad284
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/ぼかし.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/マスク.exa
+    Sha256: 21b2a049d1cd5efa2dfba50513dfba6c4d882ad00fc57fe23d7e3c1b6d47af3c
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/マスク.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/ミラー.exa
+    Sha256: a0b802a3ede9d7a85e554f79930d1aa4370f3c7a32c1cefb664f81b6b3dbd99e
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/ミラー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/モーションブラー.exa
+    Sha256: 75c32ad626213059c1c83c1d1bad40388572f4e7685db1d20feaada613b829a4
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/モーションブラー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/モザイク.exa
+    Sha256: e47222cf0a95bc5c82658dd846d9befc7b5a0e30d8160c964e2f95d7be816728
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/モザイク.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/ライト.exa
+    Sha256: cc3e9b4cd5f1d3f9a06e0860a00023c419b3e9674dbf70a3a78f2fa8e67f54ed
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/ライト.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/ラスター.exa
+    Sha256: 6369eb86753a80c3f0c3232e6ca37faedb2d68adfa07157e154efcf14dc39840
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/ラスター.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/ルミナンスキー.exa
+    Sha256: 644ae632354d59fe919bb8ce6ad32cfae995c91cd1e58dbbbb93a5f752ba7436
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/ルミナンスキー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/レンズブラー.exa
+    Sha256: 0be1159570cb1d3098d740e0e912ec5335ccdf0689b178aa4aa1c8c558ceaa74
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/レンズブラー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/ワイプ.exa
+    Sha256: 12cd5854174898804136ce0d2238907af18bfcce39c7f7389d8f511ce7de1222
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/ワイプ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/縁取り.exa
+    Sha256: c8486e26df6af3c373438104f0f7599c7b14b78a8605c4d50ae883dad62b0638
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/縁取り.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/画像ファイル合成.exa
+    Sha256: d8251c97b85b5708bfc54b2374e1de7d63549910862dc87a7f669ada78b49d6b
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/画像ファイル合成.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/画像ループ.exa
+    Sha256: d672614d668a176cc8cd35d0c1c9d2af03e0233055fc3e9402e1351a544e0ded
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/画像ループ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/拡散光.exa
+    Sha256: 6a52a1b5d31f5389fc5dbd8fb6fec7ae665fdad2b325d3f625e56caff5af652d
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/拡散光.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/拡張色設定.exa
+    Sha256: ed1fb44ddb5cbfd90424e56fe2cf9e3c815d741bd0163f6679399828f8a75c3d
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/拡張色設定.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/境界ぼかし.exa
+    Sha256: f5721be8b78b0f3cb1c9ed3968567501919fd04b3eeed80f83cc87bf59333ce7
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/境界ぼかし.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/極座標変換.exa
+    Sha256: 7387cc85fd7109707a5f18ce1552b8e54e8034c3d1491d710dcabb574575252c
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/極座標変換.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/斜めクリッピング.exa
+    Sha256: 91e1bffd23a023d1518d3d564cbb05bda15a28d5652f729b98d8ab8d41c8bdce
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/斜めクリッピング.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/色ずれ.exa
+    Sha256: 5f4b81685b903220de765bf9c4238756f8a9242dff98b64ac54cfa215a70cecb
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/色ずれ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/色調補正.exa
+    Sha256: 14149e90cfbbbae75a8ebf6f9d4affc173933126bfd31459cea2d0b7ac6b7b3a
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/色調補正.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/振動.exa
+    Sha256: c64eae4a1a13939866795731413f235af79a0158c19d9a7e979cc2ca3254d246
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/振動.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/閃光.exa
+    Sha256: 50f55e0ef1009cef1266df6d375a2bdf817b9ec2611547937832033aa9c4e5b5
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/閃光.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/単色化.exa
+    Sha256: 3bdb4e58090bfae1c733998745e47acf4c1beecd94fcd4a39be65ebddff830ec
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/単色化.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/動画ファイル合成.exa
+    Sha256: 442bd9bab835dbe74382a2487040baa41551a43322e75edf1963c5e60cb5422e
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/動画ファイル合成.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/特定色域変換.exa
+    Sha256: f669f58da2ddbcf422ac9f92ad463dccd20eb80672f97367d3d3714c250ada74
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/特定色域変換.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/凸エッジ.exa
+    Sha256: 05e1d24cbeceeb76a1f17de96904fbfa9dfb5d6751e6a710e34835cb5e208f29
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/凸エッジ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/波紋.exa
+    Sha256: c2fbe1362eab9616834acda053ecafc30beb13b91054837bda39b45f986597c0
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/波紋.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/発光.exa
+    Sha256: 5cf427b0b70b9bf959ee0ca8fcafa2f152c308d1dc9883377acb49d4c5a2a300
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/発光.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/放射ブラー.exa
+    Sha256: 7662cbfe3b24c8d714b425119e6321a65a4c618523268731bb70d5b4888a4009
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/放射ブラー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/方向ブラー.exa
+    Sha256: 7d1fc958da20aab913b84b8394fd9bdd3ca15c2cbc0015945555848cdf9a8cd1
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/方向ブラー.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/リサイズ.exa
+    Sha256: 02f58f2e100668862151a5f73088141fb247186da5e4cdfb310f1f96cf06f483
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/リサイズ.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/ローテーション.exa
+    Sha256: cc1aae4b9098660b5c798e6b672524ff084e8d416581860dc9882e8ed25c2796
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/ローテーション.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/回転.exa
+    Sha256: 38e76b849bd3616f73f81ec2e3098b4fa230c681f79ce7d22283ec2bf3422b33
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/回転.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/拡大率.exa
+    Sha256: 5086326b86377be7a8ea8524561061de13c1311d6f03bc639df1660bda5fe2de
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/拡大率.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/座標.exa
+    Sha256: 54a9a148d96f875bb978aeac2bf76367213b2fc0e54b5bce7be8bb9372844056
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/座標.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/透明度.exa
+    Sha256: 19a92828396b53aa2dcd86bec8f58f32e9a46622702f326e30d6a23efa07ecdf
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/透明度.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/反転.exa
+    Sha256: 08f43820a111347d2a617c4271a94c5f857686f642eb4ceaa5cb1aacb955ff48
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/反転.exa
+  - Path: ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/領域拡張.exa
+    Sha256: 4bc986c00b4eb263adcdd4244fe2c87c3fed00845ed35a9719195dde92fa8deb
+    Install:
+      TargetPath: plugins/ObjectExplorer/メディアオブジェクト/フィルタ効果/基本効果/領域拡張.exa
+  - Path: セカンドエクスプローラ/AddFavorite.wav
+    Sha256: 5d878105c705a2f2085c800aee3432c58d77840b5da593fa5a067fbb7f621b18
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/AddFavorite.wav
+  - Path: セカンドエクスプローラ/DeleteFavorite.wav
+    Sha256: e3e5a5e19618c19fd010e5095e2470bfb30a9d370f5cb65ca9766615e8295b6b
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/DeleteFavorite.wav
+  - Path: セカンドエクスプローラ/Get.wav
+    Sha256: b6af43c868026641d782c99ac8b3ca011ec1d58d44ed96c0836005bc7c260a93
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/Get.wav
+  - Path: セカンドエクスプローラ/Next.wav
+    Sha256: a0957e26601a1f7adbab6face9b82431c50374b34b27af230f43618a4bd8683f
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/Next.wav
+  - Path: セカンドエクスプローラ/ObjectExplorer.exe
+    Sha256: 0e57ce6fd08031241c2375059a4887222b7fdf2b67900c6b3e386f1bd781a1b0
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/ObjectExplorer.exe
+      Method: Copy
+  - Path: セカンドエクスプローラ/ObjectExplorerSettings.xml
+    Sha256: 5ea53bc92f65df222a3a52211ff8d150359103e03665c061595f2e895fc3a3f1
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/ObjectExplorerSettings.xml
+      ConfFile: true
+  - Path: セカンドエクスプローラ/ObjectExplorerSystemSettings.xml
+    Sha256: 6aa22662892b373dc624de368faff6ab720873c1742df2c678f1920cb39c9158
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/ObjectExplorerSystemSettings.xml
+      ConfFile: true
+  - Path: セカンドエクスプローラ/Prev.wav
+    Sha256: 9130db26bad84a21902c78d2bd398eb6cbd343373aed14fab8278aa8641a4faf
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/Prev.wav
+  - Path: セカンドエクスプローラ/Up.wav
+    Sha256: 384ec58378d9c220d85784ea9ef4ae35930af591535178e395eed2522d667dac
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/Up.wav
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/クリッピング＆リサイズ.exa
+    Sha256: 0ef2c01524d58c3e281c6798b7a25b8e16fbd7fa15a0cdc0501b66bb827351da
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/クリッピング＆リサイズ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/グロー.exa
+    Sha256: 37566c5c32d5efb0ecf1a4e073eccfcb79e101efdd421f647e38bf1ddd046a6b
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/グロー.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/シーンチェンジ.exa
+    Sha256: 6aba7827056b08fc72395baa9418cf57a498bcb1d6056b9eef428cc639740637
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/シーンチェンジ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/シャープフィルタ.exa
+    Sha256: 4922c76d1c2166f14fb2ac32f6d1f93bdd72258ff2c19a8ccaf50d71e64fcc4c
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/シャープフィルタ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/ノイズ除去フィルタ.exa
+    Sha256: 581ccaba99a3f62666a055c850e53f45bc05c69aa813d98ef23b8176c72a9d89
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/ノイズ除去フィルタ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/ぼかし.exa
+    Sha256: 6d82f7862eccbaf97b09cb625af8eac85e609f2955e082e596113aa4e75f8a5e
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/ぼかし.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/ぼかしフィルタ.exa
+    Sha256: af718c2f5b1234427b1c48005a3906bb6d1f6c9df8e9e8af3f1a19289c138803
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/ぼかしフィルタ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/モーションブラー.exa
+    Sha256: b01fc33ee06af376f727cbc3f27ab9821fd7b6cde887da292b20bd4e06852075
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/モーションブラー.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/モザイク.exa
+    Sha256: 7cc14f0e5e15e1d45d049992afd3082d98f6e05a276e674d666fb7c0474ea404
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/モザイク.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/ラスター.exa
+    Sha256: 7c000f3724501ceb7c5a35fef4e73678da4c20062af2bb61c9d51cd69f5c9aa3
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/ラスター.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/レンズブラー.exa
+    Sha256: 7c319c746922cf1381b4d52a3ac3a57818c44a17285aab64187177d6becf5059
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/レンズブラー.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/縁塗りつぶし.exa
+    Sha256: 362335a9c5f11cc801b9aa4fa3fc6f48acbc479686d3d654263361556e38797c
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/縁塗りつぶし.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/音声ディレイ.exa
+    Sha256: 2e785fdb480cbbf652ebcc3833617126e10ab234cf1ae6b0708a657cba5e4420
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/音声ディレイ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/音量の調整.exa
+    Sha256: e14bda060a9d0206950547fb61b12ef75150bc0ec90c388ef0dc5b6f26665810
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/音量の調整.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/画像ループ.exa
+    Sha256: c866f55136e1d0ed17da3d17e7be2390b01a0e577d64b1a01ce08ccad47cf374
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/画像ループ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/拡散光.exa
+    Sha256: 8634315aa12f86595a62e39aa2af826b643ec07394346348e9e09032dda7e5ee
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/拡散光.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/拡張色設定.exa
+    Sha256: 7f1bac4bee75b96701aae089b6297d40f64eb7d14961feb7c3ba47df0e0355ab
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/拡張色設定.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/拡張色調補正.exa
+    Sha256: 719e3fae856d78164b0f13affcfa4d127c87cf328850f9b10e54905863883205
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/拡張色調補正.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/色ずれ.exa
+    Sha256: 7d3ebdd0fcbf6bfc05009269a3ea69ce7b2a4c85738b6325ba4b36e21aac7663
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/色ずれ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/色調補正.exa
+    Sha256: 8bb3228d87346553b3662764361008c3eb5a431f59947e0d816e3df95985aab7
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/色調補正.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/色調補正2.exa
+    Sha256: df31d3e84b3dc3f63079b45b77516e071e7b5f64c4bcf1eaeb3eaf59bf14037e
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/色調補正2.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/振動.exa
+    Sha256: 83b53475e08a383a7ad479baa23a62f0815ecb96d8d0cee9f7d7aff0614810b6
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/振動.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/単色化.exa
+    Sha256: 35b21dcf80d008107a5a4d673c963261001e93413379b2426714f970bfaabff0
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/単色化.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/発光.exa
+    Sha256: dc48a620dd598b6a142f1de5fe8ea8be1fafcd370b5af1f5507bc1e330c49d9e
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/発光.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/反転.exa
+    Sha256: 2adc081a1902a6c3351de945af9161d752ca247f0f3baa0dbad569a6b18a6853
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/反転.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/部分フィルタ.exa
+    Sha256: 1d911d584f4147b3414b1821756e2130628954d80e651faac107d58fbbc136b0
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/部分フィルタ.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/放射ブラー.exa
+    Sha256: dfe1ea6bbb3ac831d35a070ba89f62d1ddb55e0815d77de5fa02879bccda82bc
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/放射ブラー.exa
+  - Path: セカンドエクスプローラ/フィルタオブジェクト/方向ブラー.exa
+    Sha256: 8bb75c398f4a4f282d0d1b5a8418c30125760dd0d3be5c1de210bfa507563af7
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/フィルタオブジェクト/方向ブラー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/カスタムオブジェクト.exa
+    Sha256: 1012fc8cd12a984ce356cb0226af7f49390a65fcada2194280fb967e9c5d690c
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/カスタムオブジェクト.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/グループ制御.exa
+    Sha256: 61c90ebe5a4539aa39aa7860bc6a634326c73553e69878d1d64fe9982fa2d161
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/グループ制御.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/シーン.exa
+    Sha256: 397d8cac752789cd54dd244d62dcf900d0114cdf6d1908687fd8c48a6161f0b9
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/シーン.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/シーン(音声).exa
+    Sha256: 89d4549dc0d4cc9a6a9bc9dc9af34f0fa021addfed858fc757b1f976bc0126ab
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/シーン(音声).exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/テキスト.exa
+    Sha256: 0db3509d3d7dd4303241d6aa989a64538c29d6967f1cee31da685e17e475d611
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/テキスト.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/パーティクル出力.exa
+    Sha256: cda257fdfcdab3b7b24ff6331aba0ea92deb66dc4fb09cdaf1d63cdc2ae9ff01
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/パーティクル出力.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フレームバッファ.exa
+    Sha256: 3c24f452cad013325b8ee43afa60035c02fe565fab204db9b057f39a411a10e3
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フレームバッファ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/音声ファイル.exa
+    Sha256: 6f2614a13c0439f83c84c3a153ddc76162e60a4af359ada023785c3be0f50481
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/音声ファイル.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/音声波形表示.exa
+    Sha256: 9504fc7367257212814ca7f161146ed5f05c962b17fd8f55d467731498ca8c72
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/音声波形表示.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/画像ファイル.exa
+    Sha256: cb5d8015027fa3c0e45aa51e41aba7c703ad54517692d3bda3c0f6415f6e6093
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/画像ファイル.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/時間制御.exa
+    Sha256: ad3d3ec0c31b8a0901847f3253b122c1979b5ed2e5e888c2bf430448fcc1d2e2
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/時間制御.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/図形.exa
+    Sha256: c703d505dba3feb4c271757789852a04cd66111fff840a9696eb84c6987d88dc
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/図形.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/直前オブジェクト.exa
+    Sha256: c1460344972204c6520df564d641d389040ff41417cf68bb794c1a4e4bdd48c4
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/直前オブジェクト.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/動画ファイル.exa
+    Sha256: 6bad7237f5ac38f2bb678956c8af69eb61670696ce97164065109199c816ee67
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/動画ファイル.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/カメラ制御/カメラ効果.exa
+    Sha256: 18cbc54c14853f3f62a6fd494327ca598940ca8931a5f142cb471d049017b19f
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/カメラ制御/カメラ効果.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/カメラ制御/カメラ制御.exa
+    Sha256: 00c78e037faa479fdf5c4e832bd00554e7ee767f6fc148e1385139b9ea23ca3c
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/カメラ制御/カメラ制御.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/カメラ制御/シャドー(カメラ制御).exa
+    Sha256: 957bd6bde055ebe9436984d65104e0853437196816551fda403d1108de509593
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/カメラ制御/シャドー(カメラ制御).exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/カメラ制御/スクリプト(カメラ制御).exa
+    Sha256: fc0ff8365e88f520d531b0cb376e4c8497a642f5d521a6d189c3b3989326cb39
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/カメラ制御/スクリプト(カメラ制御).exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/アニメーション効果.exa
+    Sha256: 047f342accf163a59cd81006e318492d62d2235936e5dc67c7263070dace3bb7
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/アニメーション効果.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/インターレース解除.exa
+    Sha256: 73d1768c4566994ad3b89864bc21732a3b3dbc8082d8801de5f7b666265a89fd
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/インターレース解除.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/エッジ抽出.exa
+    Sha256: 029afb7b7fbd8569055587f65ed350743a3d73bd28a6949f4e8a005288692a29
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/エッジ抽出.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/オブジェクト分割.exa
+    Sha256: 2b8aa9435d69868daa2d50fa74faaed0c940cbbc5b825012bb97ca042d841c3e
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/オブジェクト分割.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/オフスクリーン描画.exa
+    Sha256: c685757bdff9cab7661278cd68012754f87bf6b1285037fafc39350d21e175b4
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/オフスクリーン描画.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/カメラ制御オプション.exa
+    Sha256: e893c239beead8c2b2f876885a4e08b615d816b37edccff5ca5de51c9152f548
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/カメラ制御オプション.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/カラーキー.exa
+    Sha256: 2a523e0f0d4416ce1ecf3e14ddfa5c1d5d5dd3944fb727dc316b2defa43fe2db
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/カラーキー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/グラデーション.exa
+    Sha256: 46776ca9b2b0200af9a7211804f3f2130de5212a5b4e21bd528b9f5ce4b49fee
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/グラデーション.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/クリッピング.exa
+    Sha256: 8c4fcfbc01283fb57945f05601a56aa924abc2812367ab00ebaa484b28ce91b7
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/クリッピング.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/グロー.exa
+    Sha256: 3aa406c9126ed86512958dcc5ceaf9457c7ecf8e4eedacbaf3eb4963289d390b
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/グロー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/クロマキー.exa
+    Sha256: 411813f787c6401b6e6d1923854800131d6b971e266b5fea11448ff4d7099717
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/クロマキー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/シャープ.exa
+    Sha256: af4a1f922595c0114465a11ffe21ec9dc367d3e857e05dd6c9d8f3a61f58ebe6
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/シャープ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/シャドー.exa
+    Sha256: d43a9cf7d89d4255c806e0998a8255886592496e09c9767513c6debbb9a3c1a2
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/シャドー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/スクリプト制御.exa
+    Sha256: 46a9831dee3c07e30cbc03ddf9f5e642a298214f0f6cac5e20a908338b00fada
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/スクリプト制御.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ディスプレイスメントマップ.exa
+    Sha256: 305f25d53c6f3f640c6d637089cc21d119c97ad77957f277643932ca1fd68739
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ディスプレイスメントマップ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ノイズ.exa
+    Sha256: 2a932267b7513e23a87c435e7057f4e3ccdabcf2fc518961d3c9261a161f030f
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ノイズ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/フェード.exa
+    Sha256: 927f2e6e95dc9a477cb2e3f93c54df6a29ba2cbb149946d1c3c459019495a997
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/フェード.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ぼかし.exa
+    Sha256: b5a92dcf05a7846e73c520c0a584a19c4bc9a20bc8a187e588dd197531aad284
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ぼかし.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/マスク.exa
+    Sha256: 21b2a049d1cd5efa2dfba50513dfba6c4d882ad00fc57fe23d7e3c1b6d47af3c
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/マスク.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ミラー.exa
+    Sha256: a0b802a3ede9d7a85e554f79930d1aa4370f3c7a32c1cefb664f81b6b3dbd99e
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ミラー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/モーションブラー.exa
+    Sha256: 75c32ad626213059c1c83c1d1bad40388572f4e7685db1d20feaada613b829a4
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/モーションブラー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/モザイク.exa
+    Sha256: e47222cf0a95bc5c82658dd846d9befc7b5a0e30d8160c964e2f95d7be816728
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/モザイク.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ライト.exa
+    Sha256: cc3e9b4cd5f1d3f9a06e0860a00023c419b3e9674dbf70a3a78f2fa8e67f54ed
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ライト.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ラスター.exa
+    Sha256: 6369eb86753a80c3f0c3232e6ca37faedb2d68adfa07157e154efcf14dc39840
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ラスター.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ルミナンスキー.exa
+    Sha256: 644ae632354d59fe919bb8ce6ad32cfae995c91cd1e58dbbbb93a5f752ba7436
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ルミナンスキー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/レンズブラー.exa
+    Sha256: 0be1159570cb1d3098d740e0e912ec5335ccdf0689b178aa4aa1c8c558ceaa74
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/レンズブラー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ワイプ.exa
+    Sha256: 12cd5854174898804136ce0d2238907af18bfcce39c7f7389d8f511ce7de1222
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/ワイプ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/縁取り.exa
+    Sha256: c8486e26df6af3c373438104f0f7599c7b14b78a8605c4d50ae883dad62b0638
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/縁取り.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/画像ファイル合成.exa
+    Sha256: d8251c97b85b5708bfc54b2374e1de7d63549910862dc87a7f669ada78b49d6b
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/画像ファイル合成.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/画像ループ.exa
+    Sha256: d672614d668a176cc8cd35d0c1c9d2af03e0233055fc3e9402e1351a544e0ded
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/画像ループ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/拡散光.exa
+    Sha256: 6a52a1b5d31f5389fc5dbd8fb6fec7ae665fdad2b325d3f625e56caff5af652d
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/拡散光.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/拡張色設定.exa
+    Sha256: ed1fb44ddb5cbfd90424e56fe2cf9e3c815d741bd0163f6679399828f8a75c3d
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/拡張色設定.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/境界ぼかし.exa
+    Sha256: f5721be8b78b0f3cb1c9ed3968567501919fd04b3eeed80f83cc87bf59333ce7
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/境界ぼかし.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/極座標変換.exa
+    Sha256: 7387cc85fd7109707a5f18ce1552b8e54e8034c3d1491d710dcabb574575252c
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/極座標変換.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/斜めクリッピング.exa
+    Sha256: 91e1bffd23a023d1518d3d564cbb05bda15a28d5652f729b98d8ab8d41c8bdce
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/斜めクリッピング.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/色ずれ.exa
+    Sha256: 5f4b81685b903220de765bf9c4238756f8a9242dff98b64ac54cfa215a70cecb
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/色ずれ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/色調補正.exa
+    Sha256: 14149e90cfbbbae75a8ebf6f9d4affc173933126bfd31459cea2d0b7ac6b7b3a
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/色調補正.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/振動.exa
+    Sha256: c64eae4a1a13939866795731413f235af79a0158c19d9a7e979cc2ca3254d246
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/振動.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/閃光.exa
+    Sha256: 50f55e0ef1009cef1266df6d375a2bdf817b9ec2611547937832033aa9c4e5b5
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/閃光.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/単色化.exa
+    Sha256: 3bdb4e58090bfae1c733998745e47acf4c1beecd94fcd4a39be65ebddff830ec
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/単色化.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/動画ファイル合成.exa
+    Sha256: 442bd9bab835dbe74382a2487040baa41551a43322e75edf1963c5e60cb5422e
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/動画ファイル合成.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/特定色域変換.exa
+    Sha256: f669f58da2ddbcf422ac9f92ad463dccd20eb80672f97367d3d3714c250ada74
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/特定色域変換.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/凸エッジ.exa
+    Sha256: 05e1d24cbeceeb76a1f17de96904fbfa9dfb5d6751e6a710e34835cb5e208f29
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/凸エッジ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/波紋.exa
+    Sha256: c2fbe1362eab9616834acda053ecafc30beb13b91054837bda39b45f986597c0
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/波紋.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/発光.exa
+    Sha256: 5cf427b0b70b9bf959ee0ca8fcafa2f152c308d1dc9883377acb49d4c5a2a300
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/発光.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/放射ブラー.exa
+    Sha256: 7662cbfe3b24c8d714b425119e6321a65a4c618523268731bb70d5b4888a4009
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/放射ブラー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/方向ブラー.exa
+    Sha256: 7d1fc958da20aab913b84b8394fd9bdd3ca15c2cbc0015945555848cdf9a8cd1
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/方向ブラー.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/リサイズ.exa
+    Sha256: 02f58f2e100668862151a5f73088141fb247186da5e4cdfb310f1f96cf06f483
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/リサイズ.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/ローテーション.exa
+    Sha256: cc1aae4b9098660b5c798e6b672524ff084e8d416581860dc9882e8ed25c2796
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/ローテーション.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/回転.exa
+    Sha256: 38e76b849bd3616f73f81ec2e3098b4fa230c681f79ce7d22283ec2bf3422b33
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/回転.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/拡大率.exa
+    Sha256: 5086326b86377be7a8ea8524561061de13c1311d6f03bc639df1660bda5fe2de
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/拡大率.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/座標.exa
+    Sha256: 54a9a148d96f875bb978aeac2bf76367213b2fc0e54b5bce7be8bb9372844056
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/座標.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/透明度.exa
+    Sha256: 19a92828396b53aa2dcd86bec8f58f32e9a46622702f326e30d6a23efa07ecdf
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/透明度.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/反転.exa
+    Sha256: 08f43820a111347d2a617c4271a94c5f857686f642eb4ceaa5cb1aacb955ff48
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/反転.exa
+  - Path: セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/領域拡張.exa
+    Sha256: 4bc986c00b4eb263adcdd4244fe2c87c3fed00845ed35a9719195dde92fa8deb
+    Install:
+      TargetPath: plugins/セカンドエクスプローラ/メディアオブジェクト/フィルタ効果/基本効果/領域拡張.exa
+ManifestVersion: 0.2.0

@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: script-sort-patch
+DisplayName: スクリプト並び替えパッチ
+Version: 1.0.0
+ReleaseDate: 2022-06-24
+Section: Plugin/Other
+InstalledSize: 29
+Developer:
+- hebiiro
+Description: スクリプト並び替えプラグインの不具合と競合を解消するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-script_sort_patch
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-script_sort_patch/releases/download/1.0.0/script_sort_patch.1.0.0.zip
+  Sha256: 27087669c418f5242447fee2507d118b2d2dcecfb1640c404370328e0aea7267
+  Files:
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: a1a45fffd84055b69cf7c32ab5ff867c1d677b0519e3a8591c87c440e501caf8
+  - Path: script_sort_patch.auf
+    Sha256: d31a4d0ac58074f4f5e8dcec57820c271bc2893ff44fe407431e8ef2d83e272b
+    Install:
+      TargetPath: plugins/script_sort_patch.auf
+ManifestVersion: 0.2.0

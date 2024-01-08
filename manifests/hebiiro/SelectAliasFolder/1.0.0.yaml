@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: SelectAliasFolder
+DisplayName: エイリアスフォルダ選択
+Version: 1.0.0
+ReleaseDate: 2021-12-24
+Section: Plugin/Other
+InstalledSize: 17
+Developer:
+- hebiiro
+Description: エイリアスフォルダをコンボボックスで選択できるようにするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-SelectAliasFolder
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SelectAliasFolder/releases/download/1.0.0/SelectAliasFolder.1.0.0.7z
+  Sha256: 799d6ec89c5908a034a3efe150776ea3aefb7745c2028db5e81464835580746e
+  Files:
+  - Path: license.txt
+    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+  - Path: README.md
+    Sha256: aa242a8782814d6dbef7c23f6a26de9ea798b49cf3cec880a84780fc51f2f51b
+  - Path: SelectAliasFolder.auf
+    Sha256: b813cbe5d94f08618988fbbb49da470e358685d4c741d4a116e3de185e4f6514
+    Install:
+      TargetPath: plugins/SelectAliasFolder.auf
+ManifestVersion: 0.2.0

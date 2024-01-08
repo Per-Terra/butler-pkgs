@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: OutputSeq
+DisplayName: 連番出力
+Version: 1.0.0
+ReleaseDate: 2022-09-07
+Section: Plugin/Output
+InstalledSize: 25
+Developer:
+- hebiiro
+Description: GDI+を使用して連番画像を出力するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-OutputSeq
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-OutputSeq/releases/download/1.0.0/OutputSeq.1.0.0.zip
+  Sha256: 95db90d531222df564a1ac2fe34a493cc60c9e24693adad3ecf198088fdece4c
+  Files:
+  - Path: CREDITS.md
+    Sha256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: OutputSeq.auo
+    Sha256: 356ad37364611e3e2c0f66c25bd61df0a7f09350ef8c00ec495499e905935fba
+    Install:
+      TargetPath: plugins/OutputSeq.auo
+  - Path: README.md
+    Sha256: d6d849cb80bde4d8d63976b58ea8fbecc5e11a89595715859723513ce410d4a2
+ManifestVersion: 0.2.0
