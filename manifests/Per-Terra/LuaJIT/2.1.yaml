@@ -1,9 +1,9 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
 
 Identifier: LuaJIT
 Version: "2.1"
-ReleaseDate: 2024-01-07
+ReleaseDate: 2024-01-08
 Section: Core
 Architecture: x86
 Replaces:
@@ -15,19 +15,19 @@ Description: Per-TerraによるLuaJITの自動ビルド
 Website:
 - https://github.com/Per-Terra/LuaJIT-Auto-Builds
 Files:
-- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2024-01-07-00-43-44/LuaJIT_2.1_Win_x86.zip
-  Sha256: 27bcaa3e775db61d09d6d576e97f6a0c5dd75b4cbb717866bec45022a2d12253
+- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2024-01-08-00-41-04/LuaJIT_2.1_Win_x86.zip
+  Sha256: 83baf17deee279b5eeb70d36d97d222e5b396106d745f2a69d3d4b48296d5431
   Files:
   - Path: About-This-Build.txt
     Sha256: 5d95be276d053b4a30d05d48a6fa959acc021fcd30d771df5bb1f6c83128756c
   - Path: COPYRIGHT
     Sha256: 4e546dc0556ca5f1514ae9d9bad723501a51da556342590b7076fb42f2930f25
   - Path: lua51.dll
-    Sha256: 86fd6bb3e502369a3138dc271ae5605ef2c1bad84f0abf7df769a77850dfcb06
+    Sha256: 23e902fcaedd37a6a46807c1a0c829698a79da0dd39ecd3d414b5fdde2710350
     Install:
       TargetPath: lua51.dll
   - Path: luajit.exe
-    Sha256: 67f2781776f1d0b2e0efba3e9a365ef3330554b0d8ff7a55a6aaed6b72a6bb3d
+    Sha256: 426e7869411485f2b2d5d7ee254608a9fef7feaa20333b2d03569ecd4718f742
   - Path: README
     Sha256: dad6aa1f8fca498b4bacac8b19d9a1d7b0eb021eed569eb4d76e968c3ea67c87
   - Path: doc/bluequad-print.css
@@ -62,4 +62,4 @@ Files:
     Sha256: 3452fcc70be4f59da84605f8b488f246f5b502b06b5fa66e74734bfd333fb41f
   - Path: doc/img/contact.png
     Sha256: 9b89eddcb7af5b0cc62a4cba4f878dcde584f378763e4d74621d44130a1ebec0
-ManifestVersion: 0.1.0
+ManifestVersion: 0.2.0
