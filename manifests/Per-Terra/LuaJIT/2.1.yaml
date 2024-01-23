@@ -3,31 +3,31 @@
 
 Identifier: LuaJIT
 Version: "2.1"
-ReleaseDate: 2024-01-22
+ReleaseDate: 2024-01-23
 Section: Core
 Architecture: x86
 Replaces:
 - exedit
-InstalledSize: 1185
+InstalledSize: 1187
 Developer:
 - Per-Terra
 Description: Per-TerraによるLuaJITの自動ビルド
 Website:
 - https://github.com/Per-Terra/LuaJIT-Auto-Builds
 Files:
-- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2024-01-22-00-42-40/LuaJIT_2.1_Win_x86.zip
-  Sha256: 007992033b0a4411cbd3b3b81fdc568151885d28b9c72a2f1bcd471fc8adc9f8
+- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2024-01-23-00-41-54/LuaJIT_2.1_Win_x86.zip
+  Sha256: e8bc00a51142eeae8e19dffcbb5cc1716bb6236b224fe7bec7f1ecf2edadcd03
   Files:
   - Path: About-This-Build.txt
-    Sha256: 5d95be276d053b4a30d05d48a6fa959acc021fcd30d771df5bb1f6c83128756c
+    Sha256: 84d5f8312862a69b1d11fd3c77bcd25b5d9febffc73fe9921647d5ab99e004e7
   - Path: COPYRIGHT
     Sha256: 4e546dc0556ca5f1514ae9d9bad723501a51da556342590b7076fb42f2930f25
   - Path: lua51.dll
-    Sha256: 0a2d6815bdcddc0f24b66d3f27cc83fade21efa21a0d197dcb6b9ceee32ceb62
+    Sha256: b43871ddcb46d18d27f79517133b696930f0c4555a4bd0e8712deba22ca49cb6
     Install:
       TargetPath: lua51.dll
   - Path: luajit.exe
-    Sha256: d88c9a70fb1c0ccbafd0f4cfddb5193476264df613fc184e530167eec252a85c
+    Sha256: ad07fb37af026f9c8fa2327deef6b82ffcba476e571e81c755e9914f9d89656f
   - Path: README
     Sha256: dad6aa1f8fca498b4bacac8b19d9a1d7b0eb021eed569eb4d76e968c3ea67c87
   - Path: doc/bluequad-print.css
@@ -53,13 +53,13 @@ Files:
   - Path: doc/ext_profiler.html
     Sha256: e685bdd980785a5fb7fa32ac3feec5576015f2c3fdcf7405088854f96bf9f8b8
   - Path: doc/extensions.html
-    Sha256: 12bffbae1c61e47573db420a4f05b562e1d16bc1551fe1ccd39cfb03de6450a1
+    Sha256: fc3f2b1965c685844f79ab393e7406bc8fe32a84f970e30d6b2e875fbef825b9
   - Path: doc/install.html
     Sha256: f64aa02eae7d5668a5d87ac8ce461c9d906f513081d10c24cae7b927813b2d19
   - Path: doc/luajit.html
     Sha256: 436489baf37ef605b888f3e2bae1a4f6605bff4d27ccdd25e7a3ec3d1d2d4907
   - Path: doc/running.html
-    Sha256: 3452fcc70be4f59da84605f8b488f246f5b502b06b5fa66e74734bfd333fb41f
+    Sha256: 0bc889226b56ab20709639d9f13eeefc91ff053cb886e099e28fb270d49a27c0
   - Path: doc/img/contact.png
     Sha256: 9b89eddcb7af5b0cc62a4cba4f878dcde584f378763e4d74621d44130a1ebec0
 ManifestVersion: 0.2.0
