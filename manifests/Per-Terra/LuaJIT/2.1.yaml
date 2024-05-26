@@ -3,31 +3,31 @@
 
 Identifier: LuaJIT
 Version: "2.1"
-ReleaseDate: 2024-05-25
+ReleaseDate: 2024-05-26
 Section: Core
 Architecture: x86
 Replaces:
 - exedit
-InstalledSize: 1189
+InstalledSize: 1190
 Developer:
 - Per-Terra
 Description: Per-TerraによるLuaJITの自動ビルド
 Website:
 - https://github.com/Per-Terra/LuaJIT-Auto-Builds
 Files:
-- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2024-05-25-00-39-43/LuaJIT_2.1_Win_x86.zip
-  Sha256: 4467c5d601f759f940bf162533a2b48475be39bfe8909a549a3f547dcff6d12e
+- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2024-05-26-00-44-22/LuaJIT_2.1_Win_x86.zip
+  Sha256: eb3acc153a55e92cdc8c3830e37cca9a081d8adce6e82c2ec0c9702a26e0e6b7
   Files:
   - Path: About-This-Build.txt
-    Sha256: b8f1189bc1aaf105ffae490abb73e5de18e24cf3611be05aa5ea53b1bb7aee31
+    Sha256: faa368e082f419764c65f560c6ff6c165c2acbe50f03772b4a78206481367cf1
   - Path: COPYRIGHT
     Sha256: 4e546dc0556ca5f1514ae9d9bad723501a51da556342590b7076fb42f2930f25
   - Path: lua51.dll
-    Sha256: 5b27ce2e3eefe1a40b35f8db096fb6d05c0c4d1fa3b872da98c27fe69c7258ee
+    Sha256: 7ae74c6701f2d7edd5a74d2c39824cf3160af552dd23d216da1ab46721f6cad2
     Install:
       TargetPath: lua51.dll
   - Path: luajit.exe
-    Sha256: 46145f3adc470402f9dd4d58c9f2dad385c7e876b4261255692226524e10d101
+    Sha256: 38216ba7fc5c90d8cde0e1dd1cc36ae109b9f3fa7e5f51869326190bd6bfe54a
   - Path: README
     Sha256: dad6aa1f8fca498b4bacac8b19d9a1d7b0eb021eed569eb4d76e968c3ea67c87
   - Path: doc/bluequad-print.css
@@ -37,13 +37,13 @@ Files:
   - Path: doc/contact.html
     Sha256: d21d53d5aa52cb662092fbd63da276ac34620c6b2fb495f106540b8c76ee2fe6
   - Path: doc/ext_buffer.html
-    Sha256: 8c1861db63576e43643ba77bb0ebbcd3a7fb25d61ae70501c1fea02495a3b90b
+    Sha256: 1fa0aae34f80235bbf1bf352269e834cc39939e4b027f18f2e7c5c61b7dddba7
   - Path: doc/ext_c_api.html
     Sha256: 0b60d161100b37121eb7d3651f1bf626a4570c30ce71788b5aaf9177a4a8f9c3
   - Path: doc/ext_ffi_api.html
     Sha256: 3041a8b539b5e67f77976bf5dd83a78c8e2b29bbf87ea05e2ed238cb86d9c1ce
   - Path: doc/ext_ffi_semantics.html
-    Sha256: f160e0e6e0540c8d36098238a1b44b8dcd20b2ef3bea5a025cb9078c35d77ab7
+    Sha256: 3472858356b69189282b18b7bc3b3fa17ad3e43261004508e33af42251abc5d9
   - Path: doc/ext_ffi_tutorial.html
     Sha256: 00486856af194bc273b7103b0a51d77231c3b3095906c618cd5b02e87dbfc2f0
   - Path: doc/ext_ffi.html
