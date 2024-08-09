@@ -1,0 +1,255 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: NVEnc
+Version: "7.53"
+ReleaseDate: 2024-05-12
+Section: Plugin/Output
+Replaces:
+- ffmpegOut
+- QSVEnc
+- svtAV1guiEx
+- VCEEnc
+- VVenCguiEx
+- x264guiEx
+- x265guiEx
+InstalledSize: 180402
+Developer:
+- rigaya
+Description: |-
+  NVIDIAのNVEncを使用してエンコードを行う出力プラグイン
+  NVEncによるハードウェア高速エンコードを目指します。
+Website:
+- https://github.com/rigaya/NVEnc
+Files:
+- SourceUrl: https://github.com/rigaya/NVEnc/releases/download/7.53/Aviutl_NVEnc_7.53.zip
+  Sha256: c1bdaa9b971452500ff32281b3a5d6043a1a2038bf46bb6ae548ed367de3d7d5
+  Files:
+  - Path: NVEnc_readme.txt
+    Sha256: 4fb402e53a8e5b224d0a3511d9bbb30c85f2190b0bd1ad01a7689092029f8b10
+  - Path: NVENCが利用可能か確認 [ダブルクリック].bat
+    Sha256: 96838eb4e8c9a07272c12b396d96d1498cee2eab95e41722b6b6f3c3dd60b50d
+  - Path: exe_files/auo_check_fileopen.exe
+    Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
+    Install:
+      TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.exe
+    Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
+    Install:
+      TargetPath: exe_files/auo_setup.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.ini
+    Sha256: 30d2d6fbb5aa2d2c398b567254d6566b566c6b77633837da8b514c9d32c16faa
+    Install:
+      TargetPath: exe_files/auo_setup.ini
+      ConfFile: true
+  - Path: exe_files/check_dotnet.dll
+    Sha256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
+    Install:
+      TargetPath: exe_files/check_dotnet.dll
+  - Path: exe_files/check_vc.dll
+    Sha256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
+    Install:
+      TargetPath: exe_files/check_vc.dll
+  - Path: exe_files/ndp48-web.exe
+    Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
+    Install:
+      TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
+  - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
+    Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
+    Install:
+      TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
+  - Path: exe_files/VC_redist.x86.exe
+    Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
+    Install:
+      TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
+  - Path: exe_files/NVEncC/x64/avcodec-61.dll
+    Sha256: f043b02d3fd000487b9d4838ae4238e0fb2f8aef0c35669e38bbb4641c877fc1
+    Install:
+      TargetPath: exe_files/NVEncC/x64/avcodec-61.dll
+  - Path: exe_files/NVEncC/x64/avdevice-61.dll
+    Sha256: e30e9c673c52779ed6594b675337747808ae19094aebea693cfa5c0bd3b1a294
+    Install:
+      TargetPath: exe_files/NVEncC/x64/avdevice-61.dll
+  - Path: exe_files/NVEncC/x64/avfilter-10.dll
+    Sha256: dc66768647bf36eeb39186b1ea6386682a942b246d892e921f2ebe2328d4e2fb
+    Install:
+      TargetPath: exe_files/NVEncC/x64/avfilter-10.dll
+  - Path: exe_files/NVEncC/x64/avformat-61.dll
+    Sha256: b1f0c29fb5ff5843851f555e5ea278de78cc53397b072859b12478794d43db15
+    Install:
+      TargetPath: exe_files/NVEncC/x64/avformat-61.dll
+  - Path: exe_files/NVEncC/x64/avutil-59.dll
+    Sha256: 83fb7d8d627d74ce289fdfc7d88cf1a0c847978e4847db07873e65b1974281e3
+    Install:
+      TargetPath: exe_files/NVEncC/x64/avutil-59.dll
+  - Path: exe_files/NVEncC/x64/cudart64_110.dll
+    Sha256: edc35e7d0fa3f257bbedfa7888911080c5696acdd40b6187b6dd0173f20759ad
+    Install:
+      TargetPath: exe_files/NVEncC/x64/cudart64_110.dll
+  - Path: exe_files/NVEncC/x64/hdr10plus_gen.exe
+    Sha256: fdb1fbbe20f10035632b91964152f9ccf473c3b896b7957c7588fe46c86eb74d
+    Install:
+      TargetPath: exe_files/NVEncC/x64/hdr10plus_gen.exe
+      Method: Copy
+  - Path: exe_files/NVEncC/x64/libass-9.dll
+    Sha256: 16103b1c2d3ba600151a7546e43f019bdd27424c1aa74513fa16d7e2a163782a
+    Install:
+      TargetPath: exe_files/NVEncC/x64/libass-9.dll
+  - Path: exe_files/NVEncC/x64/libvmaf.dll
+    Sha256: 1ba6861039ba666328e6170e53533ea6920f57cf3dde431b10f2eef6640e6fb3
+    Install:
+      TargetPath: exe_files/NVEncC/x64/libvmaf.dll
+  - Path: exe_files/NVEncC/x64/msvcp140.dll
+    Sha256: a030dc2dfd2eca28a9375c92989adf4daf161f988db5e16b9e10678eb0dff4c7
+    Install:
+      TargetPath: exe_files/NVEncC/x64/msvcp140.dll
+  - Path: exe_files/NVEncC/x64/NVEncC64.exe
+    Sha256: 045a172697143eaeb7656e00d6d5024ceb8bc08cc18b9b256f2d1b7ebe7a1330
+    Install:
+      TargetPath: exe_files/NVEncC/x64/NVEncC64.exe
+      Method: Copy
+  - Path: exe_files/NVEncC/x64/NVEncNVOFFRUC.dll
+    Sha256: 5b19083bc1d3b6f84b680c94d9e9f90c2178fc833c53e4592c484c97e3827dd1
+    Install:
+      TargetPath: exe_files/NVEncC/x64/NVEncNVOFFRUC.dll
+  - Path: exe_files/NVEncC/x64/NvOFFRUC.dll
+    Sha256: 5a0b6701d30709e25e7e5b92ca46b18aab1459160cecd4f629872369d85c8b0a
+    Install:
+      TargetPath: exe_files/NVEncC/x64/NvOFFRUC.dll
+  - Path: exe_files/NVEncC/x64/nvrtc-builtins64_101.dll
+    Sha256: 48762ca52ed8da30d4bc549cf112714267897b6495197f64f75e173904cc26f7
+    Install:
+      TargetPath: exe_files/NVEncC/x64/nvrtc-builtins64_101.dll
+  - Path: exe_files/NVEncC/x64/nvrtc64_101_0.dll
+    Sha256: 03bbc09ba4f3c30450d2a6ce2e5be48b995347fca77af2fa77aff29dc828cb69
+    Install:
+      TargetPath: exe_files/NVEncC/x64/nvrtc64_101_0.dll
+  - Path: exe_files/NVEncC/x64/swresample-5.dll
+    Sha256: 0901c926a0260a4167758a20f18b7a16427e1c3bb3c9094ff8a4eaeff931f250
+    Install:
+      TargetPath: exe_files/NVEncC/x64/swresample-5.dll
+  - Path: exe_files/NVEncC/x64/vcruntime140_1.dll
+    Sha256: e4e85eea1106d361923995e53a0b961a28d4fb58555f40945003f35e5bf2c273
+    Install:
+      TargetPath: exe_files/NVEncC/x64/vcruntime140_1.dll
+  - Path: exe_files/NVEncC/x64/vcruntime140.dll
+    Sha256: f843cd00d9aff9a902dd7c98d6137639a10bd84904d81a085c28a3b29f8223c1
+    Install:
+      TargetPath: exe_files/NVEncC/x64/vcruntime140.dll
+  - Path: exe_files/NVEncC/x86/avcodec-61.dll
+    Sha256: 8422c21913a634bd4d0f562d49b33c1e35f3eb4e1a82a96851c0274cee3d9858
+    Install:
+      TargetPath: exe_files/NVEncC/x86/avcodec-61.dll
+  - Path: exe_files/NVEncC/x86/avdevice-61.dll
+    Sha256: a1bd27ebb16882ddfbb2e055109ff58916cd6afdf320e50318120109d611539d
+    Install:
+      TargetPath: exe_files/NVEncC/x86/avdevice-61.dll
+  - Path: exe_files/NVEncC/x86/avfilter-10.dll
+    Sha256: 29ee7b6b5fa44c500f268a15e7979e1cc3cabae1a214d1ec08601eb5ad96d344
+    Install:
+      TargetPath: exe_files/NVEncC/x86/avfilter-10.dll
+  - Path: exe_files/NVEncC/x86/avformat-61.dll
+    Sha256: 507be7919025c7029fdea3c406e1d4d2e4796dbbda699839013161d586aeabef
+    Install:
+      TargetPath: exe_files/NVEncC/x86/avformat-61.dll
+  - Path: exe_files/NVEncC/x86/avutil-59.dll
+    Sha256: 38a2861da252d7e606d33403ffe4fe801c56fc1406337090186eedc80fbd1978
+    Install:
+      TargetPath: exe_files/NVEncC/x86/avutil-59.dll
+  - Path: exe_files/NVEncC/x86/hdr10plus_gen.exe
+    Sha256: 032f694c813223a5bde933bdc9c68144390d1dba7917ac2962b9acae923bb099
+    Install:
+      TargetPath: exe_files/NVEncC/x86/hdr10plus_gen.exe
+      Method: Copy
+  - Path: exe_files/NVEncC/x86/libass-9.dll
+    Sha256: c6686850ea1fd46ab4e50c5948f3df08019fc9b5c3f6a66957b211ad39bc6462
+    Install:
+      TargetPath: exe_files/NVEncC/x86/libass-9.dll
+  - Path: exe_files/NVEncC/x86/NVEncC.exe
+    Sha256: 4aa0c9b3e1ee6f3b9bbe5d292beacb480c79c73a67a571753507016a93f3eb0c
+    Install:
+      TargetPath: exe_files/NVEncC/x86/NVEncC.exe
+      Method: Copy
+  - Path: exe_files/NVEncC/x86/swresample-5.dll
+    Sha256: f41d6ed03923b791151c7484571aa9c42bfec97bc3d97033a20bf2a8d440a021
+    Install:
+      TargetPath: exe_files/NVEncC/x86/swresample-5.dll
+  - Path: plugins/auo_setup.auf
+    Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
+    Install:
+      TargetPath: plugins/auo_setup.auf
+  - Path: plugins/NVEnc.auo
+    Sha256: 76708b445666595ca796490a54f95c25ea64c49ecd01bdfe138e1282b1f5bcdd
+    Install:
+      TargetPath: plugins/NVEnc.auo
+  - Path: plugins/NVEnc.en.ini
+    Sha256: f96c3e4bb461aed0521076501921ee731164bca3511daa6d47c5b68ab16836d1
+    Install:
+      TargetPath: plugins/NVEnc.en.ini
+      ConfFile: true
+  - Path: plugins/NVEnc.ini
+    Sha256: 84e223f60f0c5be253c100637aeff2d3a5c258bb177c57ba6c6089c3f2de219b
+    Install:
+      TargetPath: plugins/NVEnc.ini
+      ConfFile: true
+  - Path: plugins/NVEnc.zh.ini
+    Sha256: 0eced2846898e71026471720cf00f3047433e897ab3a42679ff5ff7fa50cdfa1
+    Install:
+      TargetPath: plugins/NVEnc.zh.ini
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/H.264 CQP.stg
+    Sha256: 603c0ad48ab28a77340dfd46c693d9272829ef117bcc59ec73eb6e1caddcbdbf
+    Install:
+      TargetPath: plugins/NVEnc_stg/H.264 CQP.stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/H.264 インターレース保持.stg
+    Sha256: b319866d458e94be989bb936e25a79c86aeb21f6b27a71e1e4cb0c7b48adde6b
+    Install:
+      TargetPath: plugins/NVEnc_stg/H.264 インターレース保持.stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/H.264 ビットレート指定 高画質.stg
+    Sha256: 531c6105c6ef30222f995d26e15b9973472c3d84cf2387d1dd7069b8ae11d687
+    Install:
+      TargetPath: plugins/NVEnc_stg/H.264 ビットレート指定 高画質.stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/H.264 ビットレート指定.stg
+    Sha256: bcfa477328cab0fa519169e15c3265c91367a5ec6427a059ce145cfd9774ba3c
+    Install:
+      TargetPath: plugins/NVEnc_stg/H.264 ビットレート指定.stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/H.264 品質指定.stg
+    Sha256: ab14a8b85b9dca2de94c17c42280c7350a469c8f15f098afa410083746f99778
+    Install:
+      TargetPath: plugins/NVEnc_stg/H.264 品質指定.stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/HEVC CQP.stg
+    Sha256: 1166b87d3a729849342abeb4718292a58a5a04bed5884d92a38a8fea1d8c8ea4
+    Install:
+      TargetPath: plugins/NVEnc_stg/HEVC CQP.stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/HEVC ビットレート指定 高画質.stg
+    Sha256: 89afb4cffe23c71c95aad61071a93b0bd13b70d62ac36fdd9c2955f66579cd28
+    Install:
+      TargetPath: plugins/NVEnc_stg/HEVC ビットレート指定 高画質.stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/HEVC ビットレート指定.stg
+    Sha256: 5c59e0701eb3783c55495b315dc3b7624f287caba21b3c8bcbb110529b6e278f
+    Install:
+      TargetPath: plugins/NVEnc_stg/HEVC ビットレート指定.stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/HEVC 品質指定 (10bit).stg
+    Sha256: 62aac38bf40a7c2f3266d805e5f375601386b1b24eb148f83160118cd0d892b5
+    Install:
+      TargetPath: plugins/NVEnc_stg/HEVC 品質指定 (10bit).stg
+      ConfFile: true
+  - Path: plugins/NVEnc_stg/HEVC 品質指定.stg
+    Sha256: 24914a19886efd44b9a5e5fe9fc922c2e2c2b98c6fb125aaa6663d140035ffce
+    Install:
+      TargetPath: plugins/NVEnc_stg/HEVC 品質指定.stg
+      ConfFile: true
+ManifestVersion: 0.2.0

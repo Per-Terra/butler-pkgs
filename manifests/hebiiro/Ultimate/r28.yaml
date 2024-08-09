@@ -1,0 +1,505 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: Ultimate
+DisplayName: アルティメットプラグイン
+Version: r28
+ReleaseDate: 2024-06-01
+Section: Plugin/Other
+InstalledSize: 10339
+Developer:
+- hebiiro
+Description: AviUtlを使いやすくする複合プラグイン
+Website:
+- https://github.com/hebiiro/anti.aviutl.ultimate.plugin
+Files:
+- SourceUrl: https://github.com/hebiiro/anti.aviutl.ultimate.plugin/releases/download/r28/ultimate_r28.zip
+  Sha256: 69345ee3f8032a041b3eafed084ba7755283c5d7427814df68c6d78783b534b2
+  Files:
+  - Path: CREDITS.md
+    Sha256: 6cf8c9d1623d181619112dc24df5b41ada59a74587610602715332583b285ee6
+  - Path: LICENSE
+    Sha256: 2596329b2330c24af36369811c4c3c5cd39a43619aeee69ebcb5c2269171a1d3
+  - Path: README.md
+    Sha256: 399ec18210baf302569a9973a846384037590c20e88626bf8036433869874f00
+  - Path: ultimate.auf
+    Sha256: b5b02c4ece60d331e4317da5b314b1a9009d0c5cf626f628d2a48342dafcbb67
+    Install:
+      TargetPath: plugins/Ultimate.auf
+  - Path: ultimate.aul
+    Sha256: ae97ce7e238ea6ee805116ad8fa7e48169c290310237a52141962782230d53bc
+    Install:
+      TargetPath: plugins/Ultimate.aul
+  - Path: ultimate/assets/deploy_python.ps1
+    Sha256: 362b4f6c36cd34c126ee8ec6e520339e6d9a989922481734a1e4e0b9f77be528
+    Install:
+      TargetPath: plugins/ultimate/assets/deploy_python.ps1
+  - Path: ultimate/assets/dark/aviutl_dark.exe.manifest
+    Sha256: 24ca12495a21cfd31071d6cf128cc7f1398a4e8aa10bf1be9a533cc53d3c201b
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/aviutl_dark.exe.manifest
+  - Path: ultimate/assets/dark/boot.py
+    Sha256: 844e73c1dda0e7baf31fca7a6a948507fd90d2498b22e2c0280608a8bd0002f2
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/boot.py
+  - Path: ultimate/assets/dark/dark.pyd
+    Sha256: 8fec51f7b9caca15e63ef92b48332f942c4c292c08a100e284bb4df98d5fbef1
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/dark.pyd
+  - Path: ultimate/assets/dark/core/__init__.py
+    Sha256: 23f685d879b7d206d4213a2e9ced740c54a816ec8f60f3996d445d62be859fcf
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/core/__init__.py
+  - Path: ultimate/assets/dark/core/const.py
+    Sha256: 0b6d3b3ad1f82e26d4fc334d9fdcef4a624570ce0b23db45bef025ed4f820655
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/core/const.py
+  - Path: ultimate/assets/dark/core/control.py
+    Sha256: 4439dd7040d2e8d5f4873d6f8b92620e0a777e5077559887583e793de57e98d2
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/core/control.py
+  - Path: ultimate/assets/dark/core/function.py
+    Sha256: dc87c26036df7c97d153495b3a7b2120d0d354c5384f091f0181ef6c3b3ab1fe
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/core/function.py
+  - Path: ultimate/assets/dark/core/handler.py
+    Sha256: c74995c764416c74a59548d8038988fac6137a764953f2f6923703c6e454f3f0
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/core/handler.py
+  - Path: ultimate/assets/dark/core/manager.py
+    Sha256: c7db64ad51fb6e4cf7baee028176a62cd9e9480dab7cdcb432636ba8552f842c
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/core/manager.py
+  - Path: ultimate/assets/dark/design/kuromado/__init__.py
+    Sha256: 77ab78305b9ee5aeb956e1e9fc6df2a8f86ef90090c16f77089e60fb4c58c7a9
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/__init__.py
+  - Path: ultimate/assets/dark/design/kuromado/button.py
+    Sha256: 0d360850c21873bd06bcf8a705eb3fcd7b4e39e519333b9f47b5d1aed5aea53f
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/button.py
+  - Path: ultimate/assets/dark/design/kuromado/combobox.py
+    Sha256: 63faaee7ceea5c692b04b59d74bd4229ca1d6ef60779e84522c7ba2fd8afa7fe
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/combobox.py
+  - Path: ultimate/assets/dark/design/kuromado/command_module.py
+    Sha256: a3a48c2ef8d29ad328d0977d2286bf9b4f47cca6ad8f9f8e534ce34d98281a96
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/command_module.py
+  - Path: ultimate/assets/dark/design/kuromado/common_items_dialog.py
+    Sha256: 1070716b06ffb985e843f748a144dfa6251f2f55483e882a27d44fda7bd4981c
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/common_items_dialog.py
+  - Path: ultimate/assets/dark/design/kuromado/const.py
+    Sha256: 4a910f74310e0e184a3acc7e642a961f56151d1b4bfaa7fa004ae909114ed385
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/const.py
+  - Path: ultimate/assets/dark/design/kuromado/dialog.py
+    Sha256: 669782e95152867fbd736084067bcb42970a6e76dd007f5baa0008b51b522950
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/dialog.py
+  - Path: ultimate/assets/dark/design/kuromado/edit.py
+    Sha256: 28950e6a27454c6b550d53f7caed3376c682e8a0fe7d3f65f760cb80bf95d1b5
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/edit.py
+  - Path: ultimate/assets/dark/design/kuromado/exedit.py
+    Sha256: 93930c2d2fb0c854fd5635a72a88d800afa9fef52260e0a277473c704c2dfc8e
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/exedit.py
+  - Path: ultimate/assets/dark/design/kuromado/header.py
+    Sha256: e3289a157b35ee37c576167659aea29f7851b6bde5951bdb38e76b184814620e
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/header.py
+  - Path: ultimate/assets/dark/design/kuromado/listbox.py
+    Sha256: 2468afe7a9831d9c61d43d8eae6fa9bb78f23ca6b26b8ef6ddfee059e3606dde
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/listbox.py
+  - Path: ultimate/assets/dark/design/kuromado/listview.py
+    Sha256: 7fc3c3c36dc6c5f6cdee89c315d4ae3a1535f59c12ee4b4d21817d7ff1d352ce
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/listview.py
+  - Path: ultimate/assets/dark/design/kuromado/menu_bar.py
+    Sha256: 128f637b4d8cccc64ff6e4c03a9f81ec3058efbefd09eb6b4c6f880a23feb90a
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/menu_bar.py
+  - Path: ultimate/assets/dark/design/kuromado/menu_icon.py
+    Sha256: 38bf5e4ca7ac9ab4b68ff594c4707a3cc12cdd1c9a8aee5327beff91099fb510
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/menu_icon.py
+  - Path: ultimate/assets/dark/design/kuromado/menu_popup.py
+    Sha256: 0df63e0001d738402609187af4a5d74892ab51a704be456b720c8d86c2683009
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/menu_popup.py
+  - Path: ultimate/assets/dark/design/kuromado/menu.py
+    Sha256: aceb48e93bcfdb17c8277c8a45e7d9dd765788d5e6a5eb79a15bb1c1e4d4bb9c
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/menu.py
+  - Path: ultimate/assets/dark/design/kuromado/preview_pane.py
+    Sha256: a864a2a703ef359b1c72d1ef1f15a6374ee446d07053a3d10d14fe13d11476bd
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/preview_pane.py
+  - Path: ultimate/assets/dark/design/kuromado/scrollbar.py
+    Sha256: 769ec7cc2e9ce9f082f434cfdcf89b68b3ae19ffbf881f4c3139c5ef3b54e65b
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/scrollbar.py
+  - Path: ultimate/assets/dark/design/kuromado/spin.py
+    Sha256: 638c2e8268a67718894ec01877be65cb5d4a3eb7326c0a29787900c73c2f55a0
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/spin.py
+  - Path: ultimate/assets/dark/design/kuromado/static.py
+    Sha256: cb67c7acfca81fd7636e80fbfb96f02d32b12dc826abd8c759f5e3069a8cf165
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/static.py
+  - Path: ultimate/assets/dark/design/kuromado/tab.py
+    Sha256: 49c1a5604c65d3bed8c9854440bdc82820a2859f91414eb9631a10ad16b716a9
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/tab.py
+  - Path: ultimate/assets/dark/design/kuromado/toolbar.py
+    Sha256: 331680c4d979126f42cbb1db5aab07064bf6893095020d9f0c77eb9f863fb3bb
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/toolbar.py
+  - Path: ultimate/assets/dark/design/kuromado/tooltip.py
+    Sha256: b0fd6cb508d47626137bc5e896421717e9d04d06b652f32813174ea4b85915b8
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/tooltip.py
+  - Path: ultimate/assets/dark/design/kuromado/trackbar.py
+    Sha256: d0b0061030e8b043406332c1cea8119aa928a8b5c68d2015c5f0cfa0d6d5ea37
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/trackbar.py
+  - Path: ultimate/assets/dark/design/kuromado/treeview.py
+    Sha256: 4bf3ccd4fc39dd44c2aaac523102d5a97a6705a4322f705a1ce7d4288106b588
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/treeview.py
+  - Path: ultimate/assets/dark/design/kuromado/window_caption.py
+    Sha256: e87c7bcbeebbefb59bc96d234d7cd88b7d04e5d07f22da4183020230a9925d12
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/window_caption.py
+  - Path: ultimate/assets/dark/design/kuromado/window_face.py
+    Sha256: 6b2c413f878743fd539d4e9e9a04cd6527896fbbd852f2194911024bc07cd494
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/window_face.py
+  - Path: ultimate/assets/dark/design/kuromado/window_separator.py
+    Sha256: ad442c35a138850bf0c87d30e4cd4e1fc83786e663484edb9de3fcbd26e62905
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/window_separator.py
+  - Path: ultimate/assets/dark/design/kuromado/window.py
+    Sha256: 949db4cc9dfa80c18430f481a1af66001b5424e5dba64659e1079f310db71376
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/window.py
+  - Path: ultimate/assets/dark/design/kuromado/skin/simple_skin.py
+    Sha256: fecd56742d3d3ddd451fec2e1c5aff856219be9276ab580a87ee9ff5b246a8db
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/skin/simple_skin.py
+  - Path: ultimate/assets/dark/design/kuromado/skin/skin.py
+    Sha256: 9e8ca352b76ca482c5133b30acac0ddf8e566a6f17e8abf8b5a34ae3755ea4a2
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/skin/skin.py
+  - Path: ultimate/assets/dark/design/kuromado/skin/tone.py
+    Sha256: b06f1241f886689bd6c5bcece5145550d80c20cc77caf2bf197cfb4b32f5812f
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/design/kuromado/skin/tone.py
+  - Path: ultimate/assets/dark/scheme/dark.brown.json
+    Sha256: 695237debeea95a2f16c98328bb15fdcaf95877483a5b78de2301af61d16eb38
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark.brown.json
+  - Path: ultimate/assets/dark/scheme/dark.maou_2chica.json
+    Sha256: dbd34abf970e5572a8251f2e054952ba7f1973b1b15346fb1bd977632925acb3
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark.maou_2chica.json
+  - Path: ultimate/assets/dark/scheme/dark.miku.json
+    Sha256: 9cdb943a3819dfe0ab263e0b684f889b0347b3aa08a63f27ed4593729229df85
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark.miku.json
+  - Path: ultimate/assets/dark/scheme/dark.red.json
+    Sha256: 3252423ae17aba56bd166f9cde3a920c6cfe12f2eb4b95c8441c82c1397a3ff9
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark.red.json
+  - Path: ultimate/assets/dark/scheme/dark.zundamon.json
+    Sha256: b46301507e7c1b16b771b6e08f7cf5de383d12881a92ec502fe783d4c4eb8c8a
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark.zundamon.json
+  - Path: ultimate/assets/dark/scheme/light.akane.json
+    Sha256: 50f56d780890b8f8eb47bcd4e30da6f6e724716586c6e15147ebc4ac5ba6f8fd
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/light.akane.json
+  - Path: ultimate/assets/dark/scheme/light.aoi.json
+    Sha256: 542e43d9c5e0b0979256b260690c648a4b00663bd1857bd2e58421c6ed79af4a
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/light.aoi.json
+  - Path: ultimate/assets/dark/scheme/light.kotonoha.json
+    Sha256: 30804dcb3cbec1767d8bcb49076ab9f94815a557c5c1078e4df0802948278130
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/light.kotonoha.json
+  - Path: ultimate/assets/dark/scheme/light.red.json
+    Sha256: c6489d1acb3d42b57245202cb9714b4a9ccb00c23a244d404c22d4a3455faccb
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/light.red.json
+  - Path: ultimate/assets/dark/scheme/dark/brown.py
+    Sha256: c3feeb59891af5d5f6ce389a0e4287bebe64a6ad86f1fb3c93a821d8d348a1e3
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark/brown.py
+  - Path: ultimate/assets/dark/scheme/dark/maou_2chica.py
+    Sha256: 5f4824c4642314cab69822f636fc27c35722f8005f6de107f2132825803f3314
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark/maou_2chica.py
+  - Path: ultimate/assets/dark/scheme/dark/miku.py
+    Sha256: e951be4650db7c6c79421d7cb4074e64022871d9a12f8059ae486b55ed26be90
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark/miku.py
+  - Path: ultimate/assets/dark/scheme/dark/red.py
+    Sha256: a68e4e4b5b2b82fdd9433432a58b76670608db573cc0c917187b3455010bd1ba
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark/red.py
+  - Path: ultimate/assets/dark/scheme/dark/zundamon.py
+    Sha256: 95314f7c56afb76fa338d5c2a9b7706582139dac6e81e006ebd336592638f5aa
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/dark/zundamon.py
+  - Path: ultimate/assets/dark/scheme/light/akane.py
+    Sha256: bc0b2c84c25bb36511b6b114627773dc3d2eb029be1903919d1c8f64c27c69de
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/light/akane.py
+  - Path: ultimate/assets/dark/scheme/light/aoi.py
+    Sha256: 5f5b243e2905426aa3663c77b3a96eff42fb583074a4d4eb90cfc1c5f90e7194
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/light/aoi.py
+  - Path: ultimate/assets/dark/scheme/light/kotonoha.py
+    Sha256: 6107f1a264e9c92d53f64d7369f079687153d70209bbe2413781ef65a91fcf71
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/light/kotonoha.py
+  - Path: ultimate/assets/dark/scheme/light/red.py
+    Sha256: e1cba07a13782e6289019c2d90c1aa64a400ebfd28b7583cf004bd874f88c88a
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/scheme/light/red.py
+  - Path: ultimate/assets/dark/skin/flat.dark.json
+    Sha256: 498403a36634dc1e39f65cd0a8483d23c1cf9009cb8c460f42f49db3e08c3d30
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/skin/flat.dark.json
+  - Path: ultimate/assets/dark/skin/flat.light.json
+    Sha256: 1ef5d78ec350321d48db66ed2322e57178891e9d63ecea249fa9bc6c2e1aaf95
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/skin/flat.light.json
+  - Path: ultimate/assets/dark/skin/gradation.dark.json
+    Sha256: 9f642abe0f47bea03ccbdba1be206fbe6ea1e0bfdd9e26f04c989185ee331025
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/skin/gradation.dark.json
+  - Path: ultimate/assets/dark/skin/gradation.light.json
+    Sha256: 582536c193b7d4a019a4d37754785d0b571da1153bd60a4a5f44a41c5bab9091
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/skin/gradation.light.json
+  - Path: ultimate/assets/dark/skin/flat/dark.py
+    Sha256: 26500df00a68ee98cec92712dc4c4b6acaed26238d63de2d87a08c1604d1f53a
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/skin/flat/dark.py
+  - Path: ultimate/assets/dark/skin/flat/light.py
+    Sha256: 32e1c50c956a16e475e541ba75a102a686b70cbf7c7ace8052e48fc4b1ae4f0b
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/skin/flat/light.py
+  - Path: ultimate/assets/dark/skin/gradation/dark.py
+    Sha256: d98df9037f857b4c5457c1a9a571f0d2364f464dd851e6494bb3550f465ec719
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/skin/gradation/dark.py
+  - Path: ultimate/assets/dark/skin/gradation/light.py
+    Sha256: 8a884e1784eab367ab38dffa634c9ca7ee4a96ac732969d0ca90b0a81315b069
+    Install:
+      TargetPath: plugins/ultimate/assets/dark/skin/gradation/light.py
+  - Path: ultimate/assets/ease_select/easing1.png
+    Sha256: e126e0a167f6f1d2771631254125861bd59faf9271d673bc2c9c729d6af81999
+    Install:
+      TargetPath: plugins/ultimate/assets/ease_select/easing1.png
+  - Path: ultimate/assets/ease_select/easing2.png
+    Sha256: b68a9d4b8e5315451e596ab0ae19f373b767a80d0718c7f806ce43ddcec997f2
+    Install:
+      TargetPath: plugins/ultimate/assets/ease_select/easing2.png
+  - Path: ultimate/assets/ease_select/easing3.png
+    Sha256: f7234fe1eea22711c254a0d793b3f1309b21d41be7785e58fd1d906c27c0b34e
+    Install:
+      TargetPath: plugins/ultimate/assets/ease_select/easing3.png
+  - Path: ultimate/assets/font_select/font_menu.txt
+    Sha256: 21bd4ffd6cb74633de0e9126b5b260a3939d9e031136b273e7d7f068ba24a89a
+    Install:
+      TargetPath: plugins/ultimate/assets/font_select/font_menu.txt
+  - Path: ultimate/config/default/color_code.aua.json
+    Sha256: b0f50acc7426f9d186ebf9e8f7a186a4a33b9b9c7f0f93c96ebdc2e53d84c2c8
+    Install:
+      TargetPath: plugins/ultimate/config/default/color_code.aua.json
+  - Path: ultimate/config/default/dark.aua.json
+    Sha256: 1aa3186951a47de2da75b1d4916c46774456ff36c3348924ba2357abff2e18b5
+    Install:
+      TargetPath: plugins/ultimate/config/default/dark.aua.json
+  - Path: ultimate/config/default/dialog_size.aua.json
+    Sha256: 2fab16ba070e715f31b2b887e5af39bd3f97c090c04a4f4ba9881ffa3ef0e52f
+    Install:
+      TargetPath: plugins/ultimate/config/default/dialog_size.aua.json
+  - Path: ultimate/config/default/ease_select_ui.exe.json
+    Sha256: 4489f9e3e454748b3521eb214e0a5694d562cff3d9ff511cb456953c8f534c00
+    Install:
+      TargetPath: plugins/ultimate/config/default/ease_select_ui.exe.json
+  - Path: ultimate/config/default/editbox_tweaker.aua.json
+    Sha256: 836c483553c7d3c7f27b4a503cf55de3babfbe1e79153aa1916f5fb42d2b2327
+    Install:
+      TargetPath: plugins/ultimate/config/default/editbox_tweaker.aua.json
+  - Path: ultimate/config/default/filer_ui.exe.json
+    Sha256: 166e10819e9347438279875a77efe51efef5e9ff5a44c7dbd633a897b13f7a5b
+    Install:
+      TargetPath: plugins/ultimate/config/default/filer_ui.exe.json
+  - Path: ultimate/config/default/filer.aua.json
+    Sha256: 6e9ca77de2cdaa9f1de6c92eab0a5a436bf08cd47a8fe9eebb36ca0ceb1a6de5
+    Install:
+      TargetPath: plugins/ultimate/config/default/filer.aua.json
+  - Path: ultimate/config/default/filter_copy.aua.json
+    Sha256: 4489f9e3e454748b3521eb214e0a5694d562cff3d9ff511cb456953c8f534c00
+    Install:
+      TargetPath: plugins/ultimate/config/default/filter_copy.aua.json
+  - Path: ultimate/config/default/filter_drag.aua.json
+    Sha256: fad7bbd1c9ecb699ee61e0a419ae6594ea289ac97d41401c19d90766c53ee6e2
+    Install:
+      TargetPath: plugins/ultimate/config/default/filter_drag.aua.json
+  - Path: ultimate/config/default/font_preview.aua.json
+    Sha256: f05cf791a8aaef2a48c0e67b4d150e1102b02b3fc5cbb5efd787ac22741f21a6
+    Install:
+      TargetPath: plugins/ultimate/config/default/font_preview.aua.json
+  - Path: ultimate/config/default/font_select.aua.json
+    Sha256: 5f43467cdad4e9a212200f62f2649e4e7a91fa013f6ac174eb6e3b578e7c819f
+    Install:
+      TargetPath: plugins/ultimate/config/default/font_select.aua.json
+  - Path: ultimate/config/default/image_export.aua.json
+    Sha256: 5b07d2f62ade40e2334ba141cd35120aea0691390afa9d2df4ba4081a1fb504d
+    Install:
+      TargetPath: plugins/ultimate/config/default/image_export.aua.json
+  - Path: ultimate/config/default/item_align.aua.json
+    Sha256: de981e1305d86d2469a8bc7c205f00ab7964b38a68ae7f470f7e17458a304ea9
+    Install:
+      TargetPath: plugins/ultimate/config/default/item_align.aua.json
+  - Path: ultimate/config/default/last_frame.aua.json
+    Sha256: 940367a1372eda07550ca0ba73bd257d8d064eed485170f2dceb64a81bdcca92
+    Install:
+      TargetPath: plugins/ultimate/config/default/last_frame.aua.json
+  - Path: ultimate/config/default/namecage.aua.json
+    Sha256: c15db617be0de9b7377dd231de1807ff336653ad703944ff6146a2674f768579
+    Install:
+      TargetPath: plugins/ultimate/config/default/namecage.aua.json
+  - Path: ultimate/config/default/output_check.aua.json
+    Sha256: a72bd7d8963832f795ebeeb67990fb87d571e244b3c776ea4a54f63d9356fb5e
+    Install:
+      TargetPath: plugins/ultimate/config/default/output_check.aua.json
+  - Path: ultimate/config/default/scene_select.aua.json
+    Sha256: 373b1fdd8f9ee794d63179b04bc1acf7f3ec51975b95589ed6a0aa9cf3eec3f9
+    Install:
+      TargetPath: plugins/ultimate/config/default/scene_select.aua.json
+  - Path: ultimate/config/default/text_split.aua.json
+    Sha256: ed1b16730d1764a8f49d83f57db9bed8859ebd2701c667ebfd13770979b53919
+    Install:
+      TargetPath: plugins/ultimate/config/default/text_split.aua.json
+  - Path: ultimate/config/default/ultimate.auf.json
+    Sha256: 8911e183a3baa549222e2fa6f133847759a4406e63c38927f2dc6eea0af755a2
+    Install:
+      TargetPath: plugins/ultimate/config/default/ultimate.auf.json
+  - Path: ultimate/config/default/workspace.aua.json
+    Sha256: 54ed51d5c640f1ba575d8cbc2886c9edb1fd55be3a9606dfaff67b148a41f743
+    Install:
+      TargetPath: plugins/ultimate/config/default/workspace.aua.json
+  - Path: ultimate/config/default/zoom_select.aua.json
+    Sha256: ea9fb2ff9a1e11ffa1891ccbc88b34ccd72d4e4bfe9751dc6a1289c5ccfe6c76
+    Install:
+      TargetPath: plugins/ultimate/config/default/zoom_select.aua.json
+  - Path: ultimate/module/color_code.aua
+    Sha256: 0fce3606cdce7447b81081baae29b863bb380f98c1203bfac690ae227cdcc6ff
+    Install:
+      TargetPath: plugins/ultimate/module/color_code.aua
+  - Path: ultimate/module/dark.aua
+    Sha256: 99f07c0cdd854c18babf356bccaa6b1c60952a9776d936b7e0995016865478d0
+    Install:
+      TargetPath: plugins/ultimate/module/dark.aua
+  - Path: ultimate/module/DarkenWindow.aul
+    Sha256: 8db209478ab7e1dde64e4d46db9bdec7a9ac56494ff5e3da59de62788abd745c
+    Install:
+      TargetPath: plugins/ultimate/module/DarkenWindow.aul
+  - Path: ultimate/module/dialog_position.aua
+    Sha256: 39e59cbf66106228a2f56258ccd949f2e04b1ec3b2d9c4a99d8b7ae7840b7c55
+    Install:
+      TargetPath: plugins/ultimate/module/dialog_position.aua
+  - Path: ultimate/module/dialog_size.aua
+    Sha256: 30cc5741dd974a55a1d1a2f3d078ab41886cab000b410dcad5012f74ff79299c
+    Install:
+      TargetPath: plugins/ultimate/module/dialog_size.aua
+  - Path: ultimate/module/dirty_check.aua
+    Sha256: b0b71962b70ceeb0ea7b169bb575a6f6a8a563853baa08a60844cb0d7809b76e
+    Install:
+      TargetPath: plugins/ultimate/module/dirty_check.aua
+  - Path: ultimate/module/ease_select_ui.exe
+    Sha256: d063ebd7ab98cc93511425b91ca83747d1066a6d5233c2e9deca58c5f8a3066a
+    Install:
+      TargetPath: plugins/ultimate/module/ease_select_ui.exe
+  - Path: ultimate/module/ease_select.aua
+    Sha256: 710a22481647463c81899ede68b4eabffda36c7808c9fa004324a704e62f6a22
+    Install:
+      TargetPath: plugins/ultimate/module/ease_select.aua
+  - Path: ultimate/module/editbox_tweaker.aua
+    Sha256: 4615c43bb6997bbcb4420afce509b260bd6c505ba3761622ccea703b2e6f66a7
+    Install:
+      TargetPath: plugins/ultimate/module/editbox_tweaker.aua
+  - Path: ultimate/module/exedit_tweaker.aua
+    Sha256: aeb7c7876bd89985690631dbbb1b3b8e8ac653518ff9af1f40336405d1cab3fe
+    Install:
+      TargetPath: plugins/ultimate/module/exedit_tweaker.aua
+  - Path: ultimate/module/filer_ui.exe
+    Sha256: 865c2ca69f3038cdded619cb4b1d8b7071ac28140cd63712061dfa2205d757b7
+    Install:
+      TargetPath: plugins/ultimate/module/filer_ui.exe
+  - Path: ultimate/module/filer.aua
+    Sha256: 1e1c21795ec89ec744f0292e0d90bf895e254ca5639f587b78c90201f4f72c3d
+    Install:
+      TargetPath: plugins/ultimate/module/filer.aua
+  - Path: ultimate/module/filter_copy.aua
+    Sha256: d24381479649de4ce2f0d5c811faf87fbdffac911ad59124fa6f6e7454306f34
+    Install:
+      TargetPath: plugins/ultimate/module/filter_copy.aua
+  - Path: ultimate/module/filter_drag.aua
+    Sha256: 6a71f2b6c9cfc066ab28cfdb3067a8d97044d53541f1f57992a4e587f998d3eb
+    Install:
+      TargetPath: plugins/ultimate/module/filter_drag.aua
+  - Path: ultimate/module/font_preview.aua
+    Sha256: c94bbc65174922b92bf22cac7cd6fe95ccd1afdd46340fae1e7b5e8b1097e378
+    Install:
+      TargetPath: plugins/ultimate/module/font_preview.aua
+  - Path: ultimate/module/font_select.aua
+    Sha256: 558d61720849bab2d50346023543daab9e3d30440016e38d0f7ad146c3221609
+    Install:
+      TargetPath: plugins/ultimate/module/font_select.aua
+  - Path: ultimate/module/image_export.aua
+    Sha256: 3bf5f1781761ad209ca4a2f964a2404cbeb67ff36256cbbd7eca54aaba606367
+    Install:
+      TargetPath: plugins/ultimate/module/image_export.aua
+  - Path: ultimate/module/item_align.aua
+    Sha256: 0c681ea52381511e70cfed2d92ffe3f4c6287b4486e27857bb47184dac8f0b9b
+    Install:
+      TargetPath: plugins/ultimate/module/item_align.aua
+  - Path: ultimate/module/last_frame.aua
+    Sha256: 785080f55965bdfcb0bc36b64d5543511bce62aefbaa1b64a17280c3078d05bd
+    Install:
+      TargetPath: plugins/ultimate/module/last_frame.aua
+  - Path: ultimate/module/namecage.aua
+    Sha256: 9e2f7234bcb1bf8c1db8866841122af61375800dd07876975e5d29edb306c703
+    Install:
+      TargetPath: plugins/ultimate/module/namecage.aua
+  - Path: ultimate/module/output_check.aua
+    Sha256: 4b0bfb148831f30988d2d008d32cee2198df5fb333f527cd7062e24b3b11a78f
+    Install:
+      TargetPath: plugins/ultimate/module/output_check.aua
+  - Path: ultimate/module/scene_select.aua
+    Sha256: bb3a6dc3b359a752cf07daa42069ffff17ee7b125fe88cfb2dfb5c124af4b0a1
+    Install:
+      TargetPath: plugins/ultimate/module/scene_select.aua
+  - Path: ultimate/module/text_split.aua
+    Sha256: c1fd33cdd2e70a6794ef22aeaf27261c56c724054601a31097b6dca15474f990
+    Install:
+      TargetPath: plugins/ultimate/module/text_split.aua
+  - Path: ultimate/module/workspace.aua
+    Sha256: a692b4b7efdca9c57e817cf3d582e8b5db7d09a250f9ac108ac1913379018306
+    Install:
+      TargetPath: plugins/ultimate/module/workspace.aua
+  - Path: ultimate/module/zoom_select.aua
+    Sha256: 26366d828653a710c6b4efab9cd3545e05842ab27bafeb78aee04384f8a69da4
+    Install:
+      TargetPath: plugins/ultimate/module/zoom_select.aua
+ManifestVersion: 0.2.0

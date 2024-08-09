@@ -1,0 +1,140 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: SortEffect
+DisplayName: エフェクト並び替えプラグイン
+Version: "2.0"
+ReleaseDate: 2024-05-12
+Section: Plugin/Other
+Depends:
+- exedit (= 0.92)
+InstalledSize: 25
+Developer:
+- nazoSAUNA
+Description: エフェクトのメニューをまとめたり並び替えたりするプラグイン
+Website:
+- https://github.com/nazonoSAUNA/SortEffect
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/SortEffect/releases/download/2.0/SortEffect_v2.0.zip
+  Sha256: 5fb32ecb0afb0ed3660a30d323cf7346ace495d7dc666a0da70c8cc55cfae90c
+  Files:
+  - Path: Credit.md
+    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+  - Path: Éαû╛Åæ.txt
+    Sha256: eebb5c19ba4d1e1778bd7492565a0c2b428d131c50ab3206037b8fa5a1e23d9c
+  - Path: LICENSE
+    Sha256: c6dc4e84d8046203587c69aa5f8cccd4dcb55c8fb341023449004bcdc802f3c4
+  - Path: exa/âëâôâ_âÇè╘èué┼ùÄé┐é╚é¬éτôoÅΩ.exa
+    Sha256: 0aa9c7021a7908b9eb870ccfcea828f284f00c3610fa7b1a45eee8c6a36f480a
+    Install:
+      TargetPath: exa/âëâôâ_âÇè╘èué┼ùÄé┐é╚é¬éτôoÅΩ.exa
+  - Path: exa/âëâôâ_âÇò√îⁿé⌐éτôoÅΩ.exa
+    Sha256: d9cbf8d3ce8654e22bcee6a367a1e436005e77fb684c908d0b5c58768f271f4f
+    Install:
+      TargetPath: exa/âëâôâ_âÇò√îⁿé⌐éτôoÅΩ.exa
+  - Path: exa/âëâôâ_âÇözÆu.exa
+    Sha256: 81af54c918ee1056dabd585486669636293f43baa69d616029e7059048ea215f
+    Install:
+      TargetPath: exa/âëâôâ_âÇözÆu.exa
+  - Path: exa/Æeé±é┼ôoÅΩ.exa
+    Sha256: 73713e9a26b69171ffd140a9c10a09761c8d07ed2dcef2722a2f5c4d13e09556
+    Install:
+      TargetPath: exa/Æeé±é┼ôoÅΩ.exa
+  - Path: exa/Æeé▐.exa
+    Sha256: 1bd49e2435448171772a5e17cf4bc0ed575b5572e366a44f3c26d62433657af8
+    Install:
+      TargetPath: exa/Æeé▐.exa
+  - Path: exa/âèü[âïë±ô].exa
+    Sha256: 8bb4b45c9498608c54e51bec28f7a30153da6c779bd46f5e70b96b06c7dd43a0
+    Install:
+      TargetPath: exa/âèü[âïë±ô].exa
+  - Path: exa/ë~î`özÆu.exa
+    Sha256: a306b0ab2c58debc9647497384f9e18ba21e61c7f56cf53793f00597c403eddd
+    Install:
+      TargetPath: exa/ë~î`özÆu.exa
+  - Path: exa/è╚ê╒ò╧î`.exa
+    Sha256: af619f8eed8c0fa83db829acaacacb5f92b8aed176691d0f38c80ab3b77e35bd
+    Install:
+      TargetPath: exa/è╚ê╒ò╧î`.exa
+  - Path: exa/è╚ê╒ò╧î`(âJâüâëÉºîΣ).exa
+    Sha256: f4159a93c0188e580b5cdea21c07a0445213caa893540b84df486e569c044f30
+    Install:
+      TargetPath: exa/è╚ê╒ò╧î`(âJâüâëÉºîΣ).exa
+  - Path: exa/ë╜Åêé⌐éτé╞éαé╚é¡ôoÅΩ.exa
+    Sha256: e5126c8cbda1a364a4eaf0f2023d8bc5ca291fc8aacd012adc3d53eb8b11ab71
+    Install:
+      TargetPath: exa/ë╜Åêé⌐éτé╞éαé╚é¡ôoÅΩ.exa
+  - Path: exa/ègæσÅkÅ¼é╡é─ôoÅΩ.exa
+    Sha256: b7c1b3a99ca9e5aa14d34f3f74cdb2288d52373dc2a3c24c487249a0fc336874
+    Install:
+      TargetPath: exa/ègæσÅkÅ¼é╡é─ôoÅΩ.exa
+  - Path: exa/ÉkéªéΘ.exa
+    Sha256: a1ea3b5c382c0246169e49a5e1df4362876bbab1d807243aa06ceb18779267f4
+    Install:
+      TargetPath: exa/ÉkéªéΘ.exa
+  - Path: exa/ÉUéΦÄq.exa
+    Sha256: 0d15a4f7b7177040a7d6c0bac78d32cde6b8cbbf8a04355a5be56094c475970e
+    Install:
+      TargetPath: exa/ÉUéΦÄq.exa
+  - Path: exa/ëµû╩èOé⌐éτôoÅΩ.exa
+    Sha256: 7ffaffb3256e56bc190f815064d42a07b2529194069f86df8d7e447f2607c87c
+    Install:
+      TargetPath: exa/ëµû╩èOé⌐éτôoÅΩ.exa
+  - Path: exa/ì└òWé╠ë±ô](î┬ò╩âIâuâWâFâNâg).exa
+    Sha256: 182303fa89c33d2f2508aa71f37a0ddca5c7511c3c6d807f11eb898343e5688b
+    Install:
+      TargetPath: exa/ì└òWé╠ë±ô](î┬ò╩âIâuâWâFâNâg).exa
+  - Path: exa/ì└òWé╠ègæσÅkÅ¼(î┬ò╩âIâuâWâFâNâg).exa
+    Sha256: 81e42d490219072632cb758a26785d1f2ef4091ab74071be1cff011e96dcb77c
+    Install:
+      TargetPath: exa/ì└òWé╠ègæσÅkÅ¼(î┬ò╩âIâuâWâFâNâg).exa
+  - Path: exa/ì╙é»ÄUéΘ.exa
+    Sha256: e02ae098a43004ea17795a1a104f2b50680a643c44a18f5c65107a0c39d2d81f
+    Install:
+      TargetPath: exa/ì╙é»ÄUéΘ.exa
+  - Path: exa/ïàæ╠(âJâüâëÉºîΣ).exa
+    Sha256: 89ee87b4f3df1fcad7453370f40d4c38d0ab49d37fe6630acce0fae21ca96da4
+    Install:
+      TargetPath: exa/ïàæ╠(âJâüâëÉºîΣ).exa
+  - Path: exa/ìLé¬é┴é─ôoÅΩ.exa
+    Sha256: bce7ca2a3faaa59416ab8a472a4b401f00da2ef86f71b8354f7b2453f94c798d
+    Install:
+      TargetPath: exa/ìLé¬é┴é─ôoÅΩ.exa
+  - Path: exa/ïNé½Åπé¬é┴é─ôoÅΩ.exa
+    Sha256: 1d7e6eb82a16d33c1ac17ee34b8ada66aeba2f57e8f53d0f90eb964126d45764
+    Install:
+      TargetPath: exa/ïNé½Åπé¬é┴é─ôoÅΩ.exa
+  - Path: exa/ô_û┼.exa
+    Sha256: 8ea150ef9f5c1f3ad2d03b35ef13f89746c3f2a36589a34835e38c1e56a7c212
+    Install:
+      TargetPath: exa/ô_û┼.exa
+  - Path: exa/ô_û┼é╡é─ôoÅΩ.exa
+    Sha256: f769b8573283512c13cf446eac040f1f1de560bcc8fbcb729179845d944cd183
+    Install:
+      TargetPath: exa/ô_û┼é╡é─ôoÅΩ.exa
+  - Path: exa/ö╜ò£ê┌ô«.exa
+    Sha256: efcd1e578274d78755e95cd4ca2077986939fb7664f737d5a107cc69d7d78b56
+    Install:
+      TargetPath: exa/ö╜ò£ê┌ô«.exa
+  - Path: exa/û£ë╪ï╛.exa
+    Sha256: 2d1494e9b97116964077fd963209e8547174076969fc010f40fd2535998c1f9f
+    Install:
+      TargetPath: exa/û£ë╪ï╛.exa
+  - Path: exa/ùºò√æ╠(âJâüâëÉºîΣ).exa
+    Sha256: 50a4bcc5ddb77348fa35f1585e6d5663983f6bf773484468ee3c4fd7142d3f7f
+    Install:
+      TargetPath: exa/ùºò√æ╠(âJâüâëÉºîΣ).exa
+  - Path: plugins/SortEffect_Setting.txt
+    Sha256: 46250eee9670e33af404684e513f63f28b85ed154932b1656903449cd055a77c
+    Install:
+      TargetPath: plugins/SortEffect_Setting.txt
+  - Path: plugins/SortEffect_SettingF.txt
+    Sha256: 1a924767ce21bb663a3c8362b214683f5b3757de0d78f056fca6af1ed3bee477
+    Install:
+      TargetPath: plugins/SortEffect_SettingF.txt
+  - Path: plugins/SortEffect.auf
+    Sha256: 6e8548aa864404cc6056962a2ac09c0bc033ef13a20071a2d2cfe53424e93aaf
+    Install:
+      TargetPath: plugins/SortEffect.auf
+      ConfFile: true
+ManifestVersion: 0.2.0
