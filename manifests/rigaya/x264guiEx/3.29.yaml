@@ -1,0 +1,220 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: x264guiEx
+DisplayName: 拡張 x264 出力(GUI) Ex
+Version: "3.29"
+ReleaseDate: 2024-06-19
+Section: Plugin/Output
+Replaces:
+- ffmpegOut
+- NVEnc
+- QSVEnc
+- svtAV1guiEx
+- VCEEnc
+- VVenCguiEx
+- x265guiEx
+InstalledSize: 39263
+Developer:
+- rigaya
+Description: |-
+  x264を使用してエンコードを行う出力プラグイン
+  seraphy氏 拡張 x264 出力(GUI) を改造し、x264を分離し、別プロセスとして実行できるようにしたものです。
+Website:
+- https://github.com/rigaya/x264guiEx
+Files:
+- SourceUrl: https://github.com/rigaya/x264guiEx/releases/download/3.29/x264guiEx_3.29.zip
+  Sha256: 1865ec0a1b1625a80976bf38e5fb8d456dbdf671130c5b64b3da1b66dce884df
+  Files:
+  - Path: x264guiEx_readme.txt
+    Sha256: fa2e5a32fa80e279c0eed886fd76b9fc526dd72024503fe394a198c94fbaf196
+  - Path: exe_files/auo_check_fileopen.exe
+    Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
+    Install:
+      TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.exe
+    Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
+    Install:
+      TargetPath: exe_files/auo_setup.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.ini
+    Sha256: 3704e26493a6fd9663d607ae3b72174bcf90ce8a4de29e381923ea06fe3377b0
+    Install:
+      TargetPath: exe_files/auo_setup.ini
+      ConfFile: true
+  - Path: exe_files/check_dotnet.dll
+    Sha256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
+    Install:
+      TargetPath: exe_files/check_dotnet.dll
+  - Path: exe_files/check_vc.dll
+    Sha256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
+    Install:
+      TargetPath: exe_files/check_vc.dll
+  - Path: exe_files/ffmpeg_audenc.exe
+    Sha256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
+    Install:
+      TargetPath: exe_files/ffmpeg_audenc.exe
+      Method: Copy
+  - Path: exe_files/muxer_x64.exe
+    Sha256: bc07ad5d9a445c1b8fd74b7edc71cad7bbd909226d4f57cb1068a1370ab073e5
+    Install:
+      TargetPath: exe_files/muxer_x64.exe
+      Method: Copy
+  - Path: exe_files/muxer_x86.exe
+    Sha256: ffb5e2a661cafe2442a81b139130fcc43cf2d02c0991e76fe6f63ddb784216b7
+    Install:
+      TargetPath: exe_files/muxer_x86.exe
+      Method: Copy
+  - Path: exe_files/ndp48-web.exe
+    Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
+    Install:
+      TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
+  - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
+    Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
+    Install:
+      TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
+  - Path: exe_files/remuxer_x64.exe
+    Sha256: 9a74238807f77b7ddf54d8b5574c7c57a7df62b99e107b45c06ee6c9612d9f4e
+    Install:
+      TargetPath: exe_files/remuxer_x64.exe
+      Method: Copy
+  - Path: exe_files/remuxer_x86.exe
+    Sha256: 3cfc6570550069ade3bfb999e539ed1ea91cb75643a3a30079e7126e5ca65cf8
+    Install:
+      TargetPath: exe_files/remuxer_x86.exe
+      Method: Copy
+  - Path: exe_files/timelineeditor_x64.exe
+    Sha256: 121358105ff5cba291ee666d4e7b06f2184509202516af93858371bb2ca79869
+    Install:
+      TargetPath: exe_files/timelineeditor_x64.exe
+      Method: Copy
+  - Path: exe_files/timelineeditor_x86.exe
+    Sha256: 056a0c08b9fa94a07d997408a3691de27322e89d8efe2aa996a460ccb2f0c112
+    Install:
+      TargetPath: exe_files/timelineeditor_x86.exe
+      Method: Copy
+  - Path: exe_files/VC_redist.x86.exe
+    Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
+    Install:
+      TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
+  - Path: exe_files/x264_3190_x64.exe
+    Sha256: c012045b6aa425cfa5e0f75a53ec69f8e524030761eeb394f31978216417c957
+    Install:
+      TargetPath: exe_files/x264_3190_x64.exe
+  - Path: exe_files/x264_3190_x86.exe
+    Sha256: 9b52810702aadd9ca6ef68702345ffee483ef41aa75158026d0e75eceaee50f7
+    Install:
+      TargetPath: exe_files/x264_3190_x86.exe
+  - Path: plugins/auo_setup.auf
+    Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
+    Install:
+      TargetPath: plugins/auo_setup.auf
+  - Path: plugins/x264guiEx.auo
+    Sha256: b6220e2fa4a7f64ecbb968dff1ad95e42f873a84505306e90fd4548a79640de2
+    Install:
+      TargetPath: plugins/x264guiEx.auo
+  - Path: plugins/x264guiEx.en.ini
+    Sha256: c32a9a466a002d68b6d960983efe2f3a411c90f0c535cad554b7c2d6e7e2163b
+    Install:
+      TargetPath: plugins/x264guiEx.en.ini
+      ConfFile: true
+  - Path: plugins/x264guiEx.ini
+    Sha256: 0b15031ec39b07a6882b25fbfc9fd32e6d7a5d4d01452a45a5d961ce2a255d8b
+    Install:
+      TargetPath: plugins/x264guiEx.ini
+      ConfFile: true
+  - Path: plugins/x264guiEx.zh.ini
+    Sha256: 2f891e6592cbdb10b796f61a279663e5a137f8182c27f199c3ef528c77e94c59
+    Install:
+      TargetPath: plugins/x264guiEx.zh.ini
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/PS3.stg
+    Sha256: ef9bdb4be5af914aa1b5ee86d11d9a5951e88992f12286a9155d7fd2706033da
+    Install:
+      TargetPath: plugins/x264guiEx_stg/PS3.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/PSP.stg
+    Sha256: 38e4771ab8d0688c99e13a5feb60ac2dc8315e9a7e760a7d87b7776768c1ff03
+    Install:
+      TargetPath: plugins/x264guiEx_stg/PSP.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/twitter.stg
+    Sha256: 84244e36186952f93b0cbccf7c985bde54ffb9504002c7bee453652249570fcd
+    Install:
+      TargetPath: plugins/x264guiEx_stg/twitter.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/Xbox 360.stg
+    Sha256: b48a6ec710b0d42d5627330497a8902fab474ab56df2a24f8a75850859c8d12b
+    Install:
+      TargetPath: plugins/x264guiEx_stg/Xbox 360.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/youtube.stg
+    Sha256: 10b7a7378f4d1a0228a2983773614073a5fe238cf18d7e2748c86e9e1ce67c3a
+    Install:
+      TargetPath: plugins/x264guiEx_stg/youtube.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/アニメ (高圧縮).stg
+    Sha256: 83f8bc6780d54c00c2d666c2071fb58cc2faa0cfb1b1a8c3175785931326cf85
+    Install:
+      TargetPath: plugins/x264guiEx_stg/アニメ (高圧縮).stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/アニメ (高画質).stg
+    Sha256: fb50c4ae6d12a5dde5298f1350b0e48662d8addd156874cdca483d4b65bb94d6
+    Install:
+      TargetPath: plugins/x264guiEx_stg/アニメ (高画質).stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/バランス.stg
+    Sha256: d17bd8279cae50b66c4606be18353e3ce934248274f21dfb18d283e5b26a2df7
+    Install:
+      TargetPath: plugins/x264guiEx_stg/バランス.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/高画質.stg
+    Sha256: 0995220080733fe22384cca2c34f40fd7453918607626f272ae05f0b845bf602
+    Install:
+      TargetPath: plugins/x264guiEx_stg/高画質.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/高速.stg
+    Sha256: dd99e5f7144bd3e9db3ffe9dd377016e841477f7d3279c615bb03ed8f3456716
+    Install:
+      TargetPath: plugins/x264guiEx_stg/高速.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/Bluray/Bluray (tff).stg
+    Sha256: eb0bbf18e2c8a1b70e81947bdf88b99574e336c9de92e8db5d35905f9df64db2
+    Install:
+      TargetPath: plugins/x264guiEx_stg/Bluray/Bluray (tff).stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/Bluray/Bluray.stg
+    Sha256: bff86abd361537725a15d90a5f6b6c0b7ecefd2e7f338ad5f31874de9f023ef0
+    Install:
+      TargetPath: plugins/x264guiEx_stg/Bluray/Bluray.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/iPhone iPod iPad/iPhone3G, iPodtouch2-3.stg
+    Sha256: c518d946ff7e35e93ef43c37f97a444bd93575eb9188f8a319f7363a7db3b156
+    Install:
+      TargetPath: plugins/x264guiEx_stg/iPhone iPod iPad/iPhone3G, iPodtouch2-3.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/iPhone iPod iPad/iPhone4, iPad, iPodtouch4.stg
+    Sha256: 92a5241c71bd8c86ec6c7b48695a4b1b8652893015b2afe7a5837c0e2c786c41
+    Install:
+      TargetPath: plugins/x264guiEx_stg/iPhone iPod iPad/iPhone4, iPad, iPodtouch4.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/iPhone iPod iPad/iPhone4S, iPad2.stg
+    Sha256: c399446c3fee7535dd4be8010513555b4c487c4d1273441ae4d11f5e4ab0a877
+    Install:
+      TargetPath: plugins/x264guiEx_stg/iPhone iPod iPad/iPhone4S, iPad2.stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/ニコ動/ニコ動  .stg
+    Sha256: 545d527b772a1c36a1401a74cc8156ac1f1eff138500ca5bb222c1f95983d6c2
+    Install:
+      TargetPath: plugins/x264guiEx_stg/ニコ動/ニコ動  .stg
+      ConfFile: true
+  - Path: plugins/x264guiEx_stg/ニコ動/ニコ動 音質重視.stg
+    Sha256: f67110900b7b815cd444a86ce7809c4f6a044a9353b11b997b27263748e54951
+    Install:
+      TargetPath: plugins/x264guiEx_stg/ニコ動/ニコ動 音質重視.stg
+      ConfFile: true
+ManifestVersion: 0.2.0

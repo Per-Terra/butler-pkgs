@@ -1,0 +1,207 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: VCEEnc
+Version: "8.22"
+ReleaseDate: 2024-03-12
+Section: Plugin/Output
+Replaces:
+- ffmpegOut
+- NVEnc
+- QSVEnc
+- svtAV1guiEx
+- VVenCguiEx
+- x264guiEx
+- x265guiEx
+InstalledSize: 127924
+Developer:
+- rigaya
+Description: |-
+  AMDのVCE(VideoCodecEngine)を使用してエンコードを行う出力プラグイン
+  VCEによるハードウェア高速エンコードを目指します。
+Website:
+- https://github.com/rigaya/VCEEnc
+Files:
+- SourceUrl: https://github.com/rigaya/VCEEnc/releases/download/8.22/Aviutl_VCEEnc_8.22.zip
+  Sha256: 6070bbf8cb7367b69da3715fe288f209927eb9f515d400364fe59125cb37d6f3
+  Files:
+  - Path: VCEEnc_readme.txt
+    Sha256: 7d446336f046b3dae946ee8c0104a0d18aa3f739342e29243479a60e427c3ba3
+  - Path: exe_files/auo_check_fileopen.exe
+    Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
+    Install:
+      TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.exe
+    Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
+    Install:
+      TargetPath: exe_files/auo_setup.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.ini
+    Sha256: 19bd7fd8f7320e137cdf58e08a314e64153dc8e809778f289e0316b31761bce1
+    Install:
+      TargetPath: exe_files/auo_setup.ini
+      ConfFile: true
+  - Path: exe_files/check_dotnet.dll
+    Sha256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
+    Install:
+      TargetPath: exe_files/check_dotnet.dll
+  - Path: exe_files/check_vc.dll
+    Sha256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
+    Install:
+      TargetPath: exe_files/check_vc.dll
+  - Path: exe_files/ndp48-web.exe
+    Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
+    Install:
+      TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
+  - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
+    Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
+    Install:
+      TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
+  - Path: exe_files/VC_redist.x86.exe
+    Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
+    Install:
+      TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
+  - Path: exe_files/VCEEncC/x64/avcodec-60.dll
+    Sha256: 0c18c233ed8ce4fd42f86bd5d7d3ade875c79286fe6365c22306abae7859dede
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/avcodec-60.dll
+  - Path: exe_files/VCEEncC/x64/avdevice-60.dll
+    Sha256: cff6dd923c8bdc5976d3b68873d30cb051c1f50635e68cc6b223733f1a9223ee
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/avdevice-60.dll
+  - Path: exe_files/VCEEncC/x64/avfilter-9.dll
+    Sha256: 9262c9179c1b3a7a8b79fa98a9773cdcdeb44cf2097e2d82fdf3ee9faf894b13
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/avfilter-9.dll
+  - Path: exe_files/VCEEncC/x64/avformat-60.dll
+    Sha256: df67ef6ec393a25eabcf6be18c0743a0d376947f6578c1e2f8b634d00d2e9ba0
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/avformat-60.dll
+  - Path: exe_files/VCEEncC/x64/avutil-58.dll
+    Sha256: da19bc9af58167d31f81c5ae2085cf2a5b269a3d40d6b6f16168fb61e3a83c06
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/avutil-58.dll
+  - Path: exe_files/VCEEncC/x64/hdr10plus_gen.exe
+    Sha256: fdb1fbbe20f10035632b91964152f9ccf473c3b896b7957c7588fe46c86eb74d
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/hdr10plus_gen.exe
+      Method: Copy
+  - Path: exe_files/VCEEncC/x64/libass-9.dll
+    Sha256: e37563cc684aa0424c3953d817c824ec18440e64eca32b2167eca0ca57106892
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/libass-9.dll
+  - Path: exe_files/VCEEncC/x64/swresample-4.dll
+    Sha256: f66299c7a8ac1e3ebfbc98fb2845892cfab7198fb3e8364f797df401378645ea
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/swresample-4.dll
+  - Path: exe_files/VCEEncC/x64/VCEEncC64.exe
+    Sha256: 5ae4d345595023609e52b46bcbd7bc4b8b692bf5c018ebb1bee439044f024c20
+    Install:
+      TargetPath: exe_files/VCEEncC/x64/VCEEncC64.exe
+      Method: Copy
+  - Path: exe_files/VCEEncC/x86/avcodec-60.dll
+    Sha256: 236734755cb6bbd6677cf7aeac6c4ffa36f66db43ac7a2666d2e1892bf61a108
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/avcodec-60.dll
+  - Path: exe_files/VCEEncC/x86/avdevice-60.dll
+    Sha256: 1b368565688be7106ff879645f7258f52e9f5de3d6f2a6f067f283066a1ea489
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/avdevice-60.dll
+  - Path: exe_files/VCEEncC/x86/avfilter-9.dll
+    Sha256: 0194a23e97ca35530c5e6047710981a754eed4b2025287d2a82fab2d598500aa
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/avfilter-9.dll
+  - Path: exe_files/VCEEncC/x86/avformat-60.dll
+    Sha256: 6237dfe9b6ea52787127bd5f2f6a3f56749cacdfba0ec9773df30a0d4ce58df1
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/avformat-60.dll
+  - Path: exe_files/VCEEncC/x86/avutil-58.dll
+    Sha256: 6f4a5d2f0556515f5ebb15a3a48cfa45d7c36976fdb76da607fe148025e6a057
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/avutil-58.dll
+  - Path: exe_files/VCEEncC/x86/hdr10plus_gen.exe
+    Sha256: 032f694c813223a5bde933bdc9c68144390d1dba7917ac2962b9acae923bb099
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/hdr10plus_gen.exe
+      Method: Copy
+  - Path: exe_files/VCEEncC/x86/libass-9.dll
+    Sha256: 3de3f57aae1e4ba29673b274b0f2f5792dfbc805ca731cb82f6e3f701f701d12
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/libass-9.dll
+  - Path: exe_files/VCEEncC/x86/swresample-4.dll
+    Sha256: df76ecb001368454064d8726921829502bc67958fa69fe7a7d6af37c8eb91b61
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/swresample-4.dll
+  - Path: exe_files/VCEEncC/x86/VCEEncC.exe
+    Sha256: 85f5cd25d6a1cf7924f1d6428490a9c036ed6e22efe4c8ba0cb0ae7d0950b91e
+    Install:
+      TargetPath: exe_files/VCEEncC/x86/VCEEncC.exe
+      Method: Copy
+  - Path: plugins/auo_setup.auf
+    Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
+    Install:
+      TargetPath: plugins/auo_setup.auf
+  - Path: plugins/VCEEnc.auo
+    Sha256: 9c2c60e12b6a911b8818c2cada8546587d59d3282a149d3ae48989809697d338
+    Install:
+      TargetPath: plugins/VCEEnc.auo
+  - Path: plugins/VCEEnc.en.ini
+    Sha256: b4f6ade670d5f602b74d9ce180fa5dc6de75f8a9243e0b8d4e33245b1f043e00
+    Install:
+      TargetPath: plugins/VCEEnc.en.ini
+      ConfFile: true
+  - Path: plugins/VCEEnc.ini
+    Sha256: 8db10763074dc0b75d2544dd5c2456f3db8a5ad48a04a427eaaf337effdff6a2
+    Install:
+      TargetPath: plugins/VCEEnc.ini
+      ConfFile: true
+  - Path: plugins/VCEEnc.zh.ini
+    Sha256: e7b87cdda72ab116f6e6daa6c414046ef02fe911a22392b3baae78478a29ce49
+    Install:
+      TargetPath: plugins/VCEEnc.zh.ini
+      ConfFile: true
+  - Path: plugins/VCEEnc_stg/H.264/CQP 標準.stg
+    Sha256: e52af5daffa06559d6c6f1c900f72049cdfc89f34eb3307c739840a50a125a54
+    Install:
+      TargetPath: plugins/VCEEnc_stg/H.264/CQP 標準.stg
+      ConfFile: true
+  - Path: plugins/VCEEnc_stg/H.264/CQP 高品質.stg
+    Sha256: 39d0f7fe937ef25d02097196200193b5b1682dcebdbd4c92d17f8962b5d49e17
+    Install:
+      TargetPath: plugins/VCEEnc_stg/H.264/CQP 高品質.stg
+      ConfFile: true
+  - Path: plugins/VCEEnc_stg/H.264/VBR 標準.stg
+    Sha256: c24f356e09fd3b840ced9bb1894d912c9358c63d4c79be15a9250f1f2f5c88e0
+    Install:
+      TargetPath: plugins/VCEEnc_stg/H.264/VBR 標準.stg
+      ConfFile: true
+  - Path: plugins/VCEEnc_stg/H.264/VBR 高品質.stg
+    Sha256: ab33bd28b5c609f580c0d69ab6189c124c3a949e4de79842f1cba2d53b7d4e36
+    Install:
+      TargetPath: plugins/VCEEnc_stg/H.264/VBR 高品質.stg
+      ConfFile: true
+  - Path: plugins/VCEEnc_stg/HEVC/CQP 標準.stg
+    Sha256: 60cdaa2ef9c4eb72cb3711deef8ab0277f2e9b18c55ff4b938e2a501a17b3d60
+    Install:
+      TargetPath: plugins/VCEEnc_stg/HEVC/CQP 標準.stg
+      ConfFile: true
+  - Path: plugins/VCEEnc_stg/HEVC/CQP 高品質.stg
+    Sha256: b0a5d32d971f3966f5005ae80bd454f97b149564664ad0bf9fb3df71057a210f
+    Install:
+      TargetPath: plugins/VCEEnc_stg/HEVC/CQP 高品質.stg
+      ConfFile: true
+  - Path: plugins/VCEEnc_stg/HEVC/VBR 標準.stg
+    Sha256: 616f27805b38fc6b5cb4d1290f94fce206d1e8816b843cbd63517d0bc466a0c7
+    Install:
+      TargetPath: plugins/VCEEnc_stg/HEVC/VBR 標準.stg
+      ConfFile: true
+  - Path: plugins/VCEEnc_stg/HEVC/VBR 高品質.stg
+    Sha256: 3a7fb67c250a0b4170ce3a6784ca42212040cf463ff9be7df605a0cb837d8011
+    Install:
+      TargetPath: plugins/VCEEnc_stg/HEVC/VBR 高品質.stg
+      ConfFile: true
+ManifestVersion: 0.2.0
