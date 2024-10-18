@@ -1,0 +1,45 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: BuildStairs
+DisplayName: アイテムずらし
+Version: 3.2.0
+ReleaseDate: 2024-03-14
+Section: Plugin/Other
+InstalledSize: 1632
+Developer:
+- hebiiro
+Description: タイムラインのアイテムをずらしたり整列したりするプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-BuildStairs
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-BuildStairs/releases/download/3.2.0/BuildStairs.3.2.0.zip
+  Sha256: fcda7741ed57aa3e5bfa4fb4ece2914798cadd601a877ec8f4893f4bea53990d
+  Files:
+  - Path: BuildStairs.auf
+    Sha256: 9f8cfe8223210da59a367613f4189e2aaa1ef8c5d9914e3e3d4aa7101fa82194
+    Install:
+      TargetPath: plugins/BuildStairs.auf
+  - Path: CREDITS.md
+    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: e7427bd8b80c6e6bb0479f3a770131f37e387a5054a0e29ba8ada349ccc7b1d9
+  - Path: BuildStairs/BuildStairs.wav
+    Sha256: 739a66f811c5e7c13a48a9f9184e45f727f0214ca20095ab32984508f63b1664
+  - Path: BuildStairs/DeleteMidPt.wav
+    Sha256: 0169d2b6af37b2f56a6e4617f1fdfb37cdb02acc71e7d0c221bd0856a6e554d9
+  - Path: BuildStairs/MoveBegin.wav
+    Sha256: e29610bb1c08fdfba4088cccdf7cfdc1491e9bfc19f3d24f876ab425ae04769c
+  - Path: BuildStairs/MoveEnd.wav
+    Sha256: ca51f5875c99116531d92256de6b8d7014ef9b2277787d6f10c749a2c1e9c305
+  - Path: BuildStairs/MoveToBegin.wav
+    Sha256: 9f62ff9d1822cc91093c3440f4ba2200965fc09b08a0190e0ddaeb4841db0629
+  - Path: BuildStairs/MoveToEnd.wav
+    Sha256: dd5d9b5327ea45e44709bf42bb45e786e265416d5e49bb5c14723e433ef41def
+  - Path: BuildStairs/SetBegin.wav
+    Sha256: 5e71bc50d45830ea4ebdf46863f1a634c1178d4e355fb6546835d46317871c69
+  - Path: BuildStairs/SetEnd.wav
+    Sha256: f5f5a7f27ab7f689414125108c6933eaee79e79b330c5e68f5da4f4f3c844d85
+ManifestVersion: 0.2.0
