@@ -1,0 +1,55 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: ShowWaveform
+DisplayName: アイテム内音声波形
+Version: 7.3.0
+ReleaseDate: 2024-03-16
+Section: Plugin/Other
+Conflicts:
+- NoScrollText
+InstalledSize: 414
+Developer:
+- hebiiro
+Description: 拡張編集ウィンドウの音声アイテム内に音声波形を表示するプラグイン
+Website:
+- https://github.com/hebiiro/AviUtl-Plugin-ShowWaveform
+Files:
+- SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-ShowWaveform/releases/download/7.3.0/ShowWaveform.7.3.0.zip
+  Sha256: 4dd6a8c932f11efff2909e9cf4fe70090a3f69920b2b64030875c0271043ca28
+  Files:
+  - Path: CREDITS.md
+    Sha256: 9291f9367a93069f2824ae73dc2f0c644c69c9aa04d0ebe7b2ea1bea56630684
+  - Path: LICENSE
+    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+  - Path: README.md
+    Sha256: 5655e3b28c647cbaef3b5de142c575e74db954859ab7590d170423e12e6d12ad
+  - Path: ShowWaveform.auf
+    Sha256: bdc23c17d00df19adca5c0622a6c46d6c1e32869f62600b03ca1f7bb7a6e1a3b
+    Install:
+      TargetPath: plugins/ShowWaveform.auf
+  - Path: ShowWaveform/Config.ini
+    Sha256: e23bd6c516d6df597962b19c256f776b77f416ea770ab3c6f82d6be856510ec3
+    Install:
+      TargetPath: plugins/ShowWaveform/Config.ini
+      ConfFile: true
+  - Path: ShowWaveform/NanoVGd32.dll
+    Sha256: 8d51d77413d63377dd2e75ed22a941aaeac56da21cb50804a744e5c9c5000edf
+    Install:
+      TargetPath: plugins/ShowWaveform/NanoVGd32.dll
+  - Path: ShowWaveform/ReaderProcess.exe
+    Sha256: 748bf9b835b4b3a0db1fccd261f612aab916945774a2dc8b1141792c82f072c2
+    Install:
+      TargetPath: plugins/ShowWaveform/ReaderProcess.exe
+      Method: Copy
+  - Path: ShowWaveform/ShowWaveform.exe
+    Sha256: d00dacf071796516ec17284b432775eecf781222a02dc8c17a197f5953808f50
+    Install:
+      TargetPath: plugins/ShowWaveform/ShowWaveform.exe
+      Method: Copy
+  - Path: ShowWaveform/ShowWaveform.ini
+    Sha256: 6e507fcb84802d13e5131b15e2788f004bd9e1358003148e2b7534ed90491c79
+    Install:
+      TargetPath: plugins/ShowWaveform/ShowWaveform.ini
+      ConfFile: true
+ManifestVersion: 0.2.0
