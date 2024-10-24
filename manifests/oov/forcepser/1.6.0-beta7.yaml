@@ -1,0 +1,61 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: forcepser
+DisplayName: かんしくん
+Version: 1.6.0-beta7
+ReleaseDate: 2024-07-19
+Section: Other
+Depends:
+- GCMZDrops
+InstalledSize: 4342
+Developer:
+- oov
+Description: 指定されたフォルダーを監視して、同じ名前の*.wavと*.txtが追加された時にごちゃまぜドロップスの外部連携APIに投げつけるプログラム
+Website:
+- https://github.com/oov/forcepser
+Files:
+- SourceUrl: https://github.com/oov/forcepser/releases/download/v1.6.0beta7/forcepser_v1.6.0beta7.zip
+  Sha256: ba3b0fd30224ec4040522c07e93962dccb28df1de11ec6eaee1b743a8769ff1a
+  Files:
+  - Path: _entrypoint.lua
+    Sha256: 6f00ff99bcbfa0018c7debcbe1e71a85cb5d46e77fff84ed303bd7f106eb69d6
+    Install:
+      TargetPath: かんしくん/_entrypoint.lua
+  - Path: forcepser.exe
+    Sha256: 6941c0bf2d5e371239f1b10d8dde7f71f61c7b69bbe788d120edebbd642f0ee5
+    Install:
+      TargetPath: かんしくん/forcepser.exe
+      Method: Copy
+  - Path: forcepser.txt
+    Sha256: 32cdbe52885c4060d0f5640b14fb6c39317653a3394efe950e3a8124383bd5ea
+    Install:
+      TargetPath: かんしくん/forcepser.txt
+  - Path: setting.txt-template
+    Sha256: b130a37f0ec7f9fc3beff530c33bf46b391ef088de1ccbea4ef9391304729403
+    Install:
+      TargetPath: かんしくん/setting.txt-template
+      ConfFile: true
+  - Path: setting.txt-template-old
+    Sha256: 903d2eb70e1357c772505d8715ec789edcd5113368942a0a7a163407f6cbe07e
+    Install:
+      TargetPath: かんしくん/setting.txt-template-old
+      ConfFile: true
+  - Path: asas/asas.exe
+    Sha256: 52bd4e6c0408118e6ac17fbb5f87a55274b7be91a3e655b79996a09719695353
+    Install:
+      TargetPath: かんしくん/asas/asas.exe
+      Method: Copy
+  - Path: asas/asas.txt
+    Sha256: 852c9bafd2ca12e5b55a3f802603c53455a82bf88c8adf08cea45fbf380ff46f
+    Install:
+      TargetPath: かんしくん/asas/asas.txt
+  - Path: asas/asas32.dll
+    Sha256: ab847e88e90964cdd03ba65000d447c415c71a88543239ab50209d715c60a1b6
+    Install:
+      TargetPath: かんしくん/asas/asas32.dll
+  - Path: asas/asas64.dll
+    Sha256: 84286693bcf25f0e56df6bdece375b0d2c68d18989c2c78e00c79d2bcb1730e0
+    Install:
+      TargetPath: かんしくん/asas/asas64.dll
+ManifestVersion: 0.2.0
