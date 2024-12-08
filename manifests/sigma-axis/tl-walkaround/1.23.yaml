@@ -1,0 +1,37 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: tl-walkaround
+DisplayName: TLショトカ移動
+Version: "1.23"
+ReleaseDate: 2024-08-02
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 55
+Developer:
+- sigma-axis
+Description: |-
+  編集点移動のショートカットコマンドを追加するプラグイン
+  タイムライン上のオブジェクト境界に移動する，いわゆる編集点移動のショートカットコマンドを追加するプラグインです．他にもスクロール操作などタイムラインをキーボード操作で見て回るのに便利なショートカットコマンドを追加します．
+Website:
+- https://github.com/sigma-axis/aviutl_tl_walkaround
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_tl_walkaround/releases/download/v1.23/aviutl_tl_walkaround-v1.23.zip
+  Sha256: 84ac7028d76151e3760355ce94d82be0b38a8f565944b3e9bcfbc698c0895242
+  Files:
+  - Path: LICENSE
+    Sha256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: README.md
+    Sha256: f17c7b2b62aa83ce9aba3724d8119f8bdc4758bff0c7cb8ecb2e836d4a375b10
+  - Path: tl_walkaround.auf
+    Sha256: 607e373db473a87498686cad2b0d5aee2517754aa368768766c470faa5fa7621
+    Install:
+      TargetPath: plugins/tl_walkaround.auf
+  - Path: tl_walkaround.ini
+    Sha256: 55a5dfacafad6dfda1ca2b9ad40f404c5570ab3eb54b055d4e7ff7f685f35084
+    Install:
+      TargetPath: plugins/tl_walkaround.ini
+      ConfFile: true
+ManifestVersion: 0.2.0
