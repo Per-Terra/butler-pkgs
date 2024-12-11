@@ -1,0 +1,297 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: ffmpegOut
+Version: "1.12"
+ReleaseDate: 2024-09-10
+Section: Plugin/Output
+Replaces:
+- NVEnc
+- QSVEnc
+- svtAV1guiEx
+- VCEEnc
+- VVenCguiEx
+- x264guiEx
+- x265guiEx
+InstalledSize: 22737
+Developer:
+- rigaya
+Description: ffmpegを使用してエンコードを行う出力プラグイン
+Website:
+- https://github.com/rigaya/ffmpegOut
+Files:
+- SourceUrl: https://github.com/rigaya/ffmpegOut/releases/download/1.12/ffmpegOut_1.12.zip
+  Sha256: 269fe68033ffa410b0767d1e3debd62ac1d9b1bc2ec7d41a4554fc04255253d8
+  Files:
+  - Path: exe_files/auo_check_fileopen.exe
+    Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
+    Install:
+      TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.exe
+    Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
+    Install:
+      TargetPath: exe_files/auo_setup.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.ini
+    Sha256: 72dc0bfee88f8fdd312c7428833aa52a630855996b2504d50274ceb69bda55c1
+    Install:
+      TargetPath: exe_files/auo_setup.ini
+      ConfFile: true
+  - Path: exe_files/check_dotnet.dll
+    Sha256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
+    Install:
+      TargetPath: exe_files/check_dotnet.dll
+  - Path: exe_files/check_vc.dll
+    Sha256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
+    Install:
+      TargetPath: exe_files/check_vc.dll
+  - Path: exe_files/ndp48-web.exe
+    Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
+    Install:
+      TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
+  - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
+    Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
+    Install:
+      TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
+  - Path: exe_files/VC_redist.x86.exe
+    Sha256: a32dd41eaab0c5e1eaa78be3c0bb73b48593de8d97a7510b97de3fd993538600
+    Install:
+      TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
+  - Path: plugins/auo_setup.auf
+    Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
+    Install:
+      TargetPath: plugins/auo_setup.auf
+  - Path: plugins/ffmpegOut.auo
+    Sha256: 6c6102fa927881ae5561a92a8afb52d210ad46d8c91454348049cf4bed7881ed
+    Install:
+      TargetPath: plugins/ffmpegOut.auo
+  - Path: plugins/ffmpegOut.en.ini
+    Sha256: 86d7f5e69e46e37de484d8ebce78aae0b90db1305a2cadf1c8b2de5e642f9e29
+    Install:
+      TargetPath: plugins/ffmpegOut.en.ini
+      ConfFile: true
+  - Path: plugins/ffmpegOut.ini
+    Sha256: 22389faff4e8fdd690009b3c4f6d3ceb888aa7497c0d35fea6d8cc442044f9fc
+    Install:
+      TargetPath: plugins/ffmpegOut.ini
+      ConfFile: true
+  - Path: plugins/ffmpegOut.zh.ini
+    Sha256: ef671e05d4beec5e32f7f521ecac03998e83c8a6ad9520dd5639e14bb924ed92
+    Install:
+      TargetPath: plugins/ffmpegOut.zh.ini
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/Motion JPEG.stg
+    Sha256: eff7e1227223be5273b8df2c0d670e089a0c156e9bc5cf41727d1448927457ee
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/Motion JPEG.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/av1/svtav1.stg
+    Sha256: 5e9a2f98b018a7db683bf7e1e9c99bec5e28aa6445f5edfbb946ee1f13a4e922
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/av1/svtav1.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/av1/svtav1(10bit).stg
+    Sha256: e286dba617660ec1b74a0e2a1b567e7d47af9da79273838c248b9b2dac866b7d
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/av1/svtav1(10bit).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/flv/flv 2pass.stg
+    Sha256: 86db37c1383d29b49d8e1c57916c9eb0c68813d62f6c8f48e15b821a7a777d97
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/flv/flv 2pass.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/flv/flv quality.stg
+    Sha256: 4a37c84614b0117e6ba377b8fb0b03a25064e2b8d611d7bac9a921baeac95de5
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/flv/flv quality.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/flv/flv.stg
+    Sha256: 6c939c5ad6533d41697f9e9128d824240bc5f464064ac45ca9a68f4aa7d82c76
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/flv/flv.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/huffyuv/huffyuv (rgb).stg
+    Sha256: acfdfd9df55a3fa93e52f416d3d602c1e70be7251ecc584f74184c5d92cabec5
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/huffyuv/huffyuv (rgb).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/huffyuv/huffyuv (rgba).stg
+    Sha256: 03f2d11bcda68cbb4b0c5403f83feeb30ec256098115268d57c91c6a27753356
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/huffyuv/huffyuv (rgba).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/huffyuv/huffyuv (yuy2).stg
+    Sha256: b2facd630ba78d40a30b0dbd38b80953a61f4c94e9ac39e3974f8fb14b914a9e
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/huffyuv/huffyuv (yuy2).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/mpeg1/mpeg1 2pass.stg
+    Sha256: 510c4613ce26cc6c116b1c2801ca14c113460b20f3804e3a44356c734cbe2aa7
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/mpeg1/mpeg1 2pass.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/mpeg1/mpeg1 quality.stg
+    Sha256: 55fa097ff690ec44fd7f4e21a6b2cc8095a6eec0a917687c88670b0d52511a1d
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/mpeg1/mpeg1 quality.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/mpeg1/mpeg1.stg
+    Sha256: e7ddd51692c6db0505e11f5ec259826b7e9d63c7a82f2bdfd6ac2735a5520812
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/mpeg1/mpeg1.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/png/png連番 (rgba).stg
+    Sha256: f6afcf73caedeaae0176fc0b6576d7b0d461e2fee788f0bc24a732809ebcfabb
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/png/png連番 (rgba).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/png/png連番.stg
+    Sha256: a036cb1efd10f570523b82d3f3e3d2e4fcbf208ad01ea67d3283b67580b5f23d
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/png/png連番.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/utvideo/utvideo (rgb).stg
+    Sha256: f766903951c9b58c66de465e46a1a226d80d518cd974033a3525e3bb79bf0dfe
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/utvideo/utvideo (rgb).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/utvideo/utvideo (rgba).stg
+    Sha256: 7b892a47bdf97ae5b482a47eafda1faf9ba5a764dc234070af1f9f77e18c37cd
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/utvideo/utvideo (rgba).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/utvideo/utvideo (yuy2).stg
+    Sha256: 1af1267975a0626d3f004edaaf42faf90f44cfba3a153fdda76c48b8c8961023
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/utvideo/utvideo (yuy2).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/vp8/vp8 (mkv) 2pass.stg
+    Sha256: 99ce13cbaa674849ec4f8698ea928d2e4204291e745ffc35b1a40c1f7a46ae15
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/vp8/vp8 (mkv) 2pass.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/vp8/vp8 (mkv).stg
+    Sha256: acccbc04bee19aa0ff835dc87c5b7c72feeea52042fad20cee7af29cb78565b3
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/vp8/vp8 (mkv).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/vp8/vp8 (webm) 2pass.stg
+    Sha256: 782a7589d200b2dde40dd3bab0e9bbbe4ab9b5196ac66a329f714a4136f213cc
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/vp8/vp8 (webm) 2pass.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/vp8/vp8 (webm).stg
+    Sha256: 763707552e9e5805949042287f3b2352cda997e6a604612e219d6eeca1487c7b
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/vp8/vp8 (webm).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/vp9/vp9 (mkv).stg
+    Sha256: 8ce97ff2db0963dc1eb171fe727a250c813d6ca5ae85a5dc0d494657178004ea
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/vp9/vp9 (mkv).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/vp9/vp9 (webm).stg
+    Sha256: 4a8de2d051f2178e47109cb74f58ee201841d176d840f4798840e6f3aa528ebc
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/vp9/vp9 (webm).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/vp9/vp9 rgba (mkv).stg
+    Sha256: df523d0a3ff8239e4aa262cae410f3f4850eca7931f35cba1a5aba4c57e15679
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/vp9/vp9 rgba (mkv).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/vp9/vp9 rgba (webm).stg
+    Sha256: e9533a46f93010707ee49e38d76d1f333b67f9599bc75fb15effb336d331d82c
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/vp9/vp9 rgba (webm).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/wmv/wmv quality.stg
+    Sha256: e9ca23d16d2836aad19a51297c0219fe0626220392f541c6af4125c493184206
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/wmv/wmv quality.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/wmv/wmv.stg
+    Sha256: 0814a1aa4c83bc5522871796762bb33e49db0ba09892b41db19c6d1394480842
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/wmv/wmv.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x264/x264 2pass.stg
+    Sha256: 58cba8b137b87fc5388b2ceaba8cb71505a3998923d0a36b11a11b697550d1fa
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x264/x264 2pass.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x264/x264 crf.stg
+    Sha256: 9adc08933a9df1f6366a273ba6457895dd9bb5933b5708339864424f7aa84343
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x264/x264 crf.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x264/x264 詳細設定さんぷる.stg
+    Sha256: 09ec45e585f708b59063aa73ec4b3b5e4097dca1fcc625993d3709294dd4b995
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x264/x264 詳細設定さんぷる.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x264/x264(10bit) crf.stg
+    Sha256: b602d961b3c8ce23605b0c4923a16875325c049933d8d1bf0f87827f68035dbb
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x264/x264(10bit) crf.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x264/x264(yuv444) crf.stg
+    Sha256: c1333e7762fee07a15f24c47446e3685a2303d4254353d2a7c9ea88061ee6825
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x264/x264(yuv444) crf.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x265/x265 10bit crf.stg
+    Sha256: fcf540c46e2470b196cc70841f5d97d6d1f25a58c1d85c16136034ed5fc6a845
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x265/x265 10bit crf.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x265/x265 2pass.stg
+    Sha256: 1f11cebda3c4c33e556bea8fd25b684f6c7379bad8f47fbe84d48f807cfd3716
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x265/x265 2pass.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x265/x265 crf.stg
+    Sha256: 76c0484e9c4a7627c329c5e8c9a80f541cb79456dbaea007a783d07768547c7d
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x265/x265 crf.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x265/x265(10bit) 2pass.stg
+    Sha256: d547e9e3c7c6ddc07b47c7407c1feae9d9095967d6a0fc216163fe141a6dbed1
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x265/x265(10bit) 2pass.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x265/x265(10bit) crf.stg
+    Sha256: ca7f2d81e5d835de825393907390868095540d6cb9c705cf75e8eb9f6d0022ea
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x265/x265(10bit) crf.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/x265/x265(yuv444) crf.stg
+    Sha256: df4981b8821f0dd2099847ec69f0cc173b7740e4653ded1c3a7409029042d7d0
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/x265/x265(yuv444) crf.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/xvid/xvid 2pass.stg
+    Sha256: a4132d839afdf2547e89f116cb8e26c320dbc0c26581e991c82979e265433c0f
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/xvid/xvid 2pass.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/xvid/xvid quality (最高).stg
+    Sha256: ac752333092d12128ed6510a9a701dabc26048c60bce9e827282154b2a5322df
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/xvid/xvid quality (最高).stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/xvid/xvid quality.stg
+    Sha256: 46c81e734756e2176d2fa46554dd1fdd7f921d5cd50b951039d32546165279c5
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/xvid/xvid quality.stg
+      ConfFile: true
+  - Path: plugins/ffmpegOut_stg/xvid/xvid.stg
+    Sha256: 89193e75eafcfb0d3a37584e772ea14990bf9bc92ec59533e97dbfd301736650
+    Install:
+      TargetPath: plugins/ffmpegOut_stg/xvid/xvid.stg
+      ConfFile: true
+ManifestVersion: 0.2.0
