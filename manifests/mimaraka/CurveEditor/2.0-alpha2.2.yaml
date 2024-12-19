@@ -1,0 +1,217 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: CurveEditor
+DisplayName: Curve Editor for AviUtl
+Version: 2.0-alpha2.2
+ReleaseDate: 2024-11-03
+Section: Plugin/Other
+InstalledSize: 6334
+Developer:
+- mimaraka
+Description: 様々なイージングをウィンドウ上で編集できるプラグイン&スクリプト
+Website:
+- https://github.com/mimaraka/aviutl-plugin-curve_editor
+Files:
+- SourceUrl: https://github.com/mimaraka/aviutl-plugin-curve_editor/releases/download/v2.0-alpha2.2/curve_editor-v2.0-alpha2.2.zip
+  Sha256: d152e9ce39dbd5df716a4a3249655047e3e3e8e2d95ef8ea325e4ef9e4dc8e76
+  Files:
+  - Path: curve_editor-v2.0-alpha2.2/@Curve Editor.tra
+    Sha256: c40cb9309918cc880d4cb79ce4ae22dd88e8ca27f406d2a8081a865ad605b000
+    Install:
+      TargetPath: script/@Curve Editor.tra
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor.auf
+    Sha256: 59267ccf0efaa78c352716a9c841334a65bf93ce1b48a968cbf18c74dd1a429b
+    Install:
+      TargetPath: plugins/curve_editor.auf
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor.lua
+    Sha256: 3cced07450323b982d034fc725d4bd5f3f152da9caaed9dbc58e42bed919a878
+    Install:
+      TargetPath: script/curve_editor.lua
+  - Path: curve_editor-v2.0-alpha2.2/LICENSE.txt
+    Sha256: 2615eff3ee39c0239245a51aec8555428f9c7488103429349ac1ed23328f4458
+  - Path: curve_editor-v2.0-alpha2.2/Readme.html
+    Sha256: 02adaf33afeb61bdf1159ec5e0dc4cd1f7df1080e20ae424eeea8401fc70ea0f
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/index.html
+    Sha256: 18e46e3af4fb4a2a38598dc69ccd5c60312b05f3573478ee66371bafaccf1750
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1118.bundle.js
+    Sha256: b986b9806f8748715b2070fbe3d25fc53d0e11250693087dfe1473f8d153f9bd
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1122.bundle.js
+    Sha256: c7e9fb385f36f3b095670a573e13d6f8b57d0c096642633b8710fade6dabf7fb
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1282.bundle.js
+    Sha256: 4681c02049ace03e3bcfc3d000eb4aa3d2cd82e59cb83ecb2901e9e55a5f70c4
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1420.bundle.js
+    Sha256: e0fbdc48bc2aee14a560c4921d9c4207b65e3b86adbab1b187e3637f57e7dad2
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1438.bundle.js
+    Sha256: 283a9f868f7367010d5d00bf5268c02dba3d1a922f689ddb63eb239c3d27fe6e
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1446.bundle.js
+    Sha256: 17dafb3666a27566a23a83faec82a1648e3bf6f82a02d95d1c4992464a167126
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1560.bundle.js
+    Sha256: 0af12d4e9a401aef9bd58a9b7e96274e26710af2339e7c4aa181011f009af113
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1710.bundle.js
+    Sha256: 818efa5ff1ac1104e1fbcf1ba6e79d79f7c4a419be53ac51009d03983a4f1c15
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1740.bundle.js
+    Sha256: d1b31f6ff4931d0175fa7a138927862700ab2746fb43c51ba4ed5d4e55e71f2a
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1888.bundle.js
+    Sha256: 862dd5ac7334a3d1537f3e5e1cd8dafdb5eeef447c898a1c0ce37dba9f80e7e6
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/1914.bundle.js
+    Sha256: 5fc665a3de20602ebbd1481ea474193962172ff1e2031c552a15266acf5c43b1
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/198.bundle.js
+    Sha256: 3fbb46148837378c5c984562cd486780dad4ee1b13cf49b129b13cdae98f699f
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/205.bundle.js
+    Sha256: 134100d8ef8a4131e6faca81bf7b042d98e1aa935f00b0d1516e87db5a4bad55
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2077.bundle.js
+    Sha256: cef48d2fba35d683c70a8e3f8aaaaf1ea13f0f7da1ad427bf872046da3d9f60f
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2094.bundle.js
+    Sha256: 52ea44af0d8947d585c8ae221d2a31c4a8963248a2694e605b29b5fbfbfb2acf
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2244.bundle.js
+    Sha256: 42c5416b619e5124b4a28f80c0ee9194eb0f8697452981b351a5c33d61789d29
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2278.bundle.js
+    Sha256: 06527fa185132480fefc566b542e5462e536a42932edeb6bf2f96606b8f4e07c
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2398.bundle.js
+    Sha256: 9a287a60537c29eaaeb5eac7f18520a3b39d8bebf32b8bd553cb446b4ea0b410
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2586.bundle.js
+    Sha256: fb261bbf6ee4678707feac850c869978a6fd2e1cc533572e2a42ad05e9290736
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2658.bundle.js
+    Sha256: 39457210ad66c41e7d7b135039b932fc1454586e0775ddaabdc397bf4011ab93
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2686.bundle.js
+    Sha256: c2129a268870c6a964bc86f20d8a341104b02e91e9fee9cbf6415c8d5945c5cd
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2692.bundle.js
+    Sha256: b8b2c84d2fcec273e593ebfbdc35753eca7bc247d30eed1bde98adf8958ac0f1
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2745.bundle.js
+    Sha256: 2124e281deb21de5baeea73218f31589d0633164610c2bc37aba850bdbc19b4d
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/2962.bundle.js
+    Sha256: 5ebc2643bf876385808133f2d6ecb6d49ae03622db84144cfa85b5bdbf08b758
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/3042.bundle.js
+    Sha256: 01d5e8866b3b5fdde757a1a31eb2d99d5d6f7ae93fea8493c4ba6ff2940fab95
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/3062.bundle.js
+    Sha256: ced08f2019dfd27311ed29f699feb451822181d0a4a95e5c60ea9396634d0ba0
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/3096.bundle.js
+    Sha256: 503c23b627608d4dfa9b4a8aea22ebd13a2251e9ce6297e18c6196777e5a4b68
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/3182.bundle.js
+    Sha256: 4eaf67b524adca06692249cdf5eda417fa5e397da096bda0d930f4ddcc5a38f2
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/3622.bundle.js
+    Sha256: c4738f3f95f602ce9e9e7f97ff20f2e5f5911baf9978c01dc541e5826888c11a
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/3726.bundle.js
+    Sha256: a747147b772e224a9a8e1759b90614200f4a2c433af4abc6b05cf5782bf7652a
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/398.bundle.js
+    Sha256: feb2fcc001a74fc06cab7767df9180e65324bcec6120a3444fcbfbc7141e8fd6
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4114.bundle.js
+    Sha256: b906f42f39d261c35651f2a409243e772292a37950aefc821976492c7c4548bf
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4120.bundle.js
+    Sha256: f124a01be3788d3b573494297f5ff4555237caa9b5f90c4450ff33b75eec55a4
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4334.bundle.js
+    Sha256: 232deffdc43800b41f13146814e5c72b7be18cf582582c608a6bd07e8635fb48
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4630.bundle.js
+    Sha256: bbf593fc2271fb02689be909e217e8ba4d3b996b699cd050cacae394888763c2
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4680.bundle.js
+    Sha256: d233ea282da3302db18bec34a0297b99067e15f204bedaffce06e08b873995ba
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4698.bundle.js
+    Sha256: 90b755a518ca2ae50948561b206df24e6318905137691125ddc6500d85136fbb
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4839.bundle.js
+    Sha256: 0290a96b79ff2905afa5bd3b516487fd0338467413412b7d4d3e7521362e98c0
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/494.bundle.js
+    Sha256: d15335737283289f233581281ed75a1afaa5bfb7adb43710bd3b3d41e1e2fb7c
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4958.bundle.js
+    Sha256: cdc8b9674cffc63672500c8ff29d9321ac44730f60390b2fdf11d95db07ba18c
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/4962.bundle.js
+    Sha256: d0ca9405d55a50f828e46f060296ddf02047a37e71f27b8a56bd2cc979d20d10
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/5130.bundle.js
+    Sha256: 5297c445dabf6f2aacda3eaecfad4e95d543f2d6a5877e8a8966a8a92f8242c1
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/5196.bundle.js
+    Sha256: 910b35e631422bd8df3a242831c44498a088f06298f772c3eafb6ee39d532735
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/5364.bundle.js
+    Sha256: aa3090e229822201f2635fe974f89f8a698d2a527e1b8bacc6a4f2d5e2a6ec9d
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/5550.bundle.js
+    Sha256: f392ee3abb309f00ca33f8e4dfe89ed18134ab8fce6e9dacd9e68eab25bcd12e
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/558.bundle.js
+    Sha256: 331db701048697afd9cc99447e00fada8ef9b804f0935d5e9c5c476f8517e91c
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/5618.bundle.js
+    Sha256: 473b77542ba8b2dfee5d1e2acd5a117609127348c7ff3fcb6af764b2e4613713
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/5628.bundle.js
+    Sha256: 3be579d986c625553bebe8bd85e3a5f5ebf22a950d0177cfbcbda9b330b9e7d7
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/5786.bundle.js
+    Sha256: dd38528f8307364bd09af3533bfe66c88f35f4b1b942313c27eac0a548963be4
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/5966.bundle.js
+    Sha256: 8346fe24737d3df03dbbaab8bc84410249492395269188c0d3a5de39a0af11a2
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6018.bundle.js
+    Sha256: 269eb0ef1be333eab39af35687b8aa68f2429cf4571ead79c175bae72aa99bf5
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6134.bundle.js
+    Sha256: 5e96eb3d6a2eb30a06c3a9bd6d20fe2a9c7216550e55d98ecccbac5f73b65e77
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6185.bundle.js
+    Sha256: 9fdd54f3181dd40ff8d73c172b6eec94af99187b7ffb1bd92d2957bdf82f1d54
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6302.bundle.js
+    Sha256: 61b0c3d10608711e69bad45fbd3f28f0c30bd2e5850478aa823e25275d4bd6d1
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6414.bundle.js
+    Sha256: f8086efc73dabc10b9d2871c7d68096817c3cac0b75b9f619f28a8139a2196ff
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6446.bundle.js
+    Sha256: bc48445b4047723d2456056a181d43dcf47f8d8f0139f35d67856118ebf020b0
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6590.bundle.js
+    Sha256: 0c24cd12cceee0650efd6ef16d1513f76f4ac4a13cc9cd170d7d88540777c76a
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6830.bundle.js
+    Sha256: 22af11106e53367684edb34a66ad0ff2e4977c54a7adf712d82c2c54d27b6769
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6940.bundle.js
+    Sha256: 921c7a04f4a375870dcc1521f561450994982716938f77ce0fc390329ae38f57
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/6990.bundle.js
+    Sha256: f3aefa9347fd4f5d9fb99e2f431da6e531f5f65148d8e97ed1013fdd56a17525
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/7048.bundle.js
+    Sha256: 76ce45cdc37b78dfd817d15e3d9f600d6fa967f7e3510023aa5ce2c65ed134a2
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/7200.bundle.js
+    Sha256: b8198f45ed205f6cef4275116ae6282c9d3ba936040c8e0bcbad28399c8f2da5
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/7246.bundle.js
+    Sha256: 15fb04e175d1ed950777857902d1bd7686aef60dce81d12755e4b740f45e9f1f
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/7466.bundle.js
+    Sha256: 924eeaf40f93108eb00baa35ad6ad1917808be33353fd1486e1f7b168b03bef4
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/7614.bundle.js
+    Sha256: 729349454f3c26fae8132b8491d7cd2685c38cd0a412428176500a1b336f1c17
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/7836.bundle.js
+    Sha256: a57ba4422fb6af928f0e1084fd9e19010f6978c3b427228d9dad89267649797a
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/7886.bundle.js
+    Sha256: f8373ebdf9335d48db30c01f6ff245c622ff7a1096fade0f7f62a3b343af9e42
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8230.bundle.js
+    Sha256: c88fcc824a64b469d0444fc6e45c31d64de4b060304bf4084f701c83294e130f
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8332.bundle.js
+    Sha256: ebe313fce7873ccf8189c03cf7889f5b43192dbb7b358321a17696088685132b
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8334.bundle.js
+    Sha256: 8e8c7c1d72d847b83810bd86725d90633f25afdcd479c5e65ebc36ee0887df5a
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8390.bundle.js
+    Sha256: 1983284fc57e3aee3a52494c8140845749dc88cb99b0bd79c0c78d07afaf64a1
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8494.bundle.js
+    Sha256: c2c238e2761c1bfaf9e2df462a5836e452b8b7093f2408f6d86fa21da96bc77b
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8542.bundle.js
+    Sha256: 86244676d22c008128f05f8f3f4be46f6828f4cdda55fd0a32dd1ad87a2499c2
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8566.bundle.js
+    Sha256: 80b4695706253b194506bdc9decb2c5d3d2e17f9ffb2d3b124dbcb3ad57a8d8a
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8902.bundle.js
+    Sha256: 91198c1fd2eb22e7bb1c38bb35aaddd98243dcc5eb44972dafb7020bf1c0bfa2
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/8990.bundle.js
+    Sha256: 6e2caca460a273f86fb260e2244259e076d692435a96b3ab3c464f5a4686cdd1
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/9034.bundle.js
+    Sha256: a168a3f713f4c9fbd2c0228a7c09513038d2dba10cdc013b3f7145fa24894079
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/9038.bundle.js
+    Sha256: f2bfe9bd3c878fc42d3797a4595ea22b52b651fb5d43369d2cf4e6c01435e34f
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/910.bundle.js
+    Sha256: a0c72fd8af3829de448e0d6b5f1a7a83dc00ab4a28de9a2bed61bb11c62b3556
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/9150.bundle.js
+    Sha256: 283d35821b118601070fa2866e684aba03b959d6c300c2e7f28922feff4228bb
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/9355.bundle.js
+    Sha256: 61bbf72d031ba29aafce751e961ed22ae884c0bf66e2d29415e005c3c3ceee1f
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/9390.bundle.js
+    Sha256: d927502ab65e31b72efe494fa9e7e1af44bfa8713deb4a3cd414f90f940b3d63
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/946.bundle.js
+    Sha256: a0528636eb3bf6e95530426c69569075b95f749a111f875b43aaadff492c67b8
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/9510.bundle.js
+    Sha256: 9c20a56789637efb596093f20ffb2b9dc9edfa32fa139eda791fa861ae395a0b
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/968.bundle.js
+    Sha256: 8796bf89ead32a892f5bff2b5300e6c58054a48ba54aeb692cc1be8f1c4b165a
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/970.bundle.js
+    Sha256: 005c0ebc5e52356dc2ba36103f2c932b0be12aad07f7d2f7eb62890ffedd03a5
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/9838.bundle.js
+    Sha256: 01850d9e78240e13336d81db646dc028343532a79161dd70e48c5b484a4689c7
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/bundle.js
+    Sha256: da4a03de292d8bdc88897aa53b51a07d61b66757ab7c91e85c972034f6fdbcef
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/editor.worker.js
+    Sha256: d2d80549b94895db366cc3b98a32e56454cd7da3eff89c9be7c03922e181a9a6
+  - Path: curve_editor-v2.0-alpha2.2/curve_editor/ui/js/f6283f7ccaed1249d9eb.ttf
+    Sha256: 0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9
+ManifestVersion: 0.2.0

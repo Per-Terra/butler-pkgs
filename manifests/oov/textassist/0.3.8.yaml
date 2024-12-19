@@ -1,0 +1,25 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: textassist
+DisplayName: テキスト編集補助プラグイン
+Version: 0.3.8
+ReleaseDate: 2024-05-03
+Section: Plugin/Other
+InstalledSize: 41
+Developer:
+- oov
+Description: 拡張編集プラグインで複数行テキストを編集する際に、Alt + 方向キーで制御文字の内容を書き換えるプラグイン
+Website:
+- https://github.com/oov/aviutl_textassist
+Files:
+- SourceUrl: https://github.com/oov/aviutl_textassist/releases/download/v0.3.8/aviutl_textassist_v0.3.8.zip
+  Sha256: a3c9611b2357c1c88924b37d8d9f83dd65b0c0ca7091fea8990ca65d616db464
+  Files:
+  - Path: textassist.auf
+    Sha256: 8af0dbe86931a2156e140820a42993ca5c12d40b6388d1a36bc49ec3b14b829e
+    Install:
+      TargetPath: textassist.auf
+  - Path: textassist.txt
+    Sha256: 6764102fe9812efd345bdea9fe02243503f83b6f719bd09cd219f8a3678726b5
+ManifestVersion: 0.2.0
