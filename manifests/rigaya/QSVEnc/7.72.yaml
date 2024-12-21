@@ -1,0 +1,240 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: QSVEnc
+Version: "7.72"
+ReleaseDate: 2024-11-02
+Section: Plugin/Output
+Replaces:
+- ffmpegOut
+- NVEnc
+- svtAV1guiEx
+- VCEEnc
+- VVenCguiEx
+- x264guiEx
+- x265guiEx
+InstalledSize: 172241
+Developer:
+- rigaya
+Description: |-
+  Intel Media SDK を使用してエンコードを行う出力プラグイン
+  IntelMediaSDKのsample_encode.exeを改造し、x264guiEx 1.xxに突っ込みました。
+  QuickSyncVideoによるハードウェア高速エンコードを目指します。
+Website:
+- https://github.com/rigaya/QSVEnc
+Files:
+- SourceUrl: https://github.com/rigaya/QSVEnc/releases/download/7.72/Aviutl_QSVEnc_7.72.zip
+  Sha256: 26ec91bd4f1cee9d64e4e7abaaf6ea494cbc4853cec2132bcba3ac9085602e36
+  Files:
+  - Path: QSVEnc_readme.txt
+    Sha256: 11ec94c0829d8ab26f1e11dfb77984d31f0250d86a5ad39222ec6499fc8b10b8
+  - Path: QSVが利用可能か確認 [ダブルクリック].bat
+    Sha256: cbd30ad58c7434e947c2455d1ee1a3c5e3ad5d87d2b5123f666b1533b6a017c6
+  - Path: デバイスマネージャを開く [ダブルクリック].bat
+    Sha256: 0def9959ebba14f75d5050624cf8195aa4c5d01cc66f6dfc20626c88b544c9fe
+  - Path: exe_files/auo_check_fileopen.exe
+    Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
+    Install:
+      TargetPath: exe_files/auo_check_fileopen.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.exe
+    Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
+    Install:
+      TargetPath: exe_files/auo_setup.exe
+      Method: Copy
+  - Path: exe_files/auo_setup.ini
+    Sha256: 55df63b85948f203d1b52bf7459b1198686adfc90cdcdc2b2b067553fda8d9c0
+    Install:
+      TargetPath: exe_files/auo_setup.ini
+      ConfFile: true
+  - Path: exe_files/check_dotnet.dll
+    Sha256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
+    Install:
+      TargetPath: exe_files/check_dotnet.dll
+  - Path: exe_files/check_vc.dll
+    Sha256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
+    Install:
+      TargetPath: exe_files/check_vc.dll
+  - Path: exe_files/ndp48-web.exe
+    Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
+    Install:
+      TargetPath: exe_files/ndp48-web.exe
+      Method: Copy
+  - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
+    Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
+    Install:
+      TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
+      Method: Copy
+  - Path: exe_files/VC_redist.x86.exe
+    Sha256: a32dd41eaab0c5e1eaa78be3c0bb73b48593de8d97a7510b97de3fd993538600
+    Install:
+      TargetPath: exe_files/VC_redist.x86.exe
+      Method: Copy
+  - Path: exe_files/QSVEncC/x64/avcodec-61.dll
+    Sha256: a7ccb24f0ff60f0b770ec3c2633a03cf2696f1b862b2ecf084fe06e632b28b9b
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/avcodec-61.dll
+  - Path: exe_files/QSVEncC/x64/avdevice-61.dll
+    Sha256: a5b80700c990387b25a1b4db34feff665ca472b5f3c3e02a7199e817179c245b
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/avdevice-61.dll
+  - Path: exe_files/QSVEncC/x64/avfilter-10.dll
+    Sha256: 07169869dafca5148877f2e97a7e6bf6b33c3c45cbef79911c8ef6e5ef5d512a
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/avfilter-10.dll
+  - Path: exe_files/QSVEncC/x64/avformat-61.dll
+    Sha256: aca1567e1e176e5b136e0bc8f4e89dfa69b2cd95304379de609818169a6af7b6
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/avformat-61.dll
+  - Path: exe_files/QSVEncC/x64/avutil-59.dll
+    Sha256: 28b015927252f64671b2fd15fb890f3b0a4ebed188da96385d84d6d9942248e8
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/avutil-59.dll
+  - Path: exe_files/QSVEncC/x64/libass-9.dll
+    Sha256: e04dc711a9d3bd678e38e677b4d9e2d9a08add7cb586c51fcd15fdabd8d89d8b
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/libass-9.dll
+  - Path: exe_files/QSVEncC/x64/libplacebo-349.dll
+    Sha256: 5e950bd1623f897da33a3c560646b86c5fbcbe343a39983504b7a830720450d6
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/libplacebo-349.dll
+  - Path: exe_files/QSVEncC/x64/QSVEncC64.exe
+    Sha256: 8bfac887224ffb58e7c871dec2228db45dc3df066f2a72464c6bfa9bf77836a7
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/QSVEncC64.exe
+      Method: Copy
+  - Path: exe_files/QSVEncC/x64/swresample-5.dll
+    Sha256: cb8383ec38b6405a917d738d4f1ee16d526292ae61fcc25537c99b20a2f775f9
+    Install:
+      TargetPath: exe_files/QSVEncC/x64/swresample-5.dll
+  - Path: exe_files/QSVEncC/x86/avcodec-61.dll
+    Sha256: 1bdafb826b18ec39d1bcac4650c85e34abbe0fcadc7e15b2235e34f9d25b97e9
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/avcodec-61.dll
+  - Path: exe_files/QSVEncC/x86/avdevice-61.dll
+    Sha256: 7d602c821d79d8281c621c237e61cc6117a169b809458d2bc66420edc2a3a752
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/avdevice-61.dll
+  - Path: exe_files/QSVEncC/x86/avfilter-10.dll
+    Sha256: ca169b8606bab916ef1cbdf4a620208443bd19889b6a3c40b92f2326be3e7366
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/avfilter-10.dll
+  - Path: exe_files/QSVEncC/x86/avformat-61.dll
+    Sha256: d90bdb916720620ea12768e08f30fad327fe1fa3589ed202ebc399f11c11df10
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/avformat-61.dll
+  - Path: exe_files/QSVEncC/x86/avutil-59.dll
+    Sha256: 9a67bf1390177722f796b7a09ba53cfa294721dd2ac88388fb076215a61b9b12
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/avutil-59.dll
+  - Path: exe_files/QSVEncC/x86/libass-9.dll
+    Sha256: e2aed5b23a9f01c13686cabb763125db7fdb21a89d868fd9eb1226214773c5a5
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/libass-9.dll
+  - Path: exe_files/QSVEncC/x86/libplacebo-349.dll
+    Sha256: b6e16bc275dc4bde7693b44181f772ff116bf08d386fa52a25b29c8acdde5511
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/libplacebo-349.dll
+  - Path: exe_files/QSVEncC/x86/QSVEncC.exe
+    Sha256: 72f670013b4a52b1f9c449b24c88a1918f6cd1ed59dc7a3511f46f31a29cce1f
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/QSVEncC.exe
+      Method: Copy
+  - Path: exe_files/QSVEncC/x86/swresample-5.dll
+    Sha256: 896aa4b4f6ed56ea11ea0252e777c0ca9c2073e989396483d1ebc954cef46cd3
+    Install:
+      TargetPath: exe_files/QSVEncC/x86/swresample-5.dll
+  - Path: plugins/auo_setup.auf
+    Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
+    Install:
+      TargetPath: plugins/auo_setup.auf
+  - Path: plugins/QSVEnc.auo
+    Sha256: 7b29de6cd1b9f8161c4c11a0653a54cddaadd758d0c67010097a0f8def63f6c4
+    Install:
+      TargetPath: plugins/QSVEnc.auo
+  - Path: plugins/QSVEnc.en.ini
+    Sha256: 664d44566d53c18ee9bfd1c718039f14635d17d17e6a24664a031a2641c74edf
+    Install:
+      TargetPath: plugins/QSVEnc.en.ini
+      ConfFile: true
+  - Path: plugins/QSVEnc.ini
+    Sha256: 9661e7e2795513286f8b06a06c50f46534df04ce6200c6473a5812bd8d81278c
+    Install:
+      TargetPath: plugins/QSVEnc.ini
+      ConfFile: true
+  - Path: plugins/QSVEnc.zh.ini
+    Sha256: 40709db0946a15d7b8096f835e7fa2f686df3fb5ddd73a4719fffe6c3dee8a06
+    Install:
+      TargetPath: plugins/QSVEnc.zh.ini
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/Bluray互換出力.stg
+    Sha256: a4fb4aafbfa2f40b5d0e5256277df98184dbdba2f58b254ba2fdf7bcb14df291
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/Bluray互換出力.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/CQP (固定量子化量).stg
+    Sha256: 2d87517e9a5d8808d5261be79e0ee449a5ead49fdbf21c73e984085c30d698a5
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/CQP (固定量子化量).stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/Lookahead.stg
+    Sha256: 3934ef466cbcc621e1d8ef9bdbda8166bda1f10bea89a8a73798c9a99cfae246
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/Lookahead.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/ビットレート指定(VBR).stg
+    Sha256: 0782b27a95bdfbaa8b89c4485b49ed517ab1280a36e63059b55074db556de6ef
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/ビットレート指定(VBR).stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/固定品質 1280x720にリサイズ.stg
+    Sha256: 48c740c20d3dd04b217e70b4f2b6c2b7a2d8bb5528893c8fabd88fa0ee4ba09c
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/固定品質 1280x720にリサイズ.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/固定品質 インタレ保持.stg
+    Sha256: 9fe9bf497de628e1f16f6a92360623930cd4f31ce40b53871a03e1650e9fcf38
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/固定品質 インタレ保持.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/固定品質 インタレ解除 Bob化.stg
+    Sha256: 53e1e08adebe5a27cba9c9df0666e0ae59255ba99d044cc68878f9641871df48
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/固定品質 インタレ解除 Bob化.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/固定品質 自動フィールドシフト使用.stg
+    Sha256: 628f30d48a32b3115cd2087e139abfa5087eb6306c3f4e06a5595d191b5baca5
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/固定品質 自動フィールドシフト使用.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/H.264/固定品質.stg
+    Sha256: 092b6b6f3197c910ff963b79c8f42e85150b77560293f648b8c5b2242726d934
+    Install:
+      TargetPath: plugins/QSVEnc_stg/H.264/固定品質.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/HEVC/CQP (固定量子化量).stg
+    Sha256: a8358d10d4fabf2184e97673640ea5b30f9c94038f29a3257cf4070986adc4a7
+    Install:
+      TargetPath: plugins/QSVEnc_stg/HEVC/CQP (固定量子化量).stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/HEVC/ビットレート指定(VBR).stg
+    Sha256: b117639297622df4717fd84651c0316e1b1328d273a62bd3b9eaa91380027683
+    Install:
+      TargetPath: plugins/QSVEnc_stg/HEVC/ビットレート指定(VBR).stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/HEVC/固定品質 1280x720にリサイズ.stg
+    Sha256: 411066c2619c1778a5892ac511df6fa7ffa625195fd21a40fe278fae969adf9e
+    Install:
+      TargetPath: plugins/QSVEnc_stg/HEVC/固定品質 1280x720にリサイズ.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/HEVC/固定品質 自動フィールドシフト使用.stg
+    Sha256: daf8445244729c18ecd1be4e396ee7d3aab2da50d9be61eb4f35935c9ab92443
+    Install:
+      TargetPath: plugins/QSVEnc_stg/HEVC/固定品質 自動フィールドシフト使用.stg
+      ConfFile: true
+  - Path: plugins/QSVEnc_stg/HEVC/固定品質.stg
+    Sha256: d63856b8f9751bf340fc0dc7dc83693813e19fbdd4fcfd2b722adf614c681637
+    Install:
+      TargetPath: plugins/QSVEnc_stg/HEVC/固定品質.stg
+      ConfFile: true
+ManifestVersion: 0.2.0

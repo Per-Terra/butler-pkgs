@@ -1,0 +1,64 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: L-SMASH-Works
+DisplayName: L-SMASH Works
+Version: r1150
+ReleaseDate: 2024-12-19
+Section: Plugin/Input
+Architecture: x64
+InstalledSize: 42458
+Developer:
+- Mr-Ojii
+Description: AviUtl用入力プラグインその他
+Website:
+- https://github.com/Mr-Ojii/L-SMASH-Works-Auto-Builds
+Files:
+- SourceUrl: https://github.com/Mr-Ojii/L-SMASH-Works-Auto-Builds/releases/download/build-2024-12-19-01-38-31/L-SMASH-Works_r1150_Mr-Ojii_Mr-Ojii.zip
+  Sha256: 4600c68efc360df9aacb953d97304f92909d8b04abb363b3c402a95c01346165
+  Files:
+  - Path: About-this-build.txt
+    Sha256: 28de5a226b7817b548b21a5063a189815684e911496a9592d529d4ff4a2f2265
+  - Path: LICENSE
+    Sha256: 5ec6a5ca2e945b59be4c71cb2955575ae615532a8af201efd79b79d467421e5f
+  - Path: lwcolor.auc
+    Sha256: b3116905a3220da2577873b8201a0882472ab1046cbbee2545d9297b91a7f4e1
+    Install:
+      TargetPath: plugins/lwcolor.auc
+  - Path: lwdumper.auf
+    Sha256: 6faffc14e7586be0436c13cb9cbe32d9bd089c30230be1d939fd1bfb209302d2
+    Install:
+      TargetPath: plugins/lwdumper.auf
+  - Path: lwinput.aui
+    Sha256: e15d3e66946133ce0659a7292610c6584de56bd6a627b5771573f5261f7a2ff4
+    Install:
+      TargetPath: plugins/lwinput.aui
+  - Path: lwinput64.aui
+    Sha256: a7f423b408f700244a1fbd03cb9ba98bd783e3950294ecee28fdca42e2760387
+    Install:
+      TargetPath: plugins/lwinput64.aui
+  - Path: lwmuxer.auf
+    Sha256: 98b36bc7d3cd2b91005a600e451ac8525d177878ab1891bc4eb7e5ba0f5252e2
+    Install:
+      TargetPath: plugins/lwmuxer.auf
+  - Path: README
+    Sha256: 590df0be215ecdacacc09d17b9ed9941f380102bafabdc2fb36d608f5562eef4
+  - Path: README.ja
+    Sha256: feaa3a10e0b9dbd6f05db544c5c056a1b424d04182970a36ea4806aa588fa93e
+  - Path: Licenses/dav1d.txt
+    Sha256: b327887de263238deaa80c34cdd2ff3e0ba1d35db585ce14a37ce3e74ee389e9
+  - Path: Licenses/FFmpeg.txt
+    Sha256: da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768
+  - Path: Licenses/game-music-emu.txt
+    Sha256: d2efc89fbb7533572a472d34e07964951810a3a4f8d3159ecc2dcaa1452c5c26
+  - Path: Licenses/L-SMASH.txt
+    Sha256: f778761540555e63528418e75784c0ed7bf2b89ab11f5ddbfd4bec7aa540e79d
+  - Path: Licenses/libvpl.txt
+    Sha256: bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677
+  - Path: Licenses/libvpx.txt
+    Sha256: 8267348d5af1262c11d1a08de2f5afc77457755f1ac658627dd9acf71011d615
+  - Path: Licenses/obuparse.txt
+    Sha256: c2a92a24f409940e3d510ba5e8c520141dc103748d7d0d23798364cc160bd074
+  - Path: Licenses/zlib.url
+    Sha256: 9b12c6736fbf96980bf484c3d83d7f12f54e9c08b5318b06b47a4628a93557dd
+ManifestVersion: 0.2.0
