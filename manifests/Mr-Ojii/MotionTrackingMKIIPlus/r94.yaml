@@ -1,0 +1,46 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: MotionTrackingMKIIPlus
+DisplayName: MotionTracking MK-II Plus
+Version: r94
+ReleaseDate: 2024-05-11
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 23330
+Developer:
+- Mr-Ojii
+Description: オブジェクトトラッキングを行うプラグイン
+Website:
+- https://github.com/Mr-Ojii/MotionTracking_MKII_Plus
+Files:
+- SourceUrl: https://github.com/Mr-Ojii/MotionTracking_MK-II_Plus/releases/download/r94/MotionTrackingMKIIPlus.zip
+  Sha256: a1d204021d9b467f85253ee8f681b262d62f3b29dbb73b84db3b94fe317a79c9
+  Files:
+  - Path: MotionTrackingMKIIPlus.auf
+    Sha256: 1fbeebe353cb42f8da8eb4872b5e2449418678e3e724b859a2925598baed7c56
+    Install:
+      TargetPath: plugins/MotionTrackingMKIIPlus.auf
+  - Path: README.ja.md
+    Sha256: a1d79108988e697356c6af0f400eb4fd5baf0297943fb2d95b5757ffc34c9b56
+  - Path: README.md
+    Sha256: 08a3b143003cb4e1573480596ac3e612d2e9799e1ecaed5c437005a2948909b1
+  - Path: Licenses/aviutl_plugin_sdk.txt
+    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+  - Path: Licenses/MotionTrackingMKII.txt
+    Sha256: 3136d18fd1604cbc0cc09f4390338bde28fa99be8c8a46d062c44c8366bf5c09
+  - Path: Licenses/opencv_contrib.txt
+    Sha256: 3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5
+  - Path: Licenses/opencv.txt
+    Sha256: 3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5
+  - Path: MotionTracking_model/haarcascade_frontalface_default.xml
+    Sha256: 0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0
+    Install:
+      TargetPath: plugins/MotionTracking_model/haarcascade_frontalface_default.xml
+  - Path: MotionTracking_model/haarcascade_profileface.xml
+    Sha256: b39a4a3be45539db146a7fc1d3e761a292c196eb88421185e6a615b3055e612d
+    Install:
+      TargetPath: plugins/MotionTracking_model/haarcascade_profileface.xml
+ManifestVersion: 0.2.0
