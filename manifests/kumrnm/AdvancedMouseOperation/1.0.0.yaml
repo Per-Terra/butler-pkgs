@@ -1,14 +1,14 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
 
 Identifier: AdvancedMouseOperation
 DisplayName: マウスオペレーション改
 Version: 1.0.0
-ReleaseDate: 2022-05-01
+ReleaseDate: 2024-09-26
 Section: Plugin/Other
 Breaks:
 - authentic-grouping (<< 1.1.0)
-InstalledSize: 61
+InstalledSize: 66
 Developer:
 - kumrnm
 Description: 拡張編集のメインウィンドウ上での編集操作を強化するプラグイン
@@ -17,7 +17,7 @@ Website:
 - https://www.nicovideo.jp/watch/sm40410117
 Files:
 - SourceUrl: https://github.com/kumrnm/aviutl-advanced-mouse-operation/releases/download/v1.0.0/AdvancedMouseOperation.auf
-  Sha256: 85e718c34265685a5c3eb05e4e3b5e53dbb7a5d4ef54bc7eb78c8a1d4e142727
+  Sha256: ff0ba32ee1c2a90e1933c8fa929086e050c89a88ff95ec7b8da6f57e33914d11
   Install:
     TargetPath: plugins/AdvancedMouseOperation.auf
-ManifestVersion: 0.1.0
+ManifestVersion: 0.2.0

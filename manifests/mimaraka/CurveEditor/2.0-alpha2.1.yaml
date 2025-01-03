@@ -1,0 +1,183 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: CurveEditor
+DisplayName: Curve Editor for AviUtl
+Version: 2.0-alpha2.1
+ReleaseDate: 2024-10-15
+Section: Plugin/Other
+InstalledSize: 15727
+Developer:
+- mimaraka
+Description: 様々なイージングをウィンドウ上で編集できるプラグイン&スクリプト
+Website:
+- https://github.com/mimaraka/aviutl-plugin-curve_editor
+Files:
+- SourceUrl: https://github.com/mimaraka/aviutl-plugin-curve_editor/releases/download/v2.0-alpha2.1/curve_editor-v2.0-alpha2.1.zip
+  Sha256: 52ac080c5af61dbb38082684941df59815a1948529f2c615118aefe95bf83b9d
+  Files:
+  - Path: curve_editor-v2.0-alpha2.1/@Curve Editor.tra
+    Sha256: c40cb9309918cc880d4cb79ce4ae22dd88e8ca27f406d2a8081a865ad605b000
+    Install:
+      TargetPath: script/@Curve Editor.tra
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor.auf
+    Sha256: 4fa7fda356d5b9bef38b37fc21a5ee2c658aded91b744b40b389337436f25fd8
+    Install:
+      TargetPath: plugins/curve_editor.auf
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor.lua
+    Sha256: 3cced07450323b982d034fc725d4bd5f3f152da9caaed9dbc58e42bed919a878
+    Install:
+      TargetPath: script/curve_editor.lua
+  - Path: curve_editor-v2.0-alpha2.1/LICENSE.txt
+    Sha256: 2615eff3ee39c0239245a51aec8555428f9c7488103429349ac1ed23328f4458
+  - Path: curve_editor-v2.0-alpha2.1/Readme.html
+    Sha256: 02adaf33afeb61bdf1159ec5e0dc4cd1f7df1080e20ae424eeea8401fc70ea0f
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/editor_graph.html
+    Sha256: 8b5c261ba03f95f50c98e2606727d9b4e8752396b0a535b3b959011192090c77
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/editor_text.html
+    Sha256: 04ea2c55703c4b665d142c2625e70f62d6c4d312a2f8ed45c39c0ba618c4cf73
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/panel_editor.html
+    Sha256: 38e39bf8aa951eb38b31ef9855afd61244bc6a547b9b72beeeccca9a13e5bfa0
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/panel_main.html
+    Sha256: 0f87e5681b0c7959e729bf96337894b4adb60fd4f8fb4234aca3231eec56cf32
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/preset.html
+    Sha256: d21dcf6fa6d3d2c9d5b6894ef0ff717622f736b31d26eb4bd3fecd7ae197a753
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/select_dialog.html
+    Sha256: 629394f87e52378faf7f790f44d27297863846e53f02aa3eabf508dcafbbdcb6
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/toolbar.html
+    Sha256: 8af324f76237c006fca59576b124b6b612b43eda77e857c28dcb13276cd15147
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/common.css
+    Sha256: d3403fa203d8a711eca0e790a94d294d89dd2aa5aad18833dddb1af2b55a3dc7
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/editor_graph.css
+    Sha256: d37719bf5b1ef9c1d9845483d96309ef9444a87332b84731e1f9edf9c8cbe3d0
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/editor_text.css
+    Sha256: b17e5269ce1591f7b010dd5b7d5135b0ff796cdc18c0c842a7220ef1b8fdedde
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/panel_editor.css
+    Sha256: 6c82afef4c50bd4f8a70c1d6baec4a88f0a7e6632868c24f31eb2458c517bd5b
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/panel_main.css
+    Sha256: ee2fe4df827f8ccb27a498aa856a21623c6cf9ebb9fed7ca3f4784d4199a51e6
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/preset.css
+    Sha256: fd442471d77d301cb4c3733c305700108d155ba81d29d4e80fd775a0da2d0087
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/select_dialog.css
+    Sha256: f3864bae68b23a8866f888b2dae52a4bbd4df16e5f628fedb73e0b85d1c3b052
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/toolbar.css
+    Sha256: dd4e6cd697a6720af32b5e3cb405c1fc870e6128d2740828aa33a4cc42806c16
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/css/variables.css
+    Sha256: e3b3cd9153a5f469ece4a510eb4e024b40be7ea0fba90cb5c3086a7f07c3449b
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/css/all.min.css
+    Sha256: 5ceaaba22d75b58e04150311f596306562a3e595e27ed4b1dfa451b82dda9e50
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/webfonts/fa-brands-400.ttf
+    Sha256: e28096fa75a96ac77020155ea3a6dd7312983e84115366d4cf49a0c312ec6d51
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/webfonts/fa-brands-400.woff2
+    Sha256: 232c6f6a7678304f9efaa26f30b1610debc2ba9f4cd636b5e6751c8d73761b92
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/webfonts/fa-regular-400.ttf
+    Sha256: 9174757efc83e072436e873c22be1663d3c103b0a16d7fb73569af4918d4d351
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/webfonts/fa-regular-400.woff2
+    Sha256: c27da6f833431da5aa295c44540bfac0fd8270ba6a3c4346427006d8a7b34b76
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/webfonts/fa-solid-900.ttf
+    Sha256: b4990d0d0c5f5d38d62e936eea120674e584c7eea8dcee38a975c0cf9a37539b
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/webfonts/fa-solid-900.woff2
+    Sha256: ae17c16afbea216707b2203ea1cf9bdb45b9bfe47d0f4ae3258ddbc6294dd02f
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/webfonts/fa-v4compatibility.ttf
+    Sha256: ff8f525fb050c5d24519ccc8f5723d85b2e51edd3f9bc6548af55aebadd4f269
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/fontawesome/webfonts/fa-v4compatibility.woff2
+    Sha256: c7a869faca299d15be10a01f19d0765a7c4d46d8922d9b9317235c1e4a6f0982
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/common.js
+    Sha256: 4c7f4bca9f4e17eb068c213cbfcda6dee2f1f98ac6f095a8222738fb965aef02
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/curve.js
+    Sha256: 13b89b145ba0f9f940eaa6f7224b211774201988c8c2d9e5a6c10f7a676d16f4
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/editor_graph.js
+    Sha256: e52bb8b428daa95c3555dd3ea2d00f5e2a678e86c376ba884c64123e068346a2
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/editor_text.js
+    Sha256: 0929cf8809b0a050d4273d24b0471f21b23603236a2a996fb402111d4a596457
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/handles.js
+    Sha256: 19a0173b22cd7b1f753e85aa72b08710ce1f0a7e2bd571964049192534c5fb16
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/host_object.js
+    Sha256: 7c7711fc62e276a0566a34c77a1e47a969d426c4e6f760e2ae1108dadcf56d61
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/panel_editor.js
+    Sha256: 4f44da76749b9d64d9b4caa466972599e642c84780093da7bf5806a90b400451
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/panel_main.js
+    Sha256: 69df78209014cc1804241e691dcebfd40c4b44fae703c452a7400317c4c89784
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/preset.js
+    Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/select_dialog.js
+    Sha256: b1c8e716f79c231aa5a4a9067fd9ffa216032b016af7c02ca69d2d1541a9dddb
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/toolbar.js
+    Sha256: 2b5dceff3b165d192404dfdf5fb79d71d70e4e4686664a909dc6ad318d17ca2f
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/d3.v7.min.js
+    Sha256: f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/jquery-3.7.1.min.js
+    Sha256: fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/loader.js
+    Sha256: 29c538f131abf38afbba717b279220068f7969e56b11bac67b4e12ed3705523b
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/browser/ui/codicons/codicon/codicon.ttf
+    Sha256: 0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.de.js
+    Sha256: 6b88d2e88778ec1b7890eb59dc691935d03fb8a5964d70f7dfa0cfbb563fec7e
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.es.js
+    Sha256: 2d4b66921e6bf19b9e66538c761f8ef1703edebcdb276752a0db32eecb72f359
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.fr.js
+    Sha256: a51c713b4d69d984edaed8bcb316fd8f4b003f812a360b1e9dc0a2b413f598f9
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.it.js
+    Sha256: 8f65724a7e6a88a29839adfed4ddfe7a1150d60d5ebcc11afe354d1671a00e6e
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.ja.js
+    Sha256: 3bd219a51255fde5c2f0c2d55d046d7d1b3200d0ecb31cbefd81ccae42cdd288
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.js
+    Sha256: 30429cac7425771150a4fc46b4c8c1e35e5f5b4852b1d099a6264b850646bb48
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.ko.js
+    Sha256: 5f499f62ff217fe0ffe5b9cca6c2f2229333884905f3a1eb2a986eebabf58142
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.ru.js
+    Sha256: 4c91886abe494da992a827d80f82e59431f9505a989407d9b60c853219ab83a1
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.zh-cn.js
+    Sha256: 94f14943b80de8ed7f34cb608d99061a0b854fed389cbcd498fdc7a235217f6b
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/common/worker/simpleWorker.nls.zh-tw.js
+    Sha256: 6d74b3c6ace2264c1058c1d447dd814de2c6dc606c5313399f98e4ad6ff5f317
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/base/worker/workerMain.js
+    Sha256: d70d3f881a458e4d01adc2c230fe14c1d37ce719499290da2d9eadfda3d4e504
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/basic-languages/javascript/javascript.js
+    Sha256: 04405ac976c7ab295103e22e0b3339e4bdb21dd1b6af74829febf5332490fe24
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/basic-languages/lua/lua.js
+    Sha256: f5de7bc9ad61cf26ea4828052c7d9076c367d82c2b3eb7476a567a0acb235786
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/basic-languages/python/python.js
+    Sha256: 664ab028ab429189f63b719973f852bf5ee8acfb76b2f3cd4dcc56bc05eadf8d
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.css
+    Sha256: b6224f4363b4e33fe967f03077222086b38ccdec1ff8f22f125d5829b42fb199
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.js
+    Sha256: b5d16903e89e8baf0b747f38142ec3596a20a88bf48d08e7413911130270e5f7
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.de.js
+    Sha256: 8e3c2877c9bb9fc29342bb03a6a8ca24e9250c9ed459a62b0c25c772478878d2
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.es.js
+    Sha256: de18ddcc163a64743dbdcfc081b7fe507d671220f3e3cdd798e1d7062d6a9db0
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.fr.js
+    Sha256: f1efef8c89ecb4c8db5fa6980e5118536137bde700e4b0b91ccff11595554d58
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.it.js
+    Sha256: 82695f1950c339c0102d8fccdec1fb199d53f416b5219573c424d532807213e9
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.ja.js
+    Sha256: 49080f86a057e2c6e651eaee91b4ecd2d83c820e7c9f50092c64496f4c6456c6
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.js
+    Sha256: ced961f825076763485abba854c64fae6b7a50e27f09f4c0133dc0818633e1b7
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.ko.js
+    Sha256: 5541b82e8523902c7da3c424322d75f04a2893aa8e532d48ce602d04b561329f
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.ru.js
+    Sha256: b28a3d93ad8bfd1526a3e80576fc2795c2a72cb720e52c8a119cab96513b0772
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.zh-cn.js
+    Sha256: 887964c0417632c1442d2a7c618b26619213d28e478a65a0b935c387d0e655bd
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/editor/editor.main.nls.zh-tw.js
+    Sha256: 7cd91ca20b459a6ba55d9ed982626f58ef2bc19bc8ab5d9c32b17e1db39ceab3
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/language/css/cssMode.js
+    Sha256: 45dd606ad53c706b6cc44e19516c969002e22b62cdeba26328014748b17955f5
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/language/css/cssWorker.js
+    Sha256: 3882d0df97fb34575ceb173a658b807904cb35a82cdb28569f525c70f029310a
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/language/html/htmlMode.js
+    Sha256: b77886281a46dc1eef060d4d0be7609e6aed6e6a0ed6b8b39cbf1c6159e804ae
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/language/html/htmlWorker.js
+    Sha256: 6f13219f87dafc7bb5b17dc6b2fec11829fa9e4145e885089aa39bdb79bbdd80
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/language/json/jsonMode.js
+    Sha256: 8c4bacd40bd7196ef14306c1891bffd9231e678aa92c0aa19c83df930a8571f3
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/language/json/jsonWorker.js
+    Sha256: 74b6885f833bec941461948269d4218378d26490b4fd39a4b64bf3fe98bb195d
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/language/typescript/tsMode.js
+    Sha256: cf8b2c8b8fc282861e7660be16f5756bb192b34d9297cbda89da6cc60dd04756
+  - Path: curve_editor-v2.0-alpha2.1/curve_editor/ui/js/libs/monaco-editor/min/vs/language/typescript/tsWorker.js
+    Sha256: 20f1f4d1d8d074fbb02f005cf272a3163b3ca785ebc52e8bbd223f0ad5001a5c
+ManifestVersion: 0.2.0

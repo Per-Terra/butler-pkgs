@@ -1,0 +1,82 @@
+# Created using CreateManifest.ps1 v0.2.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+
+Identifier: GCMZDrops
+DisplayName: ごちゃまぜドロップス
+Version: 0.4.3
+ReleaseDate: 2025-01-03
+Section: Plugin/Other
+Depends:
+- aviutl(>= 1.00)
+- exedit (>= 0.92)
+Conflicts:
+- extext
+InstalledSize: 346
+Developer:
+- oov
+Description: 拡張編集ウィンドウへファイルやテキストをドラッグ＆ドロップした時の挙動を拡張するためのプラグイン
+Website:
+- https://github.com/oov/aviutl_gcmzdrops
+Files:
+- SourceUrl: https://github.com/oov/aviutl_gcmzdrops/releases/download/v0.4.3/gcmzdrops_v0.4.3.zip
+  Sha256: fb5491eddc3b135e6d66c137284c8c58a169974c800b841c7cb70e46083e7d1b
+  Files:
+  - Path: GCMZDrops.auf
+    Sha256: f735684d8a6117ecab28581b74d2f3e50dffb1fbd7fa8bee68b3a7a918d205c8
+    Install:
+      TargetPath: GCMZDrops.auf
+  - Path: GCMZDrops.txt
+    Sha256: b7e6a519833dd53af856562a3bdf6d72d41fab3da76f8e53441861f89d3af621
+  - Path: GCMZDrops/_entrypoint.lua
+    Sha256: 279efd3d1befb22b9163e6af957f83311ca37441d151513bb4b290ce30dcd5ba
+    Install:
+      TargetPath: GCMZDrops/_entrypoint.lua
+  - Path: GCMZDrops/_exoloadhook.lua
+    Sha256: fe48b0d51a48d8fb4a03fd17fa855a272bcebc54907a14e342b667c4c5ae2607
+    Install:
+      TargetPath: GCMZDrops/_exoloadhook.lua
+  - Path: GCMZDrops/_iniobj.lua
+    Sha256: eb4aefb9147c05753559251fd7679068f2fe877b5561343ed33296feda2b2768
+    Install:
+      TargetPath: GCMZDrops/_iniobj.lua
+  - Path: GCMZDrops/_transmap.lua
+    Sha256: ad3c21d4ed818940ff07fbac865ef02974d8fb549c4393272f0eccf95550a60b
+    Install:
+      TargetPath: GCMZDrops/_transmap.lua
+  - Path: GCMZDrops/_transmap1.lua
+    Sha256: 0105a4b6746f17428ba38f080720f0d2808c18a2892163ae08070034aae766f1
+    Install:
+      TargetPath: GCMZDrops/_transmap1.lua
+  - Path: GCMZDrops/_transmap2.lua
+    Sha256: dd159eb8dc5c8162afda519722caf729eb81867c74411c4a8167db89c888fb97
+    Install:
+      TargetPath: GCMZDrops/_transmap2.lua
+  - Path: GCMZDrops/avoiddup.lua
+    Sha256: 65d461eeb37784469ea3d8b9a5d9e6c131a1c36b9a276f481462ef83fe2b5343
+    Install:
+      TargetPath: GCMZDrops/avoiddup.lua
+  - Path: GCMZDrops/example.lua
+    Sha256: 16795513952ceb398a7ea076ac80a680c956a4a88a2d543645f1f01b206f5887
+    Install:
+      TargetPath: GCMZDrops/example.lua
+  - Path: GCMZDrops/generic.lua
+    Sha256: 8fe2e400415195fe98579410d40fcea6a7891e95a40dab52521d424015dd5bb8
+    Install:
+      TargetPath: GCMZDrops/generic.lua
+  - Path: GCMZDrops/textsjis.lua
+    Sha256: 01dba3d4406cccf6b8cac02d906cc5b4f8bb2b24566978589511280247f93a82
+    Install:
+      TargetPath: GCMZDrops/textsjis.lua
+  - Path: GCMZDrops/wmvmask.lua
+    Sha256: d1c5e25bc553aef1b0f6600116e0c966911d8249710649df931f0df690bcec04
+    Install:
+      TargetPath: GCMZDrops/wmvmask.lua
+  - Path: GCMZDrops/dropper/clipboard.lua
+    Sha256: c1b1b5ce5e11182ed02ca3eb7111c145835c493b58ab432919d0e7247adf6e3d
+    Install:
+      TargetPath: GCMZDrops/dropper/clipboard.lua
+  - Path: GCMZDrops/dropper/example.lua
+    Sha256: a0e2f238e80eab3ac5453b1c7e1cdd2edde7e4e18a183cb44092a37011e7ce69
+    Install:
+      TargetPath: GCMZDrops/dropper/example.lua
+ManifestVersion: 0.2.0
