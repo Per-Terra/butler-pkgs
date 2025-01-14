@@ -3,7 +3,7 @@
 
 Identifier: LuaJIT
 Version: "2.1"
-ReleaseDate: 2025-01-13
+ReleaseDate: 2025-01-14
 Section: Core
 Architecture: x86
 Replaces:
@@ -15,51 +15,51 @@ Description: Per-TerraによるLuaJITの自動ビルド
 Website:
 - https://github.com/Per-Terra/LuaJIT-Auto-Builds
 Files:
-- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2025-01-13-00-55-32/LuaJIT_2.1_Win_x86.zip
-  Sha256: a6224df571b33db3a53b809ad7f22d7323905458c62ee86d2e4d27fdcbb0eeb9
+- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2025-01-14-00-49-24/LuaJIT_2.1_Win_x86.zip
+  Sha256: 190f55b9e9d983224b27ea3dfa3abecd20a6f0b9fe2756c2a7e5cbbcb59aaad7
   Files:
   - Path: About-This-Build.txt
-    Sha256: 01c9830f1ef94d0d0d96854b48bd51c7569465c1914e0a5a7e67d513ca0df898
+    Sha256: 6daa88350301fc95e03cc0275bf243517520129bf6ce91b252db1e343fbbe0e0
   - Path: COPYRIGHT
-    Sha256: 4e546dc0556ca5f1514ae9d9bad723501a51da556342590b7076fb42f2930f25
+    Sha256: c5bbe7ecf4ae277ed8e1485a65f9e6c7e1ab9004e6ddf2b48d61e80e572140dd
   - Path: lua51.dll
-    Sha256: d80cb4e86f86cca48e53f0319d94ea543d2b919fcb42269c1c19af86c0fc4994
+    Sha256: 89101ff25528953e7221d1866d0dc2c81acb99ec557f92d0f006855f7268e881
     Install:
       TargetPath: lua51.dll
   - Path: luajit.exe
-    Sha256: 1b0f0151577ff6bdb9f3cbeed81e55155d86dd90979fe797d00f1f3e570dc8bd
+    Sha256: 0b53eb869daba36d9c3936719169b66fee0f194245e3fbeadcdd640f46f01f49
   - Path: README
-    Sha256: dad6aa1f8fca498b4bacac8b19d9a1d7b0eb021eed569eb4d76e968c3ea67c87
+    Sha256: 909348cbfccb03242ca8282cd0c6978977103c81f9fab6fbe9514bc5a63d0c75
   - Path: doc/bluequad-print.css
-    Sha256: ffbbb7f09ade928758ef126cce208e1e1b1b3771a13f53a63df181192a3ee74d
+    Sha256: 3784e5f44be4c2ce381b5c91ed5a92197e387fdc13234798cd2aa3044fdb0a76
   - Path: doc/bluequad.css
-    Sha256: 13c0f197e8d0d8721880942cc9baf4a10726edfcdbfcd731614d54a19d3382af
+    Sha256: 79231acc9463246926e2e68e30bbcf7f8338b93a4e89054caad440e931c8f0e4
   - Path: doc/contact.html
-    Sha256: d21d53d5aa52cb662092fbd63da276ac34620c6b2fb495f106540b8c76ee2fe6
+    Sha256: 1d80c1f30a78b43af1850540ec1d604054f315096cb737e16a1a70e71f4d7e5d
   - Path: doc/ext_buffer.html
-    Sha256: 1fa0aae34f80235bbf1bf352269e834cc39939e4b027f18f2e7c5c61b7dddba7
+    Sha256: be767bb39e5b1db6d466b4e756ab43980851e7df4d5b6054e5cab1c63379c6f7
   - Path: doc/ext_c_api.html
-    Sha256: 0b60d161100b37121eb7d3651f1bf626a4570c30ce71788b5aaf9177a4a8f9c3
+    Sha256: 28ee628f2051c3149a8de5cddbc22cd73c6c9a86b893a0d9b21837ca3dead90d
   - Path: doc/ext_ffi_api.html
-    Sha256: 3041a8b539b5e67f77976bf5dd83a78c8e2b29bbf87ea05e2ed238cb86d9c1ce
+    Sha256: 8688f9c42f5a9ef0724a3ed49fc21d2eab3bd64847dea48f6e48fcfea6d71242
   - Path: doc/ext_ffi_semantics.html
-    Sha256: 3472858356b69189282b18b7bc3b3fa17ad3e43261004508e33af42251abc5d9
+    Sha256: 597ee65967d8fd098f8c2c0c28b332dc5cbbdb0bab9ab12761ef65e5b1f2636f
   - Path: doc/ext_ffi_tutorial.html
-    Sha256: 00486856af194bc273b7103b0a51d77231c3b3095906c618cd5b02e87dbfc2f0
+    Sha256: baec7a26262a569f0b7db516940939cdbeafcc86ebdd66f16774b2dec7166ab1
   - Path: doc/ext_ffi.html
-    Sha256: 027b88b085186f519c192f88fd0e2c0a1dbad5a18f8bb647d8b1322e59d2001a
+    Sha256: 092173b7caa3a2005bd2f1fefcd540811eb080ea0bc1d75e2d4a887376fd166e
   - Path: doc/ext_jit.html
-    Sha256: 6b056e1e9dbc557504bcfd23fa137d79dcaffccd7d03db5702f598d22f8e0d1f
+    Sha256: b8afaae3e78c330d47097626863250f343be2f003024b62853e0756d1f69ea02
   - Path: doc/ext_profiler.html
-    Sha256: e685bdd980785a5fb7fa32ac3feec5576015f2c3fdcf7405088854f96bf9f8b8
+    Sha256: 96034022929bb035f84ea71ff22cc4ac5a16d555fab5f1ec78d2d480c4a5fad9
   - Path: doc/extensions.html
-    Sha256: 8f600208702cf36cfcecac81057ae2af0be0d8c58226ea651ec06adcdc8f1ecb
+    Sha256: 996fa8be295aedae5764f51315bd58aa8d6b30cfbb95cca2ba2d22697e48394f
   - Path: doc/install.html
-    Sha256: f64aa02eae7d5668a5d87ac8ce461c9d906f513081d10c24cae7b927813b2d19
+    Sha256: 672c48e3b72c7555b8b472a740ffe9c2ed2947832470e54bc8e666da44088e34
   - Path: doc/luajit.html
-    Sha256: 436489baf37ef605b888f3e2bae1a4f6605bff4d27ccdd25e7a3ec3d1d2d4907
+    Sha256: 215a54a2e1a079aa47ab431c7ca5589ae5d4ae26dee2e46e851f1602bd886ea2
   - Path: doc/running.html
-    Sha256: 0bc889226b56ab20709639d9f13eeefc91ff053cb886e099e28fb270d49a27c0
+    Sha256: b2cdc9edb27bcfe5a006ac93c06a9be393c8b8baf662c0baa39ad87de2b92234
   - Path: doc/img/contact.png
     Sha256: 9b89eddcb7af5b0cc62a4cba4f878dcde584f378763e4d74621d44130a1ebec0
 ManifestVersion: 0.2.0
