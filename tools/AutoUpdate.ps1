@@ -40,7 +40,7 @@ else {
   }
 }
 
-Write-Host -Object "$($targets.Count) 件の処理を開始します"
+Write-Host "$($targets.Count) 件の処理を開始します"
 
 function Get-GitHubReleases {
   [CmdletBinding()]
@@ -84,16 +84,16 @@ function Get-GitHubReleases {
 
 foreach ($target in $targets) {
   if ($target.Enable) {
-    Write-Host -Object "処理中: $($target.Developer)/$($target.Identifier)"
+    Write-Host "処理中: $($target.Developer)/$($target.Identifier)"
   }
   else {
-    Write-Host -Object "無効: $($target.Developer)/$($target.Identifier)"
+    Write-Host "無効: $($target.Developer)/$($target.Identifier)"
     continue
   }
 
   switch ($target.Type) {
     'GitHub' {
-      Write-Host -Object "GitHubからリリースを取得しています: $($target.Owner)/$($target.Repository)"
+      Write-Host "GitHubからリリースを取得しています: $($target.Owner)/$($target.Repository)"
       $releases = Get-GitHubReleases -Owner $target.Owner -Repo $target.Repository
       foreach ($release in $releases) {
         $asset = $release.assets | Where-Object { $_.name -match $target.Asset } | Select-Object -First 1
@@ -134,7 +134,7 @@ foreach ($target in $targets) {
           $null = (Get-Content -LiteralPath $manifestPath -Raw) -match "`nReleaseDate: (.*)`n"
           $releaseDate = $Matches[1]
           if ($releaseDate -and $releaseDate -ge $date) {
-            Write-Host -Object "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"
+            Write-Host "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"
             Write-Debug -Message "作成中のマニフェストのリリース日: $date"
             Write-Debug -Message "既存のマニフェストのリリース日: $releaseDate"
             Write-Debug -Message "マニフェストの作成はスキップされました"

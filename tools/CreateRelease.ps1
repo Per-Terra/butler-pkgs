@@ -26,14 +26,14 @@ if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
 
 $ManifestVersion = '0.2.0'
 
-Write-Host -Object 'YAMLファイルを探しています...' -NoNewline
+Write-Host -NoNewline 'YAMLファイルを探しています...'
 $manifests = Get-ChildItem -LiteralPath (Join-Path -Path $PSScriptRoot -ChildPath '../manifests') -Filter '*.yaml' -Recurse -File
-Write-Host -Object " $($manifests.Count) 件のYAMLファイルが見つかりました"
+Write-Host " $($manifests.Count) 件のYAMLファイルが見つかりました"
 
 $packages = [ordered]@{}
 $developers = [ordered]@{}
 
-Write-Host -Object 'YAMLファイルを読み込んでいます...' -NoNewline
+Write-Host -NoNewline 'YAMLファイルを読み込んでいます...'
 $manifests | ForEach-Object {
   $manifest = Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Yaml -Ordered
   if ($_.Name -eq 'developer.yaml') {
@@ -62,9 +62,9 @@ $manifests | ForEach-Object {
     }
   }
 }
-Write-Host -Object ' 完了'
+Write-Host ' 完了'
 
-Write-Host -Object 'YAMLファイルをソートしています...' -NoNewline
+Write-Host -NoNewline 'YAMLファイルをソートしています...'
 
 $sortedPackages = [ordered]@{}
 foreach ($identifier in ($packages.Keys | Sort-Object)) {
@@ -96,7 +96,7 @@ foreach ($identifier in ($packages.Keys | Sort-Object)) {
   }
 }
 
-Write-Host -Object ' 完了'
+Write-Host ' 完了'
 
 $contents = [ordered]@{
   Date            = $Date.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
@@ -105,36 +105,36 @@ $contents = [ordered]@{
   ManifestVersion = $ManifestVersion
 }
 
-Write-Host -Object 'JSONに変換しています...' -NoNewline
+Write-Host -NoNewline 'JSONに変換しています...'
 $json = ($contents | ConvertTo-Json -Depth 100 -Compress) + "`n"
-Write-Host -Object ' 完了'
+Write-Host ' 完了'
 
-Write-Host -Object 'JSONを圧縮しています...' -NoNewline
+Write-Host -NoNewline 'JSONを圧縮しています...'
 $bytes = [System.Text.Encoding]::UTF8.GetBytes($json)
 $stream = [System.IO.MemoryStream]::new()
 $gzip = [System.IO.Compression.GzipStream]::new($stream, [System.IO.Compression.CompressionLevel]::SmallestSize)
 $gzip.Write($bytes, 0, $bytes.Length)
 $gzip.Close()
 $stream.Close()
-Write-Host -Object ' 完了'
+Write-Host ' 完了'
 
-Write-Host -Object 'SHA256ハッシュ値を計算しています...' -NoNewline
+Write-Host -NoNewline 'SHA256ハッシュ値を計算しています...'
 $hash = [System.Security.Cryptography.SHA256]::Create()
 $hashBytes = $hash.ComputeHash($stream.ToArray())
 $hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
-Write-Host -Object ' 完了'
+Write-Host ' 完了'
 
 if (-not (Test-Path -LiteralPath $ReleaseDirectory -PathType Container)) {
-  Write-Host -Object 'ディレクトリを作成しています...' -NoNewline
+  Write-Host -NoNewline 'ディレクトリを作成しています...'
   $null = New-Item -Path $ReleaseDirectory -ItemType Directory -Force
-  Write-Host -Object ' 完了'
+  Write-Host ' 完了'
 }
 
-Write-Host -Object 'contents-all.json.gz を書き込んでいます...' -NoNewline
+Write-Host -NoNewline 'contents-all.json.gz を書き込んでいます...'
 $stream.ToArray() | Set-Content -LiteralPath (Join-Path -Path $ReleaseDirectory -ChildPath 'contents-all.json.gz') -Force -AsByteStream
-Write-Host -Object ' 完了'
+Write-Host ' 完了'
 
-Write-Host -Object 'release.yaml を書き込んでいます...' -NoNewline
+Write-Host -NoNewline 'release.yaml を書き込んでいます...'
 $release = [ordered]@{
   Date  = $Date.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
   Files = @( [ordered]@{
@@ -144,4 +144,4 @@ $release = [ordered]@{
 }
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |
 Out-File -FilePath (Join-Path -Path $ReleaseDirectory -ChildPath 'release.yaml') -Encoding utf8NoBOM -Force -NoNewline
-Write-Host -Object ' 完了'
+Write-Host ' 完了'

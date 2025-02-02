@@ -17,12 +17,12 @@ if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
 ###
 
 $yamlDirectory = Join-Path -Path $PSScriptRoot -ChildPath YAML
-Write-Host -Object "YAMLファイルのディレクトリ: $yamlDirectory"
+Write-Host "YAMLファイルのディレクトリ: $yamlDirectory"
 $jsonDirectory = Join-Path -Path $PSScriptRoot -ChildPath JSON
-Write-Host -Object "JSONファイルのディレクトリ: $jsonDirectory"
+Write-Host "JSONファイルのディレクトリ: $jsonDirectory"
 
 if (-not (Test-Path -LiteralPath $jsonDirectory -PathType Container)) {
-  Write-Host -Object "JSONファイルのディレクトリを作成しています: $jsonDirectory"
+  Write-Host "JSONファイルのディレクトリを作成しています: $jsonDirectory"
   try {
     $null = New-Item -Path $jsonDirectory -ItemType Directory
   }
@@ -31,11 +31,11 @@ if (-not (Test-Path -LiteralPath $jsonDirectory -PathType Container)) {
   }
 }
 
-Write-Host -Object 'YAMLファイルを探しています...' -NoNewline
+Write-Host -NoNewline 'YAMLファイルを探しています...'
 $yamlFiles = Get-ChildItem -LiteralPath $yamlDirectory -Filter '*.yaml' -Recurse -File
-Write-Host -Object " $($yamlFiles.Count) 件のYAMLファイルが見つかりました"
+Write-Host " $($yamlFiles.Count) 件のYAMLファイルが見つかりました"
 
-Write-Host -Object 'YAMLファイルをJSONファイルに変換しています...' -NoNewline
+Write-Host -NoNewline 'YAMLファイルをJSONファイルに変換しています...'
 $yamlFiles | ForEach-Object {
   $jsonPath = $_.FullName.Replace($yamlDirectory, $jsonDirectory).Replace('.yaml', '.json')
   if (-not (Test-Path -LiteralPath (Split-Path -Path $jsonPath -Parent) -PathType Container)) {
@@ -53,4 +53,4 @@ $yamlFiles | ForEach-Object {
   }
 }
 
-Write-Host -Object ' 完了'
+    Write-Host ' 完了'

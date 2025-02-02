@@ -75,7 +75,7 @@ function Get-FilesInArchive {
     [object]$PreviousFiles
   )
 
-  Write-Host -Object "アーカイブを展開しています: $ArchiveFileName"
+  Write-Host "アーカイブを展開しています: $ArchiveFileName"
   Expand-7Zip -ArchiveFileName $ArchiveFileName -TargetPath $TargetPath
 
   $files = Get-ChildItem -LiteralPath $TargetPath -Recurse -File
@@ -83,7 +83,7 @@ function Get-FilesInArchive {
 
   $filesInArchive = @()
 
-  Write-Host -Object "アーカイブ内のファイルの情報を取得しています: $ArchiveFileName"
+  Write-Host "アーカイブ内のファイルの情報を取得しています: $ArchiveFileName"
   $files | ForEach-Object {
     $relativePath = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
     $file = @{
@@ -234,14 +234,14 @@ function Get-SourceFileFromUrl {
   )
 
   if ($Url -match 'https://drive.google.com/file/d/([^/]+)') {
-    Write-Host -Object "Google Drive のリンクを検出しました: $Url"
+    Write-Host "Google Drive のリンクを検出しました: $Url"
     $Url = "https://drive.google.com/uc?id=$($Matches[1])"
   }
 
   $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory -Force:$Force
   $fileName = Split-Path -Path $filePath -Leaf
 
-  Write-Host -Object "ファイルの情報を取得しています: $filePath"
+  Write-Host "ファイルの情報を取得しています: $filePath"
   $file = @{
     SourceUrl = $Url
     Sha256    = $filePath | Get-Sha256
@@ -382,7 +382,7 @@ $sourceUrls = @()
 
 if ([string]::IsNullOrEmpty($SourceUrl)) {
   do {
-    Write-Host -Object '[任意] ' -NoNewline
+    Write-Host '[任意] ' -NoNewline
     $urls = Read-Host -Prompt 'ソースファイルのURLを入力してください (複数入力する場合はカンマで区切ってください)'
     $sourceUrls = $urls -split ','
     $isValid = $true
@@ -446,7 +446,7 @@ foreach ($field in [array]$manifest.Keys) {
   if ([string]::IsNullOrEmpty($manifest[$field])) {
     $value = $null
     if ($field -eq 'Description') {
-      Write-Host -Object "'Description' はマニフェストの作成後に手動で編集してください"
+      Write-Host "'Description' はマニフェストの作成後に手動で編集してください"
       $manifest[$field] = "<enter description here>`n<enter description here>"
       continue
     }
@@ -459,7 +459,7 @@ foreach ($field in [array]$manifest.Keys) {
       }
       if ($Schema.properties.$field.type -eq 'array') {
         do {
-          Write-Host -ForegroundColor Yellow -Object '[必須] ' -NoNewline
+          Write-Host -ForegroundColor Yellow -NoNewline '[必須] '
           $value = Read-Host -Prompt "'$field' を入力してください (複数入力する場合はカンマで区切ってください)"
           $value = $value -split ','
           $isValid = $true
@@ -472,7 +472,7 @@ foreach ($field in [array]$manifest.Keys) {
       }
       else {
         do {
-          Write-Host -ForegroundColor Yellow -Object '[必須] ' -NoNewline
+          Write-Host -ForegroundColor Yellow -NoNewline '[必須] '
           $value = Read-Host -Prompt "'$field' を入力してください"
         } until ($value -and (Test-PackageManifest -Field $field -Value $value))
       }
@@ -480,7 +480,7 @@ foreach ($field in [array]$manifest.Keys) {
     elseif (-not $SkipPrompt) {
       if ($Schema.properties.$field.type -eq 'array') {
         do {
-          Write-Host -Object '[任意] ' -NoNewline
+          Write-Host -NoNewline '[任意] '
           $value = Read-Host -Prompt "'$field' を入力してください (複数入力する場合はカンマで区切ってください)"
           $value = $value -split ','
           $isValid = $true
@@ -493,7 +493,7 @@ foreach ($field in [array]$manifest.Keys) {
       }
       else {
         do {
-          Write-Host -Object '[任意] ' -NoNewline
+          Write-Host -NoNewline '[任意] '
           $value = Read-Host -Prompt "'$field' を入力してください"
         } until ((Test-PackageManifest -Field $field -Value $value))
       }
@@ -532,7 +532,7 @@ if (-not $Force) {
   }
 }
 
-Write-Host -Object "マニフェストを作成しています: $manifestPath"
+Write-Host "マニフェストを作成しています: $manifestPath"
 
 $Header = @"
 # Created using CreateManifest.ps1 v$ScriptVersion
@@ -546,6 +546,6 @@ try {
   Out-File -FilePath $manifestPath -Encoding utf8NoBOM -Force -NoNewline
 }
 catch {
-  Write-Error -Message $_.Exception.Message
+  Write-Error -Message "マニフェストの作成に失敗しました: $($_.Exception.Message)"
   exit 1
 }
