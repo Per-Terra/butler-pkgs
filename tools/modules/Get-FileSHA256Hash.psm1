@@ -2,7 +2,7 @@ function Get-FileSHA256Hash {
   [CmdletBinding()]
   param (
     [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
-    [Alias("FullName")] # Get-ChildItem などからのパイプライン入力に対応
+    [Alias('FullName')] # Get-ChildItem などからのパイプライン入力に対応
     [string[]]$Path
   )
 
@@ -22,7 +22,7 @@ function Get-FileSHA256Hash {
         $stream = [System.IO.File]::OpenRead($filePath)
         try {
           $hashBytes = $hasher.ComputeHash($stream)
-          [BitConverter]::ToString($hashBytes).Replace("-", "").ToLower()
+          [BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
         }
         finally {
           $stream.Dispose()
