@@ -36,13 +36,13 @@ $yamlFiles | ForEach-Object {
 
   try {
     ((Get-Content -LiteralPath $_.FullName -Raw |
-      ConvertFrom-Yaml -Ordered |
-      ConvertTo-JSON -Depth 100) + "`n") -replace "`r`n", "`n" |
-    Out-File -FilePath $jsonPath -Encoding utf8NoBOM -Force -NoNewline
-  }
-  catch {
-    throw "YAMLファイルの変換に失敗しました: $_"
-  }
-}
+        ConvertFrom-Yaml -Ordered |
+        ConvertTo-JSON -Depth 100) + "`n") -replace "`r`n", "`n" |
+        Out-File -FilePath $jsonPath -Encoding utf8NoBOM -Force -NoNewline
+      }
+      catch {
+        throw "YAMLファイルの変換に失敗しました: $_"
+      }
+    }
 
     Write-Host ' 完了'

@@ -135,5 +135,5 @@ $release = [ordered]@{
     })
 }
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |
-Out-File -FilePath (Join-Path -Path $ReleaseDirectory -ChildPath 'release.yaml') -Encoding utf8NoBOM -Force -NoNewline
+  Out-File -FilePath (Join-Path -Path $ReleaseDirectory -ChildPath 'release.yaml') -Encoding utf8NoBOM -Force -NoNewline
 Write-Host ' 完了'
