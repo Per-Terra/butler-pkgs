@@ -93,7 +93,8 @@ function Get-FilesInArchive {
         $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
-    elseif ($Url.StartsWith('https://github.com/hebiiro/')) { # hebiiro氏用の例外
+    # hebiiro氏用の例外
+    elseif ($Url.StartsWith('https://github.com/hebiiro/')) {
       if ($_.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($_.Extension -ne '.wav'))) {
         if ($_.Extension -in $ConfExtensions -and -not ($relativePath -match '/Skin/')) {
           $file.Add('Install', @{
@@ -108,17 +109,20 @@ function Get-FilesInArchive {
         }
       }
     }
-    elseif ($Url.StartsWith('https://github.com/oov/aviutl_ffmpeg_input') -and $relativePath.StartsWith('ffmpeg64/')) { # oov/aviutl_ffmpeg_input用の例外
+    # oov/aviutl_ffmpeg_input用の例外
+    elseif ($Url.StartsWith('https://github.com/oov/aviutl_ffmpeg_input') -and $relativePath.StartsWith('ffmpeg64/')) {
       $file.Add('Install', @{
-        TargetPath = $relativePath
-      })
+          TargetPath = $relativePath
+        })
     }
-    elseif ($Url.StartsWith('https://github.com/oov/aviutl_gcmzdrops') -and $relativePath.StartsWith('GCMZDrops/')) { # oov/aviutl_gcmzdrops用の例外
+    # oov/aviutl_gcmzdrops用の例外
+    elseif ($Url.StartsWith('https://github.com/oov/aviutl_gcmzdrops') -and $relativePath.StartsWith('GCMZDrops/')) {
       $file.Add('Install', @{
-        TargetPath = $relativePath
-      })
+          TargetPath = $relativePath
+        })
     }
-    elseif ($Url.StartsWith('https://github.com/oov/aviutl_psdtoolkit')) { # oov/PSDToolKit用の例外
+    # oov/PSDToolKit用の例外
+    elseif ($Url.StartsWith('https://github.com/oov/aviutl_psdtoolkit')) {
       if ($relativePath.StartsWith('GCMZDrops/')) {
         # do nothing
       }
