@@ -19,7 +19,7 @@ if (-not (Test-Path -LiteralPath $jsonDirectory -PathType Container)) {
     $null = New-Item -Path $jsonDirectory -ItemType Directory
   }
   catch {
-    throw "JSONファイルのディレクトリの作成に失敗しました: $jsonDirectory"
+    throw "JSONファイルのディレクトリの作成に失敗しました: $(($_.Exception.Message))"
   }
 }
 
@@ -41,7 +41,7 @@ $yamlFiles | ForEach-Object {
         Out-File -FilePath $jsonPath -Encoding utf8NoBOM -Force -NoNewline
       }
       catch {
-        throw "YAMLファイルの変換に失敗しました: $_"
+        throw "YAMLファイルの変換に失敗しました: $(($_.Exception.Message))"
       }
     }
 

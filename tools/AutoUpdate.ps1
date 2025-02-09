@@ -61,7 +61,7 @@ function Get-GitHubReleases {
     }
   }
   catch {
-    throw "GitHub API へのリクエストに失敗しました: $_"
+    throw "GitHub API へのリクエストに失敗しました: $(($_.Exception.Message))"
   }
 
   if ($response) {
@@ -136,7 +136,7 @@ foreach ($target in $targets) {
           . (Join-Path -Path $PSScriptRoot -ChildPath "./CreateManifest.ps1") -Update -SourceUrl $url -Identifier $target.Identifier -Version $version -ReleaseDate $date -Developer $target.Developer -SkipPrompt -Force
         }
         catch {
-          Write-Warning -Message "マニフェストは作成されませんでした: $_"
+          Write-Warning -Message "マニフェストは作成されませんでした: $(($_.Exception.Message))"
         }
       }
     }
