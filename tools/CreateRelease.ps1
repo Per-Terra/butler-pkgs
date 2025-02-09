@@ -1,8 +1,6 @@
 [CmdletBinding()]
 param (
-  [Parameter(Mandatory = $false)]
   [string]$ReleaseDirectory = (Join-Path -Path $PSScriptRoot -ChildPath '../release'),
-  [Parameter(Mandatory = $false)]
   [datetime]$Date = [datetime](git -C $PSScriptRoot log -1 --format=%cI)
 )
 

@@ -1,6 +1,5 @@
 [CmdletBinding()]
 param (
-  [Parameter(Mandatory = $false)]
   [string[]]$YamlPath
 )
 
@@ -37,11 +36,10 @@ Write-Host "$($targets.Count) 件の処理を開始します"
 function Get-GitHubReleases {
   [CmdletBinding()]
   param (
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory)]
     [string]$Owner,
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory)]
     [string]$Repo,
-    [Parameter(Mandatory = $false)]
     [switch]$Latest
   )
 

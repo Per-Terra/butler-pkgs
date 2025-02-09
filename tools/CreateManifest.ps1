@@ -57,12 +57,10 @@ $ConfExtensions = @('.ini', '.stg', '.xml')
 
 function Get-FilesInArchive {
   param (
-    [Parameter(Mandatory = $true,
-      ValueFromPipeline = $true)]
+    [Parameter(Mandatory, ValueFromPipeline)]
     [string]$ArchiveFileName,
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory)]
     [string]$TargetPath,
-    [Parameter(Mandatory = $false)]
     [AllowNull()]
     [object]$PreviousFiles
   )
@@ -215,12 +213,10 @@ function Get-FilesInArchive {
 
 function Get-SourceFileFromUrl {
   param (
-    [Parameter(Mandatory = $true,
-      ValueFromPipeline = $true)]
+    [Parameter(Mandatory, ValueFromPipeline)]
     [string]$Url,
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory)]
     [string]$WorkingDirectory,
-    [parameter(Mandatory = $false)]
     [AllowNull()]
     [object]$PreviousFile
   )
