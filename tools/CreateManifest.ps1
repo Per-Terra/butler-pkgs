@@ -40,11 +40,11 @@ foreach ($dependency in $scriptDependencies) {
   }
 }
 
-. (Join-Path -Path $PSScriptRoot -ChildPath './lib/ConvertTo-ManifestYaml.ps1')
-. (Join-Path -Path $PSScriptRoot -ChildPath './lib/Get-FileFromUrl.ps1')
-. (Join-Path -Path $PSScriptRoot -ChildPath './lib/Get-Sha256.ps1')
-. (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-PackageManifest.ps1')
-. (Join-Path -Path $PSScriptRoot -ChildPath './lib/Test-UrlFormat.ps1')
+Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/ConvertTo-ManifestYaml.psm1')
+Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Get-WebFile.psm1')
+Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Get-FileSHA256Hash.psm1')
+Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-PackageManifest.psm1')
+Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-UriFormat.psm1')
 
 $ScriptVersion = '0.2.0'
 $ManifestVersion = '0.2.0'
@@ -78,7 +78,7 @@ function Get-FilesInArchive {
     $relativePath = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
     $file = @{
       Path   = $relativePath
-      Sha256 = $_.FullName | Get-Sha256
+      Sha256 = Get-FileSHA256Hash -Path $_.FullName
     }
 
     if ($PreviousFiles) {
@@ -226,13 +226,13 @@ function Get-SourceFileFromUrl {
     $Url = "https://drive.google.com/uc?id=$($Matches[1])"
   }
 
-  $filePath = $Url | Get-FileFromUrl -OutDirectory $WorkingDirectory -Force:$Force
+  $filePath = Get-WebFile -Uri $Url -OutDirectory $WorkingDirectory -Force:$Force
   $fileName = Split-Path -Path $filePath -Leaf
 
   Write-Host "ファイルの情報を取得しています: $filePath"
   $file = @{
     SourceUrl = $Url
-    Sha256    = $filePath | Get-Sha256
+    Sha256    = Get-FileSHA256Hash -Path $filePath
   }
   if ($fileName -ne (Split-Path -Path $Url -Leaf)) {
     $file.Add('FileName', $fileName)
@@ -375,7 +375,7 @@ if ([string]::IsNullOrEmpty($SourceUrl)) {
     $sourceUrls = $urls -split ','
     $isValid = $true
     foreach ($url in $sourceUrls) {
-      if (-not (Test-UrlFormat -Url $url)) {
+      if (-not (Test-UriFormat -Uri $url)) {
         $isValid = $false
       }
     }
@@ -384,7 +384,7 @@ if ([string]::IsNullOrEmpty($SourceUrl)) {
 else {
   $sourceUrls = $SourceUrl
   foreach ($url in $sourceUrls) {
-    if (-not (Test-UrlFormat -Url $url)) {
+    if (-not (Test-UriFormat -Uri $url)) {
       throw "URLの形式が正しくありません: $url"
     }
   }

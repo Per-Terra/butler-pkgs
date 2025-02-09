@@ -32,12 +32,8 @@ $Patterns = @{
 function Test-PackageManifest {
   [CmdletBinding()]
   param (
-    [Parameter(Mandatory = $false,
-      ValueFromPipeline = $true)]
     [object]$Manifest,
-    [Parameter(Mandatory = $false)]
     [string]$Field,
-    [Parameter(Mandatory = $false)]
     [AllowNull()]
     [AllowEmptyString()]
     [string]$Value
@@ -46,8 +42,7 @@ function Test-PackageManifest {
   function Test-Install {
     [CmdletBinding()]
     param (
-      [Parameter(Mandatory = $true,
-        ValueFromPipeline = $true)]
+      [Parameter(Mandatory)]
       [object]$Install
     )
 
@@ -60,9 +55,9 @@ function Test-PackageManifest {
     elseif ($Install.TargetPath -notmatch $Schema.definitions.Path.pattern) {
       Write-Warning -Message "フィールド 'TargetPath' の値が正しくありません: $($Install.TargetPath)"
       Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Path.pattern)"
-
       $isValid = $false
     }
+
     if ($null -eq $Install.Method) {
       # do nothing
     }
@@ -72,13 +67,12 @@ function Test-PackageManifest {
       $isValid = $false
     }
 
-    return $isValid
+    $isValid
   }
 
   function Test-FileInArchive {
     param (
-      [Parameter(Mandatory = $true,
-        ValueFromPipeline = $true)]
+      [Parameter(Mandatory)]
       [object]$File
     )
 
@@ -93,6 +87,7 @@ function Test-PackageManifest {
       Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Path.pattern)"
       $isValid = $false
     }
+
     if ($null -eq $File.Sha256) {
       Write-Warning -Message "必須フィールドがありません: 'SHA256'"
       $isValid = $false
@@ -102,20 +97,23 @@ function Test-PackageManifest {
       Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Sha256.pattern)"
       $isValid = $false
     }
+
     if ($File.Files -and $File.Install) {
       Write-Warning -Message "フィールド 'Files' と 'Install' は同時に指定できません"
       $isValid = $false
     }
+
     if ($File.Files) {
       foreach ($file in $File.Files) {
         $isValid = $isValid -and (Test-FileInArchive -File $file)
       }
     }
+
     if ($File.Install) {
       $isValid = $isValid -and (Test-Install -Install $File.Install)
     }
 
-    return $isValid
+    $isValid
   }
 
   $isValid = $true
@@ -130,6 +128,7 @@ function Test-PackageManifest {
         }
         continue
       }
+
       if ($Patterns.ContainsKey($field)) {
         $pattern = $Patterns[$field]
         if ($v -is [string]) {
@@ -281,5 +280,5 @@ function Test-PackageManifest {
     }
   }
 
-  return $isValid
+  $isValid
 }

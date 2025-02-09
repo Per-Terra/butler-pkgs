@@ -1,0 +1,81 @@
+Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath 'Test-UriFormat.psm1')
+
+function Get-WebFileName {
+  [CmdletBinding()]
+  param (
+    [Parameter(Mandatory, ValueFromPipeline)]
+    [string[]]$Uri
+  )
+
+  process {
+    foreach ($item in $Uri) {
+      Write-Verbose -Message "ファイル名を取得しています: $item"
+
+      if (-not (Test-UriFormat -Uri $item)) {
+        Write-Error "URIの形式が正しくありません: $item"
+        continue
+      }
+
+      if ($item -match 'https://scrapbox.io/files/(?:.+)\?title=(.+)') {
+        Write-Verbose -Message "Scrapbox のリンクを検出しました: $item"
+        return $Matches[1]
+      }
+
+      $extension = Split-Path -Path $item -Extension
+      if ($extension -and ($extension -notmatch '^\.(php)')) {
+        Write-Verbose -Message "URIにファイル名が含まれています: $item"
+        return Split-Path -Path $item -Leaf
+      }
+
+      $params = @{
+        Uri    = $item
+        Method = 'Head'
+      }
+
+      if ($item -match 'https://hazumurhythm\.com/php/amazon_download\.php\?name=(.+)') {
+        Write-Verbose -Message "アマゾンっぽい のリンクを検出しました: $item"
+        $id = $Matches[1]
+        Write-Verbose -Message "ファイルのID: $id"
+        $params.Add('Headers', @{ Referer = "https://hazumurhythm.com/wev/amazon/?script=$id" })
+      }
+
+      Write-Verbose -Message "ヘッダーを取得しています: $item"
+
+      try {
+        $response = Invoke-WebRequest @params
+      }
+      catch {
+        Write-Verbose -Message "ヘッダーの取得に失敗しました: $($_.Exception.Message)"
+      }
+
+      # $response.Headers['Content-Disposition'] は配列なので最初の要素を取得
+      $contentDisposition = $response.Headers['Content-Disposition'][0]
+      if ($contentDisposition) {
+        Write-Verbose -Message "Content-Dispositionヘッダーを検出しました: $contentDisposition"
+        if ($contentDisposition -match "filename\*=UTF-8''(.+);?") {
+          $fileName = [System.Web.HttpUtility]::UrlDecode($Matches[1])
+          return $fileName
+        }
+        elseif ($contentDisposition -match 'filename="(.+)"') {
+          $fileName = $Matches[1]
+
+          # アマゾンっぽい のファイル名が文字化けする問題を修正
+          if ($item.StartsWith('https://hazumurhythm.com/')) {
+            Write-Verbose -Message "アマゾンっぽい のファイル名をデコードしています: $fileName"
+            $fileName = [System.Text.Encoding]::UTF8.GetString([System.Text.Encoding]::GetEncoding('iso-8859-1').GetBytes($fileName))
+          }
+
+          return $fileName
+        }
+        else {
+          Write-Verbose -Message "Content-Dispositionヘッダーにファイル名が含まれていません: $contentDisposition"
+        }
+      }
+      else {
+        Write-Verbose -Message "Content-Dispositionヘッダーがありません: $item"
+      }
+
+      Write-Verbose -Message "ファイル名を取得できませんでした: $item"
+    }
+  }
+}

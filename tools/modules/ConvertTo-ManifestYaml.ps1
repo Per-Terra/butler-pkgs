@@ -1,5 +1,3 @@
-. (Join-Path -Path $PSScriptRoot -ChildPath 'Test-PackageManifest.ps1')
-
 # powershell-yaml のインストール
 if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
   try {
@@ -9,6 +7,8 @@ if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
     throw "powershell-yaml のインストールに失敗しました: $(($_.Exception.Message))"
   }
 }
+
+Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath 'Test-PackageManifest.psm1')
 
 $ManifestVersion = '0.2.0'
 $schemaPath = Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifest/$ManifestVersion.json"
@@ -23,10 +23,8 @@ catch {
 function ConvertTo-ManifestYaml {
   [CmdletBinding()]
   param (
-    [Parameter(Mandatory = $true,
-      ValueFromPipeline = $true)]
+    [Parameter(Mandatory)]
     [object]$Manifest,
-    [Parameter(Mandatory = $false)]
     [string]$Header
   )
 
@@ -38,8 +36,7 @@ function ConvertTo-ManifestYaml {
 
   function Get-OrderedInstall {
     param (
-      [Parameter(Mandatory = $true,
-        ValueFromPipeline = $true)]
+      [Parameter(Mandatory)]
       [object]$Install
     )
 
@@ -51,13 +48,12 @@ function ConvertTo-ManifestYaml {
       }
     }
 
-    return $orderedInstall
+    $orderedInstall
   }
 
   function Get-OrderedFilesInArchive {
     param (
-      [Parameter(Mandatory = $true,
-        ValueFromPipeline = $true)]
+      [Parameter(Mandatory)]
       [object]$FilesInArchive
     )
 
@@ -81,7 +77,7 @@ function ConvertTo-ManifestYaml {
       $orderedFilesInArchive += $orderedFile
     }
 
-    return $orderedFilesInArchive
+    $orderedFilesInArchive
   }
 
   foreach ($key in $Schema.properties.psobject.Properties.Name) {
@@ -142,39 +138,5 @@ function ConvertTo-ManifestYaml {
 
   $yaml = $yaml -replace "`r`n", "`n"
 
-  return $yaml
+  $yaml
 }
-
-# $test = @{
-#   Identifier      = 'test-package'
-#   DisplayName     = 'Test Package'
-#   Version         = '1.0.0'
-#   ReleaseDate     = Get-Date -Format 'yyyy-MM-dd'
-#   Section         = 'Core'
-#   Architecture    = 'x86'
-#   Depends         = @('test-dependency')
-#   InstalledSize   = 100
-#   Developer       = @('test-developer')
-#   Description     = @('test-description')
-#   Website         = @('https://example.com')
-#   Files           = @(
-#     @{
-#       SourceUrl = 'https://example.com'
-#       Sha256    = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-#       Files     = @(
-#         @{
-#           Path    = 'test'
-#           Sha256  = 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-#           Install = @{
-#             TargetPath = 'test'
-#             Method     = 'Copy'
-#           }
-#         }
-#       )
-#     }
-#   )
-#   ConfFiles       = @('test')
-#   ManifestVersion = $ManifestVersion
-# }
-
-# ConvertTo-ManifestYaml -Manifest $test
