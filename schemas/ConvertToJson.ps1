@@ -1,20 +1,12 @@
-### original: https://github.com/microsoft/winget-pkgs/blob/4e76aed0d59412f0be0ecfefabfa14b5df05bec4/Tools/YamlCreate.ps1#L135-L149
 # powershell-yaml のインストール
-if (-not(Get-Module -ListAvailable -Name 'powershell-yaml')) {
+if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
   try {
     Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
   }
   catch {
-    throw "'powershell-yaml' のインストールに失敗しました"
-  }
-  finally {
-    # Double check that it was installed properly
-    if (-not(Get-Module -ListAvailable -Name powershell-yaml)) {
-      throw "'powershell-yaml' が見つかりません"
-    }
+    throw "powershell-yaml のインストールに失敗しました: $(($_.Exception.Message))"
   }
 }
-###
 
 $yamlDirectory = Join-Path -Path $PSScriptRoot -ChildPath YAML
 Write-Host "YAMLファイルのディレクトリ: $yamlDirectory"
