@@ -14,7 +14,7 @@ if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
   }
 }
 
-$ManifestVersion = '0.2.0'
+$ManifestVersion = '0.3.0'
 
 Write-Host -NoNewline 'YAMLファイルを探しています...'
 $manifests = Get-ChildItem -LiteralPath (Join-Path -Path $PSScriptRoot -ChildPath '../manifests') -Filter '*.yaml' -Recurse -File
@@ -129,7 +129,7 @@ $release = [ordered]@{
   Date  = $Date.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
   Files = @( [ordered]@{
       Name   = 'contents-all.json.gz'
-      Sha256 = $hashString
+      SHA256 = $hashString
     })
 }
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |

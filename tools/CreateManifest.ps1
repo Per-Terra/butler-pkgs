@@ -46,8 +46,8 @@ Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Get-Fil
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-PackageManifest.psm1')
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-UriFormat.psm1')
 
-$ScriptVersion = '0.2.0'
-$ManifestVersion = '0.2.0'
+$ScriptVersion = '0.3.0'
+$ManifestVersion = '0.3.0'
 $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 
 $ArchiveExtensions = @('.zip', '.7z')
@@ -69,7 +69,7 @@ function Get-FilesInArchive {
   Expand-7Zip -ArchiveFileName $ArchiveFileName -TargetPath $TargetPath
 
   $files = Get-ChildItem -LiteralPath $TargetPath -Recurse -File
-  $script:installedSize += [math]::Ceiling(($files | Measure-Object -Property Length -Sum).Sum / 1024)
+  $script:installedSize += ($files | Measure-Object -Property Length -Sum).Sum
 
   $filesInArchive = @()
 
@@ -78,7 +78,7 @@ function Get-FilesInArchive {
     $relativePath = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
     $file = @{
       Path   = $relativePath
-      Sha256 = Get-FileSHA256Hash -Path $_.FullName
+      SHA256 = Get-FileSHA256Hash -Path $_.FullName
     }
 
     if ($PreviousFiles) {
@@ -236,14 +236,14 @@ function Get-SourceFileFromUrl {
   Write-Host "ファイルの情報を取得しています: $filePath"
   $file = @{
     SourceUrl = $Url
-    Sha256    = Get-FileSHA256Hash -Path $filePath
+    SHA256    = Get-FileSHA256Hash -Path $filePath
   }
   if ($fileName -ne (Split-Path -Path $Url -Leaf)) {
     $file.Add('FileName', $fileName)
   }
 
   if ($previousFile) {
-    if ($previousFile.Sha256 -eq $file.Sha256) {
+    if ($previousFile.SHA256 -eq $file.SHA256) {
       throw "ファイルが変更されていません: $Url"
     }
   }
@@ -258,7 +258,7 @@ function Get-SourceFileFromUrl {
     $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandDirectory -PreviousFiles $previousFile.Files))
   }
   else {
-    $script:installedSize += [math]::Ceiling((Get-Item -LiteralPath $filePath).Length / 1024)
+    $script:installedSize += (Get-Item -LiteralPath $filePath).Length
     if ($previousFile.Install) {
       $file.Add('Install', $previousFile.Install)
     }
@@ -394,7 +394,7 @@ else {
   }
 }
 
-$script:installedSize = 0
+[ulong]$script:installedSize = 0
 $files = @()
 
 if ($previousFiles) {
@@ -423,7 +423,7 @@ $manifest = [ordered]@{
   Conflicts       = [string[]]$Conflicts
   Provides        = [string[]]$Provides
   Replaces        = [string[]]$Replaces
-  InstalledSize   = [uint]$script:installedSize
+  InstalledSize   = [ulong]$script:installedSize
   Developer       = [string[]]$Developer
   Description     = [string]$Description
   Website         = [string[]]$Website
