@@ -308,11 +308,10 @@ if ($Update) {
     do {
       $package = Read-Host -Prompt '更新するパッケージを Developer/Identifier の形式で入力してください'
     } while ([string]::IsNullOrEmpty($package))
-    $manifestsDirectory = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($package.Split('/')[0])/$($package.Split('/')[1])"
+    $Developer, $Identifier = $package.Split('/')
   }
-  else {
-    $manifestsDirectory = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($Developer)/$($Identifier)"
-  }
+
+  $manifestsDirectory = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($Developer)/$($Identifier)"
 
   if (-not (Test-Path -LiteralPath $manifestsDirectory -PathType Container)) {
     throw "ディレクトリが見つかりません: $manifestsDirectory"
