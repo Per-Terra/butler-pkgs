@@ -1,5 +1,4 @@
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath 'Get-WebFileName.psm1')
-Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath 'Test-UriFormat.psm1')
 
 function Get-WebFile {
   [CmdletBinding()]
@@ -13,11 +12,6 @@ function Get-WebFile {
   process {
     foreach ($item in $Uri) {
       Write-Verbose -Message "ファイルをダウンロードしています: $item"
-    }
-
-    if (-not (Test-UriFormat -Uri $item)) {
-      Write-Error "URIの形式が正しくありません: $item"
-      continue
     }
 
     Write-Verbose -Message "ファイル名を取得しています: $item"

@@ -1,5 +1,3 @@
-Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath 'Test-UriFormat.psm1')
-
 function Get-WebFileName {
   [CmdletBinding()]
   param (
@@ -10,11 +8,6 @@ function Get-WebFileName {
   process {
     foreach ($item in $Uri) {
       Write-Verbose -Message "ファイル名を取得しています: $item"
-
-      if (-not (Test-UriFormat -Uri $item)) {
-        Write-Error "URIの形式が正しくありません: $item"
-        continue
-      }
 
       if ($item -match 'https://scrapbox.io/files/(?:.+)\?title=(.+)') {
         Write-Verbose -Message "Scrapbox のリンクを検出しました: $item"
