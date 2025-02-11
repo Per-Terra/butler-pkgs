@@ -44,7 +44,7 @@ Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Convert
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Get-WebFile.psm1')
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Get-FileSHA256Hash.psm1')
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-PackageManifest.psm1')
-Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-UriFormat.psm1')
+Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-Url.psm1')
 
 $ScriptVersion = '0.3.0'
 $ManifestVersion = '0.3.0'
@@ -379,16 +379,13 @@ if ([string]::IsNullOrEmpty($SourceUrl)) {
     $sourceUrls = $urls -split ','
     $isValid = $true
     foreach ($url in $sourceUrls) {
-      if (-not (Test-UriFormat -Uri $url)) {
-        $isValid = $false
-      }
+      $isValid = $isValid -and (Test-Url -Url $url)
     }
   } until ($isValid)
 }
 else {
-  $sourceUrls = $SourceUrl
-  foreach ($url in $sourceUrls) {
-    if (-not (Test-UriFormat -Uri $url)) {
+  foreach ($url in $SourceUrl) {
+    if (-not (Test-Url -Url $url)) {
       throw "URLの形式が正しくありません: $url"
     }
   }
