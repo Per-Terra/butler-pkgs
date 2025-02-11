@@ -65,7 +65,7 @@ function Get-GitHubReleases {
   }
 
   if ($response) {
-    return $response
+    $response
   }
   else {
     throw "GitHub API からのレスポンスが空です: $uri"

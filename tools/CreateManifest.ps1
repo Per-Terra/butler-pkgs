@@ -212,7 +212,7 @@ function Get-FilesInArchive {
     $filesInArchive += $file
   }
 
-  return $filesInArchive
+  $filesInArchive
 }
 
 function Get-SourceFile {
@@ -288,7 +288,7 @@ function Get-SourceFile {
     }
   }
 
-  return $file
+  $file
 }
 
 if (-not $SkipPrompt -and -not $Update) {
