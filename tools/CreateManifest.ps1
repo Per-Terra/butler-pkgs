@@ -215,7 +215,7 @@ function Get-FilesInArchive {
   return $filesInArchive
 }
 
-function Get-SourceFileFromUrl {
+function Get-SourceFile {
   param (
     [Parameter(Mandatory, ValueFromPipeline)]
     [string]$Url,
@@ -396,12 +396,12 @@ $files = @()
 
 if ($previousFiles) {
   for ($index = 0; $index -lt $sourceUrls.Count; $index++) {
-    $files += $sourceUrls[$index] | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory -PreviousFile $previousFiles[$index]
+    $files += $sourceUrls[$index] | Get-SourceFile -WorkingDirectory $WorkingDirectory -PreviousFile $previousFiles[$index]
   }
 }
 else {
   $sourceUrls | ForEach-Object {
-    $files += $_ | Get-SourceFileFromUrl -WorkingDirectory $WorkingDirectory
+    $files += $_ | Get-SourceFile -WorkingDirectory $WorkingDirectory
   }
 }
 
