@@ -292,15 +292,15 @@ function Get-SourceFile {
 }
 
 if (-not $SkipPrompt -and -not $Update) {
-  do {
-    $answer = Read-Host -Prompt '既存のパッケージを更新しますか? [Y/n]'
-  } until ([string]::IsNullOrEmpty($answer) -or ($answer -in @('Y', 'n')))
-  if ($answer -eq 'n') {
-    $Update = $false
-  }
-  else {
-    $Update = $true
-  }
+  $Update = $Host.UI.PromptForChoice(
+    '確認',
+    '既存のパッケージの情報を引き継ぎますか?',
+    (
+      @('&Yes', 'はい'),
+      @('&No', 'いいえ')
+      | ForEach-Object { New-Object -TypeName System.Management.Automation.Host.ChoiceDescription -ArgumentList $_ }
+    ),
+    0) -eq 0
 }
 
 if ($Update) {
@@ -512,10 +512,17 @@ if (-not (Test-Path -LiteralPath (Split-Path -Path $manifestPath -Parent) -PathT
 
 if (-not $Force) {
   if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
-    do {
-      $overwrite = Read-Host -Prompt "'$manifestPath' は既に存在します。上書きしますか? [Y/n]"
-    } until ([string]::IsNullOrEmpty($overwrite) -or ($overwrite -in @('Y', 'n')))
-    if ($overwrite -eq 'n') {
+    $overwrite = $Host.UI.PromptForChoice(
+      '確認',
+      "'$manifestPath' は既に存在します。上書きしますか?",
+      (
+        @('&Yes', 'はい'),
+        @('&No', 'いいえ')
+        | ForEach-Object { New-Object -TypeName System.Management.Automation.Host.ChoiceDescription -ArgumentList $_ }
+      ),
+      0) -eq 0
+    if (-not $overwrite) {
+      Write-Host -ForegroundColor Yellow 'マニフェストの作成をキャンセルしました'
       exit 0
     }
   }
