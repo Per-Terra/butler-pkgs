@@ -533,9 +533,8 @@ $Header = @"
 "@
 
 try {
-  ($manifest |
-    ConvertTo-ManifestYaml -Header $Header) -replace "`r`n", "`n" |
-      Out-File -FilePath $manifestPath -Encoding utf8NoBOM -Force -NoNewline
+  ($manifest | ConvertTo-ManifestYaml -Header $Header) -replace "`r`n", "`n" |
+    Out-File -FilePath $manifestPath -Encoding utf8NoBOM -Force -NoNewline
 }
 catch {
   Write-Error -Message "マニフェストの作成に失敗しました: $($_.Exception.Message)"
