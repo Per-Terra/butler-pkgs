@@ -315,7 +315,7 @@ if ($Update) {
   }
 
   if (-not (Test-Path -LiteralPath $manifestsDirectory -PathType Container)) {
-    throw "マニフェストが見つかりません: $manifestsDir"
+    throw "ディレクトリが見つかりません: $manifestsDirectory"
   }
 
   $manifests = Get-ChildItem -LiteralPath $manifestsDirectory -Filter '*.yaml' -Recurse -File | ForEach-Object {
@@ -323,7 +323,7 @@ if ($Update) {
   }
 
   if ($manifests.Count -eq 0) {
-    throw "マニフェストが見つかりません: $manifestsDir"
+    throw "マニフェストが見つかりません: $manifestsDirectory"
   }
 
   # 最新のマニフェストを取得
