@@ -40,12 +40,14 @@ foreach ($dependency in $scriptDependencies) {
   }
 }
 
+# モジュールのインポート
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/ConvertTo-ManifestYaml.psm1')
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Get-WebFile.psm1')
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Get-FileSHA256Hash.psm1')
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-PackageManifest.psm1')
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-Url.psm1')
 
+# 初期化
 $ScriptVersion = '0.3.0'
 $ManifestVersion = '0.3.0'
 $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
@@ -59,6 +61,7 @@ catch {
   throw "スキーマの読み込みに失敗しました: $(($_.Exception.Message))"
 }
 
+# 拡張子の定義
 $ArchiveExtensions = @('.zip', '.7z')
 $PluginExtensions = @('.exe', '.dll', '.auf', '.aui', '.auo', '.auc', '.aul', '.ini')
 $ScriptExtensions = @('.anm', '.obj', '.scn', '.cam', '.tra', '.lua')
@@ -134,7 +137,7 @@ function Get-FilesInArchive {
     # oov/PSDToolKit用の例外
     elseif ($Url.StartsWith('https://github.com/oov/aviutl_psdtoolkit')) {
       if ($relativePath.StartsWith('GCMZDrops/')) {
-        # do nothing
+        # ignore
       }
       elseif ($relativePath.StartsWith('PSDToolKit/')) {
         $file.Add('Install', @{
@@ -142,7 +145,7 @@ function Get-FilesInArchive {
           })
       }
       elseif ($relativePath.StartsWith('PSDToolKitDocs/')) {
-        # do nothing
+        # ignore
       }
       elseif ($relativePath.StartsWith('script/PSDToolKit')) {
         $file.Add('Install', @{
@@ -150,7 +153,7 @@ function Get-FilesInArchive {
           })
       }
       elseif ($relativePath.StartsWith('かんしくん')) {
-        # do nothing
+        # ignore
       }
       else {
         if ($relativePath -eq 'PSDToolKit.auf') {
@@ -160,6 +163,7 @@ function Get-FilesInArchive {
         }
       }
     }
+    # それらしいディレクトリに配置されている場合は尊重
     elseif ($relativePath -match '^(?:[^/]+/)?((?:plugins|script|exe_files)/.+)$') {
       if ($fileInArchive.Extension -in $ConfExtensions) {
         $file.Add('Install', @{
@@ -214,6 +218,7 @@ function Get-FilesInArchive {
         }
         $file.Add('Files', ($fileInArchive | Get-FilesInArchive -TargetPath $expandDirectory))
       }
+      # exeファイルはコピー
       if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
         $file.Install.Add('Method', 'Copy')
       }
@@ -290,6 +295,7 @@ function Get-SourceFile {
           TargetPath = $sourceFile.Name
         })
     }
+    # exeファイルはコピー
     if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '.exe$')) {
       $file.Install.Add('Method', 'Copy')
     }
