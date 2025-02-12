@@ -66,7 +66,8 @@ $ConfExtensions = @('.ini', '.stg', '.xml')
 
 function Get-FilesInArchive {
   param (
-    [Parameter(Mandatory, ValueFromPipeline)]
+    [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
+    [Alias('FullName')]
     [string]$ArchiveFileName,
     [Parameter(Mandatory)]
     [string]$TargetPath,
