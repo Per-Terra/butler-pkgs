@@ -84,29 +84,29 @@ function Get-FilesInArchive {
   $filesInArchive = @()
 
   Write-Host "アーカイブ内のファイルの情報を取得しています: $ArchiveFileName"
-  $files | ForEach-Object {
-    $relativePath = $_.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
+  foreach ($fileInArchive in $files) {
+    $relativePath = $fileInArchive.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
     $file = @{
       Path   = $relativePath
-      SHA256 = Get-FileSHA256Hash -Path $_.FullName
+      SHA256 = $fileInArchive | Get-FileSHA256Hash
     }
 
     if ($PreviousFiles) {
-      $previousFile = $previousFiles | Where-Object { $_.Path -eq $file.Path }
+      $previousFile = $previousFiles | Where-Object { $fileInArchive.Path -eq $file.Path }
     }
 
-    if ($PreviousFile) {
-      if ($PreviousFile.Install) {
+    if ($previousFile) {
+      if ($previousFile.Install) {
         $file.Add('Install', $previousFile.Install)
       }
-      elseif ($PreviousFile.Files) {
-        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
+      elseif ($previousFile.Files) {
+        $file.Add('Files', ($fileInArchive | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
     # hebiiro氏用の例外
     elseif ($Url.StartsWith('https://github.com/hebiiro/')) {
-      if ($_.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($_.Extension -ne '.wav'))) {
-        if ($_.Extension -in $ConfExtensions -and -not ($relativePath -match '/Skin/')) {
+      if ($fileInArchive.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($fileInArchive.Extension -ne '.wav'))) {
+        if ($fileInArchive.Extension -in $ConfExtensions -and -not ($relativePath -match '/Skin/')) {
           $file.Add('Install', @{
               TargetPath = ($relativePath -replace '^', 'plugins/')
               ConfFile   = $true
@@ -161,7 +161,7 @@ function Get-FilesInArchive {
       }
     }
     elseif ($relativePath -match '^(?:[^/]+/)?((?:plugins|script|exe_files)/.+)$') {
-      if ($_.Extension -in $ConfExtensions) {
+      if ($fileInArchive.Extension -in $ConfExtensions) {
         $file.Add('Install', @{
             TargetPath = $Matches[1]
             ConfFile   = $true
@@ -174,8 +174,8 @@ function Get-FilesInArchive {
       }
     }
     else {
-      if ($_.Extension -in $PluginExtensions) {
-        if ($_.Extension -in $ConfExtensions) {
+      if ($fileInArchive.Extension -in $PluginExtensions) {
+        if ($fileInArchive.Extension -in $ConfExtensions) {
           $file.Add('Install', @{
               TargetPath = ($relativePath -replace '^([^/]+/)*', 'plugins/')
               ConfFile   = $true
@@ -187,18 +187,18 @@ function Get-FilesInArchive {
             })
         }
       }
-      elseif ($_.Extension -in $ScriptExtensions) {
+      elseif ($fileInArchive.Extension -in $ScriptExtensions) {
         $file.Add('Install', @{
             TargetPath = ($relativePath -replace '^([^/]+/)*', 'script/')
           })
       }
-      elseif ($_.Extension -in $ConfExtensions) {
+      elseif ($fileInArchive.Extension -in $ConfExtensions) {
         $file.Add('Install', @{
             TargetPath = $relativePath
             ConfFile   = $true
           })
       }
-      elseif ($_.Extension -eq '.exa') {
+      elseif ($fileInArchive.Extension -eq '.exa') {
         # サブディレクトリまで保持
         $path = $relativePath
         $path = $path -split '/'
@@ -207,12 +207,12 @@ function Get-FilesInArchive {
             TargetPath = $path
           })
       }
-      elseif ($_.Extention -in $ArchiveExtensions) {
-        $expandDirectory = Join-Path -Path (Split-Path -Path $_.FullName -Parent) -ChildPath (Split-Path -Path $_.FullName -LeafBase)
+      elseif ($fileInArchive.Extension -in $ArchiveExtensions) {
+        $expandDirectory = Join-Path -Path $fileInArchive.DirectoryName -ChildPath (Split-Path -Path $fileInArchive.FullName -LeafBase)
         if (Test-Path -LiteralPath $expandDirectory -PathType Container) {
           Remove-Item -LiteralPath $expandDirectory -Recurse -Force
         }
-        $file.Add('Files', ($_.FullName | Get-FilesInArchive -TargetPath $expandDir))
+        $file.Add('Files', ($fileInArchive | Get-FilesInArchive -TargetPath $expandDirectory))
       }
       if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
         $file.Install.Add('Method', 'Copy')
