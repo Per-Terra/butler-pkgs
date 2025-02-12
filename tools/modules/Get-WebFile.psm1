@@ -44,7 +44,7 @@ function Get-WebFile {
           @('&Yes', 'はい'),
           @('&No', 'いいえ')
           | ForEach-Object { New-Object -TypeName System.Management.Automation.Host.ChoiceDescription -ArgumentList $_ }),
-        0)
+        1)
 
       if ($answer -eq 1) {
         return Get-Item -LiteralPath $filePath
