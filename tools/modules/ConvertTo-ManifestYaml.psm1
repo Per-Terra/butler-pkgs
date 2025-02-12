@@ -61,17 +61,17 @@ function ConvertTo-ManifestYaml {
 
     foreach ($file in $FilesInArchive) {
       $orderedFile = [ordered]@{}
-      foreach ($fileKey in $Schema.definitions.FileInArchive.properties.psobject.Properties.Name) {
-        if ($file[$fileKey]) {
-          if ($fileKey -eq 'Files') {
-            $orderedFile.Add($fileKey, (Get-OrderedFilesInArchive -FilesInArchive $file[$fileKey]))
+      foreach ($key in $Schema.definitions.FileInArchive.properties.psobject.Properties.Name) {
+        if ($file[$key]) {
+          if ($key -eq 'Files') {
+            $orderedFile.Add($key, (Get-OrderedFilesInArchive -FilesInArchive $file[$key]))
             continue
           }
-          elseif ($fileKey -eq 'Install') {
-            $orderedFile.Add($fileKey, (Get-OrderedInstall -Install $file[$fileKey]))
+          elseif ($key -eq 'Install') {
+            $orderedFile.Add($key, (Get-OrderedInstall -Install $file[$key]))
             continue
           }
-          $orderedFile.Add($fileKey, $file[$fileKey])
+          $orderedFile.Add($key, $file[$key])
         }
       }
       $orderedFilesInArchive += $orderedFile
