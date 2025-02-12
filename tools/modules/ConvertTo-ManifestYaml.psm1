@@ -23,7 +23,7 @@ catch {
 function ConvertTo-ManifestYaml {
   [CmdletBinding()]
   param (
-    [Parameter(Mandatory)]
+    [Parameter(Mandatory, ValueFromPipeline)]
     [object]$Manifest,
     [string]$Header
   )
