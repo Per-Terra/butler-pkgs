@@ -50,6 +50,15 @@ $ScriptVersion = '0.3.0'
 $ManifestVersion = '0.3.0'
 $WorkingDirectory = Join-Path -Path $PSScriptRoot -ChildPath 'tmp'
 
+$schemaPath = Join-Path -Path $PSScriptRoot -ChildPath "../schemas/JSON/manifest/$ManifestVersion.json"
+
+try {
+  $Schema = Get-Content -LiteralPath $schemaPath -Raw -ErrorAction Stop | ConvertFrom-Json
+}
+catch {
+  throw "スキーマの読み込みに失敗しました: $(($_.Exception.Message))"
+}
+
 $ArchiveExtensions = @('.zip', '.7z')
 $PluginExtensions = @('.exe', '.dll', '.auf', '.aui', '.auo', '.auc', '.aul', '.ini')
 $ScriptExtensions = @('.anm', '.obj', '.scn', '.cam', '.tra', '.lua')
