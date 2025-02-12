@@ -119,8 +119,7 @@ definitions:
         description: アーカイブ内のファイルのパス
         $ref: "#/definitions/Path"
       SHA256:
-        description: |-
-          ファイルのSHA256ハッシュ値
+        description: ファイルのSHA256ハッシュ値
         $ref: "#/definitions/SHA256"
       Files:
         description: アーカイブ内のファイルの情報
