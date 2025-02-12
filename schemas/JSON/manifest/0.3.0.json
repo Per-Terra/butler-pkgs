@@ -205,13 +205,9 @@
       ]
     },
     "Plugin": {
-      "description": "プラグインファイル(.auf, .aui, .auo, .auc)が提供するプラグインの情報",
+      "description": "プラグインファイルが提供するプラグインの情報",
       "type": "object",
       "properties": {
-        "InstallPath": {
-          "description": "プラグインのインストール先のパス",
-          "$ref": "#/definitions/Path"
-        },
         "Name": {
           "description": "プラグインの名前",
           "type": "string"
@@ -219,11 +215,27 @@
         "Information": {
           "description": "プラグインの情報",
           "type": "string"
+        },
+        "Type": {
+          "description": "プラグインの種類",
+          "type": "string",
+          "enum": [
+            "Filter",
+            "Input",
+            "Output",
+            "Color",
+            "Language"
+          ]
+        },
+        "InstallPath": {
+          "description": "プラグインのインストール先のパス",
+          "$ref": "#/definitions/Path"
         }
       },
       "required": [
-        "InstallPath",
-        "Name"
+        "Name",
+        "Type",
+        "InstallPath"
       ]
     }
   },
