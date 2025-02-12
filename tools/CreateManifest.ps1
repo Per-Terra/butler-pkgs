@@ -239,16 +239,15 @@ function Get-SourceFile {
     $Url = "https://drive.google.com/uc?id=$($Matches[1])"
   }
 
-  $filePath = Get-WebFile -Uri $Url -OutDirectory $WorkingDirectory -Force:$Force
-  $fileName = Split-Path -Path $filePath -Leaf
+  $sourceFile = Get-WebFile -Uri $Url -OutDirectory $WorkingDirectory -Force:$Force
 
-  Write-Host "ファイルの情報を取得しています: $filePath"
+  Write-Host "ファイルの情報を取得しています: $($sourceFile.FullName)"
   $file = @{
     SourceUrl = $Url
-    SHA256    = Get-FileSHA256Hash -Path $filePath
+    SHA256    = $sourceFile | Get-FileSHA256Hash
   }
-  if ($fileName -ne (Split-Path -Path $Url -Leaf)) {
-    $file.Add('FileName', $fileName)
+  if ($sourceFile.Name -ne (Split-Path -Path $Url -Leaf)) {
+    $file.Add('FileName', $sourceFile.Name)
   }
 
   if ($previousFile) {
@@ -257,39 +256,37 @@ function Get-SourceFile {
     }
   }
 
-  $fileExtension = Split-Path -Path $filePath -Extension
-
-  if ($fileExtension -in $ArchiveExtensions) {
-    $expandDirectory = Join-Path -Path (Split-Path -Path $filePath -Parent) -ChildPath (Split-Path -Path $filePath -LeafBase)
+  if ($sourceFile.Extension -in $ArchiveExtensions) {
+    $expandDirectory = Join-Path -Path $sourceFile.DirectoryName -ChildPath (Split-Path -Path $sourceFile.FullName -LeafBase)
     if (Test-Path -LiteralPath $expandDirectory -PathType Container) {
       Remove-Item -LiteralPath $expandDirectory -Recurse -Force
     }
-    $file.Add('Files', ($filePath | Get-FilesInArchive -TargetPath $expandDirectory -PreviousFiles $previousFile.Files))
+    $file.Add('Files', ($sourceFile | Get-FilesInArchive -TargetPath $expandDirectory -PreviousFiles $previousFile.Files))
   }
   else {
-    $script:installedSize += (Get-Item -LiteralPath $filePath).Length
+    $script:installedSize += $sourceFile.Length
     if ($previousFile.Install) {
       $file.Add('Install', $previousFile.Install)
     }
-    elseif ($fileExtension -in $PluginExtensions) {
+    elseif ($sourceFile.Extension -in $PluginExtensions) {
       $file.Add('Install', @{
-          TargetPath = ($fileName -replace '^', 'plugins/')
+          TargetPath = ($sourceFile.Name -replace '^', 'plugins/')
         })
     }
-    elseif ($fileExtension -in $ScriptExtensions) {
+    elseif ($sourceFile.Extension -in $ScriptExtensions) {
       $file.Add('Install', @{
-          TargetPath = ($fileName -replace '^', 'script/')
+          TargetPath = ($sourceFile.Name -replace '^', 'script/')
         })
     }
-    elseif ($fileExtension -in $ConfExtensions) {
+    elseif ($sourceFile.Extension -in $ConfExtensions) {
       $file.Add('Install', @{
-          TargetPath = $fileName
+          TargetPath = $sourceFile.Name
           ConfFile   = $true
         })
     }
     else {
       $file.Add('Install', @{
-          TargetPath = $fileName
+          TargetPath = $sourceFile.Name
         })
     }
     if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '.exe$')) {
@@ -392,7 +389,8 @@ if ([string]::IsNullOrEmpty($SourceUrl)) {
   } until ($isValid)
 }
 else {
-  foreach ($url in $SourceUrl) {
+  $sourceUrls = $SourceUrl
+  foreach ($url in $sourceUrls) {
     if (-not (Test-Url -Url $url)) {
       throw "URLの形式が正しくありません: $url"
     }
