@@ -1,4 +1,4 @@
-$ManifestVersion = '0.2.0'
+$ManifestVersion = '0.3.0'
 $schemaPath = Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifest/$ManifestVersion.json"
 
 try {
@@ -88,13 +88,13 @@ function Test-PackageManifest {
       $isValid = $false
     }
 
-    if ($null -eq $File.Sha256) {
+    if ($null -eq $File.SHA256) {
       Write-Warning -Message "必須フィールドがありません: 'SHA256'"
       $isValid = $false
     }
-    elseif ($File.Sha256 -notmatch $Schema.definitions.Sha256.pattern) {
-      Write-Warning -Message "フィールド 'SHA256' の値が正しくありません: $($File.Sha256)"
-      Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Sha256.pattern)"
+    elseif ($File.SHA256 -notmatch $Schema.definitions.SHA256.pattern) {
+      Write-Warning -Message "フィールド 'SHA256' の値が正しくありません: $($File.SHA256)"
+      Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.SHA256.pattern)"
       $isValid = $false
     }
 
@@ -191,13 +191,13 @@ function Test-PackageManifest {
               Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.FileName.pattern)"
               $isValid = $false
             }
-            if ($null -eq $file.Sha256) {
-              Write-Warning -Message "Files[$index] の必須フィールドがありません: 'Sha256'"
+            if ($null -eq $file.SHA256) {
+              Write-Warning -Message "Files[$index] の必須フィールドがありません: 'SHA256'"
               $isValid = $false
             }
-            elseif ($file.Sha256 -notmatch $Schema.definitions.Sha256.pattern) {
-              Write-Warning -Message "Files[$index] のフィールド 'Sha256' の値が正しくありません: $($file.Sha256)"
-              Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Sha256.pattern)"
+            elseif ($file.SHA256 -notmatch $Schema.definitions.SHA256.pattern) {
+              Write-Warning -Message "Files[$index] のフィールド 'SHA256' の値が正しくありません: $($file.SHA256)"
+              Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.SHA256.pattern)"
               $isValid = $false
             }
             if ($file.Files -and $file.Install) {
@@ -214,6 +214,9 @@ function Test-PackageManifest {
             }
           }
         }
+      }
+      elseif ($field -eq 'Plugins') {
+        # TODO: Pluginsフィールドの検証
       }
       elseif ($Schema.properties.psobject.Properties.Name -notcontains $field) {
         Write-Warning -Message "フィールド '$field' は定義されていません"
