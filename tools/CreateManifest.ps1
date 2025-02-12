@@ -406,8 +406,8 @@ if ($previousFiles) {
   }
 }
 else {
-  $sourceUrls | ForEach-Object {
-    $files += $_ | Get-SourceFile -WorkingDirectory $WorkingDirectory
+  foreach ($url in $sourceUrls) {
+    $files += $url | Get-SourceFile -WorkingDirectory $WorkingDirectory
   }
 }
 
