@@ -10,7 +10,7 @@ if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
 
 Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath 'Test-PackageManifest.psm1')
 
-$ManifestVersion = '0.2.0'
+$ManifestVersion = '0.3.0'
 $schemaPath = Join-Path -Path $PSScriptRoot -ChildPath "../../schemas/JSON/manifest/$ManifestVersion.json"
 
 try {
@@ -80,6 +80,27 @@ function ConvertTo-ManifestYaml {
     $orderedFilesInArchive
   }
 
+  function Get-OrderedPlugins {
+    param (
+      [Parameter(Mandatory)]
+      [object]$Plugins
+    )
+
+    $orderedPlugins = @()
+
+    foreach ($plugin in $Plugins) {
+      $orderedPlugin = [ordered]@{}
+      foreach ($key in $Schema.definitions.Plugin.properties.psobject.Properties.Name) {
+        if ($plugin[$key]) {
+          $orderedPlugin.Add($key, $plugin[$key])
+        }
+      }
+      $orderedPlugins += $orderedPlugin
+    }
+
+    $orderedPlugins
+  }
+
   foreach ($key in $Schema.properties.psobject.Properties.Name) {
     if ($null -ne $Manifest[$key]) {
       if ($key -eq 'Files') {
@@ -113,6 +134,12 @@ function ConvertTo-ManifestYaml {
       }
       elseif ($key -eq 'Install') {
         $orderedManifest.Add($key, (Get-OrderedInstall -Install $Manifest[$key]))
+      }
+      elseif ($key -eq 'Plugins') {
+        $orderedManifest[$key] = @()
+        foreach ($plugin in $Manifest[$key]) {
+          $orderedManifest[$key] += (Get-OrderedPlugins -Plugins $plugin)
+        }
       }
       else {
         if ($Schema.properties.$key.type -eq 'array') {
