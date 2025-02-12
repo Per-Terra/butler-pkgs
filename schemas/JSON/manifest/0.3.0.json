@@ -203,6 +203,28 @@
           ]
         }
       ]
+    },
+    "Plugin": {
+      "description": "プラグインファイル(.auf, .aui, .auo, .auc)が提供するプラグインの情報",
+      "type": "object",
+      "properties": {
+        "InstallPath": {
+          "description": "プラグインのインストール先のパス",
+          "$ref": "#/definitions/Path"
+        },
+        "Name": {
+          "description": "プラグインの名前",
+          "type": "string"
+        },
+        "Information": {
+          "description": "プラグインの情報",
+          "type": "string"
+        }
+      },
+      "required": [
+        "InstallPath",
+        "Name"
+      ]
     }
   },
   "type": "object",
@@ -324,6 +346,13 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/Path"
+      }
+    },
+    "Plugins": {
+      "description": "パッケージに含まれるプラグインの情報",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Plugin"
       }
     },
     "ManifestVersion": {

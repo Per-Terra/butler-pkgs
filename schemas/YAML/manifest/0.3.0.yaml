@@ -11,8 +11,9 @@ title: BUtler Package Manifest v0.3.0
 # これはDebian Policy及びWindows Package ManagerのManifest Schemaを参考に作成されました。
 #
 # v0.2.0からの変更点:
-#   - Sha256をSHA256に置換
+#   - Pluginsフィールドを追加
 #   - InstalledSizeの単位をByteに変更
+#   - Sha256をSHA256に変更
 #
 # Debian Policy:
 #   - https://www.debian.org/doc/debian-policy/
@@ -169,6 +170,22 @@ definitions:
           - Install
       - required:
           - Files
+  Plugin:
+    description: プラグインファイル(.auf, .aui, .auo, .auc)が提供するプラグインの情報
+    type: object
+    properties:
+      InstallPath:
+        description: プラグインのインストール先のパス
+        $ref: "#/definitions/Path"
+      Name:
+        description: プラグインの名前
+        type: string
+      Information:
+        description: プラグインの情報
+        type: string
+    required:
+      - InstallPath
+      - Name
 
 type: object
 
@@ -309,6 +326,11 @@ properties:
     type: array
     items:
       $ref: "#/definitions/Path"
+  Plugins:
+    description: パッケージに含まれるプラグインの情報
+    type: array
+    items:
+      $ref: "#/definitions/Plugin"
   ManifestVersion:
     description: パッケージマニフェストのバージョン
     type: string
