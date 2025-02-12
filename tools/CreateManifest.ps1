@@ -306,7 +306,7 @@ if (-not $SkipPrompt -and -not $Update) {
       @('&No', 'いいえ')
       | ForEach-Object { New-Object -TypeName System.Management.Automation.Host.ChoiceDescription -ArgumentList $_ }
     ),
-    0) -eq 0
+    1) -eq 0
 }
 
 if ($Update) {
