@@ -60,7 +60,7 @@ definitions:
       - exedit (= 0.92)
       - rikkymodule
     type: string
-    pattern: |- # エスケープが面倒なのでわざと改行
+    pattern: >- # エスケープが面倒なのでわざと改行
       ^([0-9A-Za-z]+(?:[+\-.][0-9A-Za-z]+)*)(?: *\( *(<<|<=|=|>=|>>) *([0-9A-Za-z]+(?:[+\-.][0-9A-Za-z]+)*) *\))?$
   Url:
     description: httpまたはhttpsで始まるURL
