@@ -11,7 +11,7 @@ function Test-Url {
       Write-Verbose -Message "URLの形式を検証しています: $item"
       if ([System.Uri]::IsWellFormedUriString($item, [System.UriKind]::Absolute)) {
         Write-Verbose -Message "正しい形式のURLです: $item"
-        if ([System.Uri]$item.Scheme -match '^https?$') {
+        if (([System.Uri]$item).Scheme -match '^https?$') {
           Write-Verbose -Message "スキームはhttpまたはhttpsです: $item"
           $true
         }
