@@ -7,3 +7,7 @@
 ---
 
 AviUtl用パッケージマネージャー [BUtler](https://github.com/Per-Terra/butler) のデフォルトリポジトリです。
+
+## Special Thanks
+
+- [Get-PluginInfo.ps1](tools/Get-PluginInfo.ps1)を提供してくださった[ePi](https://github.com/ePi5131)氏に感謝申し上げます。本スクリプトはプラグインファイルの情報の取得に利用されています。なお、このファイルには個別のライセンスが適用されていますのでご注意ください。

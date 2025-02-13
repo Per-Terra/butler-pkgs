@@ -222,6 +222,24 @@ function Get-FilesInArchive {
       if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
         $file.Install.Add('Method', 'Copy')
       }
+      # プラグインファイルの情報を取得
+      if ($fileInArchive.Extension -in '.auf', '.aui', '.auo', '.auc') {
+        $pluginInfos = $fileInArchive | . (Join-Path -Path $PSScriptRoot -ChildPath './Get-PluginInfo.ps1')
+        foreach ($pluginInfo in $pluginInfos) {
+          $plugin = @{ Name = $pluginInfo.Name }
+          if ($pluginInfo.Information) {
+            $plugin.Add('Information', $pluginInfo.Information)
+          }
+          switch ($fileInArchive.Extension) {
+            '.auf' { $plugin.Add('Type', 'Filter') }
+            '.aui' { $plugin.Add('Type', 'Input') }
+            '.auo' { $plugin.Add('Type', 'Output') }
+            '.auc' { $plugin.Add('Type', 'Color') }
+          }
+          $plugin.Add('InstallPath', $file.Install.TargetPath)
+          $script:plugins += $plugin
+        }
+      }
     }
 
     $filesInArchive += $file
@@ -298,6 +316,24 @@ function Get-SourceFile {
     # exeファイルはコピー
     if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '.exe$')) {
       $file.Install.Add('Method', 'Copy')
+    }
+    # プラグインファイルの情報を取得
+    if ($sourceFile.Extension -in '.auf', '.aui', '.auo', '.auc') {
+      $pluginInfos = $sourceFile | . (Join-Path -Path $PSScriptRoot -ChildPath './Get-PluginInfo.ps1')
+      foreach ($pluginInfo in $pluginInfos) {
+        $plugin = @{ Name = $pluginInfo.Name }
+        if ($pluginInfo.Information) {
+          $plugin.Add('Information', $pluginInfo.Information)
+        }
+        switch ($sourceFile.Extension) {
+          '.auf' { $plugin.Add('Type', 'Filter') }
+          '.aui' { $plugin.Add('Type', 'Input') }
+          '.auo' { $plugin.Add('Type', 'Output') }
+          '.auc' { $plugin.Add('Type', 'Color') }
+        }
+        $plugin.Add('InstallPath', $file.Install.TargetPath)
+        $script:plugins += $plugin
+      }
     }
   }
 
@@ -406,6 +442,7 @@ else {
 
 [ulong]$script:installedSize = 0
 $files = @()
+$script:plugins = @()
 
 if ($previousFiles) {
   for ($index = 0; $index -lt $sourceUrls.Count; $index++) {
@@ -439,6 +476,7 @@ $manifest = [ordered]@{
   Website         = [string[]]$Website
   Files           = @($files)
   ConfFiles       = @($ConfFiles)
+  Plugins         = @($script:plugins)
   ManifestVersion = [string]$ManifestVersion
 }
 
@@ -453,6 +491,9 @@ foreach ($field in [array]$manifest.Keys) {
       continue
     }
     elseif ($field -eq 'ConfFiles') {
+      continue
+    }
+    elseif ($field -eq 'Plugins') {
       continue
     }
     if ($Schema.required -contains $field) {
