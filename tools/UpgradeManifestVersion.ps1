@@ -2,7 +2,8 @@
 param (
   [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
   [Alias('FullName')]
-  [string]$ManifestPath
+  [string]$ManifestPath,
+  [switch]$Force
 )
 
 begin {
@@ -55,7 +56,6 @@ begin {
 
     $filesInArchive = @()
 
-    Write-Host "アーカイブ内のファイルの情報を取得しています: $ArchiveFileName"
     foreach ($fileInArchive in $files) {
       $relativePath = $fileInArchive.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
       $file = @{
@@ -213,6 +213,7 @@ begin {
       }
 
       $filesInArchive += $file
+      Write-Progress -Activity 'アーカイブ内のファイルの情報を取得しています' -Status "処理中: $relativePath" -PercentComplete (($filesInArchive.Count / $files.Count) * 100)
     }
 
     $filesInArchive
