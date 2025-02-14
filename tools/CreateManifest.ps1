@@ -222,23 +222,24 @@ function Get-FilesInArchive {
       if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
         $file.Install.Add('Method', 'Copy')
       }
-      # プラグインファイルの情報を取得
-      if ($fileInArchive.Extension -in '.auf', '.aui', '.auo', '.auc') {
-        $pluginInfos = $fileInArchive | . (Join-Path -Path $PSScriptRoot -ChildPath './Get-PluginInfo.ps1')
-        foreach ($pluginInfo in $pluginInfos) {
-          $plugin = @{ Name = $pluginInfo.Name }
-          if ($pluginInfo.Information) {
-            $plugin.Add('Information', $pluginInfo.Information)
-          }
-          switch ($fileInArchive.Extension) {
-            '.auf' { $plugin.Add('Type', 'Filter') }
-            '.aui' { $plugin.Add('Type', 'Input') }
-            '.auo' { $plugin.Add('Type', 'Output') }
-            '.auc' { $plugin.Add('Type', 'Color') }
-          }
-          $plugin.Add('InstallPath', $file.Install.TargetPath)
-          $script:plugins += $plugin
+    }
+
+    # プラグインファイルの情報を取得
+    if ($file.Install -and ($fileInArchive.Extension -in '.auf', '.aui', '.auo', '.auc')) {
+      $pluginInfos = $fileInArchive | . (Join-Path -Path $PSScriptRoot -ChildPath './Get-PluginInfo.ps1')
+      foreach ($pluginInfo in $pluginInfos) {
+        $plugin = @{ Name = $pluginInfo.Name }
+        if ($pluginInfo.Information) {
+          $plugin.Add('Information', $pluginInfo.Information)
         }
+        switch ($fileInArchive.Extension) {
+          '.auf' { $plugin.Add('Type', 'Filter') }
+          '.aui' { $plugin.Add('Type', 'Input') }
+          '.auo' { $plugin.Add('Type', 'Output') }
+          '.auc' { $plugin.Add('Type', 'Color') }
+        }
+        $plugin.Add('InstallPath', $file.Install.TargetPath)
+        $script:plugins += $plugin
       }
     }
 
