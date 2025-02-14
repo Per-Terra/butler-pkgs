@@ -279,8 +279,8 @@ function Get-SourceFile {
     $file.Add('FileName', $sourceFile.Name)
   }
 
-  if ($previousFile) {
-    if ($previousFile.SHA256 -eq $file.SHA256) {
+  if ($PreviousFile) {
+    if ($PreviousFile.SHA256 -eq $file.SHA256) {
       throw "ファイルが変更されていません: $Url"
     }
   }
@@ -290,12 +290,12 @@ function Get-SourceFile {
     if (Test-Path -LiteralPath $expandDirectory -PathType Container) {
       Remove-Item -LiteralPath $expandDirectory -Recurse -Force
     }
-    $file.Add('Files', ($sourceFile | Get-FilesInArchive -TargetPath $expandDirectory -PreviousFiles $previousFile.Files))
+    $file.Add('Files', ($sourceFile | Get-FilesInArchive -TargetPath $expandDirectory -PreviousFiles $PreviousFile.Files))
   }
   else {
     $script:installedSize += $sourceFile.Length
-    if ($previousFile.Install) {
-      $file.Add('Install', $previousFile.Install)
+    if ($PreviousFile.Install) {
+      $file.Add('Install', $PreviousFile.Install)
     }
     elseif ($sourceFile.Extension -in $PluginExtensions) {
       $file.Add('Install', @{
