@@ -220,7 +220,7 @@ properties:
     description: パッケージの分類
     $ref: "#/definitions/Section"
   Architecture:
-    description: |- # エスケープが面倒なのでわざと改行
+    description: >- # エスケープが面倒なのでわざと改行
       パッケージが対応するアーキテクチャ (既定: x86)
     $ref: "#/definitions/Architecture"
     default: x86
