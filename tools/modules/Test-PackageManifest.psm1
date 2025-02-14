@@ -216,7 +216,34 @@ function Test-PackageManifest {
         }
       }
       elseif ($field -eq 'Plugins') {
-        # TODO: Pluginsフィールドの検証
+        $plugins = $Manifest[$field]
+        if ($plugins) {
+          for ($index = 0; $index -lt $plugins.Count; $index++) {
+            $plugin = $plugins[$index]
+            if ($null -eq $Plugin.Name) {
+              Write-Warning -Message "Plugins[$index] の必須フィールドがありません: 'Name'"
+              $isValid = $false
+            }
+            if ($null -eq $Plugin.Type) {
+              Write-Warning -Message "Plugins[$index] の必須フィールドがありません: 'Type'"
+              $isValid = $false
+            }
+            elseif ($Plugin.Type -notin $Schema.definitions.Plugin.properties.Type.enum) {
+              Write-Warning -Message "Plugins[$index] のフィールド 'Type' の値が正しくありません: $($Plugin.Type)"
+              Write-Warning -Message "次の値のいずれかに一致する必要があります: $($Schema.definitions.Plugin.properties.Type.enum -join ', ')"
+              $isValid = $false
+            }
+            if ($null -eq $Plugin.InstallPath) {
+              Write-Warning -Message "Plugins[$index] の必須フィールドがありません: 'InstallPath'"
+              $isValid = $false
+            }
+            elseif ($Plugin.InstallPath -notmatch $Schema.definitions.Path.pattern) {
+              Write-Warning -Message "Plugins[$index] のフィールド 'InstallPath' の値が正しくありません: $($Plugin.InstallPath)"
+              Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.Path.pattern)"
+              $isValid = $false
+            }
+          }
+        }
       }
       elseif ($Schema.properties.psobject.Properties.Name -notcontains $field) {
         Write-Warning -Message "フィールド '$field' は定義されていません"
