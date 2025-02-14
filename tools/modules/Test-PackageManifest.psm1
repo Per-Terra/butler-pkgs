@@ -186,8 +186,8 @@ function Test-PackageManifest {
               Write-Warning -Message "次の正規表現に一致する必要があります: $($Patterns.Url)"
               $isValid = $false
             }
-            if ($FileName -and ($FileName -notmatch $Schema.definitions.FileName.pattern)) {
-              Write-Warning -Message "Files[$index] のフィールド 'FileName' の値が正しくありません: $($FileName)"
+            if ($file.FileName -and ($file.FileName -notmatch $Schema.definitions.FileName.pattern)) {
+              Write-Warning -Message "Files[$index] のフィールド 'FileName' の値が正しくありません: $($file.FileName)"
               Write-Warning -Message "次の正規表現に一致する必要があります: $($Schema.definitions.FileName.pattern)"
               $isValid = $false
             }
