@@ -10,7 +10,7 @@ function Get-WebFileName {
       Write-Verbose "ファイル名を取得しています: $item"
 
       if ($item -match 'https://scrapbox.io/files/(?:.+)\?title=(.+)') {
-        Write-Verbose "Scrapbox のリンクを検出しました: $item"
+        Write-Verbose "Cosense のリンクを検出しました: $item"
         return $Matches[1]
       }
 
