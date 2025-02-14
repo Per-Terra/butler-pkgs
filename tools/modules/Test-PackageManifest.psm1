@@ -5,7 +5,7 @@ try {
   $Schema = Get-Content -LiteralPath $schemaPath -Raw -ErrorAction Stop | ConvertFrom-Json
 }
 catch {
-  throw "スキーマの読み込みに失敗しました: $schemaPath"
+  throw "スキーマファイルの読み込みに失敗しました: $schemaPath"
 }
 
 $Patterns = @{

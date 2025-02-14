@@ -17,7 +17,7 @@ try {
   $Schema = Get-Content -LiteralPath $schemaPath -Raw -ErrorAction Stop | ConvertFrom-Json
 }
 catch {
-  throw "スキーマの読み込みに失敗しました: $(($_.Exception.Message))"
+  throw "スキーマファイルの読み込みに失敗しました: $($_.Exception.Message)"
 }
 
 function ConvertTo-ManifestYaml {
