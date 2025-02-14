@@ -52,9 +52,12 @@ function Get-WebFileName {
         elseif ($contentDisposition -match 'filename="(.+)"') {
           $fileName = $Matches[1]
 
-          # アマゾンっぽい のファイル名が文字化けする問題を修正
-          if ($item.StartsWith('https://hazumurhythm.com/')) {
-            Write-Verbose "アマゾンっぽい のファイル名をデコードしています: $fileName"
+          # 一部のサイトでファイル名が文字化けする問題を修正
+          if (
+            $item.StartsWith('https://drive.google.com/') -or
+            $item.StartsWith('https://hazumurhythm.com/')
+          ) {
+            Write-Verbose "ファイル名をデコードしています: $fileName"
             $fileName = [System.Text.Encoding]::UTF8.GetString([System.Text.Encoding]::GetEncoding('iso-8859-1').GetBytes($fileName))
           }
 
