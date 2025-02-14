@@ -11,20 +11,20 @@ function Get-WebFile {
 
   process {
     foreach ($item in $Uri) {
-      Write-Verbose -Message "ファイルをダウンロードしています: $item"
+      Write-Verbose "ファイルをダウンロードしています: $item"
     }
 
-    Write-Verbose -Message "ファイル名を取得しています: $item"
+    Write-Verbose "ファイル名を取得しています: $item"
     $fileName = Get-WebFileName -Uri $item
 
     if (-not $fileName) {
-      Write-Verbose -Message "ファイル名を取得できませんでした: $item"
+      Write-Verbose "ファイル名を取得できませんでした: $item"
       $fileName = [System.IO.Path]::GetRandomFileName() + '.tmp'
-      Write-Verbose -Message "ランダムなファイル名を生成しました: $fileName"
+      Write-Verbose "ランダムなファイル名を生成しました: $fileName"
     }
 
     if (-not (Test-Path -LiteralPath $OutDirectory -PathType Container)) {
-      Write-Verbose -Message "出力先ディレクトリを作成しています: $OutDirectory"
+      Write-Verbose "出力先ディレクトリを作成しています: $OutDirectory"
       try {
         $null = New-Item -Path $OutDirectory -ItemType Directory -Force
       }
@@ -34,7 +34,7 @@ function Get-WebFile {
     }
 
     $filePath = Join-Path -Path $OutDirectory -ChildPath $fileName
-    Write-Verbose -Message "ファイルの保存先: $filePath"
+    Write-Verbose "ファイルの保存先: $filePath"
 
     if ((Test-Path -LiteralPath $filePath -PathType Leaf) -and (-not $Force)) {
       $answer = $Host.UI.PromptForChoice(
@@ -57,9 +57,9 @@ function Get-WebFile {
     }
 
     if ($item -match 'https://hazumurhythm\.com/php/amazon_download\.php\?name=(.+)') {
-      Write-Verbose -Message "アマゾンっぽい のダウンロードリンクを検出しました: $item"
+      Write-Verbose "アマゾンっぽい のダウンロードリンクを検出しました: $item"
       $id = $Matches[1]
-      Write-Verbose -Message "ファイルのID: $id"
+      Write-Verbose "ファイルのID: $id"
       $params.Add('Headers', @{ Referer = "https://hazumurhythm.com/web/amazon/?script=$id" })
     }
 

@@ -8,20 +8,20 @@ function Test-Url {
 
   process {
     foreach ($item in $Url) {
-      Write-Verbose -Message "URLの形式を検証しています: $item"
+      Write-Verbose "URLの形式を検証しています: $item"
       if ([System.Uri]::IsWellFormedUriString($item, [System.UriKind]::Absolute)) {
-        Write-Verbose -Message "正しい形式のURLです: $item"
+        Write-Verbose "正しい形式のURLです: $item"
         if (([System.Uri]$item).Scheme -match '^https?$') {
-          Write-Verbose -Message "スキームはhttpまたはhttpsです: $item"
+          Write-Verbose "スキームはhttpまたはhttpsです: $item"
           $true
         }
         else {
-          Write-Verbose -Message "スキームがhttpまたはhttpsではありません: $item"
+          Write-Verbose "スキームがhttpまたはhttpsではありません: $item"
           $false
         }
       }
       else {
-        Write-Verbose -Message "正しい形式のURLではありません: $item"
+        Write-Verbose "正しい形式のURLではありません: $item"
         $false
       }
     }

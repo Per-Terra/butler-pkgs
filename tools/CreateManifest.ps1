@@ -595,6 +595,6 @@ try {
     Out-File -FilePath $manifestPath -Encoding utf8NoBOM -Force -NoNewline
 }
 catch {
-  Write-Error -Message "マニフェストの作成に失敗しました: $($_.Exception.Message)"
+  Write-Error "マニフェストの作成に失敗しました: $($_.Exception.Message)"
   exit 1
 }

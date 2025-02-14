@@ -89,9 +89,9 @@ foreach ($target in $targets) {
         $asset = $release.assets | Where-Object { $_.name -match $target.Asset } | Select-Object -First 1
         $url = $asset.browser_download_url
         if ([string]::IsNullOrEmpty($url)) {
-          Write-Warning -Message "Assetが見つかりません: $($target.Owner)/$($target.Repository)"
-          Write-Warning -Message "Assetの正規表現: $($target.Asset)"
-          Write-Warning -Message "URL: $($release.html_url)"
+          Write-Warning "Assetが見つかりません: $($target.Owner)/$($target.Repository)"
+          Write-Warning "Assetの正規表現: $($target.Asset)"
+          Write-Warning "URL: $($release.html_url)"
           continue
         }
 
@@ -109,10 +109,10 @@ foreach ($target in $targets) {
           Invoke-Expression -Command $target.Version.script
         }
         if ([string]::IsNullOrEmpty($version)) {
-          Write-Warning -Message "バージョンが見つかりません: $($target.Developer)/$($target.Identifier)"
-          Write-Warning -Message "バージョンの取得元: $($target.Version.from)"
-          Write-Warning -Message "バージョンの正規表現: s/$($target.Version.regex.find)/$($target.Version.regex.replace)/"
-          Write-Warning -Message "URL: $($release.html_url)"
+          Write-Warning "バージョンが見つかりません: $($target.Developer)/$($target.Identifier)"
+          Write-Warning "バージョンの取得元: $($target.Version.from)"
+          Write-Warning "バージョンの正規表現: s/$($target.Version.regex.find)/$($target.Version.regex.replace)/"
+          Write-Warning "URL: $($release.html_url)"
           continue
         }
 
@@ -125,9 +125,9 @@ foreach ($target in $targets) {
           $releaseDate = $Matches[1]
           if ($releaseDate -and $releaseDate -ge $date) {
             Write-Host "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"
-            Write-Debug -Message "作成中のマニフェストのリリース日: $date"
-            Write-Debug -Message "既存のマニフェストのリリース日: $releaseDate"
-            Write-Debug -Message "マニフェストの作成はスキップされました"
+            Write-Debug "作成中のマニフェストのリリース日: $date"
+            Write-Debug "既存のマニフェストのリリース日: $releaseDate"
+            Write-Debug "マニフェストの作成はスキップされました"
             continue
           }
         }
@@ -136,7 +136,7 @@ foreach ($target in $targets) {
           . (Join-Path -Path $PSScriptRoot -ChildPath "./CreateManifest.ps1") -Update -SourceUrl $url -Identifier $target.Identifier -Version $version -ReleaseDate $date -Developer $target.Developer -SkipPrompt -Force
         }
         catch {
-          Write-Warning -Message "マニフェストは作成されませんでした: $(($_.Exception.Message))"
+          Write-Warning "マニフェストは作成されませんでした: $(($_.Exception.Message))"
         }
       }
     }
