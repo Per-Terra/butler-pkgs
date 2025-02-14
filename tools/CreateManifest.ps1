@@ -95,7 +95,7 @@ function Get-FilesInArchive {
     }
 
     if ($PreviousFiles) {
-      $previousFile = $previousFiles | Where-Object { $fileInArchive.Path -eq $file.Path }
+      $previousFile = $PreviousFiles | Where-Object { $_.Path -eq $file.Path }
     }
 
     if ($previousFile) {
@@ -103,6 +103,10 @@ function Get-FilesInArchive {
         $file.Add('Install', $previousFile.Install)
       }
       elseif ($previousFile.Files) {
+        $expandDirectory = Join-Path -Path $fileInArchive.DirectoryName -ChildPath (Split-Path -Path $fileInArchive.FullName -LeafBase)
+        if (Test-Path -LiteralPath $expandDirectory -PathType Container) {
+          Remove-Item -LiteralPath $expandDirectory -Recurse -Force
+        }
         $file.Add('Files', ($fileInArchive | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
