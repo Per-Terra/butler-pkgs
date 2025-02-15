@@ -136,9 +136,11 @@ function ConvertTo-ManifestYaml {
         $orderedManifest.Add($key, (Get-OrderedInstall -Install $Manifest[$key]))
       }
       elseif ($key -eq 'Plugins') {
-        $orderedManifest[$key] = @()
-        foreach ($plugin in $Manifest[$key]) {
-          $orderedManifest[$key] += (Get-OrderedPlugins -Plugins $plugin)
+        if ($Manifest[$key]) {
+          $orderedManifest[$key] = @()
+          foreach ($plugin in $Manifest[$key]) {
+            $orderedManifest[$key] += (Get-OrderedPlugins -Plugins $plugin)
+          }
         }
       }
       else {
