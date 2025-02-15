@@ -4,7 +4,7 @@
 Identifier: AdvancedMouseOperation
 DisplayName: マウスオペレーション改
 Version: 1.0.0
-ReleaseDate: 2022-05-01
+ReleaseDate: 2024-09-26
 Section: Plugin/Other
 Breaks:
 - authentic-grouping (<< 1.1.0)
