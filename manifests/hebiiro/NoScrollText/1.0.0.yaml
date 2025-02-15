@@ -1,4 +1,4 @@
-# Created using UpdateManifest.ps1 v0.3.0
+# Created using UpgradeManifestVersion.ps1 v0.3.0
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: NoScrollText

@@ -372,7 +372,7 @@ process {
   Write-Host "マニフェストを作成しています: $manifestPath"
 
   $Header = @"
-# Created using UpdateManifest.ps1 v$ScriptVersion
+# Created using UpgradeManifestVersion.ps1 v$ScriptVersion
 # yaml-language-server: `$schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/$ManifestVersion.json
 
 "@
