@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: auls-aliaslist
 DisplayName: Aulsエイリアス一覧
@@ -8,7 +8,7 @@ ReleaseDate: 2014-05-06
 Section: Plugin/Other
 Depends:
 - auls-memref
-InstalledSize: 50
+InstalledSize: 50533
 Developer:
 - Auls
 Description: エイリアス一覧からエイリアスを配置できるようにするプラグイン
@@ -16,14 +16,19 @@ Website:
 - https://auls.client.jp/
 Files:
 - SourceUrl: https://auls.client.jp/plugin/auls_aliaslist.zip
-  Sha256: 6fd59266e8c58075233573e93e91a971413fac13c62019e0541c8e4e5042417a
+  SHA256: 6fd59266e8c58075233573e93e91a971413fac13c62019e0541c8e4e5042417a
   Files:
   - Path: auls_aliaslist/auls_aliaslist.auf
-    Sha256: c0f0a39ac466de9dc9aa282756f63d209b51c3ce00a5f17afd11c4c18979bc01
+    SHA256: c0f0a39ac466de9dc9aa282756f63d209b51c3ce00a5f17afd11c4c18979bc01
     Install:
       TargetPath: plugins/auls_aliaslist.auf
   - Path: auls_aliaslist/src/auls_aliaslist.cpp
-    Sha256: 4d2ff6889bc05d1cb5ed41843851e1c003d458089f07335d353a419ba0f28093
+    SHA256: 4d2ff6889bc05d1cb5ed41843851e1c003d458089f07335d353a419ba0f28093
   - Path: auls_aliaslist/src/auls_aliaslist.vcproj
-    Sha256: b1c6d17db2a47ff63ce14dbc8aa5f352f36bba08d4c43f48610e8538d4b98d76
-ManifestVersion: 0.1.0
+    SHA256: b1c6d17db2a47ff63ce14dbc8aa5f352f36bba08d4c43f48610e8538d4b98d76
+Plugins:
+- Name: エイリアス一覧
+  Information: Aulsエイリアス一覧
+  Type: Filter
+  InstallPath: plugins/auls_aliaslist.auf
+ManifestVersion: 0.3.0

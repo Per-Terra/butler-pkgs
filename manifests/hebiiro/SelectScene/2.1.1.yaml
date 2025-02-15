@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SelectScene
 DisplayName: シーン簡単選択
 Version: 2.1.1
 ReleaseDate: 2023-02-20
 Section: Plugin/Other
-InstalledSize: 769
+InstalledSize: 786584
 Developer:
 - hebiiro
 Description: シーンを簡単に切り替えられるようにするプラグイン
@@ -14,28 +14,33 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SelectScene
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SelectScene/releases/download/2.1.1/SelectScene.2.1.1.zip
-  Sha256: 97188c59db047465942e6290ba734aedf9bce1301b37b38e133233ec2c388f85
+  SHA256: 97188c59db047465942e6290ba734aedf9bce1301b37b38e133233ec2c388f85
   Files:
   - Path: CREDITS.md
-    Sha256: dc61e8138af404971a7b6aeb4e137ffc7222255c4748adfe3e0a7cbf131e0b2d
+    SHA256: dc61e8138af404971a7b6aeb4e137ffc7222255c4748adfe3e0a7cbf131e0b2d
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 42fd3e3c4e16aedaf0f403582b69d32a7f147daec0a35657ece6a67154a2de71
+    SHA256: 42fd3e3c4e16aedaf0f403582b69d32a7f147daec0a35657ece6a67154a2de71
   - Path: SelectScene.auf
-    Sha256: 54a80c7c422b8dae10eab57aff985e21eee171aa832e71bfce10d625e59874f0
+    SHA256: 54a80c7c422b8dae10eab57aff985e21eee171aa832e71bfce10d625e59874f0
     Install:
       TargetPath: plugins/SelectScene.auf
   - Path: SelectScene/1.wav
-    Sha256: c08dea456fb6cb52133187d05df5b0eedf460558349dcd6bcbf717d7e45862be
+    SHA256: c08dea456fb6cb52133187d05df5b0eedf460558349dcd6bcbf717d7e45862be
   - Path: SelectScene/2.wav
-    Sha256: 65a2c59ccbb2e0de23af0d644e2577ec5183a9ad190e32fe74e627626db68396
+    SHA256: 65a2c59ccbb2e0de23af0d644e2577ec5183a9ad190e32fe74e627626db68396
   - Path: SelectScene/3.wav
-    Sha256: b3739e725846b8302f5e74bd1a28dd6be38ab3d42cf192dff85afd96dbd53887
+    SHA256: b3739e725846b8302f5e74bd1a28dd6be38ab3d42cf192dff85afd96dbd53887
   - Path: SelectScene/4.wav
-    Sha256: 134d2465045fc0f8e0ca709d48ac6774575ccf9ec18634bea9f93e65ea2b05d0
+    SHA256: 134d2465045fc0f8e0ca709d48ac6774575ccf9ec18634bea9f93e65ea2b05d0
   - Path: SelectScene/5.wav
-    Sha256: 0fc1ca9d9a7663a0c06da0841d8ef266914be44586dfe18de4c6e3779514d7c2
+    SHA256: 0fc1ca9d9a7663a0c06da0841d8ef266914be44586dfe18de4c6e3779514d7c2
   - Path: SelectScene/6.wav
-    Sha256: 97f042e7bc8cab87a35ba1b29127a674e8a2765a10f3becec05a49d1e1642ecf
-ManifestVersion: 0.2.0
+    SHA256: 97f042e7bc8cab87a35ba1b29127a674e8a2765a10f3becec05a49d1e1642ecf
+Plugins:
+- Name: シーン簡単選択
+  Information: シーン簡単選択 2.1.1 by 蛇色
+  Type: Filter
+  InstallPath: plugins/SelectScene.auf
+ManifestVersion: 0.3.0

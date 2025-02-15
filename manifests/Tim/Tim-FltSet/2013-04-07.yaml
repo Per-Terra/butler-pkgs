@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-FltSet
 DisplayName: フィルターセット
 Version: 2013-04-07
 ReleaseDate: 2013-04-07
 Section: Script
-InstalledSize: 101
+InstalledSize: 102666
 Developer:
 - Tim
 Description: フォトショップのようなフィルターをかけます。
@@ -15,14 +15,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/FltSet.zip
-  Sha256: 36ea4e23869174566e36451715979da48b0322c7168dfd35d8c2fe4f5a967af0
+  SHA256: 36ea4e23869174566e36451715979da48b0322c7168dfd35d8c2fe4f5a967af0
   Files:
   - Path: FltSet/@T_Filter_Module.anm
-    Sha256: b37bb14fa3574645f66b53154095ea726c2d3e93419f0fae65d9775c3224e560
+    SHA256: b37bb14fa3574645f66b53154095ea726c2d3e93419f0fae65d9775c3224e560
     Install:
       TargetPath: script/@T_Filter_Module.anm
   - Path: FltSet/T_Filter_Module.dll
-    Sha256: e11b9793c35341f7dc01510f42a74df5426a1b5e551e8a2c5b6aeb4693c55b82
+    SHA256: e11b9793c35341f7dc01510f42a74df5426a1b5e551e8a2c5b6aeb4693c55b82
     Install:
       TargetPath: script/T_Filter_Module.dll
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

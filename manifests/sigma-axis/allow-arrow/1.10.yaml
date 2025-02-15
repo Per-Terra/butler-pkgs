@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: allow-arrow
 DisplayName: Allow Arrow
 Version: "1.10"
 ReleaseDate: 2024-01-08
 Section: Plugin/Other
-InstalledSize: 24
+InstalledSize: 24281
 Developer:
 - sigma-axis
 Description: |-
@@ -16,19 +16,24 @@ Website:
 - https://github.com/sigma-axis/aviutl_allow_arrow
 Files:
 - SourceUrl: https://github.com/sigma-axis/aviutl_allow_arrow/releases/download/v1.10/aviutl_allow_arrow-v1.10.zip
-  Sha256: 783f746e3b8d55e3760d3b083e35cdb7f5a93805843bcb157896eef11b68076d
+  SHA256: 783f746e3b8d55e3760d3b083e35cdb7f5a93805843bcb157896eef11b68076d
   Files:
   - Path: allow_arrow.auf
-    Sha256: 91da8dede18e7ab057ab75f02919f9d803d11c100f705e3ce43ac6015dafb428
+    SHA256: 91da8dede18e7ab057ab75f02919f9d803d11c100f705e3ce43ac6015dafb428
     Install:
       TargetPath: plugins/allow_arrow.auf
   - Path: allow_arrow.ini
-    Sha256: 81e065ae5d2b8293578c4a421777e958e7ccfcd68328dd3946e7ee18408b70ae
+    SHA256: 81e065ae5d2b8293578c4a421777e958e7ccfcd68328dd3946e7ee18408b70ae
     Install:
       TargetPath: plugins/allow_arrow.ini
       ConfFile: true
   - Path: LICENSE
-    Sha256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
   - Path: README.md
-    Sha256: d20d15dbe19787f4b6710b1993d346aed6683fb271f437fa2f562813cc881305
-ManifestVersion: 0.2.0
+    SHA256: d20d15dbe19787f4b6710b1993d346aed6683fb271f437fa2f562813cc881305
+Plugins:
+- Name: Allow Arrow
+  Information: Allow Arrow v1.10 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/allow_arrow.auf
+ManifestVersion: 0.3.0

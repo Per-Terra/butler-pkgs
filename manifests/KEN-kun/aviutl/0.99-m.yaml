@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: aviutl
 DisplayName: AviUtl
 Version: 0.99-m
 ReleaseDate: 2012-06-17
 Section: Core
-InstalledSize: 998
+InstalledSize: 1021074
 Developer:
 - KEN-kun
 Description: |-
@@ -18,19 +18,19 @@ Website:
 - https://spring-fragrance.mints.ne.jp/aviutl/
 Files:
 - SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/aviutl99m.zip
-  Sha256: 44a1a54ab8b464c733e4f9347435688dcc54144efc12bb0dc97fd238d43fc3a6
+  SHA256: 44a1a54ab8b464c733e4f9347435688dcc54144efc12bb0dc97fd238d43fc3a6
   Files:
   - Path: aviutl.exe
-    Sha256: 5be6722ccdce78601030ef4ef4948769fcd82748a52d0b400d18b8098c7af0d4
+    SHA256: 5be6722ccdce78601030ef4ef4948769fcd82748a52d0b400d18b8098c7af0d4
     Install:
       TargetPath: aviutl.exe
       Method: Copy
   - Path: aviutl.txt
-    Sha256: 9e0ba904c6d614d22f8721730272840069ae3110f779437ad2974f20593db0ae
+    SHA256: 9e0ba904c6d614d22f8721730272840069ae3110f779437ad2974f20593db0ae
   - Path: aviutl.vfp
-    Sha256: bfc303da2af82ec9cde3100921438a815221736e698e79943fcf9485649fa139
+    SHA256: bfc303da2af82ec9cde3100921438a815221736e698e79943fcf9485649fa139
 ConfFiles:
 - aviutl.ini
 - aviutl.sav
 - デフォルト.cfg
-ManifestVersion: 0.1.0
+ManifestVersion: 0.3.0

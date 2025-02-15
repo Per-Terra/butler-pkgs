@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-PickUp
 DisplayName: つまむ
 Version: 2012-06-17
 ReleaseDate: 2012-06-17
 Section: Script
-InstalledSize: 2
+InstalledSize: 1206
 Developer:
 - Tim
 Description: 画像をつまんだ感じにします。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/PickUp.zip
-  Sha256: a5a9ce448982b3d9481a486a432bd58b2179c17ce70b31082b4abaa0b6302765
+  SHA256: a5a9ce448982b3d9481a486a432bd58b2179c17ce70b31082b4abaa0b6302765
   Files:
   - Path: つまむ.anm
-    Sha256: caa018710499caf03c7d5fde4d7990ecf4f0173cbe88d899e7aa30462170e2e7
+    SHA256: caa018710499caf03c7d5fde4d7990ecf4f0173cbe88d899e7aa30462170e2e7
     Install:
       TargetPath: script/つまむ.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-26Poly
 DisplayName: 二十六面体
 Version: 2012-10-13
 ReleaseDate: 2012-10-13
 Section: Script
-InstalledSize: 4
+InstalledSize: 3721
 Developer:
 - Tim
 Description: 二十六面体を作るカスタムオブジェクトとアニメ効果です。
@@ -15,14 +15,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/26Poly.zip
-  Sha256: a389a9a4dcfb71316d86ad7086eb233131b414f33a839ae4791d94e2d8d210af
+  SHA256: a389a9a4dcfb71316d86ad7086eb233131b414f33a839ae4791d94e2d8d210af
   Files:
   - Path: 二十六面体.anm
-    Sha256: 411b39351605c5e92de338a9d14025aa69daa141636acd1c5263279dfa0015dc
+    SHA256: 411b39351605c5e92de338a9d14025aa69daa141636acd1c5263279dfa0015dc
     Install:
       TargetPath: script/二十六面体.anm
   - Path: 二十六面体.obj
-    Sha256: dfb89e07a81c3bf4c232c1e8e04e2d6ebb689afc0ae94f222e74a265404448d9
+    SHA256: dfb89e07a81c3bf4c232c1e8e04e2d6ebb689afc0ae94f222e74a265404448d9
     Install:
       TargetPath: script/二十六面体.obj
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

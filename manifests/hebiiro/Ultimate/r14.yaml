@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Ultimate
 DisplayName: アルティメットプラグイン
 Version: r14
 ReleaseDate: 2023-12-30
 Section: Plugin/Other
-InstalledSize: 2942
+InstalledSize: 3012007
 Developer:
 - hebiiro
 Description: AviUtlを使いやすくする複合プラグイン
@@ -14,542 +14,551 @@ Website:
 - https://github.com/hebiiro/anti.aviutl.ultimate.plugin
 Files:
 - SourceUrl: https://github.com/hebiiro/anti.aviutl.ultimate.plugin/releases/download/r14/ultimate_r14.zip
-  Sha256: 48a4fe785675a1c3c38013b06ed5cf8e002e334649acbec6bd311e631b1713cd
+  SHA256: 48a4fe785675a1c3c38013b06ed5cf8e002e334649acbec6bd311e631b1713cd
   Files:
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: LICENSE
-    Sha256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
+    SHA256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
   - Path: README.md
-    Sha256: ad1a2e64ee170cb8c3b5bfd0728e626a82e003244ca59e82dfb998a5bf3cbbf7
+    SHA256: ad1a2e64ee170cb8c3b5bfd0728e626a82e003244ca59e82dfb998a5bf3cbbf7
   - Path: Ultimate.auf
-    Sha256: 75f34797dfe7abdc4a98d447044721c1cf6186cfc97e9d1086843f35c9a8d93c
+    SHA256: 75f34797dfe7abdc4a98d447044721c1cf6186cfc97e9d1086843f35c9a8d93c
     Install:
       TargetPath: plugins/Ultimate.auf
   - Path: Ultimate.aul
-    Sha256: a9599147fe047c1c714457b97b63e59cd9593c399d2dd71ac83c6b9f9f1a9920
+    SHA256: a9599147fe047c1c714457b97b63e59cd9593c399d2dd71ac83c6b9f9f1a9920
     Install:
       TargetPath: plugins/Ultimate.aul
   - Path: UltimateAddin/cc6.manifest
-    Sha256: 24ca12495a21cfd31071d6cf128cc7f1398a4e8aa10bf1be9a533cc53d3c201b
+    SHA256: 24ca12495a21cfd31071d6cf128cc7f1398a4e8aa10bf1be9a533cc53d3c201b
     Install:
       TargetPath: plugins/UltimateAddin/cc6.manifest
   - Path: UltimateAddin/ColorCode.aua
-    Sha256: fecc8f0119461af63df1f348c6f95a5e284ccba0a1fca945f1c81b60f3a9d1de
+    SHA256: fecc8f0119461af63df1f348c6f95a5e284ccba0a1fca945f1c81b60f3a9d1de
     Install:
       TargetPath: plugins/UltimateAddin/ColorCode.aua
   - Path: UltimateAddin/Dark.aua
-    Sha256: e9e34101153143cd8b666fde7b0c18e91635fee1c395a949326ebc5b78219254
+    SHA256: e9e34101153143cd8b666fde7b0c18e91635fee1c395a949326ebc5b78219254
     Install:
       TargetPath: plugins/UltimateAddin/Dark.aua
   - Path: UltimateAddin/DialogPosition.aua
-    Sha256: b5d073823fb0db1d0dc1c360397f2ef19f6f3efb3446e40e29f554283463adf8
+    SHA256: b5d073823fb0db1d0dc1c360397f2ef19f6f3efb3446e40e29f554283463adf8
     Install:
       TargetPath: plugins/UltimateAddin/DialogPosition.aua
   - Path: UltimateAddin/DialogSize.aua
-    Sha256: 2096bc59c29cc831880e358e91999664a1f41c6d2d95f6d38d473d2ed1a8059b
+    SHA256: 2096bc59c29cc831880e358e91999664a1f41c6d2d95f6d38d473d2ed1a8059b
     Install:
       TargetPath: plugins/UltimateAddin/DialogSize.aua
   - Path: UltimateAddin/DirtyCheck.aua
-    Sha256: 7823529c2ad8151b8c6a36462ad01e470bc324d6f036e4c5df391e7446a910e3
+    SHA256: 7823529c2ad8151b8c6a36462ad01e470bc324d6f036e4c5df391e7446a910e3
     Install:
       TargetPath: plugins/UltimateAddin/DirtyCheck.aua
   - Path: UltimateAddin/EasingSelect.aua
-    Sha256: 63dba7d5367512fca18148013a872d2495bb81f55c24e26aea4e5f5eb96711d2
+    SHA256: 63dba7d5367512fca18148013a872d2495bb81f55c24e26aea4e5f5eb96711d2
     Install:
       TargetPath: plugins/UltimateAddin/EasingSelect.aua
   - Path: UltimateAddin/EasingSelectGui.exe
-    Sha256: 67a23ffca2d473f2872e35e6bea05c7550d60c1ab1f0af34d606d374ee7cf83c
+    SHA256: 67a23ffca2d473f2872e35e6bea05c7550d60c1ab1f0af34d606d374ee7cf83c
     Install:
       TargetPath: plugins/UltimateAddin/EasingSelectGui.exe
       Method: Copy
   - Path: UltimateAddin/EditBoxTweaker.aua
-    Sha256: 538a8271ff530f1712fd06afe6b6ed9e57b286be83efe6ecb59bb3abdabe5e64
+    SHA256: 538a8271ff530f1712fd06afe6b6ed9e57b286be83efe6ecb59bb3abdabe5e64
     Install:
       TargetPath: plugins/UltimateAddin/EditBoxTweaker.aua
   - Path: UltimateAddin/EncodeGuard.aua
-    Sha256: efa079fd2de66872cc3043b85354b2847f5067a8beecb90ded5f9e45aa36e253
+    SHA256: efa079fd2de66872cc3043b85354b2847f5067a8beecb90ded5f9e45aa36e253
     Install:
       TargetPath: plugins/UltimateAddin/EncodeGuard.aua
   - Path: UltimateAddin/ExEditTweaker.aua
-    Sha256: ac1a9d90b3f796e2a357323da7444b337eb7076c0604dfbbe46ed4477c1f3af3
+    SHA256: ac1a9d90b3f796e2a357323da7444b337eb7076c0604dfbbe46ed4477c1f3af3
     Install:
       TargetPath: plugins/UltimateAddin/ExEditTweaker.aua
   - Path: UltimateAddin/Filer.aua
-    Sha256: b86045a9ef9633761e0c64f7086198878a57d3fbd0c247d9942a86428c1d26bc
+    SHA256: b86045a9ef9633761e0c64f7086198878a57d3fbd0c247d9942a86428c1d26bc
     Install:
       TargetPath: plugins/UltimateAddin/Filer.aua
   - Path: UltimateAddin/FilerGui.exe
-    Sha256: f987cbeb487b12140cd81d61dc4d761e873fd46eaccaefb9f90e4e963988df49
+    SHA256: f987cbeb487b12140cd81d61dc4d761e873fd46eaccaefb9f90e4e963988df49
     Install:
       TargetPath: plugins/UltimateAddin/FilerGui.exe
       Method: Copy
   - Path: UltimateAddin/FilterCopy.aua
-    Sha256: 49b419e959df6f5f2769aed43e2e944bddc816940d1742ed76da8b49e1106368
+    SHA256: 49b419e959df6f5f2769aed43e2e944bddc816940d1742ed76da8b49e1106368
     Install:
       TargetPath: plugins/UltimateAddin/FilterCopy.aua
   - Path: UltimateAddin/FilterDrag.aua
-    Sha256: 1cdafcae030a7c40c1937c0c1ccb37184f835690947a6496fd7eb3ec6d6b9933
+    SHA256: 1cdafcae030a7c40c1937c0c1ccb37184f835690947a6496fd7eb3ec6d6b9933
     Install:
       TargetPath: plugins/UltimateAddin/FilterDrag.aua
   - Path: UltimateAddin/FontPreview.aua
-    Sha256: 197726d65150850d5328c5ac0bbbf6ade63ebaa3ba6053ff05f0319a46f0bbcf
+    SHA256: 197726d65150850d5328c5ac0bbbf6ade63ebaa3ba6053ff05f0319a46f0bbcf
     Install:
       TargetPath: plugins/UltimateAddin/FontPreview.aua
   - Path: UltimateAddin/ItemAlign.aua
-    Sha256: 41052530f1aba6724a2a0cee3711ed1d23f30f1f73587473965ccf2247072c7f
+    SHA256: 41052530f1aba6724a2a0cee3711ed1d23f30f1f73587473965ccf2247072c7f
     Install:
       TargetPath: plugins/UltimateAddin/ItemAlign.aua
   - Path: UltimateAddin/LastFrame.aua
-    Sha256: 5c53b59a9563fea41bcac9fc6e2fe8445b7dc30980059692825dc422bcdb7e4d
+    SHA256: 5c53b59a9563fea41bcac9fc6e2fe8445b7dc30980059692825dc422bcdb7e4d
     Install:
       TargetPath: plugins/UltimateAddin/LastFrame.aua
   - Path: UltimateAddin/Namecage.aua
-    Sha256: 4cf040add4f9933475ebe518495e43cc85ef57879e7b0446e3106ec6b4dbae52
+    SHA256: 4cf040add4f9933475ebe518495e43cc85ef57879e7b0446e3106ec6b4dbae52
     Install:
       TargetPath: plugins/UltimateAddin/Namecage.aua
   - Path: UltimateAddin/Nest.aua
-    Sha256: 8f174f37c52d3efbc1b31ead38c4c371f68e03dd73b6e804f818e219760b0a3c
+    SHA256: 8f174f37c52d3efbc1b31ead38c4c371f68e03dd73b6e804f818e219760b0a3c
     Install:
       TargetPath: plugins/UltimateAddin/Nest.aua
   - Path: UltimateAddin/SceneSelect.aua
-    Sha256: 0d5b3009d649ff93a06e75b004c87cdf851eeb6c538339d0d3c189f7c5472e8c
+    SHA256: 0d5b3009d649ff93a06e75b004c87cdf851eeb6c538339d0d3c189f7c5472e8c
     Install:
       TargetPath: plugins/UltimateAddin/SceneSelect.aua
   - Path: UltimateAddin/SingleOut.aua
-    Sha256: 0c0e92668798c2af0b68123b2a98490681d78ba39bd05b21f6db1d72516f9049
+    SHA256: 0c0e92668798c2af0b68123b2a98490681d78ba39bd05b21f6db1d72516f9049
     Install:
       TargetPath: plugins/UltimateAddin/SingleOut.aua
   - Path: UltimateAddin/TextSplit.aua
-    Sha256: 11c8dd3fb0d8c4e29d3d55efcdb92009c746d92bd0f0786ed177de7fe997eaa7
+    SHA256: 11c8dd3fb0d8c4e29d3d55efcdb92009c746d92bd0f0786ed177de7fe997eaa7
     Install:
       TargetPath: plugins/UltimateAddin/TextSplit.aua
   - Path: UltimateConfig/AddinOnOff.ini
-    Sha256: cacdcd512b2cdb5d1b14985bbf93cc211916d2a6c67381878e1b0643baf28ccd
+    SHA256: cacdcd512b2cdb5d1b14985bbf93cc211916d2a6c67381878e1b0643baf28ccd
     Install:
       TargetPath: plugins/UltimateConfig/AddinOnOff.ini
       ConfFile: true
   - Path: UltimateConfig/ColorCode.ini
-    Sha256: eb096d5903fa69f0b52f445e8a40715b4911055d68cb5cdb7bb2002d8b8ae396
+    SHA256: eb096d5903fa69f0b52f445e8a40715b4911055d68cb5cdb7bb2002d8b8ae396
     Install:
       TargetPath: plugins/UltimateConfig/ColorCode.ini
       ConfFile: true
   - Path: UltimateConfig/Dark.xml
-    Sha256: 6b46b4e541620f9bc0105219189978b96966bf3c155ad4729de546b25d6cd1e7
+    SHA256: 6b46b4e541620f9bc0105219189978b96966bf3c155ad4729de546b25d6cd1e7
     Install:
       TargetPath: plugins/UltimateConfig/Dark.xml
       ConfFile: true
   - Path: UltimateConfig/easing.png
-    Sha256: e126e0a167f6f1d2771631254125861bd59faf9271d673bc2c9c729d6af81999
+    SHA256: e126e0a167f6f1d2771631254125861bd59faf9271d673bc2c9c729d6af81999
     Install:
       TargetPath: plugins/UltimateConfig/easing.png
   - Path: UltimateConfig/easing2.png
-    Sha256: b68a9d4b8e5315451e596ab0ae19f373b767a80d0718c7f806ce43ddcec997f2
+    SHA256: b68a9d4b8e5315451e596ab0ae19f373b767a80d0718c7f806ce43ddcec997f2
     Install:
       TargetPath: plugins/UltimateConfig/easing2.png
   - Path: UltimateConfig/easing3.png
-    Sha256: f7234fe1eea22711c254a0d793b3f1309b21d41be7785e58fd1d906c27c0b34e
+    SHA256: f7234fe1eea22711c254a0d793b3f1309b21d41be7785e58fd1d906c27c0b34e
     Install:
       TargetPath: plugins/UltimateConfig/easing3.png
   - Path: UltimateConfig/EasingSelect.xml
-    Sha256: c654a71c5ac3b304245031c57395a29bc71bca0f89dfa87a4412c94e1688a699
+    SHA256: c654a71c5ac3b304245031c57395a29bc71bca0f89dfa87a4412c94e1688a699
     Install:
       TargetPath: plugins/UltimateConfig/EasingSelect.xml
       ConfFile: true
   - Path: UltimateConfig/EditBoxTweaker.ini
-    Sha256: 8460354c141dafd4e31fd59689dd31cfe4f3d81e616a0de664d35d3890f76b07
+    SHA256: 8460354c141dafd4e31fd59689dd31cfe4f3d81e616a0de664d35d3890f76b07
     Install:
       TargetPath: plugins/UltimateConfig/EditBoxTweaker.ini
       ConfFile: true
   - Path: UltimateConfig/EncodeGuard.ini
-    Sha256: 643405cac7a9776a140d6b596f4ff78322cca124488edbde1722505fe176ee0c
+    SHA256: 643405cac7a9776a140d6b596f4ff78322cca124488edbde1722505fe176ee0c
     Install:
       TargetPath: plugins/UltimateConfig/EncodeGuard.ini
       ConfFile: true
   - Path: UltimateConfig/ExEditTweaker.ini
-    Sha256: a8e622c5bcb2860234b175e70bf12292224c707d6403a2547487576c8af69354
+    SHA256: a8e622c5bcb2860234b175e70bf12292224c707d6403a2547487576c8af69354
     Install:
       TargetPath: plugins/UltimateConfig/ExEditTweaker.ini
       ConfFile: true
   - Path: UltimateConfig/Filer.xml
-    Sha256: ec5f63623a1c0bab1b078732e92d8ba311c0842ea01b7e851c02eacf68ac00c6
+    SHA256: ec5f63623a1c0bab1b078732e92d8ba311c0842ea01b7e851c02eacf68ac00c6
     Install:
       TargetPath: plugins/UltimateConfig/Filer.xml
       ConfFile: true
   - Path: UltimateConfig/FilterDrag.ini
-    Sha256: 1b0e75ced70f4cdf7acd03de068601722c3c177cb2e112532f6439460cc5d6d6
+    SHA256: 1b0e75ced70f4cdf7acd03de068601722c3c177cb2e112532f6439460cc5d6d6
     Install:
       TargetPath: plugins/UltimateConfig/FilterDrag.ini
       ConfFile: true
   - Path: UltimateConfig/FontPreview.ini
-    Sha256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
+    SHA256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
     Install:
       TargetPath: plugins/UltimateConfig/FontPreview.ini
       ConfFile: true
   - Path: UltimateConfig/ItemAlign.ini
-    Sha256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
+    SHA256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
     Install:
       TargetPath: plugins/UltimateConfig/ItemAlign.ini
       ConfFile: true
   - Path: UltimateConfig/LastFrame.ini
-    Sha256: b94205e4d8d56d7a43d97ae4a25181faf89071b3ffbbda0c784c60b7f5c7c0d2
+    SHA256: b94205e4d8d56d7a43d97ae4a25181faf89071b3ffbbda0c784c60b7f5c7c0d2
     Install:
       TargetPath: plugins/UltimateConfig/LastFrame.ini
       ConfFile: true
   - Path: UltimateConfig/Nest.ini
-    Sha256: a70d1bafd08b61c8f231b7f10700ca6c301654b3739822c4419219dd2015410f
+    SHA256: a70d1bafd08b61c8f231b7f10700ca6c301654b3739822c4419219dd2015410f
     Install:
       TargetPath: plugins/UltimateConfig/Nest.ini
       ConfFile: true
   - Path: UltimateConfig/SceneSelect.ini
-    Sha256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
+    SHA256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
     Install:
       TargetPath: plugins/UltimateConfig/SceneSelect.ini
       ConfFile: true
   - Path: UltimateConfig/SingleOut.ini
-    Sha256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
+    SHA256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
     Install:
       TargetPath: plugins/UltimateConfig/SingleOut.ini
       ConfFile: true
   - Path: UltimateConfig/TextSplit.ini
-    Sha256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
+    SHA256: 8aaacdb41ddefea64de69ea67cef6f5f74871c04ead3dc9db293644aa8edb522
     Install:
       TargetPath: plugins/UltimateConfig/TextSplit.ini
       ConfFile: true
   - Path: UltimateConfig/Skin/AdobeDark.xml
-    Sha256: 279d993203267ba74e86f7365c96990bce51b03b489274d1419f8a04f83619bd
+    SHA256: 279d993203267ba74e86f7365c96990bce51b03b489274d1419f8a04f83619bd
     Install:
       TargetPath: plugins/UltimateConfig/Skin/AdobeDark.xml
   - Path: UltimateConfig/Skin/AstroDark.xml
-    Sha256: 13444fb5fbbc63dfd5c53489009824bd77f7e711ce93d031515c265e450dd053
+    SHA256: 13444fb5fbbc63dfd5c53489009824bd77f7e711ce93d031515c265e450dd053
     Install:
       TargetPath: plugins/UltimateConfig/Skin/AstroDark.xml
   - Path: UltimateConfig/Skin/CherryDark.xml
-    Sha256: 2f2fa812ed5420bbe71a8e321d281f41acf2a5179a4c17185a3241a71204819d
+    SHA256: 2f2fa812ed5420bbe71a8e321d281f41acf2a5179a4c17185a3241a71204819d
     Install:
       TargetPath: plugins/UltimateConfig/Skin/CherryDark.xml
   - Path: UltimateConfig/Skin/ClassicStyle.xml
-    Sha256: 38bb92c5e815af076f768478082e4df7798a81adcc22ff80b159f2cdd3a84ab1
+    SHA256: 38bb92c5e815af076f768478082e4df7798a81adcc22ff80b159f2cdd3a84ab1
     Install:
       TargetPath: plugins/UltimateConfig/Skin/ClassicStyle.xml
   - Path: UltimateConfig/Skin/DiscordDark.xml
-    Sha256: 6eda385afb5be819fe95d1418dca55b3fc2870ccd46b9f4254145119ff57a193
+    SHA256: 6eda385afb5be819fe95d1418dca55b3fc2870ccd46b9f4254145119ff57a193
     Install:
       TargetPath: plugins/UltimateConfig/Skin/DiscordDark.xml
   - Path: UltimateConfig/Skin/DiscordLight.xml
-    Sha256: 7d9cbbbd7c209660c65d97357726e95a730749f779215067b2041fdfd81a65a7
+    SHA256: 7d9cbbbd7c209660c65d97357726e95a730749f779215067b2041fdfd81a65a7
     Install:
       TargetPath: plugins/UltimateConfig/Skin/DiscordLight.xml
   - Path: UltimateConfig/Skin/FutureDark.xml
-    Sha256: d86ad6202c820959babdf086cb1584c8660b4acd16c19bcbfdad5568b4001d95
+    SHA256: d86ad6202c820959babdf086cb1584c8660b4acd16c19bcbfdad5568b4001d95
     Install:
       TargetPath: plugins/UltimateConfig/Skin/FutureDark.xml
   - Path: UltimateConfig/Skin/minaDark.xml
-    Sha256: 44813299b0063663f704cbbc2133142532c51e092dd91252ba78459e19df9dc7
+    SHA256: 44813299b0063663f704cbbc2133142532c51e092dd91252ba78459e19df9dc7
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaDark.xml
   - Path: UltimateConfig/Skin/minaLight.xml
-    Sha256: df500b7a97f233efc8672724690b027df9f0a9de3d8ab0e2e0f5fadc9a07e509
+    SHA256: df500b7a97f233efc8672724690b027df9f0a9de3d8ab0e2e0f5fadc9a07e509
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaLight.xml
   - Path: UltimateConfig/Skin/README.txt
-    Sha256: f3aeec267edd75afc7b74c43f32abb48fb095749ba763217ada10000a5c3f875
+    SHA256: f3aeec267edd75afc7b74c43f32abb48fb095749ba763217ada10000a5c3f875
     Install:
       TargetPath: plugins/UltimateConfig/Skin/README.txt
   - Path: UltimateConfig/Skin/RoundDarkLime.xml
-    Sha256: 0f2ba93457b06447fa2b60de8a01f4f60d60f6cfd755701aa893495c12b228a7
+    SHA256: 0f2ba93457b06447fa2b60de8a01f4f60d60f6cfd755701aa893495c12b228a7
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundDarkLime.xml
   - Path: UltimateConfig/Skin/RoundDarkPink.xml
-    Sha256: bf57abb307cc3e1f7e6267ca1d9c5ea51ef180133298743d0ef72d8b232d3e1a
+    SHA256: bf57abb307cc3e1f7e6267ca1d9c5ea51ef180133298743d0ef72d8b232d3e1a
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundDarkPink.xml
   - Path: UltimateConfig/Skin/RoundDarkSky.xml
-    Sha256: 299f90721081ccaccbbcf21b4cbde96c925c5ba5cdb49e1f377ff85df2a08285
+    SHA256: 299f90721081ccaccbbcf21b4cbde96c925c5ba5cdb49e1f377ff85df2a08285
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundDarkSky.xml
   - Path: UltimateConfig/Skin/RoundLightGreen.xml
-    Sha256: 404883938358b3e29e798e3c84be7cc2c930d2b6f36f135b5e7032a71c25d6f0
+    SHA256: 404883938358b3e29e798e3c84be7cc2c930d2b6f36f135b5e7032a71c25d6f0
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundLightGreen.xml
   - Path: UltimateConfig/Skin/RoundLightPink.xml
-    Sha256: 39b3707cb3d6fde938b103d0c2894fe3d1b0ee692f128c67363f538270c4ad89
+    SHA256: 39b3707cb3d6fde938b103d0c2894fe3d1b0ee692f128c67363f538270c4ad89
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundLightPink.xml
   - Path: UltimateConfig/Skin/RoundLightSky.xml
-    Sha256: 90aeeb383427921d17282129d8cb69c160db4a65dc448177063a057c43340e56
+    SHA256: 90aeeb383427921d17282129d8cb69c160db4a65dc448177063a057c43340e56
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundLightSky.xml
   - Path: UltimateConfig/Skin/SushiLight.xml
-    Sha256: 823b7effb7f2ce40fe0030cd923be591b014321badfb6746cab2620d2bbdca15
+    SHA256: 823b7effb7f2ce40fe0030cd923be591b014321badfb6746cab2620d2bbdca15
     Install:
       TargetPath: plugins/UltimateConfig/Skin/SushiLight.xml
   - Path: UltimateConfig/Skin/Vivid Light.xml
-    Sha256: 10de2f43a41bac4d719233c4b23fb253d124a35b4b7d9eaf46aaad513643762e
+    SHA256: 10de2f43a41bac4d719233c4b23fb253d124a35b4b7d9eaf46aaad513643762e
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Vivid Light.xml
   - Path: UltimateConfig/Skin/黒窓・暗.xml
-    Sha256: f526606e5fc442b22d6b78a32d474be87aa80800cb9d0f679372a2383447003b
+    SHA256: f526606e5fc442b22d6b78a32d474be87aa80800cb9d0f679372a2383447003b
     Install:
       TargetPath: plugins/UltimateConfig/Skin/黒窓・暗.xml
   - Path: UltimateConfig/Skin/黒窓・明.xml
-    Sha256: 3bdc0ed33f4c5a3326511d3e22dd2a5db50e387432e356a640efea9789e0a78c
+    SHA256: 3bdc0ed33f4c5a3326511d3e22dd2a5db50e387432e356a640efea9789e0a78c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/黒窓・明.xml
   - Path: UltimateConfig/Skin/AdobeDark/_Settings.xml
-    Sha256: edad91a0d6e6dd07c5191006602319f2782f16f684033f690b362d5d9c4f3708
+    SHA256: edad91a0d6e6dd07c5191006602319f2782f16f684033f690b362d5d9c4f3708
     Install:
       TargetPath: plugins/UltimateConfig/Skin/AdobeDark/_Settings.xml
   - Path: UltimateConfig/Skin/AdobeDark/Button.xml
-    Sha256: 01ee37a80ee9b5ef0cb4ce61726375d15dbddc26eee0f02d631db31e915d041c
+    SHA256: 01ee37a80ee9b5ef0cb4ce61726375d15dbddc26eee0f02d631db31e915d041c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/AdobeDark/Button.xml
   - Path: UltimateConfig/Skin/AdobeDark/ScrollBar.xml
-    Sha256: 38a7f79420b29386274f810c2c3c92403c36eb7ac2d7cc987bcd8baea30f64cf
+    SHA256: 38a7f79420b29386274f810c2c3c92403c36eb7ac2d7cc987bcd8baea30f64cf
     Install:
       TargetPath: plugins/UltimateConfig/Skin/AdobeDark/ScrollBar.xml
   - Path: UltimateConfig/Skin/AstroDark/_Settings.xml
-    Sha256: 6a8515e7f5163c1889156ec4033a325489355c3582709923d0f96939513c3282
+    SHA256: 6a8515e7f5163c1889156ec4033a325489355c3582709923d0f96939513c3282
     Install:
       TargetPath: plugins/UltimateConfig/Skin/AstroDark/_Settings.xml
   - Path: UltimateConfig/Skin/AstroDark/Button.xml
-    Sha256: e63a0f783419f3fdfeab5eb31809a4c0749038f1c7413da0526326b4d4fe045c
+    SHA256: e63a0f783419f3fdfeab5eb31809a4c0749038f1c7413da0526326b4d4fe045c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/AstroDark/Button.xml
   - Path: UltimateConfig/Skin/CherryDark/_Settings.xml
-    Sha256: 4da1c30524a3f97a54e9e6583d13b6e8fcbddc0fa8e621b9645b24f95ec3f95b
+    SHA256: 4da1c30524a3f97a54e9e6583d13b6e8fcbddc0fa8e621b9645b24f95ec3f95b
     Install:
       TargetPath: plugins/UltimateConfig/Skin/CherryDark/_Settings.xml
   - Path: UltimateConfig/Skin/ClassicStyle/ClassicStyle_Button.xml
-    Sha256: 2b5be411c8e8fe35d5752a6beca2aae29918c8f827714c09749efbdb12bb7491
+    SHA256: 2b5be411c8e8fe35d5752a6beca2aae29918c8f827714c09749efbdb12bb7491
     Install:
       TargetPath: plugins/UltimateConfig/Skin/ClassicStyle/ClassicStyle_Button.xml
   - Path: UltimateConfig/Skin/ClassicStyle/ClassicStyle_Header.xml
-    Sha256: 62d9e6b2ea2f1c9518d381df04de351ff1edbbd7ee038ccf1a8b624affd6f85a
+    SHA256: 62d9e6b2ea2f1c9518d381df04de351ff1edbbd7ee038ccf1a8b624affd6f85a
     Install:
       TargetPath: plugins/UltimateConfig/Skin/ClassicStyle/ClassicStyle_Header.xml
   - Path: UltimateConfig/Skin/ClassicStyle/ClassicStyle_ScrollBar.xml
-    Sha256: ce0bc0b4d006115e6cd96f3fc26cc34c82c22756f248c8014d8bfcbab156147c
+    SHA256: ce0bc0b4d006115e6cd96f3fc26cc34c82c22756f248c8014d8bfcbab156147c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/ClassicStyle/ClassicStyle_ScrollBar.xml
   - Path: UltimateConfig/Skin/ClassicStyle/ClassicStyle_Spin.xml
-    Sha256: 47af567b2ac6e907681e37cd639d29252f109c722c19fe4f764744e7f4aed4ff
+    SHA256: 47af567b2ac6e907681e37cd639d29252f109c722c19fe4f764744e7f4aed4ff
     Install:
       TargetPath: plugins/UltimateConfig/Skin/ClassicStyle/ClassicStyle_Spin.xml
   - Path: UltimateConfig/Skin/ClassicStyle/ClassicStyle_Static.xml
-    Sha256: 5e0b34c3c2205be0f75ac7650b608d6e625d85ddf8c2400317bb00181605da18
+    SHA256: 5e0b34c3c2205be0f75ac7650b608d6e625d85ddf8c2400317bb00181605da18
     Install:
       TargetPath: plugins/UltimateConfig/Skin/ClassicStyle/ClassicStyle_Static.xml
   - Path: UltimateConfig/Skin/ClassicStyle/ClassicStyle.xml
-    Sha256: 001f570246868927ea87e3e4e4b71c5ae69890fda74ea317c0fc7060e506ba61
+    SHA256: 001f570246868927ea87e3e4e4b71c5ae69890fda74ea317c0fc7060e506ba61
     Install:
       TargetPath: plugins/UltimateConfig/Skin/ClassicStyle/ClassicStyle.xml
   - Path: UltimateConfig/Skin/Common/3D_Button.xml
-    Sha256: 4c2bcfa1bd8d81080b695f9762f58a2332cf961f3c50879099ad5a5e4a4b9b8c
+    SHA256: 4c2bcfa1bd8d81080b695f9762f58a2332cf961f3c50879099ad5a5e4a4b9b8c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/3D_Button.xml
   - Path: UltimateConfig/Skin/Common/3D_Header.xml
-    Sha256: 62d9e6b2ea2f1c9518d381df04de351ff1edbbd7ee038ccf1a8b624affd6f85a
+    SHA256: 62d9e6b2ea2f1c9518d381df04de351ff1edbbd7ee038ccf1a8b624affd6f85a
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/3D_Header.xml
   - Path: UltimateConfig/Skin/Common/3D_ScrollBar.xml
-    Sha256: ce0bc0b4d006115e6cd96f3fc26cc34c82c22756f248c8014d8bfcbab156147c
+    SHA256: ce0bc0b4d006115e6cd96f3fc26cc34c82c22756f248c8014d8bfcbab156147c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/3D_ScrollBar.xml
   - Path: UltimateConfig/Skin/Common/3D_Spin.xml
-    Sha256: 47af567b2ac6e907681e37cd639d29252f109c722c19fe4f764744e7f4aed4ff
+    SHA256: 47af567b2ac6e907681e37cd639d29252f109c722c19fe4f764744e7f4aed4ff
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/3D_Spin.xml
   - Path: UltimateConfig/Skin/Common/3D_Static.xml
-    Sha256: 5e0b34c3c2205be0f75ac7650b608d6e625d85ddf8c2400317bb00181605da18
+    SHA256: 5e0b34c3c2205be0f75ac7650b608d6e625d85ddf8c2400317bb00181605da18
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/3D_Static.xml
   - Path: UltimateConfig/Skin/Common/Button.xml
-    Sha256: 3090f57049b12a6ecc7676e554f30f2368a044677fa0950413b1f6d8835d22f4
+    SHA256: 3090f57049b12a6ecc7676e554f30f2368a044677fa0950413b1f6d8835d22f4
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Button.xml
   - Path: UltimateConfig/Skin/Common/ComboBox.xml
-    Sha256: c687c2d8a67f3974d340342172bfe853588d26f148e1c38e751f3a93f661f9ea
+    SHA256: c687c2d8a67f3974d340342172bfe853588d26f148e1c38e751f3a93f661f9ea
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/ComboBox.xml
   - Path: UltimateConfig/Skin/Common/CommandModule.xml
-    Sha256: f41466aa1a2d4faff0d459ed5226250f73301d61d42f762a33f11a846b07fe63
+    SHA256: f41466aa1a2d4faff0d459ed5226250f73301d61d42f762a33f11a846b07fe63
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/CommandModule.xml
   - Path: UltimateConfig/Skin/Common/CommonItemsDialog.xml
-    Sha256: 4f174a5763b181545ef3c0aeb39e44737b425d53d62929e750ba1bdd137abbec
+    SHA256: 4f174a5763b181545ef3c0aeb39e44737b425d53d62929e750ba1bdd137abbec
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/CommonItemsDialog.xml
   - Path: UltimateConfig/Skin/Common/Dialog.xml
-    Sha256: ba1ba3d2b30535b675c5e7555cd3281503aa16dfb374f144626c951495bc9c28
+    SHA256: ba1ba3d2b30535b675c5e7555cd3281503aa16dfb374f144626c951495bc9c28
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Dialog.xml
   - Path: UltimateConfig/Skin/Common/Edit.xml
-    Sha256: d6e9bec9e4d516c34e738adce31cc613c9987643384cfcd130fd54540be276c0
+    SHA256: d6e9bec9e4d516c34e738adce31cc613c9987643384cfcd130fd54540be276c0
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Edit.xml
   - Path: UltimateConfig/Skin/Common/ExEdit.xml
-    Sha256: ade6fe1f7b6cf0fecb2e3bf8ee9f5d6a9fcab2e7d2df1301563e9162779539c7
+    SHA256: ade6fe1f7b6cf0fecb2e3bf8ee9f5d6a9fcab2e7d2df1301563e9162779539c7
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/ExEdit.xml
   - Path: UltimateConfig/Skin/Common/Header.xml
-    Sha256: dc5a067b9e4712e91f105f63b1a0eb44d4dcde76a65bf22360c363dd241bde85
+    SHA256: dc5a067b9e4712e91f105f63b1a0eb44d4dcde76a65bf22360c363dd241bde85
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Header.xml
   - Path: UltimateConfig/Skin/Common/ListBox.xml
-    Sha256: d41dbf8d9b28547c18ab1be55697ce59de6ec001b6603adc4e27f293a23d9cf7
+    SHA256: d41dbf8d9b28547c18ab1be55697ce59de6ec001b6603adc4e27f293a23d9cf7
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/ListBox.xml
   - Path: UltimateConfig/Skin/Common/ListView.xml
-    Sha256: 6510be3c5e5700573db54e9f45f68c811b4506b6e0879dc4b4ab3bc69a45ff8d
+    SHA256: 6510be3c5e5700573db54e9f45f68c811b4506b6e0879dc4b4ab3bc69a45ff8d
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/ListView.xml
   - Path: UltimateConfig/Skin/Common/Menu.xml
-    Sha256: a0b043ed97f587eb28bfb02c03915b64098c1d4d714638c35eea14dcbf39940f
+    SHA256: a0b043ed97f587eb28bfb02c03915b64098c1d4d714638c35eea14dcbf39940f
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Menu.xml
   - Path: UltimateConfig/Skin/Common/PreviewPane.xml
-    Sha256: 3fca9e51beb735aae4180de76b0da524b32a3f3f560d49cbec18814643fb656c
+    SHA256: 3fca9e51beb735aae4180de76b0da524b32a3f3f560d49cbec18814643fb656c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/PreviewPane.xml
   - Path: UltimateConfig/Skin/Common/ScrollBar.xml
-    Sha256: 44b477769e40cc2eacc6e176df6673bbd6e6a9427c395f3d5582240650cb24db
+    SHA256: 44b477769e40cc2eacc6e176df6673bbd6e6a9427c395f3d5582240650cb24db
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/ScrollBar.xml
   - Path: UltimateConfig/Skin/Common/Spin.xml
-    Sha256: 3c13c0cf55a4eb91958ed0d3b550530e64ef098aa67fb3789873563b51d7f2e3
+    SHA256: 3c13c0cf55a4eb91958ed0d3b550530e64ef098aa67fb3789873563b51d7f2e3
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Spin.xml
   - Path: UltimateConfig/Skin/Common/Static.xml
-    Sha256: 41c67488e589c853222df9412c6e4f8a1a241083c4085d8a099629838eb1c181
+    SHA256: 41c67488e589c853222df9412c6e4f8a1a241083c4085d8a099629838eb1c181
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Static.xml
   - Path: UltimateConfig/Skin/Common/Tab.xml
-    Sha256: 589bfb357734365488a1275f35d233fc06482beb2a6f98698aa59f42092774cb
+    SHA256: 589bfb357734365488a1275f35d233fc06482beb2a6f98698aa59f42092774cb
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Tab.xml
   - Path: UltimateConfig/Skin/Common/ToolBar.xml
-    Sha256: d8a2200d10e32f74c70be8c5f72f936e61e723b1a39794a5739547f368319ea2
+    SHA256: d8a2200d10e32f74c70be8c5f72f936e61e723b1a39794a5739547f368319ea2
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/ToolBar.xml
   - Path: UltimateConfig/Skin/Common/ToolTip.xml
-    Sha256: 0d188074144470315245d8110480972dd72fe19bd805d40738b3355b0ca9ed12
+    SHA256: 0d188074144470315245d8110480972dd72fe19bd805d40738b3355b0ca9ed12
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/ToolTip.xml
   - Path: UltimateConfig/Skin/Common/TrackBar.xml
-    Sha256: 38f7c219a87c54e885020a2adb155fa239dfeebaafe68452b21eb8c2eb748bac
+    SHA256: 38f7c219a87c54e885020a2adb155fa239dfeebaafe68452b21eb8c2eb748bac
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/TrackBar.xml
   - Path: UltimateConfig/Skin/Common/TreeView.xml
-    Sha256: 2a0588044092871f35c373c445e5f7d081bdff23ecb85fcfb2623412db1e771e
+    SHA256: 2a0588044092871f35c373c445e5f7d081bdff23ecb85fcfb2623412db1e771e
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/TreeView.xml
   - Path: UltimateConfig/Skin/Common/Window.xml
-    Sha256: 3eafda84b97425bacd4f0315537ac767b9b1fae2d163620dd87bc3058eeb5195
+    SHA256: 3eafda84b97425bacd4f0315537ac767b9b1fae2d163620dd87bc3058eeb5195
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Common/Window.xml
   - Path: UltimateConfig/Skin/DiscordDark/_Settings.xml
-    Sha256: b15e321e33908deef433e1cfb2944e2af0c14b511c9ec800864ec2cf1e2a84b9
+    SHA256: b15e321e33908deef433e1cfb2944e2af0c14b511c9ec800864ec2cf1e2a84b9
     Install:
       TargetPath: plugins/UltimateConfig/Skin/DiscordDark/_Settings.xml
   - Path: UltimateConfig/Skin/DiscordLight/_Settings.xml
-    Sha256: 15de266510bab00e8ee57b3e394bc37d0b45a36d5db9ff9ac4a536e53301db19
+    SHA256: 15de266510bab00e8ee57b3e394bc37d0b45a36d5db9ff9ac4a536e53301db19
     Install:
       TargetPath: plugins/UltimateConfig/Skin/DiscordLight/_Settings.xml
   - Path: UltimateConfig/Skin/FutureDark/_Settings.xml
-    Sha256: 0a1ee506439aca90658025bb59c9571d159f95e2ef3590a81c4f2112a813eeae
+    SHA256: 0a1ee506439aca90658025bb59c9571d159f95e2ef3590a81c4f2112a813eeae
     Install:
       TargetPath: plugins/UltimateConfig/Skin/FutureDark/_Settings.xml
   - Path: UltimateConfig/Skin/minaDark/_Settings.xml
-    Sha256: 793fb59a64ff80f7b717d3f5958ea47d8749303501735fbcbef53dec51eb3c5d
+    SHA256: 793fb59a64ff80f7b717d3f5958ea47d8749303501735fbcbef53dec51eb3c5d
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaDark/_Settings.xml
   - Path: UltimateConfig/Skin/minaDark/Button.xml
-    Sha256: e63a0f783419f3fdfeab5eb31809a4c0749038f1c7413da0526326b4d4fe045c
+    SHA256: e63a0f783419f3fdfeab5eb31809a4c0749038f1c7413da0526326b4d4fe045c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaDark/Button.xml
   - Path: UltimateConfig/Skin/minaDark/ComboBox.xml
-    Sha256: 9d729e133f32cd9a91154ce9fae99fa537b93eb882ca28c051b53df38717515a
+    SHA256: 9d729e133f32cd9a91154ce9fae99fa537b93eb882ca28c051b53df38717515a
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaDark/ComboBox.xml
   - Path: UltimateConfig/Skin/minaDark/Menu.xml
-    Sha256: 6899558e78a2bdfa95f4684f569da8ea628049fdde444ee9ff1fdadb1830e4d6
+    SHA256: 6899558e78a2bdfa95f4684f569da8ea628049fdde444ee9ff1fdadb1830e4d6
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaDark/Menu.xml
   - Path: UltimateConfig/Skin/minaDark/ScrollBar.xml
-    Sha256: 1daac5d399dd6fb374a3c96a49270312f6ba8f71b1bb2b1214640d422947d8a9
+    SHA256: 1daac5d399dd6fb374a3c96a49270312f6ba8f71b1bb2b1214640d422947d8a9
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaDark/ScrollBar.xml
   - Path: UltimateConfig/Skin/minaDark/TrackBar.xml
-    Sha256: f565fdeeab15b3b8ecba155826f1b843943b6ebb6bdd041c7faf2a07f3cc45c5
+    SHA256: f565fdeeab15b3b8ecba155826f1b843943b6ebb6bdd041c7faf2a07f3cc45c5
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaDark/TrackBar.xml
   - Path: UltimateConfig/Skin/minaLight/_Settings.xml
-    Sha256: 29eccac52a0a358b86fee08e9e5ea0cc970ef2c90683dfb38f9dfaeb5bea43d6
+    SHA256: 29eccac52a0a358b86fee08e9e5ea0cc970ef2c90683dfb38f9dfaeb5bea43d6
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaLight/_Settings.xml
   - Path: UltimateConfig/Skin/minaLight/Button.xml
-    Sha256: e63a0f783419f3fdfeab5eb31809a4c0749038f1c7413da0526326b4d4fe045c
+    SHA256: e63a0f783419f3fdfeab5eb31809a4c0749038f1c7413da0526326b4d4fe045c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaLight/Button.xml
   - Path: UltimateConfig/Skin/minaLight/ComboBox.xml
-    Sha256: 9d729e133f32cd9a91154ce9fae99fa537b93eb882ca28c051b53df38717515a
+    SHA256: 9d729e133f32cd9a91154ce9fae99fa537b93eb882ca28c051b53df38717515a
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaLight/ComboBox.xml
   - Path: UltimateConfig/Skin/minaLight/Menu.xml
-    Sha256: 125048bc0111a1b2895a7fd4d75a321ce32c17514919cd5a3f8ce532ef0ccfb1
+    SHA256: 125048bc0111a1b2895a7fd4d75a321ce32c17514919cd5a3f8ce532ef0ccfb1
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaLight/Menu.xml
   - Path: UltimateConfig/Skin/minaLight/ScrollBar.xml
-    Sha256: 1daac5d399dd6fb374a3c96a49270312f6ba8f71b1bb2b1214640d422947d8a9
+    SHA256: 1daac5d399dd6fb374a3c96a49270312f6ba8f71b1bb2b1214640d422947d8a9
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaLight/ScrollBar.xml
   - Path: UltimateConfig/Skin/minaLight/TrackBar.xml
-    Sha256: f565fdeeab15b3b8ecba155826f1b843943b6ebb6bdd041c7faf2a07f3cc45c5
+    SHA256: f565fdeeab15b3b8ecba155826f1b843943b6ebb6bdd041c7faf2a07f3cc45c5
     Install:
       TargetPath: plugins/UltimateConfig/Skin/minaLight/TrackBar.xml
   - Path: UltimateConfig/Skin/RoundDarkLime/_Settings.xml
-    Sha256: 33235f8d16ca5f4fce0fd56ebb7729625206c899eebba0902952ef2bdee7af46
+    SHA256: 33235f8d16ca5f4fce0fd56ebb7729625206c899eebba0902952ef2bdee7af46
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundDarkLime/_Settings.xml
   - Path: UltimateConfig/Skin/RoundDarkPink/_Settings.xml
-    Sha256: 05f8a466b659c72d60b2c6d2013b69237b4751d0b3a69bd84f2c24b4e76957c7
+    SHA256: 05f8a466b659c72d60b2c6d2013b69237b4751d0b3a69bd84f2c24b4e76957c7
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundDarkPink/_Settings.xml
   - Path: UltimateConfig/Skin/RoundDarkSky/_Settings.xml
-    Sha256: df53dc6e20bf53f96c1c0c2017137404931867f87af42ee1e030aae9e143a71f
+    SHA256: df53dc6e20bf53f96c1c0c2017137404931867f87af42ee1e030aae9e143a71f
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundDarkSky/_Settings.xml
   - Path: UltimateConfig/Skin/RoundLightGreen/_Settings.xml
-    Sha256: 47c687cf4d40c6a5ed40f876c1fee9ba73cb9b9181837a555f976022b89b93e6
+    SHA256: 47c687cf4d40c6a5ed40f876c1fee9ba73cb9b9181837a555f976022b89b93e6
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundLightGreen/_Settings.xml
   - Path: UltimateConfig/Skin/RoundLightPink/_Settings.xml
-    Sha256: 34b5a40727053f40ef678f4b45c6995d1777c224eebf25c5517e0aaed7171dff
+    SHA256: 34b5a40727053f40ef678f4b45c6995d1777c224eebf25c5517e0aaed7171dff
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundLightPink/_Settings.xml
   - Path: UltimateConfig/Skin/RoundLightSky/_Settings.xml
-    Sha256: 8dd992d3ff73b44b5a947ed8d63ab1f1d20aae7fe0694d7017df70878b5a4b54
+    SHA256: 8dd992d3ff73b44b5a947ed8d63ab1f1d20aae7fe0694d7017df70878b5a4b54
     Install:
       TargetPath: plugins/UltimateConfig/Skin/RoundLightSky/_Settings.xml
   - Path: UltimateConfig/Skin/SushiLight/_Settings.xml
-    Sha256: e7b06ac2cd8ac0224d76258d9d685abc4afab7a732f52b4275679571897dc97d
+    SHA256: e7b06ac2cd8ac0224d76258d9d685abc4afab7a732f52b4275679571897dc97d
     Install:
       TargetPath: plugins/UltimateConfig/Skin/SushiLight/_Settings.xml
   - Path: UltimateConfig/Skin/Vivid Light/_Settings.xml
-    Sha256: 33876934a365685dbee46d7f315c1330721dcd75ef8f292e571fdfff6024b76c
+    SHA256: 33876934a365685dbee46d7f315c1330721dcd75ef8f292e571fdfff6024b76c
     Install:
       TargetPath: plugins/UltimateConfig/Skin/Vivid Light/_Settings.xml
   - Path: UltimateConfig/Skin/黒窓・明/_Settings.xml
-    Sha256: 86dc6c40fc37f0211994359253b22d75b16fd6ffe27626f91b1d38d6c3f60b14
+    SHA256: 86dc6c40fc37f0211994359253b22d75b16fd6ffe27626f91b1d38d6c3f60b14
     Install:
       TargetPath: plugins/UltimateConfig/Skin/黒窓・明/_Settings.xml
   - Path: UltimateConfig/Skin/黒窓・明/ScrollBar.xml
-    Sha256: 7cfd2616b9020284f747bdbc54bca57c36a97c330f552d7a038426d3c752c6f1
+    SHA256: 7cfd2616b9020284f747bdbc54bca57c36a97c330f552d7a038426d3c752c6f1
     Install:
       TargetPath: plugins/UltimateConfig/Skin/黒窓・明/ScrollBar.xml
   - Path: UltimateConfig/Skin/黒窓・暗/_Settings.xml
-    Sha256: a2143c1fac9e3400845da1848a6e601105fc732f3a8ba16c892e61dd9a558934
+    SHA256: a2143c1fac9e3400845da1848a6e601105fc732f3a8ba16c892e61dd9a558934
     Install:
       TargetPath: plugins/UltimateConfig/Skin/黒窓・暗/_Settings.xml
-ManifestVersion: 0.1.0
+Plugins:
+- Name: アルティメットプラグイン
+  Information: アルティメットプラグイン r14
+  Type: Filter
+  InstallPath: plugins/Ultimate.auf
+- Name: アルティメットプラグイン(音声)
+  Information: アルティメットプラグイン(音声)
+  Type: Filter
+  InstallPath: plugins/Ultimate.auf
+ManifestVersion: 0.3.0

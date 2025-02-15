@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: wndman
 DisplayName: ウィンドウマネージャー
 Version: 0.4.0
 ReleaseDate: 2020-11-18
 Section: Plugin/Other
-InstalledSize: 38
+InstalledSize: 38130
 Developer:
 - aoytsk
 Description: ウィンドウの配置を記録して切り替える機能を追加するプラグイン
@@ -14,14 +14,19 @@ Website:
 - https://aoytsk.blog.jp/aviutl/1470428.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/wndman.zip
-  Sha256: 6b1c561437aaa6aae674a19a3eaa1512cc21346c6308fcfba0ea2fa9409bbc2e
+  SHA256: 6b1c561437aaa6aae674a19a3eaa1512cc21346c6308fcfba0ea2fa9409bbc2e
   Files:
   - Path: wndman.auf
-    Sha256: 21c3df9185a7334e1a1a283390caa17e88e444d0d89bdd306044778e53155ada
+    SHA256: 21c3df9185a7334e1a1a283390caa17e88e444d0d89bdd306044778e53155ada
     Install:
       TargetPath: plugins/wndman.auf
   - Path: wndman.txt
-    Sha256: c7e0f2211a3ae83afc9a8ca4637667195866e8db66ef6c78c5074cae59b8f83b
+    SHA256: c7e0f2211a3ae83afc9a8ca4637667195866e8db66ef6c78c5074cae59b8f83b
 ConfFiles:
-  - plugins/wndman.ini
-ManifestVersion: 0.1.0
+- plugins/wndman.ini
+Plugins:
+- Name: ウィンドウマネージャー
+  Information: ウィンドウマネージャー version 0.3 by aoy
+  Type: Filter
+  InstallPath: plugins/wndman.auf
+ManifestVersion: 0.3.0

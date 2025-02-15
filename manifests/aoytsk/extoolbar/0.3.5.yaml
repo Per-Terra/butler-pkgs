@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: extoolbar
 DisplayName: 拡張ツールバー
@@ -8,7 +8,7 @@ ReleaseDate: 2016-01-31
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 112
+InstalledSize: 114415
 Developer:
 - aoytsk
 Description: 拡張編集用ツールバーを追加するプラグイン
@@ -16,28 +16,33 @@ Website:
 - https://aoytsk.blog.jp/aviutl/422768.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/extoolbar.zip
-  Sha256: fe245bd95ad76ddaa016487c00ce0c664a0cf2e5b52d666fa1088c1190b2fb32
+  SHA256: fe245bd95ad76ddaa016487c00ce0c664a0cf2e5b52d666fa1088c1190b2fb32
   Files:
   - Path: extoolbar.auf
-    Sha256: a603b2ff7e4965df176de14c13f290e22bffc886fd9915790e7f6690c9e4182c
+    SHA256: a603b2ff7e4965df176de14c13f290e22bffc886fd9915790e7f6690c9e4182c
     Install:
       TargetPath: plugins/extoolbar.auf
   - Path: extoolbar.txt
-    Sha256: 83f9f9ccb061a686448858eefb4647f08ad1a7e4ca627fe372b397bcbed2305d
+    SHA256: 83f9f9ccb061a686448858eefb4647f08ad1a7e4ca627fe372b397bcbed2305d
   - Path: extoolkey.tsv
-    Sha256: 21a88e2d2e3bda58de8ebc0a7ca0a0a9179208be4622e041fc92a0cbaada9fca
+    SHA256: 21a88e2d2e3bda58de8ebc0a7ca0a0a9179208be4622e041fc92a0cbaada9fca
   - Path: extoolbar/basic.bmp
-    Sha256: 8bfe46e77cda3fbd0fae7f42d45d4c068a439bd3dedb1f2d552a6c8b679e8c93
+    SHA256: 8bfe46e77cda3fbd0fae7f42d45d4c068a439bd3dedb1f2d552a6c8b679e8c93
   - Path: extoolbar/camera.bmp
-    Sha256: 4d9d69f2dca2262ff381501e0d4305a0c956b78184fcbd6d65d89119425bfd40
+    SHA256: 4d9d69f2dca2262ff381501e0d4305a0c956b78184fcbd6d65d89119425bfd40
   - Path: extoolbar/edit.bmp
-    Sha256: ae263f2d00a2cfabb83920e8ba917a51ce1543b5174f0c8fca280e6d0539343c
+    SHA256: ae263f2d00a2cfabb83920e8ba917a51ce1543b5174f0c8fca280e6d0539343c
   - Path: extoolbar/effect.bmp
-    Sha256: ee4d8cc85facfe018e3dd19bcaeec63d3322e0a509d1840b4b162af4b06f2109
+    SHA256: ee4d8cc85facfe018e3dd19bcaeec63d3322e0a509d1840b4b162af4b06f2109
   - Path: extoolbar/filter.bmp
-    Sha256: 7a050b6b7f80a1747d6ccf69c874e95d4a64fbfcb4b29fcad6e2e32c61e7b0a2
+    SHA256: 7a050b6b7f80a1747d6ccf69c874e95d4a64fbfcb4b29fcad6e2e32c61e7b0a2
   - Path: extoolbar/media.bmp
-    Sha256: d309f5ba0a307b59764c8a8df37cefedecd9cc171c55f0aa152ad6529e0b41ad
+    SHA256: d309f5ba0a307b59764c8a8df37cefedecd9cc171c55f0aa152ad6529e0b41ad
   - Path: extoolbar/new.bmp
-    Sha256: 9bce886301d6c9167234074cffc4ff11a734cb15e9a08f418db9762228dbf3a8
-ManifestVersion: 0.1.0
+    SHA256: 9bce886301d6c9167234074cffc4ff11a734cb15e9a08f418db9762228dbf3a8
+Plugins:
+- Name: 拡張ツールバー
+  Information: 拡張ツールバー ver 0.3.6 by aoy
+  Type: Filter
+  InstallPath: plugins/extoolbar.auf
+ManifestVersion: 0.3.0

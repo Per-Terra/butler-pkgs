@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: LevelMeter
 DisplayName: レベルメーター
 Version: 1.1.0
 ReleaseDate: 2022-07-14
 Section: Plugin/Other
-InstalledSize: 34
+InstalledSize: 33910
 Developer:
 - hebiiro
 Description: 音量のレベルメーターを表示するプラグイン
@@ -14,21 +14,26 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-LevelMeter
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-LevelMeter/releases/download/1.1.0/LevelMeter.1.1.0.zip
-  Sha256: b518c10220294e5f9d8d66258497fcb6bcf602d174864dbdc78a3dec9d3f6ce5
+  SHA256: b518c10220294e5f9d8d66258497fcb6bcf602d174864dbdc78a3dec9d3f6ce5
   Files:
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: LevelMeter.auf
-    Sha256: 33f02ee7182da2f8dedb4fbac6ac589ea52e83a0e42a587879d68d9192d28f2d
+    SHA256: 33f02ee7182da2f8dedb4fbac6ac589ea52e83a0e42a587879d68d9192d28f2d
     Install:
       TargetPath: plugins/LevelMeter.auf
   - Path: LevelMeter.ini
-    Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
     Install:
       TargetPath: plugins/LevelMeter.ini
       ConfFile: true
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 512ff1bb49e667733d0e6fe5ec310c924d8830fcb0845943270655f1eecd5e80
-ManifestVersion: 0.2.0
+    SHA256: 512ff1bb49e667733d0e6fe5ec310c924d8830fcb0845943270655f1eecd5e80
+Plugins:
+- Name: レベルメーター
+  Information: レベルメーター 1.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/LevelMeter.auf
+ManifestVersion: 0.3.0

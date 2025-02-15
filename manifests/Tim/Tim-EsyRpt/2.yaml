@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-EsyRpt
 DisplayName: 簡易リピーター
 Version: "2"
 ReleaseDate: 2012-11-10
 Section: Script
-InstalledSize: 4
+InstalledSize: 3951
 Developer:
 - Tim
 Description: 画像を繰り返し配置しますが、画像ループと比較して自由度が高いです。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/EsyRpt.zip
-  Sha256: 0d8c2b926aa3671c2090021f218382a95407d99fb8a9849b2beb0dad5f7de624
+  SHA256: 0d8c2b926aa3671c2090021f218382a95407d99fb8a9849b2beb0dad5f7de624
   Files:
   - Path: '@簡易リピーター.anm'
-    Sha256: eb18489dff18aac17e4a130a753f7a19851d1adf66b03e5b01e759966bbe504e
+    SHA256: eb18489dff18aac17e4a130a753f7a19851d1adf66b03e5b01e759966bbe504e
     Install:
       TargetPath: script/@簡易リピーター.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

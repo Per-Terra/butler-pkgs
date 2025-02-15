@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Toumei
 DisplayName: 拡張編集透明化
 Version: 2.0.0
 ReleaseDate: 2022-03-14
 Section: Plugin/Other
-InstalledSize: 16
+InstalledSize: 15847
 Developer:
 - hebiiro
 Description: 拡張編集のウィンドウを透明化するプラグイン
@@ -14,19 +14,24 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-Toumei
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-Toumei/releases/download/2.0.0/Toumei.2.0.0.zip
-  Sha256: 76fdcf68d83c5b2544ae30ac2ad53419de5e43c608db4936636602e2bc48f170
+  SHA256: 76fdcf68d83c5b2544ae30ac2ad53419de5e43c608db4936636602e2bc48f170
   Files:
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 7ad63c25726d3704db5c315fba9d00d4b422a0e5d3ea54ae80addd7417775f44
+    SHA256: 7ad63c25726d3704db5c315fba9d00d4b422a0e5d3ea54ae80addd7417775f44
   - Path: Toumei.auf
-    Sha256: 9549d8e51879dd87e0e417308653d6d2ca929ae48ea846d8768e6135e7233b17
+    SHA256: 9549d8e51879dd87e0e417308653d6d2ca929ae48ea846d8768e6135e7233b17
     Install:
       TargetPath: plugins/Toumei.auf
   - Path: Toumei.ini
-    Sha256: 0fc8694d18ae3172476db0330fcaec7a49f06438e43564f0d3b3e3140a7d4810
+    SHA256: 0fc8694d18ae3172476db0330fcaec7a49f06438e43564f0d3b3e3140a7d4810
     Install:
       TargetPath: plugins/Toumei.ini
       ConfFile: true
-ManifestVersion: 0.2.0
+Plugins:
+- Name: 拡張編集透明化
+  Information: 拡張編集透明化 version 2.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/Toumei.auf
+ManifestVersion: 0.3.0

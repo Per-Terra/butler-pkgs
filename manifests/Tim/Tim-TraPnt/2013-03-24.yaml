@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-TraPnt
 DisplayName: 透明塗り
 Version: 2013-03-24
 ReleaseDate: 2013-03-24
 Section: Script
-InstalledSize: 53
+InstalledSize: 53701
 Developer:
 - Tim
 Description: 透明部分を塗りつぶします。
@@ -15,14 +15,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/TraPnt.zip
-  Sha256: 12c70dde1bfc4dbdff906afe43d3c7527164dd89a085aa8112cfc26da11236cc
+  SHA256: 12c70dde1bfc4dbdff906afe43d3c7527164dd89a085aa8112cfc26da11236cc
   Files:
   - Path: T_Alpha_Module.dll
-    Sha256: 32d92b19935725131395d0276d0fd0f1abc7e585c02827c60df3611007ec742b
+    SHA256: 32d92b19935725131395d0276d0fd0f1abc7e585c02827c60df3611007ec742b
     Install:
       TargetPath: script/T_Alpha_Module.dll
   - Path: 透明塗り.anm
-    Sha256: 9b7954d3467c841ba4e6198889f3fae16e27a4057ad44d95a0165e806ed72a31
+    SHA256: 9b7954d3467c841ba4e6198889f3fae16e27a4057ad44d95a0165e806ed72a31
     Install:
       TargetPath: script/透明塗り.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-VanishP
 DisplayName: バニシングポイント
 Version: "2"
 ReleaseDate: 2017-02-26
 Section: Script
-InstalledSize: 6
+InstalledSize: 5627
 Developer:
 - Tim
 Description: ４辺形で囲まれた領域を３Ｄであるとみなし、オブジェクトを移動させると、自動で３Ｄ的に変形します。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/VanishP1_V2.zip
-  Sha256: d47b3085478dfb5340ad40ed431af306505f04c1c963bfaec071504c63b2c2c6
+  SHA256: d47b3085478dfb5340ad40ed431af306505f04c1c963bfaec071504c63b2c2c6
   Files:
   - Path: バニシングポイント.anm
-    Sha256: 5335c193d4b2669963453ac2cbeede9b33961b8f43af49c9d392d02ea96c2e89
+    SHA256: 5335c193d4b2669963453ac2cbeede9b33961b8f43af49c9d392d02ea96c2e89
     Install:
       TargetPath: script/バニシングポイント.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

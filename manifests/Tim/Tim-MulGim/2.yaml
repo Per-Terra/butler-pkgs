@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-MulGim
 DisplayName: 多角錐変形
 Version: "2"
 ReleaseDate: 2013-03-31
 Section: Script
-InstalledSize: 3
+InstalledSize: 2370
 Developer:
 - Tim
 Description: 多角錐を作ります。多少拡張機能があります。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/MulGim.zip
-  Sha256: f82c056a549c12c61ac47f232be93f738955d65ee1bedbaac54eb188e59511bd
+  SHA256: f82c056a549c12c61ac47f232be93f738955d65ee1bedbaac54eb188e59511bd
   Files:
   - Path: 錐変形.anm
-    Sha256: 924e6e76641507388d3f5b6945c1ec71d73bbd9204841d5c1538e54ec81aa02d
+    SHA256: 924e6e76641507388d3f5b6945c1ec71d73bbd9204841d5c1538e54ec81aa02d
     Install:
       TargetPath: script/錐変形.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

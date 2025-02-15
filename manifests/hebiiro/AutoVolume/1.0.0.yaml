@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: AutoVolume
 DisplayName: オートボリューム
 Version: 1.0.0
 ReleaseDate: 2023-05-17
 Section: Plugin/Other
-InstalledSize: 22
+InstalledSize: 22106
 Developer:
 - hebiiro
 Description: |-
@@ -16,16 +16,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-AutoVolume
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-AutoVolume/releases/download/1.0.0/AutoVolume.1.0.0.zip
-  Sha256: 20c6082edd242de3be7a1ab056ea7024b12b746538f3f0448c8b15c87a2a029f
+  SHA256: 20c6082edd242de3be7a1ab056ea7024b12b746538f3f0448c8b15c87a2a029f
   Files:
   - Path: AutoVolume.auf
-    Sha256: 32d62faecbf717c2520e818580911f8301ac81622bc51167b7ea3995370fb2a8
+    SHA256: 32d62faecbf717c2520e818580911f8301ac81622bc51167b7ea3995370fb2a8
     Install:
       TargetPath: plugins/AutoVolume.auf
   - Path: CREDITS.md
-    Sha256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
+    SHA256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
   - Path: LICENSE
-    Sha256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
+    SHA256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
   - Path: README.md
-    Sha256: af0e747da9677df0c3ff26a60a3efebf25a8d726e038d7f8dbab8d02a5454ec0
-ManifestVersion: 0.2.0
+    SHA256: af0e747da9677df0c3ff26a60a3efebf25a8d726e038d7f8dbab8d02a5454ec0
+Plugins:
+- Name: オートボリューム
+  Information: オートボリューム 1.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/AutoVolume.auf
+ManifestVersion: 0.3.0

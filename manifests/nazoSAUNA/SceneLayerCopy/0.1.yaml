@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SceneLayerCopy
 DisplayName: シーンのレイヤー情報コピペプラグイン
@@ -8,7 +8,7 @@ ReleaseDate: 2022-11-26
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 11
+InstalledSize: 10365
 Developer:
 - nazoSAUNA
 Description: 現在のシーンのレイヤー情報を[ペースト先]トラックのシーンへコピペするプラグイン
@@ -16,12 +16,16 @@ Website:
 - https://github.com/nazonoSAUNA/SceneLayerCopy
 Files:
 - SourceUrl: https://github.com/nazonoSAUNA/SceneLayerCopy/releases/download/0.1/SceneLayerCopy.zip
-  Sha256: bde9d1c9a22790cae624fe5df2e0520a5140b4a56d95b782ea0c97f5177bc31c
+  SHA256: bde9d1c9a22790cae624fe5df2e0520a5140b4a56d95b782ea0c97f5177bc31c
   Files:
   - Path: Credit.md
-    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
   - Path: SceneLayerCopy.auf
-    Sha256: faa2fd1e643082ffe33487760c06e8a0e7c1ece6d15cab148ab125762f94272b
+    SHA256: faa2fd1e643082ffe33487760c06e8a0e7c1ece6d15cab148ab125762f94272b
     Install:
       TargetPath: plugins/SceneLayerCopy.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: レイヤー情報コピペ
+  Type: Filter
+  InstallPath: plugins/SceneLayerCopy.auf
+ManifestVersion: 0.3.0

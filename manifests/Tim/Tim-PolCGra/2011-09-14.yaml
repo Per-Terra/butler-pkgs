@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-PolCGra
 DisplayName: 多色グラデーション
 Version: 2011-09-14
 ReleaseDate: 2011-09-14
 Section: Script
-InstalledSize: 3
+InstalledSize: 2791
 Developer:
 - Tim
 Description: 平面内に色の中心点を複数セットしてグラデーションを表現します。
@@ -15,14 +15,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/PolCGra.zip
-  Sha256: 0b6b5dd3a0e4152d76d09a0af2686ef6ae9b8e5bacabc32cfb4ee0b054442bd6
+  SHA256: 0b6b5dd3a0e4152d76d09a0af2686ef6ae9b8e5bacabc32cfb4ee0b054442bd6
   Files:
   - Path: PolCGra/@多色グラデーション.anm
-    Sha256: 18d1c9f176857e46466faba95dbbc9649c35007d5729f474fd780de6d888ca7b
+    SHA256: 18d1c9f176857e46466faba95dbbc9649c35007d5729f474fd780de6d888ca7b
     Install:
       TargetPath: script/@多色グラデーション.anm
   - Path: PolCGra/４色グラデーション.anm
-    Sha256: 2c6be86dfe3052b5a1c525331cdb1f836ede60119645339d35e758e4ffa2c6f0
+    SHA256: 2c6be86dfe3052b5a1c525331cdb1f836ede60119645339d35e758e4ffa2c6f0
     Install:
       TargetPath: script/４色グラデーション.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

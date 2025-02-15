@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: gometh-dokaben
 DisplayName: ドカベンの文字エフェクト
 Version: "1.2"
 ReleaseDate: 2020-10-13
 Section: Script
-InstalledSize: 1
+InstalledSize: 792
 Developer:
 - gometh
 Description: ドカベンの文字エフェクト
@@ -15,7 +15,7 @@ Website:
 Files:
 - SourceUrl: https://drive.google.com/uc?id=1h3ZVxvenNm71eRkYw_cqEoYijpf9IAXq
   FileName: ドカベン.anm
-  Sha256: 7d6d27b34e42b7c92d36e3c2eb49918978bc792a0ae57a0a4e7b813b462a1682
+  SHA256: 7d6d27b34e42b7c92d36e3c2eb49918978bc792a0ae57a0a4e7b813b462a1682
   Install:
     TargetPath: script/ドカベン.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: patch.aul
 Version: r40
@@ -7,7 +7,7 @@ ReleaseDate: 2022-06-16
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 658
+InstalledSize: 673779
 Developer:
 - ePi
 Description: AviUtlや拡張編集のバグを直したり高速化をしたり新機能を追加したりするプラグイン
@@ -15,20 +15,20 @@ Website:
 - https://github.com/ePi5131/patch.aul
 Files:
 - SourceUrl: https://github.com/ePi5131/patch.aul/releases/download/r40/patch_r40.zip
-  Sha256: d2fca3062d49ffdeae8576ef67cac8a44b24ea0a84559fb9bbdb33bf5528fd98
+  SHA256: d2fca3062d49ffdeae8576ef67cac8a44b24ea0a84559fb9bbdb33bf5528fd98
   Files:
   - Path: COPYING
-    Sha256: 230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809
+    SHA256: 230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809
   - Path: COPYING.LESSER
-    Sha256: 7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059
+    SHA256: 7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059
   - Path: credits.md
-    Sha256: 5cb4e7b5c9c85b99fd37f93c1c2fbe15a41e892f399f3c7f50ef5e4dae952865
+    SHA256: 5cb4e7b5c9c85b99fd37f93c1c2fbe15a41e892f399f3c7f50ef5e4dae952865
   - Path: LICENSE
-    Sha256: d6e18807844e259d920fb95fffb3ee0bf96f046f0a9f7cf7459941aed63b373b
+    SHA256: d6e18807844e259d920fb95fffb3ee0bf96f046f0a9f7cf7459941aed63b373b
   - Path: patch.aul
-    Sha256: aa41b4e8d592463b7ff898a76677ad10ced1c58511eb1e25b64d0754c8c7648c
+    SHA256: aa41b4e8d592463b7ff898a76677ad10ced1c58511eb1e25b64d0754c8c7648c
     Install:
       TargetPath: patch.aul
   - Path: patch.aul.txt
-    Sha256: 1d7c06b002e7a8914ad1b8c2e0b8b751e6491624cb59f94b2517a942c2fa124b
-ManifestVersion: 0.1.0
+    SHA256: 1d7c06b002e7a8914ad1b8c2e0b8b751e6491624cb59f94b2517a942c2fa124b
+ManifestVersion: 0.3.0

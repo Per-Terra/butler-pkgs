@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Extram2
 Version: 0.1.0-beta7
@@ -7,7 +7,7 @@ ReleaseDate: 2024-01-11
 Section: Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 105
+InstalledSize: 106977
 Developer:
 - oov
 Description: |-
@@ -18,38 +18,38 @@ Website:
 - https://github.com/oov/aviutl_extram2
 Files:
 - SourceUrl: https://github.com/oov/aviutl_extram2/releases/download/v0.1.0beta7/extram2_v0.1.0beta7.zip
-  Sha256: 24228969494e1729a78555f6a9c7bd96f6bb1dd9bf8a5c62b1c825b60201649b
+  SHA256: 24228969494e1729a78555f6a9c7bd96f6bb1dd9bf8a5c62b1c825b60201649b
   Files:
   - Path: Extram2.txt
-    Sha256: 9b5e5c39eea76191b1a995f67c8e794532b4db823f0d6a23db4bc02207148da4
+    SHA256: 9b5e5c39eea76191b1a995f67c8e794532b4db823f0d6a23db4bc02207148da4
   - Path: キャッシュテキスト2.exa
-    Sha256: ada95059a8a8e8295cb225601427a98bdeac41e540f2dfecf4f89d09b5e2cffe
+    SHA256: ada95059a8a8e8295cb225601427a98bdeac41e540f2dfecf4f89d09b5e2cffe
     Install:
       TargetPath: キャッシュテキスト2.exa
   - Path: script/@Cache2.anm
-    Sha256: d5aeb73f464e4dea44778e2f5962af52527667b86aa738768788371f527b50a1
+    SHA256: d5aeb73f464e4dea44778e2f5962af52527667b86aa738768788371f527b50a1
     Install:
       TargetPath: script/@Cache2.anm
       Strict: true
   - Path: script/Cache2.lua
-    Sha256: b97ecfcf100663ae538cc7ebcadb0fc24255418008bcb882a513e56508d177ec
+    SHA256: b97ecfcf100663ae538cc7ebcadb0fc24255418008bcb882a513e56508d177ec
     Install:
       TargetPath: script/Cache2.lua
       Strict: true
   - Path: script/Extram2.dll
-    Sha256: 24f3d97dc90c8928ec8848ab2748531a9ee7f7128b65ceed2e358e8b7ffc3357
+    SHA256: 24f3d97dc90c8928ec8848ab2748531a9ee7f7128b65ceed2e358e8b7ffc3357
     Install:
       TargetPath: script/Extram2.dll
       Strict: true
   - Path: script/Extram2.exe
-    Sha256: 800c8ef602b3c2185e7cb7a94714e398bf4e81bd856d978288d862a3c8bddc6e
+    SHA256: 800c8ef602b3c2185e7cb7a94714e398bf4e81bd856d978288d862a3c8bddc6e
     Install:
       TargetPath: script/Extram2.exe
       Strict: true
       Method: Copy
   - Path: script/Intram2.dll
-    Sha256: 21754970c35659f633869fd6af3cbeeaa104848ffe14a2b37b0aa1645e194c5a
+    SHA256: 21754970c35659f633869fd6af3cbeeaa104848ffe14a2b37b0aa1645e194c5a
     Install:
       TargetPath: script/Intram2.dll
       Strict: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

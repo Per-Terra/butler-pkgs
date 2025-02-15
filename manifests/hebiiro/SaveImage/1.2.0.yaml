@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SaveImage
 DisplayName: 画像保存
 Version: 1.2.0
 ReleaseDate: 2023-07-29
 Section: Plugin/Other
-InstalledSize: 27
+InstalledSize: 27085
 Developer:
 - hebiiro
 Description: 現在のフレーム、または選択アイテムを画像として保存するプラグイン
@@ -14,16 +14,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SaveImage
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SaveImage/releases/download/1.2.0/SaveImage.1.2.0.zip
-  Sha256: eb08938eec9dbe43bb91e2a84e044a175134aafd79f9dc12c730b239466f1ad2
+  SHA256: eb08938eec9dbe43bb91e2a84e044a175134aafd79f9dc12c730b239466f1ad2
   Files:
   - Path: CREDITS.md
-    Sha256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
+    SHA256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 840a18afd6e1e732591b47f548ee56a7f9080805d48ea8587e6b14ee0e3f9978
+    SHA256: 840a18afd6e1e732591b47f548ee56a7f9080805d48ea8587e6b14ee0e3f9978
   - Path: SaveImage.auf
-    Sha256: 914a604812d8a404295d931562d1b21e825a26c60b176b7ffe5d7f0b2d41d156
+    SHA256: 914a604812d8a404295d931562d1b21e825a26c60b176b7ffe5d7f0b2d41d156
     Install:
       TargetPath: plugins/SaveImage.auf
-ManifestVersion: 0.2.0
+Plugins:
+- Name: 画像保存
+  Information: 画像保存 1.2.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/SaveImage.auf
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: forcepser
 DisplayName: かんしくん
@@ -8,7 +8,7 @@ ReleaseDate: 2020-06-25
 Section: Other
 Depends:
 - GCMZDrops
-InstalledSize: 3487
+InstalledSize: 3570151
 Developer:
 - oov
 Description: 指定されたフォルダーを監視して、同じ名前の*.wavと*.txtが追加された時にごちゃまぜドロップスの外部連携APIに投げつけるプログラム
@@ -16,26 +16,26 @@ Website:
 - https://github.com/oov/forcepser
 Files:
 - SourceUrl: https://github.com/oov/forcepser/releases/download/v0.1beta14/forcepser_v0.1beta14.zip
-  Sha256: 60a1b678e588e3ed52510a6afa03d3dd2ac05b1e114b058cec14fab8c47de0fd
+  SHA256: 60a1b678e588e3ed52510a6afa03d3dd2ac05b1e114b058cec14fab8c47de0fd
   Files:
   - Path: _entrypoint.lua
-    Sha256: bfd6db7ad7b076f2cba0721373fcffec641b827304ae2d5d772d27fd1713f557
+    SHA256: bfd6db7ad7b076f2cba0721373fcffec641b827304ae2d5d772d27fd1713f557
     Install:
       TargetPath: かんしくん/_entrypoint.lua
   - Path: forcepser.exe
-    Sha256: e926d6ef2586a95e98b5c1dd79e77e40d608abd6d37d0e90ccb235b781c2a9c1
+    SHA256: e926d6ef2586a95e98b5c1dd79e77e40d608abd6d37d0e90ccb235b781c2a9c1
     Install:
       TargetPath: かんしくん/forcepser.exe
       Method: Copy
   - Path: forcepser.txt
-    Sha256: 9c679f3dcf4ee6ed2afce1a4a752c4498215f314722c8ffa31f58b17a2cacb7b
+    SHA256: 9c679f3dcf4ee6ed2afce1a4a752c4498215f314722c8ffa31f58b17a2cacb7b
     Install:
       TargetPath: かんしくん/forcepser.txt
   - Path: setting.txt-template
-    Sha256: 52ea21006a6be378e0cab99c0554436ba29ac591ae384bf9b7ac92fe1328dea2
+    SHA256: 52ea21006a6be378e0cab99c0554436ba29ac591ae384bf9b7ac92fe1328dea2
     Install:
       TargetPath: かんしくん/setting.txt-template
       ConfFile: true
   - Path: template.exo-template
-    Sha256: ba856872a0dc599fc5e7be70e341a8f43fa5bdc64200365f754b2e92be672f99
-ManifestVersion: 0.1.0
+    SHA256: ba856872a0dc599fc5e7be70e341a8f43fa5bdc64200365f754b2e92be672f99
+ManifestVersion: 0.3.0

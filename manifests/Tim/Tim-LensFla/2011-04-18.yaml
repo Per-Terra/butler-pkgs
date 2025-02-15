@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-LensFla
 DisplayName: レンズフレア
 Version: 2011-04-18
 ReleaseDate: 2011-04-18
 Section: Script
-InstalledSize: 3
+InstalledSize: 2393
 Developer:
 - Tim
 Description: レンズフレアです。綺麗なものはカスタムフレアの方で作成してください。
@@ -15,12 +15,12 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/LensFla.zip
-  Sha256: e70d94632c5e205e0a5c2d8d21f07884c211e2be0d0f37b0a6e4cd5af6b33001
+  SHA256: e70d94632c5e205e0a5c2d8d21f07884c211e2be0d0f37b0a6e4cd5af6b33001
   Files:
   - Path: LF/Lensflare.obj
-    Sha256: 0a43d1ecca4be26319b7c8fed03cc30cf92a04f7f42caf0e8d0ebf1f65443bdd
+    SHA256: 0a43d1ecca4be26319b7c8fed03cc30cf92a04f7f42caf0e8d0ebf1f65443bdd
     Install:
       TargetPath: script/Lensflare.obj
   - Path: LF/ReadMe.txt
-    Sha256: d005a5e746ca7c33fe990f8582dfd8ffdefeb5fcf03e19cf849f05b5d49210e7
-ManifestVersion: 0.2.0
+    SHA256: d005a5e746ca7c33fe990f8582dfd8ffdefeb5fcf03e19cf849f05b5d49210e7
+ManifestVersion: 0.3.0

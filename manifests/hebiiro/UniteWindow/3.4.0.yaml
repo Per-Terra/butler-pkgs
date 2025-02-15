@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: UniteWindow
 Version: 3.4.0
@@ -7,7 +7,7 @@ ReleaseDate: 2022-06-09
 Section: Plugin/Other
 Conflicts:
 - SplitWindow
-InstalledSize: 92
+InstalledSize: 94203
 Developer:
 - hebiiro
 Description: AviUtl のウィンドウを結合してシングルウィンドウにまとめるプラグイン
@@ -15,21 +15,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-UniteWindow
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-UniteWindow/releases/download/3.4.0/UniteWindow.3.4.0.zip
-  Sha256: 3c6c98f9fac0fff96266c6e259125387771fde9a7fcf0088eb8888e598c2f535
+  SHA256: 3c6c98f9fac0fff96266c6e259125387771fde9a7fcf0088eb8888e598c2f535
   Files:
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: b7ad5092ddf96143a05ea4423af668c44be30338839c591e43493c6a777e342c
+    SHA256: b7ad5092ddf96143a05ea4423af668c44be30338839c591e43493c6a777e342c
   - Path: UniteWindow.aul
-    Sha256: d84b865e4da5ab3768434fe999e9de40c737e60c6ff1d69ab6d046308093553c
+    SHA256: d84b865e4da5ab3768434fe999e9de40c737e60c6ff1d69ab6d046308093553c
     Install:
       TargetPath: plugins/UniteWindow.aul
   - Path: UniteWindow.xml
-    Sha256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
+    SHA256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
     Install:
       TargetPath: plugins/UniteWindow.xml
       ConfFile: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

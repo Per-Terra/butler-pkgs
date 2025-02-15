@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: tegaki
 DisplayName: 手書きツール
 Version: alpha
 ReleaseDate: 2016-03-06
 Section: Plugin/Other
-InstalledSize: 104
+InstalledSize: 105807
 Developer:
 - aoytsk
 Description: マウスやタブレットを利用して手書きで書き込みが出来るようになるプラグイン
@@ -14,12 +14,21 @@ Website:
 - https://aoytsk.blog.jp/aviutl/1985306.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/tegaki.zip
-  Sha256: b86e35017003f8883b88f87c66c6504066246ab20aba499b55ba4d753e7909f4
+  SHA256: b86e35017003f8883b88f87c66c6504066246ab20aba499b55ba4d753e7909f4
   Files:
   - Path: tegaki.auf
-    Sha256: 645778a870947a8351e9ccc08da872019e0eda4aa64f383ae7b3819646900843
+    SHA256: 645778a870947a8351e9ccc08da872019e0eda4aa64f383ae7b3819646900843
     Install:
       TargetPath: plugins/tegaki.auf
   - Path: tegaki.txt
-    Sha256: 432954358c7d58ff499a7ccc2b73ae20ed7d0bb5457d839dfcdc91d3543a155f
-ManifestVersion: 0.1.0
+    SHA256: 432954358c7d58ff499a7ccc2b73ae20ed7d0bb5457d839dfcdc91d3543a155f
+Plugins:
+- Name: 手書き
+  Information: 手書き version 0.0.1 by aoy
+  Type: Filter
+  InstallPath: plugins/tegaki.auf
+- Name: 手書きツール
+  Information: 手書きツール version 0.0.1 by aoy
+  Type: Filter
+  InstallPath: plugins/tegaki.auf
+ManifestVersion: 0.3.0

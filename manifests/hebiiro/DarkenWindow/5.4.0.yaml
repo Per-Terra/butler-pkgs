@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: DarkenWindow
 DisplayName: 黒窓
 Version: 5.4.0
 ReleaseDate: 2022-05-19
 Section: Plugin/Other
-InstalledSize: 570
+InstalledSize: 582862
 Developer:
 - hebiiro
 Description: AviUtlの見た目をダークモードにするプラグイン
@@ -14,293 +14,293 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow/releases/download/5.4.0/DarkenWindow.5.4.0.zip
-  Sha256: 8d80bf440201adf73b56cd2211a4909ade7d3a822a9c9b99055936acdd5075b5
+  SHA256: 8d80bf440201adf73b56cd2211a4909ade7d3a822a9c9b99055936acdd5075b5
   Files:
   - Path: aviutl_dark.exe.manifest
-    Sha256: e3a7df934042614be2fd1c35023c35b9d95a9b0e6cff5b3cde91d406fad9bb5e
+    SHA256: e3a7df934042614be2fd1c35023c35b9d95a9b0e6cff5b3cde91d406fad9bb5e
     Install:
       TargetPath: aviutl_dark.exe.manifest
   - Path: DarkenWindow.aul
-    Sha256: fbde0abd3663b4a4cd231d7704f8ebe26506e4c573c057300f9e1fe878343eda
+    SHA256: fbde0abd3663b4a4cd231d7704f8ebe26506e4c573c057300f9e1fe878343eda
     Install:
       TargetPath: plugins/DarkenWindow.aul
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: a1e331d225e5d5e59ee075676490160a75f659129ffad0018e9e8abf36d45c1c
+    SHA256: a1e331d225e5d5e59ee075676490160a75f659129ffad0018e9e8abf36d45c1c
   - Path: DarkenWindow/DarkenWindowSettings.xml
-    Sha256: 26d5779763cbd00c4e5c64c70f6cbd751413b72c04b14d1ac89f0838d17a6e0e
+    SHA256: 26d5779763cbd00c4e5c64c70f6cbd751413b72c04b14d1ac89f0838d17a6e0e
     Install:
       TargetPath: plugins/DarkenWindow/DarkenWindowSettings.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_Button.xml
-    Sha256: 4e70e3a2ffee2dface8503675b8f1e0639a7b9d0dfaf32f538a65ae267870f72
+    SHA256: 4e70e3a2ffee2dface8503675b8f1e0639a7b9d0dfaf32f538a65ae267870f72
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_Button.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_ComboBox.xml
-    Sha256: 859425e4281a67b1eafa164ff52552471455cd4300d8669c27285d8169ab2d71
+    SHA256: 859425e4281a67b1eafa164ff52552471455cd4300d8669c27285d8169ab2d71
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_ComboBox.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_CommandModule.xml
-    Sha256: a89cb0cf5714be3766eda20e84746f1e421dcb62298f3afebe67a7f883a46541
+    SHA256: a89cb0cf5714be3766eda20e84746f1e421dcb62298f3afebe67a7f883a46541
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_CommandModule.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_Dialog.xml
-    Sha256: 7c9921d4761a9c21ca7bb5944f3fb74b670c3678882e1812e1e90840cf5a8098
+    SHA256: 7c9921d4761a9c21ca7bb5944f3fb74b670c3678882e1812e1e90840cf5a8098
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_Dialog.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_Edit.xml
-    Sha256: 95cc692ae782b83e5d29411481e8d0ef1b29423fef0d0e1bcc9319bfdcfa55d1
+    SHA256: 95cc692ae782b83e5d29411481e8d0ef1b29423fef0d0e1bcc9319bfdcfa55d1
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_Edit.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_ExEdit.xml
-    Sha256: d1b3f62b3bfa3f689ceae30108985be2b364511a75716c543cae2507bde25920
+    SHA256: d1b3f62b3bfa3f689ceae30108985be2b364511a75716c543cae2507bde25920
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_ExEdit.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_Header.xml
-    Sha256: d5d0f3b0a458dfcbb6c82bc36fe7e20b27098e36aec87796e6143eb40bf5c42a
+    SHA256: d5d0f3b0a458dfcbb6c82bc36fe7e20b27098e36aec87796e6143eb40bf5c42a
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_Header.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_ListBox.xml
-    Sha256: 9876811756544ae48145ad8d3e1f5f60bf698617b57c004ea5e467e3d5836716
+    SHA256: 9876811756544ae48145ad8d3e1f5f60bf698617b57c004ea5e467e3d5836716
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_ListBox.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_ListView.xml
-    Sha256: 9281700457b9fb11d1fc6b4fa23bf7071d38f0a9ea31489508debbffa194f35b
+    SHA256: 9281700457b9fb11d1fc6b4fa23bf7071d38f0a9ea31489508debbffa194f35b
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_ListView.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_Menu.xml
-    Sha256: c3705dfa2dc5b1e471099ce7252c539d02d8b34dfabc198321a221acd9c62cf1
+    SHA256: c3705dfa2dc5b1e471099ce7252c539d02d8b34dfabc198321a221acd9c62cf1
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_Menu.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_ScrollBar.xml
-    Sha256: 1ca756baa9930cc52746b51dfa578c4c19e400f2ac32ae351cddf5ab887d249a
+    SHA256: 1ca756baa9930cc52746b51dfa578c4c19e400f2ac32ae351cddf5ab887d249a
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_ScrollBar.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_Spin.xml
-    Sha256: d7a5f60247b0c3d7a64ce707207487054a7c6cba5e2038202d37739bedc96443
+    SHA256: d7a5f60247b0c3d7a64ce707207487054a7c6cba5e2038202d37739bedc96443
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_Spin.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_Static.xml
-    Sha256: 3fea717d718f71cd268fa104d398061e37a6327147dde934da6c1959e957a2dc
+    SHA256: 3fea717d718f71cd268fa104d398061e37a6327147dde934da6c1959e957a2dc
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_Static.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_ToolBar.xml
-    Sha256: 8b654edb0a48241997f94e8e5bd451f5bec82ae8c88f575d2c754a680c41fff5
+    SHA256: 8b654edb0a48241997f94e8e5bd451f5bec82ae8c88f575d2c754a680c41fff5
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_ToolBar.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_ToolTip.xml
-    Sha256: f8e82c8a56d00fb113c65e6a9d057a8fc2475911ef1f99efc1b9327bbe586d32
+    SHA256: f8e82c8a56d00fb113c65e6a9d057a8fc2475911ef1f99efc1b9327bbe586d32
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_ToolTip.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_TrackBar.xml
-    Sha256: bcff88a70e9cb2498c65abd2b397550f54bb0bd9cd6eadaf64996a84c73740fb
+    SHA256: bcff88a70e9cb2498c65abd2b397550f54bb0bd9cd6eadaf64996a84c73740fb
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_TrackBar.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark_TreeView.xml
-    Sha256: 0c68354e030c606a19c20518efd8eb6393a7af47de0519600c913bd97b08d92e
+    SHA256: 0c68354e030c606a19c20518efd8eb6393a7af47de0519600c913bd97b08d92e
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark_TreeView.xml
       ConfFile: true
   - Path: DarkenWindow/Dark/Dark.xml
-    Sha256: 6bcc7dc303c8f58f93f9b68f48e38650fb5842acf77a438dbb16887db35a6ebc
+    SHA256: 6bcc7dc303c8f58f93f9b68f48e38650fb5842acf77a438dbb16887db35a6ebc
     Install:
       TargetPath: plugins/DarkenWindow/Dark/Dark.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_Button.xml
-    Sha256: 9b2c22558bb9cb12c44b608c017b33bd5a53ac20ea8edce7da9aee9c29ab7f38
+    SHA256: 9b2c22558bb9cb12c44b608c017b33bd5a53ac20ea8edce7da9aee9c29ab7f38
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_Button.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_ComboBox.xml
-    Sha256: ad7476852c27dd9ca4fa4ba263a718992fe10ac7d7c97f1c9c48d01bc28dc2ce
+    SHA256: ad7476852c27dd9ca4fa4ba263a718992fe10ac7d7c97f1c9c48d01bc28dc2ce
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_ComboBox.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_CommandModule.xml
-    Sha256: 36a100e715436ef3998ed3a4b55445d66c57831dc1276c5fb478b80f68b80dab
+    SHA256: 36a100e715436ef3998ed3a4b55445d66c57831dc1276c5fb478b80f68b80dab
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_CommandModule.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_Dialog.xml
-    Sha256: 7c9921d4761a9c21ca7bb5944f3fb74b670c3678882e1812e1e90840cf5a8098
+    SHA256: 7c9921d4761a9c21ca7bb5944f3fb74b670c3678882e1812e1e90840cf5a8098
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_Dialog.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_Edit.xml
-    Sha256: 95cc692ae782b83e5d29411481e8d0ef1b29423fef0d0e1bcc9319bfdcfa55d1
+    SHA256: 95cc692ae782b83e5d29411481e8d0ef1b29423fef0d0e1bcc9319bfdcfa55d1
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_Edit.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_ExEdit.xml
-    Sha256: d9ae7281462e153237b82e80a791a97aaea390aeb933a4f536dda763356430d3
+    SHA256: d9ae7281462e153237b82e80a791a97aaea390aeb933a4f536dda763356430d3
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_ExEdit.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_Header.xml
-    Sha256: a18ca438f26b93a00ea921618420e8182347d5b7165470aac723b4a7b5c593af
+    SHA256: a18ca438f26b93a00ea921618420e8182347d5b7165470aac723b4a7b5c593af
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_Header.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_ListBox.xml
-    Sha256: 9876811756544ae48145ad8d3e1f5f60bf698617b57c004ea5e467e3d5836716
+    SHA256: 9876811756544ae48145ad8d3e1f5f60bf698617b57c004ea5e467e3d5836716
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_ListBox.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_ListView.xml
-    Sha256: 9281700457b9fb11d1fc6b4fa23bf7071d38f0a9ea31489508debbffa194f35b
+    SHA256: 9281700457b9fb11d1fc6b4fa23bf7071d38f0a9ea31489508debbffa194f35b
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_ListView.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_Menu.xml
-    Sha256: c3705dfa2dc5b1e471099ce7252c539d02d8b34dfabc198321a221acd9c62cf1
+    SHA256: c3705dfa2dc5b1e471099ce7252c539d02d8b34dfabc198321a221acd9c62cf1
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_Menu.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_ScrollBar.xml
-    Sha256: 7532899e4e44f59cf1d89bf99bc2a079e0f531f4b4da4caa656aac77a83793e3
+    SHA256: 7532899e4e44f59cf1d89bf99bc2a079e0f531f4b4da4caa656aac77a83793e3
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_ScrollBar.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_Spin.xml
-    Sha256: 914d4e50109dd3b213511fbeb704a5459f2c8afc74c44f78a62ed1f0f17b2ffe
+    SHA256: 914d4e50109dd3b213511fbeb704a5459f2c8afc74c44f78a62ed1f0f17b2ffe
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_Spin.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_Static.xml
-    Sha256: 3fea717d718f71cd268fa104d398061e37a6327147dde934da6c1959e957a2dc
+    SHA256: 3fea717d718f71cd268fa104d398061e37a6327147dde934da6c1959e957a2dc
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_Static.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_ToolBar.xml
-    Sha256: b351e25168c6e9226023d93f055ae68b946446ad58dd6881bc67efc0e914d066
+    SHA256: b351e25168c6e9226023d93f055ae68b946446ad58dd6881bc67efc0e914d066
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_ToolBar.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_ToolTip.xml
-    Sha256: f8e82c8a56d00fb113c65e6a9d057a8fc2475911ef1f99efc1b9327bbe586d32
+    SHA256: f8e82c8a56d00fb113c65e6a9d057a8fc2475911ef1f99efc1b9327bbe586d32
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_ToolTip.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_TrackBar.xml
-    Sha256: dba6c913ab48ef5f7e3686db442526bf7619534913a917d54b007221fc6dd4b8
+    SHA256: dba6c913ab48ef5f7e3686db442526bf7619534913a917d54b007221fc6dd4b8
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_TrackBar.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark_TreeView.xml
-    Sha256: 0c68354e030c606a19c20518efd8eb6393a7af47de0519600c913bd97b08d92e
+    SHA256: 0c68354e030c606a19c20518efd8eb6393a7af47de0519600c913bd97b08d92e
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark_TreeView.xml
       ConfFile: true
   - Path: DarkenWindow/RoundDark/RoundDark.xml
-    Sha256: 931bda0b17d9cc6be5d8d4f2d46a63e64a5b90574d42a1f562128d92afb8f97d
+    SHA256: 931bda0b17d9cc6be5d8d4f2d46a63e64a5b90574d42a1f562128d92afb8f97d
     Install:
       TargetPath: plugins/DarkenWindow/RoundDark/RoundDark.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_Button.xml
-    Sha256: 545510056cc0735796918a4a818e2fb7828876acc77161f595708ccabda5c7d2
+    SHA256: 545510056cc0735796918a4a818e2fb7828876acc77161f595708ccabda5c7d2
     Install:
       TargetPath: plugins/DarkenWindow/White/White_Button.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_ComboBox.xml
-    Sha256: 859425e4281a67b1eafa164ff52552471455cd4300d8669c27285d8169ab2d71
+    SHA256: 859425e4281a67b1eafa164ff52552471455cd4300d8669c27285d8169ab2d71
     Install:
       TargetPath: plugins/DarkenWindow/White/White_ComboBox.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_CommandModule.xml
-    Sha256: a89cb0cf5714be3766eda20e84746f1e421dcb62298f3afebe67a7f883a46541
+    SHA256: a89cb0cf5714be3766eda20e84746f1e421dcb62298f3afebe67a7f883a46541
     Install:
       TargetPath: plugins/DarkenWindow/White/White_CommandModule.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_Dialog.xml
-    Sha256: 7c9921d4761a9c21ca7bb5944f3fb74b670c3678882e1812e1e90840cf5a8098
+    SHA256: 7c9921d4761a9c21ca7bb5944f3fb74b670c3678882e1812e1e90840cf5a8098
     Install:
       TargetPath: plugins/DarkenWindow/White/White_Dialog.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_Edit.xml
-    Sha256: 95cc692ae782b83e5d29411481e8d0ef1b29423fef0d0e1bcc9319bfdcfa55d1
+    SHA256: 95cc692ae782b83e5d29411481e8d0ef1b29423fef0d0e1bcc9319bfdcfa55d1
     Install:
       TargetPath: plugins/DarkenWindow/White/White_Edit.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_ExEdit.xml
-    Sha256: c3fea2e35d3ad8f005d62f29dc14546beb6ea2db13c6c86670c2fa5d18e7b4d7
+    SHA256: c3fea2e35d3ad8f005d62f29dc14546beb6ea2db13c6c86670c2fa5d18e7b4d7
     Install:
       TargetPath: plugins/DarkenWindow/White/White_ExEdit.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_Header.xml
-    Sha256: d5d0f3b0a458dfcbb6c82bc36fe7e20b27098e36aec87796e6143eb40bf5c42a
+    SHA256: d5d0f3b0a458dfcbb6c82bc36fe7e20b27098e36aec87796e6143eb40bf5c42a
     Install:
       TargetPath: plugins/DarkenWindow/White/White_Header.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_ListBox.xml
-    Sha256: 9876811756544ae48145ad8d3e1f5f60bf698617b57c004ea5e467e3d5836716
+    SHA256: 9876811756544ae48145ad8d3e1f5f60bf698617b57c004ea5e467e3d5836716
     Install:
       TargetPath: plugins/DarkenWindow/White/White_ListBox.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_ListView.xml
-    Sha256: 9281700457b9fb11d1fc6b4fa23bf7071d38f0a9ea31489508debbffa194f35b
+    SHA256: 9281700457b9fb11d1fc6b4fa23bf7071d38f0a9ea31489508debbffa194f35b
     Install:
       TargetPath: plugins/DarkenWindow/White/White_ListView.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_Menu.xml
-    Sha256: 9a3d5981b4661037ed2ffffcee713d131e35803264ba286388fa30d4fd362a05
+    SHA256: 9a3d5981b4661037ed2ffffcee713d131e35803264ba286388fa30d4fd362a05
     Install:
       TargetPath: plugins/DarkenWindow/White/White_Menu.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_ScrollBar.xml
-    Sha256: 1ca756baa9930cc52746b51dfa578c4c19e400f2ac32ae351cddf5ab887d249a
+    SHA256: 1ca756baa9930cc52746b51dfa578c4c19e400f2ac32ae351cddf5ab887d249a
     Install:
       TargetPath: plugins/DarkenWindow/White/White_ScrollBar.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_Spin.xml
-    Sha256: d7a5f60247b0c3d7a64ce707207487054a7c6cba5e2038202d37739bedc96443
+    SHA256: d7a5f60247b0c3d7a64ce707207487054a7c6cba5e2038202d37739bedc96443
     Install:
       TargetPath: plugins/DarkenWindow/White/White_Spin.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_Static.xml
-    Sha256: 3fea717d718f71cd268fa104d398061e37a6327147dde934da6c1959e957a2dc
+    SHA256: 3fea717d718f71cd268fa104d398061e37a6327147dde934da6c1959e957a2dc
     Install:
       TargetPath: plugins/DarkenWindow/White/White_Static.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_ToolBar.xml
-    Sha256: 8b654edb0a48241997f94e8e5bd451f5bec82ae8c88f575d2c754a680c41fff5
+    SHA256: 8b654edb0a48241997f94e8e5bd451f5bec82ae8c88f575d2c754a680c41fff5
     Install:
       TargetPath: plugins/DarkenWindow/White/White_ToolBar.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_ToolTip.xml
-    Sha256: f8e82c8a56d00fb113c65e6a9d057a8fc2475911ef1f99efc1b9327bbe586d32
+    SHA256: f8e82c8a56d00fb113c65e6a9d057a8fc2475911ef1f99efc1b9327bbe586d32
     Install:
       TargetPath: plugins/DarkenWindow/White/White_ToolTip.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_TrackBar.xml
-    Sha256: bcff88a70e9cb2498c65abd2b397550f54bb0bd9cd6eadaf64996a84c73740fb
+    SHA256: bcff88a70e9cb2498c65abd2b397550f54bb0bd9cd6eadaf64996a84c73740fb
     Install:
       TargetPath: plugins/DarkenWindow/White/White_TrackBar.xml
       ConfFile: true
   - Path: DarkenWindow/White/White_TreeView.xml
-    Sha256: 0c68354e030c606a19c20518efd8eb6393a7af47de0519600c913bd97b08d92e
+    SHA256: 0c68354e030c606a19c20518efd8eb6393a7af47de0519600c913bd97b08d92e
     Install:
       TargetPath: plugins/DarkenWindow/White/White_TreeView.xml
       ConfFile: true
   - Path: DarkenWindow/White/White.xml
-    Sha256: 7f6e19c14ba72d84c438a5c939bd4d2ae6d931c0aab2c71e2e76bda87e424c82
+    SHA256: 7f6e19c14ba72d84c438a5c939bd4d2ae6d931c0aab2c71e2e76bda87e424c82
     Install:
       TargetPath: plugins/DarkenWindow/White/White.xml
       ConfFile: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

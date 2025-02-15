@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: InputPipePlugin
 Version: "1.2"
@@ -8,7 +8,7 @@ Section: Plugin/Input
 Depends:
 - aviutl (>= 1.00)
 - exedit (>= 0.92)
-InstalledSize: 1830
+InstalledSize: 1873332
 Developer:
 - amate
 Description: L-SMASH Works File Reader(lwinput.aui)を別プロセスで実行しメモリ使用量削減を目論む入力プラグイン
@@ -17,21 +17,21 @@ Website:
 - https://www.nicovideo.jp/watch/sm35585310
 Files:
 - SourceUrl: https://github.com/amate/InputPipePlugin/releases/download/v1.2/InputPipePlugin_1.2.zip
-  Sha256: 2501a58e70483c5745673d992f65d73addff17c47003f254a24edd2656a4c890
+  SHA256: 2501a58e70483c5745673d992f65d73addff17c47003f254a24edd2656a4c890
   Files:
   - Path: InputPipePlugin/InputPipeMain.exe
-    Sha256: 856b6c3c132c93ac5bb6f3868e430521af95a473c5590025f36e12985c455de9
+    SHA256: 856b6c3c132c93ac5bb6f3868e430521af95a473c5590025f36e12985c455de9
     Install:
       TargetPath: plugins/InputPipeMain.exe
       Method: Copy
   - Path: InputPipePlugin/InputPipePlugin.aui
-    Sha256: fb65b4e8aa48d6fbe4c4daa3112bec7e9385fef1cc3d0b177cfd27f3de66e408
+    SHA256: fb65b4e8aa48d6fbe4c4daa3112bec7e9385fef1cc3d0b177cfd27f3de66e408
     Install:
       TargetPath: plugins/InputPipePlugin.aui
   - Path: InputPipePlugin/LICENSE
-    Sha256: d2e83382e2d08566292c817e52be98c12a49a7f611d1475619d6ccbaecfad29c
+    SHA256: d2e83382e2d08566292c817e52be98c12a49a7f611d1475619d6ccbaecfad29c
   - Path: InputPipePlugin/Readme.txt
-    Sha256: 366310f95e7df7a4788217a27648db6533c2f19a06215218d91a2742a6342308
+    SHA256: 366310f95e7df7a4788217a27648db6533c2f19a06215218d91a2742a6342308
 ConfFiles:
 - plugins/InputPipePluginConfig.ini
-ManifestVersion: 0.1.0
+ManifestVersion: 0.3.0

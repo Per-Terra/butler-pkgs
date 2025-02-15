@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: DragFilter
 DisplayName: フィルタドラッグ移動
 Version: 9.1.0
 ReleaseDate: 2022-07-14
 Section: Plugin/Other
-InstalledSize: 62
+InstalledSize: 63192
 Developer:
 - hebiiro
 Description: オブジェクトダイアログのフィルタをドラッグして移動できるようにするプラグイン
@@ -14,21 +14,26 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-DragFilter
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-DragFilter/releases/download/9.1.0/DragFilter.9.1.0.zip
-  Sha256: edfde7f6e609dd472f2e79bed76d6016e8fc806d905db637df536977d25eb855
+  SHA256: edfde7f6e609dd472f2e79bed76d6016e8fc806d905db637df536977d25eb855
   Files:
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: DragFilter.auf
-    Sha256: cd1c838d85eb4d266f0e1aa89638efd48248bbbbe9b2b2a20db27a02061262af
+    SHA256: cd1c838d85eb4d266f0e1aa89638efd48248bbbbe9b2b2a20db27a02061262af
     Install:
       TargetPath: plugins/DragFilter.auf
   - Path: DragFilter.ini
-    Sha256: 0b14e14b3788986c9979181644cfa2e3c78d3453e43a3cc11ed5a02f0409a1b6
+    SHA256: 0b14e14b3788986c9979181644cfa2e3c78d3453e43a3cc11ed5a02f0409a1b6
     Install:
       TargetPath: plugins/DragFilter.ini
       ConfFile: true
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 949a47f70c0414d758aae242599a4cc6be39571d84c863c57b8c4fde417e0617
-ManifestVersion: 0.2.0
+    SHA256: 949a47f70c0414d758aae242599a4cc6be39571d84c863c57b8c4fde417e0617
+Plugins:
+- Name: フィルタドラッグ移動
+  Information: フィルタドラッグ移動 9.1.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/DragFilter.auf
+ManifestVersion: 0.3.0

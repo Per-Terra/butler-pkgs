@@ -1,13 +1,13 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: UniteWindow
 Version: 3.5.0
 ReleaseDate: 2022-06-22
 Section: Plugin/Other
 Conflicts:
-  - SplitWindow
-InstalledSize: 97
+- SplitWindow
+InstalledSize: 98495
 Developer:
 - hebiiro
 Description: AviUtl のウィンドウを結合してシングルウィンドウにまとめるプラグイン
@@ -15,21 +15,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-UniteWindow
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-UniteWindow/releases/download/3.5.0/UniteWindow.3.5.0.zip
-  Sha256: 2d2b6cd7d910836a9932f19d5f87e307d0819fe8b41fe77157b31c4c40f6ab48
+  SHA256: 2d2b6cd7d910836a9932f19d5f87e307d0819fe8b41fe77157b31c4c40f6ab48
   Files:
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: a2da953b70557c3164680f531885f1f4d3d5dbacdfcfb1ac4ffdeb1428013267
+    SHA256: a2da953b70557c3164680f531885f1f4d3d5dbacdfcfb1ac4ffdeb1428013267
   - Path: UniteWindow.aul
-    Sha256: a144e267f6cf96e5d5c608b1a6487ce7c39f5811dfebf4250675cfbd0d9064ad
+    SHA256: a144e267f6cf96e5d5c608b1a6487ce7c39f5811dfebf4250675cfbd0d9064ad
     Install:
       TargetPath: plugins/UniteWindow.aul
   - Path: UniteWindow.xml
-    Sha256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
+    SHA256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
     Install:
       TargetPath: plugins/UniteWindow.xml
       ConfFile: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

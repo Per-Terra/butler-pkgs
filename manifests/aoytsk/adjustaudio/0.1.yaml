@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: adjustaudio
 DisplayName: 音声の位置微調整
 Version: "0.1"
 ReleaseDate: 2016-03-12
 Section: Plugin/Filter
-InstalledSize: 12
+InstalledSize: 11635
 Developer:
 - aoytsk
 Description: 1フレーム以下のより細かい精度(周波数単位)で音ズレを修正できるプラグイン
@@ -14,16 +14,25 @@ Website:
 - https://aoytsk.blog.jp/aviutl/2092140.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/adjustaudio.zip
-  Sha256: f3fb33d4d1d239b40e7a00377424d3238712099299d1e62b4edec1b392bc889b
+  SHA256: f3fb33d4d1d239b40e7a00377424d3238712099299d1e62b4edec1b392bc889b
   Files:
   - Path: adjustaudio.auf
-    Sha256: 0cdf9781ec7c4436dc649a24bd768b234fa8b748850c8ada7941a5ffc4642baf
+    SHA256: 0cdf9781ec7c4436dc649a24bd768b234fa8b748850c8ada7941a5ffc4642baf
     Install:
       TargetPath: plugins/adjustaudio.auf
   - Path: adjustaudio.txt
-    Sha256: 74ac8fbef206bcfb66a41be92220eae70bb59a56dd13f7e02cd97f969212d150
+    SHA256: 74ac8fbef206bcfb66a41be92220eae70bb59a56dd13f7e02cd97f969212d150
   - Path: adjustaudioex.auf
-    Sha256: 879194313fa9f01037e4f505d80f0be134c1b2e5a4107c7f45bf9b46c72627eb
+    SHA256: 879194313fa9f01037e4f505d80f0be134c1b2e5a4107c7f45bf9b46c72627eb
     Install:
       TargetPath: plugins/adjustaudioex.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 音声の位置微調整(通常)
+  Information: 音声の位置微調整(通常) version 0.1 by aoy
+  Type: Filter
+  InstallPath: plugins/adjustaudio.auf
+- Name: 音声の位置微調整(拡張)
+  Information: 音声の位置微調整(拡張) version 0.1 by aoy
+  Type: Filter
+  InstallPath: plugins/adjustaudioex.auf
+ManifestVersion: 0.3.0

@@ -1,11 +1,11 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: loudness
 Version: "0.1"
 ReleaseDate: 2019-03-30
 Section: Plugin/Other
-InstalledSize: 119
+InstalledSize: 120862
 Developer:
 - oov
 Description: ラウドネス値が表示できるプラグイン
@@ -14,12 +14,21 @@ Website:
 Files:
 - SourceUrl: https://drive.google.com/uc?id=1q8JRPVJAmaUYRayqM5sMciNEsiL8Z98_
   FileName: loudness_v0.1.zip
-  Sha256: 89a4e5235dbb621f9cd6a14ee9a06666166e2f640c3fc0a05c4ab74e26e0dbc8
+  SHA256: 89a4e5235dbb621f9cd6a14ee9a06666166e2f640c3fc0a05c4ab74e26e0dbc8
   Files:
   - Path: loudness.auf
-    Sha256: e80bd1e0bedd087876263aba08c7b89d60f372c2b734a87c8442f0f87a2ae7de
+    SHA256: e80bd1e0bedd087876263aba08c7b89d60f372c2b734a87c8442f0f87a2ae7de
     Install:
       TargetPath: plugins/loudness.auf
   - Path: loudness.txt
-    Sha256: a2b425bb9eaad36f2e6e18d0a8da3485a3c3bc08d2a5ac9efb6fe5160050d89a
-ManifestVersion: 0.1.0
+    SHA256: a2b425bb9eaad36f2e6e18d0a8da3485a3c3bc08d2a5ac9efb6fe5160050d89a
+Plugins:
+- Name: ラウドネスメーター(カーソル位置)
+  Information: ラウドネスメーター(カーソル位置) v0.1 ( d89a85d )
+  Type: Filter
+  InstallPath: plugins/loudness.auf
+- Name: ラウドネスメーター(全体)
+  Information: ラウドネスメーター(全体) v0.1 ( d89a85d )
+  Type: Filter
+  InstallPath: plugins/loudness.auf
+ManifestVersion: 0.3.0

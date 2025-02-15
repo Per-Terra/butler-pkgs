@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SplitText
 DisplayName: テキスト分解
 Version: 1.2.0
 ReleaseDate: 2022-07-17
 Section: Plugin/Other
-InstalledSize: 245
+InstalledSize: 250609
 Developer:
 - hebiiro
 Description: テキストオブジェクトをバラバラに分解するプラグイン
@@ -14,24 +14,29 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SplitText
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SplitText/releases/download/1.2.0/SplitText.1.2.0.zip
-  Sha256: 1426ac034d38670c4cb6691818816e871479d9f2cfc4ea112be7de71033bc0cf
+  SHA256: 1426ac034d38670c4cb6691818816e871479d9f2cfc4ea112be7de71033bc0cf
   Files:
   - Path: CREDITS.md
-    Sha256: dc61e8138af404971a7b6aeb4e137ffc7222255c4748adfe3e0a7cbf131e0b2d
+    SHA256: dc61e8138af404971a7b6aeb4e137ffc7222255c4748adfe3e0a7cbf131e0b2d
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 9d2ff58bf668c066ff6b103d4dd406ce0c4c7e84c68f458861c6aec4f1e0a223
+    SHA256: 9d2ff58bf668c066ff6b103d4dd406ce0c4c7e84c68f458861c6aec4f1e0a223
   - Path: SplitText.auf
-    Sha256: ed45ba516b2e3bc42183b3a154d2848b087dd472846246f25d0a75a54887e8e4
+    SHA256: ed45ba516b2e3bc42183b3a154d2848b087dd472846246f25d0a75a54887e8e4
     Install:
       TargetPath: plugins/SplitText.auf
   - Path: SplitText/1.wav
-    Sha256: 3f07234649a4571206f470c98468f578e0e3cee8bb75bf3d2afebbe0fe2938f4
+    SHA256: 3f07234649a4571206f470c98468f578e0e3cee8bb75bf3d2afebbe0fe2938f4
   - Path: SplitText/2.wav
-    Sha256: 38d59c9b901cf7126f19f3df6f71c55713463e3ca401af6b605e3d9bcb34b762
+    SHA256: 38d59c9b901cf7126f19f3df6f71c55713463e3ca401af6b605e3d9bcb34b762
   - Path: SplitText/3.wav
-    Sha256: ef92c97677b2340d15abd4278d4cade418019eb6c65fecbc2b135c6a0aaf72c0
+    SHA256: ef92c97677b2340d15abd4278d4cade418019eb6c65fecbc2b135c6a0aaf72c0
   - Path: SplitText/4.wav
-    Sha256: 5d47f26c6eb1a5b8e6cdd968a9f6bfd6415a99622f5fa842271aaa30cd7f7d24
-ManifestVersion: 0.2.0
+    SHA256: 5d47f26c6eb1a5b8e6cdd968a9f6bfd6415a99622f5fa842271aaa30cd7f7d24
+Plugins:
+- Name: テキスト分解
+  Information: テキスト分解 1.2.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/SplitText.auf
+ManifestVersion: 0.3.0

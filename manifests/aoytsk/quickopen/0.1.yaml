@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: quickopen
 DisplayName: クイックオープン
 Version: "0.1"
 ReleaseDate: 2016-01-29
 Section: Plugin/Other
-InstalledSize: 11
+InstalledSize: 11108
 Developer:
 - aoytsk
 Description: 編集中、出力後の動画ファイルを素早く開くためのプラグイン
@@ -14,12 +14,17 @@ Website:
 - https://aoytsk.blog.jp/aviutl/1347719.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/quickopen.zip
-  Sha256: 49589b56ac6445317f5ba312808892d442a4f84f31f87e1c01d7bf47ffce0e53
+  SHA256: 49589b56ac6445317f5ba312808892d442a4f84f31f87e1c01d7bf47ffce0e53
   Files:
   - Path: quickopen.auf
-    Sha256: 455e37479ed4363818cf7a47fc2e8233f352363d6c0717d7d527b6518699524b
+    SHA256: 455e37479ed4363818cf7a47fc2e8233f352363d6c0717d7d527b6518699524b
     Install:
       TargetPath: plugins/quickopen.auf
   - Path: quickopen.txt
-    Sha256: 471065cdb0bb0c94bcffde9c0ac8c5eae0d2c26ca803e69fcc0137f04285cde7
-ManifestVersion: 0.1.0
+    SHA256: 471065cdb0bb0c94bcffde9c0ac8c5eae0d2c26ca803e69fcc0137f04285cde7
+Plugins:
+- Name: クイックオープン
+  Information: クイックオープン ver 0.1 by aoy
+  Type: Filter
+  InstallPath: plugins/quickopen.auf
+ManifestVersion: 0.3.0

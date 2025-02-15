@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: script-sort-patch
 DisplayName: スクリプト並び替えパッチ
 Version: 2.0.0
 ReleaseDate: 2022-07-02
 Section: Plugin/Other
-InstalledSize: 30
+InstalledSize: 29834
 Developer:
 - hebiiro
 Description: スクリプト並び替えプラグインの不具合と競合を解消するプラグイン
@@ -14,16 +14,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-script_sort_patch
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-script_sort_patch/releases/download/2.0.0/script_sort_patch.2.0.0.zip
-  Sha256: 4ab496122b40d523e519407e562d4496bd89d64e689f55da8e787169421d72cc
+  SHA256: 4ab496122b40d523e519407e562d4496bd89d64e689f55da8e787169421d72cc
   Files:
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: f77c9435f452613efae332946098a02a3936798556f7fb0905dd1d7d5c8b7b04
+    SHA256: f77c9435f452613efae332946098a02a3936798556f7fb0905dd1d7d5c8b7b04
   - Path: script_sort_patch.auf
-    Sha256: 91372881570174f14a6e53818e0a5e8ace1e20fe99b6df481e6981d31a1c2597
+    SHA256: 91372881570174f14a6e53818e0a5e8ace1e20fe99b6df481e6981d31a1c2597
     Install:
       TargetPath: plugins/script_sort_patch.auf
-ManifestVersion: 0.2.0
+Plugins:
+- Name: スクリプト並び替えパッチ
+  Information: スクリプト並び替えパッチ 2.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/script_sort_patch.auf
+ManifestVersion: 0.3.0

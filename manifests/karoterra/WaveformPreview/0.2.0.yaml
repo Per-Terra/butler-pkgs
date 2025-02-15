@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: WaveformPreview
 DisplayName: 波形プレビュー
 Version: 0.2.0
 ReleaseDate: 2021-08-26
 Section: Plugin/Other
-InstalledSize: 104
+InstalledSize: 105775
 Developer:
 - karoterra
 Description: 編集中の音声波形を確認するためのプラグイン
@@ -15,23 +15,28 @@ Website:
 - https://www.nicovideo.jp/watch/sm39258128
 Files:
 - SourceUrl: https://github.com/karoterra/aviutl_WaveformPreview/releases/download/v0.2.0/aviutl_WaveformPreview_v0.2.0.zip
-  Sha256: 4f7d19a05da93dfa93ae2d879384c452517124432183df91d2e02db90079c414
+  SHA256: 4f7d19a05da93dfa93ae2d879384c452517124432183df91d2e02db90079c414
   Files:
   - Path: aviutl_WaveformPreview_v0.2.0/CHANGELOG.md
-    Sha256: bce1b9274beb69966c8a1ac931079e0a666b534cbc46f45b82b7b8868644e76c
+    SHA256: bce1b9274beb69966c8a1ac931079e0a666b534cbc46f45b82b7b8868644e76c
   - Path: aviutl_WaveformPreview_v0.2.0/CREDITS.md
-    Sha256: e592aa146f0f23f876eaeb64b6cd4d39d1eb3444755b6c5e02dd1f7fc45d0e65
+    SHA256: e592aa146f0f23f876eaeb64b6cd4d39d1eb3444755b6c5e02dd1f7fc45d0e65
   - Path: aviutl_WaveformPreview_v0.2.0/LICENSE
-    Sha256: 7d50704a82cf8fec7eef4390ff4bc34bd198b446d45c20eb6e2f78842ab04ff8
+    SHA256: 7d50704a82cf8fec7eef4390ff4bc34bd198b446d45c20eb6e2f78842ab04ff8
   - Path: aviutl_WaveformPreview_v0.2.0/README.md
-    Sha256: b81181106f1643837158cf8a245130bde81bf1b8b9efcd33a2b307bbce03d13d
+    SHA256: b81181106f1643837158cf8a245130bde81bf1b8b9efcd33a2b307bbce03d13d
   - Path: aviutl_WaveformPreview_v0.2.0/WaveformPreview.auf
-    Sha256: 83d4cf217e5ea440327c9f8cf6a8da9a97ba49d94177e8427e52bec60e1e4d1e
+    SHA256: 83d4cf217e5ea440327c9f8cf6a8da9a97ba49d94177e8427e52bec60e1e4d1e
     Install:
       TargetPath: plugins/WaveformPreview.auf
   - Path: aviutl_WaveformPreview_v0.2.0/WaveformPreview.exe
-    Sha256: 3b5177a9094e7539ee7bbe88da47d62d635645884f7db72048ef2672e4fe8331
+    SHA256: 3b5177a9094e7539ee7bbe88da47d62d635645884f7db72048ef2672e4fe8331
     Install:
       TargetPath: plugins/WaveformPreview.exe
       Method: Copy
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 波形プレビュー
+  Information: 波形プレビュー v0.2.0 by karoterra
+  Type: Filter
+  InstallPath: plugins/WaveformPreview.auf
+ManifestVersion: 0.3.0

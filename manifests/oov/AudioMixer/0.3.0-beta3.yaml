@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: AudioMixer
 Version: 0.3.0-beta3
@@ -8,7 +8,7 @@ Section: Plugin/Filter
 Depends:
 - aviutl(>= 1.00)
 - exedit (>= 0.92)
-InstalledSize: 136
+InstalledSize: 139128
 Developer:
 - oov
 Description: 拡張編集上でイコライザーやコンプレッサーを使えるようになるプラグイン
@@ -16,12 +16,26 @@ Website:
 - https://github.com/oov/aviutl_audiomixer
 Files:
 - SourceUrl: https://github.com/oov/aviutl_audiomixer/releases/download/v0.3.0beta3/AudioMixer_v0.3.0beta3.zip
-  Sha256: f49ad0bfe9a7a866a40ec40996f9a354c163e85ffd813ba05bc4efd4ccd68256
+  SHA256: f49ad0bfe9a7a866a40ec40996f9a354c163e85ffd813ba05bc4efd4ccd68256
   Files:
   - Path: AudioMixer.auf
-    Sha256: fac23834fb16446a53a63b1755c878cefa8eb6560c4be05a8f9f8381db2abe31
+    SHA256: fac23834fb16446a53a63b1755c878cefa8eb6560c4be05a8f9f8381db2abe31
     Install:
       TargetPath: AudioMixer.auf
   - Path: AudioMixer.txt
-    Sha256: d4a62b6e54b536c36c47ea69cf91f5d084d06b9e89cc1f3b0f2c5f842f52faae
-ManifestVersion: 0.1.0
+    SHA256: d4a62b6e54b536c36c47ea69cf91f5d084d06b9e89cc1f3b0f2c5f842f52faae
+Plugins:
+- Name: チャンネルストリップ
+  Information: チャンネルストリップ v0.3.0beta3 ( 6796fd6 )
+  Type: Filter
+  InstallPath: AudioMixer.auf
+- Name: チャンネルストリップ - Aux
+  Type: Filter
+  InstallPath: AudioMixer.auf
+- Name: チャンネルストリップ - マスター
+  Type: Filter
+  InstallPath: AudioMixer.auf
+- Name: チャンネルストリップ - パラアウト
+  Type: Filter
+  InstallPath: AudioMixer.auf
+ManifestVersion: 0.3.0

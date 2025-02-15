@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: seekbarx
 DisplayName: シークバー＋
 Version: 0.3.1
 ReleaseDate: 2015-12-15
 Section: Plugin/Other
-InstalledSize: 13
+InstalledSize: 13044
 Developer:
 - aoytsk
 Description: Youtubeのようなサムネイルをシークバーに追加するプラグイン
@@ -14,12 +14,17 @@ Website:
 - https://aoytsk.blog.jp/aviutl/613302.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/seekbarx.zip
-  Sha256: dbc61dbce29e47020b668ae1b06a4a51ec3c3ff10623b6bca87dc22f45be0237
+  SHA256: dbc61dbce29e47020b668ae1b06a4a51ec3c3ff10623b6bca87dc22f45be0237
   Files:
   - Path: readme.txt
-    Sha256: 0227638c7afbc134eabc7854a9f233758c66130419cc6c88ba456ef17e4ad270
+    SHA256: 0227638c7afbc134eabc7854a9f233758c66130419cc6c88ba456ef17e4ad270
   - Path: seekbarx.auf
-    Sha256: f2b4f3f60a5c9a619b52d4f34a4e506f6d51869a06124a504fd2ce46318481d5
+    SHA256: f2b4f3f60a5c9a619b52d4f34a4e506f6d51869a06124a504fd2ce46318481d5
     Install:
       TargetPath: plugins/seekbarx.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 'シークバー＋ '
+  Information: 'シークバー＋ ver 0.3 by aoy '
+  Type: Filter
+  InstallPath: plugins/seekbarx.auf
+ManifestVersion: 0.3.0

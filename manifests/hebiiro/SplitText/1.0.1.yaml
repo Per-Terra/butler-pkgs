@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SplitText
 DisplayName: テキスト分解
 Version: 1.0.1
 ReleaseDate: 2022-07-17
 Section: Plugin/Other
-InstalledSize: 118
+InstalledSize: 120460
 Developer:
 - hebiiro
 Description: テキストオブジェクトをバラバラに分解するプラグイン
@@ -14,20 +14,25 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SplitText
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SplitText/releases/download/1.0.1/SplitText.1.0.1.zip
-  Sha256: 417066920a887101ace73a367c428423ca3290fca5a1225b89e79476b503efca
+  SHA256: 417066920a887101ace73a367c428423ca3290fca5a1225b89e79476b503efca
   Files:
   - Path: CREDITS.md
-    Sha256: dc61e8138af404971a7b6aeb4e137ffc7222255c4748adfe3e0a7cbf131e0b2d
+    SHA256: dc61e8138af404971a7b6aeb4e137ffc7222255c4748adfe3e0a7cbf131e0b2d
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 0f2054bc6761fe501c36ec6bea1c1df3471afccb86d353bf822d3f7f295d9ae7
+    SHA256: 0f2054bc6761fe501c36ec6bea1c1df3471afccb86d353bf822d3f7f295d9ae7
   - Path: SplitText.auf
-    Sha256: 4d47eb0f60094191e612cb39afeae45cb01981f9448b6f1026a2bb756bfc530b
+    SHA256: 4d47eb0f60094191e612cb39afeae45cb01981f9448b6f1026a2bb756bfc530b
     Install:
       TargetPath: plugins/SplitText.auf
   - Path: SplitText.wav
-    Sha256: 195c737eff33059df4cf431198671c14dc5eca606dad70f82536315e737ee663
+    SHA256: 195c737eff33059df4cf431198671c14dc5eca606dad70f82536315e737ee663
   - Path: SplitText2.wav
-    Sha256: 460889eb15fcad98be6855212675dfe5e7dcba6dcb1cf7ec4016c1093ebaae5b
-ManifestVersion: 0.2.0
+    SHA256: 460889eb15fcad98be6855212675dfe5e7dcba6dcb1cf7ec4016c1093ebaae5b
+Plugins:
+- Name: テキスト分解
+  Information: テキスト分解 1.0.1 by 蛇色
+  Type: Filter
+  InstallPath: plugins/SplitText.auf
+ManifestVersion: 0.3.0

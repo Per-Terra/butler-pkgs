@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-ColAdj
 DisplayName: 色調調整セット
 Version: "6"
 ReleaseDate: 2019-09-23
 Section: Script
-InstalledSize: 191
+InstalledSize: 195243
 Developer:
 - Tim
 Description: 画像にかける様々なエフェクトを用意してあります。
@@ -15,26 +15,26 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/ColAdj6.zip
-  Sha256: 6cd003eb83285f95704afe67ac0a3baa01b6912de3286de136a0ee0c2122d00e
+  SHA256: 6cd003eb83285f95704afe67ac0a3baa01b6912de3286de136a0ee0c2122d00e
   Files:
   - Path: ColAdj6/@T_Color_Module.anm
-    Sha256: 3d6993e189ebe54b1725feee9fe1480b605f9fcab2e57b8535bd2be5f4fbf839
+    SHA256: 3d6993e189ebe54b1725feee9fe1480b605f9fcab2e57b8535bd2be5f4fbf839
     Install:
       TargetPath: script/@T_Color_Module.anm
   - Path: ColAdj6/T_Color_Module.dll
-    Sha256: d5e10bf9dc724870eede65e4b1c5662d2b6872f1cdab8c575ae9493eb641a5ea
+    SHA256: d5e10bf9dc724870eede65e4b1c5662d2b6872f1cdab8c575ae9493eb641a5ea
     Install:
       TargetPath: script/T_Color_Module.dll
   - Path: ColAdj6/簡易トーンカーブ.obj
-    Sha256: 173523e9a60feab772ca6f1e40266cc2c50d7679272ccd12e46e76d0ace1cc89
+    SHA256: 173523e9a60feab772ca6f1e40266cc2c50d7679272ccd12e46e76d0ace1cc89
     Install:
       TargetPath: script/簡易トーンカーブ.obj
   - Path: ColAdj6/簡易ヒストグラム.obj
-    Sha256: 1dfea0f5190685ff1933007315f82e8666ebb534a1feb8392c76b624b8eee616
+    SHA256: 1dfea0f5190685ff1933007315f82e8666ebb534a1feb8392c76b624b8eee616
     Install:
       TargetPath: script/簡易ヒストグラム.obj
   - Path: ColAdj6/色相環.obj
-    Sha256: 53b9756c640fd7bfc1003db4930f6e3fe4b0dca43c5ac2aa656d580931341e67
+    SHA256: 53b9756c640fd7bfc1003db4930f6e3fe4b0dca43c5ac2aa656d580931341e67
     Install:
       TargetPath: script/色相環.obj
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

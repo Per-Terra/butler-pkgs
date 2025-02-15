@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-BomPuz
 DisplayName: 砕け散るパズル
 Version: "2"
 ReleaseDate: 2020-03-12
 Section: Script
-InstalledSize: 28
+InstalledSize: 27994
 Developer:
 - Tim
 Description: パズルのように分解し、飛散させます。飛ばし方や形状にある程度の自由度があります。
@@ -15,18 +15,18 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/BomPuz21.zip
-  Sha256: 3a0e96ac21d16cfb560af1dd03295be325b8abd41beffd4eae051901e829103a
+  SHA256: 3a0e96ac21d16cfb560af1dd03295be325b8abd41beffd4eae051901e829103a
   Files:
   - Path: BomPuz21/パズルピース.obj
-    Sha256: 622da60f22853a53222b25f3df2868b747aaa843f6b2053bb069c5ec78dfd42d
+    SHA256: 622da60f22853a53222b25f3df2868b747aaa843f6b2053bb069c5ec78dfd42d
     Install:
       TargetPath: script/パズルピース.obj
   - Path: BomPuz21/砕け散るパズル-old.lua
-    Sha256: 8acb4f24a281375e16f0f9890231dfbc7f82cc28dd5607c843585aecb9a55306
+    SHA256: 8acb4f24a281375e16f0f9890231dfbc7f82cc28dd5607c843585aecb9a55306
     Install:
       TargetPath: script/砕け散るパズル-old.lua
   - Path: BomPuz21/砕け散るパズル.anm
-    Sha256: 47000483383c19409a5ddf05ada256b0fb7512a0406df25a8140c3e6c661b556
+    SHA256: 47000483383c19409a5ddf05ada256b0fb7512a0406df25a8140c3e6c661b556
     Install:
       TargetPath: script/砕け散るパズル.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

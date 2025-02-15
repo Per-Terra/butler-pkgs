@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: WaveformPreview
 DisplayName: 波形プレビュー
 Version: 0.3.1
 ReleaseDate: 2022-12-11
 Section: Plugin/Other
-InstalledSize: 105
+InstalledSize: 107046
 Developer:
 - karoterra
 Description: 編集中の音声波形を確認するためのプラグイン
@@ -15,23 +15,28 @@ Website:
 - https://www.nicovideo.jp/watch/sm39258128
 Files:
 - SourceUrl: https://github.com/karoterra/aviutl_WaveformPreview/releases/download/v0.3.1/aviutl_WaveformPreview_v0.3.1.zip
-  Sha256: bc588074902740a1df1535f9fe8030c72f72fb39eec464ef80f4bfce83b1f123
+  SHA256: bc588074902740a1df1535f9fe8030c72f72fb39eec464ef80f4bfce83b1f123
   Files:
   - Path: CHANGELOG.md
-    Sha256: 8ad440cd35c9d6e8a62e6a1f30b9604133d136efd2468eaf0ec23768322a7629
+    SHA256: 8ad440cd35c9d6e8a62e6a1f30b9604133d136efd2468eaf0ec23768322a7629
   - Path: CREDITS.md
-    Sha256: e592aa146f0f23f876eaeb64b6cd4d39d1eb3444755b6c5e02dd1f7fc45d0e65
+    SHA256: e592aa146f0f23f876eaeb64b6cd4d39d1eb3444755b6c5e02dd1f7fc45d0e65
   - Path: LICENSE
-    Sha256: 7d50704a82cf8fec7eef4390ff4bc34bd198b446d45c20eb6e2f78842ab04ff8
+    SHA256: 7d50704a82cf8fec7eef4390ff4bc34bd198b446d45c20eb6e2f78842ab04ff8
   - Path: README.md
-    Sha256: 03dab675941005421f0ce4b3172064fdb94f911f45c8e7bef9745e933b05513d
+    SHA256: 03dab675941005421f0ce4b3172064fdb94f911f45c8e7bef9745e933b05513d
   - Path: WaveformPreview.auf
-    Sha256: 892d65ec30a5fd3cdaf093b8f20fb5d3deeb27cede9d01e134ce643be69a4a67
+    SHA256: 892d65ec30a5fd3cdaf093b8f20fb5d3deeb27cede9d01e134ce643be69a4a67
     Install:
       TargetPath: plugins/WaveformPreview.auf
   - Path: WaveformPreview.exe
-    Sha256: dbe158caf2b45c6b462679b980006147dc00fe557c6276d93bd21a628acb4e4b
+    SHA256: dbe158caf2b45c6b462679b980006147dc00fe557c6276d93bd21a628acb4e4b
     Install:
       TargetPath: plugins/WaveformPreview.exe
       Method: Copy
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 波形プレビュー
+  Information: 波形プレビュー v0.3.1 by karoterra
+  Type: Filter
+  InstallPath: plugins/WaveformPreview.auf
+ManifestVersion: 0.3.0

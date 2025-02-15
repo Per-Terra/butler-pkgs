@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: MaxWnd
 DisplayName: 最大化時メインウィンドウのみ表示プラグイン
 Version: "0.4"
 ReleaseDate: 2021-12-16
 Section: Plugin/Other
-InstalledSize: 11
+InstalledSize: 10817
 Developer:
 - nazoSAUNA
 Description: メインウィンドウを最大化したときにメインウィンドウ以外を非表示にするプラグイン
@@ -17,12 +17,17 @@ Website:
 Files:
 - SourceUrl: https://drive.google.com/uc?id=19joDyULvnT2Na1yequ4Fs1Kjl7MY6a8v
   FileName: 要ランタイム(省メモリ).zip
-  Sha256: 16e8ddc8401b7780d12d158ae6478fdb7b120fb5c08149c1250ac3067817d39b
+  SHA256: 16e8ddc8401b7780d12d158ae6478fdb7b120fb5c08149c1250ac3067817d39b
   Files:
   - Path: 0_MaxWnd.auf
-    Sha256: aae1fce58d74422c279cd3e420b5f8b4471ebffe3af4f1311712378e51c4299c
+    SHA256: aae1fce58d74422c279cd3e420b5f8b4471ebffe3af4f1311712378e51c4299c
     Install:
-      TargetPath: 0_MaxWnd.auf # maintainer注: plugins以下に配置するとバグが発生する(readme.md参照)
+      TargetPath: 0_MaxWnd.auf
   - Path: readme.txt
-    Sha256: cbd14472deb60d543be1422be8b6baf25c6f4cefbf130259fb48dc23b6b4251f
-ManifestVersion: 0.1.0
+    SHA256: cbd14472deb60d543be1422be8b6baf25c6f4cefbf130259fb48dc23b6b4251f
+Plugins:
+- Name: 最大化時メインウィンドウのみ
+  Information: 最大化時メインウィンドウのみにする v0.4
+  Type: Filter
+  InstallPath: 0_MaxWnd.auf
+ManifestVersion: 0.3.0

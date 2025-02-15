@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-TraEasy
 DisplayName: TrackingラインEasy
 Version: 2013-01-26
 ReleaseDate: 2013-01-26
 Section: Script
-InstalledSize: 10
+InstalledSize: 9472
 Developer:
 - Tim
 Description: テツさん作成のTrackingラインの簡易版です。多少の独自機能も追加してあります。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/TraEasy.zip
-  Sha256: 52506635b1869f4600a587d0597f459272f249b9189afe10b8e23e160836aaa2
+  SHA256: 52506635b1869f4600a587d0597f459272f249b9189afe10b8e23e160836aaa2
   Files:
   - Path: '@TrackingラインEasy.anm'
-    Sha256: 21507ca4914ba83f1990dececadc21ff709ffe71bb3236cc93da4b5638973a2a
+    SHA256: 21507ca4914ba83f1990dececadc21ff709ffe71bb3236cc93da4b5638973a2a
     Install:
       TargetPath: script/@TrackingラインEasy.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

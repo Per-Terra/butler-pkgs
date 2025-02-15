@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: AddColorCode
 DisplayName: カラーコード追加
 Version: 1.0.0
 ReleaseDate: 2022-06-01
 Section: Plugin/Other
-InstalledSize: 39
+InstalledSize: 39824
 Developer:
 - hebiiro
 Description: 色の選択ダイアログでカラーコードを使えるようにするプラグイン
@@ -14,16 +14,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-AddColorCode
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-AddColorCode/releases/download/1.0.0/AddColorCode.1.0.0.zip
-  Sha256: 19d644cf76c39dd52bc12ad0bb69bfe3572d78ffce4b13a341504821ee89995e
+  SHA256: 19d644cf76c39dd52bc12ad0bb69bfe3572d78ffce4b13a341504821ee89995e
   Files:
   - Path: AddColorCode.auf
-    Sha256: 29f90ec5b24ea421ed0d9b39c3446e45894ccf99d34aa0a8990021d1d80993c0
+    SHA256: 29f90ec5b24ea421ed0d9b39c3446e45894ccf99d34aa0a8990021d1d80993c0
     Install:
       TargetPath: plugins/AddColorCode.auf
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 6efec482ff959ba6132aba0a9b318414cd5ac03869703fa658fce60018ad8bae
-ManifestVersion: 0.2.0
+    SHA256: 6efec482ff959ba6132aba0a9b318414cd5ac03869703fa658fce60018ad8bae
+Plugins:
+- Name: カラーコード追加
+  Information: カラーコード追加 1.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/AddColorCode.auf
+ManifestVersion: 0.3.0

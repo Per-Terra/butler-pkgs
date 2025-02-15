@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-LinHal
 DisplayName: ライントーン＆ハーフトーン
 Version: 2013-05-24
 ReleaseDate: 2013-05-24
 Section: Script
-InstalledSize: 4
+InstalledSize: 3523
 Developer:
 - Tim
 Description: 画像をハーフトーン、ライントーンにします。
@@ -15,14 +15,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/LinHal.zip
-  Sha256: d50d72fc8a09c0f4509d2014bc59fe276f79af9dfd15408ae9984a9906ea72de
+  SHA256: d50d72fc8a09c0f4509d2014bc59fe276f79af9dfd15408ae9984a9906ea72de
   Files:
   - Path: ハーフトーンT.anm
-    Sha256: 5538ac1808e1dd39053f841f2fbacb09dcf0699475013dea1df48354a1111786
+    SHA256: 5538ac1808e1dd39053f841f2fbacb09dcf0699475013dea1df48354a1111786
     Install:
       TargetPath: script/ハーフトーンT.anm
   - Path: ライントーンT.anm
-    Sha256: 5de966c05dca341be6b2eb3a6a5f7e2f96c484ab7ea3e06a3c7575536524794b
+    SHA256: 5de966c05dca341be6b2eb3a6a5f7e2f96c484ab7ea3e06a3c7575536524794b
     Install:
       TargetPath: script/ライントーンT.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

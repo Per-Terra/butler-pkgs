@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: BottomClickCtrl
 DisplayName: メインウィンドウのボタン周辺の判定を無効化するプラグイン
 Version: "1.0"
 ReleaseDate: 2023-12-06
 Section: Plugin/Other
-InstalledSize: 11
+InstalledSize: 10494
 Developer:
 - nazoSAUNA
 Description: メインウィンドウのボタン周辺の判定を無効化するプラグイン
@@ -17,12 +17,17 @@ Website:
 Files:
 - SourceUrl: https://drive.google.com/uc?id=1HgCTjXN3u1jXvUFOXIlHg61I8d-JxB-1
   FileName: 要ランタイム(省メモリ).zip
-  Sha256: 21148751e84779e3b1f93ae09fe9cb9e16b83f5a751eab61abaca2ce5e34de51
+  SHA256: 21148751e84779e3b1f93ae09fe9cb9e16b83f5a751eab61abaca2ce5e34de51
   Files:
   - Path: BottomClickCtrl.auf
-    Sha256: b968e56f46422bf0f606dfdcab1a309207e6daecfe711b818d4a7eb170dcc809
+    SHA256: b968e56f46422bf0f606dfdcab1a309207e6daecfe711b818d4a7eb170dcc809
     Install:
       TargetPath: plugins/BottomClickCtrl.auf
   - Path: readme.txt
-    Sha256: 41d378ed9c63212caffa23e3cff34c68e19e61d5a9436e776e2c6e1193a67a44
-ManifestVersion: 0.1.0
+    SHA256: 41d378ed9c63212caffa23e3cff34c68e19e61d5a9436e776e2c6e1193a67a44
+Plugins:
+- Name: ボタン周囲の判定無効
+  Information: 下部(フレーム領域外)のクリック判定無効 v0.4
+  Type: Filter
+  InstallPath: plugins/BottomClickCtrl.auf
+ManifestVersion: 0.3.0

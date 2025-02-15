@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: PSDToolKit
 Version: 0.2-beta10
@@ -13,7 +13,7 @@ Depends:
 - forcepser
 - GCMZDrops
 - RamPreview
-InstalledSize: 11938
+InstalledSize: 12223516
 Developer:
 - oov
 Description: 拡張編集プラグイン上でPSDファイルを扱えるようにするためのツールキット
@@ -21,288 +21,293 @@ Website:
 - https://github.com/oov/aviutl_psdtoolkit
 Files:
 - SourceUrl: https://github.com/oov/aviutl_psdtoolkit/releases/download/v0.2beta10/psdtoolkit_v0.2beta10.zip
-  Sha256: 43dbed9b7ad59ca36d669312901b2addeb8481e7c1306897a29c36b21f76cd81
+  SHA256: 43dbed9b7ad59ca36d669312901b2addeb8481e7c1306897a29c36b21f76cd81
   Files:
   - Path: AudioMixer.auf
-    Sha256: 35a059d68dcb8a255b4c4f485aae6f134b3a65078c87929b6944da873a924f94
+    SHA256: 35a059d68dcb8a255b4c4f485aae6f134b3a65078c87929b6944da873a924f94
   - Path: GCMZDrops.auf
-    Sha256: 4da85498d85d22a14fcae69f071180beb9bba9104b06bee7dbf2842fa5ce510d
+    SHA256: 4da85498d85d22a14fcae69f071180beb9bba9104b06bee7dbf2842fa5ce510d
   - Path: GCMZDrops.txt
-    Sha256: f1899999b9be65dd52dc9a1bcfffecdca6854cb2aaa16ee4640a5f7635d721c4
+    SHA256: f1899999b9be65dd52dc9a1bcfffecdca6854cb2aaa16ee4640a5f7635d721c4
   - Path: PSDToolKit.auf
-    Sha256: c3476b585753ca92c72428a9a25f3a54d9d55c994dc2c6b2aa2cea898f3f6020
+    SHA256: c3476b585753ca92c72428a9a25f3a54d9d55c994dc2c6b2aa2cea898f3f6020
     Install:
       TargetPath: PSDToolKit.auf
   - Path: PSDToolKit.txt
-    Sha256: 6956fabcdc0abd55a3440c03b6c0321716bc0403851a5abdd1e66f6c41481b1b
+    SHA256: 6956fabcdc0abd55a3440c03b6c0321716bc0403851a5abdd1e66f6c41481b1b
   - Path: ZRamPreview.auf
-    Sha256: a994e0aa7424e79c56f6fc18c8741c52b701b604971631e4d86e6bd7350db4c1
+    SHA256: a994e0aa7424e79c56f6fc18c8741c52b701b604971631e4d86e6bd7350db4c1
   - Path: ZRamPreview.auo
-    Sha256: 472ec56d9c48c1f1d97b493b7caf91a6827efa43514e8533f5b5124510821696
+    SHA256: 472ec56d9c48c1f1d97b493b7caf91a6827efa43514e8533f5b5124510821696
   - Path: ZRamPreview.exe
-    Sha256: 137014b49dbad3f2b40018d07c630c0e6f8c11af7faadf7f3185b27e50b7e484
+    SHA256: 137014b49dbad3f2b40018d07c630c0e6f8c11af7faadf7f3185b27e50b7e484
   - Path: ZRamPreview.txt
-    Sha256: 4a3f49bb9fdfa31c72620136f1e93d3ee4e7f04578845c7822d6dbdef688a140
+    SHA256: 4a3f49bb9fdfa31c72620136f1e93d3ee4e7f04578845c7822d6dbdef688a140
   - Path: GCMZDrops/_entrypoint.lua
-    Sha256: 25931b41e3422ad7b9e4cee7e64e3d67c16daae06a5bc935d713637b2fd44143
+    SHA256: 25931b41e3422ad7b9e4cee7e64e3d67c16daae06a5bc935d713637b2fd44143
   - Path: GCMZDrops/avoiddup.lua
-    Sha256: 00b64fa8a3b367b15955ad258008bc2667c3ec416f06f354f378bc85bfc44426
+    SHA256: 00b64fa8a3b367b15955ad258008bc2667c3ec416f06f354f378bc85bfc44426
   - Path: GCMZDrops/example.lua
-    Sha256: 3d1a8f23c844f7a92398fb0019ea8b235dfdc438c5e18b4c1f40ba9ab7e7700f
+    SHA256: 3d1a8f23c844f7a92398fb0019ea8b235dfdc438c5e18b4c1f40ba9ab7e7700f
   - Path: GCMZDrops/generic.lua
-    Sha256: 6535137136e8bf96fb503f89255e7d4cde714d290cb61ac6c71de0ee0178bad6
+    SHA256: 6535137136e8bf96fb503f89255e7d4cde714d290cb61ac6c71de0ee0178bad6
   - Path: GCMZDrops/psdtoolkit_lab.lua
-    Sha256: 4fbc2595610d4deb8d4814f741b9ab69b4a0d197d9edce10482e8413a8d81137
+    SHA256: 4fbc2595610d4deb8d4814f741b9ab69b4a0d197d9edce10482e8413a8d81137
   - Path: GCMZDrops/psdtoolkit_psd.lua
-    Sha256: 98e7e460d00659df63ea53c5465f2c207817fbffabe59c56ced3130c4c784912
+    SHA256: 98e7e460d00659df63ea53c5465f2c207817fbffabe59c56ced3130c4c784912
   - Path: GCMZDrops/psdtoolkit_srt.lua
-    Sha256: 8d42807804ea62fdd372c81643eeb78d5c9274d9caaaafc084493866cecf847d
+    SHA256: 8d42807804ea62fdd372c81643eeb78d5c9274d9caaaafc084493866cecf847d
   - Path: GCMZDrops/psdtoolkit_wav.lua
-    Sha256: e30c32c1c8261f2d252c79a0aae4ca58f91b0b92433f6d9efca9816be1db9cc2
+    SHA256: e30c32c1c8261f2d252c79a0aae4ca58f91b0b92433f6d9efca9816be1db9cc2
   - Path: GCMZDrops/textsjis.lua
-    Sha256: e451b1bd623d9590275cd937d491e3aecab5750e6025d5b97afddab3c8ac95e7
+    SHA256: e451b1bd623d9590275cd937d491e3aecab5750e6025d5b97afddab3c8ac95e7
   - Path: GCMZDrops/dropper/example.lua
-    Sha256: 6f005adfa53164596de00c28c4f075d721895d4e8768fbaaf31bde768871dfb7
+    SHA256: 6f005adfa53164596de00c28c4f075d721895d4e8768fbaaf31bde768871dfb7
   - Path: GCMZDrops/dropper/ICTalk.dll
-    Sha256: 907bf0984bb3c0a14b6f9ffb2f886ff9b6c8333d43b7eba48778452b3956d91f
+    SHA256: 907bf0984bb3c0a14b6f9ffb2f886ff9b6c8333d43b7eba48778452b3956d91f
   - Path: GCMZDrops/dropper/psdtoolkit_ictalk.lua
-    Sha256: 57a8dcc0e2f60682b56cd46ca87de19d52619f351469b477e8218eccbb07495e
+    SHA256: 57a8dcc0e2f60682b56cd46ca87de19d52619f351469b477e8218eccbb07495e
   - Path: PSDToolKit/PSDToolKitオブジェクト.exa
-    Sha256: 9c113a0b329f6a8cfefe32b5acc763ec22857e5ea4df559fd484abf5a9e92bae
+    SHA256: 9c113a0b329f6a8cfefe32b5acc763ec22857e5ea4df559fd484abf5a9e92bae
     Install:
       TargetPath: PSDToolKit/PSDToolKitオブジェクト.exa
   - Path: PSDToolKit/オブジェクト描画.exa
-    Sha256: 97ffbf0e401b3e3c003da5e46a719f4de7147315f76444302380b79f2555dfc8
+    SHA256: 97ffbf0e401b3e3c003da5e46a719f4de7147315f76444302380b79f2555dfc8
     Install:
       TargetPath: PSDToolKit/オブジェクト描画.exa
   - Path: PSDToolKit/テキスト　字幕表示用.exa
-    Sha256: 6bfce9aef41577b4ba98238c4d57bd1299d3abfb87acc9ec9b96486e5ebcf80c
+    SHA256: 6bfce9aef41577b4ba98238c4d57bd1299d3abfb87acc9ec9b96486e5ebcf80c
     Install:
       TargetPath: PSDToolKit/テキスト　字幕表示用.exa
   - Path: PSDToolKit/パーツ差し替え.exa
-    Sha256: 5066e6fdf4099c0eb5fe7c842aebf2a415b6556b375842a5e00e0d4b82342030
+    SHA256: 5066e6fdf4099c0eb5fe7c842aebf2a415b6556b375842a5e00e0d4b82342030
     Install:
       TargetPath: PSDToolKit/パーツ差し替え.exa
   - Path: PSDToolKit/口パク　あいうえお.exa
-    Sha256: c5c5ead87c8bcd8a2ad55c394901ef115222d7ec0a0ee85e3f0871d17728dfc1
+    SHA256: c5c5ead87c8bcd8a2ad55c394901ef115222d7ec0a0ee85e3f0871d17728dfc1
     Install:
       TargetPath: PSDToolKit/口パク　あいうえお.exa
   - Path: PSDToolKit/口パク　開閉のみ.exa
-    Sha256: bf63e27e061225aaf6231e24f20a07835e4ebeafb34b1ec9e0faf03af20a318e
+    SHA256: bf63e27e061225aaf6231e24f20a07835e4ebeafb34b1ec9e0faf03af20a318e
     Install:
       TargetPath: PSDToolKit/口パク　開閉のみ.exa
   - Path: PSDToolKit/口パク準備.exa
-    Sha256: fac140304eee8200bb8a81ab56b255b48b25dfc89f079e4c4ae2b3f4eda4def4
+    SHA256: fac140304eee8200bb8a81ab56b255b48b25dfc89f079e4c4ae2b3f4eda4def4
     Install:
       TargetPath: PSDToolKit/口パク準備.exa
   - Path: PSDToolKit/字幕準備.exa
-    Sha256: bdf0e5eaa1b1861420e0623105d3240cd6c8aeb4b7b06b32803d521f1d210ebc
+    SHA256: bdf0e5eaa1b1861420e0623105d3240cd6c8aeb4b7b06b32803d521f1d210ebc
     Install:
       TargetPath: PSDToolKit/字幕準備.exa
   - Path: PSDToolKit/多目的スライダー.exa
-    Sha256: 2d707e75c300b5b359437c4e3aa2abd7f1d2bd0befb1d366d4bf6b99004c3528
+    SHA256: 2d707e75c300b5b359437c4e3aa2abd7f1d2bd0befb1d366d4bf6b99004c3528
     Install:
       TargetPath: PSDToolKit/多目的スライダー.exa
   - Path: PSDToolKit/目パチ.exa
-    Sha256: 3f0d5a8b80f12dd8b32fb3dcbe4cd9298a8df61be3120d6566dd22ee165f3bfd
+    SHA256: 3f0d5a8b80f12dd8b32fb3dcbe4cd9298a8df61be3120d6566dd22ee165f3bfd
     Install:
       TargetPath: PSDToolKit/目パチ.exa
   - Path: PSDToolKitDocs/audio.html
-    Sha256: bcb4cf801b4520b88b191019bf713b6edbcb966e02be627efcac1bf47e5c1c11
+    SHA256: bcb4cf801b4520b88b191019bf713b6edbcb966e02be627efcac1bf47e5c1c11
   - Path: PSDToolKitDocs/faq.html
-    Sha256: 29ef28f5822bdbfe8a246bd34cc3b847254b948c92fe6bb8a769f5cc353db569
+    SHA256: 29ef28f5822bdbfe8a246bd34cc3b847254b948c92fe6bb8a769f5cc353db569
   - Path: PSDToolKitDocs/gcmzdrops.html
-    Sha256: 57600e545a4d2baf3b147dc7df93b7b5644509f3765db1599ddc96dbc42dce32
+    SHA256: 57600e545a4d2baf3b147dc7df93b7b5644509f3765db1599ddc96dbc42dce32
   - Path: PSDToolKitDocs/howtouse.html
-    Sha256: 2986c940e4b499dd3049e4ce9350b403238554e0a5d1a4f2babc664d23b1f669
+    SHA256: 2986c940e4b499dd3049e4ce9350b403238554e0a5d1a4f2babc664d23b1f669
   - Path: PSDToolKitDocs/index.html
-    Sha256: d039b2a42759df10f8228bc6da1ade6578cbc29c4ff1a86ded8a78eec938526a
+    SHA256: d039b2a42759df10f8228bc6da1ade6578cbc29c4ff1a86ded8a78eec938526a
   - Path: PSDToolKitDocs/install.html
-    Sha256: 92dc0c5c7e690b27ddff005074408c949da9fbf9093b671beafa9db250a6a1a6
+    SHA256: 92dc0c5c7e690b27ddff005074408c949da9fbf9093b671beafa9db250a6a1a6
   - Path: PSDToolKitDocs/pfv.html
-    Sha256: 7d8ccf41d05742c0d3fb243d47a02fa0e1465c500c969133fa8431566893cace
+    SHA256: 7d8ccf41d05742c0d3fb243d47a02fa0e1465c500c969133fa8431566893cace
   - Path: PSDToolKitDocs/preview.html
-    Sha256: 2de0be88b429a6eefefc6b99a4cf6a982cf096a0646f85b5e05b64dde9ad22eb
+    SHA256: 2de0be88b429a6eefefc6b99a4cf6a982cf096a0646f85b5e05b64dde9ad22eb
   - Path: PSDToolKitDocs/psd.html
-    Sha256: 322c710ff36d3757637c0d5577c7a85d58125fb71f8b2fa55d7914210252b52b
+    SHA256: 322c710ff36d3757637c0d5577c7a85d58125fb71f8b2fa55d7914210252b52b
   - Path: PSDToolKitDocs/psd2.html
-    Sha256: 75ac88f21a9ef2f21f4a235bb573c239aefda564477f203f57e596c3216a19c2
+    SHA256: 75ac88f21a9ef2f21f4a235bb573c239aefda564477f203f57e596c3216a19c2
   - Path: PSDToolKitDocs/setting.html
-    Sha256: 9b90cf3bd3e0832edb3926f5947580ae83be8b58ce983bb9ddbfd2aacc901dbf
+    SHA256: 9b90cf3bd3e0832edb3926f5947580ae83be8b58ce983bb9ddbfd2aacc901dbf
   - Path: PSDToolKitDocs/subobj.html
-    Sha256: 4fd6248a780b988536ec8c323a72526acadaa48b6f382288a53c47555a2cace8
+    SHA256: 4fd6248a780b988536ec8c323a72526acadaa48b6f382288a53c47555a2cace8
   - Path: PSDToolKitDocs/subtitle.html
-    Sha256: 97a82225eb8da0f1dfa0cd40038a2119556bf5cd1caba63f8186eb2313944008
+    SHA256: 97a82225eb8da0f1dfa0cd40038a2119556bf5cd1caba63f8186eb2313944008
   - Path: PSDToolKitDocs/assets/audio-a1cs.png
-    Sha256: 663611313e410040c6d483801931dce16636ad41e13097fd45990908bc2e4b05
+    SHA256: 663611313e410040c6d483801931dce16636ad41e13097fd45990908bc2e4b05
   - Path: PSDToolKitDocs/assets/audio-cs.png
-    Sha256: ca1cdc0a4f58d557b87bc7529b7493fbe0d0163ba2717d5aa91ead21eb9e20a6
+    SHA256: ca1cdc0a4f58d557b87bc7529b7493fbe0d0163ba2717d5aa91ead21eb9e20a6
   - Path: PSDToolKitDocs/assets/audio-cs2.png
-    Sha256: 222597f751714370703c2405ef783e0e8a6c633c269b7c102ba6ad3dca22c514
+    SHA256: 222597f751714370703c2405ef783e0e8a6c633c269b7c102ba6ad3dca22c514
   - Path: PSDToolKitDocs/assets/audio-cs3.png
-    Sha256: 16b6f0d0da929b2737190fbb16739b64a7c5f8a182f22fe9fd291aabe14c76d3
+    SHA256: 16b6f0d0da929b2737190fbb16739b64a7c5f8a182f22fe9fd291aabe14c76d3
   - Path: PSDToolKitDocs/assets/audio-cs4.png
-    Sha256: 93860fab23358d08e7c066d4cc21474ab58812a9a954bdd52dbd98db85e22ec2
+    SHA256: 93860fab23358d08e7c066d4cc21474ab58812a9a954bdd52dbd98db85e22ec2
   - Path: PSDToolKitDocs/assets/gcmzdrops-lab.png
-    Sha256: 3f8507e27a8f9e4eeb6b8c9c66d01578d1f3601806ee0560a3913c483df0ba47
+    SHA256: 3f8507e27a8f9e4eeb6b8c9c66d01578d1f3601806ee0560a3913c483df0ba47
   - Path: PSDToolKitDocs/assets/gcmzdrops-lipsync.png
-    Sha256: a3eb4e1bfea9121a93675d7592fade77ed0d0b14168e321503452f7ca8d4d79b
+    SHA256: a3eb4e1bfea9121a93675d7592fade77ed0d0b14168e321503452f7ca8d4d79b
   - Path: PSDToolKitDocs/assets/gcmzdrops-wavdrop.png
-    Sha256: d740ad3226de0d7db2553531d577641b4a72e60c0fb05bdc10eaad0d0326b471
+    SHA256: d740ad3226de0d7db2553531d577641b4a72e60c0fb05bdc10eaad0d0326b471
   - Path: PSDToolKitDocs/assets/howtouse-overview.png
-    Sha256: 9507083bdac726c659e2989d2fcf84e5df80870e233eb5b8bb213884a8051fc3
+    SHA256: 9507083bdac726c659e2989d2fcf84e5df80870e233eb5b8bb213884a8051fc3
   - Path: PSDToolKitDocs/assets/install.png
-    Sha256: cb1550b9bfba5e49ac97ff9424e4b6198e1580fba42dd2b609c18b55990bb7ac
+    SHA256: cb1550b9bfba5e49ac97ff9424e4b6198e1580fba42dd2b609c18b55990bb7ac
   - Path: PSDToolKitDocs/assets/pfv-load.png
-    Sha256: 662226cda2e296749d20ead0afca79b3e729bee872fed9f46178eb73c7af53d5
+    SHA256: 662226cda2e296749d20ead0afca79b3e729bee872fed9f46178eb73c7af53d5
   - Path: PSDToolKitDocs/assets/pfv-load2.png
-    Sha256: 59f563cfd7c5d66f3a509352c9992289ac68b43584ab260be0a7a048c0667b3f
+    SHA256: 59f563cfd7c5d66f3a509352c9992289ac68b43584ab260be0a7a048c0667b3f
   - Path: PSDToolKitDocs/assets/pfv-load3.png
-    Sha256: 501ff84f5dd3ff2d9df44cdae2a2bda65c711e21fe6116bffc10944fe0c029b2
+    SHA256: 501ff84f5dd3ff2d9df44cdae2a2bda65c711e21fe6116bffc10944fe0c029b2
   - Path: PSDToolKitDocs/assets/psd-dd.png
-    Sha256: f54569aade183e358a5dbb20c4bd0e0bb57fe64264129f1adb71bb1b66c74050
+    SHA256: f54569aade183e358a5dbb20c4bd0e0bb57fe64264129f1adb71bb1b66c74050
   - Path: PSDToolKitDocs/assets/psd-loaded.png
-    Sha256: 86a9699ec58cf3b9c44ed122b5668d6d8b01b95b10e9123def22d55e6ff9f7b4
+    SHA256: 86a9699ec58cf3b9c44ed122b5668d6d8b01b95b10e9123def22d55e6ff9f7b4
   - Path: PSDToolKitDocs/assets/psd-prop.png
-    Sha256: 2c75a7c700f6b1f4aef46f32a6f964d4ef5b4d7a4a72a6f8eba3eecfa7e697a4
+    SHA256: 2c75a7c700f6b1f4aef46f32a6f964d4ef5b4d7a4a72a6f8eba3eecfa7e697a4
   - Path: PSDToolKitDocs/assets/psd-sgui.png
-    Sha256: cfa25537ca25246f39cae66f8b506e21b92b1a4e9050a0694d7484b455b9f336
+    SHA256: cfa25537ca25246f39cae66f8b506e21b92b1a4e9050a0694d7484b455b9f336
   - Path: PSDToolKitDocs/assets/psd-split.png
-    Sha256: de4e54395bab8cc55bf6cb76161199349214a22a41ff4da449d124b58fd16732
+    SHA256: de4e54395bab8cc55bf6cb76161199349214a22a41ff4da449d124b58fd16732
   - Path: PSDToolKitDocs/assets/psd-split2.png
-    Sha256: 668186be8db4bcec53b958d3e426e5b1a731cde9179263816caaa5f652e62119
+    SHA256: 668186be8db4bcec53b958d3e426e5b1a731cde9179263816caaa5f652e62119
   - Path: PSDToolKitDocs/assets/psd-window.png
-    Sha256: 6fd7ea4e7d37b095ad7a9cf837f3607d93e5e07cdf9bda664d7e8faaf055dc3c
+    SHA256: 6fd7ea4e7d37b095ad7a9cf837f3607d93e5e07cdf9bda664d7e8faaf055dc3c
   - Path: PSDToolKitDocs/assets/psd2-blinker1.png
-    Sha256: 1f02a77455bb8cf071cd20fa7c09f8a66b4e0d46664a01dd9fd768220c4348e9
+    SHA256: 1f02a77455bb8cf071cd20fa7c09f8a66b4e0d46664a01dd9fd768220c4348e9
   - Path: PSDToolKitDocs/assets/psd2-blinker2.png
-    Sha256: dab4255c36ea5d957399ada412f74b725fadcac7956b63ed022f3a0f6af61241
+    SHA256: dab4255c36ea5d957399ada412f74b725fadcac7956b63ed022f3a0f6af61241
   - Path: PSDToolKitDocs/assets/psd2-blinker3.png
-    Sha256: bca38a51b143b5ea7f7781d76b2ed96acecad1a4e243dcc488a02fa5474332fa
+    SHA256: bca38a51b143b5ea7f7781d76b2ed96acecad1a4e243dcc488a02fa5474332fa
   - Path: PSDToolKitDocs/assets/psd2-blinker4.png
-    Sha256: c22cc6970c4bce49053dcdbcc7b07d4cdf75c61ec15868258b7af1ef936d6905
+    SHA256: c22cc6970c4bce49053dcdbcc7b07d4cdf75c61ec15868258b7af1ef936d6905
   - Path: PSDToolKitDocs/assets/psd2-export-track.png
-    Sha256: 1c65316270c69898edf06c2ce6c07ae492e7a0166ab383f116e2aed28f9a89e8
+    SHA256: 1c65316270c69898edf06c2ce6c07ae492e7a0166ab383f116e2aed28f9a89e8
   - Path: PSDToolKitDocs/assets/psd2-export.png
-    Sha256: 4314319dcb9986567bdd7095c359060b10a9eda5d14f786771a777c1fc47e568
+    SHA256: 4314319dcb9986567bdd7095c359060b10a9eda5d14f786771a777c1fc47e568
   - Path: PSDToolKitDocs/assets/psd2-export2.png
-    Sha256: 7a4f193f641126bc1b51046974dc01a34cf8abe28659ebfec1e2ee0b8398c8d7
+    SHA256: 7a4f193f641126bc1b51046974dc01a34cf8abe28659ebfec1e2ee0b8398c8d7
   - Path: PSDToolKitDocs/assets/psd2-export3.png
-    Sha256: 6188836b25f446e3796c98b0391ecdf7aa0647fbce75ff28f5bb8e1c342b767f
+    SHA256: 6188836b25f446e3796c98b0391ecdf7aa0647fbce75ff28f5bb8e1c342b767f
   - Path: PSDToolKitDocs/assets/psd2-export4.png
-    Sha256: 6938e290df94bea53df7dacf81667ee0adc2621e2ed31e4e803001399ddcaee2
+    SHA256: 6938e290df94bea53df7dacf81667ee0adc2621e2ed31e4e803001399ddcaee2
   - Path: PSDToolKitDocs/assets/psd2-export5.png
-    Sha256: 547ae22bbe8c8f8740eb16e5928c68ff11909306b16445c26240922b55d459f9
+    SHA256: 547ae22bbe8c8f8740eb16e5928c68ff11909306b16445c26240922b55d459f9
   - Path: PSDToolKitDocs/assets/psd2-lipre.png
-    Sha256: c41dcafdf9a6b05083ee5eba53837d014234bf2efec9f8547dfd5cf983b29429
+    SHA256: c41dcafdf9a6b05083ee5eba53837d014234bf2efec9f8547dfd5cf983b29429
   - Path: PSDToolKitDocs/assets/psd2-lipsyncs.png
-    Sha256: 4c5418c02b2a309526733fb4c5f4121d3d45e6fe3588d057639ef6d2fe1d9297
+    SHA256: 4c5418c02b2a309526733fb4c5f4121d3d45e6fe3588d057639ef6d2fe1d9297
   - Path: PSDToolKitDocs/assets/psd2-lipsyncs2.png
-    Sha256: eba727e74f575b189532f8e0f35407e216b9096e0868822bf8e87edb6bfa41b9
+    SHA256: eba727e74f575b189532f8e0f35407e216b9096e0868822bf8e87edb6bfa41b9
   - Path: PSDToolKitDocs/assets/psd2-lipsyncv.png
-    Sha256: fe49f5e45ae09f85270ddf860dcaee205f9275c57023690dfce5a604fc0958f1
+    SHA256: fe49f5e45ae09f85270ddf860dcaee205f9275c57023690dfce5a604fc0958f1
   - Path: PSDToolKitDocs/assets/psd2-mpslider-psd.png
-    Sha256: 01351914b3ebadeaa3dccd3dbe2499ec21d5e9d5b21e5fa397e499b7e615c6e7
+    SHA256: 01351914b3ebadeaa3dccd3dbe2499ec21d5e9d5b21e5fa397e499b7e615c6e7
   - Path: PSDToolKitDocs/assets/psd2-mpslider.png
-    Sha256: 50ad6665c205cdb9810face3730794a47837cca11dd8555c536255719a00d2e2
+    SHA256: 50ad6665c205cdb9810face3730794a47837cca11dd8555c536255719a00d2e2
   - Path: PSDToolKitDocs/assets/psd2-objdraw.png
-    Sha256: 68b833f6bed1cfbe477236ba3e7a13e09ff1dad47e1e6f3d6d470ddf6da22687
+    SHA256: 68b833f6bed1cfbe477236ba3e7a13e09ff1dad47e1e6f3d6d470ddf6da22687
   - Path: PSDToolKitDocs/assets/psd2-objdraw2.png
-    Sha256: 856c2a92a24d297dea446a98e9d257d9afe66532fbe6823fca3aa001c0fdc8c3
+    SHA256: 856c2a92a24d297dea446a98e9d257d9afe66532fbe6823fca3aa001c0fdc8c3
   - Path: PSDToolKitDocs/assets/psd2-override1.png
-    Sha256: a1411016c9e385cb0563e095477eb792b640f4dcd8ec3ee31d4b7e10de23587b
+    SHA256: a1411016c9e385cb0563e095477eb792b640f4dcd8ec3ee31d4b7e10de23587b
   - Path: PSDToolKitDocs/assets/psd2-override2.png
-    Sha256: 306e873747cbc88c07fae139983306876c4ee1ea7d4d450c1d9603a7eacd86b2
+    SHA256: 306e873747cbc88c07fae139983306876c4ee1ea7d4d450c1d9603a7eacd86b2
   - Path: PSDToolKitDocs/assets/psd2-override3.png
-    Sha256: 0c7f250f6239a378ce09239a46ea9c197c2640eb99daaa17eb66f2e15a7e3b48
+    SHA256: 0c7f250f6239a378ce09239a46ea9c197c2640eb99daaa17eb66f2e15a7e3b48
   - Path: PSDToolKitDocs/assets/psd2-paramdlg.png
-    Sha256: 9cf21b6849bef8b13efbeaa1241b05f15b44701e627bb98c6c03db6d9aada154
+    SHA256: 9cf21b6849bef8b13efbeaa1241b05f15b44701e627bb98c6c03db6d9aada154
   - Path: PSDToolKitDocs/assets/psdtool-drop.png
-    Sha256: ea5434dcbb0ccd238e9af2da1f6369b4fa4d6a556c9503e31b3dc76802f84ac4
+    SHA256: ea5434dcbb0ccd238e9af2da1f6369b4fa4d6a556c9503e31b3dc76802f84ac4
   - Path: PSDToolKitDocs/assets/psdtool-fav.png
-    Sha256: 298d2c205a9e38fbba2a7f98e45b405009770126b839adb027373814745a2bbb
+    SHA256: 298d2c205a9e38fbba2a7f98e45b405009770126b839adb027373814745a2bbb
   - Path: PSDToolKitDocs/assets/psdtool-faview.png
-    Sha256: bc1f094a9510df335ab75a665fa6ef7221c487f2ed23e903a208f6d3ba168015
+    SHA256: bc1f094a9510df335ab75a665fa6ef7221c487f2ed23e903a208f6d3ba168015
   - Path: PSDToolKitDocs/assets/psdtool-faviewmain.png
-    Sha256: d1d007ab29ea9fb1e8e5be40e1d2cd093ab80d86f9ab871ba0082d17990b5743
+    SHA256: d1d007ab29ea9fb1e8e5be40e1d2cd093ab80d86f9ab871ba0082d17990b5743
   - Path: PSDToolKitDocs/assets/psdtool-filter-samep.png
-    Sha256: 1e0f4f63a62ab2907b70a0b5dc5fe5efaa26e848b7a8e6d9895eee4981036cbc
+    SHA256: 1e0f4f63a62ab2907b70a0b5dc5fe5efaa26e848b7a8e6d9895eee4981036cbc
   - Path: PSDToolKitDocs/assets/psdtool-filter.png
-    Sha256: 27e0ec4f7206045bff4f6b551e3abf4dcbe0ac82c2cca64fc482e38d6218b355
+    SHA256: 27e0ec4f7206045bff4f6b551e3abf4dcbe0ac82c2cca64fc482e38d6218b355
   - Path: PSDToolKitDocs/assets/psdtool-main.png
-    Sha256: 0cb9f7c4820de529b3a84bcf9b6a22f5f53f687589041ff7926a311135d37fd9
+    SHA256: 0cb9f7c4820de529b3a84bcf9b6a22f5f53f687589041ff7926a311135d37fd9
   - Path: PSDToolKitDocs/assets/psdtool.png
-    Sha256: fcd0e41e98148b040b8fef349c2c5f5d0dae3d26826b0b6753ada7d10876b2c2
+    SHA256: fcd0e41e98148b040b8fef349c2c5f5d0dae3d26826b0b6753ada7d10876b2c2
   - Path: PSDToolKitDocs/assets/rampreview.png
-    Sha256: cda148150db32982c18f2693af05d69bd4d166a0d69af22e7e1d2b9f2fd8872b
+    SHA256: cda148150db32982c18f2693af05d69bd4d166a0d69af22e7e1d2b9f2fd8872b
   - Path: PSDToolKitDocs/assets/script-builder.js
-    Sha256: 03c00401df0361fb58dbe46e75176268cee34f0627045d859d6efad72e3b30d4
+    SHA256: 03c00401df0361fb58dbe46e75176268cee34f0627045d859d6efad72e3b30d4
   - Path: PSDToolKitDocs/assets/setting-rename.png
-    Sha256: b00dc6d3de6227a87ca3db1685c9673fe83632d5765f8cc8d976bc00db6822e9
+    SHA256: b00dc6d3de6227a87ca3db1685c9673fe83632d5765f8cc8d976bc00db6822e9
   - Path: PSDToolKitDocs/assets/style.css
-    Sha256: 36f84f5044e204444643b3ec95dfecb1eac42a9de477ab4ba0c0ab2950942957
+    SHA256: 36f84f5044e204444643b3ec95dfecb1eac42a9de477ab4ba0c0ab2950942957
   - Path: PSDToolKitDocs/assets/subtitle-disp.png
-    Sha256: a3933ccff3326f6bc3b1c586c89acbfdbacece879eb144bfb8bebfd330929417
+    SHA256: a3933ccff3326f6bc3b1c586c89acbfdbacece879eb144bfb8bebfd330929417
   - Path: PSDToolKitDocs/assets/subtitle-pre.png
-    Sha256: 318b3de3521e52f371402fdfcc0e506174aec759d9a436bb1b01e8a97d0a6d9d
+    SHA256: 318b3de3521e52f371402fdfcc0e506174aec759d9a436bb1b01e8a97d0a6d9d
   - Path: script/Extram.dll
-    Sha256: b70c05b2fa7cf9bc668819514aabbf35a546b4203bca6639929017131d24f9fa
+    SHA256: b70c05b2fa7cf9bc668819514aabbf35a546b4203bca6639929017131d24f9fa
   - Path: script/PSDToolKit.lua
-    Sha256: 5fd423f223cf98c47e0005457984cf3b851fdfb1b2a756c6a31d5049f9f6cb80
+    SHA256: 5fd423f223cf98c47e0005457984cf3b851fdfb1b2a756c6a31d5049f9f6cb80
     Install:
       TargetPath: script/PSDToolKit.lua
       Strict: true
   - Path: script/PSDToolKit/@PSDToolKit.anm
-    Sha256: 54598d76498fb0179b576ba1300dd3cd218cc7442a35bef599c43b94b50b4946
+    SHA256: 54598d76498fb0179b576ba1300dd3cd218cc7442a35bef599c43b94b50b4946
     Install:
       TargetPath: script/PSDToolKit/@PSDToolKit.anm
   - Path: script/PSDToolKit/@PSDToolKit.obj
-    Sha256: 00748eaccf3f6f5adbdcecce59ee26967cb3b7ff1c60b4e6d54c94d7d93b548a
+    SHA256: 00748eaccf3f6f5adbdcecce59ee26967cb3b7ff1c60b4e6d54c94d7d93b548a
     Install:
       TargetPath: script/PSDToolKit/@PSDToolKit.obj
   - Path: script/PSDToolKit/@subobj.anm
-    Sha256: dc510fae898edac2cf73754221dd0ff64ff5a583d24605a78b9936d790f4a167
+    SHA256: dc510fae898edac2cf73754221dd0ff64ff5a583d24605a78b9936d790f4a167
     Install:
       TargetPath: script/PSDToolKit/@subobj.anm
   - Path: script/PSDToolKit/default.lua
-    Sha256: 52ecb985d8cdae000b73d2aa98be45f9eb712ac6eeef606fc5ad6ee509f2ffa3
+    SHA256: 52ecb985d8cdae000b73d2aa98be45f9eb712ac6eeef606fc5ad6ee509f2ffa3
     Install:
       TargetPath: script/PSDToolKit/default.lua
   - Path: script/PSDToolKit/PSDToolKit.exe
-    Sha256: 8e0b441696e31d3332545cbb86b8bf87fbcf3a8c58b685a5c0c50f26897e5a98
+    SHA256: 8e0b441696e31d3332545cbb86b8bf87fbcf3a8c58b685a5c0c50f26897e5a98
     Install:
       TargetPath: script/PSDToolKit/PSDToolKit.exe
       Method: Copy
   - Path: script/PSDToolKit/PSDToolKit.lua
-    Sha256: 1d5945f92f3c228aa05380ee8302cd6135f5f9858506b125043988e39bdcd394
+    SHA256: 1d5945f92f3c228aa05380ee8302cd6135f5f9858506b125043988e39bdcd394
     Install:
       TargetPath: script/PSDToolKit/PSDToolKit.lua
   - Path: script/PSDToolKit/PSDToolKitBridge.dll
-    Sha256: 483d90d47634a250d4185eddb78ca93b93352af36e413e32888b12cc0b5cb1d5
+    SHA256: 483d90d47634a250d4185eddb78ca93b93352af36e413e32888b12cc0b5cb1d5
     Install:
       TargetPath: script/PSDToolKit/PSDToolKitBridge.dll
   - Path: script/PSDToolKit/setting.lua-template
-    Sha256: b07a14d809898126d30fd8d666119dae89bc94e1cae3a63e890f22b00482219a
+    SHA256: b07a14d809898126d30fd8d666119dae89bc94e1cae3a63e890f22b00482219a
     Install:
       TargetPath: script/PSDToolKit/setting.lua-template
   - Path: script/PSDToolKit/exa/lab.exa
-    Sha256: 3695fdf6a224864aa2f0eccafb1fe74a7c9ded1ccbba97230cc843213b22b153
+    SHA256: 3695fdf6a224864aa2f0eccafb1fe74a7c9ded1ccbba97230cc843213b22b153
     Install:
       TargetPath: script/PSDToolKit/exa/lab.exa
   - Path: script/PSDToolKit/exa/lipsync.exa
-    Sha256: e0f0a719d332b6d6b172ea3119ff7c481327659401db47b9e50f32b72985a39b
+    SHA256: e0f0a719d332b6d6b172ea3119ff7c481327659401db47b9e50f32b72985a39b
     Install:
       TargetPath: script/PSDToolKit/exa/lipsync.exa
   - Path: script/PSDToolKit/exa/srt.exa
-    Sha256: 3695fdf6a224864aa2f0eccafb1fe74a7c9ded1ccbba97230cc843213b22b153
+    SHA256: 3695fdf6a224864aa2f0eccafb1fe74a7c9ded1ccbba97230cc843213b22b153
     Install:
       TargetPath: script/PSDToolKit/exa/srt.exa
   - Path: script/PSDToolKit/exa/subtitle.exa
-    Sha256: 3695fdf6a224864aa2f0eccafb1fe74a7c9ded1ccbba97230cc843213b22b153
+    SHA256: 3695fdf6a224864aa2f0eccafb1fe74a7c9ded1ccbba97230cc843213b22b153
     Install:
       TargetPath: script/PSDToolKit/exa/subtitle.exa
   - Path: script/PSDToolKit/exa/wav.exa
-    Sha256: c4aa7330ba4cd29552fef31ac4231f5aea4ba5e91fad599d66def10b541ff7e0
+    SHA256: c4aa7330ba4cd29552fef31ac4231f5aea4ba5e91fad599d66def10b541ff7e0
     Install:
       TargetPath: script/PSDToolKit/exa/wav.exa
-ManifestVersion: 0.2.0
+Plugins:
+- Name: PSDToolKit
+  Information: PSDToolKitAssist v0.2beta10 ( cdf7ee1 )
+  Type: Filter
+  InstallPath: PSDToolKit.auf
+ManifestVersion: 0.3.0

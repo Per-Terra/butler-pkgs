@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: RamPreview
 DisplayName: 拡張編集RAMプレビュー
 Version: 0.3-rc3
 ReleaseDate: 2018-05-18
 Section: Plugin/Output
-InstalledSize: 1814
+InstalledSize: 1857118
 Developer:
 - oov
 Description: 描画結果をキャッシュし、キャッシュからの再生を行えるようにするためのプラグイン
@@ -14,26 +14,43 @@ Website:
 - https://github.com/oov/aviutl_rampreview
 Files:
 - SourceUrl: https://github.com/oov/aviutl_rampreview/releases/download/v0.3rc3/rampreview_v0.3rc3.zip
-  Sha256: f4180fa493c9aaa35c9f5fdf4e0e838d02c4812d637452a7e12bc61846bb5082
+  SHA256: f4180fa493c9aaa35c9f5fdf4e0e838d02c4812d637452a7e12bc61846bb5082
   Files:
   - Path: ZRamPreview.auf
-    Sha256: 5034f8f68f39f70535977ff4907c07e6ddb4e9c7baf922d45f32ac29c2808e7c
+    SHA256: 5034f8f68f39f70535977ff4907c07e6ddb4e9c7baf922d45f32ac29c2808e7c
     Install:
       TargetPath: ZRamPreview.auf
   - Path: ZRamPreview.auo
-    Sha256: 6d007ab93eed21d8baf49e36fc0c0ff4b7d11bea52495ea4fa0c5e15ed4afcd6
+    SHA256: 6d007ab93eed21d8baf49e36fc0c0ff4b7d11bea52495ea4fa0c5e15ed4afcd6
     Install:
       TargetPath: ZRamPreview.auo
   - Path: ZRamPreview.exe
-    Sha256: 4c7e59edff5e45ea69f2b245f33d53e20c799e28c4dc2a4eeb6b72f8b45b03e3
+    SHA256: 4c7e59edff5e45ea69f2b245f33d53e20c799e28c4dc2a4eeb6b72f8b45b03e3
     Install:
       TargetPath: ZRamPreview.exe
       Method: Copy
   - Path: ZRamPreview.txt
-    Sha256: 4a3f49bb9fdfa31c72620136f1e93d3ee4e7f04578845c7822d6dbdef688a140
+    SHA256: 4a3f49bb9fdfa31c72620136f1e93d3ee4e7f04578845c7822d6dbdef688a140
   - Path: script/Extram.dll
-    Sha256: 85da85519f212af83c0f88b98986ebe7a4a91c93d791fb9c7a06b8aa3ebfc052
+    SHA256: 85da85519f212af83c0f88b98986ebe7a4a91c93d791fb9c7a06b8aa3ebfc052
     Install:
       TargetPath: script/Extram.dll
       Strict: true
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 拡張編集RAMプレビュー
+  Information: 拡張編集RAMプレビュー v0.3rc3 ( 11c02d0 )
+  Type: Filter
+  InstallPath: ZRamPreview.auf
+- Name: 拡張編集RAMプレビュー(音声)
+  Information: 拡張編集RAMプレビュー(音声) v0.3rc3 ( 11c02d0 )
+  Type: Filter
+  InstallPath: ZRamPreview.auf
+- Name: Extram
+  Information: Extram v0.3rc3 ( 11c02d0 )
+  Type: Filter
+  InstallPath: ZRamPreview.auf
+- Name: 拡張編集RAMプレビュー
+  Information: 拡張編集RAMプレビュー v0.3rc3 ( 11c02d0 )
+  Type: Output
+  InstallPath: ZRamPreview.auo
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: aviutl-browser-glb
 DisplayName: aviutl_browser_glb
@@ -8,7 +8,7 @@ ReleaseDate: 2022-08-31
 Section: Script
 Depends:
 - aviutl-browser
-InstalledSize: 25940
+InstalledSize: 26561834
 Developer:
 - oov
 Description: aviutl_browserで*.glbファイルを読み込めるようにするスクリプト
@@ -16,56 +16,56 @@ Website:
 - https://github.com/oov/aviutl_browser_glb
 Files:
 - SourceUrl: https://github.com/oov/aviutl_browser_glb/releases/download/v0.0.4/aviutl_browser_glb_v0.0.4.zip
-  Sha256: 815b49e1878725ff1d62f43fffcc694b1d6272d43875cbb58821eb35e34d96cd
+  SHA256: 815b49e1878725ff1d62f43fffcc694b1d6272d43875cbb58821eb35e34d96cd
   Files:
   - Path: '@GLB.txt'
-    Sha256: ed086f60e84a7597383939465c89f7aa5db0cc1f59cf0202ccae5932c0603c3f
+    SHA256: ed086f60e84a7597383939465c89f7aa5db0cc1f59cf0202ccae5932c0603c3f
   - Path: script/browser/@GLB.anm
-    Sha256: bfa677b60ceae4b93021c1150a86f2cfa49fbbe1d85a08cb4b65e0c4f31fc729
+    SHA256: bfa677b60ceae4b93021c1150a86f2cfa49fbbe1d85a08cb4b65e0c4f31fc729
     Install:
       TargetPath: script/browser/@GLB.anm
   - Path: script/browser/@GLB.exa
-    Sha256: e686d54354de83d33636909ea23021b09f51d04cf382aa8589cfe8b4f9f8e214
+    SHA256: e686d54354de83d33636909ea23021b09f51d04cf382aa8589cfe8b4f9f8e214
     Install:
       TargetPath: script/browser/@GLB.exa
   - Path: script/browser/@GLB.obj
-    Sha256: 9d6be4316d5b7ce87c818e64953d5d3035a74191148f8b021b099e10e2509d8b
+    SHA256: 9d6be4316d5b7ce87c818e64953d5d3035a74191148f8b021b099e10e2509d8b
     Install:
       TargetPath: script/browser/@GLB.obj
   - Path: script/browser/contents/GLB/draco_decoder.wasm
-    Sha256: ff8dbb7a8b7f92ea928e75473f2dd0c9ec5ad920fa854957a5b9c3043b39a8e2
+    SHA256: ff8dbb7a8b7f92ea928e75473f2dd0c9ec5ad920fa854957a5b9c3043b39a8e2
     Install:
       TargetPath: script/browser/contents/GLB/draco_decoder.wasm
   - Path: script/browser/contents/GLB/index.html
-    Sha256: 133a0fe9b270149f974d85a6a0cd485a6b9ab946fc7d866c8048ac7be06c90fa
+    SHA256: 133a0fe9b270149f974d85a6a0cd485a6b9ab946fc7d866c8048ac7be06c90fa
     Install:
       TargetPath: script/browser/contents/GLB/index.html
   - Path: script/browser/contents/GLB/main.js
-    Sha256: 624b7e729c600fba072e40583d0c7d090f3e350dc5c39b3e13bf5967a3a973d5
+    SHA256: 624b7e729c600fba072e40583d0c7d090f3e350dc5c39b3e13bf5967a3a973d5
     Install:
       TargetPath: script/browser/contents/GLB/main.js
   - Path: script/browser/contents/GLB/assets/lut_charlie.png
-    Sha256: b346fbd8e60ea0eb96006c07dcd0014066df6870c2b0499d10dfc1fb2d6093e8
+    SHA256: b346fbd8e60ea0eb96006c07dcd0014066df6870c2b0499d10dfc1fb2d6093e8
     Install:
       TargetPath: script/browser/contents/GLB/assets/lut_charlie.png
   - Path: script/browser/contents/GLB/assets/lut_ggx.png
-    Sha256: 94b7fcafe6313206e57c3904501605524581062b370161b5dad05e5d8408efe8
+    SHA256: 94b7fcafe6313206e57c3904501605524581062b370161b5dad05e5d8408efe8
     Install:
       TargetPath: script/browser/contents/GLB/assets/lut_ggx.png
   - Path: script/browser/contents/GLB/assets/lut_sheen_E.png
-    Sha256: 7f21d7754dd3a2a972d9d1298ee3e67e20c5b2f21969095d322a1bc20f8b2f04
+    SHA256: 7f21d7754dd3a2a972d9d1298ee3e67e20c5b2f21969095d322a1bc20f8b2f04
     Install:
       TargetPath: script/browser/contents/GLB/assets/lut_sheen_E.png
   - Path: script/browser/contents/GLB/assets/studio_small_08_4k.hdr
-    Sha256: f18e82faa13e5e88f8a74e043f1264e1aaf41a05fb9befb5441ea2b614c532e5
+    SHA256: f18e82faa13e5e88f8a74e043f1264e1aaf41a05fb9befb5441ea2b614c532e5
     Install:
       TargetPath: script/browser/contents/GLB/assets/studio_small_08_4k.hdr
   - Path: script/browser/contents/GLB/libs/libktx.js
-    Sha256: bb86862c0dfa860189066a61be6e03ce20155e0704fc8afd6ae92a8188df9d81
+    SHA256: bb86862c0dfa860189066a61be6e03ce20155e0704fc8afd6ae92a8188df9d81
     Install:
       TargetPath: script/browser/contents/GLB/libs/libktx.js
   - Path: script/browser/contents/GLB/libs/libktx.wasm
-    Sha256: 03d12a2f5a42f64238bb0a5fc00df9040fc6b951dd8d29c1753b01d6e67ada6b
+    SHA256: 03d12a2f5a42f64238bb0a5fc00df9040fc6b951dd8d29c1753b01d6e67ada6b
     Install:
       TargetPath: script/browser/contents/GLB/libs/libktx.wasm
-ManifestVersion: 0.1.0
+ManifestVersion: 0.3.0

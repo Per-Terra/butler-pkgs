@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: UniteWindow
 Version: 3.0.1
@@ -7,7 +7,7 @@ ReleaseDate: 2022-05-11
 Section: Plugin/Other
 Conflicts:
 - SplitWindow
-InstalledSize: 85
+InstalledSize: 86961
 Developer:
 - hebiiro
 Description: AviUtl のウィンドウを結合してシングルウィンドウにまとめるプラグイン
@@ -15,19 +15,19 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-UniteWindow
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-UniteWindow/releases/download/UniteWindow.3.0.1.src/UniteWindow.3.0.1.zip
-  Sha256: 11f8bf445e50176758a02303907f8efa053d24061048daa07a3fdaebb51b35d5
+  SHA256: 11f8bf445e50176758a02303907f8efa053d24061048daa07a3fdaebb51b35d5
   Files:
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 49b12b1700f329695770f5b102f161d503617c9aa086209ca10b1007def9389d
+    SHA256: 49b12b1700f329695770f5b102f161d503617c9aa086209ca10b1007def9389d
   - Path: UniteWindow.aul
-    Sha256: bdb83f902272b63390bc6bb9fb6c55980f5990a85976c5a6e6858cde18a6e226
+    SHA256: bdb83f902272b63390bc6bb9fb6c55980f5990a85976c5a6e6858cde18a6e226
     Install:
       TargetPath: plugins/UniteWindow.aul
   - Path: UniteWindow.xml
-    Sha256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
+    SHA256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
     Install:
       TargetPath: plugins/UniteWindow.xml
       ConfFile: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

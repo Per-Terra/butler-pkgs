@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-Split
 DisplayName: スプリット
 Version: 2012-05-27
 ReleaseDate: 2012-05-27
 Section: Script
-InstalledSize: 8
+InstalledSize: 7995
 Developer:
 - Tim
 Description: 画像に切れ目を入れて穴を広げる効果です。
@@ -15,14 +15,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/Split.zip
-  Sha256: 49626b1dbfe1b63d60411d59a13db1dd0a37f3263b1d776dddc389b92a51c6d7
+  SHA256: 49626b1dbfe1b63d60411d59a13db1dd0a37f3263b1d776dddc389b92a51c6d7
   Files:
   - Path: 公開用/@スプリット.anm
-    Sha256: b73fda96cb85f0c2b6d6d39507b285d414aa5ca50a9e208e22c5398870f2d7f8
+    SHA256: b73fda96cb85f0c2b6d6d39507b285d414aa5ca50a9e208e22c5398870f2d7f8
     Install:
       TargetPath: script/@スプリット.anm
   - Path: 公開用/split1.txt
-    Sha256: e559b7a5f0ab0383b25589026fe03d9b8a7b9ed7900d2cb30a6759f4f5894c91
+    SHA256: e559b7a5f0ab0383b25589026fe03d9b8a7b9ed7900d2cb30a6759f4f5894c91
   - Path: 公開用/split2.txt
-    Sha256: 29a97dfed233effec1fec94a19834bb5b1f3b9602514a630e9bdb5e2a2024be5
-ManifestVersion: 0.2.0
+    SHA256: 29a97dfed233effec1fec94a19834bb5b1f3b9602514a630e9bdb5e2a2024be5
+ManifestVersion: 0.3.0

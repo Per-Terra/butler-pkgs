@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: MotionTrackingMKIIPlus
 DisplayName: MotionTracking MK-II Plus
@@ -9,7 +9,7 @@ Section: Plugin/Other
 Depends:
 - aviutl (= 1.10)
 - exedit (= 0.92)
-InstalledSize: 20317
+InstalledSize: 20804404
 Developer:
 - Mr-Ojii
 Description: オブジェクトトラッキングを行うプラグイン
@@ -17,30 +17,43 @@ Website:
 - https://github.com/Mr-Ojii/MotionTracking_MKII_Plus
 Files:
 - SourceUrl: https://github.com/Mr-Ojii/MotionTracking_MKII_Plus/releases/download/r16/MotionTrackingMKIIPlus.zip
-  Sha256: aaf83c1b6c7a23826b14628b2c560b5e44e68f7b308890cd8263cf82e57c9fe1
+  SHA256: aaf83c1b6c7a23826b14628b2c560b5e44e68f7b308890cd8263cf82e57c9fe1
   Files:
   - Path: haarcascade_frontalface_default.xml
-    Sha256: 0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0
+    SHA256: 0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0
     Install:
       TargetPath: haarcascade_frontalface_default.xml
   - Path: haarcascade_profileface.xml
-    Sha256: b39a4a3be45539db146a7fc1d3e761a292c196eb88421185e6a615b3055e612d
+    SHA256: b39a4a3be45539db146a7fc1d3e761a292c196eb88421185e6a615b3055e612d
     Install:
       TargetPath: haarcascade_profileface.xml
   - Path: MotionTrackingMKIIPlus.auf
-    Sha256: e20a4498aab313d0e7f921b1f99d25e4fadf76a6e9f42822f92220e17ebc1a56
+    SHA256: e20a4498aab313d0e7f921b1f99d25e4fadf76a6e9f42822f92220e17ebc1a56
     Install:
       TargetPath: MotionTrackingMKIIPlus.auf
   - Path: Original_Readme.txt
-    Sha256: 0b9d486eae9d8ea03d2b7a673c8baaf21eebdfe0ce8031900b8d2c451fafd75f
+    SHA256: 0b9d486eae9d8ea03d2b7a673c8baaf21eebdfe0ce8031900b8d2c451fafd75f
   - Path: Readme.url
-    Sha256: 7a4c9350c78d6ef3c64c363bc47f5824f4fd37331b2c1458e69166a85e9532ca
+    SHA256: 7a4c9350c78d6ef3c64c363bc47f5824f4fd37331b2c1458e69166a85e9532ca
   - Path: Licenses/aviutl_plugin_sdk.txt
-    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
   - Path: Licenses/MotionTracking_MKII.txt
-    Sha256: 6f101709a17b6ab603297466611a75de4aaefd43bc4aa0d447beb40f1e5e9a63
+    SHA256: 6f101709a17b6ab603297466611a75de4aaefd43bc4aa0d447beb40f1e5e9a63
   - Path: Licenses/opencv_contrib-3.4.16.txt
-    Sha256: 752614c515f18ae84b09824e90a00d14bd03de26854b4683a64de325c76372d9
+    SHA256: 752614c515f18ae84b09824e90a00d14bd03de26854b4683a64de325c76372d9
   - Path: Licenses/opencv-3.4.16.txt
-    Sha256: 9076d3d934839a2f8e7bfe549abda6faea4751f1edd6e9460ff703559890ad5f
-ManifestVersion: 0.1.0
+    SHA256: 9076d3d934839a2f8e7bfe549abda6faea4751f1edd6e9460ff703559890ad5f
+Plugins:
+- Name: MotionTracking MK-II Plus
+  Information: MotionTracking MK-II Plus AVX by Mr-Ojii
+  Type: Filter
+  InstallPath: MotionTrackingMKIIPlus.auf
+- Name: Pre-track:HSV Cvt
+  Information: Pre-track:HSV Converstion
+  Type: Filter
+  InstallPath: MotionTrackingMKIIPlus.auf
+- Name: Pre-track:BGSubtraction
+  Information: Pre-track:Background Subtraction
+  Type: Filter
+  InstallPath: MotionTrackingMKIIPlus.auf
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: auls-framesound-fix
 DisplayName: フレーム移動時に音を鳴らす_改
@@ -8,7 +8,7 @@ ReleaseDate: 2022-05-04
 Section: Plugin/Other
 Provides:
 - auls-framesound
-InstalledSize: 12
+InstalledSize: 12133
 Developer:
 - nazoSAUNA
 Description: |-
@@ -20,14 +20,18 @@ Website:
 Files:
 - SourceUrl: https://drive.google.com/uc?id=1sD0RKeR5XK6N0bNIfwkFn5tybNTmAXKG
   FileName: 要ランタイム(推奨).zip
-  Sha256: 94195321bc7aa91a03a60e168cd8a11a30f59229e2d2826aa488c157ff3acd25
+  SHA256: 94195321bc7aa91a03a60e168cd8a11a30f59229e2d2826aa488c157ff3acd25
   Files:
   - Path: auls_framesound_fix.auf
-    Sha256: 46f763ea40124acec993d4f8cdbbe2df2c44925fe4746877c5ea76b29aefb407
+    SHA256: 46f763ea40124acec993d4f8cdbbe2df2c44925fe4746877c5ea76b29aefb407
     Install:
       TargetPath: plugins/auls_framesound_fix.auf
   - Path: aviutl_framesound.cpp
-    Sha256: 52e40f32d59faf5a001b25d55dea61c1101c6b3d379120fed4e552f640a97650
+    SHA256: 52e40f32d59faf5a001b25d55dea61c1101c6b3d379120fed4e552f640a97650
   - Path: 説明.txt
-    Sha256: 8837e3b6f0d07022a59fa96499516fdc581ea8495d274954b22dc6645bcf3ccc
-ManifestVersion: 0.1.0
+    SHA256: 8837e3b6f0d07022a59fa96499516fdc581ea8495d274954b22dc6645bcf3ccc
+Plugins:
+- Name: 編集中フレーム移動時に音を鳴らす
+  Type: Filter
+  InstallPath: plugins/auls_framesound_fix.auf
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-SkyDome
 DisplayName: スカイドーム
 Version: 2012-11-29
 ReleaseDate: 2012-11-29
 Section: Script
-InstalledSize: 6
+InstalledSize: 5189
 Developer:
 - Tim
 Description: AEプラグインのHorizonみたいなもので、MMDではスカイドームとも呼ばれている効果です。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/SkyDome.zip
-  Sha256: 8eff78d434983a38adb6505ce9bae33aeae49f80b3dc12cedb45f8cf30fbcc87
+  SHA256: 8eff78d434983a38adb6505ce9bae33aeae49f80b3dc12cedb45f8cf30fbcc87
   Files:
   - Path: '@スカイドーム.anm'
-    Sha256: e0f128a1e9e1d186401e7d1af2ce8aab89ceb1c918ff4ccaa2e56016b94ad5b4
+    SHA256: e0f128a1e9e1d186401e7d1af2ce8aab89ceb1c918ff4ccaa2e56016b94ad5b4
     Install:
       TargetPath: script/@スカイドーム.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

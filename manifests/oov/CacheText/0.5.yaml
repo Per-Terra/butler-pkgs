@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: CacheText
 DisplayName: キャッシュテキスト
@@ -8,7 +8,7 @@ ReleaseDate: 2020-10-20
 Section: Script
 Depends:
 - RamPreview
-InstalledSize: 13
+InstalledSize: 13050
 Developer:
 - oov
 Description: |-
@@ -19,22 +19,22 @@ Website:
 - https://github.com/oov/aviutl_cachetext
 Files:
 - SourceUrl: https://github.com/oov/aviutl_cachetext/releases/download/v0.5/CacheText20201020.zip
-  Sha256: 81ccf862f6fd5954dfe2cce76663f39ae9eacfd8bb2cdd5bf170d93f6c387d51
+  SHA256: 81ccf862f6fd5954dfe2cce76663f39ae9eacfd8bb2cdd5bf170d93f6c387d51
   Files:
   - Path: キャッシュテキスト.exa
-    Sha256: f8d948d89009e9fe79dcf8208e620971beee606d0caecbfb28bcdcbced7856f7
+    SHA256: f8d948d89009e9fe79dcf8208e620971beee606d0caecbfb28bcdcbced7856f7
     Install:
       TargetPath: キャッシュテキスト.exa
   - Path: キャッシュテキスト.txt
-    Sha256: 4ff8bdb78932f584917f5df27f38d74ac7440a0a4dce2b2d175725e54865947c
+    SHA256: 4ff8bdb78932f584917f5df27f38d74ac7440a0a4dce2b2d175725e54865947c
   - Path: script/CacheText.anm
-    Sha256: 38846dfdc7583d16a016a00e8cccba5a143c7400931e95a376213cbaa8bbad1e
+    SHA256: 38846dfdc7583d16a016a00e8cccba5a143c7400931e95a376213cbaa8bbad1e
     Install:
       TargetPath: script/CacheText.anm
       Strict: true
   - Path: script/CacheText.lua
-    Sha256: daff03eddf8ebd30d30e323420c0e2e3fe11edbeb9855a618970ac5088555d95
+    SHA256: daff03eddf8ebd30d30e323420c0e2e3fe11edbeb9855a618970ac5088555d95
     Install:
       TargetPath: script/CacheText.lua
       Strict: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

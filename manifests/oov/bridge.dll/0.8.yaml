@@ -1,11 +1,11 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: bridge.dll
 Version: "0.8"
 ReleaseDate: 2021-03-09
 Section: Other
-InstalledSize: 52
+InstalledSize: 52920
 Developer:
 - oov
 Description: |-
@@ -15,17 +15,22 @@ Website:
 - https://github.com/oov/aviutl_bridge
 Files:
 - SourceUrl: https://github.com/oov/aviutl_bridge/releases/download/v0.8/aviutl_bridge_v0.8.zip
-  Sha256: e02025837c5718ccba766dd821da34061a33c28bedbd9139a74cd50aa23e1ecd
+  SHA256: e02025837c5718ccba766dd821da34061a33c28bedbd9139a74cd50aa23e1ecd
   Files:
   - Path: bridge.auf
-    Sha256: bce8e0822a187732d14faafb266a4bbcaa6ee4ccc96996573a2118384e53ab1d
+    SHA256: bce8e0822a187732d14faafb266a4bbcaa6ee4ccc96996573a2118384e53ab1d
     Install:
       TargetPath: plugins/bridge.auf
   - Path: bridge.txt
-    Sha256: 11267d8560691dc15ac97371ebf34d2ee850cce2d2c1cd47d6a4aac98cdea347
+    SHA256: 11267d8560691dc15ac97371ebf34d2ee850cce2d2c1cd47d6a4aac98cdea347
   - Path: script/bridge.dll
-    Sha256: 52709e5df31f2f74e397d602b99c3803e29933df6c28cf4d9b111db9665bbdb1
+    SHA256: 52709e5df31f2f74e397d602b99c3803e29933df6c28cf4d9b111db9665bbdb1
     Install:
       TargetPath: script/bridge.dll
       Strict: true
-ManifestVersion: 0.2.0
+Plugins:
+- Name: ブリッジ
+  Information: ブリッジ v0.8 ( 263d895 )
+  Type: Filter
+  InstallPath: plugins/bridge.auf
+ManifestVersion: 0.3.0

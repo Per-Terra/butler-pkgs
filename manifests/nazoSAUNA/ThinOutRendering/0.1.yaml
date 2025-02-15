@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: ThinOutRendering
 DisplayName: 間引いて描画
@@ -8,7 +8,7 @@ ReleaseDate: 2023-09-11
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 11
+InstalledSize: 10365
 Developer:
 - nazoSAUNA
 Description: 出力中であっても拡大率縮小などのレンダリング処理が「画像処理を間引いて表示」と同じ処理になるプラグイン
@@ -16,12 +16,16 @@ Website:
 - https://github.com/nazonoSAUNA/ThinOutRendering
 Files:
 - SourceUrl: https://github.com/nazonoSAUNA/ThinOutRendering/releases/download/v0.1/ThinOutRendering.zip
-  Sha256: a88bea1446ee472ef27ae90ec82cd19aca81f76178a964f081c0d772c46bf891
+  SHA256: a88bea1446ee472ef27ae90ec82cd19aca81f76178a964f081c0d772c46bf891
   Files:
   - Path: Credit.md
-    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
   - Path: ThinOutRendering.auf
-    Sha256: 26594f1f22d35df205f47e3b8d84f74bb87c2aa18df61d64ae7358ec1d6796c0
+    SHA256: 26594f1f22d35df205f47e3b8d84f74bb87c2aa18df61d64ae7358ec1d6796c0
     Install:
       TargetPath: plugins/ThinOutRendering.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 間引いて描画
+  Type: Filter
+  InstallPath: plugins/ThinOutRendering.auf
+ManifestVersion: 0.3.0

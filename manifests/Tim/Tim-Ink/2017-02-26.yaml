@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-Ink
 DisplayName: インク（＋ひょうたん）
 Version: 2017-02-26
 ReleaseDate: 2017-02-26
 Section: Script
-InstalledSize: 12
+InstalledSize: 11388
 Developer:
 - Tim
 Description: インクのような形状のカスタムオブジェクトです。
@@ -16,14 +16,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/InkV2.zip
-  Sha256: 78fd4e4d000e64c22f224611a3a726d8297c8fca6251214a6113e9fabaaaed8b
+  SHA256: 78fd4e4d000e64c22f224611a3a726d8297c8fca6251214a6113e9fabaaaed8b
   Files:
   - Path: インクTM.obj
-    Sha256: cef7e97758ff00afb572998c706393c9454166b049e777119d1a8dd7039008cf
+    SHA256: cef7e97758ff00afb572998c706393c9454166b049e777119d1a8dd7039008cf
     Install:
       TargetPath: script/インクTM.obj
   - Path: ひょうたんTM.obj
-    Sha256: a1a5d1cf58b341c8aca5b464129b6ed78e64f215620307c740aae3192c32edc6
+    SHA256: a1a5d1cf58b341c8aca5b464129b6ed78e64f215620307c740aae3192c32edc6
     Install:
       TargetPath: script/ひょうたんTM.obj
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

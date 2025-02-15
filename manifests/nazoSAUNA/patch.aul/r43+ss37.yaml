@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: patch.aul
 Version: r43+ss37
@@ -7,7 +7,7 @@ ReleaseDate: 2023-10-04
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 831
+InstalledSize: 850930
 Developer:
 - nazoSAUNA
 - ePi
@@ -16,20 +16,20 @@ Website:
 - https://github.com/nazonoSAUNA/patch.aul
 Files:
 - SourceUrl: https://github.com/nazonoSAUNA/patch.aul/releases/download/r43_37/patch.aul_r43_ss_37.zip
-  Sha256: 9e7a4bf02f564bd673fbd9fe6591ab087afbe8360b5156ff3060c003484aedca
+  SHA256: 9e7a4bf02f564bd673fbd9fe6591ab087afbe8360b5156ff3060c003484aedca
   Files:
   - Path: COPYING
-    Sha256: 230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809
+    SHA256: 230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809
   - Path: COPYING.LESSER
-    Sha256: 7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059
+    SHA256: 7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059
   - Path: credits.md
-    Sha256: 5cb4e7b5c9c85b99fd37f93c1c2fbe15a41e892f399f3c7f50ef5e4dae952865
+    SHA256: 5cb4e7b5c9c85b99fd37f93c1c2fbe15a41e892f399f3c7f50ef5e4dae952865
   - Path: LICENSE
-    Sha256: 5b6e39593fcdadfe7c67463a021a01733a6659582f142d561509786c21e5ba99
+    SHA256: 5b6e39593fcdadfe7c67463a021a01733a6659582f142d561509786c21e5ba99
   - Path: patch.aul
-    Sha256: 716390f68e38325c9f791ecb3db25821fb90746d260669a60b22e24cba440970
+    SHA256: 716390f68e38325c9f791ecb3db25821fb90746d260669a60b22e24cba440970
     Install:
       TargetPath: patch.aul
 ConfFiles:
 - patch.aul.json
-ManifestVersion: 0.1.0
+ManifestVersion: 0.3.0

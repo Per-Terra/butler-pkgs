@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-Sket
 DisplayName: 点描T
 Version: 2022-05-11
 ReleaseDate: 2022-05-11
 Section: Script
-InstalledSize: 82
+InstalledSize: 82952
 Developer:
 - Tim
 Description: 画像を点描風に変換します。AEの「点描」と似た効果のスクリプトです。
@@ -16,14 +16,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/Sket.zip
-  Sha256: 81e75c722c4394250dab57bae544076718b1fbd9d1f76d412c2f15f700cc4324
+  SHA256: 81e75c722c4394250dab57bae544076718b1fbd9d1f76d412c2f15f700cc4324
   Files:
   - Path: Sket/T_Sketch_Module.dll
-    Sha256: 4959482f0b84ced1a2659f56f621fff066c1385326a4b6a6e5835b91a380b809
+    SHA256: 4959482f0b84ced1a2659f56f621fff066c1385326a4b6a6e5835b91a380b809
     Install:
       TargetPath: script/T_Sketch_Module.dll
   - Path: Sket/点描T.anm
-    Sha256: c8496fcc44c80b07537d2ff95b461e9b298e4133d9fa80bb20ccb59450e6001c
+    SHA256: c8496fcc44c80b07537d2ff95b461e9b298e4133d9fa80bb20ccb59450e6001c
     Install:
       TargetPath: script/点描T.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

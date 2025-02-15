@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: patch.aul
 Version: r42+7-test
@@ -7,7 +7,7 @@ ReleaseDate: 2022-11-06
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 702
+InstalledSize: 718836
 Developer:
 - nazoSAUNA
 - ePi
@@ -16,20 +16,20 @@ Website:
 - https://github.com/nazonoSAUNA/patch.aul
 Files:
 - SourceUrl: https://github.com/nazonoSAUNA/patch.aul/releases/download/r42.7test/patch.aul_r42.7.zip
-  Sha256: 1738da6c2d446da365f46293e46c0cd49202bfa993b3875a032828c9467c2f6c
+  SHA256: 1738da6c2d446da365f46293e46c0cd49202bfa993b3875a032828c9467c2f6c
   Files:
   - Path: COPYING
-    Sha256: 230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809
+    SHA256: 230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809
   - Path: COPYING.LESSER
-    Sha256: 7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059
+    SHA256: 7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059
   - Path: credits.md
-    Sha256: 5cb4e7b5c9c85b99fd37f93c1c2fbe15a41e892f399f3c7f50ef5e4dae952865
+    SHA256: 5cb4e7b5c9c85b99fd37f93c1c2fbe15a41e892f399f3c7f50ef5e4dae952865
   - Path: LICENSE
-    Sha256: d6e18807844e259d920fb95fffb3ee0bf96f046f0a9f7cf7459941aed63b373b
+    SHA256: d6e18807844e259d920fb95fffb3ee0bf96f046f0a9f7cf7459941aed63b373b
   - Path: patch.aul
-    Sha256: 0b1d804994739124370dc26aeb03e27ec93a26d7eec6ae9997e46eb25a4d158e
+    SHA256: 0b1d804994739124370dc26aeb03e27ec93a26d7eec6ae9997e46eb25a4d158e
     Install:
       TargetPath: patch.aul
 ConfFiles:
 - patch.aul.json
-ManifestVersion: 0.1.0
+ManifestVersion: 0.3.0

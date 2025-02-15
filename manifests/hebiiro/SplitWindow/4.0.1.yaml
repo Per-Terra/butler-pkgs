@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SplitWindow
 Version: 4.0.1
@@ -7,7 +7,7 @@ ReleaseDate: 2023-01-10
 Section: Plugin/Other
 Conflicts:
 - UniteWindow
-InstalledSize: 143
+InstalledSize: 145996
 Developer:
 - hebiiro
 Description: AviUtlのウィンドウを再帰分割可能なペインに貼り付けられるようにするプラグイン
@@ -15,21 +15,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SplitWindow
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SplitWindow/releases/download/4.0.1/SplitWindow.4.0.1.zip
-  Sha256: e5950e80352ac3e629178a4d9b78647a3bbc9f46de4366f59f42a02c280d6622
+  SHA256: e5950e80352ac3e629178a4d9b78647a3bbc9f46de4366f59f42a02c280d6622
   Files:
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: b02e300c45de5de74660f67a1686519cf8cf1d205a6c89ae34a75745195ce155
+    SHA256: b02e300c45de5de74660f67a1686519cf8cf1d205a6c89ae34a75745195ce155
   - Path: SplitWindow.aul
-    Sha256: 1718cc7dba33a8b200c71333710e697fbccdb6465492a0b9bc81d5c3c0cbe196
+    SHA256: 1718cc7dba33a8b200c71333710e697fbccdb6465492a0b9bc81d5c3c0cbe196
     Install:
       TargetPath: plugins/SplitWindow.aul
   - Path: SplitWindow.xml
-    Sha256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
+    SHA256: 45762b42af8d35f00de8e56a1266134ca7145a18f0e2b453d398621c3accbbc3
     Install:
       TargetPath: plugins/SplitWindow.xml
       ConfFile: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

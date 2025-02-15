@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: PropertyWindowFixerPlugin
 DisplayName: 設定ダイアログ画面サイズ固定化プラグイン
@@ -9,7 +9,7 @@ Section: Plugin/Other
 Depends:
 - aviutl (>= 1.00)
 - exedit (= 0.92)
-InstalledSize: 139
+InstalledSize: 141653
 Developer:
 - amate
 Description: |-
@@ -20,14 +20,19 @@ Website:
 - https://www.nicovideo.jp/watch/sm36085428
 Files:
 - SourceUrl: https://github.com/amate/PropertyWindowFixerPlugin/releases/download/v1.0/PropertyWindowFixerPlugin_1.0.zip
-  Sha256: 1b8e14c038344a981502469ab11aa4a6ae8d151cbf7742c474c59ecbe52ff863
+  SHA256: 1b8e14c038344a981502469ab11aa4a6ae8d151cbf7742c474c59ecbe52ff863
   Files:
   - Path: PropertyWindowFixerPlugin/LICENSE
-    Sha256: dcba112ac2d8bdeedf450b5e11e8ac76eda054c9b6823e356be0d1df36b1dc61
+    SHA256: dcba112ac2d8bdeedf450b5e11e8ac76eda054c9b6823e356be0d1df36b1dc61
   - Path: PropertyWindowFixerPlugin/PropertyWindowFixerPlugin.auf
-    Sha256: 596b995b1b17aa12349a61ca2214d072479c23197a6c554c5bad53f4467972aa
+    SHA256: 596b995b1b17aa12349a61ca2214d072479c23197a6c554c5bad53f4467972aa
     Install:
       TargetPath: plugins/PropertyWindowFixerPlugin.auf
   - Path: PropertyWindowFixerPlugin/Readme.txt
-    Sha256: 60974204ae8e1839734b3577a505c06f8099c5c3fb085ab4658230eacb8cb8bb
-ManifestVersion: 0.1.0
+    SHA256: 60974204ae8e1839734b3577a505c06f8099c5c3fb085ab4658230eacb8cb8bb
+Plugins:
+- Name: 設定ダイアログ画面サイズ固定化プラグイン
+  Information: 設定ダイアログ画面サイズ固定化プラグイン version 1.0 by amate
+  Type: Filter
+  InstallPath: plugins/PropertyWindowFixerPlugin.auf
+ManifestVersion: 0.3.0

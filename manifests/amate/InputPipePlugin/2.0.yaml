@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: InputPipePlugin
 Version: "2.0"
@@ -8,7 +8,7 @@ Section: Plugin/Input
 Depends:
 - aviutl (>= 1.00)
 - exedit (>= 0.92)
-InstalledSize: 2278
+InstalledSize: 2331687
 Developer:
 - amate
 Description: L-SMASH Works File Reader(lwinput.aui)を別プロセスで実行しメモリ使用量削減を目論む入力プラグイン
@@ -17,26 +17,31 @@ Website:
 - https://www.nicovideo.jp/watch/sm35585310
 Files:
 - SourceUrl: https://github.com/amate/InputPipePlugin/releases/download/v2.0/InputPipePlugin_2.0.zip
-  Sha256: 27f54c42d193fc9997c31fdf8a82ce22b39b40b03c00a350d22e61bc9c4ca6b3
+  SHA256: 27f54c42d193fc9997c31fdf8a82ce22b39b40b03c00a350d22e61bc9c4ca6b3
   Files:
   - Path: InputPipePlugin/InputPipeMain.exe
-    Sha256: 48b497db58dedb4b9cde1bbf4c1af07b0f04110f0830c5ae4a62c780b9e80c77
+    SHA256: 48b497db58dedb4b9cde1bbf4c1af07b0f04110f0830c5ae4a62c780b9e80c77
     Install:
       TargetPath: plugins/InputPipeMain.exe
       Method: Copy
   - Path: InputPipePlugin/InputPipeMain64.exe
-    Sha256: baa75508d61e674051138b0d1ec11d1d98623b6dc489aac142e42ee2e54d1dca
+    SHA256: baa75508d61e674051138b0d1ec11d1d98623b6dc489aac142e42ee2e54d1dca
     Install:
       TargetPath: plugins/InputPipeMain64.exe
       Method: Copy
   - Path: InputPipePlugin/InputPipePlugin.aui
-    Sha256: a5b0cb9a8b08aea5cfe594fff475c8c6fbca8f0f1c36c09cf12408694c3d5602
+    SHA256: a5b0cb9a8b08aea5cfe594fff475c8c6fbca8f0f1c36c09cf12408694c3d5602
     Install:
       TargetPath: plugins/InputPipePlugin.aui
   - Path: InputPipePlugin/LICENSE
-    Sha256: d2e83382e2d08566292c817e52be98c12a49a7f611d1475619d6ccbaecfad29c
+    SHA256: d2e83382e2d08566292c817e52be98c12a49a7f611d1475619d6ccbaecfad29c
   - Path: InputPipePlugin/Readme.md
-    Sha256: 83deb289524325da8917023756b7d99ef8b348cf0eb4bdf9b96ddba0c79f8bf6
+    SHA256: 83deb289524325da8917023756b7d99ef8b348cf0eb4bdf9b96ddba0c79f8bf6
 ConfFiles:
 - plugins/InputPipePluginConfig.ini
-ManifestVersion: 0.1.0
+Plugins:
+- Name: InputPipePlugin
+  Information: Plugin to bypass lwinput.aui By amate version 2.0
+  Type: Input
+  InstallPath: plugins/InputPipePlugin.aui
+ManifestVersion: 0.3.0

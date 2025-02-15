@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-PyoPyo
 DisplayName: ぷよぷよT
 Version: 2017-01-18
 ReleaseDate: 2017-01-18
 Section: Script
-InstalledSize: 4
+InstalledSize: 3285
 Developer:
 - Tim
 Description: にょきにょきと突起を出します。にょきにょきTとか命名すればよかった・・。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/PyoPyo.zip
-  Sha256: c205a29c525e630751320cb38490583aa6fdce1be2cbcdc55dff2602cbfca855
+  SHA256: c205a29c525e630751320cb38490583aa6fdce1be2cbcdc55dff2602cbfca855
   Files:
   - Path: ぷよぷよT.anm
-    Sha256: c665bff279ef2d07bd3e11dfc9fe63b45c78d99d53da3b917ae3de3519682361
+    SHA256: c665bff279ef2d07bd3e11dfc9fe63b45c78d99d53da3b917ae3de3519682361
     Install:
       TargetPath: script/ぷよぷよT.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

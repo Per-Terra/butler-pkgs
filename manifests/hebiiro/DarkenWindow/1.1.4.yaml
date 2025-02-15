@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: DarkenWindow
 DisplayName: 黒窓
 Version: 1.1.4
 ReleaseDate: 2022-02-13
 Section: Plugin/Other
-InstalledSize: 102
+InstalledSize: 103441
 Developer:
 - hebiiro
 Description: AviUtlの見た目をダークモードにするプラグイン
@@ -14,18 +14,18 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-DarkenWindow/releases/download/1.1.4/DarkenWindow.1.1.4.7z
-  Sha256: fa78323c5a54cc7f5b76637db29b4fd46a05ce59a9af307a29e9865da1e682ac
+  SHA256: fa78323c5a54cc7f5b76637db29b4fd46a05ce59a9af307a29e9865da1e682ac
   Files:
   - Path: aviutl_dark.exe.manifest
-    Sha256: e3a7df934042614be2fd1c35023c35b9d95a9b0e6cff5b3cde91d406fad9bb5e
+    SHA256: e3a7df934042614be2fd1c35023c35b9d95a9b0e6cff5b3cde91d406fad9bb5e
     Install:
       TargetPath: aviutl_dark.exe.manifest
   - Path: DarkenWindow.aul
-    Sha256: af286b84fe11fcc9cf0415161943884cdf10b4676e35d85f369615881d8e6d58
+    SHA256: af286b84fe11fcc9cf0415161943884cdf10b4676e35d85f369615881d8e6d58
     Install:
       TargetPath: plugins/DarkenWindow.aul
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 679eb6a61ec7dc583c5a826c1581318b7c7c83d1d043dcb12f17c1ef2fcd38f5
-ManifestVersion: 0.2.0
+    SHA256: 679eb6a61ec7dc583c5a826c1581318b7c7c83d1d043dcb12f17c1ef2fcd38f5
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: NoScrollText
 DisplayName: アイテム名常時表示
@@ -7,8 +7,8 @@ Version: 1.0.0
 ReleaseDate: 2023-05-30
 Section: Plugin/Other
 Conflicts:
-  - ShowWaveform
-InstalledSize: 17
+- ShowWaveform
+InstalledSize: 16539
 Developer:
 - hebiiro
 Description: タイムラインのアイテム名を可能な限り常時表示するプラグイン
@@ -16,16 +16,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-NoScrollText
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-NoScrollText/releases/download/1.0.0/NoScrollText.1.0.0.zip
-  Sha256: df5e638d0638e0aa11b19aa695fdab1167ed0390fef0f565c50c837a5117a5f8
+  SHA256: df5e638d0638e0aa11b19aa695fdab1167ed0390fef0f565c50c837a5117a5f8
   Files:
   - Path: CREDITS.md
-    Sha256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
+    SHA256: 18a4e788a60e25170463355e1b85f048408fdc91795fd31a5e7f4ecf3dda6ffe
   - Path: LICENSE
-    Sha256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
+    SHA256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
   - Path: NoScrollText.auf
-    Sha256: 0b8cb0cc59f649a4308da31101b053c80e7ff0c62641cb6e2546ad302210b5e4
+    SHA256: 0b8cb0cc59f649a4308da31101b053c80e7ff0c62641cb6e2546ad302210b5e4
     Install:
       TargetPath: plugins/NoScrollText.auf
   - Path: README.md
-    Sha256: 54e9f17ec491683cbb37bb8565e14b654eafdbcefc9f8b7a6ed967941e70cf33
-ManifestVersion: 0.2.0
+    SHA256: 54e9f17ec491683cbb37bb8565e14b654eafdbcefc9f8b7a6ed967941e70cf33
+Plugins:
+- Name: アイテム名常時表示
+  Information: アイテム名常時表示 1.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/NoScrollText.auf
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-GlassSd
 DisplayName: 砕けたガラス
 Version: 2012-01-22
 ReleaseDate: 2012-01-22
 Section: Script
-InstalledSize: 17
+InstalledSize: 17015
 Developer:
 - Tim
 Description: 屈折効果を持つガラス破片風効果です。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/GlassSd.zip
-  Sha256: c421426b1841e1903a1ee6d194c58f5784df6962a36bd67d5fb851bde9556203
+  SHA256: c421426b1841e1903a1ee6d194c58f5784df6962a36bd67d5fb851bde9556203
   Files:
   - Path: '@砕けたガラス.anm'
-    Sha256: 0d00ba6ad57d9f86790d8e6a402e68e179ba64b8bb98f020e561ad63c1fe5a5d
+    SHA256: 0d00ba6ad57d9f86790d8e6a402e68e179ba64b8bb98f020e561ad63c1fe5a5d
     Install:
       TargetPath: script/@砕けたガラス.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

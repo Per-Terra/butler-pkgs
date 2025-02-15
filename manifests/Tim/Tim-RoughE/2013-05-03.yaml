@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-RoughE
 DisplayName: ラフエッジ
 Version: 2013-05-03
 ReleaseDate: 2013-05-03
 Section: Script
-InstalledSize: 2
+InstalledSize: 1690
 Developer:
 - Tim
 Description: 境界を侵食していきます。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/RoughE.zip
-  Sha256: 97471e07fd479124f8e190d0784f385c13be44c4d04de8bfaa7fd14103d4e2ce
+  SHA256: 97471e07fd479124f8e190d0784f385c13be44c4d04de8bfaa7fd14103d4e2ce
   Files:
   - Path: ラフエッジ.anm
-    Sha256: 06c702c83a5a7b17db7407c3c47501a289a73154d26f90070aee8f59f043fda8
+    SHA256: 06c702c83a5a7b17db7407c3c47501a289a73154d26f90070aee8f59f043fda8
     Install:
       TargetPath: script/ラフエッジ.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

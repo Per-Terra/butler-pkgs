@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-Twitch
 DisplayName: twitchっぽいものT
 Version: 2020-06-17
 ReleaseDate: 2020-06-17
 Section: Script
-InstalledSize: 4
+InstalledSize: 4057
 Developer:
 - Tim
 Description: さつきさんのtwitchっぽいものの別バージョンのようなものです。
@@ -15,12 +15,12 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/Twitch.zip
-  Sha256: fc9a9d592a6ca67e3f5d5028d8cd8f9e0dd3e643199240a058081e2bdeb736b5
+  SHA256: fc9a9d592a6ca67e3f5d5028d8cd8f9e0dd3e643199240a058081e2bdeb736b5
   Files:
   - Path: Twitch/twitchっぽいものT.anm
-    Sha256: 1cbfa1918856a341a383c0e251efd724a88cd2fa758cdb86ee6e57c2df8ac8cb
+    SHA256: 1cbfa1918856a341a383c0e251efd724a88cd2fa758cdb86ee6e57c2df8ac8cb
     Install:
       TargetPath: script/twitchっぽいものT.anm
   - Path: Twitch/変更点.txt
-    Sha256: f898f3694b67ab8dd21842c79896fe801578ca94764577eda59f06e382905bd6
-ManifestVersion: 0.2.0
+    SHA256: f898f3694b67ab8dd21842c79896fe801578ca94764577eda59f06e382905bd6
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: easing-quick-setup
 DisplayName: イージング設定時短プラグイン
@@ -7,8 +7,8 @@ Version: 1.0.0
 ReleaseDate: 2022-01-30
 Section: Plugin/Other
 Conflicts:
-  - RelMovieHandle
-InstalledSize: 153
+- RelMovieHandle
+InstalledSize: 156672
 Developer:
 - kumrnm
 Description: 拡張編集のイージング設定を補助するプラグイン
@@ -16,7 +16,12 @@ Website:
 - https://github.com/kumrnm/aviutl-easing-quick-setup
 Files:
 - SourceUrl: https://github.com/kumrnm/aviutl-easing-quick-setup/releases/download/v1.0.0/easing_quick_setup.auf
-  Sha256: 81bf29a88b51aa89f61bb8a8edf5b23fa6444d9814a7a7ae7ab5725cde81de5c
+  SHA256: 81bf29a88b51aa89f61bb8a8edf5b23fa6444d9814a7a7ae7ab5725cde81de5c
   Install:
     TargetPath: plugins/easing_quick_setup.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: イージング設定時短プラグイン
+  Information: イージング設定時短プラグイン v1.0.0
+  Type: Filter
+  InstallPath: plugins/easing_quick_setup.auf
+ManifestVersion: 0.3.0

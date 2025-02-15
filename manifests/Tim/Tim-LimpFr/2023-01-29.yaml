@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-LimpFr
 DisplayName: ぐにゃ枠T
 Version: 2023-01-29
 ReleaseDate: 2023-01-29
 Section: Script
-InstalledSize: 4
+InstalledSize: 3945
 Developer:
 - Tim
 Description: ぐにゃっと曲がった枠線を作るスクリプトです。単一線もできます。
@@ -16,10 +16,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/LimpFr.zip
-  Sha256: 2c8f30c11da1a7c84ae75f9f85752b6da8322db15d73692fa62701ea91edff08
+  SHA256: 2c8f30c11da1a7c84ae75f9f85752b6da8322db15d73692fa62701ea91edff08
   Files:
   - Path: LimpFr/ぐにゃ枠T.obj
-    Sha256: 3340da38e74d6a5919db44821ef8de2122937c9baae70d6746770babc3708631
+    SHA256: 3340da38e74d6a5919db44821ef8de2122937c9baae70d6746770babc3708631
     Install:
       TargetPath: script/ぐにゃ枠T.obj
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

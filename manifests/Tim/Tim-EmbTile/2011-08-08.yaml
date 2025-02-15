@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-EmbTile
 DisplayName: エンボスタイル
 Version: 2011-08-08
 ReleaseDate: 2011-08-08
 Section: Script
-InstalledSize: 3
+InstalledSize: 2734
 Developer:
 - Tim
 Description: 立体感のあるタイル状にします。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/EmbTile.zip
-  Sha256: 2a32036c81fa3d7eb06631aaf4640a29a9eaeee37377c35bdeef8aa93d70c91e
+  SHA256: 2a32036c81fa3d7eb06631aaf4640a29a9eaeee37377c35bdeef8aa93d70c91e
   Files:
   - Path: エンボスタイル.anm
-    Sha256: eda5dc499aa822dfe3f8ef95a38381d492089bcfe3e2c3d98aee2cbd78037800
+    SHA256: eda5dc499aa822dfe3f8ef95a38381d492089bcfe3e2c3d98aee2cbd78037800
     Install:
       TargetPath: script/エンボスタイル.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

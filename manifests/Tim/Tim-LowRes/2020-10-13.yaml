@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-LowRes
 DisplayName: 低解像度T
 Version: 2020-10-13
 ReleaseDate: 2020-10-13
 Section: Script
-InstalledSize: 3
+InstalledSize: 2590
 Developer:
 - Tim
 Description: アナログチックに低解像度にするスクリプトです。
@@ -16,10 +16,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/LowRes.zip
-  Sha256: e9cc263768d06618565404df3b92b8d2075affcaa491cca04b248a3d1966a54d
+  SHA256: e9cc263768d06618565404df3b92b8d2075affcaa491cca04b248a3d1966a54d
   Files:
   - Path: LowRes/低解像度T.anm
-    Sha256: b977bf932c067e227cb1937e4d5b005aae6575868b0690740ca564da2e137ff1
+    SHA256: b977bf932c067e227cb1937e4d5b005aae6575868b0690740ca564da2e137ff1
     Install:
       TargetPath: script/低解像度T.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

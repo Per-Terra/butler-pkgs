@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-OutLPur
 DisplayName: 輪郭追跡
 Version: "1.1"
 ReleaseDate: 2012-07-04
 Section: Script
-InstalledSize: 4
+InstalledSize: 3775
 Developer:
 - Tim
 Description: 枠を追加するのですが、輪郭に沿って動きます。その他の拡張機能もあります。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/OutLPur.zip
-  Sha256: 3889b417e59204a3d48b7bc5e07ad9f0474eed79a952f3889851e8e38b1d3be5
+  SHA256: 3889b417e59204a3d48b7bc5e07ad9f0474eed79a952f3889851e8e38b1d3be5
   Files:
   - Path: '@輪郭追跡.anm'
-    Sha256: 6bd59c1b4d4a05380f0826a198292767ec6bb6ee5dfabcd34a3a58afa0386f56
+    SHA256: 6bd59c1b4d4a05380f0826a198292767ec6bb6ee5dfabcd34a3a58afa0386f56
     Install:
       TargetPath: script/@輪郭追跡.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

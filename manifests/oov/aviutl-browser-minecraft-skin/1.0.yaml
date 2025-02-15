@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: aviutl-browser-minecraft-skin
 DisplayName: マイクラスキン
@@ -8,7 +8,7 @@ ReleaseDate: 2021-01-04
 Section: Script
 Depends:
 - aviutl-browser
-InstalledSize: 115
+InstalledSize: 117155
 Developer:
 - oov
 Description: |-
@@ -18,32 +18,32 @@ Website:
 - https://github.com/oov/aviutl_browser_minecraft_skin
 Files:
 - SourceUrl: https://github.com/oov/aviutl_browser_minecraft_skin/releases/download/v1.0/aviutl_browser_minecraft_skin_1.0.zip
-  Sha256: 251de390facc500b8348dc2a4a04137dba74e2fe04908749821be9bfcfa39006
+  SHA256: 251de390facc500b8348dc2a4a04137dba74e2fe04908749821be9bfcfa39006
   Files:
   - Path: マイクラスキン.txt
-    Sha256: bc155bc5a23ef633ac578dea82cfaf4f63a06e0d41db900a0f7f9cb9d3e26be9
+    SHA256: bc155bc5a23ef633ac578dea82cfaf4f63a06e0d41db900a0f7f9cb9d3e26be9
   - Path: script/browser/@マイクラスキン.anm
-    Sha256: 6be8c0e02afb4572de46503ed2f1da36fa15e27dee8cb8b369e41268f25769ab
+    SHA256: 6be8c0e02afb4572de46503ed2f1da36fa15e27dee8cb8b369e41268f25769ab
     Install:
       TargetPath: script/browser/@マイクラスキン.anm
   - Path: script/browser/@マイクラスキン.obj
-    Sha256: 51dc38aafa7eb3fafea46aaf8d282cbd4210f9f460934ad240014b8dd023a7bf
+    SHA256: 51dc38aafa7eb3fafea46aaf8d282cbd4210f9f460934ad240014b8dd023a7bf
     Install:
       TargetPath: script/browser/@マイクラスキン.obj
   - Path: script/browser/マイクラスキン-走り.exa
-    Sha256: 5f098a85dd7ea68f8f1c2e171b412ed59301563da9661bb567ef38c2766cfd37
+    SHA256: 5f098a85dd7ea68f8f1c2e171b412ed59301563da9661bb567ef38c2766cfd37
     Install:
       TargetPath: script/browser/マイクラスキン-走り.exa
   - Path: script/browser/マイクラスキン-歩き.exa
-    Sha256: 26a8ab24d88ecdd4ca0cca0a59fcbd84179f490bc314d32e36d6e8a733b60215
+    SHA256: 26a8ab24d88ecdd4ca0cca0a59fcbd84179f490bc314d32e36d6e8a733b60215
     Install:
       TargetPath: script/browser/マイクラスキン-歩き.exa
   - Path: script/browser/マイクラスキン.exa
-    Sha256: c62cd2c25000d585019779d762996eca631077891da2a31405c69296d6de79bc
+    SHA256: c62cd2c25000d585019779d762996eca631077891da2a31405c69296d6de79bc
     Install:
       TargetPath: script/browser/マイクラスキン.exa
   - Path: script/browser/contents/マイクラスキン.abc
-    Sha256: c4381a8438efcb1fe50cf6365a361e63d01249ecbb9ff68c7b9f80d37db59fc1
+    SHA256: c4381a8438efcb1fe50cf6365a361e63d01249ecbb9ff68c7b9f80d37db59fc1
     Install:
       TargetPath: script/browser/contents/マイクラスキン.abc
-ManifestVersion: 0.1.0
+ManifestVersion: 0.3.0

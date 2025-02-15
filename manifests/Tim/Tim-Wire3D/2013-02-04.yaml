@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-Wire3D
 DisplayName: ワイヤー3D
 Version: 2013-02-04
 ReleaseDate: 2013-02-04
 Section: Script
-InstalledSize: 6
+InstalledSize: 5579
 Developer:
 - Tim
 Description: 平面データから３Dワイヤーを作ります。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/Wire3D.zip
-  Sha256: 58c553cbed1d3866a28e3228484d46a9b994290a65b2e3ed782e1f35eb513e61
+  SHA256: 58c553cbed1d3866a28e3228484d46a9b994290a65b2e3ed782e1f35eb513e61
   Files:
   - Path: '@ワイヤー3D.anm'
-    Sha256: 0c7aa43bb0e597d1c754339accf71cf92a21ff3b1ac03d102859e62fe507f50a
+    SHA256: 0c7aa43bb0e597d1c754339accf71cf92a21ff3b1ac03d102859e62fe507f50a
     Install:
       TargetPath: script/@ワイヤー3D.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

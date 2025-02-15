@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: WaveformPreview
 DisplayName: 波形プレビュー
 Version: 0.1.0
 ReleaseDate: 2021-08-16
 Section: Plugin/Other
-InstalledSize: 68
+InstalledSize: 68900
 Developer:
 - karoterra
 Description: 編集中の音声波形を確認するためのプラグイン
@@ -15,18 +15,23 @@ Website:
 - https://www.nicovideo.jp/watch/sm39258128
 Files:
 - SourceUrl: https://github.com/karoterra/aviutl_WaveformPreview/releases/download/v0.1.0/aviutl_WaveformPreview_v0.1.0.zip
-  Sha256: fe96dc8f6047e1c7ced225c77f3aeded5f071f525f34c16c409949c54f812983
+  SHA256: fe96dc8f6047e1c7ced225c77f3aeded5f071f525f34c16c409949c54f812983
   Files:
   - Path: aviutl_WaveformPreview_v0.1.0/CHANGELOG.md
-    Sha256: c2c258083128e496b3c533eca9a385f4b6f3041c6b25a23e20ba40a1b0cc6793
+    SHA256: c2c258083128e496b3c533eca9a385f4b6f3041c6b25a23e20ba40a1b0cc6793
   - Path: aviutl_WaveformPreview_v0.1.0/CREDITS.md
-    Sha256: e592aa146f0f23f876eaeb64b6cd4d39d1eb3444755b6c5e02dd1f7fc45d0e65
+    SHA256: e592aa146f0f23f876eaeb64b6cd4d39d1eb3444755b6c5e02dd1f7fc45d0e65
   - Path: aviutl_WaveformPreview_v0.1.0/LICENSE
-    Sha256: 7d50704a82cf8fec7eef4390ff4bc34bd198b446d45c20eb6e2f78842ab04ff8
+    SHA256: 7d50704a82cf8fec7eef4390ff4bc34bd198b446d45c20eb6e2f78842ab04ff8
   - Path: aviutl_WaveformPreview_v0.1.0/README.md
-    Sha256: b7d61ed36f1d4f273c896d3e70d787c68bcc8159ba164cf11ebd42ec9faa3523
+    SHA256: b7d61ed36f1d4f273c896d3e70d787c68bcc8159ba164cf11ebd42ec9faa3523
   - Path: aviutl_WaveformPreview_v0.1.0/WaveformPreview.auf
-    Sha256: 68c28efd5c80cd4585eb08e97c07383126aba30b623ffe6a866bb34441db69c1
+    SHA256: 68c28efd5c80cd4585eb08e97c07383126aba30b623ffe6a866bb34441db69c1
     Install:
       TargetPath: plugins/WaveformPreview.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 波形プレビュー
+  Information: 波形プレビュー v0.1.0 by karoterra
+  Type: Filter
+  InstallPath: plugins/WaveformPreview.auf
+ManifestVersion: 0.3.0

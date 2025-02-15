@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-RndBlur
 DisplayName: ランダムブラー
 Version: 2012-03-24
 ReleaseDate: 2012-03-24
 Section: Script
-InstalledSize: 64
+InstalledSize: 64671
 Developer:
 - Tim
 Description: 画像をドット単位でランダムに拡散する効果です。正確にはブラーじゃないのですが、遠目に見るとブラーっぽいのでそう名付けました。
@@ -15,14 +15,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/RndBlur.zip
-  Sha256: d51bb3d25d53425a263dba28b53d5495af7a0953783ebcb09fc4986353a31056
+  SHA256: d51bb3d25d53425a263dba28b53d5495af7a0953783ebcb09fc4986353a31056
   Files:
   - Path: RndBlur/@T_RandomBlur_Module.anm
-    Sha256: c61a00d8c0c81c7cfa5d51807e9feea59039aa77b21b295d7f461a4379c790e1
+    SHA256: c61a00d8c0c81c7cfa5d51807e9feea59039aa77b21b295d7f461a4379c790e1
     Install:
       TargetPath: script/@T_RandomBlur_Module.anm
   - Path: RndBlur/T_RandomBlur_Module.dll
-    Sha256: e2c0409f32563395f29ff5d1609ef2fde2e1930ef89d0e35c30af68b50f905a1
+    SHA256: e2c0409f32563395f29ff5d1609ef2fde2e1930ef89d0e35c30af68b50f905a1
     Install:
       TargetPath: script/T_RandomBlur_Module.dll
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

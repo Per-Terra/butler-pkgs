@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: PropertyWindowFixerPlugin
 DisplayName: 設定ダイアログ画面サイズ固定化プラグイン
@@ -9,7 +9,7 @@ Section: Plugin/Other
 Depends:
 - aviutl (>= 1.00)
 - exedit (= 0.92)
-InstalledSize: 799
+InstalledSize: 818165
 Developer:
 - amate
 Description: |-
@@ -20,19 +20,24 @@ Website:
 - https://www.nicovideo.jp/watch/sm36085428
 Files:
 - SourceUrl: https://github.com/amate/PropertyWindowFixerPlugin/releases/download/v2.3/PropertyWindowFixerPlugin_2.3.zip
-  Sha256: ed18aa4741baf1e2e3113b6ebc7836d09e616502eb798e267a7566826a67a6a6
+  SHA256: ed18aa4741baf1e2e3113b6ebc7836d09e616502eb798e267a7566826a67a6a6
   Files:
   - Path: PropertyWindowFixerPlugin/LICENSE
-    Sha256: dcba112ac2d8bdeedf450b5e11e8ac76eda054c9b6823e356be0d1df36b1dc61
+    SHA256: dcba112ac2d8bdeedf450b5e11e8ac76eda054c9b6823e356be0d1df36b1dc61
   - Path: PropertyWindowFixerPlugin/PropertyWindowFixerPlugin.auf
-    Sha256: b207ed3e4c27373a16b02d7702ff9a9d73934d964c8d76cc30b62768f122fa26
+    SHA256: b207ed3e4c27373a16b02d7702ff9a9d73934d964c8d76cc30b62768f122fa26
     Install:
       TargetPath: plugins/PropertyWindowFixerPlugin.auf
   - Path: PropertyWindowFixerPlugin/PropertyWindowFixerPluginConfig.ini
-    Sha256: 92d4efefa11f84c3584521e76ffe0e69d33d4218ebfd18a10806ffee3e60bda6
+    SHA256: 92d4efefa11f84c3584521e76ffe0e69d33d4218ebfd18a10806ffee3e60bda6
     Install:
       TargetPath: plugins/PropertyWindowFixerPluginConfig.ini
       ConfFile: true
   - Path: PropertyWindowFixerPlugin/Readme.md
-    Sha256: 330e1ca0e8c9d863ebb0b384d3e4ed3e4e4f2dd7a27d244765fb41f72e42e951
-ManifestVersion: 0.1.0
+    SHA256: 330e1ca0e8c9d863ebb0b384d3e4ed3e4e4f2dd7a27d244765fb41f72e42e951
+Plugins:
+- Name: 設定ダイアログ画面サイズ固定化プラグイン
+  Information: 設定ダイアログ画面サイズ固定化プラグイン version 2.3 by amate
+  Type: Filter
+  InstallPath: plugins/PropertyWindowFixerPlugin.auf
+ManifestVersion: 0.3.0

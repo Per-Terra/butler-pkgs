@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-SplMrp
 DisplayName: 簡易モーフィング
 Version: 2013-03-17
 ReleaseDate: 2013-03-17
 Section: Script
-InstalledSize: 12
+InstalledSize: 11647
 Developer:
 - Tim
 Description: 簡易的なモーフィングと輪郭モーフィングができます。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/SplMrp.zip
-  Sha256: e5b972e02f60a0c39332827729477c43bea35fb63c203202db9258d25e8747d0
+  SHA256: e5b972e02f60a0c39332827729477c43bea35fb63c203202db9258d25e8747d0
   Files:
   - Path: '@モーフィング.anm'
-    Sha256: 51bf693ed71fdfaed4fb0e89ea2b92b30c70f54d10fce1cc9b4c0d63e5028873
+    SHA256: 51bf693ed71fdfaed4fb0e89ea2b92b30c70f54d10fce1cc9b4c0d63e5028873
     Install:
       TargetPath: script/@モーフィング.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: BuildStairs
 DisplayName: アイテムずらし
 Version: 2.2.0
 ReleaseDate: 2023-01-07
 Section: Plugin/Other
-InstalledSize: 2148
+InstalledSize: 2199460
 Developer:
 - hebiiro
 Description: タイムラインのアイテムをずらしたり整列したりするプラグイン
@@ -14,32 +14,37 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-BuildStairs
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-BuildStairs/releases/download/2.2.0/BuildStairs.2.2.0.zip
-  Sha256: 7a2cf23fdf723b21aab10e0e63a82c68e463b4b8c924d1e00a1e114ce9eaeb09
+  SHA256: 7a2cf23fdf723b21aab10e0e63a82c68e463b4b8c924d1e00a1e114ce9eaeb09
   Files:
   - Path: BuildStairs.auf
-    Sha256: 7cfb2604358dbd5b305a3f1bbdf53f94561c8317da99cf105ca523fcf2c5d3f7
+    SHA256: 7cfb2604358dbd5b305a3f1bbdf53f94561c8317da99cf105ca523fcf2c5d3f7
     Install:
       TargetPath: plugins/BuildStairs.auf
   - Path: CREDITS.md
-    Sha256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
+    SHA256: 57a6aee30b329c0bb88075bf7cf5ab419d81b5cf24a76521b7ac3c1741fc290a
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 77f1eca66f5f67c05e691755b71505b752484b727df05fe47f0898231dea249d
+    SHA256: 77f1eca66f5f67c05e691755b71505b752484b727df05fe47f0898231dea249d
   - Path: BuildStairs/BuildStairs.wav
-    Sha256: dc0f77702ae5e22a9976c0196e42da06084d9f94ec5340972f46d6e89092440e
+    SHA256: dc0f77702ae5e22a9976c0196e42da06084d9f94ec5340972f46d6e89092440e
   - Path: BuildStairs/DeleteMidPt.wav
-    Sha256: f0b50f3795a50a4be911ad3131cfd962f594a08a849c04e6e02a8e45a54bf02f
+    SHA256: f0b50f3795a50a4be911ad3131cfd962f594a08a849c04e6e02a8e45a54bf02f
   - Path: BuildStairs/MoveBegin.wav
-    Sha256: 970be92f3c286a4ec7a34681a3313d01dcdcc00b34c6de7336f6616e6f3a95c8
+    SHA256: 970be92f3c286a4ec7a34681a3313d01dcdcc00b34c6de7336f6616e6f3a95c8
   - Path: BuildStairs/MoveEnd.wav
-    Sha256: 4f32f24a57e2af16d96c0603bd9ff86f8158e05e2f961478d6eeac51c240b0d9
+    SHA256: 4f32f24a57e2af16d96c0603bd9ff86f8158e05e2f961478d6eeac51c240b0d9
   - Path: BuildStairs/MoveToBegin.wav
-    Sha256: 294082782eeecee874dc527d870aee9d4dab15e72d670c5396d948761e7d5cde
+    SHA256: 294082782eeecee874dc527d870aee9d4dab15e72d670c5396d948761e7d5cde
   - Path: BuildStairs/MoveToEnd.wav
-    Sha256: 2306a2fc4a731cda639cae3e425b369c9731c42d4ecf02c4d44bc92dec457532
+    SHA256: 2306a2fc4a731cda639cae3e425b369c9731c42d4ecf02c4d44bc92dec457532
   - Path: BuildStairs/SetBegin.wav
-    Sha256: 5154c8ff7f63c11204b2e4afe36455cc13c5ae2580b5eeda98e8cae48f356e5b
+    SHA256: 5154c8ff7f63c11204b2e4afe36455cc13c5ae2580b5eeda98e8cae48f356e5b
   - Path: BuildStairs/SetEnd.wav
-    Sha256: 967abd16dd70177c9348e58474bf571ea79ff885fd2fcb55482b3029a657e869
-ManifestVersion: 0.2.0
+    SHA256: 967abd16dd70177c9348e58474bf571ea79ff885fd2fcb55482b3029a657e869
+Plugins:
+- Name: アイテムずらし
+  Information: アイテムずらし 2.2.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/BuildStairs.auf
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: clfilters
 Version: "0.03"
@@ -7,7 +7,7 @@ ReleaseDate: 2023-12-21
 Section: Plugin/Filter
 Depends:
 - aviutl (>= 1.00)
-InstalledSize: 14532
+InstalledSize: 14880768
 Developer:
 - rigaya
 Description: |-
@@ -17,10 +17,15 @@ Website:
 - https://github.com/rigaya/Aviutl-clfilters
 Files:
 - SourceUrl: https://github.com/rigaya/Aviutl-clfilters/releases/download/0.03/clfilters_0.03.zip
-  Sha256: 76a0b8705872878da15cb59ae0322b91d4f91430fd7e3e75807411c6ebeffdf3
+  SHA256: 76a0b8705872878da15cb59ae0322b91d4f91430fd7e3e75807411c6ebeffdf3
   Files:
   - Path: clfilters.auf
-    Sha256: 618d101e9a8269748312ec395debfae24e893427b209c54b4e0ba889a7678664
+    SHA256: 618d101e9a8269748312ec395debfae24e893427b209c54b4e0ba889a7678664
     Install:
       TargetPath: plugins/clfilters.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: clfilters
+  Information: clfilters 0.03
+  Type: Filter
+  InstallPath: plugins/clfilters.auf
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SortEffect
 DisplayName: エフェクト並び替えプラグイン
@@ -8,7 +8,7 @@ ReleaseDate: 2022-08-20
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 22
+InstalledSize: 22014
 Developer:
 - nazoSAUNA
 Description: エフェクトのメニューをまとめたり並び替えたりするプラグイン
@@ -16,121 +16,125 @@ Website:
 - https://github.com/nazonoSAUNA/SortEffect
 Files:
 - SourceUrl: https://github.com/nazonoSAUNA/SortEffect/releases/download/1.0/SortEffect_v1.0.zip
-  Sha256: aae898368b354f3389078cc58c81f4be43e6ee06c1c43e4551a8ffa3ed6ebba8
+  SHA256: aae898368b354f3389078cc58c81f4be43e6ee06c1c43e4551a8ffa3ed6ebba8
   Files:
   - Path: Credit.md
-    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
   - Path: LICENSE
-    Sha256: c6dc4e84d8046203587c69aa5f8cccd4dcb55c8fb341023449004bcdc802f3c4
+    SHA256: c6dc4e84d8046203587c69aa5f8cccd4dcb55c8fb341023449004bcdc802f3c4
   - Path: 説明書.txt
-    Sha256: 5bc0a56b0ebf305236d338bcd47b1bfe9f7f4df38b69e0539abba3f5f02227ee
+    SHA256: 5bc0a56b0ebf305236d338bcd47b1bfe9f7f4df38b69e0539abba3f5f02227ee
   - Path: exa/ランダム間隔で落ちながら登場.exa
-    Sha256: 0aa9c7021a7908b9eb870ccfcea828f284f00c3610fa7b1a45eee8c6a36f480a
+    SHA256: 0aa9c7021a7908b9eb870ccfcea828f284f00c3610fa7b1a45eee8c6a36f480a
     Install:
       TargetPath: exa/ランダム間隔で落ちながら登場.exa
   - Path: exa/ランダム配置.exa
-    Sha256: 81af54c918ee1056dabd585486669636293f43baa69d616029e7059048ea215f
+    SHA256: 81af54c918ee1056dabd585486669636293f43baa69d616029e7059048ea215f
     Install:
       TargetPath: exa/ランダム配置.exa
   - Path: exa/ランダム方向から登場.exa
-    Sha256: d9cbf8d3ce8654e22bcee6a367a1e436005e77fb684c908d0b5c58768f271f4f
+    SHA256: d9cbf8d3ce8654e22bcee6a367a1e436005e77fb684c908d0b5c58768f271f4f
     Install:
       TargetPath: exa/ランダム方向から登場.exa
   - Path: exa/リール回転.exa
-    Sha256: 8bb4b45c9498608c54e51bec28f7a30153da6c779bd46f5e70b96b06c7dd43a0
+    SHA256: 8bb4b45c9498608c54e51bec28f7a30153da6c779bd46f5e70b96b06c7dd43a0
     Install:
       TargetPath: exa/リール回転.exa
   - Path: exa/円形配置.exa
-    Sha256: a306b0ab2c58debc9647497384f9e18ba21e61c7f56cf53793f00597c403eddd
+    SHA256: a306b0ab2c58debc9647497384f9e18ba21e61c7f56cf53793f00597c403eddd
     Install:
       TargetPath: exa/円形配置.exa
   - Path: exa/何処からともなく登場.exa
-    Sha256: e5126c8cbda1a364a4eaf0f2023d8bc5ca291fc8aacd012adc3d53eb8b11ab71
+    SHA256: e5126c8cbda1a364a4eaf0f2023d8bc5ca291fc8aacd012adc3d53eb8b11ab71
     Install:
       TargetPath: exa/何処からともなく登場.exa
   - Path: exa/画面外から登場.exa
-    Sha256: 7ffaffb3256e56bc190f815064d42a07b2529194069f86df8d7e447f2607c87c
+    SHA256: 7ffaffb3256e56bc190f815064d42a07b2529194069f86df8d7e447f2607c87c
     Install:
       TargetPath: exa/画面外から登場.exa
   - Path: exa/拡大縮小して登場.exa
-    Sha256: b7c1b3a99ca9e5aa14d34f3f74cdb2288d52373dc2a3c24c487249a0fc336874
+    SHA256: b7c1b3a99ca9e5aa14d34f3f74cdb2288d52373dc2a3c24c487249a0fc336874
     Install:
       TargetPath: exa/拡大縮小して登場.exa
   - Path: exa/簡易変形.exa
-    Sha256: af619f8eed8c0fa83db829acaacacb5f92b8aed176691d0f38c80ab3b77e35bd
+    SHA256: af619f8eed8c0fa83db829acaacacb5f92b8aed176691d0f38c80ab3b77e35bd
     Install:
       TargetPath: exa/簡易変形.exa
   - Path: exa/簡易変形(カメラ制御).exa
-    Sha256: f4159a93c0188e580b5cdea21c07a0445213caa893540b84df486e569c044f30
+    SHA256: f4159a93c0188e580b5cdea21c07a0445213caa893540b84df486e569c044f30
     Install:
       TargetPath: exa/簡易変形(カメラ制御).exa
   - Path: exa/起き上がって登場.exa
-    Sha256: 1d7e6eb82a16d33c1ac17ee34b8ada66aeba2f57e8f53d0f90eb964126d45764
+    SHA256: 1d7e6eb82a16d33c1ac17ee34b8ada66aeba2f57e8f53d0f90eb964126d45764
     Install:
       TargetPath: exa/起き上がって登場.exa
   - Path: exa/球体(カメラ制御).exa
-    Sha256: 89ee87b4f3df1fcad7453370f40d4c38d0ab49d37fe6630acce0fae21ca96da4
+    SHA256: 89ee87b4f3df1fcad7453370f40d4c38d0ab49d37fe6630acce0fae21ca96da4
     Install:
       TargetPath: exa/球体(カメラ制御).exa
   - Path: exa/広がって登場.exa
-    Sha256: bce7ca2a3faaa59416ab8a472a4b401f00da2ef86f71b8354f7b2453f94c798d
+    SHA256: bce7ca2a3faaa59416ab8a472a4b401f00da2ef86f71b8354f7b2453f94c798d
     Install:
       TargetPath: exa/広がって登場.exa
   - Path: exa/座標の回転(個別オブジェクト).exa
-    Sha256: 182303fa89c33d2f2508aa71f37a0ddca5c7511c3c6d807f11eb898343e5688b
+    SHA256: 182303fa89c33d2f2508aa71f37a0ddca5c7511c3c6d807f11eb898343e5688b
     Install:
       TargetPath: exa/座標の回転(個別オブジェクト).exa
   - Path: exa/座標の拡大縮小(個別オブジェクト).exa
-    Sha256: 81e42d490219072632cb758a26785d1f2ef4091ab74071be1cff011e96dcb77c
+    SHA256: 81e42d490219072632cb758a26785d1f2ef4091ab74071be1cff011e96dcb77c
     Install:
       TargetPath: exa/座標の拡大縮小(個別オブジェクト).exa
   - Path: exa/砕け散る.exa
-    Sha256: e02ae098a43004ea17795a1a104f2b50680a643c44a18f5c65107a0c39d2d81f
+    SHA256: e02ae098a43004ea17795a1a104f2b50680a643c44a18f5c65107a0c39d2d81f
     Install:
       TargetPath: exa/砕け散る.exa
   - Path: exa/振り子.exa
-    Sha256: 0d15a4f7b7177040a7d6c0bac78d32cde6b8cbbf8a04355a5be56094c475970e
+    SHA256: 0d15a4f7b7177040a7d6c0bac78d32cde6b8cbbf8a04355a5be56094c475970e
     Install:
       TargetPath: exa/振り子.exa
   - Path: exa/震える.exa
-    Sha256: a1ea3b5c382c0246169e49a5e1df4362876bbab1d807243aa06ceb18779267f4
+    SHA256: a1ea3b5c382c0246169e49a5e1df4362876bbab1d807243aa06ceb18779267f4
     Install:
       TargetPath: exa/震える.exa
   - Path: exa/弾む.exa
-    Sha256: 1bd49e2435448171772a5e17cf4bc0ed575b5572e366a44f3c26d62433657af8
+    SHA256: 1bd49e2435448171772a5e17cf4bc0ed575b5572e366a44f3c26d62433657af8
     Install:
       TargetPath: exa/弾む.exa
   - Path: exa/弾んで登場.exa
-    Sha256: 73713e9a26b69171ffd140a9c10a09761c8d07ed2dcef2722a2f5c4d13e09556
+    SHA256: 73713e9a26b69171ffd140a9c10a09761c8d07ed2dcef2722a2f5c4d13e09556
     Install:
       TargetPath: exa/弾んで登場.exa
   - Path: exa/点滅.exa
-    Sha256: 8ea150ef9f5c1f3ad2d03b35ef13f89746c3f2a36589a34835e38c1e56a7c212
+    SHA256: 8ea150ef9f5c1f3ad2d03b35ef13f89746c3f2a36589a34835e38c1e56a7c212
     Install:
       TargetPath: exa/点滅.exa
   - Path: exa/点滅して登場.exa
-    Sha256: f769b8573283512c13cf446eac040f1f1de560bcc8fbcb729179845d944cd183
+    SHA256: f769b8573283512c13cf446eac040f1f1de560bcc8fbcb729179845d944cd183
     Install:
       TargetPath: exa/点滅して登場.exa
   - Path: exa/反復移動.exa
-    Sha256: efcd1e578274d78755e95cd4ca2077986939fb7664f737d5a107cc69d7d78b56
+    SHA256: efcd1e578274d78755e95cd4ca2077986939fb7664f737d5a107cc69d7d78b56
     Install:
       TargetPath: exa/反復移動.exa
   - Path: exa/万華鏡.exa
-    Sha256: 2d1494e9b97116964077fd963209e8547174076969fc010f40fd2535998c1f9f
+    SHA256: 2d1494e9b97116964077fd963209e8547174076969fc010f40fd2535998c1f9f
     Install:
       TargetPath: exa/万華鏡.exa
   - Path: exa/立方体(カメラ制御).exa
-    Sha256: 50a4bcc5ddb77348fa35f1585e6d5663983f6bf773484468ee3c4fd7142d3f7f
+    SHA256: 50a4bcc5ddb77348fa35f1585e6d5663983f6bf773484468ee3c4fd7142d3f7f
     Install:
       TargetPath: exa/立方体(カメラ制御).exa
   - Path: plugins/SortEffect_Setting.txt
-    Sha256: 2b306d22f3a05541e883ca771c3acc1422fc1e046756047dacfebd24941df627
+    SHA256: 2b306d22f3a05541e883ca771c3acc1422fc1e046756047dacfebd24941df627
     Install:
       TargetPath: plugins/SortEffect_Setting.txt
   - Path: plugins/SortEffect.auf
-    Sha256: 573df17bdd6ae30979af3e7a57f2111b8ef59bf5bb7e5ddcae304fa9a3eebde2
+    SHA256: 573df17bdd6ae30979af3e7a57f2111b8ef59bf5bb7e5ddcae304fa9a3eebde2
     Install:
       TargetPath: plugins/SortEffect.auf
       ConfFile: true
-ManifestVersion: 0.1.0
+Plugins:
+- Name: エフェクト並び替え
+  Type: Filter
+  InstallPath: plugins/SortEffect.auf
+ManifestVersion: 0.3.0

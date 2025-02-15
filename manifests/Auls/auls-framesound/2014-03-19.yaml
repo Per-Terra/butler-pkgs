@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: auls-framesound
 DisplayName: 編集中フレーム移動時に音を鳴らす
 Version: 2014-03-19
 ReleaseDate: 2014-03-19
 Section: Plugin/Other
-InstalledSize: 43
+InstalledSize: 44006
 Developer:
 - Auls
 Description: |-
@@ -16,14 +16,18 @@ Website:
 - https://auls.client.jp/
 Files:
 - SourceUrl: https://auls.client.jp/plugin/framesound.zip
-  Sha256: e63a92e5296b59316e5a6f4561987f735dbf5abe99dac01c55fba989de9080ed
+  SHA256: e63a92e5296b59316e5a6f4561987f735dbf5abe99dac01c55fba989de9080ed
   Files:
   - Path: framesound/aviutl_framesound.cpp
-    Sha256: 5959016d9c34e269ec24fe97849da0b9658e7409633ec8472ac88a9679b0d0e8
+    SHA256: 5959016d9c34e269ec24fe97849da0b9658e7409633ec8472ac88a9679b0d0e8
   - Path: framesound/framesound.auf
-    Sha256: 1d5bbd1026f19d0bf2058edd7bae74ec9c56cb10fb5097a46b6329277c48512f
+    SHA256: 1d5bbd1026f19d0bf2058edd7bae74ec9c56cb10fb5097a46b6329277c48512f
     Install:
       TargetPath: plugins/framesound.auf
   - Path: framesound/説明.txt
-    Sha256: 372b344cfc85977e545c753442398db328d34391b2ce18936de3d82083dff9ef
-ManifestVersion: 0.1.0
+    SHA256: 372b344cfc85977e545c753442398db328d34391b2ce18936de3d82083dff9ef
+Plugins:
+- Name: 編集中フレーム移動時に音を鳴らす
+  Type: Filter
+  InstallPath: plugins/framesound.auf
+ManifestVersion: 0.3.0

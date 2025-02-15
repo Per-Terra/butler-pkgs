@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: forcepser
 DisplayName: かんしくん
@@ -8,7 +8,7 @@ ReleaseDate: 2020-08-20
 Section: Other
 Depends:
 - GCMZDrops
-InstalledSize: 3905
+InstalledSize: 3998664
 Developer:
 - oov
 Description: 指定されたフォルダーを監視して、同じ名前の*.wavと*.txtが追加された時にごちゃまぜドロップスの外部連携APIに投げつけるプログラム
@@ -16,45 +16,45 @@ Website:
 - https://github.com/oov/forcepser
 Files:
 - SourceUrl: https://github.com/oov/forcepser/releases/download/v0.1beta17/forcepser_v0.1beta17.zip
-  Sha256: 16b4e84c8c14da448d18fd16755c246a9d4c6bee5cd05aafb6f90584707d8330
+  SHA256: 16b4e84c8c14da448d18fd16755c246a9d4c6bee5cd05aafb6f90584707d8330
   Files:
   - Path: _entrypoint.lua
-    Sha256: df39c3b524b33aad13880185b431075f34600ba607d34f4db7aba900d8dcef74
+    SHA256: df39c3b524b33aad13880185b431075f34600ba607d34f4db7aba900d8dcef74
     Install:
       TargetPath: かんしくん/_entrypoint.lua
   - Path: forcepser.exe
-    Sha256: bfdb4fa7caf52646bb3eb1416cc8561a1319dacf23851a368ce9848f11cf6267
+    SHA256: bfdb4fa7caf52646bb3eb1416cc8561a1319dacf23851a368ce9848f11cf6267
     Install:
       TargetPath: かんしくん/forcepser.exe
       Method: Copy
   - Path: forcepser.txt
-    Sha256: 7622ff9dfd6f87aed8be0b5c2a392f03d5a43d69f628258837f8fa70c559cc10
+    SHA256: 7622ff9dfd6f87aed8be0b5c2a392f03d5a43d69f628258837f8fa70c559cc10
     Install:
       TargetPath: かんしくん/forcepser.txt
   - Path: setting.txt-template
-    Sha256: baefc809f57fdccc726f052a39068547013743d6b473c177e68c64255fd2d237
+    SHA256: baefc809f57fdccc726f052a39068547013743d6b473c177e68c64255fd2d237
     Install:
       TargetPath: かんしくん/setting.txt-template
       ConfFile: true
   - Path: template.exo-template
-    Sha256: a4f923fece64067332918798277535f8745096ecc722e61526d664f6175680b1
+    SHA256: a4f923fece64067332918798277535f8745096ecc722e61526d664f6175680b1
   - Path: asas/asas.exe
-    Sha256: 64c9c0635ee750aedf58065bc1e6484548a4a2ffec147f4dc71d98529958b003
+    SHA256: 64c9c0635ee750aedf58065bc1e6484548a4a2ffec147f4dc71d98529958b003
     Install:
       TargetPath: かんしくん/asas/asas.exe
       Method: Copy
   - Path: asas/asas.txt
-    Sha256: 9c82652930560c4c6c562ede5d573d92f199efc7be135175c3187685ff4282b3
+    SHA256: 9c82652930560c4c6c562ede5d573d92f199efc7be135175c3187685ff4282b3
     Install:
       TargetPath: かんしくん/asas/asas.txt
   - Path: asas/asas32.dll
-    Sha256: c8024bcffa00ebbac9fb40a97edc400aeb437b8b72df75a77279cc0a12a96df2
+    SHA256: c8024bcffa00ebbac9fb40a97edc400aeb437b8b72df75a77279cc0a12a96df2
     Install:
       TargetPath: かんしくん/asas/asas32.dll
   - Path: asas/asas64.dll
-    Sha256: 36573326dd7e5f7a22cefdf22bb24c77e629e89b37f3efc0622818abde1e2860
+    SHA256: 36573326dd7e5f7a22cefdf22bb24c77e629e89b37f3efc0622818abde1e2860
     Install:
       TargetPath: かんしくん/asas/asas64.dll
   - Path: asas/changelog.txt
-    Sha256: 21bae6005024310a28c591085d721a03101cddeb2540a5610d48f0b2bab59ce8
-ManifestVersion: 0.1.0
+    SHA256: 21bae6005024310a28c591085d721a03101cddeb2540a5610d48f0b2bab59ce8
+ManifestVersion: 0.3.0

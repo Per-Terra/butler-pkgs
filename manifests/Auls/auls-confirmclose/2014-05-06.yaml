@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: auls-confirmclose
 DisplayName: Auls終了確認
@@ -8,7 +8,7 @@ ReleaseDate: 2014-05-06
 Section: Plugin/Other
 Depends:
 - auls-memref
-InstalledSize: 49
+InstalledSize: 49702
 Developer:
 - Auls
 Description: |-
@@ -18,16 +18,21 @@ Website:
 - https://auls.client.jp/
 Files:
 - SourceUrl: https://auls.client.jp/plugin/auls_confirmclose.zip
-  Sha256: c85eb9dc05c38c1080d8a055da42ca36930b14bda378fb09013d2945279c7a52
+  SHA256: c85eb9dc05c38c1080d8a055da42ca36930b14bda378fb09013d2945279c7a52
   Files:
   - Path: auls_confirmclose/auls_confirmclose.auf
-    Sha256: 75edbda4e3a4864c61d6366d9eced24844a0bc4d88dc63c083f66765d501af08
+    SHA256: 75edbda4e3a4864c61d6366d9eced24844a0bc4d88dc63c083f66765d501af08
     Install:
       TargetPath: plugins/auls_confirmclose.auf
   - Path: auls_confirmclose/説明.txt
-    Sha256: 3484cb94d586572437a17de8e7c777ed16ba5c3ed43278ad035dd5c045b14fe7
+    SHA256: 3484cb94d586572437a17de8e7c777ed16ba5c3ed43278ad035dd5c045b14fe7
   - Path: auls_confirmclose/src/auls_confirmclose.cpp
-    Sha256: 602c1632a9afdfa2f771a25fb3b2ebaf25e93313b1577cc3ecf7a80f470d9409
+    SHA256: 602c1632a9afdfa2f771a25fb3b2ebaf25e93313b1577cc3ecf7a80f470d9409
   - Path: auls_confirmclose/src/auls_confirmclose.vcproj
-    Sha256: ab7e19e6cdec0d9d138d13741729fdfa94c014287c365a45e61356b8afe3c779
-ManifestVersion: 0.1.0
+    SHA256: ab7e19e6cdec0d9d138d13741729fdfa94c014287c365a45e61356b8afe3c779
+Plugins:
+- Name: 終了確認
+  Information: Auls終了確認
+  Type: Filter
+  InstallPath: plugins/auls_confirmclose.auf
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: exedit
 DisplayName: 拡張編集
@@ -8,7 +8,7 @@ ReleaseDate: 2011-09-05
 Section: Core
 Depends:
 - aviutl (>> 0.99k)
-InstalledSize: 1095
+InstalledSize: 1120870
 Developer:
 - KEN-kun
 Description: |-
@@ -18,39 +18,56 @@ Website:
 - https://spring-fragrance.mints.ne.jp/aviutl/
 Files:
 - SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/exedit89f.zip
-  Sha256: 757e0867ce5acd3bc612c45492426d51135bdede6964ae91bbce455f39891489
+  SHA256: 757e0867ce5acd3bc612c45492426d51135bdede6964ae91bbce455f39891489
   Files:
   - Path: exedit.anm
-    Sha256: dc922ea7903e753a9b3262371a6aaa87f161607598a7cb830f5b0f835ca98b02
+    SHA256: dc922ea7903e753a9b3262371a6aaa87f161607598a7cb830f5b0f835ca98b02
     Install:
       TargetPath: exedit.anm
   - Path: exedit.auf
-    Sha256: 314dbbf4074a8d6e00ed9f9df8b525d955089563f6f1c3f6ba32f8ed59c365ff
+    SHA256: 314dbbf4074a8d6e00ed9f9df8b525d955089563f6f1c3f6ba32f8ed59c365ff
     Install:
       TargetPath: exedit.auf
   - Path: exedit.aui
-    Sha256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
+    SHA256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
     Install:
       TargetPath: exedit.aui
   - Path: exedit.auo
-    Sha256: b021b4e6f93140cb15121c064f7410d5d41fa078d70040ea3dd5a119955970de
+    SHA256: b021b4e6f93140cb15121c064f7410d5d41fa078d70040ea3dd5a119955970de
     Install:
       TargetPath: exedit.auo
   - Path: exedit.ini
-    Sha256: 87fc467bde664fdbb6b2ae19b549396746c21925d9e62f5decf32d8bd15a37f8
+    SHA256: 87fc467bde664fdbb6b2ae19b549396746c21925d9e62f5decf32d8bd15a37f8
     Install:
       TargetPath: exedit.ini
       ConfFile: true
   - Path: exedit.obj
-    Sha256: 9efef70ad3c0726d527c7c14205e7f5a58a896307f7f40c46ec5140f597d3587
+    SHA256: 9efef70ad3c0726d527c7c14205e7f5a58a896307f7f40c46ec5140f597d3587
     Install:
       TargetPath: exedit.obj
   - Path: exedit.txt
-    Sha256: 7a1d1667640f38cc0ecf2d8fbc0386ab4a30504d3ed55f69bae56fa4b44e75e0
+    SHA256: 7a1d1667640f38cc0ecf2d8fbc0386ab4a30504d3ed55f69bae56fa4b44e75e0
   - Path: lua.txt
-    Sha256: 00f0f166ab97e2f7235ae1279bb6e6c73e0372395e8f6258d9d3456f9ad852c5
+    SHA256: 00f0f166ab97e2f7235ae1279bb6e6c73e0372395e8f6258d9d3456f9ad852c5
   - Path: lua51.dll
-    Sha256: f726b46ef35a9aee5d08752c2b4ef6f568067033360070e09a5a4f924ab422d1
+    SHA256: f726b46ef35a9aee5d08752c2b4ef6f568067033360070e09a5a4f924ab422d1
     Install:
       TargetPath: lua51.dll
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 拡張編集
+  Information: 拡張編集(exedit) version 0.89f by ＫＥＮくん
+  Type: Filter
+  InstallPath: exedit.auf
+- Name: 拡張編集(音声)
+  Information: 拡張編集(音声) version 0.89f by ＫＥＮくん
+  Type: Filter
+  InstallPath: exedit.auf
+- Name: 拡張編集 File Reader
+  Information: 拡張編集 File Reader version 0.01 By ＫＥＮくん
+  Type: Input
+  InstallPath: exedit.aui
+- Name: 拡張編集AVI/BMP出力 (RGBA)
+  Information: 拡張編集AVI/BMP出力 (RGBA) version 0.03 By ＫＥＮくん
+  Type: Output
+  InstallPath: exedit.auo
+ManifestVersion: 0.3.0

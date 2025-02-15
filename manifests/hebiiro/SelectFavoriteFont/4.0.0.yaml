@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SelectFavoriteFont
 DisplayName: お気に入りフォント選択
 Version: 4.0.0
 ReleaseDate: 2021-12-31
 Section: Plugin/Other
-InstalledSize: 55
+InstalledSize: 56127
 Developer:
 - hebiiro
 Description: お気に入り、または最近使ったフォントからフォントを選択できるようにするプラグイン
@@ -14,21 +14,26 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SelectFavoriteFont
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SelectFavoriteFont/releases/download/4.0.0/SelectFavoriteFont.4.0.0.7z
-  Sha256: 6fb26c8fa6ad196d82b638a020759dea67331b89c744980f3f36a553e9effcf7
+  SHA256: 6fb26c8fa6ad196d82b638a020759dea67331b89c744980f3f36a553e9effcf7
   Files:
   - Path: LICENSE
-    Sha256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
+    SHA256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
   - Path: README.md
-    Sha256: 1124bba4d0a2c94c230fb0ba894525230adfa8a7835f73a1952e6bf072e5fc78
+    SHA256: 1124bba4d0a2c94c230fb0ba894525230adfa8a7835f73a1952e6bf072e5fc78
   - Path: SelectFavoriteFont.auf
-    Sha256: f4777480bd267b677a4b609df2ea67245122a1eb38d93fdd419677f403cc9f68
+    SHA256: f4777480bd267b677a4b609df2ea67245122a1eb38d93fdd419677f403cc9f68
     Install:
       TargetPath: plugins/SelectFavoriteFont.auf
   - Path: SelectFavoriteFont.xml
-    Sha256: bdc4c173726b137411cded120418915e179f6ec138858558f594fd9f9f6ccfd3
+    SHA256: bdc4c173726b137411cded120418915e179f6ec138858558f594fd9f9f6ccfd3
     Install:
       TargetPath: plugins/SelectFavoriteFont.xml
       ConfFile: true
   - Path: アップデート.bat
-    Sha256: 363e8dbc0482ed0f3e138ef84a60f5c6d6a7d12f44e266b41ce34cc910bc0b26
-ManifestVersion: 0.2.0
+    SHA256: 363e8dbc0482ed0f3e138ef84a60f5c6d6a7d12f44e266b41ce34cc910bc0b26
+Plugins:
+- Name: お気に入りフォント選択
+  Information: お気に入りフォント選択 version 3.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/SelectFavoriteFont.auf
+ManifestVersion: 0.3.0

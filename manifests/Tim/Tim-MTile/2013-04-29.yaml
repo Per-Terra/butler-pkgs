@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-MTile
 DisplayName: モーションタイル
 Version: 2013-04-29
 ReleaseDate: 2013-04-29
 Section: Script
-InstalledSize: 2
+InstalledSize: 1341
 Developer:
 - Tim
 Description: 高機能な画像ループです。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/MTile.zip
-  Sha256: 1f1b03a4796c887e5e189c075d2a1f3e3925c5dd78d2abfbf8d8bce8abda5e22
+  SHA256: 1f1b03a4796c887e5e189c075d2a1f3e3925c5dd78d2abfbf8d8bce8abda5e22
   Files:
   - Path: モーションタイルＴ.anm
-    Sha256: 7d459b12bc05a43f5b7b5baf6abf25f5df2a07377349065cc62985e599ea42d7
+    SHA256: 7d459b12bc05a43f5b7b5baf6abf25f5df2a07377349065cc62985e599ea42d7
     Install:
       TargetPath: script/モーションタイルＴ.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-MtnPasI
 DisplayName: 簡易モーションパス(パス数無制限版)
 Version: 2011-07-17
 ReleaseDate: 2011-07-17
 Section: Script
-InstalledSize: 36
+InstalledSize: 36580
 Developer:
 - Tim
 Description: 画像をパスにそって伸ばしていきます。
@@ -15,22 +15,22 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/MtnPasI.zip
-  Sha256: 1b14cf036ced493062acbb4fe637400f9d6dee1bc521ce62e22f37fdbb3f40f6
+  SHA256: 1b14cf036ced493062acbb4fe637400f9d6dee1bc521ce62e22f37fdbb3f40f6
   Files:
   - Path: CD公開時/@モーションパスA-V2.anm
-    Sha256: bf3c6e8ed873481de2b48b28d345efbd57e89dd144630b89bc8ddc16ed059a24
+    SHA256: bf3c6e8ed873481de2b48b28d345efbd57e89dd144630b89bc8ddc16ed059a24
     Install:
       TargetPath: script/@モーションパスA-V2.anm
   - Path: CD公開時/@モーションパスB-V2.anm
-    Sha256: 792df579b08bcc4a77d9db09aa13ce0e8ff597891e88b808251b6cbe6252ee1b
+    SHA256: 792df579b08bcc4a77d9db09aa13ce0e8ff597891e88b808251b6cbe6252ee1b
     Install:
       TargetPath: script/@モーションパスB-V2.anm
   - Path: CD公開時/@モーションパスC.anm
-    Sha256: 81757182b2ae3107295596ea5a2917aa677a4d0ab79a6fc0ec90d13d1604b896
+    SHA256: 81757182b2ae3107295596ea5a2917aa677a4d0ab79a6fc0ec90d13d1604b896
     Install:
       TargetPath: script/@モーションパスC.anm
   - Path: CD公開時/@モーションパスD.anm
-    Sha256: e22c9dcc6f6e754e125d4a7272e07fa32c723032717a302f4f236ca2f72406cc
+    SHA256: e22c9dcc6f6e754e125d4a7272e07fa32c723032717a302f4f236ca2f72406cc
     Install:
       TargetPath: script/@モーションパスD.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

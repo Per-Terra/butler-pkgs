@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-ColExt
 DisplayName: 色抽出
 Version: 2013-03-03
 ReleaseDate: 2013-03-03
 Section: Script
-InstalledSize: 2
+InstalledSize: 1471
 Developer:
 - Tim
 Description: 色抽出します。逆カラーキーのようなものです。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/ColExt.zip
-  Sha256: d274ce7625e72dde65fbd2f56c48c1110a2a0707ec4ccf68e22367480e8d3674
+  SHA256: d274ce7625e72dde65fbd2f56c48c1110a2a0707ec4ccf68e22367480e8d3674
   Files:
   - Path: 色抽出T.anm
-    Sha256: cd2870b1912e74c732b90684a7b859361646a4b1f6f49056d36dc5b6fa79b063
+    SHA256: cd2870b1912e74c732b90684a7b859361646a4b1f6f49056d36dc5b6fa79b063
     Install:
       TargetPath: script/色抽出T.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

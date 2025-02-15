@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-Polygon
 DisplayName: 任意多角形カスタムオブジェクト
 Version: 2011-11-08
 ReleaseDate: 2011-11-08
 Section: Script
-InstalledSize: 37
+InstalledSize: 37175
 Developer:
 - Tim
 Description: 任意多角形のカスタムオブジェクトです。厚みも持たせることができます。
@@ -15,16 +15,16 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/Polygon.zip
-  Sha256: a1809a16283674b544a9979461fc4a3872ce355b2f64944da2cc9e3ed502af91
+  SHA256: a1809a16283674b544a9979461fc4a3872ce355b2f64944da2cc9e3ed502af91
   Files:
   - Path: 配布パック/@任意多角形.obj
-    Sha256: 6f26ad80b9db4d242d5bf9836741ec1d214e4ec102b5242c66b9e350c4948d19
+    SHA256: 6f26ad80b9db4d242d5bf9836741ec1d214e4ec102b5242c66b9e350c4948d19
     Install:
       TargetPath: script/@任意多角形.obj
   - Path: 配布パック/1280_720_6.exo
-    Sha256: 177a935d6dc98003b6e9e0b7fffe1b6579cd8ee6af15e614f7eaa4431c1271c0
+    SHA256: 177a935d6dc98003b6e9e0b7fffe1b6579cd8ee6af15e614f7eaa4431c1271c0
   - Path: 配布パック/Make_exo.hta
-    Sha256: 973aba5671427f9c8537fbc4214f3310affb7f610e5cf536eedb6d2d5c8110f9
+    SHA256: 973aba5671427f9c8537fbc4214f3310affb7f610e5cf536eedb6d2d5c8110f9
   - Path: 配布パック/比較.png
-    Sha256: 620a97a25a20c6d180add8f0ef05d99707812d841d56dc8617a0d03747366b3b
-ManifestVersion: 0.2.0
+    SHA256: 620a97a25a20c6d180add8f0ef05d99707812d841d56dc8617a0d03747366b3b
+ManifestVersion: 0.3.0

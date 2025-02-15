@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: ffmpeg-input
 DisplayName: ffmpeg_input
@@ -9,7 +9,7 @@ Section: Plugin/Input
 Depends:
 - aviutl (>= 1.00)
 - exedit (>= 0.92)
-InstalledSize: 107601
+InstalledSize: 110183140
 Developer:
 - oov
 Description: FFmpegを利用した入力プラグイン
@@ -17,853 +17,858 @@ Website:
 - https://github.com/oov/aviutl_ffmpeg_input
 Files:
 - SourceUrl: https://github.com/oov/aviutl_ffmpeg_input/releases/download/v0.1.0beta20/ffmpeg_input_v0.1.0beta20.zip
-  Sha256: e407d0e80d4c60115fff96d69b087fb260c77527d2b2d4f2af1dd3439a4b661f
+  SHA256: e407d0e80d4c60115fff96d69b087fb260c77527d2b2d4f2af1dd3439a4b661f
   Files:
   - Path: ffmpeg_input-brdg64.aui
-    Sha256: 29dddc9c3e062415c43a524abe4d97968f54a3905f4d3585d994457843a8cbc6
+    SHA256: 29dddc9c3e062415c43a524abe4d97968f54a3905f4d3585d994457843a8cbc6
     Install:
       TargetPath: plugins/ffmpeg_input-brdg64.aui
   - Path: ffmpeg_input.64aui
-    Sha256: e625f1980373d6f087396505fd3336c48bb195572a03f381324ee9196e4e3c8f
+    SHA256: e625f1980373d6f087396505fd3336c48bb195572a03f381324ee9196e4e3c8f
   - Path: ffmpeg_input.txt
-    Sha256: 2f1550d78810ce9f89a39718533d8a8dd914ac18c09acded17eb640f6855f42d
+    SHA256: 2f1550d78810ce9f89a39718533d8a8dd914ac18c09acded17eb640f6855f42d
   - Path: ffmpeg64/BINARY_LICENSE.txt
-    Sha256: bd9f363c5ea11ef723d0304cddacb5273c43c0e1194097c7a045d05273635418
+    SHA256: bd9f363c5ea11ef723d0304cddacb5273c43c0e1194097c7a045d05273635418
     Install:
       TargetPath: ffmpeg64/BINARY_LICENSE.txt
   - Path: ffmpeg64/FFMPEG_LICENSE.txt
-    Sha256: da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768
+    SHA256: da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768
     Install:
       TargetPath: ffmpeg64/FFMPEG_LICENSE.txt
   - Path: ffmpeg64/bin/avcodec-60.dll
-    Sha256: d6ec4711cc8e18ebe0be9b33f17823fd1d6a8ead7b23e235a19db254caa64120
+    SHA256: d6ec4711cc8e18ebe0be9b33f17823fd1d6a8ead7b23e235a19db254caa64120
     Install:
       TargetPath: ffmpeg64/bin/avcodec-60.dll
   - Path: ffmpeg64/bin/avdevice-60.dll
-    Sha256: 3cd45174c4624e456f898ed1604cfbfaa7856e94e67c2d8336228b09d08858f1
+    SHA256: 3cd45174c4624e456f898ed1604cfbfaa7856e94e67c2d8336228b09d08858f1
     Install:
       TargetPath: ffmpeg64/bin/avdevice-60.dll
   - Path: ffmpeg64/bin/avfilter-9.dll
-    Sha256: f047820f0bcececb082fb6dc9c06e7da0ac23758c9d680606bd97064791a590c
+    SHA256: f047820f0bcececb082fb6dc9c06e7da0ac23758c9d680606bd97064791a590c
     Install:
       TargetPath: ffmpeg64/bin/avfilter-9.dll
   - Path: ffmpeg64/bin/avformat-60.dll
-    Sha256: 9fba9c69a58a9438dd28f3062b1046bcdfa76ff47b5c126699941f9a8a6fbec7
+    SHA256: 9fba9c69a58a9438dd28f3062b1046bcdfa76ff47b5c126699941f9a8a6fbec7
     Install:
       TargetPath: ffmpeg64/bin/avformat-60.dll
   - Path: ffmpeg64/bin/avutil-58.dll
-    Sha256: e2a0d79affcafc3f7605853be64a2979ecdaafcc2e1519bc9b0ad231e64ebc25
+    SHA256: e2a0d79affcafc3f7605853be64a2979ecdaafcc2e1519bc9b0ad231e64ebc25
     Install:
       TargetPath: ffmpeg64/bin/avutil-58.dll
   - Path: ffmpeg64/bin/ffmpeg.exe
-    Sha256: 53e50f54ee60082c93784df3c0203004eee344ff8c2f1fa423307d41e66516f6
+    SHA256: 53e50f54ee60082c93784df3c0203004eee344ff8c2f1fa423307d41e66516f6
     Install:
       TargetPath: ffmpeg64/bin/ffmpeg.exe
       Method: Copy
   - Path: ffmpeg64/bin/ffplay.exe
-    Sha256: 1241e2a9878f968113a90844db218991819e3d693a3c26e964c63464488260a1
+    SHA256: 1241e2a9878f968113a90844db218991819e3d693a3c26e964c63464488260a1
     Install:
       TargetPath: ffmpeg64/bin/ffplay.exe
       Method: Copy
   - Path: ffmpeg64/bin/ffprobe.exe
-    Sha256: dc7c32de914a46afe6b377273428410bb54fa35d0603e8befb842088957f7df7
+    SHA256: dc7c32de914a46afe6b377273428410bb54fa35d0603e8befb842088957f7df7
     Install:
       TargetPath: ffmpeg64/bin/ffprobe.exe
       Method: Copy
   - Path: ffmpeg64/bin/openh264-2.3.1-win64.dll
-    Sha256: c733d1fe250e4bc05b1265a5fa206289c5f1f4ddc4f03a4e6455ae934b6b5d31
+    SHA256: c733d1fe250e4bc05b1265a5fa206289c5f1f4ddc4f03a4e6455ae934b6b5d31
     Install:
       TargetPath: ffmpeg64/bin/openh264-2.3.1-win64.dll
   - Path: ffmpeg64/bin/swresample-4.dll
-    Sha256: f2697e978ccd81779bdcd76cc4b80e2056f4ffe1036d436323a5bd93c8cd35ee
+    SHA256: f2697e978ccd81779bdcd76cc4b80e2056f4ffe1036d436323a5bd93c8cd35ee
     Install:
       TargetPath: ffmpeg64/bin/swresample-4.dll
   - Path: ffmpeg64/bin/swscale-7.dll
-    Sha256: e79f8371484083bf8c55f49bec844377eeb679eea9d84cf8e5ac56a27e760e81
+    SHA256: e79f8371484083bf8c55f49bec844377eeb679eea9d84cf8e5ac56a27e760e81
     Install:
       TargetPath: ffmpeg64/bin/swscale-7.dll
   - Path: ffmpeg64/doc/bootstrap.min.css
-    Sha256: 63488969057ba45c66a01d4c8075c1ae64f34efc4b9f5314cd620ea694823261
+    SHA256: 63488969057ba45c66a01d4c8075c1ae64f34efc4b9f5314cd620ea694823261
     Install:
       TargetPath: ffmpeg64/doc/bootstrap.min.css
   - Path: ffmpeg64/doc/default.css
-    Sha256: 504c4a0980e6ec809da02ce16b73151622a2fdfb4409098c7ce96c1cac9b3735
+    SHA256: 504c4a0980e6ec809da02ce16b73151622a2fdfb4409098c7ce96c1cac9b3735
     Install:
       TargetPath: ffmpeg64/doc/default.css
   - Path: ffmpeg64/doc/developer.html
-    Sha256: ca73d6d31fe606370991fde9e7db47c8e98ec457f0f455507369bb6044664fb2
+    SHA256: ca73d6d31fe606370991fde9e7db47c8e98ec457f0f455507369bb6044664fb2
     Install:
       TargetPath: ffmpeg64/doc/developer.html
   - Path: ffmpeg64/doc/faq.html
-    Sha256: 9cf3ca681182743d0d87f0d9274cb9199fd58fcf11e3e3c5d6393b7ddad5032e
+    SHA256: 9cf3ca681182743d0d87f0d9274cb9199fd58fcf11e3e3c5d6393b7ddad5032e
     Install:
       TargetPath: ffmpeg64/doc/faq.html
   - Path: ffmpeg64/doc/fate.html
-    Sha256: f191b56d19a1eff78939373585452db73874dafdec6c00b4bb45bed776332a96
+    SHA256: f191b56d19a1eff78939373585452db73874dafdec6c00b4bb45bed776332a96
     Install:
       TargetPath: ffmpeg64/doc/fate.html
   - Path: ffmpeg64/doc/ffmpeg-all.html
-    Sha256: b6af8f1ba4c6e373ca224ec386d7d3b30c0749b775c769c4381c3f8e55318262
+    SHA256: b6af8f1ba4c6e373ca224ec386d7d3b30c0749b775c769c4381c3f8e55318262
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-all.html
   - Path: ffmpeg64/doc/ffmpeg-bitstream-filters.html
-    Sha256: 1ffb5e853c824b7229ed586bc448af23cf4e2d29f6fc7b992f83bffa8b1cd32a
+    SHA256: 1ffb5e853c824b7229ed586bc448af23cf4e2d29f6fc7b992f83bffa8b1cd32a
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-bitstream-filters.html
   - Path: ffmpeg64/doc/ffmpeg-codecs.html
-    Sha256: 8df4b850f0604390b4916056198cb1b26223b3d8f11c8f1bb7f805815bf7ebd7
+    SHA256: 8df4b850f0604390b4916056198cb1b26223b3d8f11c8f1bb7f805815bf7ebd7
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-codecs.html
   - Path: ffmpeg64/doc/ffmpeg-devices.html
-    Sha256: 3fa72c9957cd5e15edb05198b783533c487cb64c6d501d9279632e57e919ad80
+    SHA256: 3fa72c9957cd5e15edb05198b783533c487cb64c6d501d9279632e57e919ad80
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-devices.html
   - Path: ffmpeg64/doc/ffmpeg-filters.html
-    Sha256: 3b65051c5947d6f72a8637f0ed691060d45c0ffd55091fd27eaadb611f2a95a1
+    SHA256: 3b65051c5947d6f72a8637f0ed691060d45c0ffd55091fd27eaadb611f2a95a1
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-filters.html
   - Path: ffmpeg64/doc/ffmpeg-formats.html
-    Sha256: 3c8cd09aef13fab6ceae5152537ed663d93fe9ecc1853601247eb2bb748091a2
+    SHA256: 3c8cd09aef13fab6ceae5152537ed663d93fe9ecc1853601247eb2bb748091a2
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-formats.html
   - Path: ffmpeg64/doc/ffmpeg-protocols.html
-    Sha256: b4213358f0651bb7f8de773a908d91787715d2c443d60695918dd88bb2556bf7
+    SHA256: b4213358f0651bb7f8de773a908d91787715d2c443d60695918dd88bb2556bf7
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-protocols.html
   - Path: ffmpeg64/doc/ffmpeg-resampler.html
-    Sha256: 427a4e4bef1f628d766c84148052bc0667ad4628eee82248e410b9399d3059a2
+    SHA256: 427a4e4bef1f628d766c84148052bc0667ad4628eee82248e410b9399d3059a2
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-resampler.html
   - Path: ffmpeg64/doc/ffmpeg-scaler.html
-    Sha256: 5c299e65e6b432069174f21901acf7f08be635a427e51547f2b6efc134502725
+    SHA256: 5c299e65e6b432069174f21901acf7f08be635a427e51547f2b6efc134502725
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-scaler.html
   - Path: ffmpeg64/doc/ffmpeg-utils.html
-    Sha256: b72f0ed98f4fedf16f55f5fced428048c0debfa6dfec1382b4256ba597815569
+    SHA256: b72f0ed98f4fedf16f55f5fced428048c0debfa6dfec1382b4256ba597815569
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg-utils.html
   - Path: ffmpeg64/doc/ffmpeg.html
-    Sha256: 4b370e2d8179de376299523645189ad3177bc11a35eaabe65b5cd16877113a6b
+    SHA256: 4b370e2d8179de376299523645189ad3177bc11a35eaabe65b5cd16877113a6b
     Install:
       TargetPath: ffmpeg64/doc/ffmpeg.html
   - Path: ffmpeg64/doc/ffplay-all.html
-    Sha256: 846de5e4a69d498630c9c171bc3a7f2f00e80f2190a70dba9e60d609342dc3f9
+    SHA256: 846de5e4a69d498630c9c171bc3a7f2f00e80f2190a70dba9e60d609342dc3f9
     Install:
       TargetPath: ffmpeg64/doc/ffplay-all.html
   - Path: ffmpeg64/doc/ffplay.html
-    Sha256: a36283b1fa6e5cc951df5cb28f64ffedd88e9bc3de69532b19a044eac34be1a5
+    SHA256: a36283b1fa6e5cc951df5cb28f64ffedd88e9bc3de69532b19a044eac34be1a5
     Install:
       TargetPath: ffmpeg64/doc/ffplay.html
   - Path: ffmpeg64/doc/ffprobe-all.html
-    Sha256: e58decd2db9ca5afb2ed23eba29e73f2c34c0aa953cf34966fb1a1ca537b29e4
+    SHA256: e58decd2db9ca5afb2ed23eba29e73f2c34c0aa953cf34966fb1a1ca537b29e4
     Install:
       TargetPath: ffmpeg64/doc/ffprobe-all.html
   - Path: ffmpeg64/doc/ffprobe.html
-    Sha256: e90e059aec255411bf4987af9119c5d6e6b72f862f14ff839c82313358c8c928
+    SHA256: e90e059aec255411bf4987af9119c5d6e6b72f862f14ff839c82313358c8c928
     Install:
       TargetPath: ffmpeg64/doc/ffprobe.html
   - Path: ffmpeg64/doc/general.html
-    Sha256: 0ff59052251d37db49496454faaf7d6c38c78282a9b6a9d69e7c78b9959911ff
+    SHA256: 0ff59052251d37db49496454faaf7d6c38c78282a9b6a9d69e7c78b9959911ff
     Install:
       TargetPath: ffmpeg64/doc/general.html
   - Path: ffmpeg64/doc/git-howto.html
-    Sha256: 4575913cd09ddf65c885779a5308bf6f6d74a6eb2136032fd00d287c6a40ca4e
+    SHA256: 4575913cd09ddf65c885779a5308bf6f6d74a6eb2136032fd00d287c6a40ca4e
     Install:
       TargetPath: ffmpeg64/doc/git-howto.html
   - Path: ffmpeg64/doc/libavcodec.html
-    Sha256: 351e68319971d884a7d30381ee97fbffccd2555b629c997f11cf5f1e89a19806
+    SHA256: 351e68319971d884a7d30381ee97fbffccd2555b629c997f11cf5f1e89a19806
     Install:
       TargetPath: ffmpeg64/doc/libavcodec.html
   - Path: ffmpeg64/doc/libavdevice.html
-    Sha256: 3181f36bd2a1440382ddc933731da8091e00f2b284fba7ff236355abe81fcd74
+    SHA256: 3181f36bd2a1440382ddc933731da8091e00f2b284fba7ff236355abe81fcd74
     Install:
       TargetPath: ffmpeg64/doc/libavdevice.html
   - Path: ffmpeg64/doc/libavfilter.html
-    Sha256: 23ba90f88ba8dab3627426ec0be2317cd507c8c8508c7c671cdd8a5cf68cd2f3
+    SHA256: 23ba90f88ba8dab3627426ec0be2317cd507c8c8508c7c671cdd8a5cf68cd2f3
     Install:
       TargetPath: ffmpeg64/doc/libavfilter.html
   - Path: ffmpeg64/doc/libavformat.html
-    Sha256: b28f0336f9c8cd37dad13f5e775ab592dd4e294aa737804b12910b90c6117ce3
+    SHA256: b28f0336f9c8cd37dad13f5e775ab592dd4e294aa737804b12910b90c6117ce3
     Install:
       TargetPath: ffmpeg64/doc/libavformat.html
   - Path: ffmpeg64/doc/libavutil.html
-    Sha256: c43fcce0e4be90cc3c2847dcd2f7ca4fe84565fcd5507407ed8cafc641b4eb78
+    SHA256: c43fcce0e4be90cc3c2847dcd2f7ca4fe84565fcd5507407ed8cafc641b4eb78
     Install:
       TargetPath: ffmpeg64/doc/libavutil.html
   - Path: ffmpeg64/doc/libswresample.html
-    Sha256: e6233e9350a602c6c185704c7f9596351cd5892e9268c17383cc2576013656c8
+    SHA256: e6233e9350a602c6c185704c7f9596351cd5892e9268c17383cc2576013656c8
     Install:
       TargetPath: ffmpeg64/doc/libswresample.html
   - Path: ffmpeg64/doc/libswscale.html
-    Sha256: 918dbde08accffc828a632b04313e86976a2d88d1d359603464a3a0d4a843af2
+    SHA256: 918dbde08accffc828a632b04313e86976a2d88d1d359603464a3a0d4a843af2
     Install:
       TargetPath: ffmpeg64/doc/libswscale.html
   - Path: ffmpeg64/doc/mailing-list-faq.html
-    Sha256: 31a44f931e90b49daec32fc17a06114371f09b2eb0ab100dff41040d10a29e5e
+    SHA256: 31a44f931e90b49daec32fc17a06114371f09b2eb0ab100dff41040d10a29e5e
     Install:
       TargetPath: ffmpeg64/doc/mailing-list-faq.html
   - Path: ffmpeg64/doc/nut.html
-    Sha256: 6821cbe50c251cc8b7bbccf952a78918a86a33c5b42b40ef2badca3d3ac35af3
+    SHA256: 6821cbe50c251cc8b7bbccf952a78918a86a33c5b42b40ef2badca3d3ac35af3
     Install:
       TargetPath: ffmpeg64/doc/nut.html
   - Path: ffmpeg64/doc/platform.html
-    Sha256: da2ff20e71f6f91fe9444b3e746dba98ea449ebd808d50ce693c0072c4de8cb2
+    SHA256: da2ff20e71f6f91fe9444b3e746dba98ea449ebd808d50ce693c0072c4de8cb2
     Install:
       TargetPath: ffmpeg64/doc/platform.html
   - Path: ffmpeg64/doc/style.min.css
-    Sha256: ff0e6067f2e9f51fea166032508a4ed3e1a0cb9e9f7da4038a7b08467e10c1b7
+    SHA256: ff0e6067f2e9f51fea166032508a4ed3e1a0cb9e9f7da4038a7b08467e10c1b7
     Install:
       TargetPath: ffmpeg64/doc/style.min.css
   - Path: ffmpeg64/include/libavcodec/ac3_parser.h
-    Sha256: 200c6d2e96975196e8ba5f5716223dc9dda999d51578dabce2fca93175a05252
+    SHA256: 200c6d2e96975196e8ba5f5716223dc9dda999d51578dabce2fca93175a05252
     Install:
       TargetPath: ffmpeg64/include/libavcodec/ac3_parser.h
   - Path: ffmpeg64/include/libavcodec/adts_parser.h
-    Sha256: d466583a8dc1260b015e588adbe3abd45f3f8ca0e43722f3088b472e80492a15
+    SHA256: d466583a8dc1260b015e588adbe3abd45f3f8ca0e43722f3088b472e80492a15
     Install:
       TargetPath: ffmpeg64/include/libavcodec/adts_parser.h
   - Path: ffmpeg64/include/libavcodec/avcodec.h
-    Sha256: be87a96c42d74bbc48dd269c81dcdb5df937bbce7309c57d4685ba5e47677add
+    SHA256: be87a96c42d74bbc48dd269c81dcdb5df937bbce7309c57d4685ba5e47677add
     Install:
       TargetPath: ffmpeg64/include/libavcodec/avcodec.h
   - Path: ffmpeg64/include/libavcodec/avdct.h
-    Sha256: 7c125edc1985ec078f99abb1c9044c4fc76b06a03eb02c026cb968fb9d41fcca
+    SHA256: 7c125edc1985ec078f99abb1c9044c4fc76b06a03eb02c026cb968fb9d41fcca
     Install:
       TargetPath: ffmpeg64/include/libavcodec/avdct.h
   - Path: ffmpeg64/include/libavcodec/avfft.h
-    Sha256: a0918d3d682f40bd65bbdc60ad0cdca08675a0067cd3e92581342b045fb0cc78
+    SHA256: a0918d3d682f40bd65bbdc60ad0cdca08675a0067cd3e92581342b045fb0cc78
     Install:
       TargetPath: ffmpeg64/include/libavcodec/avfft.h
   - Path: ffmpeg64/include/libavcodec/bsf.h
-    Sha256: cc26676aa44638fa5cbef953d967e19e2084b46aaa100f0a35ba2d34b302301c
+    SHA256: cc26676aa44638fa5cbef953d967e19e2084b46aaa100f0a35ba2d34b302301c
     Install:
       TargetPath: ffmpeg64/include/libavcodec/bsf.h
   - Path: ffmpeg64/include/libavcodec/codec_desc.h
-    Sha256: 30027aa432ae4ec3c10805850c9ba6880cf78b0e6c7f4e9198f6844481f3338b
+    SHA256: 30027aa432ae4ec3c10805850c9ba6880cf78b0e6c7f4e9198f6844481f3338b
     Install:
       TargetPath: ffmpeg64/include/libavcodec/codec_desc.h
   - Path: ffmpeg64/include/libavcodec/codec_id.h
-    Sha256: c37091244e4fc0f298b462b819074432fd6f1d09a25a208d8b2d47b0d84a7808
+    SHA256: c37091244e4fc0f298b462b819074432fd6f1d09a25a208d8b2d47b0d84a7808
     Install:
       TargetPath: ffmpeg64/include/libavcodec/codec_id.h
   - Path: ffmpeg64/include/libavcodec/codec_par.h
-    Sha256: 72b6eb8429ef0777e13c1b3ee5c04a4a7b900f9af3884f33f567395e0473bcc6
+    SHA256: 72b6eb8429ef0777e13c1b3ee5c04a4a7b900f9af3884f33f567395e0473bcc6
     Install:
       TargetPath: ffmpeg64/include/libavcodec/codec_par.h
   - Path: ffmpeg64/include/libavcodec/codec.h
-    Sha256: c2d88a688c0b5af049102da37c3927b8525caf346d24d316966f1252b1a55390
+    SHA256: c2d88a688c0b5af049102da37c3927b8525caf346d24d316966f1252b1a55390
     Install:
       TargetPath: ffmpeg64/include/libavcodec/codec.h
   - Path: ffmpeg64/include/libavcodec/d3d11va.h
-    Sha256: 74a55a2e3f19ce797e99624a224302f25efa89a115b9bf2e932c8fa179b0cc66
+    SHA256: 74a55a2e3f19ce797e99624a224302f25efa89a115b9bf2e932c8fa179b0cc66
     Install:
       TargetPath: ffmpeg64/include/libavcodec/d3d11va.h
   - Path: ffmpeg64/include/libavcodec/defs.h
-    Sha256: 282ffd9ec176834681dceb87cb05da0f4217c072ea3e8770ff7f3b6106bf3f54
+    SHA256: 282ffd9ec176834681dceb87cb05da0f4217c072ea3e8770ff7f3b6106bf3f54
     Install:
       TargetPath: ffmpeg64/include/libavcodec/defs.h
   - Path: ffmpeg64/include/libavcodec/dirac.h
-    Sha256: b248987f650dd7a110c942ad67351dc920e115248c54532b29381c4c64be9905
+    SHA256: b248987f650dd7a110c942ad67351dc920e115248c54532b29381c4c64be9905
     Install:
       TargetPath: ffmpeg64/include/libavcodec/dirac.h
   - Path: ffmpeg64/include/libavcodec/dv_profile.h
-    Sha256: 19f59e0b20ac583de4bfd76d18889d334bf0b6cdf7b5356723a33f3874738466
+    SHA256: 19f59e0b20ac583de4bfd76d18889d334bf0b6cdf7b5356723a33f3874738466
     Install:
       TargetPath: ffmpeg64/include/libavcodec/dv_profile.h
   - Path: ffmpeg64/include/libavcodec/dxva2.h
-    Sha256: e69dc45a7d5a9206b3bfead10caf3117117005cd532c4fc599d9976637c1b9e3
+    SHA256: e69dc45a7d5a9206b3bfead10caf3117117005cd532c4fc599d9976637c1b9e3
     Install:
       TargetPath: ffmpeg64/include/libavcodec/dxva2.h
   - Path: ffmpeg64/include/libavcodec/jni.h
-    Sha256: 18ca8eae5bce081b4eef1b1f61a62aefed1d4e6e3cde41487c81fb96ee709e51
+    SHA256: 18ca8eae5bce081b4eef1b1f61a62aefed1d4e6e3cde41487c81fb96ee709e51
     Install:
       TargetPath: ffmpeg64/include/libavcodec/jni.h
   - Path: ffmpeg64/include/libavcodec/mediacodec.h
-    Sha256: 1f64544000dd2f2ec94604d5fcf7c2a6d26d32d085264356084a4b53a7f0c3f0
+    SHA256: 1f64544000dd2f2ec94604d5fcf7c2a6d26d32d085264356084a4b53a7f0c3f0
     Install:
       TargetPath: ffmpeg64/include/libavcodec/mediacodec.h
   - Path: ffmpeg64/include/libavcodec/packet.h
-    Sha256: ae11641b3ea890b6fa374b8766b38174bf5d8b163e2d0851cfedb7ca64551066
+    SHA256: ae11641b3ea890b6fa374b8766b38174bf5d8b163e2d0851cfedb7ca64551066
     Install:
       TargetPath: ffmpeg64/include/libavcodec/packet.h
   - Path: ffmpeg64/include/libavcodec/qsv.h
-    Sha256: e45780237ab0e9ea9ec11aab9f62dfb8b059138f846632ecacdc024db16dfb1b
+    SHA256: e45780237ab0e9ea9ec11aab9f62dfb8b059138f846632ecacdc024db16dfb1b
     Install:
       TargetPath: ffmpeg64/include/libavcodec/qsv.h
   - Path: ffmpeg64/include/libavcodec/vdpau.h
-    Sha256: 3e0c963348495936556724cfb4d2d35eb4c14007ba72d51be94dd26c83d93fb8
+    SHA256: 3e0c963348495936556724cfb4d2d35eb4c14007ba72d51be94dd26c83d93fb8
     Install:
       TargetPath: ffmpeg64/include/libavcodec/vdpau.h
   - Path: ffmpeg64/include/libavcodec/version_major.h
-    Sha256: d81d61f31f96021b6cf666c36b618b675e05b761d457d00337c3d22f76e79e8b
+    SHA256: d81d61f31f96021b6cf666c36b618b675e05b761d457d00337c3d22f76e79e8b
     Install:
       TargetPath: ffmpeg64/include/libavcodec/version_major.h
   - Path: ffmpeg64/include/libavcodec/version.h
-    Sha256: 7b0da66aa9b24c14598f34566fa3dc5090f8ead27d37aff9a44b3f0696958128
+    SHA256: 7b0da66aa9b24c14598f34566fa3dc5090f8ead27d37aff9a44b3f0696958128
     Install:
       TargetPath: ffmpeg64/include/libavcodec/version.h
   - Path: ffmpeg64/include/libavcodec/videotoolbox.h
-    Sha256: 19b6ba05f4e9f600044f45f1a5dc04d0da9276dc9a1cb5b07826df5cab5012c9
+    SHA256: 19b6ba05f4e9f600044f45f1a5dc04d0da9276dc9a1cb5b07826df5cab5012c9
     Install:
       TargetPath: ffmpeg64/include/libavcodec/videotoolbox.h
   - Path: ffmpeg64/include/libavcodec/vorbis_parser.h
-    Sha256: 57077b2e1d28d42636cab0f69e4b92b1ad64ac2eaa2843c270a6afaf308a76ae
+    SHA256: 57077b2e1d28d42636cab0f69e4b92b1ad64ac2eaa2843c270a6afaf308a76ae
     Install:
       TargetPath: ffmpeg64/include/libavcodec/vorbis_parser.h
   - Path: ffmpeg64/include/libavcodec/xvmc.h
-    Sha256: ca59c5caaaa32368f7c84c714bbf2ad1cba61ec9ca5b5cb1a14cf6975affe8a2
+    SHA256: ca59c5caaaa32368f7c84c714bbf2ad1cba61ec9ca5b5cb1a14cf6975affe8a2
     Install:
       TargetPath: ffmpeg64/include/libavcodec/xvmc.h
   - Path: ffmpeg64/include/libavdevice/avdevice.h
-    Sha256: 017157246e4e2a4a6ae8d23b57ad93621f201ac7a39ec8b4e2e04663f2b87ee3
+    SHA256: 017157246e4e2a4a6ae8d23b57ad93621f201ac7a39ec8b4e2e04663f2b87ee3
     Install:
       TargetPath: ffmpeg64/include/libavdevice/avdevice.h
   - Path: ffmpeg64/include/libavdevice/version_major.h
-    Sha256: 25d79351aef3b18efcd5d42667c663bbb82cac5175408b1f7639ba7e157d6dfa
+    SHA256: 25d79351aef3b18efcd5d42667c663bbb82cac5175408b1f7639ba7e157d6dfa
     Install:
       TargetPath: ffmpeg64/include/libavdevice/version_major.h
   - Path: ffmpeg64/include/libavdevice/version.h
-    Sha256: 8e58aa03551c966dfe9c0b98b26e7dba02131c2285c11f63d867724556a07a04
+    SHA256: 8e58aa03551c966dfe9c0b98b26e7dba02131c2285c11f63d867724556a07a04
     Install:
       TargetPath: ffmpeg64/include/libavdevice/version.h
   - Path: ffmpeg64/include/libavfilter/avfilter.h
-    Sha256: 31d936f25cc3a0f7da220fd43c9e3c4f7faf0353b6254948bc1445fe4deb52a7
+    SHA256: 31d936f25cc3a0f7da220fd43c9e3c4f7faf0353b6254948bc1445fe4deb52a7
     Install:
       TargetPath: ffmpeg64/include/libavfilter/avfilter.h
   - Path: ffmpeg64/include/libavfilter/buffersink.h
-    Sha256: adcc94eb05391b6f008e6a8c790712b4b3bda5fc31e39f16dea21a2ce4f4cce5
+    SHA256: adcc94eb05391b6f008e6a8c790712b4b3bda5fc31e39f16dea21a2ce4f4cce5
     Install:
       TargetPath: ffmpeg64/include/libavfilter/buffersink.h
   - Path: ffmpeg64/include/libavfilter/buffersrc.h
-    Sha256: 626c9b2c8b391334cf6f5c9a20988a8c2d271d7e8443a12c68c51cc751c92f2a
+    SHA256: 626c9b2c8b391334cf6f5c9a20988a8c2d271d7e8443a12c68c51cc751c92f2a
     Install:
       TargetPath: ffmpeg64/include/libavfilter/buffersrc.h
   - Path: ffmpeg64/include/libavfilter/version_major.h
-    Sha256: c529e995597975a35e941e8d78e082d581d8662b66cdd1efd6210cc0d15d2511
+    SHA256: c529e995597975a35e941e8d78e082d581d8662b66cdd1efd6210cc0d15d2511
     Install:
       TargetPath: ffmpeg64/include/libavfilter/version_major.h
   - Path: ffmpeg64/include/libavfilter/version.h
-    Sha256: b2a427ae3f35dd70a7c62e309bedcc8289cbc803f96955db0cf926a2fd6ef96c
+    SHA256: b2a427ae3f35dd70a7c62e309bedcc8289cbc803f96955db0cf926a2fd6ef96c
     Install:
       TargetPath: ffmpeg64/include/libavfilter/version.h
   - Path: ffmpeg64/include/libavformat/avformat.h
-    Sha256: 554860930041a6d6a05fc73b442487f69c37f4ff171c01c1f3f8fc2beb8bc3a4
+    SHA256: 554860930041a6d6a05fc73b442487f69c37f4ff171c01c1f3f8fc2beb8bc3a4
     Install:
       TargetPath: ffmpeg64/include/libavformat/avformat.h
   - Path: ffmpeg64/include/libavformat/avio.h
-    Sha256: 460034c4cbeb49d76bb448418c49cf2bd606fb0b071ae66998b9f851387ae3a4
+    SHA256: 460034c4cbeb49d76bb448418c49cf2bd606fb0b071ae66998b9f851387ae3a4
     Install:
       TargetPath: ffmpeg64/include/libavformat/avio.h
   - Path: ffmpeg64/include/libavformat/version_major.h
-    Sha256: 65309f98107d201013288bd2f8feddbf7e78cdbcc3ef183d8f87562d1d89d6fc
+    SHA256: 65309f98107d201013288bd2f8feddbf7e78cdbcc3ef183d8f87562d1d89d6fc
     Install:
       TargetPath: ffmpeg64/include/libavformat/version_major.h
   - Path: ffmpeg64/include/libavformat/version.h
-    Sha256: 70fc05235520c8ef1adcef496a4ceeb02265bf919697c9bd9b36bd0c481fa6cc
+    SHA256: 70fc05235520c8ef1adcef496a4ceeb02265bf919697c9bd9b36bd0c481fa6cc
     Install:
       TargetPath: ffmpeg64/include/libavformat/version.h
   - Path: ffmpeg64/include/libavutil/adler32.h
-    Sha256: f21a861957bf4b1812ed67fdc528890f9cff1bb483facf0f5109e4a51932fe3b
+    SHA256: f21a861957bf4b1812ed67fdc528890f9cff1bb483facf0f5109e4a51932fe3b
     Install:
       TargetPath: ffmpeg64/include/libavutil/adler32.h
   - Path: ffmpeg64/include/libavutil/aes_ctr.h
-    Sha256: fbbb94888bfab2ea7141e7e1afa5872de099e7ee57baea17632c3d4fdd2cba3f
+    SHA256: fbbb94888bfab2ea7141e7e1afa5872de099e7ee57baea17632c3d4fdd2cba3f
     Install:
       TargetPath: ffmpeg64/include/libavutil/aes_ctr.h
   - Path: ffmpeg64/include/libavutil/aes.h
-    Sha256: 0a86ebeaf9ed33548bf0f92359f7047e521d4d80fe6b0ef1c8ef9505e38b6d28
+    SHA256: 0a86ebeaf9ed33548bf0f92359f7047e521d4d80fe6b0ef1c8ef9505e38b6d28
     Install:
       TargetPath: ffmpeg64/include/libavutil/aes.h
   - Path: ffmpeg64/include/libavutil/ambient_viewing_environment.h
-    Sha256: 00135de08089f8c711bb113588f80575a1d26e86d50b6dac5928a27a0ff9a8c7
+    SHA256: 00135de08089f8c711bb113588f80575a1d26e86d50b6dac5928a27a0ff9a8c7
     Install:
       TargetPath: ffmpeg64/include/libavutil/ambient_viewing_environment.h
   - Path: ffmpeg64/include/libavutil/attributes.h
-    Sha256: 1f51258ba39861e08cbc8d407ec37a8d0fd28669aa7306c1365cb9c675fa1d76
+    SHA256: 1f51258ba39861e08cbc8d407ec37a8d0fd28669aa7306c1365cb9c675fa1d76
     Install:
       TargetPath: ffmpeg64/include/libavutil/attributes.h
   - Path: ffmpeg64/include/libavutil/audio_fifo.h
-    Sha256: e723c059211ba6aec3d9214765725a3b32337f812c1fa7cc0b7e524b6f773202
+    SHA256: e723c059211ba6aec3d9214765725a3b32337f812c1fa7cc0b7e524b6f773202
     Install:
       TargetPath: ffmpeg64/include/libavutil/audio_fifo.h
   - Path: ffmpeg64/include/libavutil/avassert.h
-    Sha256: d4cc7f0396a27414d815c7cf2985b022cf54d6cde81418ad3a7705eebb7314ea
+    SHA256: d4cc7f0396a27414d815c7cf2985b022cf54d6cde81418ad3a7705eebb7314ea
     Install:
       TargetPath: ffmpeg64/include/libavutil/avassert.h
   - Path: ffmpeg64/include/libavutil/avconfig.h
-    Sha256: 975611ad5eba15212d9e1d5fca9d4fdf0daec6d2269b2fcab8e29af8667164bc
+    SHA256: 975611ad5eba15212d9e1d5fca9d4fdf0daec6d2269b2fcab8e29af8667164bc
     Install:
       TargetPath: ffmpeg64/include/libavutil/avconfig.h
   - Path: ffmpeg64/include/libavutil/avstring.h
-    Sha256: 906e15dc616b977c15a66aa8b78cba5d39bd51e0c40fcaf69dfedc3de0b31be4
+    SHA256: 906e15dc616b977c15a66aa8b78cba5d39bd51e0c40fcaf69dfedc3de0b31be4
     Install:
       TargetPath: ffmpeg64/include/libavutil/avstring.h
   - Path: ffmpeg64/include/libavutil/avutil.h
-    Sha256: 7bbc57c1f813e88761a2ac06aef839fac21e326d195e346d7e9997d0e20de214
+    SHA256: 7bbc57c1f813e88761a2ac06aef839fac21e326d195e346d7e9997d0e20de214
     Install:
       TargetPath: ffmpeg64/include/libavutil/avutil.h
   - Path: ffmpeg64/include/libavutil/base64.h
-    Sha256: 81ac13d23f3744fe85ea2651ce903e201cd55fc63fcdd899d2cfe5560d50ef3d
+    SHA256: 81ac13d23f3744fe85ea2651ce903e201cd55fc63fcdd899d2cfe5560d50ef3d
     Install:
       TargetPath: ffmpeg64/include/libavutil/base64.h
   - Path: ffmpeg64/include/libavutil/blowfish.h
-    Sha256: b955a63c60c8b3be0203ec6c3973f9084d848cf884fe56cd56088301aeef7992
+    SHA256: b955a63c60c8b3be0203ec6c3973f9084d848cf884fe56cd56088301aeef7992
     Install:
       TargetPath: ffmpeg64/include/libavutil/blowfish.h
   - Path: ffmpeg64/include/libavutil/bprint.h
-    Sha256: 862d8b47ddd9938eea87e0a1e3d8af71ec84f1c6ee78d5309e6363046d43c3fa
+    SHA256: 862d8b47ddd9938eea87e0a1e3d8af71ec84f1c6ee78d5309e6363046d43c3fa
     Install:
       TargetPath: ffmpeg64/include/libavutil/bprint.h
   - Path: ffmpeg64/include/libavutil/bswap.h
-    Sha256: 855e138f6d8c7947553b1c63a7bab06bcb71362f03c72b761fd9ed61820d71aa
+    SHA256: 855e138f6d8c7947553b1c63a7bab06bcb71362f03c72b761fd9ed61820d71aa
     Install:
       TargetPath: ffmpeg64/include/libavutil/bswap.h
   - Path: ffmpeg64/include/libavutil/buffer.h
-    Sha256: f16742d574216434580573a2b09f56fc5b66b7dda1960d4f02ba59e3269ba548
+    SHA256: f16742d574216434580573a2b09f56fc5b66b7dda1960d4f02ba59e3269ba548
     Install:
       TargetPath: ffmpeg64/include/libavutil/buffer.h
   - Path: ffmpeg64/include/libavutil/camellia.h
-    Sha256: 1db30753e71c73f1937e807850069e8215cdf37a1bc3ff89d3a6370a719c1fde
+    SHA256: 1db30753e71c73f1937e807850069e8215cdf37a1bc3ff89d3a6370a719c1fde
     Install:
       TargetPath: ffmpeg64/include/libavutil/camellia.h
   - Path: ffmpeg64/include/libavutil/cast5.h
-    Sha256: 05b2e13aecaa0adbb470081a689f45baffb8e03a71997c31f37a22ea4e383a60
+    SHA256: 05b2e13aecaa0adbb470081a689f45baffb8e03a71997c31f37a22ea4e383a60
     Install:
       TargetPath: ffmpeg64/include/libavutil/cast5.h
   - Path: ffmpeg64/include/libavutil/channel_layout.h
-    Sha256: 08630665c585a27e98673a4f3e81df11248650fb192bce1eda37c3904f3e14e2
+    SHA256: 08630665c585a27e98673a4f3e81df11248650fb192bce1eda37c3904f3e14e2
     Install:
       TargetPath: ffmpeg64/include/libavutil/channel_layout.h
   - Path: ffmpeg64/include/libavutil/common.h
-    Sha256: 0c61c8420a93c6337023398676e31376d65e9faeeaf15d624720d811260b8654
+    SHA256: 0c61c8420a93c6337023398676e31376d65e9faeeaf15d624720d811260b8654
     Install:
       TargetPath: ffmpeg64/include/libavutil/common.h
   - Path: ffmpeg64/include/libavutil/cpu.h
-    Sha256: ceca9eb645e00b11914d11853816a76aa4df9adb1912dfcb276b24da4fff6d5d
+    SHA256: ceca9eb645e00b11914d11853816a76aa4df9adb1912dfcb276b24da4fff6d5d
     Install:
       TargetPath: ffmpeg64/include/libavutil/cpu.h
   - Path: ffmpeg64/include/libavutil/crc.h
-    Sha256: 5728cf65705a46723ea28b4f6c8361aad82b76a90e859943efe8af0edb79ec86
+    SHA256: 5728cf65705a46723ea28b4f6c8361aad82b76a90e859943efe8af0edb79ec86
     Install:
       TargetPath: ffmpeg64/include/libavutil/crc.h
   - Path: ffmpeg64/include/libavutil/csp.h
-    Sha256: 7969fd662f31cf3180403510a6784a14af60d7f9bf3a569dde84585a696dff09
+    SHA256: 7969fd662f31cf3180403510a6784a14af60d7f9bf3a569dde84585a696dff09
     Install:
       TargetPath: ffmpeg64/include/libavutil/csp.h
   - Path: ffmpeg64/include/libavutil/des.h
-    Sha256: 15ebdda1af65d91c4607a3444c5f749d5e9757ff5d7f4b04213b3194603f74d9
+    SHA256: 15ebdda1af65d91c4607a3444c5f749d5e9757ff5d7f4b04213b3194603f74d9
     Install:
       TargetPath: ffmpeg64/include/libavutil/des.h
   - Path: ffmpeg64/include/libavutil/detection_bbox.h
-    Sha256: 8f5817d77af243a52e905947aa5ae73c218d68dba909040b2f63bd2ca6f93922
+    SHA256: 8f5817d77af243a52e905947aa5ae73c218d68dba909040b2f63bd2ca6f93922
     Install:
       TargetPath: ffmpeg64/include/libavutil/detection_bbox.h
   - Path: ffmpeg64/include/libavutil/dict.h
-    Sha256: c95cba1829e7886e31469f4e058bb9af3c8f215619c7ffddbc2045c9039f0554
+    SHA256: c95cba1829e7886e31469f4e058bb9af3c8f215619c7ffddbc2045c9039f0554
     Install:
       TargetPath: ffmpeg64/include/libavutil/dict.h
   - Path: ffmpeg64/include/libavutil/display.h
-    Sha256: b9c78c80aa9331b945802b6bcd1db4ecc9ec4f9fad41993cc82b880c0dec2576
+    SHA256: b9c78c80aa9331b945802b6bcd1db4ecc9ec4f9fad41993cc82b880c0dec2576
     Install:
       TargetPath: ffmpeg64/include/libavutil/display.h
   - Path: ffmpeg64/include/libavutil/dovi_meta.h
-    Sha256: 3a67a422676c5b6e2dfd59b3e6a8e3f816b0602f5d73332c0b1d8e6b43644077
+    SHA256: 3a67a422676c5b6e2dfd59b3e6a8e3f816b0602f5d73332c0b1d8e6b43644077
     Install:
       TargetPath: ffmpeg64/include/libavutil/dovi_meta.h
   - Path: ffmpeg64/include/libavutil/downmix_info.h
-    Sha256: 2fc23ad8f0750d82fcd6aa3b653998e2ea9721f9d1664df7b6cb80e93d7fa3aa
+    SHA256: 2fc23ad8f0750d82fcd6aa3b653998e2ea9721f9d1664df7b6cb80e93d7fa3aa
     Install:
       TargetPath: ffmpeg64/include/libavutil/downmix_info.h
   - Path: ffmpeg64/include/libavutil/encryption_info.h
-    Sha256: ccc3a4a889b8a3c5aaf37b9fb2407bcdf23a065487c7cba718518a517c463b18
+    SHA256: ccc3a4a889b8a3c5aaf37b9fb2407bcdf23a065487c7cba718518a517c463b18
     Install:
       TargetPath: ffmpeg64/include/libavutil/encryption_info.h
   - Path: ffmpeg64/include/libavutil/error.h
-    Sha256: f90feec75a317e491618e06ce14d19218e5b0257c885155613b704002a9d5bda
+    SHA256: f90feec75a317e491618e06ce14d19218e5b0257c885155613b704002a9d5bda
     Install:
       TargetPath: ffmpeg64/include/libavutil/error.h
   - Path: ffmpeg64/include/libavutil/eval.h
-    Sha256: 5e92af6be91c610c3bcad3a344a2df5e3516153fc89045464447bb0ee44b1f56
+    SHA256: 5e92af6be91c610c3bcad3a344a2df5e3516153fc89045464447bb0ee44b1f56
     Install:
       TargetPath: ffmpeg64/include/libavutil/eval.h
   - Path: ffmpeg64/include/libavutil/ffversion.h
-    Sha256: ed767f48cae76f6f7293b814a7fda32af13b2bb98fc037a7ced548b6b9a26d27
+    SHA256: ed767f48cae76f6f7293b814a7fda32af13b2bb98fc037a7ced548b6b9a26d27
     Install:
       TargetPath: ffmpeg64/include/libavutil/ffversion.h
   - Path: ffmpeg64/include/libavutil/fifo.h
-    Sha256: 6229ec4229c4a200d2ae22e0cdd59ad7ccca69e88dc8d572f1dede39bfd0b8cf
+    SHA256: 6229ec4229c4a200d2ae22e0cdd59ad7ccca69e88dc8d572f1dede39bfd0b8cf
     Install:
       TargetPath: ffmpeg64/include/libavutil/fifo.h
   - Path: ffmpeg64/include/libavutil/file.h
-    Sha256: 9f91c41bc9a14a206bc86c87b9edd7215b5be63b8aade2bda40297dc6752de36
+    SHA256: 9f91c41bc9a14a206bc86c87b9edd7215b5be63b8aade2bda40297dc6752de36
     Install:
       TargetPath: ffmpeg64/include/libavutil/file.h
   - Path: ffmpeg64/include/libavutil/film_grain_params.h
-    Sha256: e1bda2934dce25cb0bb9fa6eaae230cd21aca79428905b66417f74fc8f0fa72a
+    SHA256: e1bda2934dce25cb0bb9fa6eaae230cd21aca79428905b66417f74fc8f0fa72a
     Install:
       TargetPath: ffmpeg64/include/libavutil/film_grain_params.h
   - Path: ffmpeg64/include/libavutil/frame.h
-    Sha256: 36ace074a753794044135cda64545cc6a691a4cfa94905459d02fc8fe1aa4ab3
+    SHA256: 36ace074a753794044135cda64545cc6a691a4cfa94905459d02fc8fe1aa4ab3
     Install:
       TargetPath: ffmpeg64/include/libavutil/frame.h
   - Path: ffmpeg64/include/libavutil/hash.h
-    Sha256: b0896571267220736679eea28c454783795a02a0f1aef008ebe7c40489a75fdd
+    SHA256: b0896571267220736679eea28c454783795a02a0f1aef008ebe7c40489a75fdd
     Install:
       TargetPath: ffmpeg64/include/libavutil/hash.h
   - Path: ffmpeg64/include/libavutil/hdr_dynamic_metadata.h
-    Sha256: 9a6ff1740d7c46575e19ac812615522001d44d47617e0e55e1515f2367dfa10d
+    SHA256: 9a6ff1740d7c46575e19ac812615522001d44d47617e0e55e1515f2367dfa10d
     Install:
       TargetPath: ffmpeg64/include/libavutil/hdr_dynamic_metadata.h
   - Path: ffmpeg64/include/libavutil/hdr_dynamic_vivid_metadata.h
-    Sha256: b2dffda8eeb428fe7a60d8f9060aa23fab418ce2799314b4e723cbadd95e7204
+    SHA256: b2dffda8eeb428fe7a60d8f9060aa23fab418ce2799314b4e723cbadd95e7204
     Install:
       TargetPath: ffmpeg64/include/libavutil/hdr_dynamic_vivid_metadata.h
   - Path: ffmpeg64/include/libavutil/hmac.h
-    Sha256: d14d625a897d6bba0668acdf33dc597bb0050237c5c1a5f7e568fe36822782e7
+    SHA256: d14d625a897d6bba0668acdf33dc597bb0050237c5c1a5f7e568fe36822782e7
     Install:
       TargetPath: ffmpeg64/include/libavutil/hmac.h
   - Path: ffmpeg64/include/libavutil/hwcontext_cuda.h
-    Sha256: 75f30a392dda1d8f43561f436a0fc35cd43264d2f6ab412ae2f98fd1cd738bae
+    SHA256: 75f30a392dda1d8f43561f436a0fc35cd43264d2f6ab412ae2f98fd1cd738bae
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_cuda.h
   - Path: ffmpeg64/include/libavutil/hwcontext_d3d11va.h
-    Sha256: d99c1b5c5dab94c23709d4ce6cf489c2a0b4f4bd57bb04e2196371277dca5af7
+    SHA256: d99c1b5c5dab94c23709d4ce6cf489c2a0b4f4bd57bb04e2196371277dca5af7
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_d3d11va.h
   - Path: ffmpeg64/include/libavutil/hwcontext_drm.h
-    Sha256: b598f37f40cf1342f923c0b97784a6f2830b543868eccee046375e096fbd5f24
+    SHA256: b598f37f40cf1342f923c0b97784a6f2830b543868eccee046375e096fbd5f24
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_drm.h
   - Path: ffmpeg64/include/libavutil/hwcontext_dxva2.h
-    Sha256: 73a0333b65e99675834dcb1b63a5e9339638ccc619f1a2fcba85cdd0e179ade0
+    SHA256: 73a0333b65e99675834dcb1b63a5e9339638ccc619f1a2fcba85cdd0e179ade0
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_dxva2.h
   - Path: ffmpeg64/include/libavutil/hwcontext_mediacodec.h
-    Sha256: 8c602859ebca906ba6e43ea548ff28821cf2886b4500b2be1deaaf2d552496d4
+    SHA256: 8c602859ebca906ba6e43ea548ff28821cf2886b4500b2be1deaaf2d552496d4
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_mediacodec.h
   - Path: ffmpeg64/include/libavutil/hwcontext_opencl.h
-    Sha256: ad521fa2fd015cb1aba962468ca4ac176f5fc6b2c4b7be28f05e1c03d89e1b31
+    SHA256: ad521fa2fd015cb1aba962468ca4ac176f5fc6b2c4b7be28f05e1c03d89e1b31
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_opencl.h
   - Path: ffmpeg64/include/libavutil/hwcontext_qsv.h
-    Sha256: 4986f86340b8162ef2724f0e77a380b5133aaa0612749cfb836c38b4c166d20d
+    SHA256: 4986f86340b8162ef2724f0e77a380b5133aaa0612749cfb836c38b4c166d20d
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_qsv.h
   - Path: ffmpeg64/include/libavutil/hwcontext_vaapi.h
-    Sha256: 6f6c6a5250dd0f901cdc7de8b9b3db26102719b7e056cd17500009096bfd9b39
+    SHA256: 6f6c6a5250dd0f901cdc7de8b9b3db26102719b7e056cd17500009096bfd9b39
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_vaapi.h
   - Path: ffmpeg64/include/libavutil/hwcontext_vdpau.h
-    Sha256: 6c96373d9e5deb2c500004f3f55ee1d2cea0f76cdfaeabaf5a3ad3e4938e8252
+    SHA256: 6c96373d9e5deb2c500004f3f55ee1d2cea0f76cdfaeabaf5a3ad3e4938e8252
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_vdpau.h
   - Path: ffmpeg64/include/libavutil/hwcontext_videotoolbox.h
-    Sha256: 2f74c83778a0df9738abcae823412436cbbeaff8e9083281fb6f38116cb401c2
+    SHA256: 2f74c83778a0df9738abcae823412436cbbeaff8e9083281fb6f38116cb401c2
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_videotoolbox.h
   - Path: ffmpeg64/include/libavutil/hwcontext_vulkan.h
-    Sha256: 1f0ab38ec4f38b4f95f2a78c784bd897c73a53f3829ef9390dfa8201abb27bfc
+    SHA256: 1f0ab38ec4f38b4f95f2a78c784bd897c73a53f3829ef9390dfa8201abb27bfc
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext_vulkan.h
   - Path: ffmpeg64/include/libavutil/hwcontext.h
-    Sha256: e05c09b0a2f51c800aa57dc21277b5b4534e6783ab3df52dbf81c63e37fe8323
+    SHA256: e05c09b0a2f51c800aa57dc21277b5b4534e6783ab3df52dbf81c63e37fe8323
     Install:
       TargetPath: ffmpeg64/include/libavutil/hwcontext.h
   - Path: ffmpeg64/include/libavutil/imgutils.h
-    Sha256: d48aa99b44fd34a199c319658e54f39f8083e6f67489ab7891e081670ae7d73d
+    SHA256: d48aa99b44fd34a199c319658e54f39f8083e6f67489ab7891e081670ae7d73d
     Install:
       TargetPath: ffmpeg64/include/libavutil/imgutils.h
   - Path: ffmpeg64/include/libavutil/intfloat.h
-    Sha256: 3a29e4eebc8c269cfd867b96de91d8231773d392c12a8820e46eaba96d2b4ca1
+    SHA256: 3a29e4eebc8c269cfd867b96de91d8231773d392c12a8820e46eaba96d2b4ca1
     Install:
       TargetPath: ffmpeg64/include/libavutil/intfloat.h
   - Path: ffmpeg64/include/libavutil/intreadwrite.h
-    Sha256: 61f5c70a02b95624756cc191c0c9d1c232219d37c051b4f33d662dfd33233958
+    SHA256: 61f5c70a02b95624756cc191c0c9d1c232219d37c051b4f33d662dfd33233958
     Install:
       TargetPath: ffmpeg64/include/libavutil/intreadwrite.h
   - Path: ffmpeg64/include/libavutil/lfg.h
-    Sha256: c3bc1533172fe74870df8e37f168f28b0ff2e21bdb6a519b6555ec72710c910f
+    SHA256: c3bc1533172fe74870df8e37f168f28b0ff2e21bdb6a519b6555ec72710c910f
     Install:
       TargetPath: ffmpeg64/include/libavutil/lfg.h
   - Path: ffmpeg64/include/libavutil/log.h
-    Sha256: 8555ad5d41f5f2fa1c7dd0dc65f2145b0517c0a414654575aade8b3968e4c408
+    SHA256: 8555ad5d41f5f2fa1c7dd0dc65f2145b0517c0a414654575aade8b3968e4c408
     Install:
       TargetPath: ffmpeg64/include/libavutil/log.h
   - Path: ffmpeg64/include/libavutil/lzo.h
-    Sha256: 61e89928dee9d83030adececac06aa6c1ae2aada06c5682fde52c52015c53556
+    SHA256: 61e89928dee9d83030adececac06aa6c1ae2aada06c5682fde52c52015c53556
     Install:
       TargetPath: ffmpeg64/include/libavutil/lzo.h
   - Path: ffmpeg64/include/libavutil/macros.h
-    Sha256: b63b3a268b096f0eed1e91b821714cff334e5dc5bb34365148704393ae15321e
+    SHA256: b63b3a268b096f0eed1e91b821714cff334e5dc5bb34365148704393ae15321e
     Install:
       TargetPath: ffmpeg64/include/libavutil/macros.h
   - Path: ffmpeg64/include/libavutil/mastering_display_metadata.h
-    Sha256: 9d5743a42306ac0158e26248a1281ae8be9ebfeb02e67f14e0e6ae770a543a65
+    SHA256: 9d5743a42306ac0158e26248a1281ae8be9ebfeb02e67f14e0e6ae770a543a65
     Install:
       TargetPath: ffmpeg64/include/libavutil/mastering_display_metadata.h
   - Path: ffmpeg64/include/libavutil/mathematics.h
-    Sha256: 5683e71a8d6ff29a824ee7643333f436c0cba2bcd1005a856c0cc14c38ac4a7b
+    SHA256: 5683e71a8d6ff29a824ee7643333f436c0cba2bcd1005a856c0cc14c38ac4a7b
     Install:
       TargetPath: ffmpeg64/include/libavutil/mathematics.h
   - Path: ffmpeg64/include/libavutil/md5.h
-    Sha256: 5b42de1758d289f78b4d20c47686f443e4ea8a5a6411c0deb357f709d2ef34d7
+    SHA256: 5b42de1758d289f78b4d20c47686f443e4ea8a5a6411c0deb357f709d2ef34d7
     Install:
       TargetPath: ffmpeg64/include/libavutil/md5.h
   - Path: ffmpeg64/include/libavutil/mem.h
-    Sha256: e94235c0c5fc5031f0e8e5186da2b3ef8cbd14ca727d8f5989d100d61de9a585
+    SHA256: e94235c0c5fc5031f0e8e5186da2b3ef8cbd14ca727d8f5989d100d61de9a585
     Install:
       TargetPath: ffmpeg64/include/libavutil/mem.h
   - Path: ffmpeg64/include/libavutil/motion_vector.h
-    Sha256: dc0b0a15a638c8b91df95a418c5951ee5e787d518f22b6e3d70094922536e8bb
+    SHA256: dc0b0a15a638c8b91df95a418c5951ee5e787d518f22b6e3d70094922536e8bb
     Install:
       TargetPath: ffmpeg64/include/libavutil/motion_vector.h
   - Path: ffmpeg64/include/libavutil/murmur3.h
-    Sha256: 649258a51c4737fa19a025a489e2ac9e9b06a96eafa802f2765178c684382887
+    SHA256: 649258a51c4737fa19a025a489e2ac9e9b06a96eafa802f2765178c684382887
     Install:
       TargetPath: ffmpeg64/include/libavutil/murmur3.h
   - Path: ffmpeg64/include/libavutil/opt.h
-    Sha256: 4a1679c21453e4337cc7d377efaec6610340a59204c0b58fc102ab3a9da51a39
+    SHA256: 4a1679c21453e4337cc7d377efaec6610340a59204c0b58fc102ab3a9da51a39
     Install:
       TargetPath: ffmpeg64/include/libavutil/opt.h
   - Path: ffmpeg64/include/libavutil/parseutils.h
-    Sha256: e8efed69396851f429a8258d50e9c4f0431f921687a7c31bf6db13d14f7482c3
+    SHA256: e8efed69396851f429a8258d50e9c4f0431f921687a7c31bf6db13d14f7482c3
     Install:
       TargetPath: ffmpeg64/include/libavutil/parseutils.h
   - Path: ffmpeg64/include/libavutil/pixdesc.h
-    Sha256: 253359c22bc051754a9ded9497a850e5296cbfd058a9b73957c23b53d7314d96
+    SHA256: 253359c22bc051754a9ded9497a850e5296cbfd058a9b73957c23b53d7314d96
     Install:
       TargetPath: ffmpeg64/include/libavutil/pixdesc.h
   - Path: ffmpeg64/include/libavutil/pixelutils.h
-    Sha256: 339cd6ffb6460d06401801c5dfb91ca66b9bdc028e1acc9ff4a0f447cfd3785c
+    SHA256: 339cd6ffb6460d06401801c5dfb91ca66b9bdc028e1acc9ff4a0f447cfd3785c
     Install:
       TargetPath: ffmpeg64/include/libavutil/pixelutils.h
   - Path: ffmpeg64/include/libavutil/pixfmt.h
-    Sha256: 9204ba6bd7167049780b4366ccad4d882c1e470093459acc76b908c987f01729
+    SHA256: 9204ba6bd7167049780b4366ccad4d882c1e470093459acc76b908c987f01729
     Install:
       TargetPath: ffmpeg64/include/libavutil/pixfmt.h
   - Path: ffmpeg64/include/libavutil/random_seed.h
-    Sha256: 78b238cd2dacd863879052ca3b1405c314aab220f63b076602f10bf321974ac5
+    SHA256: 78b238cd2dacd863879052ca3b1405c314aab220f63b076602f10bf321974ac5
     Install:
       TargetPath: ffmpeg64/include/libavutil/random_seed.h
   - Path: ffmpeg64/include/libavutil/rational.h
-    Sha256: 700422cc782acde6898522ffe1b74658b12ca22e2cfbb8f44986266216de7f21
+    SHA256: 700422cc782acde6898522ffe1b74658b12ca22e2cfbb8f44986266216de7f21
     Install:
       TargetPath: ffmpeg64/include/libavutil/rational.h
   - Path: ffmpeg64/include/libavutil/rc4.h
-    Sha256: 4ea0fbee43677721ad0d846f703a785aaf9881794d1cca0bcb210241b260fc26
+    SHA256: 4ea0fbee43677721ad0d846f703a785aaf9881794d1cca0bcb210241b260fc26
     Install:
       TargetPath: ffmpeg64/include/libavutil/rc4.h
   - Path: ffmpeg64/include/libavutil/replaygain.h
-    Sha256: 4ec82edbdc4e5493fba3cae6a27566f0f15d1399ccf16e25073ffd50ba8187ea
+    SHA256: 4ec82edbdc4e5493fba3cae6a27566f0f15d1399ccf16e25073ffd50ba8187ea
     Install:
       TargetPath: ffmpeg64/include/libavutil/replaygain.h
   - Path: ffmpeg64/include/libavutil/ripemd.h
-    Sha256: df9ef8c29ee31e5bd8ea299b03d51bd25fe937583793a994db53d1df2b316620
+    SHA256: df9ef8c29ee31e5bd8ea299b03d51bd25fe937583793a994db53d1df2b316620
     Install:
       TargetPath: ffmpeg64/include/libavutil/ripemd.h
   - Path: ffmpeg64/include/libavutil/samplefmt.h
-    Sha256: de3f71dd6bdc5aa0f264bd8e2bcbdcf94e5d823b6287af75723bb6aa0f7031f5
+    SHA256: de3f71dd6bdc5aa0f264bd8e2bcbdcf94e5d823b6287af75723bb6aa0f7031f5
     Install:
       TargetPath: ffmpeg64/include/libavutil/samplefmt.h
   - Path: ffmpeg64/include/libavutil/sha.h
-    Sha256: 91280db6995b1b99b9e5aad0aa211a3177dc4d2841da2fea097f54964b7891fd
+    SHA256: 91280db6995b1b99b9e5aad0aa211a3177dc4d2841da2fea097f54964b7891fd
     Install:
       TargetPath: ffmpeg64/include/libavutil/sha.h
   - Path: ffmpeg64/include/libavutil/sha512.h
-    Sha256: da265152798b221706d7fe95293a0e8cd18fa2b5087bf32504a8120f10e7658f
+    SHA256: da265152798b221706d7fe95293a0e8cd18fa2b5087bf32504a8120f10e7658f
     Install:
       TargetPath: ffmpeg64/include/libavutil/sha512.h
   - Path: ffmpeg64/include/libavutil/spherical.h
-    Sha256: 18b8e559f69a9c93b251c9d3956b2aba7f47ba46ef5a7fa01f8ae858967b73da
+    SHA256: 18b8e559f69a9c93b251c9d3956b2aba7f47ba46ef5a7fa01f8ae858967b73da
     Install:
       TargetPath: ffmpeg64/include/libavutil/spherical.h
   - Path: ffmpeg64/include/libavutil/stereo3d.h
-    Sha256: 5ece3ffb6baafd288f9f2d8747cae92b1b3985e6693fa2de6bc200173a1981b6
+    SHA256: 5ece3ffb6baafd288f9f2d8747cae92b1b3985e6693fa2de6bc200173a1981b6
     Install:
       TargetPath: ffmpeg64/include/libavutil/stereo3d.h
   - Path: ffmpeg64/include/libavutil/tea.h
-    Sha256: 3c1e93c566630bb4eeedad3ef3c8719bd6050081ac1c764b1fde81aba4969076
+    SHA256: 3c1e93c566630bb4eeedad3ef3c8719bd6050081ac1c764b1fde81aba4969076
     Install:
       TargetPath: ffmpeg64/include/libavutil/tea.h
   - Path: ffmpeg64/include/libavutil/threadmessage.h
-    Sha256: 9bb242d7adc48662b947726843108aff7c34547d7a4a0d0e6f58f54a00fc4c9f
+    SHA256: 9bb242d7adc48662b947726843108aff7c34547d7a4a0d0e6f58f54a00fc4c9f
     Install:
       TargetPath: ffmpeg64/include/libavutil/threadmessage.h
   - Path: ffmpeg64/include/libavutil/time.h
-    Sha256: 40e11fa242e0585996753affb054443e78be25919b7c3063042d0aaff1656760
+    SHA256: 40e11fa242e0585996753affb054443e78be25919b7c3063042d0aaff1656760
     Install:
       TargetPath: ffmpeg64/include/libavutil/time.h
   - Path: ffmpeg64/include/libavutil/timecode.h
-    Sha256: afd0a634b1abcb282c694ae6c43f0412fe2ccb37fb3f08433af33779ea9e572e
+    SHA256: afd0a634b1abcb282c694ae6c43f0412fe2ccb37fb3f08433af33779ea9e572e
     Install:
       TargetPath: ffmpeg64/include/libavutil/timecode.h
   - Path: ffmpeg64/include/libavutil/timestamp.h
-    Sha256: c4753df37c8b0e63e99042007d5836b954ce825913642c57cc7c58b4a52d0273
+    SHA256: c4753df37c8b0e63e99042007d5836b954ce825913642c57cc7c58b4a52d0273
     Install:
       TargetPath: ffmpeg64/include/libavutil/timestamp.h
   - Path: ffmpeg64/include/libavutil/tree.h
-    Sha256: 2f8e906917612a05c138036dea7ed9f8faee5899413a523fdad4eb51711bc1e5
+    SHA256: 2f8e906917612a05c138036dea7ed9f8faee5899413a523fdad4eb51711bc1e5
     Install:
       TargetPath: ffmpeg64/include/libavutil/tree.h
   - Path: ffmpeg64/include/libavutil/twofish.h
-    Sha256: b71714336821e1c606b65620ba4b1ea47e431666be41f3174facbc51047fd814
+    SHA256: b71714336821e1c606b65620ba4b1ea47e431666be41f3174facbc51047fd814
     Install:
       TargetPath: ffmpeg64/include/libavutil/twofish.h
   - Path: ffmpeg64/include/libavutil/tx.h
-    Sha256: a9f4c01399bb64d7b63f6feefc227934cde2730f04cad58d891615a9b225eadf
+    SHA256: a9f4c01399bb64d7b63f6feefc227934cde2730f04cad58d891615a9b225eadf
     Install:
       TargetPath: ffmpeg64/include/libavutil/tx.h
   - Path: ffmpeg64/include/libavutil/uuid.h
-    Sha256: e669ce76a6b987e189b4d7ff62d0fd9ad6e334fa4967076cc6d912976574b646
+    SHA256: e669ce76a6b987e189b4d7ff62d0fd9ad6e334fa4967076cc6d912976574b646
     Install:
       TargetPath: ffmpeg64/include/libavutil/uuid.h
   - Path: ffmpeg64/include/libavutil/version.h
-    Sha256: 88dee31350483b345b170c82542f47e80b8c0dfe8295e8726de0ce4e4b32bedf
+    SHA256: 88dee31350483b345b170c82542f47e80b8c0dfe8295e8726de0ce4e4b32bedf
     Install:
       TargetPath: ffmpeg64/include/libavutil/version.h
   - Path: ffmpeg64/include/libavutil/video_enc_params.h
-    Sha256: da9981247f7839abc4f0d117fe3bb547350cd2985dc17e3984d80258ebc73d60
+    SHA256: da9981247f7839abc4f0d117fe3bb547350cd2985dc17e3984d80258ebc73d60
     Install:
       TargetPath: ffmpeg64/include/libavutil/video_enc_params.h
   - Path: ffmpeg64/include/libavutil/xtea.h
-    Sha256: 2eb91f780cc4ad86095e4ebbce453475d40f4e9b8737d52bdf20a068dfafcdf0
+    SHA256: 2eb91f780cc4ad86095e4ebbce453475d40f4e9b8737d52bdf20a068dfafcdf0
     Install:
       TargetPath: ffmpeg64/include/libavutil/xtea.h
   - Path: ffmpeg64/include/libswresample/swresample.h
-    Sha256: 2cf940aa94f009aeed73fe860441bea54b4507d309861b2645b2b8c0ed31f02c
+    SHA256: 2cf940aa94f009aeed73fe860441bea54b4507d309861b2645b2b8c0ed31f02c
     Install:
       TargetPath: ffmpeg64/include/libswresample/swresample.h
   - Path: ffmpeg64/include/libswresample/version_major.h
-    Sha256: 7d95fa5fa8ef2f06afee5f0a3bafad2da65a02c322058484740b4a9a0b1b365e
+    SHA256: 7d95fa5fa8ef2f06afee5f0a3bafad2da65a02c322058484740b4a9a0b1b365e
     Install:
       TargetPath: ffmpeg64/include/libswresample/version_major.h
   - Path: ffmpeg64/include/libswresample/version.h
-    Sha256: b96f2867086c6dd1c6b38cfb2292f864f34aaba0fed9496fae00e27e85eaf9c7
+    SHA256: b96f2867086c6dd1c6b38cfb2292f864f34aaba0fed9496fae00e27e85eaf9c7
     Install:
       TargetPath: ffmpeg64/include/libswresample/version.h
   - Path: ffmpeg64/include/libswscale/swscale.h
-    Sha256: 1000849033998ae3573e64089c0b92dadfd5efb25b2862a9e0b7e5470c6607a5
+    SHA256: 1000849033998ae3573e64089c0b92dadfd5efb25b2862a9e0b7e5470c6607a5
     Install:
       TargetPath: ffmpeg64/include/libswscale/swscale.h
   - Path: ffmpeg64/include/libswscale/version_major.h
-    Sha256: 4b261440400b2bf2e817d38e8167b880182da208df07fb23c50b999072992ab9
+    SHA256: 4b261440400b2bf2e817d38e8167b880182da208df07fb23c50b999072992ab9
     Install:
       TargetPath: ffmpeg64/include/libswscale/version_major.h
   - Path: ffmpeg64/include/libswscale/version.h
-    Sha256: 0208d01663f257985dd57b60952aeffa2785986cf52a7264a3539598389c7b90
+    SHA256: 0208d01663f257985dd57b60952aeffa2785986cf52a7264a3539598389c7b90
     Install:
       TargetPath: ffmpeg64/include/libswscale/version.h
   - Path: ffmpeg64/lib/avcodec-60.def
-    Sha256: f6ef4ff99704a2a5de85f2ae22293800c4af2ef4f77c6685a945235c95a8b224
+    SHA256: f6ef4ff99704a2a5de85f2ae22293800c4af2ef4f77c6685a945235c95a8b224
     Install:
       TargetPath: ffmpeg64/lib/avcodec-60.def
   - Path: ffmpeg64/lib/avcodec.lib
-    Sha256: bae25d1c8caf9af2dde3723dfe2e709febc530cf1fb3343f52f8d076942f03d3
+    SHA256: bae25d1c8caf9af2dde3723dfe2e709febc530cf1fb3343f52f8d076942f03d3
     Install:
       TargetPath: ffmpeg64/lib/avcodec.lib
   - Path: ffmpeg64/lib/avdevice-60.def
-    Sha256: 4155c10e76c60ea96e0b9dc181b64e66fc0a4b2b699e492c87777ad221ef6eb5
+    SHA256: 4155c10e76c60ea96e0b9dc181b64e66fc0a4b2b699e492c87777ad221ef6eb5
     Install:
       TargetPath: ffmpeg64/lib/avdevice-60.def
   - Path: ffmpeg64/lib/avdevice.lib
-    Sha256: 88739a1c73ffad86776ab236a23912ec7acae3eb0684fc36ccd82e5d90318829
+    SHA256: 88739a1c73ffad86776ab236a23912ec7acae3eb0684fc36ccd82e5d90318829
     Install:
       TargetPath: ffmpeg64/lib/avdevice.lib
   - Path: ffmpeg64/lib/avfilter-9.def
-    Sha256: 411635bfeb21ce06cb2eb76fb1adbfde4780065bbbfb73710546d9ad0d5dd4cd
+    SHA256: 411635bfeb21ce06cb2eb76fb1adbfde4780065bbbfb73710546d9ad0d5dd4cd
     Install:
       TargetPath: ffmpeg64/lib/avfilter-9.def
   - Path: ffmpeg64/lib/avfilter.lib
-    Sha256: 19e741266d9eb02b2eaab7b2423b099fffbe99cf5034cfcc463b61a3da547a7e
+    SHA256: 19e741266d9eb02b2eaab7b2423b099fffbe99cf5034cfcc463b61a3da547a7e
     Install:
       TargetPath: ffmpeg64/lib/avfilter.lib
   - Path: ffmpeg64/lib/avformat-60.def
-    Sha256: 9eb68fc22bf8ba8ddc4911fcb6a39959819499059862cbf1b9b5a8d39031661a
+    SHA256: 9eb68fc22bf8ba8ddc4911fcb6a39959819499059862cbf1b9b5a8d39031661a
     Install:
       TargetPath: ffmpeg64/lib/avformat-60.def
   - Path: ffmpeg64/lib/avformat.lib
-    Sha256: 7acb13ba911bdc5d0238540adbf6060d21331ccab860662da38e662e9187f345
+    SHA256: 7acb13ba911bdc5d0238540adbf6060d21331ccab860662da38e662e9187f345
     Install:
       TargetPath: ffmpeg64/lib/avformat.lib
   - Path: ffmpeg64/lib/avutil-58.def
-    Sha256: 2eb59f1add79a9369c31bde832e580813f8696292d56b39aec21e1150a2ba765
+    SHA256: 2eb59f1add79a9369c31bde832e580813f8696292d56b39aec21e1150a2ba765
     Install:
       TargetPath: ffmpeg64/lib/avutil-58.def
   - Path: ffmpeg64/lib/avutil.lib
-    Sha256: bf48cb73c86635c01aadd9d7dc308d553d224bf5a45ab819be256b9770ed0e2a
+    SHA256: bf48cb73c86635c01aadd9d7dc308d553d224bf5a45ab819be256b9770ed0e2a
     Install:
       TargetPath: ffmpeg64/lib/avutil.lib
   - Path: ffmpeg64/lib/libavcodec.dll.a
-    Sha256: 922c45047eb9651f715a122ae04beec47b0033fad87c7660f6ac837c61f2b50c
+    SHA256: 922c45047eb9651f715a122ae04beec47b0033fad87c7660f6ac837c61f2b50c
     Install:
       TargetPath: ffmpeg64/lib/libavcodec.dll.a
   - Path: ffmpeg64/lib/libavdevice.dll.a
-    Sha256: be09957d56ab5faa768de5c2f16124ca08b5c5b89e31c01e192d4692b553f9df
+    SHA256: be09957d56ab5faa768de5c2f16124ca08b5c5b89e31c01e192d4692b553f9df
     Install:
       TargetPath: ffmpeg64/lib/libavdevice.dll.a
   - Path: ffmpeg64/lib/libavfilter.dll.a
-    Sha256: a7f509ac82162bf8ddb00631963051c8e70de316afe4cdce1d15773f72238dbe
+    SHA256: a7f509ac82162bf8ddb00631963051c8e70de316afe4cdce1d15773f72238dbe
     Install:
       TargetPath: ffmpeg64/lib/libavfilter.dll.a
   - Path: ffmpeg64/lib/libavformat.dll.a
-    Sha256: 6eab0458cd11c586f51a3bbede20f95f43944ed86f872e8d35368cd739e40d85
+    SHA256: 6eab0458cd11c586f51a3bbede20f95f43944ed86f872e8d35368cd739e40d85
     Install:
       TargetPath: ffmpeg64/lib/libavformat.dll.a
   - Path: ffmpeg64/lib/libavutil.dll.a
-    Sha256: 549727ec82628c82f9f4e94b05bf817205386f7c47a90231f0ec72d5e29104d8
+    SHA256: 549727ec82628c82f9f4e94b05bf817205386f7c47a90231f0ec72d5e29104d8
     Install:
       TargetPath: ffmpeg64/lib/libavutil.dll.a
   - Path: ffmpeg64/lib/libswresample.dll.a
-    Sha256: 3e0d947c2a3ff4af2b02ca0eb89d8bc38696da66ebc4dca575eaf95be61681be
+    SHA256: 3e0d947c2a3ff4af2b02ca0eb89d8bc38696da66ebc4dca575eaf95be61681be
     Install:
       TargetPath: ffmpeg64/lib/libswresample.dll.a
   - Path: ffmpeg64/lib/libswscale.dll.a
-    Sha256: 3075985472351e76a1ae150f8b6aa19296576dfd21bff6dd92e02b4a7a5ee4d3
+    SHA256: 3075985472351e76a1ae150f8b6aa19296576dfd21bff6dd92e02b4a7a5ee4d3
     Install:
       TargetPath: ffmpeg64/lib/libswscale.dll.a
   - Path: ffmpeg64/lib/swresample-4.def
-    Sha256: 2b9fc7387c3c21ec0fe266133ebffeb260c7dace09c92f529c55d38c908f6c09
+    SHA256: 2b9fc7387c3c21ec0fe266133ebffeb260c7dace09c92f529c55d38c908f6c09
     Install:
       TargetPath: ffmpeg64/lib/swresample-4.def
   - Path: ffmpeg64/lib/swresample.lib
-    Sha256: b30a698db14836a92cb8388acf867ca9450e8f08408d00185e50e5fe3111f7f5
+    SHA256: b30a698db14836a92cb8388acf867ca9450e8f08408d00185e50e5fe3111f7f5
     Install:
       TargetPath: ffmpeg64/lib/swresample.lib
   - Path: ffmpeg64/lib/swscale-7.def
-    Sha256: f6dba22963165b745685fb7656ddfda502c90aad5c900d4816c4599985ef7955
+    SHA256: f6dba22963165b745685fb7656ddfda502c90aad5c900d4816c4599985ef7955
     Install:
       TargetPath: ffmpeg64/lib/swscale-7.def
   - Path: ffmpeg64/lib/swscale.lib
-    Sha256: 17acb77b8e40af085526b88f81f2d5e9892e95286b5b57dfdb78cff6574d7ba2
+    SHA256: 17acb77b8e40af085526b88f81f2d5e9892e95286b5b57dfdb78cff6574d7ba2
     Install:
       TargetPath: ffmpeg64/lib/swscale.lib
   - Path: ffmpeg64/lib/pkgconfig/libavcodec.pc
-    Sha256: cbffb4e5ea815c041ea6bace41f9d7c6c35a78257bd7613a53e845a734ae549f
+    SHA256: cbffb4e5ea815c041ea6bace41f9d7c6c35a78257bd7613a53e845a734ae549f
     Install:
       TargetPath: ffmpeg64/lib/pkgconfig/libavcodec.pc
   - Path: ffmpeg64/lib/pkgconfig/libavdevice.pc
-    Sha256: 31698dc5a76a7940a656e151361b54fac498454bb3366be5b2035c8411220b6e
+    SHA256: 31698dc5a76a7940a656e151361b54fac498454bb3366be5b2035c8411220b6e
     Install:
       TargetPath: ffmpeg64/lib/pkgconfig/libavdevice.pc
   - Path: ffmpeg64/lib/pkgconfig/libavfilter.pc
-    Sha256: f2411aa039708c932766a5c7f73dc910393bbd33c13560d01ebcf344106db000
+    SHA256: f2411aa039708c932766a5c7f73dc910393bbd33c13560d01ebcf344106db000
     Install:
       TargetPath: ffmpeg64/lib/pkgconfig/libavfilter.pc
   - Path: ffmpeg64/lib/pkgconfig/libavformat.pc
-    Sha256: 2c40f17c82cc203dc24bf3c4bf2860035763ba02973fa361b669e2e8bf53dad8
+    SHA256: 2c40f17c82cc203dc24bf3c4bf2860035763ba02973fa361b669e2e8bf53dad8
     Install:
       TargetPath: ffmpeg64/lib/pkgconfig/libavformat.pc
   - Path: ffmpeg64/lib/pkgconfig/libavutil.pc
-    Sha256: 79bcd76f588f0738835c6452f91c2aa25ffc7f4476ba971c6702c61c9b545a73
+    SHA256: 79bcd76f588f0738835c6452f91c2aa25ffc7f4476ba971c6702c61c9b545a73
     Install:
       TargetPath: ffmpeg64/lib/pkgconfig/libavutil.pc
   - Path: ffmpeg64/lib/pkgconfig/libswresample.pc
-    Sha256: e16b7c0cd93ca703217f0e9114a13359af21d11a01e62bf6b8dabe42b5b84fb0
+    SHA256: e16b7c0cd93ca703217f0e9114a13359af21d11a01e62bf6b8dabe42b5b84fb0
     Install:
       TargetPath: ffmpeg64/lib/pkgconfig/libswresample.pc
   - Path: ffmpeg64/lib/pkgconfig/libswscale.pc
-    Sha256: 63e69fbcc0a5b7ad0d4e53f1f41f1ef4defa8d331685dc1192eaff3c3eee0567
+    SHA256: 63e69fbcc0a5b7ad0d4e53f1f41f1ef4defa8d331685dc1192eaff3c3eee0567
     Install:
       TargetPath: ffmpeg64/lib/pkgconfig/libswscale.pc
-ManifestVersion: 0.1.0
+Plugins:
+- Name: FFmpeg Video Reader Bridge
+  Information: FFmpeg Video Reader Bridge v0.1.0beta20 ( cb7e235 )
+  Type: Input
+  InstallPath: plugins/ffmpeg_input-brdg64.aui
+ManifestVersion: 0.3.0

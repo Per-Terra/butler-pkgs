@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: mousehwheel
 DisplayName: 拡張編集マウス横ホイールプラグイン
@@ -8,7 +8,7 @@ ReleaseDate: 2022-11-21
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 9
+InstalledSize: 9216
 Developer:
 - nazoSAUNA
 Description: 拡張編集タイムラインでマウスホイールを動かした際の挙動を変更するプラグイン
@@ -16,10 +16,14 @@ Website:
 - https://github.com/nazonoSAUNA/mousehwheel
 Files:
 - SourceUrl: https://github.com/nazonoSAUNA/mousehwheel/releases/download/0.1/mousehwheeltest.zip
-  Sha256: fdc606a3bf8c259d5cda17ef32a989862e057cbcd8fb99732d0a4639bb726127
+  SHA256: fdc606a3bf8c259d5cda17ef32a989862e057cbcd8fb99732d0a4639bb726127
   Files:
   - Path: mousehwheel.auf
-    Sha256: d00afd0f649a62372e5b8f22a59595e7a0667080d55e9ede9c11537212f696d8
+    SHA256: d00afd0f649a62372e5b8f22a59595e7a0667080d55e9ede9c11537212f696d8
     Install:
       TargetPath: plugins/mousehwheel.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: マウス横ホイール
+  Type: Filter
+  InstallPath: plugins/mousehwheel.auf
+ManifestVersion: 0.3.0

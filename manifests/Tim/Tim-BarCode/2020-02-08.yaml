@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-BarCode
 DisplayName: バーコードT
 Version: 2020-02-08
 ReleaseDate: 2020-02-08
 Section: Script
-InstalledSize: 5
+InstalledSize: 4522
 Developer:
 - Tim
 Description: CODE128のバーコードを作成します。入れた情報はリーダーで読み込めます。
@@ -15,12 +15,12 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/BarCode.zip
-  Sha256: 3f2eb3a70ca56735c0bc949eef171ab38f9c3a49c91ba292657eb2b4f29be66f
+  SHA256: 3f2eb3a70ca56735c0bc949eef171ab38f9c3a49c91ba292657eb2b4f29be66f
   Files:
   - Path: BarCode/ReadMe.txt
-    Sha256: 15f380099195fbc8bb7165749312bd153f1d5d3d2849b54132939d691410b76a
+    SHA256: 15f380099195fbc8bb7165749312bd153f1d5d3d2849b54132939d691410b76a
   - Path: BarCode/バーコードT.obj
-    Sha256: 61b2250b508fe8e530c5770014781a17205a0f5bf31e126ec60494794523e26a
+    SHA256: 61b2250b508fe8e530c5770014781a17205a0f5bf31e126ec60494794523e26a
     Install:
       TargetPath: script/バーコードT.obj
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

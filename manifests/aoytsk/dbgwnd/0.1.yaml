@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: dbgwnd
 DisplayName: デバッグウィンドウ
 Version: "0.1"
 ReleaseDate: 2016-02-10
 Section: Plugin/Other
-InstalledSize: 46
+InstalledSize: 46275
 Developer:
 - aoytsk
 Description: |-
@@ -17,12 +17,17 @@ Website:
 - https://aoytsk.blog.jp/aviutl/1545310.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/dbgwnd.zip
-  Sha256: 4d1f8c9cc9ed92f39751566ed193ea17ac11d7c425680433d861d7dc4fd705dd
+  SHA256: 4d1f8c9cc9ed92f39751566ed193ea17ac11d7c425680433d861d7dc4fd705dd
   Files:
   - Path: dbgwnd.auf
-    Sha256: d389152932321fc028d7de2ae297ad6273b36ba5d2af36d439d95ceb17e3ff51
+    SHA256: d389152932321fc028d7de2ae297ad6273b36ba5d2af36d439d95ceb17e3ff51
     Install:
       TargetPath: plugins/dbgwnd.auf
   - Path: dbgwnd.txt
-    Sha256: 41b28772288663f71a6958293c8cc62c00166910e096da84eef001b97d642c3f
-ManifestVersion: 0.1.0
+    SHA256: 41b28772288663f71a6958293c8cc62c00166910e096da84eef001b97d642c3f
+Plugins:
+- Name: デバッグウィンドウ
+  Information: デバッグウィンドウ ver 0.1 by aoy
+  Type: Filter
+  InstallPath: plugins/dbgwnd.auf
+ManifestVersion: 0.3.0

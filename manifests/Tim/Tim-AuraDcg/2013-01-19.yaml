@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-AuraDcg
 DisplayName: オーラ放出
 Version: 2013-01-19
 ReleaseDate: 2013-01-19
 Section: Script
-InstalledSize: 2
+InstalledSize: 1910
 Developer:
 - Tim
 Description: オーラを出すような効果です。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/AuraDcg.zip
-  Sha256: 9081aebdb7af58c63ea4a42001f75085f910f89c449d065267ebce381bce0b1c
+  SHA256: 9081aebdb7af58c63ea4a42001f75085f910f89c449d065267ebce381bce0b1c
   Files:
   - Path: オーラ放出.anm
-    Sha256: 2e5df8243f79f278b7e975aad0b2799f6600bdae3e3a16c43593b217d4fe8095
+    SHA256: 2e5df8243f79f278b7e975aad0b2799f6600bdae3e3a16c43593b217d4fe8095
     Install:
       TargetPath: script/オーラ放出.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

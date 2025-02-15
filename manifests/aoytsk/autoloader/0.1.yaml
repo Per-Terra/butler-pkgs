@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: autoloader
 DisplayName: オートローダー
 Version: "0.1"
 ReleaseDate: 2016-02-12
 Section: Plugin/Other
-InstalledSize: 18
+InstalledSize: 17952
 Developer:
 - aoytsk
 Description: ファイルを開いたときに追加で他のファイルを読み込んだり他のプラグインにファイルを渡す機能を追加するプラグイン
@@ -14,16 +14,21 @@ Website:
 - https://aoytsk.blog.jp/aviutl/1578022.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/autoloader.zip
-  Sha256: dc0ff2e3acfd0ae3e9aa26d6cec8d48aeb6d754c8bf47db8c0fe05dce7bb27a1
+  SHA256: dc0ff2e3acfd0ae3e9aa26d6cec8d48aeb6d754c8bf47db8c0fe05dce7bb27a1
   Files:
   - Path: autoloader.auf
-    Sha256: 332fbde0063a6845d8875ba78d00ce0849305d6ccc2e69ea1f509f6bded2ef53
+    SHA256: 332fbde0063a6845d8875ba78d00ce0849305d6ccc2e69ea1f509f6bded2ef53
     Install:
       TargetPath: plugins/autoloader.auf
   - Path: autoloader.txt
-    Sha256: 895180c59f6e34418b150766e2ecafc346cd1d147c1ac9883163c3250afe12f8
+    SHA256: 895180c59f6e34418b150766e2ecafc346cd1d147c1ac9883163c3250afe12f8
   - Path: sample.ini
-    Sha256: ddd00f9e4b57ccdeef5770870c27a0e5ea1156b157cb1c7ddb8c21de642d99a0
+    SHA256: ddd00f9e4b57ccdeef5770870c27a0e5ea1156b157cb1c7ddb8c21de642d99a0
 ConfFiles:
-  - plugins/autoloader.ini
-ManifestVersion: 0.1.0
+- plugins/autoloader.ini
+Plugins:
+- Name: オートローダー
+  Information: オートローダー version 0.1 by aoy
+  Type: Filter
+  InstallPath: plugins/autoloader.auf
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: easing-quick-setup
 DisplayName: イージング設定時短プラグイン
 Version: 1.1.0
 ReleaseDate: 2022-09-17
 Section: Plugin/Other
-InstalledSize: 156
+InstalledSize: 159744
 Developer:
 - kumrnm
 Description: 拡張編集のイージング設定を補助するプラグイン
@@ -14,7 +14,12 @@ Website:
 - https://github.com/kumrnm/aviutl-easing-quick-setup
 Files:
 - SourceUrl: https://github.com/kumrnm/aviutl-easing-quick-setup/releases/download/v1.1.0/easing_quick_setup.auf
-  Sha256: 768768d164edb004da4e83464c9e62abfd1e97b6c34093c761f44f06b5097056
+  SHA256: 768768d164edb004da4e83464c9e62abfd1e97b6c34093c761f44f06b5097056
   Install:
     TargetPath: plugins/easing_quick_setup.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: イージング設定時短プラグイン
+  Information: イージング設定時短プラグイン v1.1.0 by 蝙蝠の目
+  Type: Filter
+  InstallPath: plugins/easing_quick_setup.auf
+ManifestVersion: 0.3.0

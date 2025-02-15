@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: exeditbutton
 DisplayName: 拡張編集が...消えた?
 Version: "1.0"
 ReleaseDate: 2016-01-01
 Section: Plugin/Other
-InstalledSize: 8
+InstalledSize: 7680
 Developer:
 - aoytsk
 Description: |-
@@ -18,10 +18,15 @@ Website:
 - https://aoytsk.blog.jp/Aviutl/891011.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/exeditbutton.zip
-  Sha256: cc8dddf932b70a8a7c009771f843f3ceeae9240349c8912c4e973adf02eab2b6
+  SHA256: cc8dddf932b70a8a7c009771f843f3ceeae9240349c8912c4e973adf02eab2b6
   Files:
   - Path: exeditbutton.auf
-    Sha256: 5c0203fe26366fc4d323bf30fa4c2b1a72ac5e86e419d6a8c6c3c8bcf153104b
+    SHA256: 5c0203fe26366fc4d323bf30fa4c2b1a72ac5e86e419d6a8c6c3c8bcf153104b
     Install:
       TargetPath: plugins/exeditbutton.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 拡張編集が...消えた?
+  Information: 拡張編集が...消えた? ver1.0 by aoy
+  Type: Filter
+  InstallPath: plugins/exeditbutton.auf
+ManifestVersion: 0.3.0

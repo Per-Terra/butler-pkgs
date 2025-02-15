@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: color-loupe
 DisplayName: 色ルーペ
 Version: "1.10"
 ReleaseDate: 2024-01-08
 Section: Plugin/Other
-InstalledSize: 58
+InstalledSize: 59275
 Developer:
 - sigma-axis
 Description: 色ピッカー付き拡大鏡プラグイン
@@ -14,19 +14,24 @@ Website:
 - https://github.com/sigma-axis/aviutl_color_loupe
 Files:
 - SourceUrl: https://github.com/sigma-axis/aviutl_color_loupe/releases/download/v1.10/aviutl_color_loupe-v1.10.zip
-  Sha256: 6067e1a190614b77ebb25671c63d8ece48d32b2d7c8bc2be1cc9b3e23749042c
+  SHA256: 6067e1a190614b77ebb25671c63d8ece48d32b2d7c8bc2be1cc9b3e23749042c
   Files:
   - Path: color_loupe.auf
-    Sha256: 77520b22133ac2a358ceecdb8d449de3a8db94edfcc6c626f9504b3e32065593
+    SHA256: 77520b22133ac2a358ceecdb8d449de3a8db94edfcc6c626f9504b3e32065593
     Install:
       TargetPath: plugins/color_loupe.auf
   - Path: color_loupe.ini
-    Sha256: ad56b0bd33c066ab8d285f61f4bc910abdad56e73c7112db33f7d68c0f2597e0
+    SHA256: ad56b0bd33c066ab8d285f61f4bc910abdad56e73c7112db33f7d68c0f2597e0
     Install:
       TargetPath: plugins/color_loupe.ini
       ConfFile: true
   - Path: LICENSE
-    Sha256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
   - Path: README.md
-    Sha256: 288cd13f00d5b603d3b9a78282389e4796669b8c79f5834a10c798648d43d342
-ManifestVersion: 0.2.0
+    SHA256: 288cd13f00d5b603d3b9a78282389e4796669b8c79f5834a10c798648d43d342
+Plugins:
+- Name: 色ルーペ
+  Information: 色ルーペ v1.10 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/color_loupe.auf
+ManifestVersion: 0.3.0

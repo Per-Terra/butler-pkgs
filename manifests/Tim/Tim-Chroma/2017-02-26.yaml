@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-Chroma
 DisplayName: 色収差
 Version: 2017-02-26
 ReleaseDate: 2017-02-26
 Section: Script
-InstalledSize: 3
+InstalledSize: 2167
 Developer:
 - Tim
 Description: 簡易的な色収差を表現します。
@@ -16,10 +16,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/ChromaV2.zip
-  Sha256: 4c5ffddc2112bdf36d188f28dd14d7af8e74ccf470d21cb2de45104fb03113ef
+  SHA256: 4c5ffddc2112bdf36d188f28dd14d7af8e74ccf470d21cb2de45104fb03113ef
   Files:
   - Path: 色収差.anm
-    Sha256: 669f26f43bf18898be7ba0ede44b0f923bd413183628480ffa588534febbe79b
+    SHA256: 669f26f43bf18898be7ba0ede44b0f923bd413183628480ffa588534febbe79b
     Install:
       TargetPath: script/色収差.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

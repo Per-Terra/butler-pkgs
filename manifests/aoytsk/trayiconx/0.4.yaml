@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: trayiconx
 DisplayName: トレイアイコン＋
 Version: "0.4"
 ReleaseDate: 2015-12-06
 Section: Plugin/Other
-InstalledSize: 17
+InstalledSize: 16421
 Developer:
 - aoytsk
 Description: AviUtlを通知領域(タスクトレイ)に格納したり、進捗情報の表示や一時停止機能を追加するプラグイン
@@ -14,12 +14,17 @@ Website:
 - https://aoytsk.blog.jp/aviutl/450565.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/trayiconx.zip
-  Sha256: e30608ae4ccbf6cae63d035badf46d308b0535ee3bda58f054da835819dfa903
+  SHA256: e30608ae4ccbf6cae63d035badf46d308b0535ee3bda58f054da835819dfa903
   Files:
   - Path: readme.txt
-    Sha256: 1984d2ae0a08f260f6cd8eac95f40023b09b90cfea29424ac4098bc5c69e1416
+    SHA256: 1984d2ae0a08f260f6cd8eac95f40023b09b90cfea29424ac4098bc5c69e1416
   - Path: trayiconx.auf
-    Sha256: a8cd12c15c7f3848af25286c2fcd4d94d907c051161a5c08c2a54e904982e0aa
+    SHA256: a8cd12c15c7f3848af25286c2fcd4d94d907c051161a5c08c2a54e904982e0aa
     Install:
       TargetPath: plugins/trayiconx.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: トレイアイコン＋
+  Information: トレイアイコン＋ ver 0.4 by aoy
+  Type: Filter
+  InstallPath: plugins/trayiconx.auf
+ManifestVersion: 0.3.0

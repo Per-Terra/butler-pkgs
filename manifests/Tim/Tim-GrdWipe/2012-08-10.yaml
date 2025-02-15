@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-GrdWipe
 DisplayName: グリッドワイプ
 Version: 2012-08-10
 ReleaseDate: 2012-08-10
 Section: Script
-InstalledSize: 7
+InstalledSize: 6327
 Developer:
 - Tim
 Description: きしめんエフェクトセット第２段。AEのグリッドワイプより少し直観的に使えるようにしたつもりです。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/k2-GrdWipe.zip
-  Sha256: 06222b8332f64299f78ad77cbc889d2360dce2016f1dcf808294c93db0ad5f9c
+  SHA256: 06222b8332f64299f78ad77cbc889d2360dce2016f1dcf808294c93db0ad5f9c
   Files:
   - Path: グリッドワイプ.anm
-    Sha256: 71acd1ecfd01f3ccdecfb9901dcd92f1de790bdf6c8d0b990a86b3059fd5b0b1
+    SHA256: 71acd1ecfd01f3ccdecfb9901dcd92f1de790bdf6c8d0b990a86b3059fd5b0b1
     Install:
       TargetPath: script/グリッドワイプ.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

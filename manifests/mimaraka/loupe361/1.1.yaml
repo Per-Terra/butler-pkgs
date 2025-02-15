@@ -1,11 +1,11 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: loupe361
 Version: "1.1"
 ReleaseDate: 2023-01-03
 Section: Plugin/Other
-InstalledSize: 15
+InstalledSize: 14848
 Developer:
 - mimaraka
 Description: うえぽん氏作の虫眼鏡プラグインを自分が使いやすいように勝手に改造したプラグイン
@@ -13,7 +13,12 @@ Website:
 - https://github.com/mimaraka/aviutl-plugin-loupe361
 Files:
 - SourceUrl: https://github.com/mimaraka/aviutl-plugin-loupe361/releases/download/v1.1/loupe361.auf
-  Sha256: 80955bc5568a6720444e0606995d4a4626e79be9063e53e9c649e437059bd754
+  SHA256: 80955bc5568a6720444e0606995d4a4626e79be9063e53e9c649e437059bd754
   Install:
     TargetPath: plugins/loupe361.auf
-ManifestVersion: 0.1.0
+Plugins:
+- Name: loupe361
+  Information: loupe361 v0.1 by mimaraka
+  Type: Filter
+  InstallPath: plugins/loupe361.auf
+ManifestVersion: 0.3.0

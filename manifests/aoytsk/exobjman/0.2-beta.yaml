@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: exobjman
 DisplayName: オブジェクトマネージャー
 Version: 0.2-beta
 ReleaseDate: 2016-01-18
 Section: Plugin/Other
-InstalledSize: 55
+InstalledSize: 55476
 Developer:
 - aoytsk
 Description: |-
@@ -16,12 +16,17 @@ Website:
 - https://aoytsk.blog.jp/aviutl/1151849.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/exobjman.zip
-  Sha256: 1c508ff32d17b51a391fe00093a1e163056f1a5caebb48978b5211825e50657a
+  SHA256: 1c508ff32d17b51a391fe00093a1e163056f1a5caebb48978b5211825e50657a
   Files:
   - Path: exobjman.auf
-    Sha256: 951d6bfc2758c892ff44e538a924a30126da2012ccec8e212d95a193796fc72c
+    SHA256: 951d6bfc2758c892ff44e538a924a30126da2012ccec8e212d95a193796fc72c
     Install:
       TargetPath: plugins/exobjman.auf
   - Path: exobjman.txt
-    Sha256: a01e2f1a8d9440a516250e9b0605fbbdbc1cde8d534c30d64ce43a253ecc5296
-ManifestVersion: 0.1.0
+    SHA256: a01e2f1a8d9440a516250e9b0605fbbdbc1cde8d534c30d64ce43a253ecc5296
+Plugins:
+- Name: オブジェクトマネージャー
+  Information: オブジェクトマネージャー version 0.2b by aoy
+  Type: Filter
+  InstallPath: plugins/exobjman.auf
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: auls-confirmclose
 DisplayName: 改変版Auls終了確認
@@ -8,7 +8,7 @@ ReleaseDate: 2022-01-15
 Section: Plugin/Other
 Depends:
 - auls-memref
-InstalledSize: 14
+InstalledSize: 13914
 Developer:
 - karoterra
 - Auls
@@ -23,16 +23,21 @@ Website:
 Files:
 - SourceUrl: https://scrapbox.io/files/61e2589b88c000001f6dc153.zip?title=auls_confirmclose_v1.1.zip
   FileName: auls_confirmclose_v1.1.zip
-  Sha256: 2513fc126faf7de20c09e5f7d27c83cb3281ad41299a55eaf7f68a6ce6e118c0
+  SHA256: 2513fc126faf7de20c09e5f7d27c83cb3281ad41299a55eaf7f68a6ce6e118c0
   Files:
   - Path: auls_confirmclose_v1.1/auls_confirmclose.auf
-    Sha256: 84693ac7eeb2778c86891f050c1459f14d1e79911ebe7aea19b0600a424f9c59
+    SHA256: 84693ac7eeb2778c86891f050c1459f14d1e79911ebe7aea19b0600a424f9c59
     Install:
       TargetPath: plugins/auls_confirmclose.auf
   - Path: auls_confirmclose_v1.1/CMakeLists.txt
-    Sha256: c5873f800898a08d379e3907598035aa5ef11568b167142f3ddfd593a9a6a521
+    SHA256: c5873f800898a08d379e3907598035aa5ef11568b167142f3ddfd593a9a6a521
   - Path: auls_confirmclose_v1.1/説明.txt
-    Sha256: fb494164481e55f8efecf99fe1762069f46ed988907ba6d99643144444dddd35
+    SHA256: fb494164481e55f8efecf99fe1762069f46ed988907ba6d99643144444dddd35
   - Path: auls_confirmclose_v1.1/src/auls_confirmclose.cpp
-    Sha256: 8ae633003b9cfbc7d9297c434deaf5f07c043fba28b8e434a14ac8c4d25de400
-ManifestVersion: 0.1.0
+    SHA256: 8ae633003b9cfbc7d9297c434deaf5f07c043fba28b8e434a14ac8c4d25de400
+Plugins:
+- Name: 終了確認
+  Information: Auls終了確認 v1.1 forked by karoterra
+  Type: Filter
+  InstallPath: plugins/auls_confirmclose.auf
+ManifestVersion: 0.3.0

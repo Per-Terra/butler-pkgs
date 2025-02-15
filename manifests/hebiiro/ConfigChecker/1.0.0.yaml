@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: ConfigChecker
 DisplayName: コンフィグチェッカー
 Version: 1.0.0
 ReleaseDate: 2023-06-23
 Section: Plugin/Other
-InstalledSize: 40
+InstalledSize: 40865
 Developer:
 - hebiiro
 Description: 動画を出力するとき、設定が適正かどうかチェックするプラグイン
@@ -14,16 +14,21 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-ConfigChecker
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-ConfigChecker/releases/download/1.0.0/ConfigChecker.1.0.0.zip
-  Sha256: ffb1cc60ed3e15d93945fb4ac8e4d61ce38d79d2ce7fa09f03b2e222ecf71d45
+  SHA256: ffb1cc60ed3e15d93945fb4ac8e4d61ce38d79d2ce7fa09f03b2e222ecf71d45
   Files:
   - Path: ConfigChecker.auf
-    Sha256: c9669922b511cccc6b84a2fb0309a6d619e606e682ae605bc3a26ebebce44796
+    SHA256: c9669922b511cccc6b84a2fb0309a6d619e606e682ae605bc3a26ebebce44796
     Install:
       TargetPath: plugins/ConfigChecker.auf
   - Path: CREDITS.md
-    Sha256: 90ff525ea6cc3c4a4cf4a01e87b2c9ff19616d92904af595d466540d5c79ffd5
+    SHA256: 90ff525ea6cc3c4a4cf4a01e87b2c9ff19616d92904af595d466540d5c79ffd5
   - Path: LICENSE
-    Sha256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
+    SHA256: 1a5eae94dbf08cc580283d06ed3e47cac7c52fdc14334ae3ed13be863e38d351
   - Path: README.md
-    Sha256: 2ccbf98e7aea46602f5ed72c8cf2e52f9ed11f53d596e50b81521c076a632d68
-ManifestVersion: 0.2.0
+    SHA256: 2ccbf98e7aea46602f5ed72c8cf2e52f9ed11f53d596e50b81521c076a632d68
+Plugins:
+- Name: コンフィグチェッカー
+  Information: コンフィグチェッカー 1.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/ConfigChecker.auf
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: statbarx
 DisplayName: ステータスバー＋
 Version: 0.5.0
 ReleaseDate: 2020-11-18
 Section: Plugin/Other
-InstalledSize: 37
+InstalledSize: 37323
 Developer:
 - aoytsk
 Description: 編集情報を一覧できるステータスバーを追加するプラグイン
@@ -14,12 +14,17 @@ Website:
 - https://aoytsk.blog.jp/aviutl/435251.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/statbarx.zip
-  Sha256: bbfd0fc449ed233c45ad7de795082ac4b3b07ee670070e36b24872883c3a5ad6
+  SHA256: bbfd0fc449ed233c45ad7de795082ac4b3b07ee670070e36b24872883c3a5ad6
   Files:
   - Path: statbarx.auf
-    Sha256: 80d69809b1450a6ad800a21ee101fba008c7dade66306197939b188471cb6fc3
+    SHA256: 80d69809b1450a6ad800a21ee101fba008c7dade66306197939b188471cb6fc3
     Install:
       TargetPath: plugins/statbarx.auf
   - Path: statbarx.txt
-    Sha256: b0ce42f210350129452d2e02346f73576bf439ec3df028f1dc585ab2bad2a655
-ManifestVersion: 0.1.0
+    SHA256: b0ce42f210350129452d2e02346f73576bf439ec3df028f1dc585ab2bad2a655
+Plugins:
+- Name: ステータスバー＋
+  Information: ステータスバー＋ ver 0.5 by aoy
+  Type: Filter
+  InstallPath: plugins/statbarx.auf
+ManifestVersion: 0.3.0

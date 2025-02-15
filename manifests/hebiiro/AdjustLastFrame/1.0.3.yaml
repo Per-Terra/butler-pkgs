@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: AdjustLastFrame
 DisplayName: 最終フレーム自動調整
 Version: 1.0.3
 ReleaseDate: 2022-01-23
 Section: Plugin/Other
-InstalledSize: 20
+InstalledSize: 19613
 Developer:
 - hebiiro
 Description: タイムラインを編集したとき、最終フレームを自動的に調整するプラグイン
@@ -14,19 +14,24 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-AdjustLastFrame
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-AdjustLastFrame/releases/download/1.0.3/AdjustLastFrame.1.0.3.7z
-  Sha256: 4049b5cb30f207c275631b913308f68cf271083883cd0ad9c6463e967f27246e
+  SHA256: 4049b5cb30f207c275631b913308f68cf271083883cd0ad9c6463e967f27246e
   Files:
   - Path: AdjustLastFrame.auf
-    Sha256: d8d78b561a272cdab55f084bd9f28a3ea667e75d6df622add2acee3baf49d5c3
+    SHA256: d8d78b561a272cdab55f084bd9f28a3ea667e75d6df622add2acee3baf49d5c3
     Install:
       TargetPath: plugins/AdjustLastFrame.auf
   - Path: auls_memref.ini
-    Sha256: d329a1de0cedc02390ac7d56eb9099442b789730b41a27209fa7119dd6a4e937
+    SHA256: d329a1de0cedc02390ac7d56eb9099442b789730b41a27209fa7119dd6a4e937
     Install:
       TargetPath: plugins/auls_memref.ini
       ConfFile: true
   - Path: LICENSE
-    Sha256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
+    SHA256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
   - Path: README.md
-    Sha256: 5a23974483839b42a61b26126e6664e49d873027f3500188486b625b368a8067
-ManifestVersion: 0.2.0
+    SHA256: 5a23974483839b42a61b26126e6664e49d873027f3500188486b625b368a8067
+Plugins:
+- Name: 最終フレーム自動調整
+  Information: 最終フレーム自動調整 version 1.0.3 by 蛇色
+  Type: Filter
+  InstallPath: plugins/AdjustLastFrame.auf
+ManifestVersion: 0.3.0

@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: editbox-font-changer
 DisplayName: エディットボックスフォント変更 for AviUtl
@@ -8,7 +8,7 @@ ReleaseDate: 2022-12-29
 Section: Plugin/Other
 Depends:
 - exedit
-InstalledSize: 12
+InstalledSize: 11935
 Developer:
 - mimaraka
 Description: テキスト入力欄やスクリプト制御入力欄などのエディットボックスのフォントを変更するプラグイン
@@ -16,12 +16,17 @@ Website:
 - https://github.com/mimaraka/aviutl-plugin-editbox_font_changer
 Files:
 - SourceUrl: https://github.com/mimaraka/aviutl-plugin-editbox_font_changer/releases/download/v1.0/editbox_font_changer-v1.0.zip
-  Sha256: 4cbf8569b0073cbf2a8d96a9149ceeb72abf0e2c331280b2291edb96532a6557
+  SHA256: 4cbf8569b0073cbf2a8d96a9149ceeb72abf0e2c331280b2291edb96532a6557
   Files:
   - Path: editbox_font_changer-v1.0/editbox_font_changer.auf
-    Sha256: 7a072024d0c18acc4dca515f633f021d58b8a8a2b097ec477014761724ddc61c
+    SHA256: 7a072024d0c18acc4dca515f633f021d58b8a8a2b097ec477014761724ddc61c
     Install:
       TargetPath: plugins/editbox_font_changer.auf
   - Path: editbox_font_changer-v1.0/Readme.url
-    Sha256: 0bdcecd0b3711439601a43d3c5d67fa7400b7646736c9f8358775524b5312bf2
-ManifestVersion: 0.1.0
+    SHA256: 0bdcecd0b3711439601a43d3c5d67fa7400b7646736c9f8358775524b5312bf2
+Plugins:
+- Name: エディットボックスフォント変更
+  Information: エディットボックスフォント変更 v1.0 by mimaraka
+  Type: Filter
+  InstallPath: plugins/editbox_font_changer.auf
+ManifestVersion: 0.3.0

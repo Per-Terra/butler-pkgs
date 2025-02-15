@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: inputprofile
 DisplayName: 入力優先度変更
 Version: 0.2-beta
 ReleaseDate: 2015-12-19
 Section: Plugin/Other
-InstalledSize: 13
+InstalledSize: 13103
 Developer:
 - aoytsk
 Description: 入力プラグインの優先度をプロファイルに記録することで切り替えを容易にするプラグイン
@@ -14,12 +14,17 @@ Website:
 - https://aoytsk.blog.jp/Aviutl/711549.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/inputprofile.zip
-  Sha256: 046c90c6a5460c2913cf78c3c22fe64b32a5476ee7a011e2cae6921b05fb126f
+  SHA256: 046c90c6a5460c2913cf78c3c22fe64b32a5476ee7a011e2cae6921b05fb126f
   Files:
   - Path: inputprofile.auf
-    Sha256: 4349775b4d39cde380bfb8fb838d09da8551ee69eba3fb136cd073cfecae9b4a
+    SHA256: 4349775b4d39cde380bfb8fb838d09da8551ee69eba3fb136cd073cfecae9b4a
     Install:
       TargetPath: plugins/inputprofile.auf
   - Path: readme.txt
-    Sha256: d645d741d880863cb40b7cb930f37a563075f9b9bbaa203f2bcbb94cc2ea29f2
-ManifestVersion: 0.1.0
+    SHA256: d645d741d880863cb40b7cb930f37a563075f9b9bbaa203f2bcbb94cc2ea29f2
+Plugins:
+- Name: 入力優先度変更
+  Information: 入力優先度変更 ver 0.2 by aoy
+  Type: Filter
+  InstallPath: plugins/inputprofile.auf
+ManifestVersion: 0.3.0

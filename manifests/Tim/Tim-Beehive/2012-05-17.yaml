@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-Beehive
 DisplayName: 蜂の巣モザイク
 Version: 2012-05-17
 ReleaseDate: 2012-05-17
 Section: Script
-InstalledSize: 4
+InstalledSize: 3736
 Developer:
 - Tim
 Description: 画像を六角形のモザイクにします。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/Beehive.zip
-  Sha256: bb327c1aad3d554c7bebca2d49ce28550a072ab6c167c8a87fe81c0237b98e78
+  SHA256: bb327c1aad3d554c7bebca2d49ce28550a072ab6c167c8a87fe81c0237b98e78
   Files:
   - Path: 蜂の巣モザイク.anm
-    Sha256: f364ec8329a3414946bfc9650536dba27af9f8f34d0d1eb3aa2ec04644bcce61
+    SHA256: f364ec8329a3414946bfc9650536dba27af9f8f34d0d1eb3aa2ec04644bcce61
     Install:
       TargetPath: script/蜂の巣モザイク.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-ConLine
 DisplayName: 集中線T
 Version: 2020-07-04
 ReleaseDate: 2020-07-04
 Section: Script
-InstalledSize: 4
+InstalledSize: 3994
 Developer:
 - Tim
 Description: 自由度の高い集中線を作ります。線の配置が偏ったものもできます。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/ConLine.zip
-  Sha256: bb0d983ec3e9586d8d02bad7a9b821912b87a5b3dac2ce7d6c40bbec14e47cda
+  SHA256: bb0d983ec3e9586d8d02bad7a9b821912b87a5b3dac2ce7d6c40bbec14e47cda
   Files:
   - Path: ConLine/@集中線T.obj
-    Sha256: d58fe72b997d994530c60038bb018840b1e0bcc11a4596e629159438aa4a212f
+    SHA256: d58fe72b997d994530c60038bb018840b1e0bcc11a4596e629159438aa4a212f
     Install:
       TargetPath: script/@集中線T.obj
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

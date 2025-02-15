@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: VVenCguiEx
 DisplayName: 拡張 VVenC 出力(GUI) Ex
@@ -14,7 +14,7 @@ Replaces:
 - VCEEnc
 - x264guiEx
 - x265guiEx
-InstalledSize: 43016
+InstalledSize: 44048258
 Developer:
 - rigaya
 Description: VVenCを使用してエンコードを行う出力プラグイン
@@ -22,89 +22,94 @@ Website:
 - https://github.com/rigaya/VVenCguiEx
 Files:
 - SourceUrl: https://github.com/rigaya/VVenCguiEx/releases/download/0.00beta4/VVenCguiEx_0.00beta4.zip
-  Sha256: c74c5df47e7f80229ccb6c1697a2fdd5faaa609e1a97fd33c0c54e4fbe1998b5
+  SHA256: c74c5df47e7f80229ccb6c1697a2fdd5faaa609e1a97fd33c0c54e4fbe1998b5
   Files:
   - Path: VVenCguiEx_readme.txt
-    Sha256: acd8f50ee9aed2fb4a271287e99a1579ce2cd9f0a4f52229f8498ebe7217ab21
+    SHA256: acd8f50ee9aed2fb4a271287e99a1579ce2cd9f0a4f52229f8498ebe7217ab21
   - Path: exe_files/auo_check_fileopen.exe
-    Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
+    SHA256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
     Install:
       TargetPath: exe_files/auo_check_fileopen.exe
       Method: Copy
   - Path: exe_files/auo_setup.exe
-    Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
+    SHA256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
     Install:
       TargetPath: exe_files/auo_setup.exe
       Method: Copy
   - Path: exe_files/auo_setup.ini
-    Sha256: d6aaff6e91287f5f78905ecad8a40367473920a794bbed9000e4e3d7f7204746
+    SHA256: d6aaff6e91287f5f78905ecad8a40367473920a794bbed9000e4e3d7f7204746
     Install:
       TargetPath: exe_files/auo_setup.ini
       ConfFile: true
   - Path: exe_files/check_dotnet.dll
-    Sha256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
+    SHA256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
     Install:
       TargetPath: exe_files/check_dotnet.dll
   - Path: exe_files/check_vc.dll
-    Sha256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
+    SHA256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
     Install:
       TargetPath: exe_files/check_vc.dll
   - Path: exe_files/ffmpeg_audenc.exe
-    Sha256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
+    SHA256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
     Install:
       TargetPath: exe_files/ffmpeg_audenc.exe
       Method: Copy
   - Path: exe_files/mp4box.exe
-    Sha256: 1b530460196d9465c007aebae2fe34c1941816c29d523d2874b768a3bc0e114c
+    SHA256: 1b530460196d9465c007aebae2fe34c1941816c29d523d2874b768a3bc0e114c
     Install:
       TargetPath: exe_files/mp4box.exe
       Method: Copy
   - Path: exe_files/ndp48-web.exe
-    Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
+    SHA256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
     Install:
       TargetPath: exe_files/ndp48-web.exe
       Method: Copy
   - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
-    Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
+    SHA256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
     Install:
       TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
       Method: Copy
   - Path: exe_files/VC_redist.x86.exe
-    Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
+    SHA256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
     Install:
       TargetPath: exe_files/VC_redist.x86.exe
       Method: Copy
   - Path: exe_files/vvdecapp.exe
-    Sha256: f739d151bb523d272ad4c21371a3b4752c8b28a7d266a87cd508ddf40fd56147
+    SHA256: f739d151bb523d272ad4c21371a3b4752c8b28a7d266a87cd508ddf40fd56147
     Install:
       TargetPath: exe_files/vvdecapp.exe
       Method: Copy
   - Path: exe_files/vvencFFapp.exe
-    Sha256: 15a3798be1e07511706c11f9c5ff42c6579f30382bc4fb94e85de11df7f1dda9
+    SHA256: 15a3798be1e07511706c11f9c5ff42c6579f30382bc4fb94e85de11df7f1dda9
     Install:
       TargetPath: exe_files/vvencFFapp.exe
       Method: Copy
   - Path: plugins/auo_setup.auf
-    Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
+    SHA256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
     Install:
       TargetPath: plugins/auo_setup.auf
   - Path: plugins/VVenCguiEx.auo
-    Sha256: 0ff9ad171a354e37ed8eb314907e8d16f68d885dd7f2d949ecfa6941318a6ca1
+    SHA256: 0ff9ad171a354e37ed8eb314907e8d16f68d885dd7f2d949ecfa6941318a6ca1
     Install:
       TargetPath: plugins/VVenCguiEx.auo
   - Path: plugins/VVenCguiEx.en.ini
-    Sha256: 300913f0ed70e11a8587f4be8721d8c1af705fd1343b6172a55e1fffe6d9d300
+    SHA256: 300913f0ed70e11a8587f4be8721d8c1af705fd1343b6172a55e1fffe6d9d300
     Install:
       TargetPath: plugins/VVenCguiEx.en.ini
       ConfFile: true
   - Path: plugins/VVenCguiEx.ini
-    Sha256: 9037330c0030625905fb5d3bcf4d7b98030700d78ef42c6590488786da1831af
+    SHA256: 9037330c0030625905fb5d3bcf4d7b98030700d78ef42c6590488786da1831af
     Install:
       TargetPath: plugins/VVenCguiEx.ini
       ConfFile: true
   - Path: plugins/VVenCguiEx.zh.ini
-    Sha256: edeb9addb472ea8bcf2851b6d931ea6cac9b8fa37390ac27fb57e32541fe859d
+    SHA256: edeb9addb472ea8bcf2851b6d931ea6cac9b8fa37390ac27fb57e32541fe859d
     Install:
       TargetPath: plugins/VVenCguiEx.zh.ini
       ConfFile: true
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 拡張 VVenC 出力(GUI) Ex
+  Information: 拡張 VVenC 出力(GUI) Ex (VVenCguiEx) 0.00beta4 by rigaya
+  Type: Output
+  InstallPath: plugins/VVenCguiEx.auo
+ManifestVersion: 0.3.0

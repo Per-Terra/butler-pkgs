@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-ReelRot
 DisplayName: リール回転T
 Version: 2013-12-25
 ReleaseDate: 2013-12-25
 Section: Script
-InstalledSize: 2
+InstalledSize: 1986
 Developer:
 - Tim
 Description: スロットのような回転をします。斜めにも回せます。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/ReelRot.zip
-  Sha256: 31d9b82d1dcfa722722dc33c60243e6487efce844328dd77f58198a8b0056499
+  SHA256: 31d9b82d1dcfa722722dc33c60243e6487efce844328dd77f58198a8b0056499
   Files:
   - Path: リール回転T.anm
-    Sha256: c6c0cc95f2fb76f8dd19ba94f9be78605206339a50ace53339bc407dd17d35c3
+    SHA256: c6c0cc95f2fb76f8dd19ba94f9be78605206339a50ace53339bc407dd17d35c3
     Install:
       TargetPath: script/リール回転T.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

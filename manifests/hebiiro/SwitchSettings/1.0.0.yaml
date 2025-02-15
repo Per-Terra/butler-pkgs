@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SwitchSettings
 DisplayName: 設定切り替え
 Version: 1.0.0
 ReleaseDate: 2021-12-27
 Section: Plugin/Other
-InstalledSize: 78
+InstalledSize: 79465
 Developer:
 - hebiiro
 Description: 起動時に設定ファイルがあるフォルダを選択できるようにするプラグイン
@@ -14,28 +14,28 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SwitchSettings
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SwitchSettings/releases/download/1.0.0/SwitchSettings.1.0.0.7z
-  Sha256: 2ba79cd8128c64ca70c51e128475a6a49f91b12a4157b237391a55bc5b6c0d09
+  SHA256: 2ba79cd8128c64ca70c51e128475a6a49f91b12a4157b237391a55bc5b6c0d09
   Files:
   - Path: license.txt
-    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
   - Path: README.md
-    Sha256: 72b4db5c71a5092c979111c8e96f99b030844bf443f9996e721de5c5890ce511
+    SHA256: 72b4db5c71a5092c979111c8e96f99b030844bf443f9996e721de5c5890ce511
   - Path: SwitchSettings.dll
-    Sha256: 2899ead747f0353c4f9b6811ad98b7c2e478b22505f545ef0e203126b536077a
+    SHA256: 2899ead747f0353c4f9b6811ad98b7c2e478b22505f545ef0e203126b536077a
     Install:
       TargetPath: plugins/SwitchSettings.dll
   - Path: SwitchSettings.exe
-    Sha256: 1aad5d72b453d9a91218b9be1120e4e678f2c3dcc91cedc6dc2380315d6b86a6
+    SHA256: 1aad5d72b453d9a91218b9be1120e4e678f2c3dcc91cedc6dc2380315d6b86a6
     Install:
       TargetPath: plugins/SwitchSettings.exe
       Method: Copy
   - Path: SwitchSettings/サイズ変更 1920x1080 FPS 1_2/デフォルト.cfg
-    Sha256: 61174b6e251e703f4696c0d790213577a89b2a53a15a804fb79fb60c6bcf16d5
+    SHA256: 61174b6e251e703f4696c0d790213577a89b2a53a15a804fb79fb60c6bcf16d5
     Install:
       TargetPath: plugins/SwitchSettings/サイズ変更 1920x1080 FPS 1_2/デフォルト.cfg
   - Path: SwitchSettings/テスト用/aviutl.ini
-    Sha256: 9bc41738e2cf8402b65d5a44e13923bb6bb06ea54385c1760110f24947978cfd
+    SHA256: 9bc41738e2cf8402b65d5a44e13923bb6bb06ea54385c1760110f24947978cfd
     Install:
       TargetPath: plugins/SwitchSettings/テスト用/aviutl.ini
       ConfFile: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

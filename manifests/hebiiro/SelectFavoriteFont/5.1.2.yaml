@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SelectFavoriteFont
 DisplayName: お気に入りフォント選択
 Version: 5.1.2
 ReleaseDate: 2022-02-05
 Section: Plugin/Other
-InstalledSize: 65
+InstalledSize: 66156
 Developer:
 - hebiiro
 Description: お気に入り、または最近使ったフォントからフォントを選択できるようにするプラグイン
@@ -14,19 +14,24 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SelectFavoriteFont
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SelectFavoriteFont/releases/download/5.1.2/SelectFavoriteFont.5.1.2.7z
-  Sha256: a2af51ed38db407dba04fa8457bb05552ff63b580041bea56d71e88752b9fc7c
+  SHA256: a2af51ed38db407dba04fa8457bb05552ff63b580041bea56d71e88752b9fc7c
   Files:
   - Path: LICENSE
-    Sha256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
+    SHA256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
   - Path: README.md
-    Sha256: 43f8e0b499cf1dc1e736be9891409591871e574d6858304a2df2eb5d4891afc8
+    SHA256: 43f8e0b499cf1dc1e736be9891409591871e574d6858304a2df2eb5d4891afc8
   - Path: SelectFavoriteFont.auf
-    Sha256: e4a7c7e442dca79c7b2533e57c2d62897ca8e7d6061c810c2b9088714cf3a9e6
+    SHA256: e4a7c7e442dca79c7b2533e57c2d62897ca8e7d6061c810c2b9088714cf3a9e6
     Install:
       TargetPath: plugins/SelectFavoriteFont.auf
   - Path: SelectFavoriteFont.xml
-    Sha256: 12bf223a8a525903538421d10aa15f55f6bde2ea7aec67a1d99129a982a7f895
+    SHA256: 12bf223a8a525903538421d10aa15f55f6bde2ea7aec67a1d99129a982a7f895
     Install:
       TargetPath: plugins/SelectFavoriteFont.xml
       ConfFile: true
-ManifestVersion: 0.2.0
+Plugins:
+- Name: お気に入りフォント選択
+  Information: お気に入りフォント選択 version 5.1.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/SelectFavoriteFont.auf
+ManifestVersion: 0.3.0

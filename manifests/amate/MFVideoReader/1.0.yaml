@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: MFVideoReader
 Version: "1.0"
@@ -8,7 +8,7 @@ Section: Plugin/Input
 Depends:
 - aviutl (>= 1.00)
 - exedit (>= 0.92)
-InstalledSize: 3826
+InstalledSize: 3917012
 Developer:
 - amate
 Description: |-
@@ -20,21 +20,26 @@ Website:
 - https://github.com/amate/MFVideoReader
 Files:
 - SourceUrl: https://github.com/amate/MFVideoReader/releases/download/v1.0/MFVideoReader_1.0.zip
-  Sha256: 115168a7a9cd0ed9241f38e304626bc8a44e83f3310eb4ecb3cf965a892f741c
+  SHA256: 115168a7a9cd0ed9241f38e304626bc8a44e83f3310eb4ecb3cf965a892f741c
   Files:
   - Path: MFVideoReader/LICENSE
-    Sha256: 82843db9158df4c72018d91d0520ac2af5fef44683731a9b2f6e62d492dcb78c
+    SHA256: 82843db9158df4c72018d91d0520ac2af5fef44683731a9b2f6e62d492dcb78c
   - Path: MFVideoReader/MFVideoReader.exe
-    Sha256: a76ec1640c5a9017d00258f89a60bb4a20b90d5a797d1f5e2f001e22cd39b0a2
+    SHA256: a76ec1640c5a9017d00258f89a60bb4a20b90d5a797d1f5e2f001e22cd39b0a2
     Install:
       TargetPath: plugins/MFVideoReader.exe
       Method: Copy
   - Path: MFVideoReader/MFVideoReaderPlugin.aui
-    Sha256: 592fad080d153f2a98a342d225bca56015d3c48a0d83f7bef4d962135c295f20
+    SHA256: 592fad080d153f2a98a342d225bca56015d3c48a0d83f7bef4d962135c295f20
     Install:
       TargetPath: plugins/MFVideoReaderPlugin.aui
   - Path: MFVideoReader/Readme.md
-    Sha256: 71f68c4f3913de8b9d026a2ec123c3f5822ea4b81d487c9bc627786fac68120d
+    SHA256: 71f68c4f3913de8b9d026a2ec123c3f5822ea4b81d487c9bc627786fac68120d
 ConfFiles:
-  - plugins/MFVideoReaderConfig.ini
-ManifestVersion: 0.1.0
+- plugins/MFVideoReaderConfig.ini
+Plugins:
+- Name: MFVideoReaderPlugin
+  Information: MediaFoundation Video Reader by amate version 1.0
+  Type: Input
+  InstallPath: plugins/MFVideoReaderPlugin.aui
+ManifestVersion: 0.3.0

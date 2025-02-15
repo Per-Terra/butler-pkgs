@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: exedit
 DisplayName: 拡張編集
@@ -8,7 +8,7 @@ ReleaseDate: 2010-11-15
 Section: Core
 Depends:
 - aviutl (>> 0.99f)
-InstalledSize: 640
+InstalledSize: 654652
 Developer:
 - KEN-kun
 Description: |-
@@ -18,25 +18,42 @@ Website:
 - https://spring-fragrance.mints.ne.jp/aviutl/
 Files:
 - SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/exedit86a.zip
-  Sha256: d6baf10b7050d7c19703d68bfd918b720ac61335369db2abecb0b5236be35762
+  SHA256: d6baf10b7050d7c19703d68bfd918b720ac61335369db2abecb0b5236be35762
   Files:
   - Path: exedit.auf
-    Sha256: f00592012283263d4fd0427c345def5027732212c8e09789b850204d7cb14f5f
+    SHA256: f00592012283263d4fd0427c345def5027732212c8e09789b850204d7cb14f5f
     Install:
       TargetPath: exedit.auf
   - Path: exedit.aui
-    Sha256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
+    SHA256: cf6f57e33f662ce6c7d4be43aca72303d0b86323a11bf6c244d78bfe1ed0fac9
     Install:
       TargetPath: exedit.aui
   - Path: exedit.auo
-    Sha256: d1cf24cf3ef6572ccdc197e0b03c8f18b3983eede792b89cbb250104a49ed37b
+    SHA256: d1cf24cf3ef6572ccdc197e0b03c8f18b3983eede792b89cbb250104a49ed37b
     Install:
       TargetPath: exedit.auo
   - Path: exedit.ini
-    Sha256: b15147932d5ed4a9974fbcb198a8847372ef9f7b1d78a8c0274a5bbe6856d5d5
+    SHA256: b15147932d5ed4a9974fbcb198a8847372ef9f7b1d78a8c0274a5bbe6856d5d5
     Install:
       TargetPath: exedit.ini
       ConfFile: true
   - Path: exedit.txt
-    Sha256: cc7d58ce8793fae767af2c66a7a9fbb87ee663f11e256307a28d826a6107ec8a
-ManifestVersion: 0.1.0
+    SHA256: cc7d58ce8793fae767af2c66a7a9fbb87ee663f11e256307a28d826a6107ec8a
+Plugins:
+- Name: 拡張編集
+  Information: 拡張編集(exedit) version 0.86a by ＫＥＮくん
+  Type: Filter
+  InstallPath: exedit.auf
+- Name: 拡張編集(音声)
+  Information: 拡張編集(音声) version 0.86a by ＫＥＮくん
+  Type: Filter
+  InstallPath: exedit.auf
+- Name: 拡張編集 File Reader
+  Information: 拡張編集 File Reader version 0.01 By ＫＥＮくん
+  Type: Input
+  InstallPath: exedit.aui
+- Name: 拡張編集AVI/BMP出力 (RGBA)
+  Information: 拡張編集AVI/BMP出力 (RGBA) version 0.02 By ＫＥＮくん
+  Type: Output
+  InstallPath: exedit.auo
+ManifestVersion: 0.3.0

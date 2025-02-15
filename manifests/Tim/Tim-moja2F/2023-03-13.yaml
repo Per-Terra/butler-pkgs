@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-moja2F
 DisplayName: もじゃもじゃT
 Version: 2023-03-13
 ReleaseDate: 2023-03-13
 Section: Script
-InstalledSize: 6
+InstalledSize: 5240
 Developer:
 - Tim
 Description: もじゃもじゃした線を作るスクリプトです。
@@ -16,10 +16,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/moja2F.zip
-  Sha256: adfe703041e11e39a05c1864919f42897bd0f31602aab3932164302d5b5b4f4d
+  SHA256: adfe703041e11e39a05c1864919f42897bd0f31602aab3932164302d5b5b4f4d
   Files:
   - Path: moja2F/もじゃもじゃT.obj
-    Sha256: c0a8bca228473fdbb59e68350241e219cb4256fdf9003cf51df3fbb0720aaa73
+    SHA256: c0a8bca228473fdbb59e68350241e219cb4256fdf9003cf51df3fbb0720aaa73
     Install:
       TargetPath: script/もじゃもじゃT.obj
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

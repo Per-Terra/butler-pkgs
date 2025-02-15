@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: OptimizeEditBox
 DisplayName: エディットボックス最適化
 Version: 3.0.0
 ReleaseDate: 2022-02-08
 Section: Plugin/Other
-InstalledSize: 37
+InstalledSize: 37853
 Developer:
 - hebiiro
 Description: エディットボックスのサイズやフォントを変更したり、ユニーコード文字列を入力できるようにするプラグイン
@@ -14,19 +14,24 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-OptimizeEditBox
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-OptimizeEditBox/releases/download/3.0.0/OptimizeEditBox.3.0.0.7z
-  Sha256: d806a31c4a49e101a7626581cca2fe32c9bc15ba6f7b7daf8985c77dc6e20bc5
+  SHA256: d806a31c4a49e101a7626581cca2fe32c9bc15ba6f7b7daf8985c77dc6e20bc5
   Files:
   - Path: LICENSE
-    Sha256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
+    SHA256: 457f400b396e9ca3e2d585c4296cac2444871a4456a2bf0297618f73ee7677bd
   - Path: OptimizeEditBox.auf
-    Sha256: 613afb2f2115b4098469acda182c35f7e3046483541466afdff0546e712ceb3a
+    SHA256: 613afb2f2115b4098469acda182c35f7e3046483541466afdff0546e712ceb3a
     Install:
       TargetPath: plugins/OptimizeEditBox.auf
   - Path: OptimizeEditBox.ini
-    Sha256: 0af74f79d22c2e9652df1b4a58f9c2d0c94a610f6d7796bc8cc4bbb2c6c181a3
+    SHA256: 0af74f79d22c2e9652df1b4a58f9c2d0c94a610f6d7796bc8cc4bbb2c6c181a3
     Install:
       TargetPath: plugins/OptimizeEditBox.ini
       ConfFile: true
   - Path: README.md
-    Sha256: 6704d894fbdcf1a0d2c9c8a65f7fa417b088aa21e68e5a19c605635d897f12d7
-ManifestVersion: 0.2.0
+    SHA256: 6704d894fbdcf1a0d2c9c8a65f7fa417b088aa21e68e5a19c605635d897f12d7
+Plugins:
+- Name: エディットボックス最適化
+  Information: エディットボックス最適化 version 3.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/OptimizeEditBox.auf
+ManifestVersion: 0.3.0

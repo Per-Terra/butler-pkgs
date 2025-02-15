@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-BrokenB
 DisplayName: 砕け散る球
 Version: 2011-09-03
 ReleaseDate: 2011-09-03
 Section: Script
-InstalledSize: 7
+InstalledSize: 6530
 Developer:
 - Tim
 Description: 平面を球体化したものを飛散させます。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/BrokenB.zip
-  Sha256: 0699190ae7d4435f3d3286f7c9527f70044a206b5728179a0396185b70ce3a87
+  SHA256: 0699190ae7d4435f3d3286f7c9527f70044a206b5728179a0396185b70ce3a87
   Files:
   - Path: 砕け散る球.anm
-    Sha256: f5ce3247396c358d4c5c3a8269378df34e798ae0b6dc5a5f45278dc99e5c89d2
+    SHA256: f5ce3247396c358d4c5c3a8269378df34e798ae0b6dc5a5f45278dc99e5c89d2
     Install:
       TargetPath: script/砕け散る球.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

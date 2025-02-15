@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: cmpwnd
 DisplayName: 比較ウィンドウ
 Version: "0.1"
 ReleaseDate: 2016-02-07
 Section: Plugin/Other
-InstalledSize: 17
+InstalledSize: 16868
 Developer:
 - aoytsk
 Description: |-
@@ -17,12 +17,17 @@ Website:
 - https://aoytsk.blog.jp/aviutl/1490264.html
 Files:
 - SourceUrl: https://aoytsk.blog.jp/aviutl/cmpwnd.zip
-  Sha256: 11fae1b8a9e34d378fa66e59e767bc8dab0875b842ad89606f49103ecfd7829d
+  SHA256: 11fae1b8a9e34d378fa66e59e767bc8dab0875b842ad89606f49103ecfd7829d
   Files:
   - Path: cmpwnd.auf
-    Sha256: 52150643241b33e918e5830e24ded91f0464cb6370d22f1708c11fb168579d2c
+    SHA256: 52150643241b33e918e5830e24ded91f0464cb6370d22f1708c11fb168579d2c
     Install:
       TargetPath: plugins/cmpwnd.auf
   - Path: cmpwnd.txt
-    Sha256: 4124e792f3cc5808f54ff277f60e34b9cb717aa309f9ffa65d0860be44b5862b
-ManifestVersion: 0.1.0
+    SHA256: 4124e792f3cc5808f54ff277f60e34b9cb717aa309f9ffa65d0860be44b5862b
+Plugins:
+- Name: 比較ウィンドウ
+  Information: 比較ウィンドウ ver 0.1 by aoy
+  Type: Filter
+  InstallPath: plugins/cmpwnd.auf
+ManifestVersion: 0.3.0

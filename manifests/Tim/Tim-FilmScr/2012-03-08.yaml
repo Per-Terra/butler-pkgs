@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-FilmScr
 DisplayName: フィルム焦げ
 Version: 2012-03-08
 ReleaseDate: 2012-03-08
 Section: Script
-InstalledSize: 2
+InstalledSize: 1413
 Developer:
 - Tim
 Description: ものが焦げていく様子に見えなくもない効果。名前になんでフィルムと付けたのかは本人にも謎。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/FilmScr.zip
-  Sha256: 4084297a2225b762e047771b944ae84a708ac2278162afdd39caab0b486a5b94
+  SHA256: 4084297a2225b762e047771b944ae84a708ac2278162afdd39caab0b486a5b94
   Files:
   - Path: フィルム焦げ.anm
-    Sha256: 347365c53c6eb416a80d3925dbc1f12cdafbeff924b36a4f5e7582e12c048d62
+    SHA256: 347365c53c6eb416a80d3925dbc1f12cdafbeff924b36a4f5e7582e12c048d62
     Install:
       TargetPath: script/フィルム焦げ.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

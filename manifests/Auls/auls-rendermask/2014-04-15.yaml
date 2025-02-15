@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: auls-rendermask
 DisplayName: Auls出力マスク
 Version: 2014-04-15
 ReleaseDate: 2014-04-15
 Section: Plugin/Other
-InstalledSize: 70
+InstalledSize: 71051
 Developer:
 - Auls
 Description: |-
@@ -19,16 +19,25 @@ Website:
 - https://auls.client.jp/
 Files:
 - SourceUrl: https://auls.client.jp/plugin/auls_rendermask.zip
-  Sha256: 6a854ee5d54b38500accc7072ebfd181d5c4fe136f0b5443036b28f0df9df6ba
+  SHA256: 6a854ee5d54b38500accc7072ebfd181d5c4fe136f0b5443036b28f0df9df6ba
   Files:
   - Path: auls_rendermask/auls_rendermask.auf
-    Sha256: 08f7bffcfb5468c996fa5e29be19d0449d23e7ef496729b37bcfdce21eaa97b1
+    SHA256: 08f7bffcfb5468c996fa5e29be19d0449d23e7ef496729b37bcfdce21eaa97b1
     Install:
       TargetPath: plugins/auls_rendermask.auf
   - Path: auls_rendermask/説明.txt
-    Sha256: 5a834111a67805c1df9cf3e8c60d35801078fae2da637b9eb717bce6756b8b10
+    SHA256: 5a834111a67805c1df9cf3e8c60d35801078fae2da637b9eb717bce6756b8b10
   - Path: auls_rendermask/src/auls_rendermask.cpp
-    Sha256: bac2b03dab79dd7dd77fa431128bbf6caa4bc2543c2fbac537b1d5614beaa4af
+    SHA256: bac2b03dab79dd7dd77fa431128bbf6caa4bc2543c2fbac537b1d5614beaa4af
   - Path: auls_rendermask/src/auls_rendermask.vcproj
-    Sha256: b57728eed4b1629b501611d3c7f7de42c4c89e55ad8afb8694dd6671fa31aa29
-ManifestVersion: 0.1.0
+    SHA256: b57728eed4b1629b501611d3c7f7de42c4c89e55ad8afb8694dd6671fa31aa29
+Plugins:
+- Name: 出力マスク
+  Information: Auls出力マスク
+  Type: Filter
+  InstallPath: plugins/auls_rendermask.auf
+- Name: 出力マスク(音声)
+  Information: Auls出力マスク(音声)
+  Type: Filter
+  InstallPath: plugins/auls_rendermask.auf
+ManifestVersion: 0.3.0

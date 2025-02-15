@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-RotBlur
 DisplayName: 回転ブラー
 Version: "2"
 ReleaseDate: 2023-10-28
 Section: Script
-InstalledSize: 106
+InstalledSize: 108308
 Developer:
 - Tim
 Description: |-
@@ -17,14 +17,14 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/RotBlurV3.zip
-  Sha256: e9675e99c5b764fcdaa647e7de624470cbdf4c72ee63949666b1ccfbc21322f6
+  SHA256: e9675e99c5b764fcdaa647e7de624470cbdf4c72ee63949666b1ccfbc21322f6
   Files:
   - Path: RotBlurV3/@T_RotBlur_Module.anm
-    Sha256: 7ac9bd36e96cc7839d2fa0aef407d7a374ab667953fbf7adbe126b0f16e1ebd5
+    SHA256: 7ac9bd36e96cc7839d2fa0aef407d7a374ab667953fbf7adbe126b0f16e1ebd5
     Install:
       TargetPath: script/@T_RotBlur_Module.anm
   - Path: RotBlurV3/T_RotBlur_Module.dll
-    Sha256: 0af51b247abba9d8744ff582ee16bebf49d335bf2dd6f4d5a5f070e216c6965b
+    SHA256: 0af51b247abba9d8744ff582ee16bebf49d335bf2dd6f4d5a5f070e216c6965b
     Install:
       TargetPath: script/T_RotBlur_Module.dll
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

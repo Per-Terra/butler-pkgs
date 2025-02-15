@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SelectFavoriteFont
 DisplayName: お気に入りフォント選択
 Version: 3.0.0
 ReleaseDate: 2021-12-27
 Section: Plugin/Other
-InstalledSize: 54
+InstalledSize: 55049
 Developer:
 - hebiiro
 Description: お気に入り、または最近使ったフォントからフォントを選択できるようにするプラグイン
@@ -14,19 +14,24 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SelectFavoriteFont
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SelectFavoriteFont/releases/download/3.0.0/SelectFavoriteFont.3.0.0.7z
-  Sha256: b7534b9184f21ebac45c3e07fcd9a5c0c45ec7e7b12682af9e324d4f6000e059
+  SHA256: b7534b9184f21ebac45c3e07fcd9a5c0c45ec7e7b12682af9e324d4f6000e059
   Files:
   - Path: license.txt
-    Sha256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
   - Path: README.md
-    Sha256: 04be68c97888bddc30e5f5956f7e19cdec5e019d9da4f26f01f7affc55032a7f
+    SHA256: 04be68c97888bddc30e5f5956f7e19cdec5e019d9da4f26f01f7affc55032a7f
   - Path: SelectFavoriteFont.auf
-    Sha256: 8e3f04619bbcf5031197d9ac66c2b05af54121e74ae7f41fbd299c15b3c3d32f
+    SHA256: 8e3f04619bbcf5031197d9ac66c2b05af54121e74ae7f41fbd299c15b3c3d32f
     Install:
       TargetPath: plugins/SelectFavoriteFont.auf
   - Path: SelectFavoriteFont.xml
-    Sha256: caddf850d2b85527ef98a27608b8e102f36d80870e18d103141874bd7f41e3c5
+    SHA256: caddf850d2b85527ef98a27608b8e102f36d80870e18d103141874bd7f41e3c5
     Install:
       TargetPath: plugins/SelectFavoriteFont.xml
       ConfFile: true
-ManifestVersion: 0.2.0
+Plugins:
+- Name: お気に入りフォント選択
+  Information: お気に入りフォント選択 version 3.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/SelectFavoriteFont.auf
+ManifestVersion: 0.3.0

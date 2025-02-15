@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: InputPipePlugin
 Version: "1.5"
@@ -8,7 +8,7 @@ Section: Plugin/Input
 Depends:
 - aviutl (>= 1.00)
 - exedit (>= 0.92)
-InstalledSize: 1841
+InstalledSize: 1884644
 Developer:
 - amate
 Description: L-SMASH Works File Reader(lwinput.aui)を別プロセスで実行しメモリ使用量削減を目論む入力プラグイン
@@ -17,21 +17,26 @@ Website:
 - https://www.nicovideo.jp/watch/sm35585310
 Files:
 - SourceUrl: https://github.com/amate/InputPipePlugin/releases/download/v1.5/InputPipePlugin_1.5.zip
-  Sha256: 5623527bbde60303e76cec1d0d2cbd4619da4b0f7ee9784f044b6240308c7c10
+  SHA256: 5623527bbde60303e76cec1d0d2cbd4619da4b0f7ee9784f044b6240308c7c10
   Files:
   - Path: InputPipePlugin/InputPipeMain.exe
-    Sha256: d99b8437599ec29fe999d09742236ca8c4b46cae7929876ca6cc51a6e48e4f3c
+    SHA256: d99b8437599ec29fe999d09742236ca8c4b46cae7929876ca6cc51a6e48e4f3c
     Install:
       TargetPath: plugins/InputPipeMain.exe
       Method: Copy
   - Path: InputPipePlugin/InputPipePlugin.aui
-    Sha256: c7720f91a3771057c002a505c58df6ec96ed63d2da3869944b1f0321c4e171c8
+    SHA256: c7720f91a3771057c002a505c58df6ec96ed63d2da3869944b1f0321c4e171c8
     Install:
       TargetPath: plugins/InputPipePlugin.aui
   - Path: InputPipePlugin/LICENSE
-    Sha256: d2e83382e2d08566292c817e52be98c12a49a7f611d1475619d6ccbaecfad29c
+    SHA256: d2e83382e2d08566292c817e52be98c12a49a7f611d1475619d6ccbaecfad29c
   - Path: InputPipePlugin/Readme.txt
-    Sha256: e5458a6b939ac816494922c17565bdf85653c9d6d0621b10571a8f00c52732b9
+    SHA256: e5458a6b939ac816494922c17565bdf85653c9d6d0621b10571a8f00c52732b9
 ConfFiles:
 - plugins/InputPipePluginConfig.ini
-ManifestVersion: 0.1.0
+Plugins:
+- Name: InputPipePlugin
+  Information: Plugin to bypass lwinput.aui By amate version 1.5
+  Type: Input
+  InstallPath: plugins/InputPipePlugin.aui
+ManifestVersion: 0.3.0

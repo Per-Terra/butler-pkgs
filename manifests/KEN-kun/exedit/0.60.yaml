@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: exedit
 DisplayName: 拡張編集
@@ -8,7 +8,7 @@ ReleaseDate: 2008-10-24
 Section: Core
 Depends:
 - aviutl (>> 0.99f)
-InstalledSize: 242
+InstalledSize: 247187
 Developer:
 - KEN-kun
 Description: |-
@@ -18,17 +18,26 @@ Website:
 - https://spring-fragrance.mints.ne.jp/aviutl/
 Files:
 - SourceUrl: https://spring-fragrance.mints.ne.jp/aviutl/exedit60.zip
-  Sha256: 3f7100c2a6979217b1628c39164287b64c1e956c95e405b35f80141f86af3450
+  SHA256: 3f7100c2a6979217b1628c39164287b64c1e956c95e405b35f80141f86af3450
   Files:
   - Path: exedit.auf
-    Sha256: ac1e6306c03acc414592be11e8792244f3276c7fb47bf6ba74f9e92bdd299d7c
+    SHA256: ac1e6306c03acc414592be11e8792244f3276c7fb47bf6ba74f9e92bdd299d7c
     Install:
       TargetPath: exedit.auf
   - Path: exedit.ini
-    Sha256: 6509dd0f9ddd134ea44b872422eabc30beb0216d3962a3d48ce23552487381c7
+    SHA256: 6509dd0f9ddd134ea44b872422eabc30beb0216d3962a3d48ce23552487381c7
     Install:
       TargetPath: exedit.ini
       ConfFile: true
   - Path: exedit.txt
-    Sha256: a0ed4c367f5d7707464f818ab6947e271393dd84e71f0b9957ae7f2708f06d78
-ManifestVersion: 0.1.0
+    SHA256: a0ed4c367f5d7707464f818ab6947e271393dd84e71f0b9957ae7f2708f06d78
+Plugins:
+- Name: 拡張編集
+  Information: 拡張編集 version 0.60 by ＫＥＮくん
+  Type: Filter
+  InstallPath: exedit.auf
+- Name: 拡張編集(音声)
+  Information: 拡張編集(音声) version 0.60 by ＫＥＮくん
+  Type: Filter
+  InstallPath: exedit.auf
+ManifestVersion: 0.3.0

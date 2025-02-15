@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: LevelMeter
 DisplayName: レベルメーター
 Version: 2.1.1
 ReleaseDate: 2023-03-10
 Section: Plugin/Other
-InstalledSize: 575
+InstalledSize: 588329
 Developer:
 - hebiiro
 Description: 音量のレベルメーターを表示するプラグイン
@@ -14,25 +14,30 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-LevelMeter
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-LevelMeter/releases/download/2.1.1/LevelMeter.2.1.1.zip
-  Sha256: 8c25f2ec815af441a885e68ed845b1cf13a45112f666c74e3ffdaadc082dbe5c
+  SHA256: 8c25f2ec815af441a885e68ed845b1cf13a45112f666c74e3ffdaadc082dbe5c
   Files:
   - Path: CREDITS.md
-    Sha256: 5910f408d17aec47add03479895f6fa43dbe14cc56d2833bd0775a4646310551
+    SHA256: 5910f408d17aec47add03479895f6fa43dbe14cc56d2833bd0775a4646310551
   - Path: LevelMeter.auf
-    Sha256: 3b0f510ea8b622974c20f1570b8f728b4c42e3925aec32188376b224bd5eab49
+    SHA256: 3b0f510ea8b622974c20f1570b8f728b4c42e3925aec32188376b224bd5eab49
     Install:
       TargetPath: plugins/LevelMeter.auf
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 4ec9fa1b7c3367032c52573b1a65002497698b0553effd41304566683b4f7d37
+    SHA256: 4ec9fa1b7c3367032c52573b1a65002497698b0553effd41304566683b4f7d37
   - Path: LevelMeter/glew32.dll
-    Sha256: 8c7805a05a321fab37a31822ea2d2a6997ddfd130cf0a09a54a428d6e6995700
+    SHA256: 8c7805a05a321fab37a31822ea2d2a6997ddfd130cf0a09a54a428d6e6995700
     Install:
       TargetPath: plugins/glew32.dll
   - Path: LevelMeter/LevelMeter.exe
-    Sha256: 495c5faa96beae2b849079fed772d6add0cbee715adbdc9d4d1afb02fc0f873a
+    SHA256: 495c5faa96beae2b849079fed772d6add0cbee715adbdc9d4d1afb02fc0f873a
     Install:
       TargetPath: plugins/LevelMeter.exe
       Method: Copy
-ManifestVersion: 0.2.0
+Plugins:
+- Name: レベルメーター(音声)
+  Information: レベルメーター(音声) 2.1.1 by 蛇色
+  Type: Filter
+  InstallPath: plugins/LevelMeter.auf
+ManifestVersion: 0.3.0

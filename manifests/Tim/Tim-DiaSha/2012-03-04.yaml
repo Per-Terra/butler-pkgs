@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-DiaSha
 DisplayName: 斜めブラインド(改)
 Version: 2012-03-04
 ReleaseDate: 2012-03-04
 Section: Script
-InstalledSize: 1
+InstalledSize: 925
 Developer:
 - Tim
 Description: さつきさんの斜めブラインドの改良版です。既にブラインドとは言えないような気もしますが・・。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/DiaSha.zip
-  Sha256: 8c04fd1bcb0b39f5b376293ca4b9eed2e4e8333dd99c05791e255cbc803e9adc
+  SHA256: 8c04fd1bcb0b39f5b376293ca4b9eed2e4e8333dd99c05791e255cbc803e9adc
   Files:
   - Path: 斜めブラインド(改).anm
-    Sha256: fff1bea1ef837fa3dac3a05231857604f85f6a5dcbba148e1600e22dfdbbe142
+    SHA256: fff1bea1ef837fa3dac3a05231857604f85f6a5dcbba148e1600e22dfdbbe142
     Install:
       TargetPath: script/斜めブラインド(改).anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

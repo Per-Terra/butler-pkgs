@@ -1,13 +1,13 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Extram2
-Version: 0.2.0-beta1
+Version: 0.1.0-beta1
 ReleaseDate: 2023-12-07
 Section: Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 49
+InstalledSize: 49186
 Developer:
 - oov
 Description: |-
@@ -18,33 +18,33 @@ Website:
 - https://github.com/oov/aviutl_extram2
 Files:
 - SourceUrl: https://github.com/oov/aviutl_extram2/releases/download/v0.1.0beta1/extram2_v0.1.0beta1.zip
-  Sha256: 875baba43cb515bd81c98c5f2adf6c2043e10c4160ad73f7471c7a91e57fa590
+  SHA256: 875baba43cb515bd81c98c5f2adf6c2043e10c4160ad73f7471c7a91e57fa590
   Files:
   - Path: Extram2.txt
-    Sha256: 3e466ea6584223482836d2c7f0f36511a3beddb34220110e8ec389b9d4e69038
+    SHA256: 3e466ea6584223482836d2c7f0f36511a3beddb34220110e8ec389b9d4e69038
   - Path: キャッシュテキスト2.exa
-    Sha256: cb6df6e12891c9f2cf66cbc7368c8194a21e6001f296e368a2f9a732be3f348c
+    SHA256: cb6df6e12891c9f2cf66cbc7368c8194a21e6001f296e368a2f9a732be3f348c
     Install:
       TargetPath: キャッシュテキスト2.exa
   - Path: script/@Cache2.anm
-    Sha256: 499dba478752cdbdecd13c60390ff409c8b118d3a7e83fc46965ecfc853ed4d2
+    SHA256: 499dba478752cdbdecd13c60390ff409c8b118d3a7e83fc46965ecfc853ed4d2
     Install:
       TargetPath: script/@Cache2.anm
       Strict: true
   - Path: script/Cache2.lua
-    Sha256: cf2a6ed9cee2535e0102a278fc8ffacde266cb93fe45f952130ab0f8f1480bd3
+    SHA256: cf2a6ed9cee2535e0102a278fc8ffacde266cb93fe45f952130ab0f8f1480bd3
     Install:
       TargetPath: script/Cache2.lua
       Strict: true
   - Path: script/Extram2.exe
-    Sha256: c8002ced6bcb597a2de4d9aac10cb1e2f8fe36fd7212be2bbeda58dddff4d9b6
+    SHA256: c8002ced6bcb597a2de4d9aac10cb1e2f8fe36fd7212be2bbeda58dddff4d9b6
     Install:
       TargetPath: script/Extram2.exe
       Strict: true
       Method: Copy
   - Path: script/Extram2.lua
-    Sha256: f7e0ba5a5bb3d7e9d074615d5a0df15e65121cb1d7b72dd443063345aaaf90db
+    SHA256: f7e0ba5a5bb3d7e9d074615d5a0df15e65121cb1d7b72dd443063345aaaf90db
     Install:
       TargetPath: script/Extram2.lua
       Strict: true
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

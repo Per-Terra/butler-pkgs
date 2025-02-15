@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SetZoom
 DisplayName: ズーム変更
 Version: 1.0.0
 ReleaseDate: 2022-03-15
 Section: Plugin/Other
-InstalledSize: 13
+InstalledSize: 12574
 Developer:
 - hebiiro
 Description: 拡張編集ウィンドウのタイムラインのズーム値を変更するプラグイン
@@ -14,19 +14,24 @@ Website:
 - https://github.com/hebiiro/AviUtl-Plugin-SetZoom
 Files:
 - SourceUrl: https://github.com/hebiiro/AviUtl-Plugin-SetZoom/releases/download/1.0.0/SetZoom.1.0.0.zip
-  Sha256: fc94619c1244bb69f7dbb644fc9c7a10c466dbc37a205100a35503c78bfe4605
+  SHA256: fc94619c1244bb69f7dbb644fc9c7a10c466dbc37a205100a35503c78bfe4605
   Files:
   - Path: LICENSE
-    Sha256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
+    SHA256: 3d6b7000e4c97535281d455b50d5bd84ef6124e29b9d73782cf490faeb6d45e0
   - Path: README.md
-    Sha256: 026a3fa0a0670520b901b944dae37701524a4558ff6879ce4e3b0ea2e717e914
+    SHA256: 026a3fa0a0670520b901b944dae37701524a4558ff6879ce4e3b0ea2e717e914
   - Path: SetZoom.auf
-    Sha256: 921801c746af797a7390f8ac470e4bc30cded2bbce3299a73f8c45cabfe85c0c
+    SHA256: 921801c746af797a7390f8ac470e4bc30cded2bbce3299a73f8c45cabfe85c0c
     Install:
       TargetPath: plugins/SetZoom.auf
   - Path: SetZoom.ini
-    Sha256: 8679599235ac2097f4a96426359618c6f1543248ade9c7ec6a90f387491e1163
+    SHA256: 8679599235ac2097f4a96426359618c6f1543248ade9c7ec6a90f387491e1163
     Install:
       TargetPath: plugins/SetZoom.ini
       ConfFile: true
-ManifestVersion: 0.2.0
+Plugins:
+- Name: ズーム変更
+  Information: ズーム変更 version 1.0.0 by 蛇色
+  Type: Filter
+  InstallPath: plugins/SetZoom.auf
+ManifestVersion: 0.3.0

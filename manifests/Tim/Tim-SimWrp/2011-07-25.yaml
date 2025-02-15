@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.2.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.2.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: Tim-SimWrp
 DisplayName: 簡易ワープ
 Version: 2011-07-25
 ReleaseDate: 2011-07-25
 Section: Script
-InstalledSize: 4
+InstalledSize: 3316
 Developer:
 - Tim
 Description: 画像を歪ませます。ニコでは非公開にしましたが、こっちには置いておきます。
@@ -15,10 +15,10 @@ Website:
 - https://tim3.web.fc2.com/sidx.htm
 Files:
 - SourceUrl: https://tim3.web.fc2.com/script/SimWrp.zip
-  Sha256: 120d6343616790dd6c71eae3397ce66b1d6d8bfbd0fedc151f7e47496c5499b3
+  SHA256: 120d6343616790dd6c71eae3397ce66b1d6d8bfbd0fedc151f7e47496c5499b3
   Files:
   - Path: '@簡易ワープ.anm'
-    Sha256: 492fdaf96fbe7699f06aae822cd6dd6434b44549b8c276d7974e94028b72686a
+    SHA256: 492fdaf96fbe7699f06aae822cd6dd6434b44549b8c276d7974e94028b72686a
     Install:
       TargetPath: script/@簡易ワープ.anm
-ManifestVersion: 0.2.0
+ManifestVersion: 0.3.0

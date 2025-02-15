@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: tl-walkaround
 DisplayName: TLショトカ移動
@@ -9,7 +9,7 @@ Section: Plugin/Other
 Depends:
 - aviutl (= 1.10)
 - exedit (= 0.92)
-InstalledSize: 30
+InstalledSize: 30152
 Developer:
 - sigma-axis
 Description: |-
@@ -19,19 +19,24 @@ Website:
 - https://github.com/sigma-axis/aviutl_tl_walkaround
 Files:
 - SourceUrl: https://github.com/sigma-axis/aviutl_tl_walkaround/releases/download/v1.00/aviutl_tl_walkaround-v1.00.zip
-  Sha256: a5eb2c99da5ff610ece2d84dee835bcb2043a9428d18cadd8cba82aafbdecf71
+  SHA256: a5eb2c99da5ff610ece2d84dee835bcb2043a9428d18cadd8cba82aafbdecf71
   Files:
   - Path: LICENSE
-    Sha256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
   - Path: README.md
-    Sha256: 686074cccdce2e30a8ad06dfa707a593b907346c342ce68090b247530454680b
+    SHA256: 686074cccdce2e30a8ad06dfa707a593b907346c342ce68090b247530454680b
   - Path: tl_walkaround.auf
-    Sha256: d5ba8d6d01268fc37881bcb4ffd9473de43701d14f51f60e69249a287834cc29
+    SHA256: d5ba8d6d01268fc37881bcb4ffd9473de43701d14f51f60e69249a287834cc29
     Install:
       TargetPath: plugins/tl_walkaround.auf
   - Path: tl_walkaround.ini
-    Sha256: 8027f497ddc2b2bff400bd72d69729ae462589a754123df3d6550433a7f759f0
+    SHA256: 8027f497ddc2b2bff400bd72d69729ae462589a754123df3d6550433a7f759f0
     Install:
       TargetPath: plugins/tl_walkaround.ini
       ConfFile: true
-ManifestVersion: 0.1.0
+Plugins:
+- Name: TLショトカ移動
+  Information: TLショトカ移動 v1.00 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/tl_walkaround.auf
+ManifestVersion: 0.3.0

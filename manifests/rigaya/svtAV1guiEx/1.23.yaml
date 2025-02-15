@@ -1,5 +1,5 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpdateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: svtAV1guiEx
 DisplayName: 拡張 SVT-AV1 出力(GUI) Ex
@@ -14,7 +14,7 @@ Replaces:
 - VVenCguiEx
 - x264guiEx
 - x265guiEx
-InstalledSize: 40115
+InstalledSize: 41077656
 Developer:
 - rigaya
 Description: SVT-AV1を使用してエンコードを行う出力プラグイン
@@ -22,94 +22,99 @@ Website:
 - https://github.com/rigaya/svtAV1guiEx
 Files:
 - SourceUrl: https://github.com/rigaya/svtAV1guiEx/releases/download/1.23/svtAV1guiEx_1.23.zip
-  Sha256: 67326b3a73602d9e60d54dec8f0eb61f5eb44806c87f34e381cc94106ff3eb94
+  SHA256: 67326b3a73602d9e60d54dec8f0eb61f5eb44806c87f34e381cc94106ff3eb94
   Files:
   - Path: svtAV1guiEx_readme.txt
-    Sha256: c2858839df9aba8f084f02f3ad21c53a26e446981de380aa1ec439d8347e6a7c
+    SHA256: c2858839df9aba8f084f02f3ad21c53a26e446981de380aa1ec439d8347e6a7c
   - Path: exe_files/auo_check_fileopen.exe
-    Sha256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
+    SHA256: 68a886445f034e37e41c6a00068d54f156a34ab979bb9228a13586a3ba7f431d
     Install:
       TargetPath: exe_files/auo_check_fileopen.exe
       Method: Copy
   - Path: exe_files/auo_setup.exe
-    Sha256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
+    SHA256: c7e6ae1fe2ad11e54d8d0e884f888511de1a8ce0e3bee3505321d0d482dac9bb
     Install:
       TargetPath: exe_files/auo_setup.exe
       Method: Copy
   - Path: exe_files/auo_setup.ini
-    Sha256: 42e843bdd31d303a840512b219884e5b7cbec0747feab16096429f637814eff1
+    SHA256: 42e843bdd31d303a840512b219884e5b7cbec0747feab16096429f637814eff1
     Install:
       TargetPath: exe_files/auo_setup.ini
       ConfFile: true
   - Path: exe_files/check_dotnet.dll
-    Sha256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
+    SHA256: 2ab0a033135115226a1ac0303ee1dd262d69d73a5d9328afb525c6e1b8c785eb
     Install:
       TargetPath: exe_files/check_dotnet.dll
   - Path: exe_files/check_vc.dll
-    Sha256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
+    SHA256: 89249fb85c4738eb0b31956a99731984e721ccfc1a6c2031954c4185fa1e335e
     Install:
       TargetPath: exe_files/check_vc.dll
   - Path: exe_files/ffmpeg_audenc.exe
-    Sha256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
+    SHA256: 02e45b2e90484301d69c05aefae5ae7def8114e4ea96242c329f04710aa111ba
     Install:
       TargetPath: exe_files/ffmpeg_audenc.exe
       Method: Copy
   - Path: exe_files/mp4box.exe
-    Sha256: fe7dda3529eefdf8cfa18838b864db68b8ab8e98ec814046b01f28cb5d5e4744
+    SHA256: fe7dda3529eefdf8cfa18838b864db68b8ab8e98ec814046b01f28cb5d5e4744
     Install:
       TargetPath: exe_files/mp4box.exe
       Method: Copy
   - Path: exe_files/ndp48-web.exe
-    Sha256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
+    SHA256: 0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa
     Install:
       TargetPath: exe_files/ndp48-web.exe
       Method: Copy
   - Path: exe_files/ndp48-x86-x64-allos-jpn.exe
-    Sha256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
+    SHA256: ce919a4f10e9efaa5746f67669d3b31ccd9274699331b8a0e34e0bfa23b28ee8
     Install:
       TargetPath: exe_files/ndp48-x86-x64-allos-jpn.exe
       Method: Copy
   - Path: exe_files/SvtAv1EncApp_v1.7.0_x64.exe
-    Sha256: 41d2ae92d070b7d8a7d6614e2f854ca6ef7498ce6232f92ceef18b3d75fc7c97
+    SHA256: 41d2ae92d070b7d8a7d6614e2f854ca6ef7498ce6232f92ceef18b3d75fc7c97
     Install:
       TargetPath: exe_files/SvtAv1EncApp_v1.7.0_x64.exe
       Method: Copy
   - Path: exe_files/timelineeditor_x64.exe
-    Sha256: 121358105ff5cba291ee666d4e7b06f2184509202516af93858371bb2ca79869
+    SHA256: 121358105ff5cba291ee666d4e7b06f2184509202516af93858371bb2ca79869
     Install:
       TargetPath: exe_files/timelineeditor_x64.exe
       Method: Copy
   - Path: exe_files/timelineeditor_x86.exe
-    Sha256: 056a0c08b9fa94a07d997408a3691de27322e89d8efe2aa996a460ccb2f0c112
+    SHA256: 056a0c08b9fa94a07d997408a3691de27322e89d8efe2aa996a460ccb2f0c112
     Install:
       TargetPath: exe_files/timelineeditor_x86.exe
       Method: Copy
   - Path: exe_files/VC_redist.x86.exe
-    Sha256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
+    SHA256: b7ae307237f869e09f7413691a2cd1944357b5cee28049c0a0d3430b47bb3edc
     Install:
       TargetPath: exe_files/VC_redist.x86.exe
       Method: Copy
   - Path: plugins/auo_setup.auf
-    Sha256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
+    SHA256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
     Install:
       TargetPath: plugins/auo_setup.auf
   - Path: plugins/svtAV1guiEx.auo
-    Sha256: 63ea797f30101c70e885042c4c55fdb399324826245ce487d6727d85c1badb23
+    SHA256: 63ea797f30101c70e885042c4c55fdb399324826245ce487d6727d85c1badb23
     Install:
       TargetPath: plugins/svtAV1guiEx.auo
   - Path: plugins/svtAV1guiEx.en.ini
-    Sha256: 7009a77a2a316054e32e6e7bd64a2347f1124d097c75032c99973178bbb164f7
+    SHA256: 7009a77a2a316054e32e6e7bd64a2347f1124d097c75032c99973178bbb164f7
     Install:
       TargetPath: plugins/svtAV1guiEx.en.ini
       ConfFile: true
   - Path: plugins/svtAV1guiEx.ini
-    Sha256: f9e716e2f109c8b7d222835711a7999d5c54de0d211f957424aa3cc250015767
+    SHA256: f9e716e2f109c8b7d222835711a7999d5c54de0d211f957424aa3cc250015767
     Install:
       TargetPath: plugins/svtAV1guiEx.ini
       ConfFile: true
   - Path: plugins/svtAV1guiEx.zh.ini
-    Sha256: 5714e2a14af8cf66cc3d955bdc0127c18071f1cb5a3fd3c1bdfe409d30c0dd80
+    SHA256: 5714e2a14af8cf66cc3d955bdc0127c18071f1cb5a3fd3c1bdfe409d30c0dd80
     Install:
       TargetPath: plugins/svtAV1guiEx.zh.ini
       ConfFile: true
-ManifestVersion: 0.1.0
+Plugins:
+- Name: 拡張 SVT-AV1 出力(GUI) Ex
+  Information: 拡張 SVT-AV1 出力(GUI) Ex (svtAV1guiEx) 1.23 by rigaya
+  Type: Output
+  InstallPath: plugins/svtAV1guiEx.auo
+ManifestVersion: 0.3.0
