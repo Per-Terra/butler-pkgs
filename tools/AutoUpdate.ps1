@@ -40,35 +40,38 @@ function Get-GitHubReleases {
     [string]$Owner,
     [Parameter(Mandatory)]
     [string]$Repo,
+    [ValidateRange(1, 100)]
+    [uint]$PerPage = 100,
+    [uint]$Page = 1,
     [switch]$Latest
   )
 
   # https://docs.github.com/ja/rest/releases/releases?apiVersion=2022-11-28#list-releases
-  $uri = "https://api.github.com/repos/$Owner/$Repo/releases"
+  $releasesUrl = "https://api.github.com/repos/$Owner/$Repo/releases"
   if ($Latest) {
-    $uri += '/latest'
+    $releasesUrl += '/latest'
   }
   else {
-    $uri += '?per_page=10'
+    $releasesUrl += "?per_page=$PerPage&page=$Page"
   }
 
   try {
     if ($env:GH_TOKEN) {
-      $response = Invoke-RestMethod -Uri $uri -Authentication Bearer -Token (ConvertTo-SecureString -String $env:GH_TOKEN -AsPlainText -Force)
+      $response = Invoke-RestMethod -Uri $releasesUrl -Authentication Bearer -Token (ConvertTo-SecureString -String $env:GH_TOKEN -AsPlainText -Force)
     }
     else {
-      $response = Invoke-RestMethod -Uri $uri
+      $response = Invoke-RestMethod -Uri $releasesUrl
     }
   }
   catch {
-    throw "GitHub API へのリクエストに失敗しました: $(($_.Exception.Message))"
+    throw "GitHub API へのリクエストに失敗しました: $($_.Exception.Message)"
   }
 
   if ($response) {
     $response
   }
   else {
-    throw "GitHub API からのレスポンスが空です: $uri"
+    throw "GitHub API からのレスポンスが空です: $releasesUrl"
   }
 }
 
