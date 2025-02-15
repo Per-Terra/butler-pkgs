@@ -17,6 +17,6 @@
   Type: GitHub
   Owner: Mr-Ojii
   Repository: MotionTracking_MKII_Plus
-  Asset: ^MotionTrackingMKIIPlus\.zip$
+  Asset: ^MotionTrackingMKIIPlus(?:-AVX)?\.zip$
   Version:
     from: tag_name
