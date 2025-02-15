@@ -4,7 +4,7 @@ if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
     Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
   }
   catch {
-    throw "powershell-yaml のインストールに失敗しました: $(($_.Exception.Message))"
+    throw "powershell-yaml のインストールに失敗しました: $($_.Exception.Message)"
   }
 }
 

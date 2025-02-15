@@ -4,7 +4,7 @@ if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
     Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
   }
   catch {
-    throw "powershell-yaml のインストールに失敗しました: $(($_.Exception.Message))"
+    throw "powershell-yaml のインストールに失敗しました: $($_.Exception.Message)"
   }
 }
 
@@ -19,7 +19,7 @@ if (-not (Test-Path -LiteralPath $jsonDirectory -PathType Container)) {
     $null = New-Item -Path $jsonDirectory -ItemType Directory
   }
   catch {
-    throw "JSONファイルのディレクトリの作成に失敗しました: $(($_.Exception.Message))"
+    throw "JSONファイルのディレクトリの作成に失敗しました: $($_.Exception.Message)"
   }
 }
 
@@ -41,7 +41,7 @@ $yamlFiles | ForEach-Object {
         Out-File -FilePath $jsonPath -Encoding utf8NoBOM -Force -NoNewline
       }
       catch {
-        throw "YAMLファイルの変換に失敗しました: $(($_.Exception.Message))"
+        throw "YAMLファイルの変換に失敗しました: $($_.Exception.Message)"
       }
     }
 

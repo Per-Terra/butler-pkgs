@@ -9,7 +9,7 @@ if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
     Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
   }
   catch {
-    throw "powershell-yaml のインストールに失敗しました: $(($_.Exception.Message))"
+    throw "powershell-yaml のインストールに失敗しました: $($_.Exception.Message)"
   }
 }
 
@@ -136,7 +136,7 @@ foreach ($target in $targets) {
           . (Join-Path -Path $PSScriptRoot -ChildPath "./CreateManifest.ps1") -Update -SourceUrl $url -Identifier $target.Identifier -Version $version -ReleaseDate $date -Developer $target.Developer -SkipPrompt -Force
         }
         catch {
-          Write-Warning "マニフェストは作成されませんでした: $(($_.Exception.Message))"
+          Write-Warning "マニフェストは作成されませんでした: $($_.Exception.Message)"
         }
       }
     }

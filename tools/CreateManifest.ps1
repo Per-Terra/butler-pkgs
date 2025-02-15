@@ -58,7 +58,7 @@ try {
   $Schema = Get-Content -LiteralPath $schemaPath -Raw -ErrorAction Stop | ConvertFrom-Json
 }
 catch {
-  throw "スキーマファイルの読み込みに失敗しました: $(($_.Exception.Message))"
+  throw "スキーマファイルの読み込みに失敗しました: $($_.Exception.Message)"
 }
 
 # 拡張子の定義
