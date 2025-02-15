@@ -87,61 +87,67 @@ foreach ($target in $targets) {
   switch ($target.Type) {
     'GitHub' {
       Write-Host "GitHubからリリースを取得しています: $($target.Owner)/$($target.Repository)"
-      $releases = Get-GitHubReleases -Owner $target.Owner -Repo $target.Repository
-      foreach ($release in $releases) {
-        $asset = $release.assets | Where-Object { $_.name -match $target.Asset } | Select-Object -First 1
-        $url = $asset.browser_download_url
-        if ([string]::IsNullOrEmpty($url)) {
-          Write-Warning "Assetが見つかりません: $($target.Owner)/$($target.Repository)"
-          Write-Warning "Assetの正規表現: $($target.Asset)"
-          Write-Warning "URL: $($release.html_url)"
-          continue
-        }
-
-        $versionFrom = $target.Version.from.Split('.')
-        if ($versionFrom[0] -eq 'asset') {
-          $version = $asset.($versionFrom[1])
-        }
-        else {
-          $version = $release.($versionFrom[0])
-        }
-        if ($target.Version.regex -and $version -match $target.Version.regex.find) {
-          $version = $version -replace $target.Version.regex.find, $target.Version.regex.replace
-        }
-        if ($target.Version.script) {
-          Invoke-Expression -Command $target.Version.script
-        }
-        if ([string]::IsNullOrEmpty($version)) {
-          Write-Warning "バージョンが見つかりません: $($target.Developer)/$($target.Identifier)"
-          Write-Warning "バージョンの取得元: $($target.Version.from)"
-          Write-Warning "バージョンの正規表現: s/$($target.Version.regex.find)/$($target.Version.regex.replace)/"
-          Write-Warning "URL: $($release.html_url)"
-          continue
-        }
-
-        $date = $asset.updated_at.ToString('yyyy-MM-dd')
-
-        $manifestPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($target.Developer)/$($target.Identifier)/$version.yaml"
-
-        if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
-          $null = (Get-Content -LiteralPath $manifestPath -Raw) -match "`nReleaseDate: (.*)`n"
-          $releaseDate = $Matches[1]
-          if ($releaseDate -and $releaseDate -ge $date) {
-            Write-Host "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"
-            Write-Debug "作成中のマニフェストのリリース日: $date"
-            Write-Debug "既存のマニフェストのリリース日: $releaseDate"
-            Write-Debug "マニフェストの作成はスキップされました"
+      $page = 1
+      $skipped = $false
+      do {
+        $releases = Get-GitHubReleases -Owner $target.Owner -Repo $target.Repository -Page $page
+        foreach ($release in $releases) {
+          $asset = $release.assets | Where-Object { $_.name -match $target.Asset } | Select-Object -First 1
+          $url = $asset.browser_download_url
+          if ([string]::IsNullOrEmpty($url)) {
+            Write-Warning "Assetが見つかりません: $($target.Owner)/$($target.Repository)"
+            Write-Warning "Assetの正規表現: $($target.Asset)"
+            Write-Warning "URL: $($release.html_url)"
             continue
           }
-        }
 
-        try {
-          . (Join-Path -Path $PSScriptRoot -ChildPath "./CreateManifest.ps1") -Update -SourceUrl $url -Identifier $target.Identifier -Version $version -ReleaseDate $date -Developer $target.Developer -SkipPrompt -Force
+          $versionFrom = $target.Version.from.Split('.')
+          if ($versionFrom[0] -eq 'asset') {
+            $version = $asset.($versionFrom[1])
+          }
+          else {
+            $version = $release.($versionFrom[0])
+          }
+          if ($target.Version.regex -and $version -match $target.Version.regex.find) {
+            $version = $version -replace $target.Version.regex.find, $target.Version.regex.replace
+          }
+          if ($target.Version.script) {
+            Invoke-Expression -Command $target.Version.script
+          }
+          if ([string]::IsNullOrEmpty($version)) {
+            Write-Warning "バージョンが見つかりません: $($target.Developer)/$($target.Identifier)"
+            Write-Warning "バージョンの取得元: $($target.Version.from)"
+            Write-Warning "バージョンの正規表現: s/$($target.Version.regex.find)/$($target.Version.regex.replace)/"
+            Write-Warning "URL: $($release.html_url)"
+            continue
+          }
+
+          $date = $asset.updated_at.ToString('yyyy-MM-dd')
+
+          $manifestPath = Join-Path -Path $PSScriptRoot -ChildPath "../manifests/$($target.Developer)/$($target.Identifier)/$version.yaml"
+
+          if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
+            $null = (Get-Content -LiteralPath $manifestPath -Raw) -match "`nReleaseDate: (.*)`n"
+            $releaseDate = $Matches[1]
+            if ($releaseDate -and $releaseDate -ge $date) {
+              Write-Host "該当するバージョンのより新しいマニフェストが既に存在します: $($target.Developer)/$($target.Identifier) ($version)"
+              Write-Debug "作成中のマニフェストのリリース日: $date"
+              Write-Debug "既存のマニフェストのリリース日: $releaseDate"
+              Write-Debug "マニフェストの作成はスキップされました"
+              $skipped = $true
+              continue
+            }
+          }
+
+          try {
+            . (Join-Path -Path $PSScriptRoot -ChildPath "./CreateManifest.ps1") -Update -SourceUrl $url -Identifier $target.Identifier -Version $version -ReleaseDate $date -Developer $target.Developer -SkipPrompt -Force
+          }
+          catch {
+            Write-Warning "マニフェストは作成されませんでした: $($_.Exception.Message)"
+          }
         }
-        catch {
-          Write-Warning "マニフェストは作成されませんでした: $($_.Exception.Message)"
-        }
-      }
+        $page++
+      } while ($releases.Count -eq 100 -and -not $skipped)
     }
     default {
       throw "未対応のタイプです: $($target.Type)"
