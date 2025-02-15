@@ -222,12 +222,12 @@ function Get-FilesInArchive {
         }
         $file.Add('Files', ($fileInArchive | Get-FilesInArchive -TargetPath $expandDirectory))
       }
-      # exeファイルはコピー
-      if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
-        $file.Install.Add('Method', 'Copy')
-      }
     }
 
+    # exeファイルはコピー
+    if (-not $previousFile.Install -and $file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
+      $file.Install.Add('Method', 'Copy')
+    }
     # プラグインファイルの情報を取得
     if ($file.Install -and ($fileInArchive.Extension -in '.auf', '.aui', '.auo', '.auc')) {
       $pluginInfos = $fileInArchive | . (Join-Path -Path $PSScriptRoot -ChildPath './Get-PluginInfo.ps1')
