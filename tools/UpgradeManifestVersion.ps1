@@ -216,6 +216,7 @@ begin {
       Write-Progress -Activity 'アーカイブ内のファイルの情報を取得しています' -Status "処理中: $relativePath" -PercentComplete (($filesInArchive.Count / $files.Count) * 100)
     }
 
+    Write-Progress -Activity 'アーカイブ内のファイルの情報を取得しています' -Completed
     $filesInArchive
   }
 
