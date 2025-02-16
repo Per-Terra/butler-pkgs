@@ -1,0 +1,39 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: GCMZDrops
+DisplayName: ごちゃまぜドロップス
+Version: 0.1.1
+ReleaseDate: 2016-02-16
+Section: Plugin/Other
+Depends:
+- aviutl(>= 1.00)
+- exedit (>= 0.92)
+Conflicts:
+- extext
+InstalledSize: 328415
+Developer:
+- oov
+Description: 拡張編集ウィンドウへファイルやテキストをドラッグ＆ドロップした時の挙動を拡張するためのプラグイン
+Website:
+- https://github.com/oov/aviutl_gcmzdrops
+Files:
+- SourceUrl: https://github.com/oov/aviutl_gcmzdrops/releases/download/v0.1.1/aviutl_oledd_v0.1.1.zip
+  SHA256: 69e0f8396aa6c07131871a05a270edbea979443ee469b385b38e42276dbcad8c
+  Files:
+  - Path: oledd.auf
+    SHA256: 60274437cff72e0a1576e3f8fa212bbc0e2e5d9cf475c154d15790a74c6e1e09
+    Install:
+      TargetPath: plugins/oledd.auf
+  - Path: README.md
+    SHA256: 196c5eb87abcb439102fd7fa10f65b8c6941bac7ca7ce0cc74842e1ce5be4d9d
+  - Path: img/setting.png
+    SHA256: ff2a96aa9e9b51f02aa547a3257482fe16b70b54356eca044b1815d5014d4e61
+  - Path: img/Thumbs.db
+    SHA256: 21ffbe4990ef401e62d5ef879a745b2f92ea99b898c2e1c62c1162725dc6b3dd
+Plugins:
+- Name: ごちゃまぜドロップス
+  Information: ごちゃまぜドロップス v0.1.1
+  Type: Filter
+  InstallPath: plugins/oledd.auf
+ManifestVersion: 0.3.0

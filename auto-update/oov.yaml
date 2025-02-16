@@ -101,7 +101,7 @@
   Type: GitHub
   Owner: oov
   Repository: aviutl_gcmzdrops
-  Asset: ^gcmzdrops_.*\.zip$
+  Asset: ^(?:gcmzdrops|aviutl_oledd)_.*\.zip$
   Version:
     from: tag_name
     script: |
