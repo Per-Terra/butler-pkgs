@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: CurveEditor
+DisplayName: Curve Editor for AviUtl
+Version: "0.4"
+ReleaseDate: 2022-10-23
+Section: Plugin/Other
+InstalledSize: 174485
+Developer:
+- mimaraka
+Description: 様々なイージングをウィンドウ上で編集できるプラグイン&スクリプト
+Website:
+- https://github.com/mimaraka/aviutl-plugin-curve_editor
+Files:
+- SourceUrl: https://github.com/mimaraka/aviutl-plugin-curve_editor/releases/download/v0.4/curve_editor-v0.4.zip
+  SHA256: beedce1b6fe416a31b7d581e316eb266d6d86565ba98347a0d67e377dca332a4
+  Files:
+  - Path: curve_editor-v0.4/@Curve Editor.tra
+    SHA256: 43201318a84dabca64cb22ed8d786edee0383619c1a6907ec0e6b0e746fb4736
+    Install:
+      TargetPath: script/@Curve Editor.tra
+  - Path: curve_editor-v0.4/curve_editor.auf
+    SHA256: b4e6438e6d89e619d87ded97be65591957b2a7e5a093abed91e80a8e2e9e5dbb
+    Install:
+      TargetPath: plugins/curve_editor.auf
+  - Path: curve_editor-v0.4/LICENSE
+    SHA256: 2615eff3ee39c0239245a51aec8555428f9c7488103429349ac1ed23328f4458
+  - Path: curve_editor-v0.4/Readme.url
+    SHA256: 0cdea651e728936dbef7f19d325d4c2695a04c97aaa89e3e3b4e5e5ad29b97f8
+ManifestVersion: 0.3.0

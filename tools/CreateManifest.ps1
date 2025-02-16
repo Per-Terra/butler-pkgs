@@ -167,6 +167,29 @@ function Get-FilesInArchive {
         }
       }
     }
+    # mimaraka/CurveEditor用の例外
+    elseif ($Url.StartsWith('https://github.com/mimaraka/aviutl-plugin-curve_editor')) {
+      if ($relativePath.EndsWith('@Curve Editor.tra')) {
+        $file.Add('Install', @{
+            TargetPath = ($relativePath -replace '^(?:[^/]+/)*', 'script/')
+          })
+      }
+      elseif ($relativePath.EndsWith('curve_editor.auf')) {
+        $file.Add('Install', @{
+            TargetPath = ($relativePath -replace '^(?:[^/]+/)*', 'plugins/')
+          })
+      }
+      elseif ($relativePath.EndsWith('curve_editor.lua')) {
+        $file.Add('Install', @{
+            TargetPath = ($relativePath -replace '^(?:[^/]+/)*', '')
+          })
+      }
+      elseif ($relativePath -match '(curve_editor/.+)$') {
+        $file.Add('Install', @{
+            TargetPath = $Matches[1]
+          })
+      }
+    }
     # それらしいディレクトリに配置されている場合は尊重
     elseif ($relativePath -match '^(?:[^/]+/)?((?:plugins|script|exe_files)/.+)$') {
       if ($fileInArchive.Extension -in $ConfExtensions) {
