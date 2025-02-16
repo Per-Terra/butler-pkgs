@@ -79,6 +79,7 @@
   Asset: ^x264guiEx_.*\.zip$
   Version:
     from: tag_name
+  IgnoreOlderThan: 2022-03-13 # 3.00
 
 - Identifier: x265guiEx
   Developer: rigaya
