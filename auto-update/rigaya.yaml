@@ -12,7 +12,7 @@
   Type: GitHub
   Owner: rigaya
   Repository: ffmpegOut
-  Asset: ^ffmpegOut_.*\.zip$
+  Asset: ^ffmpegOut_.*\.(?:zip|7z)$
   Version:
     from: tag_name
 

@@ -1,0 +1,40 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: ffmpegOut
+Version: "0.09"
+ReleaseDate: 2021-09-24
+Section: Plugin/Output
+Replaces:
+- NVEnc
+- QSVEnc
+- svtAV1guiEx
+- VCEEnc
+- VVenCguiEx
+- x264guiEx
+- x265guiEx
+InstalledSize: 606365
+Developer:
+- rigaya
+Description: ffmpegを使用してエンコードを行う出力プラグイン
+Website:
+- https://github.com/rigaya/ffmpegOut
+Files:
+- SourceUrl: https://github.com/rigaya/ffmpegOut/releases/download/0.09/ffmpegOut_0.09.7z
+  SHA256: 7524958b6c076a1310207560254bbede04b9bd85eb3684fc61ba6e12b7ac0982
+  Files:
+  - Path: auo/ffmpegOut.auo
+    SHA256: ca7844521f298a085646d583f412566d1e791141f59eb800ddc3e3420c1e57dd
+    Install:
+      TargetPath: plugins/ffmpegOut.auo
+  - Path: auo/ffmpegOut.ini
+    SHA256: f9235bb24a2f466f85d0974cfe033d88b951e5925a862fb37793bf03d1d1057c
+    Install:
+      TargetPath: plugins/ffmpegOut.ini
+      ConfFile: true
+Plugins:
+- Name: 'ffmpeg 出力 '
+  Information: ffmpeg 出力 0.09 by rigaya
+  Type: Output
+  InstallPath: plugins/ffmpegOut.auo
+ManifestVersion: 0.3.0
