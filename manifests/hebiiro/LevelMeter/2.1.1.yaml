@@ -29,11 +29,11 @@ Files:
   - Path: LevelMeter/glew32.dll
     SHA256: 8c7805a05a321fab37a31822ea2d2a6997ddfd130cf0a09a54a428d6e6995700
     Install:
-      TargetPath: plugins/glew32.dll
+      TargetPath: plugins/LevelMeter/glew32.dll
   - Path: LevelMeter/LevelMeter.exe
     SHA256: 495c5faa96beae2b849079fed772d6add0cbee715adbdc9d4d1afb02fc0f873a
     Install:
-      TargetPath: plugins/LevelMeter.exe
+      TargetPath: plugins/LevelMeter/LevelMeter.exe
       Method: Copy
 Plugins:
 - Name: レベルメーター(音声)

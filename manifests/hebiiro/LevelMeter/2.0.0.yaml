@@ -29,11 +29,11 @@ Files:
   - Path: LevelMeter/glew32.dll
     SHA256: 8c7805a05a321fab37a31822ea2d2a6997ddfd130cf0a09a54a428d6e6995700
     Install:
-      TargetPath: plugins/glew32.dll
+      TargetPath: plugins/LevelMeter/glew32.dll
   - Path: LevelMeter/LevelMeter.exe
     SHA256: 3a482d9faf3e408dd1c12ca6aaccd3fe04690b573148eff97b9f7dc84157680b
     Install:
-      TargetPath: plugins/LevelMeter.exe
+      TargetPath: plugins/LevelMeter/LevelMeter.exe
       Method: Copy
   - Path: LevelMeter/LevelMeter.ini
     SHA256: e1181b4dbe86b51f230891524c23cd84a517232842a9452003944efdde5e4914
