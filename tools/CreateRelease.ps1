@@ -99,8 +99,30 @@ $contents = [ordered]@{
   ManifestVersion = $ManifestVersion
 }
 
+if (-not (Test-Path -LiteralPath $ReleaseDirectory -PathType Container)) {
+  Write-Host -NoNewline 'release ディレクトリを作成しています...'
+  $null = New-Item -Path $ReleaseDirectory -ItemType Directory -Force
+  Write-Host ' 完了'
+}
+
+$files = @()
+
 Write-Host -NoNewline 'JSONに変換しています...'
 $json = ($contents | ConvertTo-Json -Depth 100 -Compress) + "`n"
+Write-Host ' 完了'
+
+Write-Host -NoNewline 'SHA256ハッシュ値を計算しています...'
+$hasher = [System.Security.Cryptography.SHA256]::Create()
+$hashBytes = $hasher.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($json))
+$hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
+Write-Host ' 完了'
+
+Write-Host -NoNewline 'contents-all.json を書き込んでいます...'
+$json | Out-File -FilePath (Join-Path -Path $ReleaseDirectory -ChildPath 'contents-all.json') -Encoding utf8NoBOM -Force -NoNewline
+$files += [ordered]@{
+  Name   = 'contents-all.json'
+  SHA256 = $hashString
+}
 Write-Host ' 完了'
 
 Write-Host -NoNewline 'JSONを圧縮しています...'
@@ -113,28 +135,23 @@ $stream.Close()
 Write-Host ' 完了'
 
 Write-Host -NoNewline 'SHA256ハッシュ値を計算しています...'
-$hash = [System.Security.Cryptography.SHA256]::Create()
-$hashBytes = $hash.ComputeHash($stream.ToArray())
+# $hasher = [System.Security.Cryptography.SHA256]::Create()
+$hashBytes = $hasher.ComputeHash($stream.ToArray())
 $hashString = [System.BitConverter]::ToString($hashBytes).Replace('-', '').ToLower()
 Write-Host ' 完了'
 
-if (-not (Test-Path -LiteralPath $ReleaseDirectory -PathType Container)) {
-  Write-Host -NoNewline 'ディレクトリを作成しています...'
-  $null = New-Item -Path $ReleaseDirectory -ItemType Directory -Force
-  Write-Host ' 完了'
-}
-
 Write-Host -NoNewline 'contents-all.json.gz を書き込んでいます...'
 $stream.ToArray() | Set-Content -LiteralPath (Join-Path -Path $ReleaseDirectory -ChildPath 'contents-all.json.gz') -Force -AsByteStream
+$files += [ordered]@{
+  Name   = 'contents-all.json.gz'
+  SHA256 = $hashString
+}
 Write-Host ' 完了'
 
 Write-Host -NoNewline 'release.yaml を書き込んでいます...'
 $release = [ordered]@{
   Date  = $Date.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
-  Files = @( [ordered]@{
-      Name   = 'contents-all.json.gz'
-      SHA256 = $hashString
-    })
+  Files = $files
 }
 ($release | ConvertTo-Yaml) -replace "`r`n", "`n" |
   Out-File -FilePath (Join-Path -Path $ReleaseDirectory -ChildPath 'release.yaml') -Encoding utf8NoBOM -Force -NoNewline
