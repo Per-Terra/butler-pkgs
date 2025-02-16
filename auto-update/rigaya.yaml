@@ -47,6 +47,7 @@
   Asset: ^svtAV1guiEx_.*\.zip$
   Version:
     from: tag_name
+  IgnoreOlderThan: 2022-04-02 # 1.00
 
 - Identifier: VCEEnc
   Developer: rigaya
