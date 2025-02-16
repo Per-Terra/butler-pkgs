@@ -14,10 +14,15 @@ function Get-WebFileName {
         return $Matches[1]
       }
 
-      $extension = Split-Path -Path $item -Extension
-      if ($extension -and ($extension -notmatch '^\.(php)')) {
-        Write-Verbose "URIにファイル名が含まれています: $item"
-        return Split-Path -Path $item -Leaf
+      if (-not ($item -contains 'https://storage.googleapis.com/')) {
+        Write-Verbose "Google Cloud Storage のリンクを検出しました: $item"
+      }
+      else {
+        $extension = Split-Path -Path $item -Extension
+        if ($extension -and ($extension -notmatch '^\.(php)')) {
+          Write-Verbose "URIにファイル名が含まれています: $item"
+          return Split-Path -Path $item -Leaf
+        }
       }
 
       $params = @{
