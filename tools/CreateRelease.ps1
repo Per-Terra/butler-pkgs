@@ -23,10 +23,10 @@ Write-Host " $($manifests.Count) 件のYAMLファイルが見つかりました"
 $packages = [ordered]@{}
 $developers = [ordered]@{}
 
-Write-Host -NoNewline 'YAMLファイルを読み込んでいます...'
-$manifests | ForEach-Object {
-  $manifest = Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Yaml -Ordered
-  if ($_.Name -eq 'developer.yaml') {
+$RootPath = "$(Split-Path -Path $PSScriptRoot -Parent)\"
+for ($i = 0; $i -lt $manifests.Count; $i++) {
+  $manifest = Get-Content -LiteralPath $manifests[$i].FullName -Raw | ConvertFrom-Yaml -Ordered
+  if ($manifests[$i].Name -eq 'developer.yaml') {
     $developer = $manifest.Identifier
     $manifest.Remove('Identifier')
     $manifest.Remove('ManifestVersion')
@@ -51,8 +51,12 @@ $manifests | ForEach-Object {
       $packages.Add($identifier, [ordered]@{ $version = $manifest })
     }
   }
+  $relativePath = $manifests[$i].FullName.Replace($RootPath, '')
+  $completed = ($i / $manifests.Count) * 100
+  Write-Progress -Activity 'YAMLファイルを読み込んでいます...' -Status $relativePath -PercentComplete $completed
 }
-Write-Host ' 完了'
+Write-Progress -Activity 'YAMLファイルを読み込んでいます...' -Completed
+Write-Host 'YAMLファイルの読み込みが完了しました'
 
 Write-Host -NoNewline 'YAMLファイルをソートしています...'
 
