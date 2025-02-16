@@ -20,5 +20,5 @@ Files:
   FileName: export2clipboard.auf
   SHA256: 3ca082d987831799b73d93da943b30802e33c37a742a5601638c5738e443a1c1
   Install:
-    TargetPath: export2clipboard.auf
+    TargetPath: plugins/export2clipboard.auf
 ManifestVersion: 0.3.0
