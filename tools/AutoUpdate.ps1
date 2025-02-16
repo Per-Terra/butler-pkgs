@@ -2,7 +2,9 @@
 param (
   [Parameter(ValueFromPipeline, ValueFromPipelineByPropertyName)]
   [Alias('FullName')]
-  [string[]]$YamlPath
+  [string[]]$YamlPath,
+  [string]$Identifier,
+  [string]$Developer
 )
 
 begin {
@@ -81,6 +83,19 @@ process {
       Write-Warning "YAML ファイルの読み込みに失敗しました: $path"
       Write-Warning "エラー: $($_.Exception.Message)"
     }
+  }
+
+  if ($Identifier) {
+    $targets = $targets | Where-Object { $_.Identifier -eq $Identifier }
+  }
+
+  if ($Developer) {
+    $targets = $targets | Where-Object { $_.Developer -eq $Developer }
+  }
+
+  if (-not $targets) {
+    Write-Warning '処理対象が見つかりませんでした'
+    return
   }
 
   Write-Host "$($targets.Count) 件の処理を開始します"
