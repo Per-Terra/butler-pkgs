@@ -37,6 +37,7 @@
   Asset: ^AviUtl_.*\.zip$
   Version:
     from: tag_name
+  IgnoreOlderThan: 2022-04-07 # 7.00
 
 - Identifier: svtAV1guiEx
   Developer: rigaya
