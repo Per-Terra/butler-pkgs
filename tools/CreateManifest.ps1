@@ -110,6 +110,15 @@ function Get-FilesInArchive {
         $file.Add('Files', ($fileInArchive | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
       }
     }
+    # hebiiro/Ultimate用の例外
+    elseif ($Url.StartsWith('https://github.com/hebiiro/anti.aviutl.ultimate.plugin')) {
+      # plugins/ 以下のファイルのみインストール
+      if ($relativePath.StartsWith('plugins/')) {
+        $file.Add('Install', @{
+            TargetPath = $relativePath
+          })
+      }
+    }
     # hebiiro氏用の例外
     elseif ($Url.StartsWith('https://github.com/hebiiro/')) {
       if ($fileInArchive.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($fileInArchive.Extension -ne '.wav'))) {
