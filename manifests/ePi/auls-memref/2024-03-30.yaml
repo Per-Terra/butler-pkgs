@@ -1,0 +1,43 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: auls-memref
+DisplayName: Aulsメモリ参照プラグイン
+Version: 2024-03-30
+Section: Plugin/Other
+Depends:
+- aviutl (>= 1.00)
+- exedit (= 0.92)
+InstalledSize: 52731
+Developer:
+- ePi
+- Auls
+Description: |-
+  他のメモリを参照するプラグインやDLLで必要なプラグイン
+  他のプラグインやDLLにメモリアドレス情報を渡します。
+  このプラグイン単体では何もしません。
+Website:
+- https://github.com/ePi5131/auls_memref_patch
+- https://auls.client.jp/
+Files:
+- SourceUrl: https://github.com/ePi5131/auls_memref_patch/releases/download/2024-03-30_01-11/auls_memref.zip
+  SHA256: 70475dd5be7178550f1d38ff8fd6e81facd8a8ad5d43a0b4bf1c14d341353b70
+  Files:
+  - Path: auls_memref/auls_memref.auf
+    SHA256: cbb7e22d8d46222f83295cecd772939135d910a3782c7c58e2f84807fd0576ee
+    Install:
+      TargetPath: plugins/auls_memref.auf
+  - Path: auls_memref/patch.txt
+    SHA256: af76a383afdd417085893b999cb79d3822fd5e10e94de3f5a72a9aeff2ca59c4
+  - Path: auls_memref/説明.txt
+    SHA256: 107c24268175dc57018ef6b719c9cd7c264272df8ed35873aebac533f9459d74
+  - Path: auls_memref/src/auls_memref.cpp
+    SHA256: 7ded306f695a8ba20f1885c92251e245d0ccbe06b2bc091e5f94823f0e3060da
+  - Path: auls_memref/src/auls_memref.vcproj
+    SHA256: 8b049473e461c3d702891145f4a3cebb3b6fa87bfbf897c33bd689684958a904
+Plugins:
+- Name: メモリ参照
+  Information: Aulsメモリ参照 for 1.00~/0.92
+  Type: Filter
+  InstallPath: plugins/auls_memref.auf
+ManifestVersion: 0.3.0
