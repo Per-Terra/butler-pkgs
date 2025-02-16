@@ -102,7 +102,7 @@ process {
         $page = 1
         $skipped = $false
         do {
-          $releases = Get-GitHubReleases -Owner $target.Owner -Repo $target.Repository -PerPage 30 -Page $page
+          $releases = Get-GitHubReleases -Owner $target.Owner -Repo $target.Repository -PerPage 100 -Page $page
           foreach ($release in $releases) {
             $asset = $release.assets | Where-Object { $_.name -match $target.Asset } | Select-Object -First 1
             $url = $asset.browser_download_url
@@ -160,7 +160,7 @@ process {
             }
           }
           $page++
-        } while ($releases.Count -eq 30 -and -not $skipped)
+        } while ($releases.Count -eq 100 -and -not $skipped)
       }
       default {
         throw "未対応のタイプです: $($target.Type)"
