@@ -48,7 +48,6 @@
 
 - Identifier: CacheText
   Developer: oov
-  Disabled: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_cachetext
@@ -58,6 +57,7 @@
     script: |
       $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+  Disabled: true # 3年以上更新されていないため
 
 - Identifier: Extram2
   Developer: oov
@@ -122,7 +122,6 @@
 
 - Identifier: RamPreview
   Developer: oov
-  Disabled: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_rampreview
@@ -132,10 +131,10 @@
     script: |
       $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+  Disabled: true # 3年以上更新されていないため
 
 - Identifier: RelMovieHandle
   Developer: oov
-  Disabled: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_relmoviehandle
@@ -145,6 +144,7 @@
     script: |
       $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+  Disabled: true # 3年以上更新されていないため
 
 - Identifier: textassist
   Developer: oov

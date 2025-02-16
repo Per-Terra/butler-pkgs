@@ -12,7 +12,6 @@
 
 - Identifier: PropertyWindowFixerPlugin
   Developer: amate
-  Disabled: true
   Type: GitHub
   Owner: amate
   Repository: PropertyWindowFixerPlugin
@@ -22,3 +21,4 @@
     regex:
       find: ^v(.*)$
       replace: $1
+  Disabled: true # 3年以上更新されていないため
