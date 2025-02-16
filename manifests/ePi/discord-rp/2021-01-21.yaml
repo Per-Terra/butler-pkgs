@@ -1,12 +1,12 @@
-# Created using CreateManifest.ps1 v0.1.0
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.1.0.json
+# Created using UpgradeManifestVersion.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: discord-rp
 DisplayName: Discord Rich Presence Plugin
 Version: 2021-01-21
 ReleaseDate: 2021-01-21
 Section: Plugin/Other
-InstalledSize: 3153
+InstalledSize: 3228166
 Developer:
 - ePi
 Description: |-
@@ -15,18 +15,23 @@ Description: |-
 Website:
 - https://scrapbox.io/ePi5131/%E3%80%90AviUtl%E3%80%91Discord_Rich_Presence_Plugin
 Files:
-- SourceUrl: https://scrapbox.io/files/600984f8e78b710022533169.zip?title=discord_rp.zip
+- SourceUrl: https://web.archive.org/web/20221024145414if_/https://storage.googleapis.com/scrapbox-file-distribute/5b63a4fd65d1b2001428a487/c25f451080ff877bfa236262b1fbc8ef?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=file-upload%40scrapbox-server.iam.gserviceaccount.com%2F20221024%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20221024T145301Z&X-Goog-Expires=301&X-Goog-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22discord_rp.zip%22&X-Goog-Signature=64ddf60998fc9351bac74c6423748559039f3ed1631fdc900f0983bb61fe20486362e39a624fe2cb62e56e3daea22475bfc0fd3b4d5a3dedde18502899651f407141683fbde7077145d06b78c2c64bfee39b70e6f41c4df766e8361df6a78fee24070cab3a498757e8b049a4185e48509ed63fd7103b160554afeed88581a810d0002ff81e25f75d4e46ae141afacef8893361e17c31ca867f9e2d77b3b40496e6bb72efb32142a9870723654ada067a51008ee1210cdd6f471cc6fc84a8b9b725a44513fc145358677cb32d767000bfdf46e80fd88139ea9be998226ad4638c6fc683fe8a1f4bef32c27c7211309426a008f3e3fce84ae2bed9a0fbf06c3ef8
   FileName: discord_rp.zip
-  Sha256: 7384f03d2122fca5f6e7a1f39e4542e64de83aecee894272fb5d37777a4ce792
+  SHA256: 7384f03d2122fca5f6e7a1f39e4542e64de83aecee894272fb5d37777a4ce792
   Files:
   - Path: discord_game_sdk.dll
-    Sha256: d8e7d9feb3de8482b186ae44fd1c9abb41fe2b3b3d2c7cd3a4d742ebbad30cdf
+    SHA256: d8e7d9feb3de8482b186ae44fd1c9abb41fe2b3b3d2c7cd3a4d742ebbad30cdf
     Install:
       TargetPath: plugins/discord_game_sdk.dll
   - Path: discord_rp.auf
-    Sha256: 84f997a569f622761f5dbbfad357f06f5ff6f6dca2c4dc033ff72740f1afd4c2
+    SHA256: 84f997a569f622761f5dbbfad357f06f5ff6f6dca2c4dc033ff72740f1afd4c2
     Install:
       TargetPath: plugins/discord_rp.auf
   - Path: discord_rp.txt
-    Sha256: a0699b6d69250e417b2fd0668ef8dfa8b7cac433ee295aaa714ae6a7d41b8939
-ManifestVersion: 0.1.0
+    SHA256: a0699b6d69250e417b2fd0668ef8dfa8b7cac433ee295aaa714ae6a7d41b8939
+Plugins:
+- Name: Discord Rich Presence
+  Information: Discord Rich Presence Plugin by ePi
+  Type: Filter
+  InstallPath: plugins/discord_rp.auf
+ManifestVersion: 0.3.0
