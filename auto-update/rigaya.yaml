@@ -89,3 +89,4 @@
   Asset: ^x265guiEx_.*\.zip$
   Version:
     from: tag_name
+  IgnoreOlderThan: 2022-03-31 # 4.00
