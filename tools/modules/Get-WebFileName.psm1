@@ -14,7 +14,8 @@ function Get-WebFileName {
         return $Matches[1]
       }
 
-      if (-not ($item -contains 'https://storage.googleapis.com/')) {
+      if ($item -contains 'https://storage.googleapis.com/') {
+        # Google Cloud Storage のURIにはファイル名が含まれていないものとして扱う
         Write-Verbose "Google Cloud Storage のリンクを検出しました: $item"
       }
       else {
