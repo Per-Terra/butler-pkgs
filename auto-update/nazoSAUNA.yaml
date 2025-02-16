@@ -52,6 +52,7 @@
       $null = $version -match '^(r\d+)_(\d+)_?$'
       $version = $Matches[1] + '+ss' + $Matches[2]
     # r43_40_ ってなってるのでそれに対応
+  IgnoreOlderThan: 2023-01-01 # r43+ss1 (これ以前のものは手動で対応済)
 
 - Identifier: SceneLayerCopy
   Developer: nazoSAUNA
