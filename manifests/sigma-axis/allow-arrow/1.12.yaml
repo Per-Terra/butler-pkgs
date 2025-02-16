@@ -1,0 +1,39 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: allow-arrow
+DisplayName: Allow Arrow
+Version: "1.12"
+ReleaseDate: 2024-03-10
+Section: Plugin/Other
+InstalledSize: 24724
+Developer:
+- sigma-axis
+Description: |-
+  方向キーを含むショートカットがタイムラインウィンドウや設定ダイアログで上手く動かなかったのを修正するプラグイン
+  拡張編集のタイムラインウィンドウや設定ダイアログで，方向キーを含むショートカットが上手く動かなかったのを修正するプラグインです．
+Website:
+- https://github.com/sigma-axis/aviutl_allow_arrow
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_allow_arrow/releases/download/v1.12/aviutl_allow_arrow-v1.12.zip
+  SHA256: 753b9f205f436b455643908ee8b82c8a089c3ff2e327e650a1c491be23495740
+  Files:
+  - Path: allow_arrow.auf
+    SHA256: 82db99bb520867df70402d10f6dbb89187430f32286e66f9074356ca45ea4572
+    Install:
+      TargetPath: plugins/allow_arrow.auf
+  - Path: allow_arrow.ini
+    SHA256: 81e065ae5d2b8293578c4a421777e958e7ccfcd68328dd3946e7ee18408b70ae
+    Install:
+      TargetPath: plugins/allow_arrow.ini
+      ConfFile: true
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: README.md
+    SHA256: a1d893c9e2eba3ddf0a5854bd7618ff06959e6661dcb9e13505cc149e07a3cd7
+Plugins:
+- Name: Allow Arrow
+  Information: Allow Arrow v1.12 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/allow_arrow.auf
+ManifestVersion: 0.3.0
