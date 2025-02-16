@@ -57,6 +57,7 @@
   Asset: ^AviUtl_.*\.zip$
   Version:
     from: tag_name
+  IgnoreOlderThan: 2022-04-30 # 7.00
 
 - Identifier: VVenCguiEx
   Developer: rigaya
