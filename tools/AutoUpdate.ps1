@@ -118,6 +118,11 @@ process {
         do {
           $releases = Get-GitHubReleases -Owner $target.Owner -Repo $target.Repository -PerPage 100 -Page $page
           foreach ($release in $releases) {
+            if ($target.IgnoreOlderThan -and $release.published_at -lt [datetime]::ParseExact($target.IgnoreOlderThan, 'yyyy-MM-dd', $null)) {
+              Write-Host "古いリリースをスキップします: $($release.published_at.ToString('yyyy-MM-dd')) ($($release.tag_name))"
+              $skipped = $true
+              continue
+            }
             $asset = $release.assets | Where-Object { $_.name -match $target.Asset } | Select-Object -First 1
             $url = $asset.browser_download_url
             if ([string]::IsNullOrEmpty($url)) {
