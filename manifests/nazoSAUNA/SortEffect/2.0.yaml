@@ -1,29 +1,29 @@
-# Created using UpgradeManifestVersion.ps1 v0.3.0
+# Created using CreateManifest.ps1 v0.3.0
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SortEffect
 DisplayName: エフェクト並び替えプラグイン
-Version: "1.1"
-ReleaseDate: 2022-09-03
+Version: "2.0"
+ReleaseDate: 2024-08-13
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
-InstalledSize: 22014
+InstalledSize: 24995
 Developer:
 - nazoSAUNA
 Description: エフェクトのメニューをまとめたり並び替えたりするプラグイン
 Website:
 - https://github.com/nazonoSAUNA/SortEffect
 Files:
-- SourceUrl: https://github.com/nazonoSAUNA/SortEffect/releases/download/1.1/SortEffect_v1.1.zip
-  SHA256: a6717c145bbcd02d9ac3a29f2fcd124e8cbd9343627b7b4d08966c93f7dc6b9b
+- SourceUrl: https://github.com/nazonoSAUNA/SortEffect/releases/download/2.0/SortEffect_v2.0.zip
+  SHA256: 72d3d4d1534f2da46d9a25c2dee2b98318d254cd292dc6a745b08bead2d1fa93
   Files:
   - Path: Credit.md
     SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
   - Path: LICENSE
     SHA256: c6dc4e84d8046203587c69aa5f8cccd4dcb55c8fb341023449004bcdc802f3c4
   - Path: 説明書.txt
-    SHA256: 5bc0a56b0ebf305236d338bcd47b1bfe9f7f4df38b69e0539abba3f5f02227ee
+    SHA256: eebb5c19ba4d1e1778bd7492565a0c2b428d131c50ab3206037b8fa5a1e23d9c
   - Path: exa/ランダム間隔で落ちながら登場.exa
     SHA256: 0aa9c7021a7908b9eb870ccfcea828f284f00c3610fa7b1a45eee8c6a36f480a
     Install:
@@ -129,8 +129,13 @@ Files:
     Install:
       TargetPath: plugins/SortEffect_Setting.txt
       ConfFile: true
+  - Path: plugins/SortEffect_SettingF.txt
+    SHA256: 1a924767ce21bb663a3c8362b214683f5b3757de0d78f056fca6af1ed3bee477
+    Install:
+      TargetPath: plugins/SortEffect_SettingF.txt
+      ConfFile: true
   - Path: plugins/SortEffect.auf
-    SHA256: 6316b0b15355da12f06ae3dd41ad764bcc5fc50066ad78890df33b987d5a06c4
+    SHA256: 6e8548aa864404cc6056962a2ac09c0bc033ef13a20071a2d2cfe53424e93aaf
     Install:
       TargetPath: plugins/SortEffect.auf
 Plugins:

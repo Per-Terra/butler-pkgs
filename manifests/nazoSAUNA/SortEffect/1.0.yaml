@@ -128,11 +128,11 @@ Files:
     SHA256: 2b306d22f3a05541e883ca771c3acc1422fc1e046756047dacfebd24941df627
     Install:
       TargetPath: plugins/SortEffect_Setting.txt
+      ConfFile: true
   - Path: plugins/SortEffect.auf
     SHA256: 573df17bdd6ae30979af3e7a57f2111b8ef59bf5bb7e5ddcae304fa9a3eebde2
     Install:
       TargetPath: plugins/SortEffect.auf
-      ConfFile: true
 Plugins:
 - Name: エフェクト並び替え
   Type: Filter

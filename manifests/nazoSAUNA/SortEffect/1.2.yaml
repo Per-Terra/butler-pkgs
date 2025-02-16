@@ -1,10 +1,10 @@
-# Created using UpgradeManifestVersion.ps1 v0.3.0
+# Created using CreateManifest.ps1 v0.3.0
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
 
 Identifier: SortEffect
 DisplayName: エフェクト並び替えプラグイン
-Version: "1.1"
-ReleaseDate: 2022-09-03
+Version: "1.2"
+ReleaseDate: 2024-03-18
 Section: Plugin/Other
 Depends:
 - exedit (= 0.92)
@@ -15,8 +15,8 @@ Description: エフェクトのメニューをまとめたり並び替えたり�
 Website:
 - https://github.com/nazonoSAUNA/SortEffect
 Files:
-- SourceUrl: https://github.com/nazonoSAUNA/SortEffect/releases/download/1.1/SortEffect_v1.1.zip
-  SHA256: a6717c145bbcd02d9ac3a29f2fcd124e8cbd9343627b7b4d08966c93f7dc6b9b
+- SourceUrl: https://github.com/nazonoSAUNA/SortEffect/releases/download/1.2/SortEffect_v1.2.zip
+  SHA256: 304251cbf91d9ec729ddb600c9978cb7f94a31ebbc23c5670d5abd144f70efcb
   Files:
   - Path: Credit.md
     SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
@@ -130,7 +130,7 @@ Files:
       TargetPath: plugins/SortEffect_Setting.txt
       ConfFile: true
   - Path: plugins/SortEffect.auf
-    SHA256: 6316b0b15355da12f06ae3dd41ad764bcc5fc50066ad78890df33b987d5a06c4
+    SHA256: 4ef1c56f5feabcf327fdcba8840e71caf4459db3a80e43fda5c42454158cb5a3
     Install:
       TargetPath: plugins/SortEffect.auf
 Plugins:
