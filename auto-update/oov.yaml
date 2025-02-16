@@ -1,6 +1,5 @@
 - Identifier: AudioMixer
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_audiomixer
@@ -13,7 +12,6 @@
 
 - Identifier: aviutl-browser
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_browser
@@ -26,7 +24,6 @@
 
 - Identifier: aviutl-browser-glb
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_browser_glb
@@ -39,7 +36,6 @@
 
 - Identifier: bridge.dll
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_bridge
@@ -52,7 +48,7 @@
 
 - Identifier: CacheText
   Developer: oov
-  Enable: false
+  Disabled: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_cachetext
@@ -65,7 +61,6 @@
 
 - Identifier: Extram2
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_extram2
@@ -79,7 +74,6 @@
 
 - Identifier: ffmpeg-input
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_ffmpeg_input
@@ -92,7 +86,6 @@
 
 - Identifier: forcepser
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: forcepser
@@ -105,7 +98,6 @@
 
 - Identifier: GCMZDrops
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_gcmzdrops
@@ -118,7 +110,6 @@
 
 - Identifier: PSDToolKit
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_psdtoolkit
@@ -131,7 +122,7 @@
 
 - Identifier: RamPreview
   Developer: oov
-  Enable: false
+  Disabled: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_rampreview
@@ -144,7 +135,7 @@
 
 - Identifier: RelMovieHandle
   Developer: oov
-  Enable: false
+  Disabled: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_relmoviehandle
@@ -157,7 +148,6 @@
 
 - Identifier: textassist
   Developer: oov
-  Enable: true
   Type: GitHub
   Owner: oov
   Repository: aviutl_textassist

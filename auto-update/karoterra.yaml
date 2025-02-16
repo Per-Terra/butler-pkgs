@@ -1,6 +1,5 @@
 - Identifier: WaveformPreview
   Developer: karoterra
-  Enable: true
   Type: GitHub
   Owner: karoterra
   Repository: aviutl_WaveformPreview
@@ -13,7 +12,6 @@
 
 - Identifier: MarkdownEX
   Developer: karoterra
-  Enable: true
   Type: GitHub
   Owner: karoterra
   Repository: aviutl-markdownex

@@ -1,6 +1,5 @@
 - Identifier: InputPipePlugin
   Developer: amate
-  Enable: true
   Type: GitHub
   Owner: amate
   Repository: InputPipePlugin
@@ -13,7 +12,7 @@
 
 - Identifier: PropertyWindowFixerPlugin
   Developer: amate
-  Enable: false
+  Disabled: true
   Type: GitHub
   Owner: amate
   Repository: PropertyWindowFixerPlugin

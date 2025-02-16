@@ -1,6 +1,5 @@
 - Identifier: buttonsc92
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: buttonsc92
@@ -13,7 +12,6 @@
 
 - Identifier: DlgSceneJmp
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: DlgSceneJmp
@@ -26,7 +24,6 @@
 
 - Identifier: LayerWheel
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: LayerWheel
@@ -36,7 +33,6 @@
 
 - Identifier: mousehwheel
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: mousehwheel
@@ -46,7 +42,6 @@
 
 - Identifier: patch.aul
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: patch.aul
@@ -60,7 +55,6 @@
 
 - Identifier: SceneLayerCopy
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: SceneLayerCopy
@@ -70,7 +64,6 @@
 
 - Identifier: SortEffect
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: SortEffect
@@ -80,7 +73,6 @@
 
 - Identifier: switch-drawfilter-gui
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: switch_drawfilter_gui
@@ -93,7 +85,6 @@
 
 - Identifier: ThinOutRendering
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: ThinOutRendering
@@ -106,7 +97,6 @@
 
 - Identifier: tl-Item-cut
   Developer: nazoSAUNA
-  Enable: true
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: tl_Item_cut

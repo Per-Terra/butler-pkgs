@@ -1,5 +1,4 @@
-- Enable: true
-  Identifier: L-SMASH-Works
+- Identifier: L-SMASH-Works
   Developer: Mr-Ojii
   Type: GitHub
   Owner: Mr-Ojii
@@ -11,8 +10,7 @@
       find: ^L-SMASH-Works_(r\d+)_Mr-Ojii_vimeo\.zip$
       replace: $1
 
-- Enable: true
-  Identifier: MotionTrackingMKIIPlus
+- Identifier: MotionTrackingMKIIPlus
   Developer: Mr-Ojii
   Type: GitHub
   Owner: Mr-Ojii

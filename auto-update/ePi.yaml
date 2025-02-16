@@ -1,5 +1,4 @@
-- Enable: true
-  Identifier: patch.aul
+- Identifier: patch.aul
   Developer: ePi
   Type: GitHub
   Owner: ePi5131

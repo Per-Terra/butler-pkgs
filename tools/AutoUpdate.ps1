@@ -101,13 +101,12 @@ process {
   Write-Host "$($targets.Count) 件の処理を開始します"
 
   foreach ($target in $targets) {
-    if ($target.Enable) {
-      Write-Host "処理中: $($target.Developer)/$($target.Identifier)"
-    }
-    else {
+    if ($target.Disabled) {
       Write-Host "無効: $($target.Developer)/$($target.Identifier)"
       continue
     }
+
+    Write-Host "処理中: $($target.Developer)/$($target.Identifier)"
 
     $sources = @()
 

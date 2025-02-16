@@ -1,6 +1,5 @@
 - Identifier: AdvancedMouseOperation
   Developer: kumrnm
-  Enable: true
   Type: GitHub
   Owner: kumrnm
   Repository: aviutl-advanced-mouse-operation
@@ -13,7 +12,6 @@
 
 - Identifier: authentic-grouping
   Developer: kumrnm
-  Enable: true
   Type: GitHub
   Owner: kumrnm
   Repository: aviutl-authentic-grouping
@@ -26,7 +24,6 @@
 
 - Identifier: easing-quick-setup
   Developer: kumrnm
-  Enable: true
   Type: GitHub
   Owner: kumrnm
   Repository: aviutl-easing-quick-setup

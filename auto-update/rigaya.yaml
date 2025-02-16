@@ -1,6 +1,5 @@
 - Identifier: clfilters
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: Aviutl-clfilters
@@ -10,7 +9,6 @@
 
 - Identifier: ffmpegOut
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: ffmpegOut
@@ -20,7 +18,6 @@
 
 - Identifier: NVEnc
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: NVEnc
@@ -30,7 +27,6 @@
 
 - Identifier: QSVEnc
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: QSVEnc
@@ -40,7 +36,6 @@
 
 - Identifier: svtAV1guiEx
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: svtAV1guiEx
@@ -50,7 +45,6 @@
 
 - Identifier: VCEEnc
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: VCEEnc
@@ -60,7 +54,6 @@
 
 - Identifier: VVenCguiEx
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: VVenCguiEx
@@ -73,7 +66,6 @@
 
 - Identifier: x264guiEx
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: x264guiEx
@@ -83,7 +75,6 @@
 
 - Identifier: x265guiEx
   Developer: rigaya
-  Enable: true
   Type: GitHub
   Owner: rigaya
   Repository: x265guiEx
