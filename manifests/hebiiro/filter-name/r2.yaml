@@ -1,0 +1,39 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: filter-name
+DisplayName: フィルタ名調整
+Version: r2
+ReleaseDate: 2024-07-10
+Section: Plugin/Other
+InstalledSize: 233543
+Developer:
+- hebiiro
+Description: 設定ダイアログ内のアニメーション効果の表示名を調整するプラグイン
+Website:
+- https://github.com/hebiiro/aviutl.filter_name.auf
+Files:
+- SourceUrl: https://github.com/hebiiro/aviutl.filter_name.auf/releases/download/r2/aviutl.filter_name.auf.r2.zip
+  SHA256: 85e98b7eb216f6ad4d8ab0628032fd029cd0319f4f7d0d7ff39cc7e994dc1e86
+  Files:
+  - Path: CREDITS.md
+    SHA256: f1e9b96728ab058fa41131fd8e1e5150e82b977683b5673192d8c2ce92012854
+  - Path: LICENSE
+    SHA256: 44440e9e9f92f5f00a847ba8e9e655660a8d4a931d7af5c049108f7d89c340b0
+  - Path: README.md
+    SHA256: a6d3dc0e38dbe367ea45f6813144ae806be698830af1f129a5b058b9c6a05ccb
+  - Path: plugins/filter_name.auf
+    SHA256: 5c48963d9973aff06a4aac90049384d560e106dddb6daf82d68979e144194965
+    Install:
+      TargetPath: plugins/filter_name.auf
+  - Path: plugins/filter_name.ini
+    SHA256: 980d3e992719f07c248f6eee3725bf017494e95dbfa60b97d5589dd837bcd9ab
+    Install:
+      TargetPath: plugins/filter_name.ini
+      ConfFile: true
+Plugins:
+- Name: フィルタ名調整
+  Information: フィルタ名調整 r2 by 蛇色 / originator 兎 / AviUtl知識共有(Discord)
+  Type: Filter
+  InstallPath: plugins/filter_name.auf
+ManifestVersion: 0.3.0

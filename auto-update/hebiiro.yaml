@@ -118,6 +118,15 @@
       find: ^.*?(\d[\d.]*\d).*$
       replace: $1
 
+- Identifier: filter-name
+  Developer: hebiiro
+  Type: GitHub
+  Owner: hebiiro
+  Repository: aviutl.filter_name.auf
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+
 - Identifier: LevelMeter
   Developer: hebiiro
   Type: GitHub
