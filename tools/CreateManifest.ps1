@@ -413,17 +413,6 @@ if ($Update) {
 
   # 最新のマニフェストを取得
   $manifest = $manifests | Sort-Object -Property @{
-    # Version でソート
-    Expression = {
-      if ($null -ne $_.Version) {
-        $_.Version
-      }
-      else {
-        ''
-      }
-    }
-    Descending = $true
-  }, @{
     # ReleaseDate でソート
     Expression = {
       if ($null -ne $_.ReleaseDate) {
@@ -431,6 +420,17 @@ if ($Update) {
       }
       else {
         [datetime]::MinValue
+      }
+    }
+    Descending = $true
+  }, @{
+    # Version でソート
+    Expression = {
+      if ($null -ne $_.Version) {
+        $_.Version
+      }
+      else {
+        ''
       }
     }
     Descending = $true

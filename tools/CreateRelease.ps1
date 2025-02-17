@@ -65,17 +65,6 @@ $sortedPackages = [ordered]@{}
 foreach ($identifier in ($packages.Keys | Sort-Object)) {
   $sortedPackages.Add($identifier, [ordered]@{})
   foreach ($version in ($packages[$identifier].Keys | Sort-Object -Property @{
-        # Version でソート
-        Expression = {
-          if ($null -ne $packages[$identifier][$_].Version) {
-            $packages[$identifier][$_].Version
-          }
-          else {
-            ''
-          }
-        }
-        Descending = $true
-      }, @{
         # ReleaseDate でソート
         Expression = {
           if ($null -ne $packages[$identifier][$_].ReleaseDate) {
@@ -83,6 +72,17 @@ foreach ($identifier in ($packages.Keys | Sort-Object)) {
           }
           else {
             [datetime]::MinValue
+          }
+        }
+        Descending = $true
+      }, @{
+        # Version でソート
+        Expression = {
+          if ($null -ne $packages[$identifier][$_].Version) {
+            $packages[$identifier][$_].Version
+          }
+          else {
+            ''
           }
         }
         Descending = $true
