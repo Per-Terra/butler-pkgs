@@ -1,0 +1,37 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: layer-wheel2
+DisplayName: Layer Wheel 2
+Version: "1.11"
+ReleaseDate: 2024-09-15
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 15354
+Developer:
+- sigma-axis
+Description: |-
+  拡張編集のホイール操作がマウス位置によって，レイヤー部分で縦スクロール，拡大率ゲージで拡大縮小できるようになるプラグイン
+  拡張編集のレイヤーの部分でマウスホイールすると縦スクロールになったり，拡大率のゲージ部分だとタイムラインの拡大縮小ができるプラグイン．
+Website:
+- https://github.com/sigma-axis/aviutl_layer_wheel2
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_layer_wheel2/releases/download/v1.11/aviutl_layer_wheel2-v1.11.zip
+  SHA256: edbd43fe046b1946014a7dc96abb256eb8236514985d44aae82d62194989ee5c
+  Files:
+  - Path: layer_wheel2.auf
+    SHA256: 2f2d04f014d79f738b523819948d585ef3c4a1dde7df052d0ec305196dc74cb8
+    Install:
+      TargetPath: plugins/layer_wheel2.auf
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: README.md
+    SHA256: 1a04585c6a7268be664ffc0fe98e33b98e972029bb1f6ed26518048459532475
+Plugins:
+- Name: Layer Wheel 2
+  Information: Layer Wheel 2 v1.11 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/layer_wheel2.auf
+ManifestVersion: 0.3.0
