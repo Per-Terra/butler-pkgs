@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: ConvexClosure-S
+DisplayName: 凸包σ
+Version: "1.00"
+ReleaseDate: 2024-07-24
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 47007
+Developer:
+- sigma-axis
+Description: 凸包を描画するフィルタ効果「凸包σ」を追加する拡張編集フィルタプラグイン
+Website:
+- https://github.com/sigma-axis/aviutl_ConvexClosure_S
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_ConvexClosure_S/releases/download/v1.00/aviutl_ConvexClosure_S-v1.00.zip
+  SHA256: 65edc967fb3564dfe816b0143e2da6b5574b1b89870239286890a1f248b34266
+  Files:
+  - Path: ConvexClosure_S.eef
+    SHA256: ef3d3aca6738853c857cc28bddfb7a35316d85ffe232a449a3d2a9b390959a97
+    Install:
+      TargetPath: plugins/ConvexClosure_S.eef
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: README.md
+    SHA256: 6108259766b1ac7abff6ca47e663e1f3f0513a0731995879fac66b686d4e84e3
+ManifestVersion: 0.3.0
