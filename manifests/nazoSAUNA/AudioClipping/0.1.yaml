@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: AudioClipping
+DisplayName: 音声クリッピング
+Version: "0.1"
+ReleaseDate: 2024-06-04
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 10249
+Developer:
+- nazoSAUNA
+Description: 拡張編集フィルタプラグイン「音声クリッピング」いわゆる音割れ
+Website:
+- https://github.com/nazonoSAUNA/AudioClipping
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/AudioClipping/releases/download/v0.1/AudioClipping.zip
+  SHA256: 0a2c0a28bf80947e5339c10e5c4de07bf9f1b59a498e1ac85c91f93750de4ad4
+  Files:
+  - Path: AudioClipping.eef
+    SHA256: 2c8446abf3ca08ecd94c0edc9c9d2c2f684fcd7747ee8e8729ce203e3d901cea
+    Install:
+      TargetPath: plugins/AudioClipping.eef
+  - Path: Credit.md
+    SHA256: 0cf66d19b11b9c31eaa618220ea46079ece2da99f8b0f7c74415593690809ebe
+ManifestVersion: 0.3.0
