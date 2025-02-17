@@ -45,3 +45,15 @@
     regex:
       find: ^v(.*)$
       replace: $1
+
+- Identifier: toggle-layers
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_toggle_layers
+  Asset: ^aviutl_toggle_layers-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1

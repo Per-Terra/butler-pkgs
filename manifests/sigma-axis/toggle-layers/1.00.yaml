@@ -1,0 +1,37 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: toggle-layers
+DisplayName: レイヤー一括切り替え
+Version: "1.00"
+ReleaseDate: 2024-04-25
+Section: Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+Recommends:
+- patch.aul (>= r43+ss60)
+InstalledSize: 14935
+Developer:
+- sigma-axis
+Description: 複数レイヤーの表示 / 非表示状態をドラッグ操作で一括に切り替えられるようになるなど，レイヤーに対するマウス操作を拡充するプラグイン
+Website:
+- https://github.com/sigma-axis/aviutl_toggle_layers
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_toggle_layers/releases/download/v1.00/aviutl_toggle_layers-v1.00.zip
+  SHA256: 7cf893822ae37c2b4e5aa56b0d147c87f66a211b80cd3eeac7bc3bb4a07e86b8
+  Files:
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: README.md
+    SHA256: 8172015bb1c295df3fcaf6fff27c6d1e147c47577582eb75efbb7b43c863de96
+  - Path: toggle_layers.auf
+    SHA256: e623474a2f29a0a8e6a11e123b7746681458e0e071980ff777b66195b4172398
+    Install:
+      TargetPath: plugins/toggle_layers.auf
+Plugins:
+- Name: レイヤー一括切り替え
+  Information: レイヤー一括切り替え v1.00 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/toggle_layers.auf
+ManifestVersion: 0.3.0
