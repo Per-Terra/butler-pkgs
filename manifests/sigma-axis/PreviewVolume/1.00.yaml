@@ -1,0 +1,39 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: PreviewVolume
+DisplayName: プレビュー音量
+Version: "1.00"
+ReleaseDate: 2024-07-25
+Section: Plugin/Filter
+Depends:
+  - aviutl (= 1.10)
+InstalledSize: 25581
+Developer:
+- sigma-axis
+Description: プレビュー再生する際の音量を調整するウィンドウを追加するプラグイン
+Website:
+- https://github.com/sigma-axis/aviutl_PreviewVolume
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_PreviewVolume/releases/download/v1.00/aviutl_PreviewVolume-v1.00.zip
+  SHA256: ea73652414beb9fddb3d4dfe2abd520327d4925a3657479ab1454fcd38103272
+  Files:
+  - Path: LICENSE
+    SHA256: f4e7f373b9b996950337e8d41a4a2939c2d90b7725e9baf3d5084a22717ad328
+  - Path: PreviewVolume.auf
+    SHA256: a1718ba50c69c6c8abb44fbc3f0a8326000beddc33538cefd0a0f549a8311e81
+    Install:
+      TargetPath: plugins/PreviewVolume.auf
+  - Path: PreviewVolume.ini
+    SHA256: 55ef988dba97bc9db5f40a54b3b50662977c7707eb493d6c9a276af4f5b60848
+    Install:
+      TargetPath: plugins/PreviewVolume.ini
+      ConfFile: true
+  - Path: README.md
+    SHA256: 9e29e0878744bd9263511a736bf77994e5469eed2437bab0455c835641edd94b
+Plugins:
+- Name: プレビュー音量
+  Information: プレビュー音量 v1.00 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/PreviewVolume.auf
+ManifestVersion: 0.3.0

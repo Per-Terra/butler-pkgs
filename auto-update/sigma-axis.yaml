@@ -34,6 +34,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: PreviewVolume
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_PreviewVolume
+  Asset: ^aviutl_PreviewVolume-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: rot-center
   Developer: sigma-axis
   Type: GitHub
