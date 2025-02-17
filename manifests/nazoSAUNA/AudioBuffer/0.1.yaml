@@ -7,7 +7,7 @@ Version: "0.1"
 ReleaseDate: 2024-05-14
 Section: Other
 Depends:
-  - patch.aul (>= r43+ss58)
+- patch.aul (>= r43+ss58)
 InstalledSize: 9737
 Developer:
 - nazoSAUNA

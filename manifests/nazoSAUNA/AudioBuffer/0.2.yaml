@@ -7,7 +7,7 @@ Version: "0.2"
 ReleaseDate: 2025-01-18
 Section: Other
 Depends:
-  - patch.aul (>= r43+ss58)
+- patch.aul (>= r43+ss58)
 InstalledSize: 10249
 Developer:
 - nazoSAUNA
