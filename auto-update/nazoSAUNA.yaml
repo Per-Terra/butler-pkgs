@@ -90,6 +90,18 @@
     # r43_40_ ってなってるのでそれに対応
   IgnoreOlderThan: 2023-01-01 # r43+ss1 (これ以前のものは手動で対応済)
 
+- Identifier: ReverberationObject
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: ReverberationObject.eef
+  Asset: ^ReverberationObject\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: SceneLayerCopy
   Developer: nazoSAUNA
   Type: GitHub

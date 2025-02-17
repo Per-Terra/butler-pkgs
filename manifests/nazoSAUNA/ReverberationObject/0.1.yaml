@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: ReverberationObject
+DisplayName: 残響オブジェクト
+Version: "0.1"
+ReleaseDate: 2024-05-28
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 10761
+Developer:
+- nazoSAUNA
+Description: |-
+  拡張編集フィルタプラグイン「残響オブジェクト」
+  セリフやBGMなどの音声オブジェクトに音声ディレイなどを付与した場合に、元のファイルの長さに従ってぶつ切りになり、後ろにあるはずのディレイ音のみを鳴らすことが出来ないため、残響オブジェクトを置くことでそれを実現する
+Website:
+- https://github.com/nazonoSAUNA/ReverberationObject.eef
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/ReverberationObject.eef/releases/download/v0.1/ReverberationObject.zip
+  SHA256: dda602176bfd7bfa81b4f451e6802043c2e61f208138d3bb66c0d89920b4c74d
+  Files:
+  - Path: Credit.md
+    SHA256: 0cf66d19b11b9c31eaa618220ea46079ece2da99f8b0f7c74415593690809ebe
+  - Path: ReverberationObject.eef
+    SHA256: 14604b69a591c5f6cc0c5654cc680217e822c54b5a2432e4f8b14c2af1bb9fe1
+    Install:
+      TargetPath: plugins/ReverberationObject.eef
+ManifestVersion: 0.3.0
