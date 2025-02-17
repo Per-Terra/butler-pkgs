@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: autosaver
+Version: r3
+ReleaseDate: 2023-03-21
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+InstalledSize: 266752
+Developer:
+- ePi
+Description: |-
+  AviUtlの編集プロジェクトの自動保存
+  AviUtl version 1.10下で任意のフィルタプラグインを配置可能な場所にautosaver.aufを配置することでインストールできる。
+  起動時、または前回の自動保存時からある時間以上の間隔が空いてから編集中にレンダリングが発生したときに、現在開いている編集プロジェクトの自動保存を実行する。
+  ある時間は既定では5分であり、autosaver.aufと同じディレクトリに生成されるautosaver.jsonのdurationで設定を変更できる。 単位は秒である。
+  自動保存が行われる先は、編集プロジェクトを保存していればその編集プロジェクトのディレクトリに生成されるautosaverディレクトリ、保存していなければ<autosaver.auf dir>\autosaverである。
+  自動保存された編集プロジェクトのファイル名は%Y-%m-%d-%H-%M-%S.aupの形式になる。
+Website:
+- https://github.com/ePi5131/autosaver
+Files:
+- SourceUrl: https://github.com/ePi5131/autosaver/releases/download/r3/autosaver.auf
+  SHA256: 360edfd310fcfa8feed37b1940f635a434bdc6c8228f6e26610c9fa85b9d0fdd
+  Install:
+    TargetPath: plugins/autosaver.auf
+Plugins:
+- Name: autosaver
+  Information: autosaver r3 by ePi
+  Type: Filter
+  InstallPath: plugins/autosaver.auf
+ManifestVersion: 0.3.0
