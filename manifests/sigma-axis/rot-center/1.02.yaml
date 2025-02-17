@@ -1,0 +1,33 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: rot-center
+DisplayName: 回転中心・上下左右揃え
+Version: "1.02"
+ReleaseDate: 2024-06-17
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 22036
+Developer:
+- sigma-axis
+Description: |-
+  回転中心移動や上下左右揃えができる拡張編集フィルタプラグイン
+  拡張編集フィルタで回転中心を移動させるフィルタがなぜかなかったため追加してみました．
+  ついでにオブジェクトを上下左右揃えにできるフィルタも一緒に同梱しています． ~~（抱き合わせ商法）~~
+  [nazonoSAUNA フォーク版の patch.aul](https://github.com/nazonoSAUNA/patch.aul) の機能の，拡張編集にフィルタ効果を追加するプラグインの練習です．
+Website:
+- https://github.com/sigma-axis/aviutl_rot_center
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_rot_center/releases/download/v1.02/aviutl_rot_center-v1.02.zip
+  SHA256: 193ac6cc56ef41b83f028fbe9dcdfc3d0062255a6a805b79e2f8663d4d8f1bd3
+  Files:
+  - Path: LICENSE
+    SHA256: f4e7f373b9b996950337e8d41a4a2939c2d90b7725e9baf3d5084a22717ad328
+  - Path: README.md
+    SHA256: fe150c721a86e40d1d3cda398dae890597409cd6c451649ca38bf71cd7a45777
+  - Path: rot_center.eef
+    SHA256: abd657002e8da81abc893754664e5f9e0fe1dc12338a667e4c3926141ef65f73
+    Install:
+      TargetPath: plugins/rot_center.eef
+ManifestVersion: 0.3.0
