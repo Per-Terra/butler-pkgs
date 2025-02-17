@@ -65,7 +65,7 @@ catch {
 $ArchiveExtensions = @('.zip', '.7z')
 $PluginExtensions = @('.exe', '.dll', '.auf', '.aui', '.auo', '.auc', '.aul', '.eef', '.ini')
 $ScriptExtensions = @('.anm', '.obj', '.scn', '.cam', '.tra', '.lua')
-$ConfExtensions = @('.ini', '.stg', '.xml')
+$ConfExtensions = @('.ini', '.json', '.stg', '.xml')
 
 function Get-FilesInArchive {
   param (

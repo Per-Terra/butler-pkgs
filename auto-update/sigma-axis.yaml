@@ -70,6 +70,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: quick-settings
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_quick_settings
+  Asset: ^aviutl_quick_settings-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: rot-center
   Developer: sigma-axis
   Type: GitHub

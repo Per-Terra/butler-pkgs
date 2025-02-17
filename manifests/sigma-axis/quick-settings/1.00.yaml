@@ -1,0 +1,42 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: quick-settings
+DisplayName: クイック設定
+Version: "1.00"
+ReleaseDate: 2024-08-28
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 60860
+Developer:
+- sigma-axis
+Description: |-
+  AviUtl や拡張編集の環境設定を別ウィンドウで操作するプラグイン
+  AviUtl や拡張編集の環境設定の一部項目を別ウィンドウに表示して，手軽に手早く切り替えられるようになるプラグインです．環境設定のダイアログを表示させることなく，編集状況に応じて都合のいい設定にその都度切り替えられます．
+  一部の設定項目はショートカットキーによる設定切り替えができるよう，メニュー項目にも切り替えコマンドを追加しています．
+Website:
+- https://github.com/sigma-axis/aviutl_quick_settings
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_quick_settings/releases/download/v1.00/aviutl_quick_settings-v1.00.zip
+  SHA256: f7b44471223c08aceb63f40e2902f30680c24a52fa5a5343f3130b07cacf74e5
+  Files:
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: quick_settings.auf
+    SHA256: 3a036865eb053524025f16f5754c883107d213ce2260940adc16465329fff3c2
+    Install:
+      TargetPath: plugins/quick_settings.auf
+  - Path: quick_settings.json
+    SHA256: f7979fae1b1fb0ab1e5bca1ff84d6e5602e431348567d2c13ada7867accbb784
+    Install:
+      TargetPath: plugins/quick_settings.json
+  - Path: README.md
+    SHA256: e7da291f6b86e11e88584c61a80f17f7cdbaea451cd6cee38c31b13b5714addd
+Plugins:
+- Name: クイック設定
+  Information: クイック設定 v1.00 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/quick_settings.auf
+ManifestVersion: 0.3.0
