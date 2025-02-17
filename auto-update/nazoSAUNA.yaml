@@ -3,7 +3,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: AlphaCorrection.eef
-  Asset: ^AlphaCorrection\.zip$
+  Asset: ^AlphaCorrection.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -27,7 +27,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: AudioClipping
-  Asset: ^AudioClipping\.zip$
+  Asset: ^AudioClipping.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -51,7 +51,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: AudioFlip.eef
-  Asset: ^AudioFlip\.zip$
+  Asset: ^AudioFlip.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -63,7 +63,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: buttonsc92
-  Asset: ^buttonsc92\.zip$
+  Asset: ^buttonsc92.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -75,7 +75,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: DlgSceneJmp
-  Asset: ^dlgscenejmp\.zip$
+  Asset: ^dlgscenejmp.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -87,7 +87,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: Echo.eef
-  Asset: ^Echo\.zip$
+  Asset: ^Echo.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -99,7 +99,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: LayerWheel
-  Asset: ^layerwheel\.zip$
+  Asset: ^layerwheel.*\.zip$
   Version:
     from: tag_name
 
@@ -131,7 +131,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: ReverberationObject.eef
-  Asset: ^ReverberationObject\.zip$
+  Asset: ^ReverberationObject.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -143,7 +143,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: SceneLayerCopy
-  Asset: ^SceneLayerCopy\.zip$
+  Asset: ^SceneLayerCopy.*\.zip$
   Version:
     from: tag_name
 
@@ -152,7 +152,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: simple_wave.eef
-  Asset: ^simple_wave\.zip$
+  Asset: ^simple_wave.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -173,7 +173,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: sub_menu_item
-  Asset: ^sub_menu_item\.zip$
+  Asset: ^sub_menu_item.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -185,7 +185,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: switch_drawfilter_gui
-  Asset: ^switch_drawfilter_gui\.zip$
+  Asset: ^switch_drawfilter_gui.*\.zip$
   Version:
     from: tag_name
     regex:
@@ -197,7 +197,7 @@
   Type: GitHub
   Owner: nazonoSAUNA
   Repository: ThinOutRendering
-  Asset: ^ThinOutRendering\.zip$
+  Asset: ^ThinOutRendering.*\.zip$
   Version:
     from: tag_name
     regex:
