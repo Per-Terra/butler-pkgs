@@ -1,0 +1,48 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: Subtitler
+Version: 0.0.2
+ReleaseDate: 2024-09-02
+Section: Plugin/Other
+Depends:
+- aviutl (>= 1.00)
+- exedit (= 0.92)
+InstalledSize: 921297
+Developer:
+- oov
+Description: AviUtl+拡張編集の環境で Whisper による文字起こしをするためのプラグイン
+Website:
+- https://github.com/oov/aviutl_subtitler
+Files:
+- SourceUrl: https://github.com/oov/aviutl_subtitler/releases/download/v0.0.2/subtitler_v0.0.2.zip
+  SHA256: 85e02c7717e064caee0132d217f721863926e2b5906abe4c608acb906d881cbc
+  Files:
+  - Path: Subtitler.auf
+    SHA256: 340cf999e5f74206a6248a44d55285c493aa2031a24e5dc9b122e77b8c6a92ba
+    Install:
+      TargetPath: Subtitler.auf
+  - Path: Subtitler.txt
+    SHA256: 941a1c2ad64fb0f926a205f4d41558db8f96ed17874383b0232d7c60881037be
+  - Path: Subtitler/psdtoolkit_highlight.lua
+    SHA256: 2ede73b71bd0fb53e56ad24c269c44b824a5bae3fb61344f8aa1d5464c503faf
+    Install:
+      TargetPath: Subtitler/psdtoolkit_highlight.lua
+  - Path: Subtitler/psdtoolkit.lua
+    SHA256: a153d73cae01e2973490b3cc9eb8a2e0336be4176ebfc7e00b32183214b71ffb
+    Install:
+      TargetPath: Subtitler/psdtoolkit.lua
+  - Path: Subtitler/text_highlight.lua
+    SHA256: 4482340880bbcea5fd40f7b6278dea90f52f9d54d0ce05cc1c391efac3139431
+    Install:
+      TargetPath: Subtitler/text_highlight.lua
+  - Path: Subtitler/text.lua
+    SHA256: 497056c17f3ebd885c69d73b96e2a43dd93f300c10dcf82df5be21a18d6e5125
+    Install:
+      TargetPath: Subtitler/text.lua
+Plugins:
+- Name: Subtitler
+  Information: Subtitler v0.0.2 ( 4428dc9 )
+  Type: Filter
+  InstallPath: Subtitler.auf
+ManifestVersion: 0.3.0

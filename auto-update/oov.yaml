@@ -146,6 +146,18 @@
       $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
   Disabled: true # 3年以上更新されていないため
 
+- Identifier: Subtitler
+  Developer: oov
+  Type: GitHub
+  Owner: oov
+  Repository: aviutl_subtitler
+  Asset: ^subtitler_.*\.zip$
+  Version:
+    from: tag_name
+    script: |
+      $null = $version -match '^v(.*?)((?:alpha|beta|rc).*)?$'
+      $version = if ($matches[2]) { $matches[1] + '-' + $matches[2] } else { $matches[1] }
+
 - Identifier: textassist
   Developer: oov
   Type: GitHub
