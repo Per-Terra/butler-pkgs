@@ -23,7 +23,8 @@ Write-Host " $($manifests.Count) 件のYAMLファイルが見つかりました"
 $packages = [ordered]@{}
 $developers = [ordered]@{}
 
-$RootPath = "$(Split-Path -Path $PSScriptRoot -Parent)\"
+$rootPath = "$(Split-Path -Path $PSScriptRoot -Parent)\"
+$digits = [math]::Floor([math]::Log10($manifests.Count)) + 1
 for ($i = 0; $i -lt $manifests.Count; $i++) {
   $manifest = Get-Content -LiteralPath $manifests[$i].FullName -Raw | ConvertFrom-Yaml -Ordered
   if ($manifests[$i].Name -eq 'developer.yaml') {
@@ -51,9 +52,9 @@ for ($i = 0; $i -lt $manifests.Count; $i++) {
       $packages.Add($identifier, [ordered]@{ $version = $manifest })
     }
   }
-  $relativePath = $manifests[$i].FullName.Replace($RootPath, '')
-  $completed = ($i / $manifests.Count) * 100
-  Write-Progress -Activity 'YAMLファイルを読み込んでいます...' -Status $relativePath -PercentComplete $completed
+  $relativePath = $manifests[$i].FullName.Replace($rootPath, '')
+  $completed = ($i + 1) / $manifests.Count * 100
+  Write-Progress -Activity "YAMLファイルを読み込んでいます ($(($i + 1).ToString().PadLeft($digits, ' ')) / $($manifests.Count))" -Status $relativePath -PercentComplete $completed
 }
 Write-Progress -Activity 'YAMLファイルを読み込んでいます...' -Completed
 Write-Host 'YAMLファイルの読み込みが完了しました'
