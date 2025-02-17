@@ -191,3 +191,15 @@
     regex:
       find: ^v(.*)$
       replace: $1
+
+- Identifier: Volume
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: Volume.eef
+  Asset: ^Volume.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1

@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: Volume
+DisplayName: 音量
+Version: "0.2"
+ReleaseDate: 2025-01-18
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 11785
+Developer:
+- nazoSAUNA
+Description: 拡張編集フィルタプラグイン「音量」
+Website:
+- https://github.com/nazonoSAUNA/Volume.eef
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/Volume.eef/releases/download/v0.2/Volume_v0.2.zip
+  SHA256: bf14b98b5360a5b590f4cd30496e9e0c4e0743db4e2c9ded0830bd2158caaa6a
+  Files:
+  - Path: Credit.md
+    SHA256: 0cf66d19b11b9c31eaa618220ea46079ece2da99f8b0f7c74415593690809ebe
+  - Path: Volume.eef
+    SHA256: 050732a50b07a8f903befa89c3e16b928bc088eaa2c3a9e840c34a193e498011
+    Install:
+      TargetPath: plugins/Volume.eef
+ManifestVersion: 0.3.0
