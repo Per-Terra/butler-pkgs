@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: CircleBorder-S
+DisplayName: 円形縁取り
+Version: "1.14"
+ReleaseDate: 2025-01-05
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 167953
+Developer:
+- sigma-axis
+Description: 円形で縁取りするフィルタ効果などを追加する拡張編集フィルタプラグイン
+Website:
+- https://github.com/sigma-axis/aviutl_CircleBorder_S
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_CircleBorder_S/releases/download/v1.14/aviutl_CircleBorder_S-v1.14.zip
+  SHA256: 7244f7d7c6667387a0f8f2e844502037531f4af5586305d171b197176d56e3e7
+  Files:
+  - Path: CircleBorder_S.eef
+    SHA256: 77d2d59dd0283411efda76c5ac8ec81ffb15bfd08a709b19fd2899bf4cacf074
+    Install:
+      TargetPath: plugins/CircleBorder_S.eef
+  - Path: LICENSE
+    SHA256: 0694c421978a971423fdda4c2f418ff5499ea08d693506a13031d2a473112c09
+  - Path: README.md
+    SHA256: 80729af177f47a4d1f87d3da65dcae88d9b0d794a9d9143d1d62331e0cd0824c
+ManifestVersion: 0.3.0

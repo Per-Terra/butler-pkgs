@@ -10,6 +10,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: CircleBorder-S
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_CircleBorder_S
+  Asset: ^aviutl_CircleBorder_S-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: color-loupe
   Developer: sigma-axis
   Type: GitHub
