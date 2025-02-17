@@ -58,6 +58,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: Echo
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: Echo.eef
+  Asset: ^Echo\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: LayerWheel
   Developer: nazoSAUNA
   Type: GitHub

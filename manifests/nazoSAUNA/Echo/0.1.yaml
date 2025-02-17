@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: Echo
+DisplayName: エコー
+Version: "0.1"
+ReleaseDate: 2024-05-28
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 12297
+Developer:
+- nazoSAUNA
+Description: 拡張編集フィルタプラグイン「エコー」
+Website:
+- https://github.com/nazonoSAUNA/Echo.eef
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/Echo.eef/releases/download/v0.1/Echo.zip
+  SHA256: de4e854cb3db5da3de1449ab39d7cb5faa26d3ae1f6c3591c5365b1ae5f65e69
+  Files:
+  - Path: Credit.md
+    SHA256: 0cf66d19b11b9c31eaa618220ea46079ece2da99f8b0f7c74415593690809ebe
+  - Path: Echo.eef
+    SHA256: d6eded3cd9d30a7c3360442314140d5ca0830a70947964042896879c578b1f3c
+    Install:
+      TargetPath: plugins/Echo.eef
+ManifestVersion: 0.3.0
