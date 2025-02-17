@@ -98,7 +98,7 @@ process {
     return
   }
 
-  Write-Host "$($targets.Count) 件の処理を開始します"
+  Write-Host "$(@($targets).Count) 件の処理を開始します"
 
   foreach ($target in $targets) {
     if ($target.Disabled) {
