@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: neumorphism-S
+DisplayName: ニューモーフィズムσ
+Version: "1.01"
+ReleaseDate: 2024-08-17
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 25831
+Developer:
+- sigma-axis
+Description: |-
+  ニューモーフィズム (neumorphism) のフィルタ効果を追加する拡張編集フィルタプラグイン
+  影と光を描画してオブジェクトが出っ張っているような表現のできるフィルタ効果「ニューモーフィズムσ」を追加します．
+Website:
+- https://github.com/sigma-axis/aviutl_neumorphism_S
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_neumorphism_S/releases/download/v1.01/aviutl_neumorphism_S-v1.01.zip
+  SHA256: 31e63a0eda83e4e3153c006c15f4cb1e7b33ad6fa6ec7938d4714832c2469575
+  Files:
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: neumorphism_S.eef
+    SHA256: 6985181d743f928916ce5c929ae0a11edbd41af5f6b0d87990ecd322e3133c75
+    Install:
+      TargetPath: plugins/neumorphism_S.eef
+  - Path: README.md
+    SHA256: 01cd3d810158a1971fc81342eda855192f65817b687f3ad8a83c7e201c34ab80
+ManifestVersion: 0.3.0
