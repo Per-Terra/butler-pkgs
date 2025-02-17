@@ -4,6 +4,7 @@
 Identifier: auls-memref
 DisplayName: Aulsメモリ参照プラグイン
 Version: 2024-03-30
+ReleaseDate: 2024-03-30
 Section: Plugin/Other
 Depends:
 - aviutl (>= 1.00)
