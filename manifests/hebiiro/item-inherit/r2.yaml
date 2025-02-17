@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: item-inherit
+DisplayName: アイテム継承
+Version: r2
+ReleaseDate: 2024-09-30
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 47873
+Developer:
+- hebiiro
+Description: テキストオブジェクトの設定を継承できるようにする拡張編集フィルタプラグイン
+Website:
+- https://github.com/hebiiro/aviutl.item_inherit.eef
+Files:
+- SourceUrl: https://github.com/hebiiro/aviutl.item_inherit.eef/releases/download/r2/aviutl.item_inherit.eef.r2.zip
+  SHA256: ff717c3838faf563fb7a36f7c56291a7e29a92ba64d9baaab8258143d54bb9f0
+  Files:
+  - Path: CREDITS.md
+    SHA256: f1e9b96728ab058fa41131fd8e1e5150e82b977683b5673192d8c2ce92012854
+  - Path: LICENSE
+    SHA256: 44440e9e9f92f5f00a847ba8e9e655660a8d4a931d7af5c049108f7d89c340b0
+  - Path: README.md
+    SHA256: aec4c88af8771aa55bf6d22f32e9139575fbbe90714edfddf0703caac95b4a74
+  - Path: plugins/item_inherit.eef
+    SHA256: bb784b10a98eaf79a88fe06f0d8436770e7d7c3a01347e51d801eee29c755d52
+    Install:
+      TargetPath: plugins/item_inherit.eef
+ManifestVersion: 0.3.0

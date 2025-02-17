@@ -145,6 +145,15 @@
   Version:
     from: tag_name
 
+- Identifier: item-inherit
+  Developer: hebiiro
+  Type: GitHub
+  Owner: hebiiro
+  Repository: aviutl.item_inherit.eef
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+
 - Identifier: LevelMeter
   Developer: hebiiro
   Type: GitHub
