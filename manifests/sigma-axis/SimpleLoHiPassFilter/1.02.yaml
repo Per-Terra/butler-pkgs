@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: SimpleLoHiPassFilter
+DisplayName: 簡易ローパス・ハイパスフィルタ
+Version: "1.02"
+ReleaseDate: 2024-06-19
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 32880
+Developer:
+- sigma-axis
+Description: |-
+  簡易的な音声ハイパスローパスフィルタをかけられる拡張編集フィルタプラグイン
+  AviUtl の拡張編集に「簡易ローパスハイパス」フィルタ効果とフィルタオブジェクトを追加するプラグインです．音声にローパスフィルタをかけてこもったような音にしたり，ハイパスフィルタをかけて遠くから聞こえているような音にしたりできます．
+Website:
+- https://github.com/sigma-axis/aviutl_SimpleLoHiPassFilter
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_SimpleLoHiPassFilter/releases/download/v1.02/aviutl_SimpleLoHiPassFilter-v1.02.zip
+  SHA256: 0771e5cc9646474c5682678dde29075e1427047a94c4a2c9814ed70c9d4fc456
+  Files:
+  - Path: LICENSE
+    SHA256: f4e7f373b9b996950337e8d41a4a2939c2d90b7725e9baf3d5084a22717ad328
+  - Path: README.md
+    SHA256: 9dbea76b90b2d958255be9ee2f712e95f3dfbb132e4bf8ff51a9f13282585ccb
+  - Path: SimpleLoHiPassFilter.eef
+    SHA256: 278703a49a82d0052f5076ab316d1c50c1ae09cce462c693401de15a9696bcc7
+    Install:
+      TargetPath: plugins/SimpleLoHiPassFilter.eef
+ManifestVersion: 0.3.0
