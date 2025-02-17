@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: AudioFlip
+DisplayName: 反転(音声)
+Version: "0.1"
+ReleaseDate: 2024-05-14
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 10249
+Developer:
+- nazoSAUNA
+Description: 拡張編集フィルタプラグインの音声エフェクト。左右（ステレオ）反転と位相反転（インバート）
+Website:
+- https://github.com/nazonoSAUNA/AudioFlip.eef
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/AudioFlip.eef/releases/download/v0.1/AudioFlip.zip
+  SHA256: 07ab6d396510b18a0b00ef6b775ff565447a9e8192be816b5a4ca324341fedba
+  Files:
+  - Path: AudioFlip.eef
+    SHA256: 73bf8458fc9084218d739ab9e05538a16e914dc73fc1e7b9c4c1db5850993962
+    Install:
+      TargetPath: plugins/AudioFlip.eef
+  - Path: Credit.md
+    SHA256: 0cf66d19b11b9c31eaa618220ea46079ece2da99f8b0f7c74415593690809ebe
+ManifestVersion: 0.3.0

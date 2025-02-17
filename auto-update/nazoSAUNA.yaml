@@ -1,3 +1,15 @@
+- Identifier: AudioFlip
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: AudioFlip.eef
+  Asset: ^AudioFlip\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: buttonsc92
   Developer: nazoSAUNA
   Type: GitHub
