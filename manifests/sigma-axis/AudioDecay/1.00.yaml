@@ -1,0 +1,31 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: AudioDecay
+DisplayName: 音声劣化
+Version: "1.00"
+ReleaseDate: 2025-02-12
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 22468
+Developer:
+- sigma-axis
+Description: |-
+  音声を意図的に劣化させる拡張編集フィルタプラグイン
+  AviUtl の拡張編集に「音声劣化」フィルタ効果とフィルタオブジェクトを追加するプラグインです．音声のサンプルレートやビットレートを疑似的に下げて，音質を意図的に落とします．
+Website:
+- https://github.com/sigma-axis/aviutl_AudioDecay
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_AudioDecay/releases/download/v1.00/aviutl_AudioDecay-v1.00.zip
+  SHA256: db1fdc2ec1136a641911065c192e06e00dc42037c4023ef8eb8f0ca5ca09353b
+  Files:
+  - Path: AudioDecay.eef
+    SHA256: d72492ffdfaf461e81ec949a500ba6ab45d5eb738e4e99f5ef5fe5425b7da121
+    Install:
+      TargetPath: plugins/AudioDecay.eef
+  - Path: LICENSE
+    SHA256: f4e7f373b9b996950337e8d41a4a2939c2d90b7725e9baf3d5084a22717ad328
+  - Path: README.md
+    SHA256: d315bf0bd36e9f6d96d470f93027c8f901e5d095dac744dcc811db2656ee77f7
+ManifestVersion: 0.3.0

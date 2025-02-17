@@ -10,6 +10,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: AudioDecay
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_AudioDecay
+  Asset: ^aviutl_AudioDecay-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: CircleBorder-S
   Developer: sigma-axis
   Type: GitHub
