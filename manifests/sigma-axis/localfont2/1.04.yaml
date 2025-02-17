@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: localfont2
+DisplayName: Local Font 2
+Version: "1.04"
+ReleaseDate: 2024-01-24
+Section: Plugin/Other
+InstalledSize: 43607
+Developer:
+- sigma-axis
+Description: フォント管理を便利なように調整できるプラグイン
+Website:
+- https://github.com/sigma-axis/aviutl_localfont2
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_localfont2/releases/download/v1.04/aviutl_localfont2-v1.04.zip
+  SHA256: 5756e4ab661ee8a511a5ca11568c529f8e0cfbcd556510e29a0dc79cfaf7da35
+  Files:
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: localfont2.aul
+    SHA256: bdcc3a462908f1cdde80db329948d7b8beb4d0432fea0f48030f05439d146e6a
+    Install:
+      TargetPath: plugins/localfont2.aul
+  - Path: README.md
+    SHA256: 4c8230ccbe63f0d933a9e9980929c3aba88da58dd435774dedcfb52a73ac9fc7
+  - Path: Fonts/Excludes.txt
+    SHA256: 656cabcb8741662d8145558ebdc157da4e1a7a887862d7c74dce95175f74b138
+    Install:
+      TargetPath: Fonts/Excludes.txt
+      ConfFile: true
+ManifestVersion: 0.3.0

@@ -82,6 +82,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: localfont2
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_localfont2
+  Asset: ^aviutl_localfont2-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: neumorphism-S
   Developer: sigma-axis
   Type: GitHub
