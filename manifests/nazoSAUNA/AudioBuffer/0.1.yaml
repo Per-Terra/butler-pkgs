@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: AudioBuffer
+DisplayName: オーディオバッファ
+Version: "0.1"
+ReleaseDate: 2024-05-14
+Section: Other
+Depends:
+  - patch.aul (>= r43+ss58)
+InstalledSize: 9737
+Developer:
+- nazoSAUNA
+Description: フレームバッファの音声版
+Website:
+- https://github.com/nazonoSAUNA/AudioBuffer.eef
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/AudioBuffer.eef/releases/download/v0.1/AudioBuffer.zip
+  SHA256: f4508822a26996b3107530d28edd5995147b32aaa03e03c269dad65e5f3699fa
+  Files:
+  - Path: AudioBuffer.eef
+    SHA256: 0768850967d012ae1854feaa89fd0a83331db3b2730c9e110987fbf5d1e10acb
+    Install:
+      TargetPath: plugins/AudioBuffer.eef
+  - Path: Credit.md
+    SHA256: 0cf66d19b11b9c31eaa618220ea46079ece2da99f8b0f7c74415593690809ebe
+ManifestVersion: 0.3.0

@@ -10,6 +10,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: AudioBuffer
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: AudioBuffer.eef
+  Asset: ^AudioBuffer.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: AudioClipping
   Developer: nazoSAUNA
   Type: GitHub
