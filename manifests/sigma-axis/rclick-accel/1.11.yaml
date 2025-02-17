@@ -1,0 +1,43 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: rclick-accel
+DisplayName: 右クリメニューショトカ追加
+Version: "1.11"
+ReleaseDate: 2025-02-12
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 47628
+Developer:
+- sigma-axis
+Description: |-
+  拡張編集の各種右クリックメニューに，アクセラレータキー（ショートカットキー）を追加するプラグイン
+  各メニュー項目の名前の末尾に (&X) の形の文字列を付加します．
+  拡張編集フィルタプラグイン (.eef) やアルティメットプラグインのフィルタコピーで追加されたメニュー項目などにもショートカットを追加できます．
+Website:
+- https://github.com/sigma-axis/aviutl_rclick_accel
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_rclick_accel/releases/download/v1.11/aviutl_rclick_accel-v1.11.zip
+  SHA256: 9b68e8ad4f229a6122f2d9c988fa42b9b146209257ae18bc8cab9981f5e591ce
+  Files:
+  - Path: LICENSE
+    SHA256: 1395c365b5dc4ce63626878bfce2103da234027d22e95e3ae9c2b3632b5bce9e
+  - Path: rclick_accel.auf
+    SHA256: 7926805bda2e804d8f1c377f3ffd8dd68cc2ba978fa8c44fb61015794266408d
+    Install:
+      TargetPath: plugins/rclick_accel.auf
+  - Path: rclick_accel.ini
+    SHA256: d158ce9e0d0e93b39e32e167fb3bc4100376ec662b0e961c38e91080509c3a60
+    Install:
+      TargetPath: plugins/rclick_accel.ini
+      ConfFile: true
+  - Path: README.md
+    SHA256: 096fd9008f7732244d033f20496df8a3db5bdb60aa11d247957cf191b6013e15
+Plugins:
+- Name: 右クリメニューショトカ追加
+  Information: 右クリメニューショトカ追加 v1.11 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/rclick_accel.auf
+ManifestVersion: 0.3.0

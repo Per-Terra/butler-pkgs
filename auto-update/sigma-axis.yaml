@@ -130,6 +130,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: rclick-accel
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_rclick_accel
+  Asset: ^aviutl_rclick_accel-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: reactive-dlg
   Developer: sigma-axis
   Type: GitHub
