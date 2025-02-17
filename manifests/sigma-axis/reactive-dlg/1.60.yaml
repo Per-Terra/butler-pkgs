@@ -1,0 +1,40 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: reactive-dlg
+DisplayName: Reactive Dialog
+Version: "1.60"
+ReleaseDate: 2024-07-14
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 111175
+Developer:
+- sigma-axis
+Description: 拡張編集の設定ダイアログへのデータ入力・調整・操作方法を拡充するプラグイン
+Website:
+- https://github.com/sigma-axis/aviutl_reactive_dlg
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_reactive_dlg/releases/download/v1.60/aviutl_reactive_dlg-v1.60.zip
+  SHA256: d41798c7c87946d266361bd2389ea561672b608db5c84b9a4056db22c1a5b863
+  Files:
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: reactive_dlg.auf
+    SHA256: ce90a127131ae93755bfce657d4f2cd4e45bb13e8be7a8e9295ded3e84486e7a
+    Install:
+      TargetPath: plugins/reactive_dlg.auf
+  - Path: reactive_dlg.ini
+    SHA256: dd03d8f11d636fcf53c9b2eaeb4de5f484695cd05d2abd7cbf5412957d6a3085
+    Install:
+      TargetPath: plugins/reactive_dlg.ini
+      ConfFile: true
+  - Path: README.md
+    SHA256: eca17091cc93ad1c6ad9182900bdc0355ed1cd5a67eec2dc043e0070d3e2b389
+Plugins:
+- Name: Reactive Dialog
+  Information: Reactive Dialog v1.60 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/reactive_dlg.auf
+ManifestVersion: 0.3.0

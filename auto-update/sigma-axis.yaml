@@ -94,6 +94,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: reactive-dlg
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_reactive_dlg
+  Asset: ^aviutl_reactive_dlg-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: rot-center
   Developer: sigma-axis
   Type: GitHub
