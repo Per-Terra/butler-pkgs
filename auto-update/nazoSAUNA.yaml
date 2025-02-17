@@ -1,3 +1,15 @@
+- Identifier: AlphaCorrection
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: AlphaCorrection.eef
+  Asset: ^AlphaCorrection\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: AudioClipping
   Developer: nazoSAUNA
   Type: GitHub
