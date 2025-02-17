@@ -70,6 +70,15 @@
       find: ^.*?(\d[\d.]*\d).*$
       replace: $1
 
+- Identifier: clipboard-image
+  Developer: hebiiro
+  Type: GitHub
+  Owner: hebiiro
+  Repository: aviutl.clipboard_image.auf
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+
 - Identifier: ConfigChecker
   Developer: hebiiro
   Type: GitHub
