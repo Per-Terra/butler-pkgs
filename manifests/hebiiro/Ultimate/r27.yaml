@@ -6,6 +6,9 @@ DisplayName: アルティメットプラグイン
 Version: r27
 ReleaseDate: 2024-05-30
 Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
 InstalledSize: 10571000
 Developer:
 - hebiiro

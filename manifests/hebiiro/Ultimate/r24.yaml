@@ -6,6 +6,9 @@ DisplayName: アルティメットプラグイン
 Version: r24
 ReleaseDate: 2024-05-27
 Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
 InstalledSize: 10204346
 Developer:
 - hebiiro

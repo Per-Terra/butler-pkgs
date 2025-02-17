@@ -6,6 +6,9 @@ DisplayName: アルティメットプラグイン
 Version: r35
 ReleaseDate: 2024-06-22
 Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
 InstalledSize: 12131622
 Developer:
 - hebiiro

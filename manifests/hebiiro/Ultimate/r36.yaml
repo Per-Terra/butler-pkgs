@@ -7,7 +7,9 @@ Version: r36
 ReleaseDate: 2024-07-19
 Section: Plugin/Other
 Depends:
-  - Ultimate-Python
+- aviutl (= 1.10)
+- exedit (= 0.92)
+- Ultimate-Python
 InstalledSize: 16874802
 Developer:
 - hebiiro

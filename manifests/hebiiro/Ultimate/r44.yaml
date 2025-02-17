@@ -6,6 +6,10 @@ DisplayName: アルティメットプラグイン
 Version: r44
 ReleaseDate: 2024-11-02
 Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+- Ultimate-Python
 InstalledSize: 18909038
 Developer:
 - hebiiro

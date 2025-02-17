@@ -6,6 +6,9 @@ DisplayName: アルティメットプラグイン
 Version: r12
 ReleaseDate: 2023-12-13
 Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
 InstalledSize: 2967825
 Developer:
 - hebiiro

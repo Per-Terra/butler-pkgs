@@ -6,6 +6,10 @@ DisplayName: アルティメットプラグイン
 Version: r70
 ReleaseDate: 2025-01-27
 Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+- Ultimate-Python
 InstalledSize: 22421665
 Developer:
 - hebiiro
