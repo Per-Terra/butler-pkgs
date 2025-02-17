@@ -34,6 +34,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: AudioCrossFade
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: AudioCrossFade.eef
+  Asset: ^AudioCrossFade.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: AudioFlip
   Developer: nazoSAUNA
   Type: GitHub
