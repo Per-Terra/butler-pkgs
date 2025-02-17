@@ -121,7 +121,21 @@ function Get-FilesInArchive {
     }
     # hebiiro氏用の例外
     elseif ($Url.StartsWith('https://github.com/hebiiro/')) {
-      if ($fileInArchive.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($fileInArchive.Extension -ne '.wav'))) {
+      # それらしいディレクトリに配置されている場合は尊重
+      if ($relativePath -match '^(?:[^/]+/)?((?:plugins|script|exe_files)/.+)$') {
+        if ($fileInArchive.Extension -in $ConfExtensions) {
+          $file.Add('Install', @{
+              TargetPath = $Matches[1]
+              ConfFile   = $true
+            })
+        }
+        else {
+          $file.Add('Install', @{
+              TargetPath = $Matches[1]
+            })
+        }
+      }
+      elseif ($fileInArchive.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($fileInArchive.Extension -ne '.wav'))) {
         if ($fileInArchive.Extension -in $ConfExtensions -and -not ($relativePath -match '/Skin/')) {
           $file.Add('Install', @{
               TargetPath = ($relativePath -replace '^', 'plugins/')

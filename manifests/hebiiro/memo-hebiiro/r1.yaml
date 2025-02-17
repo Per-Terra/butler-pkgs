@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: memo-hebiiro
+DisplayName: メモ帳
+Version: r1
+ReleaseDate: 2024-06-22
+Section: Plugin/Other
+InstalledSize: 44812
+Developer:
+- hebiiro
+Description: メモ帳として使える複数行エディットボックスを表示します
+Website:
+- https://github.com/hebiiro/aviutl.memo.auf
+Files:
+- SourceUrl: https://github.com/hebiiro/aviutl.memo.auf/releases/download/r1/aviutl.memo.auf.r1.zip
+  SHA256: c11eef3d4b8d9833a50059540c59de933122f3bea039b5e1f76cfa23dc4e6ebe
+  Files:
+  - Path: CREDITS.md
+    SHA256: d715e191995fb717795ddca5411e2d9900cd1d27ed9ed9b5fba6bc298580542f
+  - Path: LICENSE
+    SHA256: 44440e9e9f92f5f00a847ba8e9e655660a8d4a931d7af5c049108f7d89c340b0
+  - Path: README.md
+    SHA256: d70427fa520b35b251cb8d2de46b6de81611d5e66229a8a08a3855d8b672221e
+  - Path: plugins/memo.auf
+    SHA256: c0b30ee33e865c5c6cc17f4f8248299a52bcc64b2482221b32ffb42c59ff10b9
+    Install:
+      TargetPath: plugins/memo.auf
+Plugins:
+- Name: メモ帳
+  Information: メモ帳 r1 by 蛇色
+  Type: Filter
+  InstallPath: plugins/memo.auf
+ManifestVersion: 0.3.0

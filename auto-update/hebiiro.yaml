@@ -142,6 +142,15 @@
       find: ^.*?(\d[\d.]*\d).*$
       replace: $1
 
+- Identifier: memo-hebiiro
+  Developer: hebiiro
+  Type: GitHub
+  Owner: hebiiro
+  Repository: aviutl.memo.auf
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+
 - Identifier: NoScrollText
   Developer: hebiiro
   Type: GitHub
