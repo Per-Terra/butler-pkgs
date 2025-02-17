@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: simple-wave
+DisplayName: 単純音生成
+Version: "0.1"
+ReleaseDate: 2025-02-11
+Section: Other
+Depends:
+- patch.aul (>= r43+ss68)
+InstalledSize: 12809
+Developer:
+- nazoSAUNA
+Description: 単純な音を生成する拡張編集フィルタプラグイン
+Website:
+- https://github.com/nazonoSAUNA/simple_wave.eef
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/simple_wave.eef/releases/download/v0.1/simple_wave.zip
+  SHA256: be239ca3899b8be59b90dc0ce103b99d16135ec0e2a412261e420fb482700bc6
+  Files:
+  - Path: Credit.md
+    SHA256: 0cf66d19b11b9c31eaa618220ea46079ece2da99f8b0f7c74415593690809ebe
+  - Path: simple_wave.eef
+    SHA256: 2f6352a91d0c807a28f2ab85e367deefe903e3fe467b637183e3b474a3533839
+    Install:
+      TargetPath: plugins/simple_wave.eef
+ManifestVersion: 0.3.0

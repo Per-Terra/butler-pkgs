@@ -147,6 +147,18 @@
   Version:
     from: tag_name
 
+- Identifier: simple-wave
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: simple_wave.eef
+  Asset: ^simple_wave\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: SortEffect
   Developer: nazoSAUNA
   Type: GitHub
