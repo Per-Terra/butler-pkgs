@@ -1,0 +1,29 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: sub-menu-item
+DisplayName: sub_menu_item
+Version: "0.1"
+ReleaseDate: 2024-04-16
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+InstalledSize: 9216
+Developer:
+- nazoSAUNA
+Description: AviUtlのプラグインメニューを設定で無効にする
+Website:
+- https://github.com/nazonoSAUNA/sub_menu_item
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/sub_menu_item/releases/download/v0.1/sub_menu_item.zip
+  SHA256: 017fd6ed7023f756878600dceba92b82bc690305a3f95e716432c2536db15607
+  Files:
+  - Path: sub_menu_item.auf
+    SHA256: fa3bb02b2538b3008b664be51de1ccf1dbb1b24b29ee3256010e439275f56821
+    Install:
+      TargetPath: plugins/sub_menu_item.auf
+Plugins:
+- Name: sub_menu_item
+  Type: Filter
+  InstallPath: plugins/sub_menu_item.auf
+ManifestVersion: 0.3.0

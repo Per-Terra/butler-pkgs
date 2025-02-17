@@ -156,6 +156,18 @@
   Version:
     from: tag_name
 
+- Identifier: sub-menu-item
+  Developer: nazoSAUNA
+  Type: GitHub
+  Owner: nazonoSAUNA
+  Repository: sub_menu_item
+  Asset: ^sub_menu_item\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: switch-drawfilter-gui
   Developer: nazoSAUNA
   Type: GitHub
