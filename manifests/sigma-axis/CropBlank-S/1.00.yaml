@@ -1,0 +1,32 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: CropBlank-S
+DisplayName: 余白除去σ
+Version: "1.00"
+ReleaseDate: 2025-01-16
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 28157
+Developer:
+- sigma-axis
+Description: |-
+  拡張編集オブジェクトの上下左右の透明領域をクリッピングする拡張編集フィルタプラグイン
+  拡張編集オブジェクトの不透明ピクセルを検索して，最小サイズなるよう上下左右端をクリッピングするフィルタ効果です．
+  Mr-Ojii 様の [AutoClipping_M](https://github.com/Mr-Ojii/AviUtl-AutoClipping_M-Script) の高速化・機能追加版で，他のアニメーション効果やスクリプト制御からも利用できます．
+Website:
+- https://github.com/sigma-axis/aviutl_CropBlank_S
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_CropBlank_S/releases/download/v1.00/aviutl_CropBlank_S-v1.00.zip
+  SHA256: 7f766a9d086d566105ed18484a7e20a88ecfc571d1441af6c38226fce8018cf6
+  Files:
+  - Path: CropBlank_S.eef
+    SHA256: cc218eadb43dd1f668bc2e1ab66d51304f810697a98515d94a9b75c5545e8f44
+    Install:
+      TargetPath: plugins/CropBlank_S.eef
+  - Path: LICENSE
+    SHA256: 1395c365b5dc4ce63626878bfce2103da234027d22e95e3ae9c2b3632b5bce9e
+  - Path: README.md
+    SHA256: 1cb8e5b2401e92559688a377f775958b13f1b46e54bfb3727a075d0a4b41796a
+ManifestVersion: 0.3.0
