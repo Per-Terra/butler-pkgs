@@ -22,6 +22,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: exedit-wm-observer
+  Developer: mimaraka
+  Type: GitHub
+  Owner: mimaraka
+  Repository: aviutl-plugin-exedit_wm_observer
+  Asset: ^exedit_wm_observer-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: loupe361
   Developer: mimaraka
   Type: GitHub

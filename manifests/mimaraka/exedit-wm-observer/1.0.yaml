@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: exedit-wm-observer
+DisplayName: 拡張編集ウィンドウメッセージ監視 for AviUtl
+Version: "1.0"
+ReleaseDate: 2023-02-27
+Section: Plugin/Other
+Depends:
+- exedit (= 0.92)
+InstalledSize: 17112
+Developer:
+- mimaraka
+Description: 拡張編集のウィンドウに送信されるウィンドウメッセージを監視することができるデバッグ用AviUtlプラグイン
+Website:
+- https://github.com/mimaraka/aviutl-plugin-exedit_wm_observer
+Files:
+- SourceUrl: https://github.com/mimaraka/aviutl-plugin-exedit_wm_observer/releases/download/v1.0/exedit_wm_observer-v1.0.zip
+  SHA256: 9f276183e14181a820f35e2ffa05413fd7a4a3a8494e271607ac38a6c5cdafb4
+  Files:
+  - Path: exedit_wm_observer-v1.0/exedit_wm_observer.auf
+    SHA256: 62e75cf1918041bde30e33dbc994fc55cdbaebaf62fc5bb4e549f25283f63a94
+    Install:
+      TargetPath: plugins/exedit_wm_observer.auf
+  - Path: exedit_wm_observer-v1.0/LICENSE.txt
+    SHA256: 0dbb8ca0474dc5fbfc95b031bdeafec42063591cff1c0335a418daca9b81686b
+  - Path: exedit_wm_observer-v1.0/Readme.html
+    SHA256: 8a80c8271c99cbca4129e43f9d2a4c12a2e0f410c96d532f4303b8c044d8320d
+Plugins:
+- Name: 拡張編集ウィンドウメッセージ監視
+  Information: 拡張編集ウィンドウメッセージ監視v1.0
+  Type: Filter
+  InstallPath: plugins/exedit_wm_observer.auf
+ManifestVersion: 0.3.0
