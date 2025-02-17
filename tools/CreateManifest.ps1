@@ -63,7 +63,7 @@ catch {
 
 # 拡張子の定義
 $ArchiveExtensions = @('.zip', '.7z')
-$PluginExtensions = @('.exe', '.dll', '.auf', '.aui', '.auo', '.auc', '.aul', '.ini')
+$PluginExtensions = @('.exe', '.dll', '.auf', '.aui', '.auo', '.auc', '.aul', '.eef', '.ini')
 $ScriptExtensions = @('.anm', '.obj', '.scn', '.cam', '.tra', '.lua')
 $ConfExtensions = @('.ini', '.stg', '.xml')
 
