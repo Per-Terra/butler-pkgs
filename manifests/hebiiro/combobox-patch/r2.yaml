@@ -1,0 +1,34 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: combobox-patch
+DisplayName: コンボボックスパッチ
+Version: r2
+ReleaseDate: 2024-08-05
+Section: Plugin/Other
+InstalledSize: 41687
+Developer:
+- hebiiro
+Description: 設定ダイアログの切り替えを高速化するプラグイン
+Website:
+- https://github.com/hebiiro/aviutl.combobox_patch.auf
+Files:
+- SourceUrl: https://github.com/hebiiro/aviutl.combobox_patch.auf/releases/download/r2/aviutl.combobox_patch.auf.r2.zip
+  SHA256: e9eb3f85eea7a15b5ad8d0dbb80f2c85195ca4ea32ea498c0852d825ab8b6da5
+  Files:
+  - Path: CREDITS.md
+    SHA256: f1e9b96728ab058fa41131fd8e1e5150e82b977683b5673192d8c2ce92012854
+  - Path: LICENSE
+    SHA256: 44440e9e9f92f5f00a847ba8e9e655660a8d4a931d7af5c049108f7d89c340b0
+  - Path: README.md
+    SHA256: ec9ea3d7e414541e17027db9b3b3f5a795e98bf754b674c33fbf0d43acb47fd4
+  - Path: plugins/combobox_patch.auf
+    SHA256: 0de6318a06abb4c622f1765d1208bd32d5ed1c2d580a2e6abb5bf326061a9ca9
+    Install:
+      TargetPath: plugins/combobox_patch.auf
+Plugins:
+- Name: コンボボックスパッチ
+  Information: コンボボックスパッチ r1 by 蛇色 / originator 狐紺くろ(Tsut-ps) / X
+  Type: Filter
+  InstallPath: plugins/combobox_patch.auf
+ManifestVersion: 0.3.0

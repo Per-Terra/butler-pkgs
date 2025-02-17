@@ -79,6 +79,15 @@
   Version:
     from: tag_name
 
+- Identifier: combobox-patch
+  Developer: hebiiro
+  Type: GitHub
+  Owner: hebiiro
+  Repository: aviutl.combobox_patch.auf
+  Asset: \.(zip|7z)$
+  Version:
+    from: tag_name
+
 - Identifier: ConfigChecker
   Developer: hebiiro
   Type: GitHub
