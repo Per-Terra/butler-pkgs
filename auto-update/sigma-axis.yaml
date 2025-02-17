@@ -34,6 +34,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: layer-resize
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_layer_resize
+  Asset: ^aviutl_layer_resize-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: layer-wheel2
   Developer: sigma-axis
   Type: GitHub

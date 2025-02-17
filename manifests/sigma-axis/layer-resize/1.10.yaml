@@ -1,0 +1,40 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: layer-resize
+DisplayName: 可変幅レイヤー
+Version: "1.10"
+ReleaseDate: 2024-09-22
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 38007
+Developer:
+- sigma-axis
+Description: 拡張編集のレイヤー高さを自由に調節できるプラグイン
+Website:
+- https://github.com/sigma-axis/aviutl_layer_resize
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_layer_resize/releases/download/v1.10/aviutl_layer_resize-v1.10.zip
+  SHA256: 0f09889ff753e10d913c62debac1a3197283e14cbc933a69aff704d3299ba02c
+  Files:
+  - Path: layer_resize.auf
+    SHA256: 633469beba6228aa3f8b9f776472ee1af4304ee6ec691e7bd73fb77682d11a0c
+    Install:
+      TargetPath: plugins/layer_resize.auf
+  - Path: layer_resize.ini
+    SHA256: e7e797b4c2040f678fafcbece7319950cc41eb6e4753537ecd2b473d3c59d285
+    Install:
+      TargetPath: plugins/layer_resize.ini
+      ConfFile: true
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: README.md
+    SHA256: acb9d40cc058f682ef925f6ea3cee141614c92afdd442b200b8f3eb0b2aa2552
+Plugins:
+- Name: 可変幅レイヤー
+  Information: 可変幅レイヤー v1.10 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/layer_resize.auf
+ManifestVersion: 0.3.0
