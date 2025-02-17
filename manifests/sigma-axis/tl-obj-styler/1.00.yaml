@@ -1,0 +1,42 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: tl-obj-styler
+DisplayName: TLオブジェクト描画拡張
+Version: "1.00"
+ReleaseDate: 2024-08-21
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+Recommends:
+- patch.aul
+InstalledSize: 53007
+Developer:
+- sigma-axis
+Description: タイムラインのオブジェクト表示をカスタマイズできるプラグイン
+Website:
+- https://github.com/sigma-axis/aviutl_tl_obj_styler
+Files:
+- SourceUrl: https://github.com/sigma-axis/aviutl_tl_obj_styler/releases/download/v1.00/aviutl_tl_obj_styler-v1.00.zip
+  SHA256: 7ea34f151f9450c4790e25a2bb8071d67848e64fdf0399f1f4d929cf1eab06db
+  Files:
+  - Path: LICENSE
+    SHA256: 4268433862d83249d3a1ce152dcf0a0eafaf23d5a57baca379ab675a3894056e
+  - Path: README.md
+    SHA256: 679861d652a9340a4d1aa21e37b2f6e6aa91669e56c53ed230b5800f885158b1
+  - Path: tl_obj_styler.auf
+    SHA256: 8e1042a6774bd94d74f1b3d9bb9bb28c3e09b4f6098feb130fd8a2ce97a44e5c
+    Install:
+      TargetPath: plugins/tl_obj_styler.auf
+  - Path: tl_obj_styler.ini
+    SHA256: 8771420ee44a5ad28f70c3de5d3517beb748710e8a5731f19eb937ba05a06917
+    Install:
+      TargetPath: plugins/tl_obj_styler.ini
+      ConfFile: true
+Plugins:
+- Name: TLオブジェクト描画拡張
+  Information: TLオブジェクト描画拡張 v1.00 by sigma-axis
+  Type: Filter
+  InstallPath: plugins/tl_obj_styler.auf
+ManifestVersion: 0.3.0

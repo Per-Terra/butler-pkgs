@@ -130,6 +130,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: tl-obj-styler
+  Developer: sigma-axis
+  Type: GitHub
+  Owner: sigma-axis
+  Repository: aviutl_tl_obj_styler
+  Asset: ^aviutl_tl_obj_styler-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: tl-walkaround
   Developer: sigma-axis
   Type: GitHub
