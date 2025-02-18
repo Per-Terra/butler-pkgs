@@ -18,6 +18,8 @@ jobs:
           modules-to-cache: 7Zip4Powershell, powershell-yaml
 
       - name: Create Manifest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           $originalEncoding = [System.Console]::OutputEncoding
           [System.Console]::OutputEncoding = [Text.Encoding]::UTF8
