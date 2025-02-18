@@ -1,4 +1,4 @@
-name: Update LuaJIT
+name: Update Per-Terra/LuaJIT
 
 on:
   schedule:
