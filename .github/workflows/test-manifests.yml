@@ -39,4 +39,4 @@ jobs:
 
       - name: Test Manifests
         if: steps.diff.outputs.modified_manifests
-        run: ./tools/TestManifests.ps1 -ManifestPath ${{ steps.diff.outputs.modified_manifests }}
+        run: ./tools/TestManifest.ps1 -ManifestPath ${{ steps.diff.outputs.modified_manifests }}
