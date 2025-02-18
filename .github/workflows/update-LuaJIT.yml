@@ -11,7 +11,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v1.11.5
         id: generate-token
         with:
           app-id: ${{ secrets.APP_ID }}
