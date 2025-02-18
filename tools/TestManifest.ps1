@@ -6,6 +6,16 @@ param (
 )
 
 begin {
+  # Install powershell-yaml if not installed
+  if (-not (Get-Module -Name 'powershell-yaml' -ListAvailable)) {
+    try {
+      Install-Module -Name 'powershell-yaml' -Force -Repository PSGallery -Scope CurrentUser
+    }
+    catch {
+      throw "Failed to install powershell-yaml: $($_.Exception.Message)"
+    }
+  }
+
   Import-Module -Name (Join-Path -Path $PSScriptRoot -ChildPath './modules/Test-PackageManifest.psm1')
   $invalidManifests = @()
 }
