@@ -1,0 +1,39 @@
+name: Update LuaJIT
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install and cache PowerShell modules
+        uses: potatoqualitee/psmodulecache@v6.2
+        with:
+          modules-to-cache: 7Zip4Powershell, powershell-yaml
+
+      - name: Create Manifest
+        run: |
+          $originalEncoding = [System.Console]::OutputEncoding
+          [System.Console]::OutputEncoding = [Text.Encoding]::UTF8
+          $json = gh api repos/Per-Terra/LuaJIT-Auto-Builds/releases/latest
+          [System.Console]::OutputEncoding = $originalEncoding
+          $latestRelease = $json | ConvertFrom-Json
+          $url = $latestRelease.assets | Where-Object { $_.name -eq 'LuaJIT_2.1_Win_x86.zip' } | Select-Object -ExpandProperty browser_download_url
+          $date = $latestRelease.tag_name -replace '^build-', '' -replace '-\d{2}-\d{2}-\d{2}$', ''
+          ./tools/CreateManifest.ps1 -Update -SourceUrl $url -Identifier 'LuaJIT' -Version '2.1' -ReleaseDate $date -Developer 'Per-Terra' -SkipPrompt -Force
+
+      - name: Push Manifest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --local user.name 'github-actions[bot]'
+          git config --local user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m '[パッケージ更新] Per-Terra/LuaJIT'
+          git push
