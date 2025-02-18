@@ -13,6 +13,12 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Remove Existing Label from PR
+        if: github.event_name == 'pull_request' && github.event.action == 'synchronize'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr edit ${{ github.event.pull_request.number }} --remove-label "manifest-validated"
+
       - uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
@@ -35,3 +41,9 @@ jobs:
       - name: Test Manifests
         if: steps.diff.outputs.modified_manifests
         run: ./tools/TestManifest.ps1 -ManifestPath ${{ steps.diff.outputs.modified_manifests }}
+
+      - name: Add Label to PR
+        if: github.event_name == 'pull_request' && steps.diff.outputs.modified_manifests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr edit ${{ github.event.pull_request.number }} --add-label "manifest-validated"
