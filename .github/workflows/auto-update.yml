@@ -20,7 +20,7 @@ jobs:
 
       - name: Update Package Manifests
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ${{ github.workspace }}/tools/AutoUpdate.ps1
 
       - name: Check diff
