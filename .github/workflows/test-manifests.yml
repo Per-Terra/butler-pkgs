@@ -1,0 +1,40 @@
+name: Test Package Manifests
+
+on:
+  push:
+    paths:
+      - 'manifests/*/*/*.yaml'
+  pull_request:
+    paths:
+      - 'manifests/*/*/*.yaml'
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Install and cache PowerShell modules
+        uses: potatoqualitee/psmodulecache@v6.2.1
+        with:
+          modules-to-cache: powershell-yaml
+
+      - name: Get Modified Manifests
+        id: diff
+        run: |
+          if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+            $base = '${{ github.event.pull_request.base.sha }}'
+          } else {
+            $base = '${{ github.event.before }}'
+          }
+          $modifiedManifests = git diff --name-only $base ${{ github.sha }} | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
+          if ($modifiedManifests) {
+            "modified_manifests=$modifiedManifests" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            "modified_manifests=" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+
+      - name: Test Manifests
+        if: steps.diff.outputs.modified_manifests
+        run: ./tools/TestManifests.ps1 -ManifestPath ${{ steps.diff.outputs.modified_manifests }}
