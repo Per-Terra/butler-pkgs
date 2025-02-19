@@ -2,14 +2,12 @@ name: Auto Approve
 
 on:
   pull_request:
-    types:
-      - labeled
+    types: [labeled]
 
 jobs:
   auto_approve:
     if: github.event.label.name == 'manifest-validated' && github.event.pull_request.user.login == 'butler-pkgs-bot[bot]'
     runs-on: windows-latest
-
     steps:
       - name: Create comment
         id: couc
@@ -125,4 +123,4 @@ jobs:
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr edit ${{ github.event.pull_request.number }} --add-assignees 'Per-Terra'
+        run: gh pr edit ${{ github.event.pull_request.number }} --add-assignees "Per-Terra"

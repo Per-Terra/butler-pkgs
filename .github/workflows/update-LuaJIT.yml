@@ -3,13 +3,11 @@ name: Update Per-Terra/LuaJIT
 on:
   schedule:
     - cron: '0 1 * * *'
-
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: windows-latest
-
     steps:
       - uses: actions/create-github-app-token@v1.11.5
         id: generate-token
@@ -43,7 +41,7 @@ jobs:
         with:
           token: ${{ steps.generate-token.outputs.token }}
           commit-message: '[パッケージ更新] Per-Terra/LuaJIT'
-          branch: 'update-LuaJIT'
+          branch: update-LuaJIT
           delete-branch: true
           sign-commits: true
           title: '[パッケージ更新] Per-Terra/LuaJIT'
@@ -53,10 +51,10 @@ jobs:
         if: steps.cpr.outputs.pull-request-operation == 'created'
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: gh pr merge --auto --squash ${{ steps.cpr.outputs.pull-request-number }}
+        run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --auto --squash
 
       - name: Auto Approve
         if: steps.cpr.outputs.pull-request-operation == 'created'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr review --approve "${{ steps.cpr.outputs.pull-request-number }}"
+        run: gh pr review ${{ steps.cpr.outputs.pull-request-number }} --approve

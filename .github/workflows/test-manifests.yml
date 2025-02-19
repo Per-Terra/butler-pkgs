@@ -13,7 +13,6 @@ on:
 jobs:
   test:
     runs-on: windows-latest
-
     steps:
       - uses: actions/create-github-app-token@v1.11.5
         id: generate-token
@@ -46,7 +45,7 @@ jobs:
           }
           $modifiedManifests = git diff --name-only $base ${{ github.sha }} | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
           if ($modifiedManifests) {
-            "modified_manifests=$modifiedManifests" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "modified_manifests=$($modifiedManifests -join ',')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           } else {
             "modified_manifests=" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
@@ -54,7 +53,7 @@ jobs:
       - name: Test Manifests
         if: steps.diff.outputs.modified_manifests
         continue-on-error: true
-        run: ./tools/TestManifest.ps1 -ManifestPath ${{ steps.diff.outputs.modified_manifests }}
+        run: ./tools/TestManifest.ps1 -ManifestPath (${{ steps.diff.outputs.modified_manifests }} -split ',')
 
       - name: Add Success Label to PR
         if: github.event_name == 'pull_request' && steps.diff.outputs.modified_manifests && success()

@@ -2,14 +2,12 @@ name: Auto Update
 
 on:
   schedule:
-    - cron: "0 2 * * *"
-
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 jobs:
   auto_update:
     runs-on: windows-latest
-
     steps:
       - uses: actions/create-github-app-token@v1.11.5
         id: generate-token
@@ -93,4 +91,4 @@ jobs:
         if: steps.cpr.outputs.pull-request-operation == 'created'
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: gh pr merge --auto --squash ${{ steps.cpr.outputs.pull-request-number }}
+        run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --auto --squash

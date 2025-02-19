@@ -2,15 +2,15 @@ name: Create Release
 
 on:
   push:
-    branches: ["main"]
-    paths: ["manifests/**/*.yaml"]
-
+    branches:
+      - main
+    paths:
+      - 'manifests/**/*.yaml'
   workflow_dispatch:
 
 jobs:
   create_release:
     runs-on: windows-latest
-
     steps:
       - uses: actions/checkout@v4.2.2
 
