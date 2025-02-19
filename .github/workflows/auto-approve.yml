@@ -88,7 +88,7 @@ jobs:
             }
 
             # compare manifests
-            $criticalChange = $criticalChange -or (. .\tools\CompareManifests.ps1 -FromManifest "$(Join-Path -Path $manifestsDirectory -ChildPath $latestManifest.Version).yaml" -ToManifests $path)
+            $criticalChange = $criticalChange -or (. .\tools\CompareManifests.ps1 -FromManifest "$(Join-Path -Path $manifestsDirectory -ChildPath $latestManifest.Version).yaml" -ToManifest $path)
           }
 
           if ($criticalChange) {
