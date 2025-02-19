@@ -7,7 +7,7 @@ on:
 
 jobs:
   auto_approve:
-    if: github.event.label.name == 'manifest-validated'
+    if: github.event.label.name == 'manifest-validated' && github.event.pull_request.user.login == 'butler-pkgs-bot[bot]'
     runs-on: windows-latest
 
     steps:
