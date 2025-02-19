@@ -87,7 +87,6 @@ jobs:
           sign-commits: true
           title: ${{ steps.diff.outputs.commit_message }}
           labels: auto-update
-          assignees: Per-Terra
           body: ${{ steps.diff.outputs.pr_description }}
 
       - name: Enable Pull Request Auto-merge
