@@ -46,7 +46,7 @@ jobs:
           $criticalChange = $false
           $previousManifestsDirectory = ''
           foreach ($path in $manifests) {
-            $manifestsDirectory = Split-Path -LiteralPath $path -Parent
+            $manifestsDirectory = Split-Path -Path $path -Parent -Resolve
 
             if ($previousManifestsDirectory -ne $manifestsDirectory) {
               $previousManifestsDirectory = $manifestsDirectory
