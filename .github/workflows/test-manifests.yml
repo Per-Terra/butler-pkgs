@@ -2,6 +2,8 @@ name: Test Package Manifests
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'manifests/*/*/*.yaml'
   pull_request:
