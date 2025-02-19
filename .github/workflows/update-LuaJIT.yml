@@ -43,7 +43,7 @@ jobs:
         with:
           token: ${{ steps.generate-token.outputs.token }}
           commit-message: '[パッケージ更新] Per-Terra/LuaJIT'
-          branch: 'auto-update/LuaJIT'
+          branch: 'update-LuaJIT'
           delete-branch: true
           sign-commits: true
           title: '[パッケージ更新] Per-Terra/LuaJIT'
