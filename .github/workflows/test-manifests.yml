@@ -19,7 +19,7 @@ jobs:
         if: github.event_name == 'pull_request' && github.event.action == 'synchronize'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr edit ${{ github.event.pull_request.number }} --remove-label "manifest-validated"
+        run: gh pr edit ${{ github.event.pull_request.number }} --remove-label "manifest-validated,manifest-validation-failure"
 
       - uses: actions/checkout@v4.2.2
         with:
@@ -47,10 +47,17 @@ jobs:
 
       - name: Test Manifests
         if: steps.diff.outputs.modified_manifests
+        continue-on-error: true
         run: ./tools/TestManifest.ps1 -ManifestPath ${{ steps.diff.outputs.modified_manifests }}
 
-      - name: Add Label to PR
-        if: github.event_name == 'pull_request' && steps.diff.outputs.modified_manifests
+      - name: Add Success Label to PR
+        if: github.event_name == 'pull_request' && steps.diff.outputs.modified_manifests && success()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh pr edit ${{ github.event.pull_request.number }} --add-label "manifest-validated"
+
+      - name: Add Failure Label to PR
+        if: github.event_name == 'pull_request' && failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr edit ${{ github.event.pull_request.number }} --add-label "manifest-validation-failure"
