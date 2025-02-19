@@ -52,7 +52,6 @@ jobs:
 
       - name: Test Manifests
         if: steps.diff.outputs.modified_manifests
-        continue-on-error: true
         run: ./tools/TestManifest.ps1 -ManifestPath (${{ steps.diff.outputs.modified_manifests }} -split ',')
 
       - name: Add Success Label to PR
