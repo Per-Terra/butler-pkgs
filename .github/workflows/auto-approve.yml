@@ -42,7 +42,7 @@ jobs:
       - name: Check Manifests
         if: steps.diff.outputs.modified_manifests
         run: |
-          $manifests = ${{ steps.diff.outputs.modified_manifests }} -split ','
+          $manifests = '${{ steps.diff.outputs.modified_manifests }}' -split ','
           $criticalChange = $false
           $previousManifestsDirectory = ''
           foreach ($path in $manifests) {
