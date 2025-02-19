@@ -1,0 +1,128 @@
+name: Auto Approve
+
+on:
+  pull_request:
+    types:
+      - labeled
+
+jobs:
+  auto_approve:
+    if: github.event.label.name == 'manifest-validated'
+    runs-on: windows-latest
+
+    steps:
+      - name: Create comment
+        id: couc
+        uses: peter-evans/create-or-update-comment@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: This Pull Request will soon checked and approved automatically if there are no critical changes.
+
+      - uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Install and cache PowerShell modules
+        uses: potatoqualitee/psmodulecache@v6.2.1
+        with:
+          modules-to-cache: powershell-yaml
+
+      - name: Get Modified Manifests
+        id: diff
+        run: |
+          $modifiedManifests = git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
+          if ($modifiedManifests) {
+            "modified_manifests=$($modifiedManifests -join ',')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            "modified_manifests=" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+
+      - name: Check Manifests
+        if: steps.diff.outputs.modified_manifests
+        run: |
+          $manifests = ${{ steps.diff.outputs.modified_manifests }} -split ','
+          $criticalChange = $false
+          $previousManifestsDirectory = ''
+          foreach ($path in $manifests) {
+            $manifestsDirectory = Split-Path -LiteralPath $path -Parent
+
+            if ($previousManifestsDirectory -ne $manifestsDirectory) {
+              $previousManifestsDirectory = $manifestsDirectory
+              # move to base commit
+              git checkout ${{ github.event.pull_request.base.sha }}
+
+              # load manifests
+              $previousManifests = Get-ChildItem -LiteralPath $manifestsDirectory -Filter '*.yaml' -Recurse -File | ForEach-Object {
+                Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Yaml
+              }
+
+              # get latest manifest
+              $latestManifest = $previousManifests | Sort-Object -Property @{
+                # ReleaseDate でソート
+                Expression = {
+                  if ($null -ne $_.ReleaseDate) {
+                    [datetime]::ParseExact($_.ReleaseDate, 'yyyy-MM-dd', $null)
+                  }
+                  else {
+                    [datetime]::MinValue
+                  }
+                }
+                Descending = $true
+              }, @{
+                # Version でソート
+                Expression = {
+                  if ($null -ne $_.Version) {
+                    $_.Version
+                  }
+                  else {
+                    ''
+                  }
+                }
+                Descending = $true
+              } | Select-Object -First 1
+
+              # back to latest commit
+              git checkout ${{ github.sha }}
+            }
+
+            # compare manifests
+            $criticalChange = $criticalChange -or (. .\tools\CompareManifests.ps1 -FromManifest "$(Join-Path -Path $manifestsDirectory -ChildPath $latestManifest.Version).yaml" -ToManifests $path)
+          }
+
+          if ($criticalChange) {
+            "critical_change=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            "critical_change=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+
+      - name: Approve Pull Request
+        if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change != 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr review ${{ github.event.pull_request.number }} --approve
+
+      - name: Update Comment
+        if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
+        uses: peter-evans/create-or-update-comment@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          comment-id: ${{ steps.couc.outputs.comment-id }}
+          body: |
+            This Pull Request has critical changes and cannot be approved automatically.
+            Please check logs for details.
+            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Add Label
+        if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr edit ${{ github.event.pull_request.number }} --add-label "critical-change"
+
+      - name: Add Assignee
+        if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr edit ${{ github.event.pull_request.number }} --add-assignees 'Per-Terra'
