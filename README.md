@@ -1,5 +1,6 @@
 # BUtler コミュニティリポジトリ
 
+[![Auto Update](https://github.com/Per-Terra/butler-pkgs/actions/workflows/auto-update.yml/badge.svg)](https://github.com/Per-Terra/butler-pkgs/actions/workflows/auto-update.yml)
 [![Create Release](https://github.com/Per-Terra/butler-pkgs/actions/workflows/release.yml/badge.svg)](https://github.com/Per-Terra/butler-pkgs/actions/workflows/release.yml)
 
 現在利用可能なパッケージ数: ≧ 265 (2025/02/17現在)
