@@ -22,7 +22,7 @@ jobs:
         with:
           modules-to-cache: 7Zip4Powershell, powershell-yaml
 
-      - name: Create Manifest
+      - name: Update Per-Terra/LuaJIT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -33,22 +33,4 @@ jobs:
           $latestRelease = $json | ConvertFrom-Json
           $url = $latestRelease.assets | Where-Object { $_.name -eq 'LuaJIT_2.1_Win_x86.zip' } | Select-Object -ExpandProperty browser_download_url
           $date = $latestRelease.tag_name -replace '^build-', '' -replace '-\d{2}-\d{2}-\d{2}$', ''
-          ./tools/CreateManifest.ps1 -Update -SourceUrl $url -Identifier 'LuaJIT' -Version '2.1' -ReleaseDate $date -Developer 'Per-Terra' -SkipPrompt -Force
-
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v7.0.6
-        with:
-          token: ${{ steps.generate-token.outputs.token }}
-          commit-message: '[パッケージ更新] Per-Terra/LuaJIT'
-          branch: update-LuaJIT
-          delete-branch: true
-          sign-commits: true
-          title: '[パッケージ更新] Per-Terra/LuaJIT'
-          labels: auto-update
-
-      - name: Enable Pull Request Auto-merge
-        if: steps.cpr.outputs.pull-request-operation == 'created'
-        env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --auto --rebase
+          gh workflow run create-manifest.yml -f "sources='$(@{ SourceUrl = $url; Identifier = 'LuaJIT'; Version = '2.1'; ReleaseDate = $date; Developer = 'Per-Terra' } | ConvertTo-Json -Compress -AsArray)'"
