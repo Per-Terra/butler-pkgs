@@ -20,15 +20,15 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
+      - uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+
       - name: Remove Existing Label from PR
         if: github.event_name == 'pull_request'
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: gh pr edit ${{ github.event.pull_request.number }} --remove-label "manifest-validated,manifest-validation-failure"
-
-      - uses: actions/checkout@v4.2.2
-        with:
-          fetch-depth: 0
 
       - name: Install and cache PowerShell modules
         uses: potatoqualitee/psmodulecache@v6.2.1
