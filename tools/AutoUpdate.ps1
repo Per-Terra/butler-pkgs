@@ -31,32 +31,43 @@ begin {
       [switch]$Latest
     )
 
-    # https://docs.github.com/ja/rest/releases/releases?apiVersion=2022-11-28#list-releases
-    $releasesUrl = "https://api.github.com/repos/$Owner/$Repo/releases"
+    if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
+      Write-Error 'gh コマンドが見つかりません'
+      Write-Error 'GitHub CLI をインストールしてください: https://cli.github.com/'
+      exit 1
+    }
+
+    $command = 'gh api --method GET -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28"'
+    $endpoint = "/repos/$Owner/$Repo/releases"
+    $options = @()
+
     if ($Latest) {
-      $releasesUrl += '/latest'
+      $endpoint += '/latest'
     }
     else {
-      $releasesUrl += "?per_page=$PerPage&page=$Page"
+      if ($PerPage -ne 30) {
+        $options += "-F per_page=$PerPage"
+      }
+      if ($Page -ne 1) {
+        $options += "-F page=$Page"
+      }
     }
 
     try {
-      if ($env:GH_TOKEN) {
-        $response = Invoke-RestMethod -Uri $releasesUrl -Authentication Bearer -Token (ConvertTo-SecureString -String $env:GH_TOKEN -AsPlainText -Force)
-      }
-      else {
-        $response = Invoke-RestMethod -Uri $releasesUrl
-      }
+      $originalEncoding = [System.Console]::OutputEncoding
+      [System.Console]::OutputEncoding = [Text.Encoding]::UTF8
+      $response = Invoke-Expression "$command $endpoint $options"
+      [System.Console]::OutputEncoding = $originalEncoding
     }
     catch {
       throw "GitHub API へのリクエストに失敗しました: $($_.Exception.Message)"
     }
 
     if ($response) {
-      $response
+      $response | ConvertFrom-Json
     }
     else {
-      throw "GitHub API からのレスポンスが空です: $releasesUrl"
+      throw "GitHub API からのレスポンスが空です: $endpoint"
     }
   }
 }
