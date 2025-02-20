@@ -114,10 +114,6 @@ process {
 
   Write-Host "$(@($targets).Count) 件の処理を開始します"
 
-  # Rate limit対策用のStopWatch
-  $watch = New-Object System.Diagnostics.StopWatch
-  $elapsed = 500
-
   foreach ($target in $targets) {
     if ($target.Disabled) {
       Write-Host "無効: $($target.Developer)/$($target.Identifier)"
@@ -134,14 +130,6 @@ process {
         $page = 1
         $skipped = $false
         do {
-          $sleep = 500 - $elapsed
-          if ($sleep -gt 0) {
-            Write-Debug "Rate limit対策のため $sleep ミリ秒待機します"
-            Start-Sleep -Milliseconds $sleep
-          }
-          $watch.Reset()
-          $watch.Start()
-
           $releases = Get-GitHubReleases -Owner $target.Owner -Repo $target.Repository -PerPage 100 -Page $page
           foreach ($release in $releases) {
             if ($target.IgnoreOlderThan -and $release.published_at -lt [datetime]::ParseExact($target.IgnoreOlderThan, 'yyyy-MM-dd', $null)) {
@@ -205,9 +193,6 @@ process {
             }
           }
           $page++
-
-          $watch.Stop()
-          $elapsed = $watch.ElapsedMilliseconds
         } while ($releases.Count -eq 100 -and -not $skipped)
       }
       default {
