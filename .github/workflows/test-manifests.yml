@@ -21,7 +21,7 @@ jobs:
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
       - name: Remove Existing Label from PR
-        if: github.event_name == 'pull_request' && github.event.action == 'synchronize'
+        if: github.event_name == 'pull_request'
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: gh pr edit ${{ github.event.pull_request.number }} --remove-label "manifest-validated,manifest-validation-failure"
