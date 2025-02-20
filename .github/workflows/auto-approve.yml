@@ -22,7 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body: This Pull Request will soon checked and approved automatically if there are no critical changes.
+          body: This Pull Request will soon be checked and approved automatically if there are no critical changes.
 
       - uses: actions/checkout@v4.2.2
         with:
