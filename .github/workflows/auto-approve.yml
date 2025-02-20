@@ -92,13 +92,13 @@ jobs:
             }
 
             # compare manifests
-            $criticalChange = $criticalChange -or (. .\tools\CompareManifests.ps1 -FromManifest "$(Join-Path -Path $manifestsDirectory -ChildPath $latestManifest.Version).yaml" -ToManifest $path -ReturnCriticalChange)
+            $criticalChange = $criticalChange -or (& .\tools\CompareManifests.ps1 -FromManifest "$(Join-Path -Path $manifestsDirectory -ChildPath $latestManifest.Version).yaml" -ToManifest $path -ReturnCriticalChange)
           }
 
           if ($criticalChange) {
-            "critical_change=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            'critical_change=true' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           } else {
-            "critical_change=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            'critical_change=false' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
 
       - name: Approve Pull Request
