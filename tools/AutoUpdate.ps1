@@ -4,7 +4,8 @@ param (
   [Alias('FullName')]
   [string[]]$YamlPath,
   [string]$Identifier,
-  [string]$Developer
+  [string]$Developer,
+  [switch]$ReturnSources
 )
 
 begin {
@@ -201,7 +202,7 @@ process {
     }
 
     if ($sources) {
-      Write-Host "$($sources.Count) 件のマニフェストが作成されます: $($target.Developer)/$($target.Identifier)"
+      Write-Host "$($sources.Count) 件の更新が見つかりました: $($target.Developer)/$($target.Identifier)"
 
       # 古いバージョンから順にマニフェストを作成する
       $sources = $sources | Sort-Object -Property @{
@@ -224,6 +225,16 @@ process {
         }
       }
 
+      if ($ReturnSources) {
+        # , (単項配列演算子) を使って配列そのものを返す
+        # 例えば '.\AutoUpdate.ps1 -ReturnSources | ForEach-Object { $_ | ConvertTo-Json -AsArray }' とするとパッケージごとに配列をJSON形式で出力できる
+        # ref: https://stackoverflow.com/questions/29973212/pipe-complete-array-objects-instead-of-array-items-one-at-a-time
+        # ref: https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.5#comma-operator-
+        ,$sources
+        continue
+      }
+
+      Write-Host "マニフェストを作成しています: $($target.Developer)/$($target.Identifier)"
       foreach ($source in $sources) {
         try {
           & (Join-Path -Path $PSScriptRoot -ChildPath './CreateManifest.ps1') -Update -SourceUrl $source.SourceUrl -Identifier $source.Identifier -Version $source.Version -ReleaseDate $source.ReleaseDate -Developer $source.Developer -SkipPrompt -Force

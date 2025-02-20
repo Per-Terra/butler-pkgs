@@ -1,0 +1,114 @@
+name: Create Manifest
+
+on:
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: 'The list of sources to create manifest (JSON format)'
+        required: true
+        type: string
+
+jobs:
+  create_manifest:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/create-github-app-token@v1.11.5
+        id: generate-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v4.2.2
+
+      - name: Install and cache PowerShell modules
+        uses: potatoqualitee/psmodulecache@v6.2.1
+        with:
+          modules-to-cache: 7Zip4Powershell, powershell-yaml
+
+      - name: Create Manifest
+        id: create-manifest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if the sources input is a valid JSON
+          $sources = ConvertFrom-Json -InputObject '${{ github.event.inputs.sources }}'
+          if (-not $sources) {
+            throw 'The sources input is empty or invalid JSON.'
+          }
+          if (($sources | Group-Object -Property Identifier).Count -gt 1) {
+            throw 'The Identifier of all sources must be the same.'
+          }
+          if (($sources | Group-Object -Property Developer).Count -gt 1) {
+            throw 'The Developer of all sources must be the same.'
+          }
+
+          # Set environment variables
+          "identifier=$($sources[0].Identifier)" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "developer=$($sources[0].Developer)" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "versions=$($sources.Version -join ', ')" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+          # Create the manifest
+          Write-Host "Creating manifest: $($sources[0].Developer)/$($sources[0].Identifier)"
+          foreach ($source in $sources) {
+            try {
+              & (Join-Path -Path $PSScriptRoot -ChildPath './CreateManifest.ps1') -Update -SourceUrl $source.SourceUrl -Identifier $source.Identifier -Version $source.Version -ReleaseDate $source.ReleaseDate -Developer $source.Developer -SkipPrompt -Force
+            }
+            catch {
+              Write-Warning "Manifest creation failed: $($_.Exception.Message)"
+            }
+          }
+
+      - name: Check diff
+        id: diff
+        run: |
+          git add -N .
+          $addedFiles = [array](git diff --name-only --diff-filter=A)
+          $modifiedFiles = [array](git diff --name-only --diff-filter=M)
+
+          $EOF = -join (1..15 | ForEach-Object { [char]((48..57) + (65..90) + (97..122) | Get-Random) })
+          "pr_description<<$EOF" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+          if ($addedFiles.Count -gt 0) {
+            "## 追加されたファイル" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            '' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            $addedFiles | ForEach-Object {
+              "- [$_]($_)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            }
+            '' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+
+          if ($modifiedFiles.Count -gt 0) {
+            "## 変更されたファイル" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            '' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            $modifiedFiles | ForEach-Object {
+              "- [$_]($_)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            }
+            '' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+
+          @"
+          ---
+
+          Automated changes by [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action
+          "@ | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          $EOF | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        # https://docs.github.com/ja/actions/using-workflows/workflow-commands-for-github-actions#example-of-a-multiline-string
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7.0.6
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          commit-message: '[パッケージ更新] ${{ steps.create-manifest.outputs.developer }}/${{ steps.create-manifest.outputs.identifier }} (${{ steps.create-manifest.outputs.versions }})'
+          branch: 'auto-update/${{ steps.create-manifest.outputs.developer }}/${{ steps.create-manifest.outputs.identifier }}'
+          delete-branch: true
+          sign-commits: true
+          title: '[パッケージ更新] ${{ steps.create-manifest.outputs.developer }}/${{ steps.create-manifest.outputs.identifier }} (${{ steps.create-manifest.outputs.versions }})'
+          labels: auto-update
+          body: ${{ steps.diff.outputs.pr_description }}
+
+      - name: Enable Pull Request Auto-merge
+        if: steps.cpr.outputs.pull-request-operation == 'created'
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --auto --rebase
