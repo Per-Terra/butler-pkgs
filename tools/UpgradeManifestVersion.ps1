@@ -64,7 +64,7 @@ begin {
       }
 
       if ($PreviousFiles) {
-        $previousFile =  $PreviousFiles | Where-Object { $_.Path -eq $file.Path }
+        $previousFile = $PreviousFiles | Where-Object { $_.Path -eq $file.Path }
       }
 
       if ($previousFile) {
