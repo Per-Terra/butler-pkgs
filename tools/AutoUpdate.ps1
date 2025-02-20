@@ -62,6 +62,7 @@ begin {
 }
 
 process {
+  # YamlPath が指定されていない場合は、auto-update ディレクトリ内の YAML ファイルを読み込む
   if ([string]::IsNullOrEmpty($YamlPath)) {
     Write-Host 'auto-update ディレクトリ内の YAML ファイルを読み込んでいます'
     $YamlPath = Get-ChildItem -LiteralPath (Join-Path -Path $PSScriptRoot -ChildPath "../auto-update") -Filter '*.yaml' -Recurse -File | Select-Object -ExpandProperty FullName
@@ -85,10 +86,12 @@ process {
     }
   }
 
+  # Identifier でフィルタリング
   if ($Identifier) {
     $targets = $targets | Where-Object { $_.Identifier -eq $Identifier }
   }
 
+  # Developer でフィルタリング
   if ($Developer) {
     $targets = $targets | Where-Object { $_.Developer -eq $Developer }
   }
@@ -227,7 +230,7 @@ process {
 
       foreach ($source in $sources) {
         try {
-          . (Join-Path -Path $PSScriptRoot -ChildPath "./CreateManifest.ps1") -Update -SourceUrl $source.SourceUrl -Identifier $source.Identifier -Version $source.Version -ReleaseDate $source.ReleaseDate -Developer $source.Developer -SkipPrompt -Force
+          & (Join-Path -Path $PSScriptRoot -ChildPath './CreateManifest.ps1') -Update -SourceUrl $source.SourceUrl -Identifier $source.Identifier -Version $source.Version -ReleaseDate $source.ReleaseDate -Developer $source.Developer -SkipPrompt -Force
         }
         catch {
           Write-Warning "マニフェストは作成されませんでした: $($_.Exception.Message)"
