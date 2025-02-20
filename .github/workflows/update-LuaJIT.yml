@@ -51,4 +51,4 @@ jobs:
         if: steps.cpr.outputs.pull-request-operation == 'created'
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --auto --squash
+        run: gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --auto --rebase
