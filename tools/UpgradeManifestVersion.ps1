@@ -56,6 +56,7 @@ begin {
 
     $filesInArchive = @()
 
+    Write-Host "アーカイブ内のファイルの情報を取得しています: $ArchiveFileName"
     foreach ($fileInArchive in $files) {
       $relativePath = $fileInArchive.FullName.Replace($TargetPath, '').Replace('\', '/') -replace '^/', ''
       $file = @{
@@ -72,12 +73,43 @@ begin {
           $file.Add('Install', $previousFile.Install)
         }
         elseif ($previousFile.Files) {
+          $expandDirectory = Join-Path -Path $fileInArchive.DirectoryName -ChildPath (Split-Path -Path $fileInArchive.FullName -LeafBase)
+          if (Test-Path -LiteralPath $expandDirectory -PathType Container) {
+            Remove-Item -LiteralPath $expandDirectory -Recurse -Force
+          }
           $file.Add('Files', ($fileInArchive | Get-FilesInArchive -TargetPath $expandPath -PreviousFiles $previousFile.Files))
+        }
+      }
+      # hebiiro/Ultimate用の例外
+      elseif ($Url.StartsWith('https://github.com/hebiiro/anti.aviutl.ultimate.plugin')) {
+        # plugins/ 以下のファイルのみインストール
+        if ($relativePath.StartsWith('plugins/')) {
+          $file.Add('Install', @{
+              TargetPath = $relativePath
+            })
+          # plugins/ultimate/assets/ 以下のファイルはコピー
+          if ($relativePath.StartsWith('plugins/ultimate/assets/')) {
+            $file.Install.Add('Method', 'Copy')
+          }
         }
       }
       # hebiiro氏用の例外
       elseif ($Url.StartsWith('https://github.com/hebiiro/')) {
-        if ($fileInArchive.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($fileInArchive.Extension -ne '.wav'))) {
+        # それらしいディレクトリに配置されている場合は尊重
+        if ($relativePath -match '^(?:[^/]+/)?((?:plugins|script|exe_files)/.+)$') {
+          if ($fileInArchive.Extension -in $ConfExtensions) {
+            $file.Add('Install', @{
+                TargetPath = $Matches[1]
+                ConfFile   = $true
+              })
+          }
+          else {
+            $file.Add('Install', @{
+                TargetPath = $Matches[1]
+              })
+          }
+        }
+        elseif ($fileInArchive.Extension -in $PluginExtensions -or ($relativePath -match '/' -and ($fileInArchive.Extension -ne '.wav'))) {
           if ($fileInArchive.Extension -in $ConfExtensions -and -not ($relativePath -match '/Skin/')) {
             $file.Add('Install', @{
                 TargetPath = ($relativePath -replace '^', 'plugins/')
@@ -132,6 +164,29 @@ begin {
           }
         }
       }
+      # mimaraka/CurveEditor用の例外
+      elseif ($Url.StartsWith('https://github.com/mimaraka/aviutl-plugin-curve_editor')) {
+        if ($relativePath.EndsWith('@Curve Editor.tra')) {
+          $file.Add('Install', @{
+              TargetPath = ($relativePath -replace '^(?:[^/]+/)*', 'script/')
+            })
+        }
+        elseif ($relativePath.EndsWith('curve_editor.auf')) {
+          $file.Add('Install', @{
+              TargetPath = ($relativePath -replace '^(?:[^/]+/)*', 'plugins/')
+            })
+        }
+        elseif ($relativePath.EndsWith('curve_editor.lua')) {
+          $file.Add('Install', @{
+              TargetPath = ($relativePath -replace '^(?:[^/]+/)*', '')
+            })
+        }
+        elseif ($relativePath -match '(curve_editor/.+)$') {
+          $file.Add('Install', @{
+              TargetPath = $Matches[1]
+            })
+        }
+      }
       # それらしいディレクトリに配置されている場合は尊重
       elseif ($relativePath -match '^(?:[^/]+/)?((?:plugins|script|exe_files)/.+)$') {
         if ($fileInArchive.Extension -in $ConfExtensions) {
@@ -150,19 +205,19 @@ begin {
         if ($fileInArchive.Extension -in $PluginExtensions) {
           if ($fileInArchive.Extension -in $ConfExtensions) {
             $file.Add('Install', @{
-                TargetPath = ($relativePath -replace '^([^/]+/)*', 'plugins/')
+                TargetPath = ($relativePath -replace '^(?:[^/]+/)*', 'plugins/')
                 ConfFile   = $true
               })
           }
           else {
             $file.Add('Install', @{
-                TargetPath = ($relativePath -replace '^([^/]+/)*', 'plugins/')
+                TargetPath = ($relativePath -replace '^(?:[^/]+/)*', 'plugins/')
               })
           }
         }
         elseif ($fileInArchive.Extension -in $ScriptExtensions) {
           $file.Add('Install', @{
-              TargetPath = ($relativePath -replace '^([^/]+/)*', 'script/')
+              TargetPath = ($relativePath -replace '^(?:[^/]+/)*', 'script/')
             })
         }
         elseif ($fileInArchive.Extension -in $ConfExtensions) {
@@ -187,12 +242,12 @@ begin {
           }
           $file.Add('Files', ($fileInArchive | Get-FilesInArchive -TargetPath $expandDirectory))
         }
-        # exeファイルはコピー
-        if ($file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
-          $file.Install.Add('Method', 'Copy')
-        }
       }
 
+      # exeファイルはコピー
+      if (-not $previousFile.Install -and $file.Install -and (-not $file.Install.Method) -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
+        $file.Install.Add('Method', 'Copy')
+      }
       # プラグインファイルの情報を取得
       if ($file.Install -and ($fileInArchive.Extension -in '.auf', '.aui', '.auo', '.auc')) {
         $pluginInfos = $fileInArchive | . (Join-Path -Path $PSScriptRoot -ChildPath './Get-PluginInfo.ps1')
@@ -213,10 +268,8 @@ begin {
       }
 
       $filesInArchive += $file
-      Write-Progress -Activity 'アーカイブ内のファイルの情報を取得しています' -Status "処理中: $relativePath" -PercentComplete (($filesInArchive.Count / $files.Count) * 100)
     }
 
-    Write-Progress -Activity 'アーカイブ内のファイルの情報を取得しています' -Completed
     $filesInArchive
   }
 
