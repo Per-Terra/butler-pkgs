@@ -26,9 +26,11 @@ jobs:
 
       - name: Remove Existing Label from PR
         if: github.event_name == 'pull_request'
+        run: gh pr edit $env:NUMBER --remove-label $env:LABELS
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: gh pr edit ${{ github.event.pull_request.number }} --remove-label "manifest-validated,manifest-validation-failure"
+          NUMBER: ${{ github.event.pull_request.number }}
+          LABELS: manifest-validated,manifest-validation-failure
 
       - name: Install and cache PowerShell modules
         uses: potatoqualitee/psmodulecache@v6.2.1
@@ -37,31 +39,23 @@ jobs:
 
       - name: Get Modified Manifests
         id: diff
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
         run: |
-          if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
-            $base = '${{ github.event.pull_request.base.sha }}'
-          } else {
-            $base = '${{ github.event.before }}'
-          }
-          $modifiedManifests = git diff --name-only $base ${{ github.sha }} | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
-          if ($modifiedManifests) {
-            "modified_manifests=$($modifiedManifests -join ',')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          } else {
-            "modified_manifests=" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          }
+          $modifiedManifests = git diff --name-only $env:BASE_SHA $env:HEAD_SHA | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
+          "modified_manifests=$($modifiedManifests -join ',')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
       - name: Test Manifests
         if: steps.diff.outputs.modified_manifests
-        run: ./tools/TestManifest.ps1 -ManifestPath ('${{ steps.diff.outputs.modified_manifests }}' -split ',')
+        run: ./tools/TestManifest.ps1 -ManifestPath ($env:MODIFIED_MANIFESTS -split ',')
+        env:
+          MODIFIED_MANIFESTS: ${{ steps.diff.outputs.modified_manifests }}
 
-      - name: Add Success Label to PR
-        if: github.event_name == 'pull_request' && steps.diff.outputs.modified_manifests && success()
+      - name: Add Label to PR
+        if: github.event_name == 'pull_request' && steps.diff.outputs.modified_manifests && !cancelled()
+        run: gh pr edit $env:NUMBER --add-label $env:LABELS
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: gh pr edit ${{ github.event.pull_request.number }} --add-label "manifest-validated"
-
-      - name: Add Failure Label to PR
-        if: github.event_name == 'pull_request' && failure()
-        env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: gh pr edit ${{ github.event.pull_request.number }} --add-label "manifest-validation-failure"
+          NUMBER: ${{ github.event.pull_request.number }}
+          LABELS: ${{ job.status == 'success' && 'manifest-validated' || 'manifest-validation-failure' }}

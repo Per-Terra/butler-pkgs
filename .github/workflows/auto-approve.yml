@@ -27,36 +27,38 @@ jobs:
 
       - name: Get Modified Manifests
         id: diff
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.sha }}
         run: |
-          $modifiedManifests = git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
-          if ($modifiedManifests) {
-            "modified_manifests=$($modifiedManifests -join ',')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          } else {
-            "modified_manifests=" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          }
+          $modifiedManifests = git diff --name-only $env:BASE_SHA $env:HEAD_SHA | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
+          "modified_manifests=$($modifiedManifests -join ',')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
       - name: Check Manifests
         if: steps.diff.outputs.modified_manifests
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.sha }}
+          MODIFIED_MANIFESTS: ${{ steps.diff.outputs.modified_manifests }}
         run: |
-          $manifests = '${{ steps.diff.outputs.modified_manifests }}' -split ','
           $criticalChange = $false
           $previousManifestsDirectory = ''
-          foreach ($path in $manifests) {
+          foreach ($path in $env:MODIFIED_MANIFESTS -split ',') {
             $manifestsDirectory = Split-Path -Path $path -Parent -Resolve
 
             if ($previousManifestsDirectory -ne $manifestsDirectory) {
               $previousManifestsDirectory = $manifestsDirectory
-              # move to base commit
-              git checkout ${{ github.event.pull_request.base.sha }}
+              # Checkout to base commit
+              git checkout $env:BASE_SHA
 
-              # load manifests
+              # Get previous manifests
               $previousManifests = Get-ChildItem -LiteralPath $manifestsDirectory -Filter '*.yaml' -Recurse -File | ForEach-Object {
                 Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Yaml
               }
 
-              # get latest manifest
+              # Get latest manifest
               $latestManifest = $previousManifests | Sort-Object -Property @{
-                # ReleaseDate でソート
+                # Sort by ReleaseDate
                 Expression = {
                   if ($null -ne $_.ReleaseDate) {
                     [datetime]::ParseExact($_.ReleaseDate, 'yyyy-MM-dd', $null)
@@ -67,7 +69,7 @@ jobs:
                 }
                 Descending = $true
               }, @{
-                # Version でソート
+                # Sort by Version
                 Expression = {
                   if ($null -ne $_.Version) {
                     $_.Version
@@ -79,14 +81,15 @@ jobs:
                 Descending = $true
               } | Select-Object -First 1
 
-              # back to latest commit
-              git checkout ${{ github.sha }}
+              # Checkout to head commit
+              git checkout $env:HEAD_SHA
             }
 
-            # compare manifests
+            # Compare manifests
             $criticalChange = $criticalChange -or (& .\tools\CompareManifests.ps1 -FromManifest "$(Join-Path -Path $manifestsDirectory -ChildPath $latestManifest.Version).yaml" -ToManifest $path -ReturnCriticalChange)
           }
 
+          # Set output for critical change status
           if ($criticalChange) {
             'critical_change=true' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           } else {
@@ -95,9 +98,10 @@ jobs:
 
       - name: Approve Pull Request
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change != 'true'
+        run: gh pr review $env:NUMBER --approve
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr review ${{ github.event.pull_request.number }} --approve
+          NUMBER: ${{ github.event.pull_request.number }}
 
       - name: Update Comment
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
@@ -111,12 +115,16 @@ jobs:
 
       - name: Add Label
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
+        run: gh pr edit $env:NUMBER --add-label $env:LABELS
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr edit ${{ github.event.pull_request.number }} --add-label "critical-change"
+          NUMBER: ${{ github.event.pull_request.number }}
+          LABELS: critical-change
 
-      - name: Add Assignee
+      - name: Add Assignees
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
+        run: gh pr edit $env:NUMBER --add-assignees $env:ASSIGNEES
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr edit ${{ github.event.pull_request.number }} --add-assignees "Per-Terra"
+          NUMBER: ${{ github.event.pull_request.number }}
+          ASSIGNEES: Per-Terra

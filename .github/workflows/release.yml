@@ -20,13 +20,12 @@ jobs:
           modules-to-cache: powershell-yaml
 
       - name: Create release files
-        run: ${{ github.workspace }}/tools/CreateRelease.ps1
+        run: .\tools\CreateRelease.ps1
 
       - name: Create release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd ${{ github.workspace }}
           $date = [datetime](git log -1 --format=%cI)
           gh release create $date.ToUniversalTime().ToString('yyyyMMddTHHmmssZ') (Get-Item -Path .\release\*) --title $date.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
         # https://github.com/cli/cli/issues/5099

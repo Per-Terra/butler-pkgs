@@ -20,7 +20,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ${{ github.workspace }}/tools/AutoUpdate.ps1 -ReturnSources | ForEach-Object {
+          .\tools\AutoUpdate.ps1 -ReturnSources | ForEach-Object {
             $json = $_ | ConvertTo-Json -Compress -AsArray
             gh workflow run create-manifest.yml -f "sources=$([System.Web.HttpUtility]::UrlEncode($json))"
           }
