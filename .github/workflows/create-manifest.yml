@@ -31,7 +31,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Check if the sources input is a valid JSON
-          $sources = ConvertFrom-Json -InputObject ([System.Web.HttpUtility]::UrlDecode(${{ github.event.inputs.sources }}))
+          $sources = ConvertFrom-Json -InputObject ([System.Web.HttpUtility]::UrlDecode('${{ github.event.inputs.sources }}'))
           if (-not $sources) {
             throw 'The sources input is empty or invalid JSON.'
           }
