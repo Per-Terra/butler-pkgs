@@ -51,7 +51,7 @@ jobs:
           Write-Host "Creating manifest: $($sources[0].Developer)/$($sources[0].Identifier)"
           foreach ($source in $sources) {
             try {
-              & (Join-Path -Path $PSScriptRoot -ChildPath './CreateManifest.ps1') -Update -SourceUrl $source.SourceUrl -Identifier $source.Identifier -Version $source.Version -ReleaseDate $source.ReleaseDate -Developer $source.Developer -SkipPrompt -Force
+              & .\tools\CreateManifest.ps1 -Update -SourceUrl $source.SourceUrl -Identifier $source.Identifier -Version $source.Version -ReleaseDate $source.ReleaseDate -Developer $source.Developer -SkipPrompt -Force
             }
             catch {
               Write-Warning "Manifest creation failed: $($_.Exception.Message)"
