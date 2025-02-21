@@ -42,10 +42,10 @@ jobs:
             throw 'The Developer of all sources must be the same.'
           }
 
-          # Set environment variables
-          "identifier=$($sources[0].Identifier)" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "developer=$($sources[0].Developer)" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "versions=$($sources.Version -join ', ')" | Out-File -FilePath $env:GITHUB_ENV -Append
+          # Set the output parameters
+          "identifier=$($sources[0].Identifier)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "developer=$($sources[0].Developer)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "versions=$($sources.Version -join ', ')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
           # Create the manifest
           Write-Host "Creating manifest: $($sources[0].Developer)/$($sources[0].Identifier)"
