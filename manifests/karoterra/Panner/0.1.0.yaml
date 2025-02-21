@@ -1,0 +1,38 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: Panner
+DisplayName: パン
+Version: 0.1.0
+ReleaseDate: 2024-06-09
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 29064
+Developer:
+- karoterra
+Description: 音声のパンニングを行うための拡張編集フィルタ
+Website:
+- https://github.com/karoterra/aviutl_Panner
+Files:
+- SourceUrl: https://github.com/karoterra/aviutl_Panner/releases/download/v0.1.0/aviutl_Panner_v0.1.0.zip
+  SHA256: 437aed5b947dab9493251c532d9f3fc1385cbf2324ef267e1573f7f97f2ca301
+  Files:
+  - Path: LICENSE
+    SHA256: 0a0c62a55e3f739d0c43e36dffb314f013f180b7e23614450382b5b015910d8e
+  - Path: PannerConfig.auf
+    SHA256: 135f52ed3d81e9a076ddc61cf70b54e3cc6e8b816e04bc3fc6d7d12ebc701952
+    Install:
+      TargetPath: plugins/PannerConfig.auf
+  - Path: PannerMain.eef
+    SHA256: f7feaadabd8d145e6e52ed06cc7210d95837684cabfef8d1197eca95c0d7e5bc
+    Install:
+      TargetPath: plugins/PannerMain.eef
+  - Path: README.md
+    SHA256: e90281cf48ccce1c80fee3db2587d7e86065078475ef9378ee462f4405ac5022
+Plugins:
+- Name: パン
+  Information: パン v0.1.0 by karoterra
+  Type: Filter
+  InstallPath: plugins/PannerConfig.auf
+ManifestVersion: 0.3.0

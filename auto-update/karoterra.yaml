@@ -1,21 +1,33 @@
-- Identifier: WaveformPreview
-  Developer: karoterra
-  Type: GitHub
-  Owner: karoterra
-  Repository: aviutl_WaveformPreview
-  Asset: ^aviutl_WaveformPreview_.*\.zip$
-  Version:
-    from: tag_name
-    regex:
-      find: ^v(.*)$
-      replace: $1
-
 - Identifier: MarkdownEX
   Developer: karoterra
   Type: GitHub
   Owner: karoterra
   Repository: aviutl-markdownex
   Asset: ^aviutl-markdownex-.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: Panner
+  Developer: karoterra
+  Type: GitHub
+  Owner: karoterra
+  Repository: aviutl_Panner
+  Asset: ^aviutl_Panner_.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
+- Identifier: WaveformPreview
+  Developer: karoterra
+  Type: GitHub
+  Owner: karoterra
+  Repository: aviutl_WaveformPreview
+  Asset: ^aviutl_WaveformPreview_.*\.zip$
   Version:
     from: tag_name
     regex:
