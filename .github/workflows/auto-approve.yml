@@ -32,7 +32,7 @@ jobs:
           HEAD_SHA: ${{ github.sha }}
         run: |
           $modifiedManifests = git diff --name-only $env:BASE_SHA $env:HEAD_SHA | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
-          "modified_manifests=$($modifiedManifests -join ',')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "modified_manifests=$($modifiedManifests -join ',')" >> $env:GITHUB_OUTPUT
 
       - name: Check Manifests
         if: steps.diff.outputs.modified_manifests
@@ -91,9 +91,9 @@ jobs:
 
           # Set output for critical change status
           if ($criticalChange) {
-            'critical_change=true' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            'critical_change=true' >> $env:GITHUB_OUTPUT
           } else {
-            'critical_change=false' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            'critical_change=false' >> $env:GITHUB_OUTPUT
           }
 
       - name: Approve Pull Request

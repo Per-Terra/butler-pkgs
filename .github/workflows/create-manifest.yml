@@ -44,9 +44,9 @@ jobs:
           }
 
           # Set the output parameters
-          "identifier=$($sources[0].Identifier)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          "developer=$($sources[0].Developer)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          "versions=$($sources.Version -join ', ')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "identifier=$($sources[0].Identifier)" >> $env:GITHUB_OUTPUT
+          "developer=$($sources[0].Developer)" >> $env:GITHUB_OUTPUT
+          "versions=$($sources.Version -join ', ')" >> $env:GITHUB_OUTPUT
 
           # Create the manifest
           Write-Host "Creating manifest: $($sources[0].Developer)/$($sources[0].Identifier)"
@@ -67,32 +67,32 @@ jobs:
           $modifiedFiles = [array](git diff --name-only --diff-filter=M)
 
           $EOF = -join (1..15 | ForEach-Object { [char]((48..57) + (65..90) + (97..122) | Get-Random) })
-          "pr_description<<$EOF" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "pr_description<<$EOF" >> $env:GITHUB_OUTPUT
 
           if ($addedFiles.Count -gt 0) {
-            "## 追加されたファイル" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            '' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "## 追加されたファイル" >> $env:GITHUB_OUTPUT
+            '' >> $env:GITHUB_OUTPUT
             $addedFiles | ForEach-Object {
-              "- [$_]($_)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+              "- [$_]($_)" >> $env:GITHUB_OUTPUT
             }
-            '' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            '' >> $env:GITHUB_OUTPUT
           }
 
           if ($modifiedFiles.Count -gt 0) {
-            "## 変更されたファイル" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            '' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "## 変更されたファイル" >> $env:GITHUB_OUTPUT
+            '' >> $env:GITHUB_OUTPUT
             $modifiedFiles | ForEach-Object {
-              "- [$_]($_)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+              "- [$_]($_)" >> $env:GITHUB_OUTPUT
             }
-            '' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            '' >> $env:GITHUB_OUTPUT
           }
 
           @"
           ---
 
           Automated changes by [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action
-          "@ | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          $EOF | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "@ >> $env:GITHUB_OUTPUT
+          $EOF >> $env:GITHUB_OUTPUT
         # https://docs.github.com/ja/actions/using-workflows/workflow-commands-for-github-actions#example-of-a-multiline-string
 
       - name: Create Pull Request
