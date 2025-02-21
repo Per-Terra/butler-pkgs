@@ -18,6 +18,18 @@
     from: tag_name
   Disable: true # 開発終了
 
+- Identifier: edgelevelMT
+  Developer: rigaya
+  Type: GitHub
+  Owner: rigaya
+  Repository: edgelevelMT
+  Asset: ^edgelevelMT_.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: ffmpegOut
   Developer: rigaya
   Type: GitHub

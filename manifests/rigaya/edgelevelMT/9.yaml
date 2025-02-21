@@ -1,0 +1,33 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: edgelevelMT
+DisplayName: エッジレベル調整 MT
+Version: "9"
+ReleaseDate: 2024-07-25
+Section: Plugin/Filter
+InstalledSize: 112722
+Developer:
+- rigaya
+Description: |-
+  エッジレベル調整を勝手にMT化(並列化)したプラグイン
+  がらくたハウスのがらくた置き場様の エッジレベル調整を勝手にMT化(並列化)したものです。 オリジナルと同様に動くはずです。
+  また、AVX512 / AVX2 / AVX(128bit) / SSE4.1 / SSSE3 / SSE2 で高速化されています。 環境に合わせて、最速のものが自動的に選択されます。
+Website:
+- https://github.com/rigaya/edgelevelMT
+Files:
+- SourceUrl: https://github.com/rigaya/edgelevelMT/releases/download/v9/edgelevelMT_v9.zip
+  SHA256: b18633e2f435acd88195e12030ce62d95bc7815eadd6a05abc5f664156d7a9f9
+  Files:
+  - Path: edgelevelMT_readme.txt
+    SHA256: a96ec7c51d82ffd7e4c09847cb17304b1193ee0c6a17e12026f8e3e2794eaf8e
+  - Path: edgelevelMT.auf
+    SHA256: b78b6c5d9696b235284cdac87e75967c300109dec6bd2e7649dcabd4724658e8
+    Install:
+      TargetPath: plugins/edgelevelMT.auf
+Plugins:
+- Name: エッジレベル調整 MT ver 0.7
+  Information: エッジレベル調整 MT ver 0.7 v9
+  Type: Filter
+  InstallPath: plugins/edgelevelMT.auf
+ManifestVersion: 0.3.0
