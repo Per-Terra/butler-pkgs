@@ -12,8 +12,6 @@ jobs:
       - name: Create comment
         id: couc
         uses: peter-evans/create-or-update-comment@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: This Pull Request will soon be checked and approved automatically if there are no critical changes.
