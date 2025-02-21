@@ -33,4 +33,11 @@ jobs:
           $latestRelease = $json | ConvertFrom-Json
           $url = $latestRelease.assets | Where-Object { $_.name -eq 'LuaJIT_2.1_Win_x86.zip' } | Select-Object -ExpandProperty browser_download_url
           $date = $latestRelease.tag_name -replace '^build-', '' -replace '-\d{2}-\d{2}-\d{2}$', ''
-          gh workflow run create-manifest.yml -f "sources='$(@{ SourceUrl = $url; Identifier = 'LuaJIT'; Version = '2.1'; ReleaseDate = $date; Developer = 'Per-Terra' } | ConvertTo-Json -Compress -AsArray)'"
+          $json = @{
+            SourceUrl   = $url
+            Identifier  = 'LuaJIT'
+            Version     = '2.1'
+            ReleaseDate = $date
+            Developer   = 'Per-Terra'
+          } | ConvertTo-Json -Compress -AsArray
+          gh workflow run create-manifest.yml -f sources=([System.Web.HttpUtility]::UrlEncode($json))
