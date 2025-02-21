@@ -1,0 +1,54 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: AviutlColor
+Version: "0.01"
+ReleaseDate: 2024-08-01
+Section: Plugin/Color
+Depends:
+- aviutl (>= 0.99m)
+InstalledSize: 313356
+Developer:
+- rigaya
+Description: 色空間変換プラグイン
+Website:
+- https://github.com/rigaya/AviutlColor
+Files:
+- SourceUrl: https://github.com/rigaya/AviutlColor/releases/download/0.01/AviutlColor_0.01.zip
+  SHA256: 70c97398a3329a3b6c45e6c8ddc50a602eb82f5a348895afc7d39d8bbd24c263
+  Files:
+  - Path: AviutlColor_0.01/AviutlColor.ini
+    SHA256: 27dae3f1a91006fab9e7e32ace4ef081d0d781e3ad5f89fb8316999613807529
+    Install:
+      TargetPath: plugins/AviutlColor.ini
+      ConfFile: true
+  - Path: AviutlColor_0.01/AviutlControl_src.url.url
+    SHA256: 92bfc6dabde69722e2a412356b1e6b9d3e6ab473beaaf26f1afd74e25c1dc5e8
+  - Path: AviutlColor_0.01/color_bt2020nc.auc
+    SHA256: d895a5e0aee112318badd1a9b23ccad4c11d761e8f673c6c70b409e5fcbd9fa3
+    Install:
+      TargetPath: plugins/color_bt2020nc.auc
+  - Path: AviutlColor_0.01/color_bt601.auc
+    SHA256: 85642db9175200dbdf85893cad23b9c7ae16f81795ace1323bdf7bd7554343d6
+    Install:
+      TargetPath: plugins/color_bt601.auc
+  - Path: AviutlColor_0.01/color_bt709.auc
+    SHA256: f25e699de94f57ae41fd82e91dab30429cfaaae9812cacbe63a22950e20b6cb7
+    Install:
+      TargetPath: plugins/color_bt709.auc
+  - Path: AviutlColor_0.01/readme.txt
+    SHA256: 435614f87b759f3f91b4483319b48fd5b2e77c4616e322dbd7dca34d87031978
+Plugins:
+- Name: BT.2020nc (st)
+  Information: BT.2020nc (st) version 0.01 by rigaya
+  Type: Color
+  InstallPath: plugins/color_bt2020nc.auc
+- Name: BT.601 (st)
+  Information: BT.601 (st) version 0.01 by rigaya
+  Type: Color
+  InstallPath: plugins/color_bt601.auc
+- Name: BT.709 (st)
+  Information: BT.709 (st) version 0.01 by rigaya
+  Type: Color
+  InstallPath: plugins/color_bt709.auc
+ManifestVersion: 0.3.0

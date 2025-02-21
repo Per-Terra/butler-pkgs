@@ -1,3 +1,12 @@
+- Identifier: AviutlColor
+  Developer: rigaya
+  Type: GitHub
+  Owner: rigaya
+  Repository: AviutlColor
+  Asset: ^AviutlColor_.*\.zip$
+  Version:
+    from: tag_name
+
 - Identifier: bandingMT-SIMD
   Developer: rigaya
   Type: GitHub
