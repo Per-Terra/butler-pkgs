@@ -102,8 +102,6 @@ jobs:
       - name: Update Comment
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
         uses: peter-evans/create-or-update-comment@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           comment-id: ${{ steps.couc.outputs.comment-id }}
           body: |
