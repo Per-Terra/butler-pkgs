@@ -1,0 +1,38 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: ShowLimit
+DisplayName: 上限確認
+Version: 0.5.0
+ReleaseDate: 2024-05-12
+Section: Plugin/Other
+InstalledSize: 107991
+Developer:
+- karoterra
+Description: |-
+  AviUtl 拡張編集内部に存在するスクリプト名等のバッファの使用率を確認するプラグイン
+  これにより、あとどれくらいスクリプトを追加できるか確認できます。
+Website:
+- https://github.com/karoterra/aviutl_ShowLimit
+Files:
+- SourceUrl: https://github.com/karoterra/aviutl_ShowLimit/releases/download/v0.5.0/aviutl_ShowLimit_v0.5.0.zip
+  SHA256: 8de42bee752e8bdd29ea5675d84caafccbea0d1ba906fa1d2bf9dbd93e83edc6
+  Files:
+  - Path: CHANGELOG.md
+    SHA256: c6a078a4e5e6d3c5e492a82f52133f7f0bbdfdb03f8ecdd7e95eec6499b97615
+  - Path: CREDITS.md
+    SHA256: 89af939129a49b869b33bedf493be0cf7579db37682c9365d53b30fcee318484
+  - Path: LICENSE
+    SHA256: 5b38d67c6ecf4e445c22bb66837322a7bc6b62854366089806739068d3942a35
+  - Path: README.md
+    SHA256: d4b89fbefc5a349fd8b0e2b972eec8bf03b105750ccf43ffe5d58840eaa2bbe3
+  - Path: ShowLimit.auf
+    SHA256: 53a3d4a1c6f6293c92d380f9fb5bd3858d3e3a71ba8432077f5d7d729f794d7b
+    Install:
+      TargetPath: plugins/ShowLimit.auf
+Plugins:
+- Name: 上限確認
+  Information: 上限確認 v0.5.0 by karoterra
+  Type: Filter
+  InstallPath: plugins/ShowLimit.auf
+ManifestVersion: 0.3.0

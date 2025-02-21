@@ -22,6 +22,18 @@
       find: ^v(.*)$
       replace: $1
 
+- Identifier: ShowLimit
+  Developer: karoterra
+  Type: GitHub
+  Owner: karoterra
+  Repository: aviutl_ShowLimit
+  Asset: ^aviutl_ShowLimit_.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^v(.*)$
+      replace: $1
+
 - Identifier: WaveformPreview
   Developer: karoterra
   Type: GitHub
