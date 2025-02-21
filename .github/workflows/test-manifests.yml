@@ -27,7 +27,7 @@ jobs:
       - name: Remove Existing Label from PR
         if: github.event_name == 'pull_request'
         env:
-          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: gh pr edit ${{ github.event.pull_request.number }} --remove-label "manifest-validated,manifest-validation-failure"
 
       - name: Install and cache PowerShell modules
@@ -57,11 +57,11 @@ jobs:
       - name: Add Success Label to PR
         if: github.event_name == 'pull_request' && steps.diff.outputs.modified_manifests && success()
         env:
-          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: gh pr edit ${{ github.event.pull_request.number }} --add-label "manifest-validated"
 
       - name: Add Failure Label to PR
         if: github.event_name == 'pull_request' && failure()
         env:
-          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: gh pr edit ${{ github.event.pull_request.number }} --add-label "manifest-validation-failure"
