@@ -52,6 +52,18 @@
       $version = if ($Matches[2]) { $Matches[1] + '-' + $Matches[2] } else { $Matches[1] }
   IgnoreOlderThan: 2022-04-17 # 6.00
 
+- Identifier: PMD-MT
+  Developer: rigaya
+  Type: GitHub
+  Owner: rigaya
+  Repository: pmd_mt
+  Asset: ^pmd_mt\+.*\.zip$
+  Version:
+    from: tag_name
+    regex:
+      find: ^\+(.*)$
+      replace: $1
+
 - Identifier: QSVEnc
   Developer: rigaya
   Type: GitHub

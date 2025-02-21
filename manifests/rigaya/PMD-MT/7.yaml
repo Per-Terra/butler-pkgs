@@ -1,0 +1,39 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: PMD-MT
+DisplayName: PMD_MT 高速化版
+Version: "7"
+ReleaseDate: 2022-09-29
+Section: Plugin/Filter
+InstalledSize: 244946
+Developer:
+- rigaya
+Description: |-
+  PMD_MT ノイズ除去フィルタ 高速化版
+  その名の通りPMD_MTの高速化版です。
+  もともとのCによるコードに対し、SSE2 / SSSE3 / SSE4.1 / AVX / FMA3 / FMA4 / AVX2 / AVX2VNNI / AVX512BW / AVX512VBMI / AVX512VNNI などにより高速化しました。自動的に使用可能な最速の関数が使用されるようになっています。
+  マルチスレッドにも対応しています。(オリジナル版からマルチスレッドには対応しています)
+  オリジナルを作成されたエモリ氏、およびその改良版を作成された方に深く感謝いたします。
+Website:
+- https://github.com/rigaya/pmd_mt
+Files:
+- SourceUrl: https://github.com/rigaya/pmd_mt/releases/download/%2B7/pmd_mt+7.zip
+  SHA256: 836cc5167b520870780d84092b15ef40926abcfe1906094d99d0120157fe63bc
+  Files:
+  - Path: pmd_mt+7/pmd_mt_src.url.url
+    SHA256: dcdde18fb3b83c02b500af228d83ea8f8693ff522d6be2598cd6e94aed412df4
+  - Path: pmd_mt+7/pmd_mt.auf
+    SHA256: 340f2c07a074265eb982d032f737732d7ba143872e1f6d831e471a819458a694
+    Install:
+      TargetPath: plugins/pmd_mt.auf
+  - Path: pmd_mt+7/PMD_MT.txt
+    SHA256: 981adb3a8973b8e3a49929cb8f5a1b12946d1bb42024c4d619d0f19eaf19c001
+  - Path: pmd_mt+7/PMD_MT高速化版.txt
+    SHA256: 3558dd08a5cf91013a4b691d30cd0c3ddf9471af13a4aea23c26c7db1be3d060
+Plugins:
+- Name: PMD_MT
+  Information: PMD_MT
+  Type: Filter
+  InstallPath: plugins/pmd_mt.auf
+ManifestVersion: 0.3.0
