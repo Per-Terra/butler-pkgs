@@ -8,6 +8,10 @@ on:
       - 'manifests/**/*.yaml'
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   create_release:
     runs-on: windows-latest
