@@ -20,7 +20,7 @@ jobs:
       - name: Install and cache PowerShell modules
         uses: potatoqualitee/psmodulecache@v6.2.1
         with:
-          modules-to-cache: 7Zip4Powershell, powershell-yaml
+          modules-to-cache: powershell-yaml
 
       - name: Update Per-Terra/LuaJIT
         env:
