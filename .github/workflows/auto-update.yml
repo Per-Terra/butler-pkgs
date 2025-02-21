@@ -9,6 +9,12 @@ jobs:
   auto_update:
     runs-on: windows-latest
     steps:
+      - uses: actions/create-github-app-token@v1.11.5
+        id: generate-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
       - uses: actions/checkout@v4.2.2
 
       - name: Install and cache PowerShell modules
@@ -18,7 +24,7 @@ jobs:
 
       - name: Update Package Manifests
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           ${{ github.workspace }}/tools/AutoUpdate.ps1 -ReturnSources | ForEach-Object {
             $json = $_ | ConvertTo-Json -Compress -AsArray

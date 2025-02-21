@@ -24,7 +24,7 @@ jobs:
 
       - name: Update Per-Terra/LuaJIT
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           $originalEncoding = [System.Console]::OutputEncoding
           [System.Console]::OutputEncoding = [Text.Encoding]::UTF8
