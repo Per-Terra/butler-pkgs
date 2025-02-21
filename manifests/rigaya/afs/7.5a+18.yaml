@@ -1,0 +1,139 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: afs
+DisplayName: 自動フィールドシフト 高速化版
+Version: 7.5a+18
+ReleaseDate: 2024-08-01
+Section: Plugin/Filter
+InstalledSize: 1113518
+Developer:
+- rigaya
+Description: |-
+  自動フィールドシフトを勝手に高速化したプラグイン
+  自動フィールドシフト 高速化版はaji様の 自動フィールドシフトを勝手に高速化したものです。
+  もともとMMX命令で高速化されているものを、 AVX512 / AVX2 / AVX / SSE4.1 / SSSE3 / SSE2 などにより高速化しました。 環境に合わせて、最速のものが自動的に選択されます。
+Website:
+- https://github.com/rigaya/afs
+Files:
+- SourceUrl: https://github.com/rigaya/afs/releases/download/7.5a%2B18/afs_7.5a%2B18.zip
+  SHA256: 93ba8e0bd12499227d276004eb80b152a0064f5a070f5cd470c1f2940792ee78
+  Files:
+  - Path: afs_7.5a+18/afs.auf
+    SHA256: 02787ec84955fb2259e8ff9f29379f8cb59687e25a66ad8e7cc5294a20cddb3f
+    Install:
+      TargetPath: plugins/afs.auf
+  - Path: afs_7.5a+18/afs.txt
+    SHA256: e97480478e8c312eed88fe9a67522708de94701367f3be47ff4a9b4a01510ab9
+  - Path: afs_7.5a+18/afsvf.auf
+    SHA256: 1272c2faffbcc559413f8b724503f63dfcc89ed0832b2e1c8bbae21a36bfa13c
+    Install:
+      TargetPath: plugins/afsvf.auf
+  - Path: afs_7.5a+18/afs高速化版.txt
+    SHA256: 398985fe946bea77095fd097299389ce38746e874fd9dd0002de15aa007356dc
+  - Path: afs_7.5a+18/afs/afs.sln
+    SHA256: 9cca14d95d5c963ef4711ec429d59ddbb4d90501206950a189f462ee2c4fae3b
+  - Path: afs_7.5a+18/afs/afs/afs_analyze_avx2.cpp
+    SHA256: 9cd4ae0f41764d30dcf0a1adb7b6071ce1414dbb8b0513db64aa3caa7057b31a
+  - Path: afs_7.5a+18/afs/afs/afs_analyze_mmx.asm
+    SHA256: f0dc84a092053e6b2244630c251c02f75a22200789d5b323cf75bff017167b7a
+  - Path: afs_7.5a+18/afs/afs/afs_analyze_mmx.h
+    SHA256: b59898f6727e282581932cc391cd648c5eec14749b8c641d8c12a77dc62f9a3c
+  - Path: afs_7.5a+18/afs/afs/afs_analyze_simd.cpp
+    SHA256: 22d4a7fedc19bf52b9bcee7148032c957e5a403ed9cf97807fe75383fa48a365
+  - Path: afs_7.5a+18/afs/afs/afs_analyze_simd.h
+    SHA256: 28d32e722b2fd8d73a4a92a736e38aa8cf9bbdc19a2ebdc6331f9b31864f66e7
+  - Path: afs_7.5a+18/afs/afs/afs_avx2.cpp
+    SHA256: a49f00a9e5f83532958f7347dd6c4567ef07eaf70c5b456774db3ebb2a81d2ba
+  - Path: afs_7.5a+18/afs/afs/afs_filter_avx2.cpp
+    SHA256: 9770d6658c2c8b66a02ee82b672518aef2819a844c2eafec1d8dd8116d62f3f1
+  - Path: afs_7.5a+18/afs/afs/afs_filter_mmx.asm
+    SHA256: 9fb1748d47228b4dd9234dfd45c6fc106694e5b232f28e946825f4ce510ebb5c
+  - Path: afs_7.5a+18/afs/afs/afs_filter_mmx.h
+    SHA256: fcbe4ad898893d63b7f59689494e3d07750a4e2d70a7b30bb36bac9f85c83de5
+  - Path: afs_7.5a+18/afs/afs/afs_filter_simd.h
+    SHA256: e5bbef9c62a2c26a2b8d70fb80c65939e57deda2cf08b2aa89a832a414149132
+  - Path: afs_7.5a+18/afs/afs/afs_func.cpp
+    SHA256: 1f2655660267f696600e3c1c56a6b48855cea4ee01f50cb33d7a0e6fa309c0dd
+  - Path: afs_7.5a+18/afs/afs/afs_func.h
+    SHA256: 26f723907d44913531c73d701c2f5009a1cf2a0c691edad09528b5a71a5abe09
+  - Path: afs_7.5a+18/afs/afs/afs_mmx.asm
+    SHA256: 18ae6c3508a0d257327afd7396ff1fdb436e290cb952a400f13544e04a5e59ff
+  - Path: afs_7.5a+18/afs/afs/afs_mmx.h
+    SHA256: 44477b9c5b9eb3c89772cf8564d4e767571f4db4c0f0849e69c339928e557b37
+  - Path: afs_7.5a+18/afs/afs/afs_server.h
+    SHA256: d9152417437d95e53e30c251a1e8fbfce09951371bec70e6b87892a14612467a
+  - Path: afs_7.5a+18/afs/afs/afs_simd_avx.cpp
+    SHA256: 0e943d88ecbc8f2f05fa20b5f99b5a5cf37b5ad9541bade448545d9c42ca5d84
+  - Path: afs_7.5a+18/afs/afs/afs_simd_popcnt.cpp
+    SHA256: bd6fc45a0237af802b85bfafb3cf19810d412913be22c5b0f81eedbb2004cec7
+  - Path: afs_7.5a+18/afs/afs/afs_simd_sse2.cpp
+    SHA256: 55fab93478c61c995aa5b31d9ca64468dc9a2bff0e3cc24b09c7e6ca476ee50a
+  - Path: afs_7.5a+18/afs/afs/afs_simd_sse41_popcnt.cpp
+    SHA256: 841cc54ba870b78db13fc12282de3ef675061c3811f5cde445427b842ed3aa9a
+  - Path: afs_7.5a+18/afs/afs/afs_simd_sse41.cpp
+    SHA256: fc30dd37396dd056109547512d10267ab82c8c2feeeed0713ef2212b59390085
+  - Path: afs_7.5a+18/afs/afs/afs_simd_ssse3.cpp
+    SHA256: d3a2e34b2a31900e59c00ebf2db71d53f8ea31aeb4dc088d53896e0bc86d1881
+  - Path: afs_7.5a+18/afs/afs/afs_simd.h
+    SHA256: e0630efa4475f59b811716a88f4125a256a1a0f2c2a843e23db015a54ecc8f01
+  - Path: afs_7.5a+18/afs/afs/afs_yuy2up_avx2.cpp
+    SHA256: fe10320f040293e8285c2d226fe0aba46b995d2d0477284491e29a0444b04a6c
+  - Path: afs_7.5a+18/afs/afs/afs_yuy2up_mmx.asm
+    SHA256: a5afa33e4dcbcd0f33d8fd4b7fb2270ba91871b56639d93c591cae908df75c43
+  - Path: afs_7.5a+18/afs/afs/afs_yuy2up_mmx.h
+    SHA256: dbc0c92bc31492790c2b29d9d68e769066ac2a84de7e5e7a94f7d092ff0e8f55
+  - Path: afs_7.5a+18/afs/afs/afs_yuy2up_simd.h
+    SHA256: f4fa7f4e833f0dd3c622173e7fcb31fea223ffbc186ee10cd65778cf0ab7439c
+  - Path: afs_7.5a+18/afs/afs/afs.cpp
+    SHA256: 1dd34fd09e751733a8fd5ddf537804e7748c334ac742e213a0b2ef8bd1d29ba7
+  - Path: afs_7.5a+18/afs/afs/afs.def
+    SHA256: ba15f322bd0b3259b26eb149bf38db0fa1b2d4f7a9354a900115e5f52f292924
+  - Path: afs_7.5a+18/afs/afs/afs.h
+    SHA256: aef18763c6b3ec76842baf8e5dd6613c223f74d661a2260b35c94922ff6b66a3
+  - Path: afs_7.5a+18/afs/afs/afs.vcxproj
+    SHA256: 33032e0b72ca68626a5acd6944496913c738cdcf38de2e7f329f488259f7f618
+  - Path: afs_7.5a+18/afs/afs/afs.vcxproj.filters
+    SHA256: b5fa8ee0ebeb7fa4ad950dd1c4457a7faa55517b30056d8b0ba7a16db734a0bd
+  - Path: afs_7.5a+18/afs/afs/afsvf.def
+    SHA256: 4970be46d3b4186a746f59fcebcf4de21c379288824f9febac4d62acf8286f14
+  - Path: afs_7.5a+18/afs/afs/filter.h
+    SHA256: 9dc13bd9ac0845126be499d6ff44f8b8bd87a8c9d70d70edcaa1cac2dcd57e41
+  - Path: afs_7.5a+18/afs/afs/simd_util.h
+    SHA256: 8bb294483eb5fc54d16ac99c661fb8dba86a8aca7eb973497bc1bcd94ff45404
+  - Path: afs_7.5a+18/afs/afs/converter/afs_client.h
+    SHA256: 5ad18b2b128ee766eff24bf27f4ead58f0dc3dbe7022bc3e380898d23b20d569
+  - Path: afs_7.5a+18/afs/afs/converter/afslog2synctime.c
+    SHA256: ff340bc92d9e5b8e8d855278dd8c698c4b4ddc7300270a8d10ae88fa6632c341
+  - Path: afs_7.5a+18/afs/afs/converter/afslog2timecode.c
+    SHA256: 35f3d4370c30638b11cf21d557391217fbc23d539e2457482d191f827d9356a9
+  - Path: afs_7.5a+18/afs/afs/converter/avi2timecode.c
+    SHA256: fd5b6597deed660f0aa9275c10ea4077fb6999899c992aa2faa6c6410b55c816
+  - Path: afs_7.5a+18/afs/afs/converter/avidelnull.c
+    SHA256: d3aba5af82ab926ab1a5044683a02e97036d3ff11b43d69a4b71f5f8fb4c56d8
+  - Path: afs_7.5a+18/afs/afs/converter/avinanalyze.c
+    SHA256: 1714c8f284db0892761eabf93c1a23b342656740036d552893670d0fb5eb924b
+  - Path: afs_7.5a+18/afs/afs/converter/avinmux.c
+    SHA256: 8bd84e4baf6260961429cc0c07018d4985cc6ba74f5fd0f1f33c712a9d26a7f3
+  - Path: afs_7.5a+18/afs/afs/converter/aviquarterfps.c
+    SHA256: c674ef3474e6a8813a51a68a2a39b1a843665103d767fd14b96257161c5ccb80
+  - Path: afs_7.5a+18/afs/afs/converter/avitmux.c
+    SHA256: cbbf928f7bba313fae11776ab7fa363ec8c9c4b0628dd9ca05105e39d3a1b222
+  - Path: afs_7.5a+18/afs/afs/converter/del_import.cpp
+    SHA256: b3d9831f15b4570249cf23818f9d4cee7f240e9e7fcfd657f677ac06e34c50d6
+  - Path: afs_7.5a+18/afs/afs/converter/del_import.def
+    SHA256: 34b7d3708ba2e5aff6e5e34689662cecb29d6b125167ce187b801970a0ac002f
+  - Path: afs_7.5a+18/afs/afs/converter/nullout.cpp
+    SHA256: 0707ac314bd6cc52e89b734c09f06e2a76a119553d0c0abc4bfad0a48cec7eed
+  - Path: afs_7.5a+18/afs/afs/converter/nullout.def
+    SHA256: b62198a8df0d11d5e56e0cfc72bd47c553ac0b7db2eb7eb7955e52195e36da23
+Plugins:
+- Name: 自動フィールドシフト
+  Information: 自動フィールドシフト インタレース解除 ver7.5a+ by Aji
+  Type: Filter
+  InstallPath: plugins/afs.auf
+- Name: 自動フィールドシフトVF
+  Information: 自動フィールドシフト ビデオフィルタ ver7.5a+ by Aji
+  Type: Filter
+  InstallPath: plugins/afsvf.auf
+ManifestVersion: 0.3.0

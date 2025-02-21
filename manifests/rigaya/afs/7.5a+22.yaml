@@ -1,0 +1,50 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: afs
+DisplayName: 自動フィールドシフト 高速化版
+Version: 7.5a+22
+ReleaseDate: 2024-08-01
+Section: Plugin/Filter
+InstalledSize: 1373113
+Developer:
+- rigaya
+Description: |-
+  自動フィールドシフトを勝手に高速化したプラグイン
+  自動フィールドシフト 高速化版はaji様の 自動フィールドシフトを勝手に高速化したものです。
+  もともとMMX命令で高速化されているものを、 AVX512 / AVX2 / AVX / SSE4.1 / SSSE3 / SSE2 などにより高速化しました。 環境に合わせて、最速のものが自動的に選択されます。
+Website:
+- https://github.com/rigaya/afs
+Files:
+- SourceUrl: https://github.com/rigaya/afs/releases/download/7.5a%2B22/afs_7.5a%2B22.zip
+  SHA256: 81d5e5c2c935260655fd646da62896c78615739472acd1b8b48485562dc1f6be
+  Files:
+  - Path: afs_7.5a+22/afs_src.url.url
+    SHA256: 492dd1e96e2f707764ef2a89b2ea7569b4708ce48a22914f277dfaca96258e38
+  - Path: afs_7.5a+22/afs.auf
+    SHA256: ef5c01dd5d03d26ad51ce09d36c0525fce02535f07c20a52d7dfd34dbfd3f6e1
+    Install:
+      TargetPath: plugins/afs.auf
+  - Path: afs_7.5a+22/afs.txt
+    SHA256: e97480478e8c312eed88fe9a67522708de94701367f3be47ff4a9b4a01510ab9
+  - Path: afs_7.5a+22/afsvf.auf
+    SHA256: 7e96240e03c2ee7089df9f39ec997ff624b1d856b83acda05b4bbede1214d69a
+    Install:
+      TargetPath: plugins/afsvf.auf
+  - Path: afs_7.5a+22/afs高速化版.txt
+    SHA256: 5686113020bf7dcafabd67d05ab177a2dd9da7ff7bee18162750197a9a4707fc
+  - Path: afs_7.5a+22/save_stg_afs.exe
+    SHA256: de8c933055fb073a0937d8db2847cc93e2d0b08fe1bc7275e426c0d713b089d5
+    Install:
+      TargetPath: plugins/save_stg_afs.exe
+      Method: Copy
+Plugins:
+- Name: 自動フィールドシフト
+  Information: 自動フィールドシフト 高速化版 ver7.5a+22 by rigaya
+  Type: Filter
+  InstallPath: plugins/afs.auf
+- Name: 自動フィールドシフトVF
+  Information: 自動フィールドシフトVF 高速化版 ver7.5a+22by rigaya
+  Type: Filter
+  InstallPath: plugins/afsvf.auf
+ManifestVersion: 0.3.0
