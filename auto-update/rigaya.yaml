@@ -1,3 +1,15 @@
+- Identifier: bandingMT-SIMD
+  Developer: rigaya
+  Type: GitHub
+  Owner: rigaya
+  Repository: bandingMT_simd
+  Asset: ^bandingMT_simd_v.*\.zip$
+  Version:
+    from: asset.name
+    regex:
+      find: ^bandingMT_simd_v(.*)\.zip$
+      replace: $1
+
 - Identifier: clcufilters
   Developer: rigaya
   Type: GitHub

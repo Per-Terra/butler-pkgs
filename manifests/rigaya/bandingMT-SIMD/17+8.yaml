@@ -1,0 +1,36 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: bandingMT-SIMD
+DisplayName: バンディング低減MT SIMD
+Version: 17+8
+ReleaseDate: 2024-07-25
+Section: Plugin/Filter
+InstalledSize: 510322
+Developer:
+- rigaya
+Description: |-
+  バンディング低減フィルタMTを勝手に高速化したプラグイン
+  バンディング低減MT SIMDはがらくたハウスのがらくた置き場様の バンディング低減フィルタMTを勝手に高速化したものです。
+  完全に手探りででっち上げたので、怪しいところもありますが、だいたい同じ効果が得られるかと。
+  AVX512-VNNI / AVX512 / AVX2+AVX-VNNI / AVX2 / 128bit-AVX / SSE4.1 / SSSE3 / SSE2 / MMX で高速化されています。 環境に合わせて、最速のものが自動的に選択されます。
+Website:
+- https://github.com/rigaya/bandingMT_simd
+Files:
+- SourceUrl: https://github.com/rigaya/bandingMT_simd/releases/download/%2B8/bandingMT_simd_v17+8.zip
+  SHA256: c0553c83c254074dac650f988312783c005125816161da0393b23f0bf025f154
+  Files:
+  - Path: bandingMT_simd_v17+8/bandingMT_simd_readme.txt
+    SHA256: afbef9d754cca9b131d59037f2aaf4eccf41a2c5a7a28c0fa7d699dc09c85f53
+  - Path: bandingMT_simd_v17+8/bandingMT_simd_source_code.url
+    SHA256: 9f7bb0f8a435a9d7c50c0a6f0210e738aca7a2a9da14f440f20282baac4bd509
+  - Path: bandingMT_simd_v17+8/bandingMT_simd.auf
+    SHA256: b9f0f9a14ddedf67006ae0c6f4f29d18c7d49a15876c6ae2b00fc6d5a97ea0fa
+    Install:
+      TargetPath: plugins/bandingMT_simd.auf
+Plugins:
+- Name: バンディング低減MT SIMD
+  Information: バンディング低減MT SIMD ver17+8
+  Type: Filter
+  InstallPath: plugins/bandingMT_simd.auf
+ManifestVersion: 0.3.0
