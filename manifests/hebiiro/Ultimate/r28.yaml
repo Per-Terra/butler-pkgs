@@ -205,47 +205,38 @@ Files:
     SHA256: 695237debeea95a2f16c98328bb15fdcaf95877483a5b78de2301af61d16eb38
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/dark.brown.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/dark.maou_2chica.json
     SHA256: dbd34abf970e5572a8251f2e054952ba7f1973b1b15346fb1bd977632925acb3
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/dark.maou_2chica.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/dark.miku.json
     SHA256: 9cdb943a3819dfe0ab263e0b684f889b0347b3aa08a63f27ed4593729229df85
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/dark.miku.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/dark.red.json
     SHA256: 3252423ae17aba56bd166f9cde3a920c6cfe12f2eb4b95c8441c82c1397a3ff9
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/dark.red.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/dark.zundamon.json
     SHA256: b46301507e7c1b16b771b6e08f7cf5de383d12881a92ec502fe783d4c4eb8c8a
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/dark.zundamon.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/light.akane.json
     SHA256: 50f56d780890b8f8eb47bcd4e30da6f6e724716586c6e15147ebc4ac5ba6f8fd
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/light.akane.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/light.aoi.json
     SHA256: 542e43d9c5e0b0979256b260690c648a4b00663bd1857bd2e58421c6ed79af4a
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/light.aoi.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/light.kotonoha.json
     SHA256: 30804dcb3cbec1767d8bcb49076ab9f94815a557c5c1078e4df0802948278130
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/light.kotonoha.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/light.red.json
     SHA256: c6489d1acb3d42b57245202cb9714b4a9ccb00c23a244d404c22d4a3455faccb
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/light.red.json
-      Method: Copy
   - Path: ultimate/assets/dark/scheme/dark/brown.py
     SHA256: c3feeb59891af5d5f6ce389a0e4287bebe64a6ad86f1fb3c93a821d8d348a1e3
     Install:
@@ -286,22 +277,18 @@ Files:
     SHA256: 498403a36634dc1e39f65cd0a8483d23c1cf9009cb8c460f42f49db3e08c3d30
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/flat.dark.json
-      Method: Copy
   - Path: ultimate/assets/dark/skin/flat.light.json
     SHA256: 1ef5d78ec350321d48db66ed2322e57178891e9d63ecea249fa9bc6c2e1aaf95
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/flat.light.json
-      Method: Copy
   - Path: ultimate/assets/dark/skin/gradation.dark.json
     SHA256: 9f642abe0f47bea03ccbdba1be206fbe6ea1e0bfdd9e26f04c989185ee331025
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/gradation.dark.json
-      Method: Copy
   - Path: ultimate/assets/dark/skin/gradation.light.json
     SHA256: 582536c193b7d4a019a4d37754785d0b571da1153bd60a4a5f44a41c5bab9091
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/gradation.light.json
-      Method: Copy
   - Path: ultimate/assets/dark/skin/flat/dark.py
     SHA256: 26500df00a68ee98cec92712dc4c4b6acaed26238d63de2d87a08c1604d1f53a
     Install:
@@ -338,107 +325,86 @@ Files:
     SHA256: b0f50acc7426f9d186ebf9e8f7a186a4a33b9b9c7f0f93c96ebdc2e53d84c2c8
     Install:
       TargetPath: plugins/ultimate/config/default/color_code.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/dark.aua.json
     SHA256: 1aa3186951a47de2da75b1d4916c46774456ff36c3348924ba2357abff2e18b5
     Install:
       TargetPath: plugins/ultimate/config/default/dark.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/dialog_size.aua.json
     SHA256: 2fab16ba070e715f31b2b887e5af39bd3f97c090c04a4f4ba9881ffa3ef0e52f
     Install:
       TargetPath: plugins/ultimate/config/default/dialog_size.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/ease_select_ui.exe.json
     SHA256: 4489f9e3e454748b3521eb214e0a5694d562cff3d9ff511cb456953c8f534c00
     Install:
       TargetPath: plugins/ultimate/config/default/ease_select_ui.exe.json
-      ConfFile: True
   - Path: ultimate/config/default/editbox_tweaker.aua.json
     SHA256: 836c483553c7d3c7f27b4a503cf55de3babfbe1e79153aa1916f5fb42d2b2327
     Install:
       TargetPath: plugins/ultimate/config/default/editbox_tweaker.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/filer_ui.exe.json
     SHA256: 166e10819e9347438279875a77efe51efef5e9ff5a44c7dbd633a897b13f7a5b
     Install:
       TargetPath: plugins/ultimate/config/default/filer_ui.exe.json
-      ConfFile: True
   - Path: ultimate/config/default/filer.aua.json
     SHA256: 6e9ca77de2cdaa9f1de6c92eab0a5a436bf08cd47a8fe9eebb36ca0ceb1a6de5
     Install:
       TargetPath: plugins/ultimate/config/default/filer.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/filter_copy.aua.json
     SHA256: 4489f9e3e454748b3521eb214e0a5694d562cff3d9ff511cb456953c8f534c00
     Install:
       TargetPath: plugins/ultimate/config/default/filter_copy.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/filter_drag.aua.json
     SHA256: fad7bbd1c9ecb699ee61e0a419ae6594ea289ac97d41401c19d90766c53ee6e2
     Install:
       TargetPath: plugins/ultimate/config/default/filter_drag.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/font_preview.aua.json
     SHA256: f05cf791a8aaef2a48c0e67b4d150e1102b02b3fc5cbb5efd787ac22741f21a6
     Install:
       TargetPath: plugins/ultimate/config/default/font_preview.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/font_select.aua.json
     SHA256: 5f43467cdad4e9a212200f62f2649e4e7a91fa013f6ac174eb6e3b578e7c819f
     Install:
       TargetPath: plugins/ultimate/config/default/font_select.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/image_export.aua.json
     SHA256: 5b07d2f62ade40e2334ba141cd35120aea0691390afa9d2df4ba4081a1fb504d
     Install:
       TargetPath: plugins/ultimate/config/default/image_export.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/item_align.aua.json
     SHA256: de981e1305d86d2469a8bc7c205f00ab7964b38a68ae7f470f7e17458a304ea9
     Install:
       TargetPath: plugins/ultimate/config/default/item_align.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/last_frame.aua.json
     SHA256: 940367a1372eda07550ca0ba73bd257d8d064eed485170f2dceb64a81bdcca92
     Install:
       TargetPath: plugins/ultimate/config/default/last_frame.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/namecage.aua.json
     SHA256: c15db617be0de9b7377dd231de1807ff336653ad703944ff6146a2674f768579
     Install:
       TargetPath: plugins/ultimate/config/default/namecage.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/output_check.aua.json
     SHA256: a72bd7d8963832f795ebeeb67990fb87d571e244b3c776ea4a54f63d9356fb5e
     Install:
       TargetPath: plugins/ultimate/config/default/output_check.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/scene_select.aua.json
     SHA256: 373b1fdd8f9ee794d63179b04bc1acf7f3ec51975b95589ed6a0aa9cf3eec3f9
     Install:
       TargetPath: plugins/ultimate/config/default/scene_select.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/text_split.aua.json
     SHA256: ed1b16730d1764a8f49d83f57db9bed8859ebd2701c667ebfd13770979b53919
     Install:
       TargetPath: plugins/ultimate/config/default/text_split.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/ultimate.auf.json
     SHA256: 8911e183a3baa549222e2fa6f133847759a4406e63c38927f2dc6eea0af755a2
     Install:
       TargetPath: plugins/ultimate/config/default/ultimate.auf.json
-      ConfFile: True
   - Path: ultimate/config/default/workspace.aua.json
     SHA256: 54ed51d5c640f1ba575d8cbc2886c9edb1fd55be3a9606dfaff67b148a41f743
     Install:
       TargetPath: plugins/ultimate/config/default/workspace.aua.json
-      ConfFile: True
   - Path: ultimate/config/default/zoom_select.aua.json
     SHA256: ea9fb2ff9a1e11ffa1891ccbc88b34ccd72d4e4bfe9751dc6a1289c5ccfe6c76
     Install:
       TargetPath: plugins/ultimate/config/default/zoom_select.aua.json
-      ConfFile: True
   - Path: ultimate/module/color_code.aua
     SHA256: 0fce3606cdce7447b81081baae29b863bb380f98c1203bfac690ae227cdcc6ff
     Install:

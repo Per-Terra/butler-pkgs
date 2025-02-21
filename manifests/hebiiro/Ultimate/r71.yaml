@@ -64,17 +64,14 @@ Files:
     SHA256: 4dfba040023e5dc6d1c4865f934e633b61fc624f7737ff2d18dee4929e47d7d4
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/number.json
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_bar.json
     SHA256: 833eb3e5dc8164c3ccf054b779aaeceeff1bfaa0f8cec149893e0f5ce4fe56a7
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_bar.json
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre.json
     SHA256: 0e2a46394f3bef0c3b8258f7843caa5c78a3bd0a919ce1722728ff8bbbe0402d
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre.json
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/number/editor.html
     SHA256: 8de36bfb380dc7efaaac75e07143efefcef263c223dfe44ec0130f924eb8892f
     Install:
@@ -411,7 +408,6 @@ Files:
     SHA256: ad249a55437989aa8c382b535254ef9eaf69292bb7a5df95f376306eca5a0d77
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/cobalt.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/CREDITS.md
     SHA256: 6587456826640f2757a1c86e790915e5ffb5afeffd5fd44744dbc150b22fe98c
     Install:
@@ -420,7 +416,6 @@ Files:
     SHA256: 88bb37738aa8dc139a9251d56639641a3651843c2b9f6c7648494a1ff95f64c0
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/gray.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/gray.py
     SHA256: 6764faa05872501a8fe849be268ca6cf94091654a90d375b116861922a0982e0
     Install:
@@ -429,12 +424,10 @@ Files:
     SHA256: 1bb2be7fb3182a3fbb2313d155fb228e32535bd4c10a96b7004567664801ec1e
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/guin.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/kotonoha_akane.json
     SHA256: 3fafab7bd04fb13d1a2c08398cbca80dba41aa0f8fa455def0d9fb49bd5913c7
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/kotonoha_akane.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/kotonoha_akane.py
     SHA256: 809b9da72d2c82e53fdb5e7b900bc7960f6b46bbd19dfee6ecdf0a26670bf141
     Install:
@@ -443,7 +436,6 @@ Files:
     SHA256: ed4ca6db192d86cabc2f52fd8e771a024ea7277310b80a46f312aa79b56d14ad
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/kotonoha_aoi.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/kotonoha_aoi.py
     SHA256: 63031cc7a9c3a12fa119ead436d66aa57baec1484c37128843f3045fa4218933
     Install:
@@ -452,7 +444,6 @@ Files:
     SHA256: 7bda427623b9d13efbf731f035285e96a070a5ec63a3a88da8d2c733404a8f28
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/maou_2chica.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/maou_2chica.py
     SHA256: d8869a168d9e7316dfb5ebf136b510420e9e97eb1aacd27c4d1ce16eab6ba74c
     Install:
@@ -461,7 +452,6 @@ Files:
     SHA256: b4aeb5a494ff7c361dc8060c8fc90218aac6b6f383bd25bc5ee6c2441daf3866
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/miku.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/miku.py
     SHA256: fcc273e01207f24a1ee632dc47da5fcce9c4cf29f6db4754f5b255b63ed0fb26
     Install:
@@ -470,7 +460,6 @@ Files:
     SHA256: e6b260e00615b705390bb1a089d2d0e39beb9a93dddb08e94d3e4b9246d3fdcd
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/mrojii.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/mrojii.py
     SHA256: e0846260d2539fff84ea10ec09170d2593b01d53451255c10dcb8c9f0c92a7c3
     Install:
@@ -479,62 +468,50 @@ Files:
     SHA256: 661cace682527c012893ab647dbc9838469568aad92546cec12a1c2f33e31bec
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/neon.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.adobe.json
     SHA256: 46ab596619257902cbbbd78a83845035c61665e9cb9575c4420d8f72092996d9
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.adobe.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.astro.json
     SHA256: 9e0106f2e9bfc19df5c0a9d95b9f25bfec6eab42487b5e71d532edd05eeb9d3b
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.astro.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.cherry.json
     SHA256: 38f88bb55ba44661b4f56602502425ce76b09f82003f9c90f6c071a28bb34bae
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.cherry.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.discord.json
     SHA256: 9d673ed1f458ee538d75c1a3d6309050cd15f770c05e615a026b7029f48d3196
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.discord.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.future.json
     SHA256: 6e2da45da481b7001b6376f0aab951872435d9046f322d88c0b2a6af2b46ca43
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.future.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.kuromado.json
     SHA256: 3d92747e167e1da68c994a103d2560a73824f7a5fd91cfa988f9bef1be6a3f2d
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.kuromado.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.lime.json
     SHA256: 05fc52dc0f3ec2c9882a9df5f10a9a743287c3ca7950fa35231a9b57a5d88e51
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.lime.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.mina.json
     SHA256: 353567c89038590ad7e6a4214b020203c7ed064db870bf5414022b177b91ba77
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.mina.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.pink.json
     SHA256: 9855f9c187fa62ab65fc5164ad474c251e872b866a068ce1a734f2654155c467
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.pink.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old.sky.json
     SHA256: c7c46c8b3da331db8cea14bfca5a1f94aa4bb7701a0426a0a4a5860c5da8a940
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old.sky.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/user.json
     SHA256: 3038cac82cc23feb728eb7a873bbade5b41628fb730b3d585555f49704deee02
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/user.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/user.py
     SHA256: 3e7533f3abb1b095e7983b9eb70d7457e88cb52a2c496d1f5ded3984e029fcab
     Install:
@@ -543,12 +520,10 @@ Files:
     SHA256: 0572485eece70719b3eb4f2f9f9ad62da6d6da430ef9552e6608655f002e6e8e
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/vs.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/x_kotonoha_aka_ao.json
     SHA256: f0e3257d4fcd9f89ecaf5b72a04be5c5c40ba3f248b0cf4fb2252588ba61dcc0
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/x_kotonoha_aka_ao.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/x_kotonoha_aka_ao.py
     SHA256: 51e01ef179ad8fe44a03a78fb3077ce1d0296bb12e2ded1b020562854e13dde9
     Install:
@@ -557,7 +532,6 @@ Files:
     SHA256: 11362bda73df7005b40a11a93c93898ad05eb407bf9f32a0304c237796601c33
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/x_kotonoha_ao_aka.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/x_kotonoha_ao_aka.py
     SHA256: d23082398947e069dbda97bcea24a28e40246a0f9ec23ddc973b9f30bc4db942
     Install:
@@ -566,7 +540,6 @@ Files:
     SHA256: b91f5b89c900257d28c582310441ae0259467086e347821c0ae37b476eeb78a7
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/x_yuzukizu_kizu_yuzu.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/x_yuzukizu_kizu_yuzu.py
     SHA256: dacec959d602db6d395d8ec2df7f5c21ad38d29201d363ceb39493c73f98ccef
     Install:
@@ -575,7 +548,6 @@ Files:
     SHA256: babd64c3ad7c38c27775f462b799c44bcebf46de6640ab97bbb7a66437b8b859
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/x_yuzukizu_yuzu_kizu.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/x_yuzukizu_yuzu_kizu.py
     SHA256: dfb2cbf9e154bb4286ddf38551d9419ddd43e3c4f8dd3b46b1f6adaa0150af36
     Install:
@@ -584,7 +556,6 @@ Files:
     SHA256: b2cd4c050d462b622083b75e5f63bb4ab02c46bab8ac0845756a763cbafde972
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/yuzukizu_akari.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/yuzukizu_akari.py
     SHA256: e9b46751c8e4dc02820b946ec733c8d6bcc63c49d98605dc608403e392e3d88c
     Install:
@@ -593,7 +564,6 @@ Files:
     SHA256: 53b8133f08c331f1d525a72750b0338926ef1dc6b17a7e61be41508dfa2f8d3a
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/yuzukizu_yukari.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/yuzukizu_yukari.py
     SHA256: 59647e68ed710623ccfa6e58710b9a9277adaa2e9682252cf795801caf820e0b
     Install:
@@ -602,7 +572,6 @@ Files:
     SHA256: 70e38595e2a59d98d81d5d0819066a44ab73f7074fb4c7c626580493b8810aa4
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/zundamon.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/zundamon.py
     SHA256: 3ea4de5c41b7586125db86ed138cc64429bfcefcb87ee0b35541c7fbdf6bab60
     Install:
@@ -783,22 +752,18 @@ Files:
     SHA256: 257faec3a2e7a5e4bec838e8895b2266790c316e4c09fb4775abcce64285205a
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/brick.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/skin/flat.json
     SHA256: 366679654f090add54fb2ac04079196614494696c22371e24f85eb70ceb92685
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/flat.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/skin/kuromado.json
     SHA256: eb331c78cd2be6d012301eef6586c1cc64adaf6bb44857fa19352f3b61811466
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/kuromado.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/skin/web.json
     SHA256: 50d76c005fae68d41954a1d205111800bddb400c29b1ca640c0171019dd99362
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/web.json
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/skin/brick/__init__.py
     SHA256: 2c63413a2edaf455ea71445b94c3ced0f21813dd16da22f5c71b69a8db6d4edc
     Install:
@@ -851,42 +816,34 @@ Files:
     SHA256: 5224bbfe5a81c7bf0711fd1274e19ebd76fa46f6d036d697e47de25439afbd47
     Install:
       TargetPath: plugins/ultimate/assets/default/audio_visualizer_ui.exe.json
-      Method: Copy
   - Path: plugins/ultimate/assets/default/audio_visualizer.aua.json
     SHA256: a92e5d604b8d5003b404193955d3588d4362e73946f442ed11216b5e031c4989
     Install:
       TargetPath: plugins/ultimate/assets/default/audio_visualizer.aua.json
-      Method: Copy
   - Path: plugins/ultimate/assets/default/dark.aua.json
     SHA256: b612bef10a3faf942d7b95f335ee4801802348d7ed4198a04a906549330bd198
     Install:
       TargetPath: plugins/ultimate/assets/default/dark.aua.json
-      Method: Copy
   - Path: plugins/ultimate/assets/default/dialog_size.aua.json
     SHA256: b4593a05e7ba8721d0af9b000d9ca731171d2e7e52175a3e6f2a1b52690af7e7
     Install:
       TargetPath: plugins/ultimate/assets/default/dialog_size.aua.json
-      Method: Copy
   - Path: plugins/ultimate/assets/default/filer_ui.exe.json
     SHA256: daa5237f8305667931e19e94219f10b5ad0a670e21f0fb3eac0f0655ca029fc4
     Install:
       TargetPath: plugins/ultimate/assets/default/filer_ui.exe.json
-      Method: Copy
   - Path: plugins/ultimate/assets/default/filer.aua.json
     SHA256: d4160dd320f8a1d1c2584c7dcaa658d7fc98639a286f58a969a4b99dc20cd0f3
     Install:
       TargetPath: plugins/ultimate/assets/default/filer.aua.json
-      Method: Copy
   - Path: plugins/ultimate/assets/default/font_tree.aua.json
     SHA256: 80e5147b57e7e89f76253283518013baf58182b20a7931547b20676e0cd78314
     Install:
       TargetPath: plugins/ultimate/assets/default/font_tree.aua.json
-      Method: Copy
   - Path: plugins/ultimate/assets/default/workspace.aua.json
     SHA256: a1e1d9524853a49e71e4ed321fa5e29efea7f29aabedc0bfd5774e5292fc89a1
     Install:
       TargetPath: plugins/ultimate/assets/default/workspace.aua.json
-      Method: Copy
   - Path: plugins/ultimate/assets/ease_select/easing1.png
     SHA256: e126e0a167f6f1d2771631254125861bd59faf9271d673bc2c9c729d6af81999
     Install:
