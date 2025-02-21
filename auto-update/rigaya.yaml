@@ -1,3 +1,13 @@
+- Identifier: clcufilters
+  Developer: rigaya
+  Type: GitHub
+  Owner: rigaya
+  Repository: Aviutl-clcufilters
+  Asset: ^clcufilters_.*\.zip$
+  Version:
+    from: tag_name
+  Disable: true
+
 - Identifier: clfilters
   Developer: rigaya
   Type: GitHub
@@ -6,6 +16,7 @@
   Asset: ^clfilters_\d.*\.zip$
   Version:
     from: tag_name
+  Disable: true # 開発終了
 
 - Identifier: ffmpegOut
   Developer: rigaya

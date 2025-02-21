@@ -1,0 +1,48 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: clcufilters
+Version: "1.03"
+ReleaseDate: 2024-06-10
+Section: Plugin/Filter
+Architecture: x64
+InstalledSize: 95703040
+Developer:
+- rigaya
+Description: |-
+  OpenCL/CUDAによるGPUフィルタ
+  clcufilters.auf は、Aviutl用のGPUフィルタです。複数のフィルタ処理をGPU上で連続して行うことで、フィルタをそれぞれ実行するのと比べてCPU - GPU間のデータ転送を削減でき、高速化が期待できます。
+Website:
+- https://github.com/rigaya/Aviutl-clcufilters
+Files:
+- SourceUrl: https://github.com/rigaya/Aviutl-clcufilters/releases/download/1.03/clcufilters_1.03.zip
+  SHA256: 3352b0954e42e329831ee9fe9991cb17a1ea709b16258ff8828f1ab4540f0851
+  Files:
+  - Path: exe_files/clfilters/x64/clfilters.exe
+    SHA256: 9c1810c1d1120d29d50cb3d735af82ed6eeebd50538e93a7d3c38961b5d329b6
+    Install:
+      TargetPath: exe_files/clfilters/x64/clfilters.exe
+      Method: Copy
+  - Path: exe_files/cufilters/x64/cufilters.exe
+    SHA256: f801f70fc713d573d2b194453d81a32222152792c09c22e4bcd0d43a573ff3c6
+    Install:
+      TargetPath: exe_files/cufilters/x64/cufilters.exe
+      Method: Copy
+  - Path: exe_files/cufilters/x64/nvrtc-builtins64_118.dll
+    SHA256: 8642cd940445f0eb79ae73c04b3dfb8c8e61fc3aca191dc2239b28a9cb6964d8
+    Install:
+      TargetPath: exe_files/cufilters/x64/nvrtc-builtins64_118.dll
+  - Path: exe_files/cufilters/x64/nvrtc64_112_0.dll
+    SHA256: 7a1d6c894d9db5f043e7cca5ea328bc4f29c45aa7af3f0dd1bde1f31f02b41bd
+    Install:
+      TargetPath: exe_files/cufilters/x64/nvrtc64_112_0.dll
+  - Path: plugins/clcufilters.auf
+    SHA256: d56c4204feff2a1ab76cf25a911a511b29d10481a087199ac62afdb30499235a
+    Install:
+      TargetPath: plugins/clcufilters.auf
+Plugins:
+- Name: clcufilters
+  Information: clcufilters 1.03
+  Type: Filter
+  InstallPath: plugins/clcufilters.auf
+ManifestVersion: 0.3.0

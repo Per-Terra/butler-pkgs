@@ -1,0 +1,60 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: clcufilters
+Version: "1.05"
+ReleaseDate: 2024-07-25
+Section: Plugin/Filter
+Architecture: x64
+InstalledSize: 112539728
+Developer:
+- rigaya
+Description: |-
+  OpenCL/CUDAによるGPUフィルタ
+  clcufilters.auf は、Aviutl用のGPUフィルタです。複数のフィルタ処理をGPU上で連続して行うことで、フィルタをそれぞれ実行するのと比べてCPU - GPU間のデータ転送を削減でき、高速化が期待できます。
+Website:
+- https://github.com/rigaya/Aviutl-clcufilters
+Files:
+- SourceUrl: https://github.com/rigaya/Aviutl-clcufilters/releases/download/1.05/clcufilters_1.05.zip
+  SHA256: 7f64c90f9839f95bdf9173fc6e3b020faf6256f0d629bc4b439dd7e7ed02215f
+  Files:
+  - Path: exe_files/clfilters/x64/clfilters.exe
+    SHA256: 6ec2e45c6ed5e77a32fdb32b0e0fba3f5569df4c4a090a7179d2f13a1f4eb747
+    Install:
+      TargetPath: exe_files/clfilters/x64/clfilters.exe
+      Method: Copy
+  - Path: exe_files/cufilters/x64/cufilters.exe
+    SHA256: 441193dfaa16fe3b11046321c18dfa653c5231231d0e7ce6c54855dadaeb47c7
+    Install:
+      TargetPath: exe_files/cufilters/x64/cufilters.exe
+      Method: Copy
+  - Path: exe_files/cufilters/x64/NVEncNVSDKNGX.dll
+    SHA256: 7545d603b499cae6c637ad9cc230a7d99dc2d2b4a179103e2ca66982fcb58cde
+    Install:
+      TargetPath: exe_files/cufilters/x64/NVEncNVSDKNGX.dll
+  - Path: exe_files/cufilters/x64/nvngx_truehdr.dll
+    SHA256: 3cad9a0721cd75bbe43226b272f1f742ede7ae331965d28917ea3398bb28762a
+    Install:
+      TargetPath: exe_files/cufilters/x64/nvngx_truehdr.dll
+  - Path: exe_files/cufilters/x64/nvngx_vsr.dll
+    SHA256: 08b3588dc96cd5977409c8ca5e2ea33730c15e92cce27c6b1ca9854a57d139c3
+    Install:
+      TargetPath: exe_files/cufilters/x64/nvngx_vsr.dll
+  - Path: exe_files/cufilters/x64/nvrtc-builtins64_118.dll
+    SHA256: 8642cd940445f0eb79ae73c04b3dfb8c8e61fc3aca191dc2239b28a9cb6964d8
+    Install:
+      TargetPath: exe_files/cufilters/x64/nvrtc-builtins64_118.dll
+  - Path: exe_files/cufilters/x64/nvrtc64_112_0.dll
+    SHA256: 7a1d6c894d9db5f043e7cca5ea328bc4f29c45aa7af3f0dd1bde1f31f02b41bd
+    Install:
+      TargetPath: exe_files/cufilters/x64/nvrtc64_112_0.dll
+  - Path: plugins/clcufilters.auf
+    SHA256: 33b5de88721f7afcdfc3d4601761069f368dafcfc351ecdc8740874d950b55fc
+    Install:
+      TargetPath: plugins/clcufilters.auf
+Plugins:
+- Name: clcufilters
+  Information: clcufilters 1.05
+  Type: Filter
+  InstallPath: plugins/clcufilters.auf
+ManifestVersion: 0.3.0
