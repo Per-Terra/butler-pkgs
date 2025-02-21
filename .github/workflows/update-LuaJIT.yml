@@ -40,4 +40,4 @@ jobs:
             ReleaseDate = $date
             Developer   = 'Per-Terra'
           } | ConvertTo-Json -Compress -AsArray
-          gh workflow run create-manifest.yml -f sources=([System.Web.HttpUtility]::UrlEncode($json))
+          gh workflow run create-manifest.yml -f "sources=$([System.Web.HttpUtility]::UrlEncode($json))"

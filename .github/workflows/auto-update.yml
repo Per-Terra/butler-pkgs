@@ -22,5 +22,5 @@ jobs:
         run: |
           ${{ github.workspace }}/tools/AutoUpdate.ps1 -ReturnSources | ForEach-Object {
             $json = $_ | ConvertTo-Json -Compress -AsArray
-            gh workflow run create-manifest.yml -f sources=([System.Web.HttpUtility]::UrlEncode($json))
+            gh workflow run create-manifest.yml -f "sources=$([System.Web.HttpUtility]::UrlEncode($json))"
           }
