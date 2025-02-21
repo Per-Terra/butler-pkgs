@@ -117,10 +117,6 @@ function Get-FilesInArchive {
         $file.Add('Install', @{
             TargetPath = $relativePath
           })
-        # plugins/ultimate/assets/ 以下のファイルはコピー
-        if ($relativePath.StartsWith('plugins/ultimate/assets/')) {
-          $file.Install.Add('Method', 'Copy')
-        }
       }
     }
     # hebiiro氏用の例外
@@ -275,7 +271,7 @@ function Get-FilesInArchive {
     }
 
     # exeファイルはコピー
-    if (-not $previousFile.Install -and $file.Install -and (-not $file.Install.Method) -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
+    if (-not $previousFile.Install -and $file.Install -and (-not $file.Install.ConfFile) -and ($file.Install.TargetPath -match '\.exe$')) {
       $file.Install.Add('Method', 'Copy')
     }
     # プラグインファイルの情報を取得

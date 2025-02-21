@@ -79,702 +79,562 @@ Files:
     SHA256: 8de36bfb380dc7efaaac75e07143efefcef263c223dfe44ec0130f924eb8892f
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/number/editor.html
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/number/style.css
     SHA256: 8f72e0b75a71629f8ccfc2fc0619547fd58384537fe1f29a58975872012788a2
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/number/style.css
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/number/visual.html
     SHA256: 6dd1749220525505bc08d06b4d79c0046b1f1872fda5175a622c73b7c39a2b2e
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/number/visual.html
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_bar/editor.html
     SHA256: 2735f323567f00ebc238867babe463a554ec74288bae99f85da404a745689033
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_bar/editor.html
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_bar/main.js
     SHA256: 24ba8eb73e8b711f4dff5b0bda9f81b75695ad66cfdf414efe8df4e2ec3bb0f6
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_bar/main.js
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_bar/style.css
     SHA256: f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_bar/style.css
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_bar/visual.html
     SHA256: 5ceffdc170956f2cf28800110440b34baf893577aec4d2e10550f1b4669d8e73
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_bar/visual.html
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre/editor.html
     SHA256: e53a394e14b9c03052f3f7addfdaa456021b00f26521f383d475d6bc8afef24c
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre/editor.html
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre/main.js
     SHA256: 24ba8eb73e8b711f4dff5b0bda9f81b75695ad66cfdf414efe8df4e2ec3bb0f6
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre/main.js
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre/style.css
     SHA256: f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre/style.css
-      Method: Copy
   - Path: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre/visual.html
     SHA256: bafcfbfe770147f4b264aaae810ed819495c9a491e11012c0b2adddabcd4806a
     Install:
       TargetPath: plugins/ultimate/assets/audio_visualizer_ui/simple_spectre/visual.html
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/aviutl_dark.exe.manifest
     SHA256: 24ca12495a21cfd31071d6cf128cc7f1398a4e8aa10bf1be9a533cc53d3c201b
     Install:
       TargetPath: plugins/ultimate/assets/dark/aviutl_dark.exe.manifest
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/boot.py
     SHA256: 3841c9d5770f4c797b6673cafadf9589a2ffc8a22d9c51c8d465664ab45dc057
     Install:
       TargetPath: plugins/ultimate/assets/dark/boot.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/dark.pyd
     SHA256: e7a5c002285277a8e5a952bc017008cd5545f54dbb3619a35bf7dd8e152895bd
     Install:
       TargetPath: plugins/ultimate/assets/dark/dark.pyd
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/core/__init__.py
     SHA256: 23f685d879b7d206d4213a2e9ced740c54a816ec8f60f3996d445d62be859fcf
     Install:
       TargetPath: plugins/ultimate/assets/dark/core/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/core/const.py
     SHA256: 0b6d3b3ad1f82e26d4fc334d9fdcef4a624570ce0b23db45bef025ed4f820655
     Install:
       TargetPath: plugins/ultimate/assets/dark/core/const.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/core/control.py
     SHA256: 4439dd7040d2e8d5f4873d6f8b92620e0a777e5077559887583e793de57e98d2
     Install:
       TargetPath: plugins/ultimate/assets/dark/core/control.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/core/function.py
     SHA256: 247992057a6710336a3c646eaaf4abcc242fb80300c7e57b6b92b8a141781520
     Install:
       TargetPath: plugins/ultimate/assets/dark/core/function.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/core/handler.py
     SHA256: c74995c764416c74a59548d8038988fac6137a764953f2f6923703c6e454f3f0
     Install:
       TargetPath: plugins/ultimate/assets/dark/core/handler.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/core/manager.py
     SHA256: 0c38f018c756e89f2e1f9cf71b4a024d9df617725dc775cb2ca78a788984107c
     Install:
       TargetPath: plugins/ultimate/assets/dark/core/manager.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/__init__.py
     SHA256: e27d704eae60481eb8c05dd0d56fabb271a19cfd181f117982cb2179af180c14
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/button.py
     SHA256: 1449f80d88e8c91b5f43a1c4bd07ceb5d2313ff73b9a64e90052240b91c6ecd5
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/button.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/combobox.py
     SHA256: b9df310789ef58825c023c1b56178959edfde907be0294f90976f9744eb7d532
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/combobox.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/command_module.py
     SHA256: a3a48c2ef8d29ad328d0977d2286bf9b4f47cca6ad8f9f8e534ce34d98281a96
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/command_module.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/common_items_dialog.py
     SHA256: 1070716b06ffb985e843f748a144dfa6251f2f55483e882a27d44fda7bd4981c
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/common_items_dialog.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/const.py
     SHA256: 61378b1b5e1e7eccf3c458dc30ffa7f2227d471af12d7600c985304dfab297df
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/const.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/dialog.py
     SHA256: 02f9b730029cfb757884b1308c3aee0de1a3debaf241b2920792106d4bb094f2
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/dialog.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/edit.py
     SHA256: 28950e6a27454c6b550d53f7caed3376c682e8a0fe7d3f65f760cb80bf95d1b5
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/edit.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/exedit.py
     SHA256: 7a60389a345e2f669b15f714ecc5bca5ecaae598012847cc42f18d11fb6a4968
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/exedit.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/header.py
     SHA256: 9c72fe32a4a3fb3d47f0d7c18856bed3484331fc729a13ef2de916f7fc022c7d
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/header.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/include.py
     SHA256: 96a1f010621cd894d1fff552b95d1fcab95354a2b01e8cff80f14b863a26db46
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/include.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/listbox.py
     SHA256: 2468afe7a9831d9c61d43d8eae6fa9bb78f23ca6b26b8ef6ddfee059e3606dde
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/listbox.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/listview.py
     SHA256: 7fc3c3c36dc6c5f6cdee89c315d4ae3a1535f59c12ee4b4d21817d7ff1d352ce
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/listview.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/menu_bar.py
     SHA256: 128f637b4d8cccc64ff6e4c03a9f81ec3058efbefd09eb6b4c6f880a23feb90a
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/menu_bar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/menu_icon.py
     SHA256: 38bf5e4ca7ac9ab4b68ff594c4707a3cc12cdd1c9a8aee5327beff91099fb510
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/menu_icon.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/menu_popup.py
     SHA256: 0df63e0001d738402609187af4a5d74892ab51a704be456b720c8d86c2683009
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/menu_popup.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/menu.py
     SHA256: aceb48e93bcfdb17c8277c8a45e7d9dd765788d5e6a5eb79a15bb1c1e4d4bb9c
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/menu.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/preview_pane.py
     SHA256: a864a2a703ef359b1c72d1ef1f15a6374ee446d07053a3d10d14fe13d11476bd
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/preview_pane.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/scrollbar.py
     SHA256: 08fe6a35f6bb87d2cfe48e4006cf497a1bb7a2bd2e5cbed1de0a454e1279847e
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/scrollbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/spin.py
     SHA256: 3fc5002ee0b1796a96efaf09afbc663648de061c6fcd3e80a0e2588e75341f61
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/spin.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/static.py
     SHA256: cb67c7acfca81fd7636e80fbfb96f02d32b12dc826abd8c759f5e3069a8cf165
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/static.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/tab.py
     SHA256: 8000544382587ac4ce22e6ff87d429ef879c3569047a27d8c2a8a4b875b68f65
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/tab.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/toolbar.py
     SHA256: f8530a585cbe3bb424c6eae14b182592d024c84aba334e43a9eedcf17c7b228d
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/toolbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/tooltip.py
     SHA256: b0fd6cb508d47626137bc5e896421717e9d04d06b652f32813174ea4b85915b8
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/tooltip.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/trackbar.py
     SHA256: d72cffb5a8ea863f61c42c0d4aa08a0ab21011aa37d7894b7c2d988bd1f03df8
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/trackbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/treeview.py
     SHA256: 4bf3ccd4fc39dd44c2aaac523102d5a97a6705a4322f705a1ce7d4288106b588
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/treeview.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/window_caption.py
     SHA256: e87c7bcbeebbefb59bc96d234d7cd88b7d04e5d07f22da4183020230a9925d12
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/window_caption.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/window_face.py
     SHA256: 6b2c413f878743fd539d4e9e9a04cd6527896fbbd852f2194911024bc07cd494
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/window_face.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/window_separator.py
     SHA256: ad442c35a138850bf0c87d30e4cd4e1fc83786e663484edb9de3fcbd26e62905
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/window_separator.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/brick/window.py
     SHA256: 949db4cc9dfa80c18430f481a1af66001b5424e5dba64659e1079f310db71376
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/brick/window.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/__init__.py
     SHA256: eb9aa13ee376186d80210d114acf1dcfb78fe1865947bf6369770064c8ac5ab9
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/button.py
     SHA256: 08aad88cc5c98d4aa5cc1ad98e13ccb9242612695a2d5df1c72772ca0c04542b
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/button.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/combobox.py
     SHA256: 2dc720b02efb13c123e5e15047912938c1e587c27fa1300e196a2e73298dc128
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/combobox.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/command_module.py
     SHA256: a3a48c2ef8d29ad328d0977d2286bf9b4f47cca6ad8f9f8e534ce34d98281a96
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/command_module.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/common_items_dialog.py
     SHA256: 1070716b06ffb985e843f748a144dfa6251f2f55483e882a27d44fda7bd4981c
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/common_items_dialog.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/const.py
     SHA256: 61378b1b5e1e7eccf3c458dc30ffa7f2227d471af12d7600c985304dfab297df
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/const.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/dialog.py
     SHA256: 02f9b730029cfb757884b1308c3aee0de1a3debaf241b2920792106d4bb094f2
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/dialog.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/edit.py
     SHA256: 28950e6a27454c6b550d53f7caed3376c682e8a0fe7d3f65f760cb80bf95d1b5
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/edit.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/exedit.py
     SHA256: 7446611eb65358980ccbb0f1142bef58bbe2f599b35a5fed26a8e7dc868b98db
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/exedit.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/header.py
     SHA256: b32f4a1ce1d005607a20ab07b254f0cf68380afe2997f2e6fc2f12aab5fe5042
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/header.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/include.py
     SHA256: 96a1f010621cd894d1fff552b95d1fcab95354a2b01e8cff80f14b863a26db46
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/include.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/listbox.py
     SHA256: 2468afe7a9831d9c61d43d8eae6fa9bb78f23ca6b26b8ef6ddfee059e3606dde
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/listbox.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/listview.py
     SHA256: 7fc3c3c36dc6c5f6cdee89c315d4ae3a1535f59c12ee4b4d21817d7ff1d352ce
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/listview.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/menu_bar.py
     SHA256: 128f637b4d8cccc64ff6e4c03a9f81ec3058efbefd09eb6b4c6f880a23feb90a
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/menu_bar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/menu_icon.py
     SHA256: 38bf5e4ca7ac9ab4b68ff594c4707a3cc12cdd1c9a8aee5327beff91099fb510
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/menu_icon.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/menu_popup.py
     SHA256: 0df63e0001d738402609187af4a5d74892ab51a704be456b720c8d86c2683009
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/menu_popup.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/menu.py
     SHA256: aceb48e93bcfdb17c8277c8a45e7d9dd765788d5e6a5eb79a15bb1c1e4d4bb9c
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/menu.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/preview_pane.py
     SHA256: a864a2a703ef359b1c72d1ef1f15a6374ee446d07053a3d10d14fe13d11476bd
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/preview_pane.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/scrollbar.py
     SHA256: 769ec7cc2e9ce9f082f434cfdcf89b68b3ae19ffbf881f4c3139c5ef3b54e65b
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/scrollbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/spin.py
     SHA256: e477596603c1a36bd932d3748035fe9c26603161de905ddbae2b79654676cbd5
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/spin.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/static.py
     SHA256: cb67c7acfca81fd7636e80fbfb96f02d32b12dc826abd8c759f5e3069a8cf165
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/static.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/tab.py
     SHA256: 97b69731eaa54400d597922c7950c1db649e3d04810fec0da8d9d88af270ced9
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/tab.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/toolbar.py
     SHA256: cf8cd108639eca7df03b038cc143ec9f99b17442fcbc445ee8255028f9822a68
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/toolbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/tooltip.py
     SHA256: b0fd6cb508d47626137bc5e896421717e9d04d06b652f32813174ea4b85915b8
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/tooltip.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/trackbar.py
     SHA256: 8e0aaea4efa04809a19134505fd3f4778d7ba3883004866780d2e493f108d623
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/trackbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/treeview.py
     SHA256: 4bf3ccd4fc39dd44c2aaac523102d5a97a6705a4322f705a1ce7d4288106b588
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/treeview.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/window_caption.py
     SHA256: e87c7bcbeebbefb59bc96d234d7cd88b7d04e5d07f22da4183020230a9925d12
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/window_caption.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/window_face.py
     SHA256: 6b2c413f878743fd539d4e9e9a04cd6527896fbbd852f2194911024bc07cd494
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/window_face.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/window_separator.py
     SHA256: ad442c35a138850bf0c87d30e4cd4e1fc83786e663484edb9de3fcbd26e62905
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/window_separator.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/flat/window.py
     SHA256: 949db4cc9dfa80c18430f481a1af66001b5424e5dba64659e1079f310db71376
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/flat/window.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/__init__.py
     SHA256: 0178091891e67fa30fd9eabea481bf039ff73b8f9526d3bd51ef9902f3299248
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/button.py
     SHA256: d8e1b734215fced337699d8f8cd173e7e50720dab3e4db4af8f81d1551552275
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/button.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/combobox.py
     SHA256: e2a31d911518e1819235636476cb68acca0b3c3bd69e7cdb7c72d66b96e89351
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/combobox.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/command_module.py
     SHA256: eea8f71f8f381900dfcd5085f856ad8b4c60b74962073105ade32473a823d71a
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/command_module.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/common_items_dialog.py
     SHA256: 1070716b06ffb985e843f748a144dfa6251f2f55483e882a27d44fda7bd4981c
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/common_items_dialog.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/const.py
     SHA256: 4a910f74310e0e184a3acc7e642a961f56151d1b4bfaa7fa004ae909114ed385
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/const.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/dialog.py
     SHA256: 446e0a719fad6de52096a80cfbe94cbcdaff7e62665e01d87a654f3356792135
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/dialog.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/edit.py
     SHA256: e37c82ef423cdae89ed32f4f423193ededd0a3b7a8e2b0a2ccb60cd1bbb5fcae
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/edit.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/exedit.py
     SHA256: 9f9ef71661851f63f3c9fb52603e32fcc880dc5632ba2756273f2ffa2db52681
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/exedit.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/header.py
     SHA256: 58bc838f1150568ff307cfcf0fd0d84c74b5206a4b638ea0b72c3a8acf495014
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/header.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/listbox.py
     SHA256: a6dfe53072c6751c769a9c493be3488b46ca213b2bb3028568402ef2dbb869b6
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/listbox.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/listview.py
     SHA256: 390de4b7cbe7143b89a77de3a6f7e537de87f2e1ac226baeb9f97fdec8094254
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/listview.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/menu_bar.py
     SHA256: af097e11375a383d243da84eae7c44a77c1e43b33db0a6a611cbb4e28922d7d3
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/menu_bar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/menu_icon.py
     SHA256: 987690d1eba48741d0fc45f7bc86565f98fa41a3517f00254d0b109205f2796d
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/menu_icon.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/menu_popup.py
     SHA256: 830910887fd441e001d8a849d8b127c53bb6ae951c4ee72496082a35a746a7ff
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/menu_popup.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/menu.py
     SHA256: aceb48e93bcfdb17c8277c8a45e7d9dd765788d5e6a5eb79a15bb1c1e4d4bb9c
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/menu.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/preview_pane.py
     SHA256: a864a2a703ef359b1c72d1ef1f15a6374ee446d07053a3d10d14fe13d11476bd
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/preview_pane.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/scrollbar.py
     SHA256: c0bc73a0d4538f92d08137e55b4bc8ad0885481292f7041671c6931c74ac2ac3
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/scrollbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/spin.py
     SHA256: 07197719c877a8e92fbcba511543d824c8e3f72d484a28930011f7582091d14f
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/spin.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/static.py
     SHA256: cb67c7acfca81fd7636e80fbfb96f02d32b12dc826abd8c759f5e3069a8cf165
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/static.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/tab.py
     SHA256: cf2ef354f7ceabe660ba23d886821381a6802a0ee519b331c32fcf8a1c683ab5
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/tab.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/toolbar.py
     SHA256: aea973f132c9f9a70d3afa98170dfea4c711118cf17c49b4cb8478323b499b5e
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/toolbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/tooltip.py
     SHA256: b0fd6cb508d47626137bc5e896421717e9d04d06b652f32813174ea4b85915b8
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/tooltip.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/trackbar.py
     SHA256: 4726fa1b63bc3088cc58328b0006ec1560081dca7ae2e19a111afb812742c4ee
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/trackbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/treeview.py
     SHA256: 6be9ca326a68660a9b30d92cbf7ee7228c237af22e5545e67df808b9ca284f51
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/treeview.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/window_caption.py
     SHA256: 2369671c718aaf927df07fe60a405652b19fbb6dcf687719d0bffed534dc4140
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/window_caption.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/window_face.py
     SHA256: 7bafa9915256deae93b80fc460a668cf8ba2a68482646f1599e694408d3a01b1
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/window_face.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/window_separator.py
     SHA256: b15700bc4a1a55cae247b2efd951bdde84ff17bb5aaaf7e45e74b8857e4c2afe
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/window_separator.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/kuromado/window.py
     SHA256: 949db4cc9dfa80c18430f481a1af66001b5424e5dba64659e1079f310db71376
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/kuromado/window.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/__init__.py
     SHA256: c3aa17ad3d541be12a6e89d33533e3350a6dd9b5c30735b8950593746c2b5fd5
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/button.py
     SHA256: ace2cee575f5a1b8c146290e66f0a3e8132271270006e0bac3a5eb69171fb299
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/button.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/combobox.py
     SHA256: 0282e95bb4501ad31330c2d0cc9f01f73bd4bf54e5f37089ab7c850778e20062
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/combobox.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/command_module.py
     SHA256: a3a48c2ef8d29ad328d0977d2286bf9b4f47cca6ad8f9f8e534ce34d98281a96
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/command_module.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/common_items_dialog.py
     SHA256: 1070716b06ffb985e843f748a144dfa6251f2f55483e882a27d44fda7bd4981c
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/common_items_dialog.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/const.py
     SHA256: 61378b1b5e1e7eccf3c458dc30ffa7f2227d471af12d7600c985304dfab297df
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/const.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/dialog.py
     SHA256: 02f9b730029cfb757884b1308c3aee0de1a3debaf241b2920792106d4bb094f2
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/dialog.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/edit.py
     SHA256: 28950e6a27454c6b550d53f7caed3376c682e8a0fe7d3f65f760cb80bf95d1b5
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/edit.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/exedit.py
     SHA256: 2d41eee983cc4561e7c5513d0c69893b5d1b5f4f6d3a6a7aa6f66ebfdb013138
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/exedit.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/function.py
     SHA256: cf1c2f54fa9ca9a875fc1b08e5e77fac86b76063ef4ec2354b670968da02ce4b
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/function.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/header.py
     SHA256: ca6232e42d7f46748c05bb7d7a0909dc550707eddb4e451b07ceba36aaa287e3
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/header.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/include.py
     SHA256: 2e1e73248f78c48e46f2462cd9c8f86c6a1ea137ad11acb3722b28aac9ce56a7
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/include.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/listbox.py
     SHA256: 2468afe7a9831d9c61d43d8eae6fa9bb78f23ca6b26b8ef6ddfee059e3606dde
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/listbox.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/listview.py
     SHA256: 7fc3c3c36dc6c5f6cdee89c315d4ae3a1535f59c12ee4b4d21817d7ff1d352ce
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/listview.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/menu_bar.py
     SHA256: 1d028afc2092178c6d0f81006d990b10e852fa1ae01b471b765b16cfef4f818b
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/menu_bar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/menu_icon.py
     SHA256: 38bf5e4ca7ac9ab4b68ff594c4707a3cc12cdd1c9a8aee5327beff91099fb510
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/menu_icon.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/menu_popup.py
     SHA256: 4b7b0cbb9b0a512def3d0fbb701726af71a0605335d8c5507da850d59a9cf9a5
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/menu_popup.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/menu.py
     SHA256: aceb48e93bcfdb17c8277c8a45e7d9dd765788d5e6a5eb79a15bb1c1e4d4bb9c
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/menu.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/preview_pane.py
     SHA256: a864a2a703ef359b1c72d1ef1f15a6374ee446d07053a3d10d14fe13d11476bd
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/preview_pane.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/scrollbar.py
     SHA256: 769ec7cc2e9ce9f082f434cfdcf89b68b3ae19ffbf881f4c3139c5ef3b54e65b
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/scrollbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/spin.py
     SHA256: 6564f672bd387b66a74745a35630ada5de587f17f80114e3b8dd64eb8b761c6b
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/spin.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/static.py
     SHA256: cb67c7acfca81fd7636e80fbfb96f02d32b12dc826abd8c759f5e3069a8cf165
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/static.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/tab.py
     SHA256: c65c25de7a83b88f6a28a6438a14effd08d01fa904a3e7f72c6aec97e7077c56
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/tab.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/toolbar.py
     SHA256: 331680c4d979126f42cbb1db5aab07064bf6893095020d9f0c77eb9f863fb3bb
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/toolbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/tooltip.py
     SHA256: b0fd6cb508d47626137bc5e896421717e9d04d06b652f32813174ea4b85915b8
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/tooltip.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/trackbar.py
     SHA256: 8e0aaea4efa04809a19134505fd3f4778d7ba3883004866780d2e493f108d623
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/trackbar.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/treeview.py
     SHA256: 4bf3ccd4fc39dd44c2aaac523102d5a97a6705a4322f705a1ce7d4288106b588
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/treeview.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/window_caption.py
     SHA256: e87c7bcbeebbefb59bc96d234d7cd88b7d04e5d07f22da4183020230a9925d12
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/window_caption.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/window_face.py
     SHA256: 6b2c413f878743fd539d4e9e9a04cd6527896fbbd852f2194911024bc07cd494
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/window_face.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/window_separator.py
     SHA256: ad442c35a138850bf0c87d30e4cd4e1fc83786e663484edb9de3fcbd26e62905
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/window_separator.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/design/web/window.py
     SHA256: 949db4cc9dfa80c18430f481a1af66001b5424e5dba64659e1079f310db71376
     Install:
       TargetPath: plugins/ultimate/assets/dark/design/web/window.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/cobalt.json
     SHA256: ad249a55437989aa8c382b535254ef9eaf69292bb7a5df95f376306eca5a0d77
     Install:
@@ -784,7 +644,6 @@ Files:
     SHA256: 6587456826640f2757a1c86e790915e5ffb5afeffd5fd44744dbc150b22fe98c
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/CREDITS.md
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/gray.json
     SHA256: 88bb37738aa8dc139a9251d56639641a3651843c2b9f6c7648494a1ff95f64c0
     Install:
@@ -794,7 +653,6 @@ Files:
     SHA256: 6764faa05872501a8fe849be268ca6cf94091654a90d375b116861922a0982e0
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/gray.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/guin.json
     SHA256: 1bb2be7fb3182a3fbb2313d155fb228e32535bd4c10a96b7004567664801ec1e
     Install:
@@ -809,7 +667,6 @@ Files:
     SHA256: 809b9da72d2c82e53fdb5e7b900bc7960f6b46bbd19dfee6ecdf0a26670bf141
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/kotonoha_akane.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/kotonoha_aoi.json
     SHA256: ed4ca6db192d86cabc2f52fd8e771a024ea7277310b80a46f312aa79b56d14ad
     Install:
@@ -819,7 +676,6 @@ Files:
     SHA256: 63031cc7a9c3a12fa119ead436d66aa57baec1484c37128843f3045fa4218933
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/kotonoha_aoi.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/maou_2chica.json
     SHA256: 7bda427623b9d13efbf731f035285e96a070a5ec63a3a88da8d2c733404a8f28
     Install:
@@ -829,7 +685,6 @@ Files:
     SHA256: 78aea977baf3c065f409e81ae46ea9a4c99e33e1214f7ac3709022bafda90b11
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/maou_2chica.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/miku.json
     SHA256: b4aeb5a494ff7c361dc8060c8fc90218aac6b6f383bd25bc5ee6c2441daf3866
     Install:
@@ -839,7 +694,6 @@ Files:
     SHA256: fcc273e01207f24a1ee632dc47da5fcce9c4cf29f6db4754f5b255b63ed0fb26
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/miku.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/mrojii.json
     SHA256: e6b260e00615b705390bb1a089d2d0e39beb9a93dddb08e94d3e4b9246d3fdcd
     Install:
@@ -849,7 +703,6 @@ Files:
     SHA256: e0846260d2539fff84ea10ec09170d2593b01d53451255c10dcb8c9f0c92a7c3
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/mrojii.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/neon.json
     SHA256: 661cace682527c012893ab647dbc9838469568aad92546cec12a1c2f33e31bec
     Install:
@@ -914,7 +767,6 @@ Files:
     SHA256: 3e7533f3abb1b095e7983b9eb70d7457e88cb52a2c496d1f5ded3984e029fcab
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/user.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/vs.json
     SHA256: 0572485eece70719b3eb4f2f9f9ad62da6d6da430ef9552e6608655f002e6e8e
     Install:
@@ -929,7 +781,6 @@ Files:
     SHA256: e9b46751c8e4dc02820b946ec733c8d6bcc63c49d98605dc608403e392e3d88c
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/yuzukizu_akari.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/yuzukizu_yukari.json
     SHA256: 53b8133f08c331f1d525a72750b0338926ef1dc6b17a7e61be41508dfa2f8d3a
     Install:
@@ -939,7 +790,6 @@ Files:
     SHA256: 59647e68ed710623ccfa6e58710b9a9277adaa2e9682252cf795801caf820e0b
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/yuzukizu_yukari.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/zundamon.json
     SHA256: 70e38595e2a59d98d81d5d0819066a44ab73f7074fb4c7c626580493b8810aa4
     Install:
@@ -949,222 +799,178 @@ Files:
     SHA256: 3ea4de5c41b7586125db86ed138cc64429bfcefcb87ee0b35541c7fbdf6bab60
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/zundamon.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/cobalt/__init__.py
     SHA256: c07a16a45f36a1f54a2c33b74505e82c7d9a08aad9d4b758b4bbaff9370ea7f0
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/cobalt/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/cobalt/dark_mode.py
     SHA256: c1cc2d6db188a36bf5b3b74031c9b850b4888e3ba62356fccfba82246c68ed4f
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/cobalt/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/guin/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/guin/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/guin/dark_mode.py
     SHA256: 4bc4dd14ba08272f3aaa49f218a15c6ba16b036043a39caf3406b12ce029ab3b
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/guin/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/guin/guin.py
     SHA256: 9f03dd6a0dd132d4a6bdbb1c56a6e5fe367a0388b0df373303474d5da8fb4d70
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/guin/guin.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/guin/light_mode.py
     SHA256: ad90a987aa091253966c7aa62c11929d73f9776ac26d5213dd4aaf037931376c
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/guin/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/neon/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/neon/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/neon/dark_mode.py
     SHA256: bdfc2b908ab2354499bcd0ec164e7e835f79fe1ddaf3b0781a6b37dc1e87ac8e
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/neon/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/neon/light_mode.py
     SHA256: 282fadfe1a1cfee1a18252d08977118b533422729163b5a7f73409f614fe0db2
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/neon/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/neon/neon.py
     SHA256: 9f03dd6a0dd132d4a6bdbb1c56a6e5fe367a0388b0df373303474d5da8fb4d70
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/neon/neon.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/adobe/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/adobe/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/adobe/dark_mode.py
     SHA256: 177d4e8e0f48f1a225be3bc69a86841804bc807cd9f1f6b5e8cebf3b1ba6a61f
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/adobe/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/adobe/light_mode.py
     SHA256: a1a3e3fc8c05285820232fd9ef3102bd4848fbd40f3fa8a26cb2af6089e565ff
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/adobe/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/astro/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/astro/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/astro/dark_mode.py
     SHA256: ba23bccaf74ddd93143e0712695e1949b3825788277abf203d1cadab3e3d5f50
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/astro/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/astro/light_mode.py
     SHA256: 0bc62dad81ac4690fbe4f257826402520a8003161fe195e1e002a73f471ab7b9
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/astro/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/cherry/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/cherry/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/cherry/dark_mode.py
     SHA256: 4daeb88d1671f12a64abc72772339afc9d6c9af0823ec18d87b6b45f141a6db0
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/cherry/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/cherry/light_mode.py
     SHA256: 52f1f3e8996d1be1d88badcea0739102b29705ad63afbb05f73faeb7353450f5
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/cherry/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/darken_window/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/darken_window/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/darken_window/dark_mode.py
     SHA256: 40846cc3fb2f5ed9a4aa06918409b468e393bd5106a932ea456a8fa4abb65771
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/darken_window/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/darken_window/light_mode.py
     SHA256: 63c1d4aa659ebbd501bfcd1184a77a3529b76e734354a170da4499b8c3139021
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/darken_window/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/discord/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/discord/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/discord/dark_mode.py
     SHA256: 617a0a29a191fab8de5767c6cd8e11cfdc563204b1a5cc59012e8f836a5d6ad2
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/discord/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/discord/light_mode.py
     SHA256: d776351d4be8f096c02f639504fd2088d23acae252ec1ea51171c2fdf34de1f7
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/discord/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/future/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/future/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/future/dark_mode.py
     SHA256: 747dda39c12881a9e7430b50b1147f3e8d6e294048011f11d7f82d5b8e45536b
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/future/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/future/light_mode.py
     SHA256: 0903ebbb260f0d033a80978cc02a354b4966bea3f66c1939aa33003ed616a275
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/future/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/lime/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/lime/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/lime/dark_mode.py
     SHA256: a1adbd3550876490d79950f563ee95f8ebcb4465902e8d9cda99a70c0e4abbb7
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/lime/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/lime/light_mode.py
     SHA256: 15621fe0d68d5081def1606d633068affa0521c1ba2f8b6986b79e8e9da39ac3
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/lime/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/mina/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/mina/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/mina/dark_mode.py
     SHA256: 3cb684ea52fc0c7a0c59ac6b174fce50dab42a08d86882e97d8641ace2b5dcab
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/mina/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/mina/light_mode.py
     SHA256: 882e797036b30ee7111850949136a2c4f4d76ba4b1585ad50c0e998a8ddee5c1
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/mina/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/pink/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/pink/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/pink/dark_mode.py
     SHA256: 21b2715f8648c571fc08414e59493137e9752c6312511f0c2e3503f477118b56
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/pink/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/pink/light_mode.py
     SHA256: bec68f8ce652e84d6b89f41c96f9728902924e4cbb071750423e550df96c9935
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/pink/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/sky/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/sky/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/sky/dark_mode.py
     SHA256: d44e92c4966588a29f75c8ede3cf541168206c323fbf934db4c637f441efb2f6
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/sky/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/old/sky/light_mode.py
     SHA256: bd2b8ff0722fd8a901e248a6fc28712592ec7a4b1ea3588a68f13509ee1d21c7
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/old/sky/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/vs/__init__.py
     SHA256: 75c101ef729911bee65303338e8be8de2c30dabfa6177c726f8a5fe321cf2574
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/vs/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/vs/dark_mode.py
     SHA256: 2afe23f3d422573188022c533a0596124c88eb5c86ad7b4687551e542d865d95
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/vs/dark_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/scheme/vs/light_mode.py
     SHA256: 7f20ee1c4f52c225135b9e27c95d76ed97c27454974a2cd4a3f158d8367c89ea
     Install:
       TargetPath: plugins/ultimate/assets/dark/scheme/vs/light_mode.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/skin/brick.json
     SHA256: 257faec3a2e7a5e4bec838e8895b2266790c316e4c09fb4775abcce64285205a
     Install:
@@ -1189,87 +995,70 @@ Files:
     SHA256: 2c63413a2edaf455ea71445b94c3ced0f21813dd16da22f5c71b69a8db6d4edc
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/brick/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/skin/flat/__init__.py
     SHA256: f060e5ecb248f27b4c002193a93a76d51e7218484ca464731e0fcb2a22e9e1d4
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/flat/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/skin/kuromado/__init__.py
     SHA256: 43b1c78eb24caa95a24782c1eb1f7d81dd9abe75a284df042b1d4c9d8cd33099
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/kuromado/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/skin/web/__init__.py
     SHA256: 11aee4fa25755c83d077015f3b8bd753b4071d5360f3c52f8bfcfc395f37ac5b
     Install:
       TargetPath: plugins/ultimate/assets/dark/skin/web/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/utils/__init__.py
     SHA256: 86c0f6a870c72edab57eac5118cd48a510d993e99730afd8b9b0e752393d3777
     Install:
       TargetPath: plugins/ultimate/assets/dark/utils/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/utils/color.py
     SHA256: 2dec3c950f800f03569c46bb1a941936902607e9d1db284a2f5eb5fd2fcea361
     Install:
       TargetPath: plugins/ultimate/assets/dark/utils/color.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/utils/stuff.py
     SHA256: 6b1d9fff59d14a1324f519e65899e4d2c0d474ce508127f7d591ebb03b598326
     Install:
       TargetPath: plugins/ultimate/assets/dark/utils/stuff.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/utils/stuffs/dark_tone.py
     SHA256: 6f38a43c15bba56b106c84e993cc608ba4d7be5132c683eb6700f82c4178d577
     Install:
       TargetPath: plugins/ultimate/assets/dark/utils/stuffs/dark_tone.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/utils/stuffs/light_tone.py
     SHA256: 1ee75c72a605b4857259cbad3cd35aa300d3f001c5e9ef100fb94cb62c2cd514
     Install:
       TargetPath: plugins/ultimate/assets/dark/utils/stuffs/light_tone.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/utils/stuffs/standard.py
     SHA256: 0be2afefd86687c3c526154f2759b558b241eff61bd60f7d93866c2e2c82110f
     Install:
       TargetPath: plugins/ultimate/assets/dark/utils/stuffs/standard.py
-      Method: Copy
   - Path: plugins/ultimate/assets/dark/utils/tones/__init__.py
     SHA256: a86e653c7ff105996249e6a999e309253b8bffa14307d2ae6cf7a4279443d907
     Install:
       TargetPath: plugins/ultimate/assets/dark/utils/tones/__init__.py
-      Method: Copy
   - Path: plugins/ultimate/assets/ease_select/easing1.png
     SHA256: e126e0a167f6f1d2771631254125861bd59faf9271d673bc2c9c729d6af81999
     Install:
       TargetPath: plugins/ultimate/assets/ease_select/easing1.png
-      Method: Copy
   - Path: plugins/ultimate/assets/ease_select/easing2.png
     SHA256: b68a9d4b8e5315451e596ab0ae19f373b767a80d0718c7f806ce43ddcec997f2
     Install:
       TargetPath: plugins/ultimate/assets/ease_select/easing2.png
-      Method: Copy
   - Path: plugins/ultimate/assets/ease_select/easing3.png
     SHA256: f7234fe1eea22711c254a0d793b3f1309b21d41be7785e58fd1d906c27c0b34e
     Install:
       TargetPath: plugins/ultimate/assets/ease_select/easing3.png
-      Method: Copy
   - Path: plugins/ultimate/assets/font_select/font_menu.txt
     SHA256: 21bd4ffd6cb74633de0e9126b5b260a3939d9e031136b273e7d7f068ba24a89a
     Install:
       TargetPath: plugins/ultimate/assets/font_select/font_menu.txt
-      Method: Copy
   - Path: plugins/ultimate/assets/settings_browser/default.html
     SHA256: 897e06146b681e301c1a58478cc0f58b817a251a4bc2d9c32e1f7f7d9ccf8aae
     Install:
       TargetPath: plugins/ultimate/assets/settings_browser/default.html
-      Method: Copy
   - Path: plugins/ultimate/assets/settings_browser/detail.html
     SHA256: 9210822d1c6128f7afcd78d65afa417edf5ea90e93f8b7dc447179f2e1c30d6e
     Install:
       TargetPath: plugins/ultimate/assets/settings_browser/detail.html
-      Method: Copy
   - Path: plugins/ultimate/config/default/color_code.aua.json
     SHA256: b0f50acc7426f9d186ebf9e8f7a186a4a33b9b9c7f0f93c96ebdc2e53d84c2c8
     Install:
