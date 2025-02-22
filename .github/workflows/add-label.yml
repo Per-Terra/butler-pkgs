@@ -14,4 +14,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.pull_request.number }}
-          LABELS: ${{ github.event.review.user.login == 'github-actions[bot]' && 'automatically-approved' || 'moderator-approved' }}
+          LABELS: 'moderator-approved'

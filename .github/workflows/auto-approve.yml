@@ -103,6 +103,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NUMBER: ${{ github.event.pull_request.number }}
 
+      - name: Add Label
+        if: steps.diff.outputs.modified_manifests
+        run: gh pr edit $env:NUMBER --add-label $env:LABELS
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.pull_request.number }}
+          LABELS: ${{ steps.diff.outputs.critical_change == 'true' && 'critical-change' || 'automatically-approved' }}
+
       - name: Update Comment
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
         uses: peter-evans/create-or-update-comment@v4
@@ -112,14 +120,6 @@ jobs:
             This Pull Request has critical changes and cannot be approved automatically.
             Please check logs for details.
             ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-
-      - name: Add Label
-        if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
-        run: gh pr edit $env:NUMBER --add-label $env:LABELS
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NUMBER: ${{ github.event.pull_request.number }}
-          LABELS: critical-change
 
       - name: Add Assignees
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
