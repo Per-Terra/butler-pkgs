@@ -51,12 +51,7 @@ jobs:
           # Create the manifest
           Write-Host "Creating manifest: $($sources[0].Developer)/$($sources[0].Identifier)"
           foreach ($source in $sources) {
-            try {
-              & .\tools\CreateManifest.ps1 -Update -SourceUrl $source.SourceUrl -Identifier $source.Identifier -Version $source.Version -ReleaseDate $source.ReleaseDate -Developer $source.Developer -SkipPrompt -Force
-            }
-            catch {
-              Write-Warning "Manifest creation failed: $($_.Exception.Message)"
-            }
+            & .\tools\CreateManifest.ps1 -Update -SourceUrl $source.SourceUrl -Identifier $source.Identifier -Version $source.Version -ReleaseDate $source.ReleaseDate -Developer $source.Developer -SkipPrompt -Force
           }
 
       - name: Check diff
