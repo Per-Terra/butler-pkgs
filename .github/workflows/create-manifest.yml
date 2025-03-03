@@ -92,7 +92,7 @@ jobs:
 
       - name: Create Pull Request
         id: cpr
-        uses: peter-evans/create-pull-request@v7.0.6
+        uses: peter-evans/create-pull-request@v7.0.7
         with:
           token: ${{ steps.generate-token.outputs.token }}
           commit-message: '[パッケージ更新] ${{ steps.create-manifest.outputs.developer }}/${{ steps.create-manifest.outputs.identifier }} (${{ steps.create-manifest.outputs.versions }})'
