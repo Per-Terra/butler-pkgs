@@ -1,0 +1,404 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: CurveEditor
+DisplayName: Curve Editor for AviUtl
+Version: 2.0-beta1.1
+ReleaseDate: 2025-03-04
+Section: Plugin/Other
+InstalledSize: 6595073
+Developer:
+- mimaraka
+Description: 様々なイージングを作成・管理することができる AviUtl 用のプラグイン・スクリプト
+Website:
+- https://github.com/mimaraka/aviutl-plugin-curve_editor
+Files:
+- SourceUrl: https://github.com/mimaraka/aviutl-plugin-curve_editor/releases/download/v2.0-beta1.1/curve_editor-v2.0-beta1.1.zip
+  SHA256: 8f476ff43b8aed1735647d268007686cb3fc5bef1f7622d9bdc1e1d8a7b409db
+  Files:
+  - Path: curve_editor-v2.0-beta1.1/@Curve Editor.tra
+    SHA256: c40cb9309918cc880d4cb79ce4ae22dd88e8ca27f406d2a8081a865ad605b000
+    Install:
+      TargetPath: script/@Curve Editor.tra
+  - Path: curve_editor-v2.0-beta1.1/curve_editor.auf
+    SHA256: f3330f7a091f57c3d10b750b2eacec9f4907280723b28695a4b5fecb98f5a6c7
+    Install:
+      TargetPath: plugins/curve_editor.auf
+  - Path: curve_editor-v2.0-beta1.1/curve_editor.lua
+    SHA256: 3cced07450323b982d034fc725d4bd5f3f152da9caaed9dbc58e42bed919a878
+    Install:
+      TargetPath: curve_editor.lua
+  - Path: curve_editor-v2.0-beta1.1/LICENSE.txt
+    SHA256: 2615eff3ee39c0239245a51aec8555428f9c7488103429349ac1ed23328f4458
+  - Path: curve_editor-v2.0-beta1.1/Readme.html
+    SHA256: a5155e778e4f799768881445b40e1964c9b1bd44432d35472c8d97d96bd83dcb
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/index.html
+    SHA256: 42f863566012fa428b33a172a0c856bed052f7f84415c5d244bd3676080681b4
+    Install:
+      TargetPath: curve_editor/ui/index.html
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1118.bundle.js
+    SHA256: 67f2f4ed2c6a3adcd2be1ea62f55fe0624a851bb6ae62f5828ed7325596d27b3
+    Install:
+      TargetPath: curve_editor/ui/js/1118.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1122.bundle.js
+    SHA256: 34ceeffad7ce20716330c732ac5302133fc9f18c56b02fae793e36cc184e162c
+    Install:
+      TargetPath: curve_editor/ui/js/1122.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1282.bundle.js
+    SHA256: 7daa0bdb4ac60e29c20db239503c730df211db7d3bfbde4d9048aa1ff5595c47
+    Install:
+      TargetPath: curve_editor/ui/js/1282.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1420.bundle.js
+    SHA256: 2dbe487a6c876619ca0b225dc99e60805cc6981b53a4c46d86214fb0c330e4f5
+    Install:
+      TargetPath: curve_editor/ui/js/1420.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1438.bundle.js
+    SHA256: 6009f5ac71ce6518196604e02d3c68337138d2c84eb4257e399583b1cd9e9201
+    Install:
+      TargetPath: curve_editor/ui/js/1438.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1446.bundle.js
+    SHA256: 43a0b31a5d564c872cb2196645bd0d9a905954b0d8d2dd40ca0b3cf134d64131
+    Install:
+      TargetPath: curve_editor/ui/js/1446.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1560.bundle.js
+    SHA256: 9b42c26d8b7ccb97fe24de62601acdc446d3ada695e836d1db4cc4697d763979
+    Install:
+      TargetPath: curve_editor/ui/js/1560.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1710.bundle.js
+    SHA256: b00528814cef051fc2d605b57317f038875f25aedeb8ddfeb289e371552b9031
+    Install:
+      TargetPath: curve_editor/ui/js/1710.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1740.bundle.js
+    SHA256: f7831fece48daddbbe0c7ff2fda0a2802311700feb2cc1fb594cc54d0bec15c0
+    Install:
+      TargetPath: curve_editor/ui/js/1740.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1888.bundle.js
+    SHA256: 7515af98511582b4410e2a4959407453db288ce39cb88684ae3de1561a245e52
+    Install:
+      TargetPath: curve_editor/ui/js/1888.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/1914.bundle.js
+    SHA256: f018230988af7db6dd767eab504e3b2df5bcd3a7dad2346dec2cbe87e9944770
+    Install:
+      TargetPath: curve_editor/ui/js/1914.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/198.bundle.js
+    SHA256: c79fd10bd0ba4ad7c849aef4d0591dcb94c184ea34942f58ae2fd9e3b4e94939
+    Install:
+      TargetPath: curve_editor/ui/js/198.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/205.bundle.js
+    SHA256: 7395881b2c58adae370b48821d72585f701492aecf88cb8ffa97d0c45650b29f
+    Install:
+      TargetPath: curve_editor/ui/js/205.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2077.bundle.js
+    SHA256: f22e1027166ca43d9628618d1cddafaf5be07314790873c5c6e650871b83f87f
+    Install:
+      TargetPath: curve_editor/ui/js/2077.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2094.bundle.js
+    SHA256: a5ceb92d24f2df726c0dcc3d7165b09179b8f3cb1fc6382538ddbe6d8a707cb9
+    Install:
+      TargetPath: curve_editor/ui/js/2094.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2244.bundle.js
+    SHA256: 575c1f2f57515cb7ce277f00c35ac15145ff71afcd45e8de821cfcf3b0d7b146
+    Install:
+      TargetPath: curve_editor/ui/js/2244.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2278.bundle.js
+    SHA256: 594cc55ae3b148824fc8f31255ae84ce0cbdf2a1b72c79c00ad589e9a6323b62
+    Install:
+      TargetPath: curve_editor/ui/js/2278.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2398.bundle.js
+    SHA256: e7f86e805881c521ac4465249425f4feee5f3e10a481f9c96268a26ee91d6001
+    Install:
+      TargetPath: curve_editor/ui/js/2398.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2586.bundle.js
+    SHA256: 6757bfcf670ff03892fb186d2d41d2213d75949efa825e029f61a566aa40ba70
+    Install:
+      TargetPath: curve_editor/ui/js/2586.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2658.bundle.js
+    SHA256: 282b54000bbf42a7948cea730981ff7df45187ab799e356648fdf14c7564beb2
+    Install:
+      TargetPath: curve_editor/ui/js/2658.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2686.bundle.js
+    SHA256: 588ebaa59966395c648f005eaf2c4ecc684d7364e2473cf6f60d2b5024b44381
+    Install:
+      TargetPath: curve_editor/ui/js/2686.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2692.bundle.js
+    SHA256: 79e4f03ec3af59e5eebd5c1d179ff1cb40ccb1def1acfe740036ed226dd9e610
+    Install:
+      TargetPath: curve_editor/ui/js/2692.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2745.bundle.js
+    SHA256: ba34bb8792a07e58c67dca069c208a38946870ff2e8af44df3171b2be42b6fd1
+    Install:
+      TargetPath: curve_editor/ui/js/2745.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/2962.bundle.js
+    SHA256: 25bd9092b24e08c865d79aee0e48267a76334f3902c3d45fe7f52d9e8c8182f7
+    Install:
+      TargetPath: curve_editor/ui/js/2962.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/3042.bundle.js
+    SHA256: 7ec136678d1923ae0975ead8be68b241063fa53dd2601c0b6862c32a4b54beba
+    Install:
+      TargetPath: curve_editor/ui/js/3042.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/3062.bundle.js
+    SHA256: 3c6939ee43e6e39db08f77b98adfe1e6d3b205c2a59e19c2f95f6f7a1a2fe042
+    Install:
+      TargetPath: curve_editor/ui/js/3062.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/3096.bundle.js
+    SHA256: ab81795ea3c1982e322f9cc3f4bab370983d194acbd5668f1eff66bf965b242f
+    Install:
+      TargetPath: curve_editor/ui/js/3096.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/3182.bundle.js
+    SHA256: 56280a8fda56cdb9ce09b6f25c2824f795d4b8aa8514b5a3eb1abb22244abded
+    Install:
+      TargetPath: curve_editor/ui/js/3182.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/3622.bundle.js
+    SHA256: 24621f8330f603743e1d97f852008153bb56b1f58e3ce5fa6baaecb843ccfd0e
+    Install:
+      TargetPath: curve_editor/ui/js/3622.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/3726.bundle.js
+    SHA256: 8966742aed6bf0472b16c6c51df6442a4883ebd4d6455bea14c5ec04e4227d41
+    Install:
+      TargetPath: curve_editor/ui/js/3726.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/398.bundle.js
+    SHA256: 2492b0f799fa59f7219b5dda2b661fb43e097c3952b665e84bd5eeb8dbb5e70f
+    Install:
+      TargetPath: curve_editor/ui/js/398.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4114.bundle.js
+    SHA256: d7c41d1d121f5ebd88bb61bc7b53c5fee4613551dc27e1b34e51c5290e94f29a
+    Install:
+      TargetPath: curve_editor/ui/js/4114.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4120.bundle.js
+    SHA256: 4af65c97934e94b47a0c2b579a77af1de60c484c21829f974434f16a8658b482
+    Install:
+      TargetPath: curve_editor/ui/js/4120.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4334.bundle.js
+    SHA256: c3ad01c6c9469f73e243c834c4c2e5370b36cd4c424a49ed78af5d6d0e09db29
+    Install:
+      TargetPath: curve_editor/ui/js/4334.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4630.bundle.js
+    SHA256: 5d239b5ef62688aba84e009c5a3f62bf758953ef63a7293554596a96a496efd0
+    Install:
+      TargetPath: curve_editor/ui/js/4630.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4680.bundle.js
+    SHA256: d38dcabfcdc2523b96107048fa8de345380a95207dbdc3e85eebe222dee6ede9
+    Install:
+      TargetPath: curve_editor/ui/js/4680.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4698.bundle.js
+    SHA256: ffc3eb946352df30cb314aaa4110f3cf2a2510048251f31f23cd5c9946499a03
+    Install:
+      TargetPath: curve_editor/ui/js/4698.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4839.bundle.js
+    SHA256: 880a1f406eecb3575dfadc97275ba651b3bbe7ebeef80365876b83a4269435a4
+    Install:
+      TargetPath: curve_editor/ui/js/4839.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/494.bundle.js
+    SHA256: 554117b97bf1aeaba09d2c1f1d386f5a5f7b1f0155b4d236bf64226c17f491a0
+    Install:
+      TargetPath: curve_editor/ui/js/494.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4958.bundle.js
+    SHA256: ec4b0420c0f4005245bdb33a9fd999b8e486406d45326c2d9a91c28b004333f3
+    Install:
+      TargetPath: curve_editor/ui/js/4958.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/4962.bundle.js
+    SHA256: 378b5599b90d9fb0f161acec2b954da328a6700ab789c2534ee55c12cc4dfc4f
+    Install:
+      TargetPath: curve_editor/ui/js/4962.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/5130.bundle.js
+    SHA256: de868538ea9499d87896ff5154831aacf4dbc4cbaba6ad6f683fa256b0b51bb8
+    Install:
+      TargetPath: curve_editor/ui/js/5130.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/5196.bundle.js
+    SHA256: edc4dae933282db2ba1d06f738757c919e874df801aacc25f371edd99d9308d5
+    Install:
+      TargetPath: curve_editor/ui/js/5196.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/5364.bundle.js
+    SHA256: 4d49a08fcb5290df3d3cc0b3532862c41dba0296058d88c7cd45c1145e16c516
+    Install:
+      TargetPath: curve_editor/ui/js/5364.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/5550.bundle.js
+    SHA256: 5f357a6d374ea4ddefe0a555cf3cf2cef620fd8b2008b0a493787db6d652bfd3
+    Install:
+      TargetPath: curve_editor/ui/js/5550.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/558.bundle.js
+    SHA256: 647fa79880e9f2bb7c4668a2c8279ff9240f67f305fa28a8eab5415118d63d4c
+    Install:
+      TargetPath: curve_editor/ui/js/558.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/5618.bundle.js
+    SHA256: 52de0b4cafb4f0c1545c8c245caead95fd5e47e29e835be548cd464d3738e842
+    Install:
+      TargetPath: curve_editor/ui/js/5618.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/5628.bundle.js
+    SHA256: 3be579d986c625553bebe8bd85e3a5f5ebf22a950d0177cfbcbda9b330b9e7d7
+    Install:
+      TargetPath: curve_editor/ui/js/5628.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/5786.bundle.js
+    SHA256: 928e3f3331fd4223cc3fcac3e4cb1aeba646a5f8ffe70948f553299e5af3a5b3
+    Install:
+      TargetPath: curve_editor/ui/js/5786.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/5966.bundle.js
+    SHA256: 874d54656212b2525335bf8660f7de0e2e24af235ab365759e6f89fe4f1b5408
+    Install:
+      TargetPath: curve_editor/ui/js/5966.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6018.bundle.js
+    SHA256: 2584083b22cc9d50b64b2d672ce3a27620dc808e8943c99512da512ca0319cbd
+    Install:
+      TargetPath: curve_editor/ui/js/6018.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6134.bundle.js
+    SHA256: e936d513e57a9c7eaf25b73cd7993ce5e950fa415d4a4f0cf1e31b059de214e2
+    Install:
+      TargetPath: curve_editor/ui/js/6134.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6185.bundle.js
+    SHA256: e0f2dc1c162568968578babf0a34ce7d38dd677feb899fe3d33cfddc3abafec6
+    Install:
+      TargetPath: curve_editor/ui/js/6185.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6302.bundle.js
+    SHA256: a3418536889eb3b08015292f3c2b1b020966fa43e50312f4ed838ba4f2194653
+    Install:
+      TargetPath: curve_editor/ui/js/6302.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6414.bundle.js
+    SHA256: 2e53a910659c2d8449fbe11ec33bc148b38e8da24221597789754b66586eada7
+    Install:
+      TargetPath: curve_editor/ui/js/6414.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6446.bundle.js
+    SHA256: 1bfca3500fa99f820eae2d5ede46d451a33542733fe984177851eaa8ade39c7d
+    Install:
+      TargetPath: curve_editor/ui/js/6446.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6590.bundle.js
+    SHA256: 28c7952d342617b1d6007bf617a76129e6e65838afa04292e509f2b8b46ab66b
+    Install:
+      TargetPath: curve_editor/ui/js/6590.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6830.bundle.js
+    SHA256: 36928aa384df8ea191fbf27f2a4e98cd73712c118df2e243b89504fb0f1e7020
+    Install:
+      TargetPath: curve_editor/ui/js/6830.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6940.bundle.js
+    SHA256: a3ff793762da166da0dc1e72cbde3587fd6740adb974d12db8ca9735959313e7
+    Install:
+      TargetPath: curve_editor/ui/js/6940.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/6990.bundle.js
+    SHA256: 3efcf318dbd63f595429a88a3cff4d1702ee33e72c79a118166597b8a9b0d06d
+    Install:
+      TargetPath: curve_editor/ui/js/6990.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/7048.bundle.js
+    SHA256: 6a7edf4e7a723746d8d638b499b35f07f1edc3f2a069b718a73edd01d1d72cf8
+    Install:
+      TargetPath: curve_editor/ui/js/7048.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/7200.bundle.js
+    SHA256: 2888b1dc3193584a22d365f34b0ec9c325ffff45d2384ca0028013b64efd763e
+    Install:
+      TargetPath: curve_editor/ui/js/7200.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/7246.bundle.js
+    SHA256: 21aee2517d775275c42c9bf7c73edb4127ced4d513095a567b03f53acb54db74
+    Install:
+      TargetPath: curve_editor/ui/js/7246.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/7466.bundle.js
+    SHA256: 4399dca77cc3eb48302498ed6fb58e3627971feb38b75ad09cf23c496abcd1de
+    Install:
+      TargetPath: curve_editor/ui/js/7466.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/7614.bundle.js
+    SHA256: 6350f615c36d7c11b5f8e28119fd3ae1fc086c3e94f9f671d9d198138da383fe
+    Install:
+      TargetPath: curve_editor/ui/js/7614.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/7836.bundle.js
+    SHA256: 2d69d3691884c19db5f4b4c07e54defe263007765fb0ef0981e82a92f60dba17
+    Install:
+      TargetPath: curve_editor/ui/js/7836.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/7886.bundle.js
+    SHA256: 385b531a09db273a98ab36ec3c50d55c7caa0cb82141a1f4b5be45308ebd53b7
+    Install:
+      TargetPath: curve_editor/ui/js/7886.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8230.bundle.js
+    SHA256: 196ff083eeff6506a8bae23a1857bccc8a341be881b94020182b73e7120fdc91
+    Install:
+      TargetPath: curve_editor/ui/js/8230.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8332.bundle.js
+    SHA256: a2546ed2af0f3ee1cba7d44d69b0056e95965587496843ca1073377c8b1c9eea
+    Install:
+      TargetPath: curve_editor/ui/js/8332.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8334.bundle.js
+    SHA256: ad96cd39c9122725c89f579cbd5e3c7c60706e68564454d95273d5a7961e129f
+    Install:
+      TargetPath: curve_editor/ui/js/8334.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8390.bundle.js
+    SHA256: aaa9149af45e82abebb420ca3876f2f39a61127773687774aa30b33d30d5c172
+    Install:
+      TargetPath: curve_editor/ui/js/8390.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8494.bundle.js
+    SHA256: 9d7a2ec546ee0e0ca0e0ffe4e1c1cb131623b8ed6bfb9d7687b1f913d199a822
+    Install:
+      TargetPath: curve_editor/ui/js/8494.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8542.bundle.js
+    SHA256: b02a7cbe284a7c92d7ed66219e955843c3134992ccf16145c2574a8c4a964f68
+    Install:
+      TargetPath: curve_editor/ui/js/8542.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8566.bundle.js
+    SHA256: c72e5d05faf4794210d16cadc9e71329fc1251f040ee72e98082b4deec414b9f
+    Install:
+      TargetPath: curve_editor/ui/js/8566.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8902.bundle.js
+    SHA256: d8295eac8b4bed5919f83e8f1622e9bd6006a5bcadf859bbfbf69dd64f1dffbf
+    Install:
+      TargetPath: curve_editor/ui/js/8902.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/8990.bundle.js
+    SHA256: a7c5129024de34595bd52491d51b359d15618680ac0b81380468c32f19203372
+    Install:
+      TargetPath: curve_editor/ui/js/8990.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/9034.bundle.js
+    SHA256: 0d30d1ef30bb5886895e4c607c42c2ebc00e76c30d0b7a8370b9ff7f078187f4
+    Install:
+      TargetPath: curve_editor/ui/js/9034.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/9038.bundle.js
+    SHA256: 66a7806a01b95cb9e1346e441da059f19a3557725237bdc3ad39fa6336ee3fcb
+    Install:
+      TargetPath: curve_editor/ui/js/9038.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/910.bundle.js
+    SHA256: 115f98f6144ab9d4edbfff61b76d256c42b6d97a40140263350a58062f8311af
+    Install:
+      TargetPath: curve_editor/ui/js/910.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/9150.bundle.js
+    SHA256: 9462a46f85202dcf4684033072c47a390325db0b27dd619ce1807d27d9e4dc20
+    Install:
+      TargetPath: curve_editor/ui/js/9150.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/9355.bundle.js
+    SHA256: 61bbf72d031ba29aafce751e961ed22ae884c0bf66e2d29415e005c3c3ceee1f
+    Install:
+      TargetPath: curve_editor/ui/js/9355.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/9390.bundle.js
+    SHA256: 81a898cb8a3acf6833e70893d630924e80a0e8990a773a040786bc29d798071d
+    Install:
+      TargetPath: curve_editor/ui/js/9390.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/946.bundle.js
+    SHA256: 5ff43e1908b5722879ed7eeb8ea91e8f74aac6c4b1b00801ccd4e8612435d26a
+    Install:
+      TargetPath: curve_editor/ui/js/946.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/9510.bundle.js
+    SHA256: 5beacbdec786b76e00a4e5bef21a7fff66a892360374337d17eef7f36ed8cead
+    Install:
+      TargetPath: curve_editor/ui/js/9510.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/968.bundle.js
+    SHA256: 173a7eeeea812616eb71b746039af6e9f8901dce96e03882fac5367650b39dbd
+    Install:
+      TargetPath: curve_editor/ui/js/968.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/970.bundle.js
+    SHA256: 1b65018ad8f308992a7ec5b0f6ee7081429414f272a30ac2caf169dd3b821362
+    Install:
+      TargetPath: curve_editor/ui/js/970.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/9838.bundle.js
+    SHA256: 060e1d81870102ef002755e10361d16ec1d247ac920a7af2a548175c26202cc9
+    Install:
+      TargetPath: curve_editor/ui/js/9838.bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/bundle.js
+    SHA256: a9021de3f3cee1561c977d415b6fb7f6b0dad460af437a1a3907489d7e08991e
+    Install:
+      TargetPath: curve_editor/ui/js/bundle.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/editor.worker.js
+    SHA256: 62172655b4555c763379061094f6d62909cd064bf5067a8b051dbfd56343be34
+    Install:
+      TargetPath: curve_editor/ui/js/editor.worker.js
+  - Path: curve_editor-v2.0-beta1.1/curve_editor/ui/js/f6283f7ccaed1249d9eb.ttf
+    SHA256: 0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9
+    Install:
+      TargetPath: curve_editor/ui/js/f6283f7ccaed1249d9eb.ttf
+Plugins:
+- Name: Curve Editor
+  Information: Curve Editor v2.0-beta1.1
+  Type: Filter
+  InstallPath: plugins/curve_editor.auf
+ManifestVersion: 0.3.0
