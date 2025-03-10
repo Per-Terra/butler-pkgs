@@ -7,8 +7,6 @@ on:
     paths:
       - 'manifests/*/*/*.yaml'
   pull_request:
-    paths:
-      - 'manifests/*/*/*.yaml'
 
 jobs:
   test:
@@ -24,19 +22,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Remove Existing Label from PR
-        if: github.event_name == 'pull_request'
-        run: gh pr edit $env:NUMBER --remove-label $env:LABELS
-        env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-          NUMBER: ${{ github.event.pull_request.number }}
-          LABELS: manifest-validated,manifest-validation-failure
-
-      - name: Install and cache PowerShell modules
-        uses: potatoqualitee/psmodulecache@v6.2.1
-        with:
-          modules-to-cache: powershell-yaml
-
       - name: Get Modified Manifests
         id: diff
         env:
@@ -45,6 +30,20 @@ jobs:
         run: |
           $modifiedManifests = git diff --name-only $env:BASE_SHA $env:HEAD_SHA | Where-Object { $_ -like 'manifests/*/*/*.yaml' }
           "modified_manifests=$($modifiedManifests -join ',')" >> $env:GITHUB_OUTPUT
+
+      - name: Remove Existing Label from PR
+        if: github.event_name == 'pull_request' && steps.diff.outputs.modified_manifests
+        run: gh pr edit $env:NUMBER --remove-label $env:LABELS
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          NUMBER: ${{ github.event.pull_request.number }}
+          LABELS: manifest-validated,manifest-validation-failure
+
+      - name: Install and cache PowerShell modules
+        if: steps.diff.outputs.modified_manifests
+        uses: potatoqualitee/psmodulecache@v6.2.1
+        with:
+          modules-to-cache: powershell-yaml
 
       - name: Test Manifests
         if: steps.diff.outputs.modified_manifests
