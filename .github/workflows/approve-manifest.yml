@@ -1,11 +1,11 @@
-name: Auto Approve
+name: Approve Manifest
 
 on:
   pull_request:
     types: [labeled]
 
 jobs:
-  auto_approve:
+  approve_manifest:
     if: github.event.label.name == 'manifest-validated' && github.event.pull_request.user.login == 'butler-pkgs-bot[bot]'
     runs-on: windows-latest
     steps:

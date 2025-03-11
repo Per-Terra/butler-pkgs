@@ -1,4 +1,4 @@
-name: Test Package Manifests
+name: Test Manifests
 
 on:
   push:

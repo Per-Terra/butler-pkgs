@@ -16,7 +16,7 @@ jobs:
         with:
           modules-to-cache: powershell-yaml
 
-      - name: Update Package Manifests
+      - name: Update Manifests
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
