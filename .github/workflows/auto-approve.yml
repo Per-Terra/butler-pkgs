@@ -1,0 +1,14 @@
+name: Auto Approve
+
+on:
+  pull_request:
+
+jobs:
+  auto_approve:
+    if: github.event.pull_request.user.login == 'Per-Terra'
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh pr review $env:NUMBER --approve
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.pull_request.number }}
