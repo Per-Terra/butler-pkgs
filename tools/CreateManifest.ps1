@@ -207,6 +207,12 @@ function Get-FilesInArchive {
             TargetPath = ($relativePath -replace '^(?:[^/]+/)*', '')
           })
       }
+      elseif ($relativePath -match '(curve_editor/ui/.+)$') {
+        $file.Add('Install', @{
+            TargetPath = ($Matches[1] -replace '^', 'plugins/')
+            Method     = 'Copy'
+          })
+      }
       elseif ($relativePath -match '(curve_editor/.+)$') {
         $file.Add('Install', @{
             TargetPath = ($Matches[1] -replace '^', 'plugins/')
