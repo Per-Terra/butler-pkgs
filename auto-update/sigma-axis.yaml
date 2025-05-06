@@ -226,7 +226,7 @@
       find: ^v(.*)$
       replace: $1
 
-- Identifier: inline-scene-s
+- Identifier: InlineScene-S
   Developer: sigma-axis
   Type: GitHub
   Owner: sigma-axis
