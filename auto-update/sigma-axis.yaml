@@ -235,5 +235,5 @@
   Version:
     from: tag_name
     regex:
-      find: "^v(.*)$"
-      replace: "$1"
+      find: ^v(.*)$
+      replace: $1
