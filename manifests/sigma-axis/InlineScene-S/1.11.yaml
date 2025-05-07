@@ -1,0 +1,48 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: InlineScene-S
+DisplayName: InlineScene_S
+Version: "1.11"
+ReleaseDate: 2025-03-20
+Section: Script
+Architecture: x64
+Depends:
+  - aviutl (>= 1.10)
+  - exedit (= 0.92)
+  - patch.aul
+Recommends:
+  - LuaJIT
+Suggests:
+  - CropBlank-S
+InstalledSize: 122734
+Developer:
+  - sigma-axis
+Description: 別シーンに切り替えずに複数オブジェクトを1枚の画像にまとめて扱えるInline Scene機能を提供するスクリプト
+Website:
+  - https://github.com/sigma-axis/aviutl_script_InlineScene_S
+Files:
+  - SourceUrl: https://github.com/sigma-axis/aviutl_script_InlineScene_S/releases/download/v1.11/aviutl_script_InlineScene_S-v1.11.zip
+    SHA256: af2ec8e87d18a012dd85243d5e9d03d6d97bb6579025924d2d6862a755431bc1
+    Files:
+      - Path: "@InlineScene_S.anm"
+        SHA256: 48d39b1919e7f60c53357b33efc8a2c5c092db86de7c991972f083be9a73f434
+        Install:
+          TargetPath: script/@InlineScene_S.anm
+      - Path: "@InlineScene_S.obj"
+        SHA256: ba94a82e4deb1084cec84bc26ab9e99e08fd5744c60ccb71a62beddb7be99098
+        Install:
+          TargetPath: script/@InlineScene_S.obj
+      - Path: "@InlineScene_S.scn"
+        SHA256: 1a730165614250e04d85b674f332a1c0ebad397a60de85907b6620ed526c0fc0
+        Install:
+          TargetPath: script/@InlineScene_S.scn
+      - Path: InlineScene_S.lua
+        SHA256: 0f9882d8fc85cfe6d420dcbaa12efc3e20807702c06b3ff0e091deb53e6acf77
+        Install:
+          TargetPath: script/InlineScene_S.lua
+      - Path: LICENSE
+        SHA256: d4288d24f7c7cda5b3caf14dfb6ff34fd55716523d2a4f419646d958450a3fd6
+      - Path: README.md
+        SHA256: a5aed79387db950e6c7fad83315672d02dd68bcc52f9982dc03e7e99300d5a1f
+ManifestVersion: 0.3.0
