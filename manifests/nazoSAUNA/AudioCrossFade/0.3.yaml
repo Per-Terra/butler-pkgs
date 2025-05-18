@@ -1,0 +1,27 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: AudioCrossFade
+DisplayName: 音声クロスフェード
+Version: "0.3"
+ReleaseDate: 2025-05-17
+Section: Other
+Depends:
+- patch.aul (>= r43+ss58)
+InstalledSize: 10761
+Developer:
+- nazoSAUNA
+Description: 拡張編集フィルタプラグイン「音声クロスフェード」 シーンチェンジのように使います
+Website:
+- https://github.com/nazonoSAUNA/AudioCrossFade.eef
+Files:
+- SourceUrl: https://github.com/nazonoSAUNA/AudioCrossFade.eef/releases/download/v0.3/AudioCrossFade_v0.3.zip
+  SHA256: 9f3c128be5dcb02e1e1df0a4aae56d08a024519df491bbfb9220f0a9e46220d8
+  Files:
+  - Path: AudioCrossFade.eef
+    SHA256: 65ebfaca6d256e7e6525d0857047f161cb5c6d941c16d4d73e5225f25e2dbbe7
+    Install:
+      TargetPath: plugins/AudioCrossFade.eef
+  - Path: Credit.md
+    SHA256: 0cf66d19b11b9c31eaa618220ea46079ece2da99f8b0f7c74415593690809ebe
+ManifestVersion: 0.3.0
