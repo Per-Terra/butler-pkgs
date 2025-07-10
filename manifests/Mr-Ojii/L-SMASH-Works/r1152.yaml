@@ -1,0 +1,83 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: L-SMASH-Works
+DisplayName: L-SMASH Works
+Version: r1152
+ReleaseDate: 2025-07-09
+Section: Plugin/Input
+Architecture: x64
+InstalledSize: 64772335
+Developer:
+- Mr-Ojii
+Description: AviUtl用入力プラグインその他
+Website:
+- https://github.com/Mr-Ojii/L-SMASH-Works-Auto-Builds
+Files:
+- SourceUrl: https://github.com/Mr-Ojii/L-SMASH-Works-Auto-Builds/releases/download/build-2025-07-09-13-50-54/L-SMASH-Works_r1152_Mr-Ojii_vimeo.zip
+  SHA256: 27869e65b8a1f3a9e011ab5c700e9f2811c15b85b238181ad80bcd24f5acdeaf
+  Files:
+  - Path: About-this-build.txt
+    SHA256: 3cc7a09c086e0939ff59188a68f4d1c048b16e3ea20287ab16751ae19179a4f0
+  - Path: LICENSE
+    SHA256: 7ba3b80ccccae2b622a212a4734c6a2f4189ec1306779ef0910ed3617dcbcbc9
+  - Path: lwcolor.auc
+    SHA256: cf2827d5f4acd5ccdeef5586543e8f5696d01957235a1d6477a4bb9043f36081
+    Install:
+      TargetPath: plugins/lwcolor.auc
+  - Path: lwdumper.auf
+    SHA256: 2b65727ba7a3435870441eacadec3948fb65526218c31003e67b2c729aee21f2
+    Install:
+      TargetPath: plugins/lwdumper.auf
+  - Path: lwinput.aui
+    SHA256: 9e51d8efaebd42ed7841904e43826af68b635f11ba4c673bc4a363567ae87328
+    Install:
+      TargetPath: plugins/lwinput.aui
+  - Path: lwinput64.aui
+    SHA256: 4838583aa555928c065b83a7c27cb5f0f41bb176ffe53775d0767162c928c84b
+    Install:
+      TargetPath: plugins/lwinput64.aui
+  - Path: lwmuxer.auf
+    SHA256: 24f1b4edc68b96c964d28a9c3d7f3b985401ceb1aff95ce4c93c9ae7e8d48bfd
+    Install:
+      TargetPath: plugins/lwmuxer.auf
+  - Path: README
+    SHA256: 809cb8613a4f5fe8e68b3196cac3a00e474251208da771ffb4c3c42907fad178
+  - Path: README.ja
+    SHA256: 65916cd6fbc0b9a1cdd188e5457544c24a571a4d00645306be4cbb88af1effbe
+  - Path: AviUtl2/lwinput.aui2
+    SHA256: 62dd401a33e15838aa20523a320d6a1266e4d00038d854d042db08ed2fff62bb
+  - Path: Licenses/dav1d.txt
+    SHA256: b327887de263238deaa80c34cdd2ff3e0ba1d35db585ce14a37ce3e74ee389e9
+  - Path: Licenses/FFmpeg.txt
+    SHA256: da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768
+  - Path: Licenses/game-music-emu.txt
+    SHA256: d2efc89fbb7533572a472d34e07964951810a3a4f8d3159ecc2dcaa1452c5c26
+  - Path: Licenses/L-SMASH.txt
+    SHA256: f778761540555e63528418e75784c0ed7bf2b89ab11f5ddbfd4bec7aa540e79d
+  - Path: Licenses/libvpl.txt
+    SHA256: bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677
+  - Path: Licenses/libvpx.txt
+    SHA256: 8267348d5af1262c11d1a08de2f5afc77457755f1ac658627dd9acf71011d615
+  - Path: Licenses/obuparse.txt
+    SHA256: c2a92a24f409940e3d510ba5e8c520141dc103748d7d0d23798364cc160bd074
+  - Path: Licenses/zlib.url
+    SHA256: 9b12c6736fbf96980bf484c3d83d7f12f54e9c08b5318b06b47a4628a93557dd
+Plugins:
+- Name: LW ColorSpace
+  Information: L-SMASH Works Color Space Converter r1152 by Mr-Ojii
+  Type: Color
+  InstallPath: plugins/lwcolor.auc
+- Name: L-SMASH Works Dumper
+  Information: L-SMASH Works Dumper r1152 by Mr-Ojii
+  Type: Filter
+  InstallPath: plugins/lwdumper.auf
+- Name: L-SMASH Works File Reader
+  Information: L-SMASH Works File Reader r1152 by Mr-Ojii
+  Type: Input
+  InstallPath: plugins/lwinput.aui
+- Name: L-SMASH Works Muxer
+  Information: L-SMASH Works Muxer r1152 by Mr-Ojii
+  Type: Filter
+  InstallPath: plugins/lwmuxer.auf
+ManifestVersion: 0.3.0
