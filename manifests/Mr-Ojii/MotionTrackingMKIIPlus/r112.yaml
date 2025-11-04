@@ -1,0 +1,59 @@
+# Created using CreateManifest.ps1 v0.3.0
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Per-Terra/butler-pkgs/main/schemas/JSON/manifest/0.3.0.json
+
+Identifier: MotionTrackingMKIIPlus
+DisplayName: MotionTracking MK-II Plus
+Version: r112
+ReleaseDate: 2025-11-03
+Section: Plugin/Other
+Depends:
+- aviutl (= 1.10)
+- exedit (= 0.92)
+InstalledSize: 24212780
+Developer:
+- Mr-Ojii
+Description: オブジェクトトラッキングを行うプラグイン
+Website:
+- https://github.com/Mr-Ojii/MotionTracking_MKII_Plus
+Files:
+- SourceUrl: https://github.com/Mr-Ojii/MotionTracking_MK-II_Plus/releases/download/r112/MotionTrackingMKIIPlus-AVX.zip
+  SHA256: 1645051f153d081828d8f5776a51823e7abb2c3b6f035e1741478c1e370849da
+  Files:
+  - Path: MotionTrackingMKIIPlus.auf
+    SHA256: 3ca4c0f6b8e52393a08bae0c7fd35e223eda01ca21e1f09253da267593fa12ac
+    Install:
+      TargetPath: plugins/MotionTrackingMKIIPlus.auf
+  - Path: README.ja.md
+    SHA256: 27aea57fb171f48418ffcf7af227589b959cf5a7361187b56d6a941a381d1545
+  - Path: README.md
+    SHA256: 7df8845c73b48cc58fbd61e297bd55bce288a64b71f13803b21dbec88ca39051
+  - Path: Licenses/aviutl_plugin_sdk.txt
+    SHA256: a3712115ff04b05c03e9077ac35d37711c2f03d24b00278745d0910477e35796
+  - Path: Licenses/MotionTrackingMKII.txt
+    SHA256: 3136d18fd1604cbc0cc09f4390338bde28fa99be8c8a46d062c44c8366bf5c09
+  - Path: Licenses/opencv_contrib.txt
+    SHA256: 3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5
+  - Path: Licenses/opencv.txt
+    SHA256: 3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5
+  - Path: MotionTracking_model/haarcascade_frontalface_default.xml
+    SHA256: 0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0
+    Install:
+      TargetPath: plugins/MotionTracking_model/haarcascade_frontalface_default.xml
+  - Path: MotionTracking_model/haarcascade_profileface.xml
+    SHA256: b39a4a3be45539db146a7fc1d3e761a292c196eb88421185e6a615b3055e612d
+    Install:
+      TargetPath: plugins/MotionTracking_model/haarcascade_profileface.xml
+Plugins:
+- Name: MotionTracking MK-II Plus
+  Information: MotionTracking MK-II Plus AVX r112 by Mr-Ojii
+  Type: Filter
+  InstallPath: plugins/MotionTrackingMKIIPlus.auf
+- Name: Pre-track:HSV Cvt
+  Information: Pre-track:HSV Converstion
+  Type: Filter
+  InstallPath: plugins/MotionTrackingMKIIPlus.auf
+- Name: Pre-track:BGSubtraction
+  Information: Pre-track:Background Subtraction
+  Type: Filter
+  InstallPath: plugins/MotionTrackingMKIIPlus.auf
+ManifestVersion: 0.3.0
