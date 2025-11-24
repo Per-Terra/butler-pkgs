@@ -9,7 +9,7 @@ jobs:
   update:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v6.0.0
 
       - name: Install and cache PowerShell modules
         uses: potatoqualitee/psmodulecache@v6.2.1
