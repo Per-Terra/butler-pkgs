@@ -16,7 +16,7 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: This Pull Request will soon be checked and approved automatically if there are no critical changes.
 
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v6.0.0
         with:
           fetch-depth: 0
 
