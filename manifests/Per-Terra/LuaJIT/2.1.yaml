@@ -3,31 +3,31 @@
 
 Identifier: LuaJIT
 Version: "2.1"
-ReleaseDate: 2025-11-27
+ReleaseDate: 2025-11-28
 Section: Core
 Architecture: x86
 Replaces:
 - exedit
-InstalledSize: 1233212
+InstalledSize: 1234419
 Developer:
 - Per-Terra
 Description: Per-TerraによるLuaJITの自動ビルド
 Website:
 - https://github.com/Per-Terra/LuaJIT-Auto-Builds
 Files:
-- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2025-11-27-00-58-32/LuaJIT_2.1_Win_x86.zip
-  SHA256: 8525d70a14b9fa0e148681c8d3964a6f836af77246768574f8c1c29823c5844a
+- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2025-11-28-00-57-53/LuaJIT_2.1_Win_x86.zip
+  SHA256: 737e4c3137894e1dbe961304a56cfd5100f025a373138dd8dd51946c5b074f29
   Files:
   - Path: About-This-Build.txt
-    SHA256: 1ef584a534ff62ed488fa39e98145d081dcd587c31665868824edad084718117
+    SHA256: b0186e24cd87bec192ea6b3d382153973475ceea200bc35f85e8d85358a9f781
   - Path: COPYRIGHT
     SHA256: c5bbe7ecf4ae277ed8e1485a65f9e6c7e1ab9004e6ddf2b48d61e80e572140dd
   - Path: lua51.dll
-    SHA256: bf9f8697c08d628c46bf188c3bf071933d8d5f796da18197b53a24545ab9fec4
+    SHA256: df2eba89273e8c81dabdcf500707a5fb976eb8f5ef41ca6801b4091f50e31ea2
     Install:
       TargetPath: lua51.dll
   - Path: luajit.exe
-    SHA256: eb1a6f629629c93dc5727958dfb80e5e12ae5aefa2db544cfe50e4fc24229df7
+    SHA256: 5ccc28bb833eefb348af4b4f24dfb83522bf7e039b1423619bc80b23425a4133
   - Path: README
     SHA256: 909348cbfccb03242ca8282cd0c6978977103c81f9fab6fbe9514bc5a63d0c75
   - Path: doc/bluequad-print.css
@@ -43,7 +43,7 @@ Files:
   - Path: doc/ext_ffi_api.html
     SHA256: 8688f9c42f5a9ef0724a3ed49fc21d2eab3bd64847dea48f6e48fcfea6d71242
   - Path: doc/ext_ffi_semantics.html
-    SHA256: 597ee65967d8fd098f8c2c0c28b332dc5cbbdb0bab9ab12761ef65e5b1f2636f
+    SHA256: ca709f3c96bab3a9495f8195fb384c1cb1d5dc5d11ddbef9b934a5aec043e70a
   - Path: doc/ext_ffi_tutorial.html
     SHA256: baec7a26262a569f0b7db516940939cdbeafcc86ebdd66f16774b2dec7166ab1
   - Path: doc/ext_ffi.html
