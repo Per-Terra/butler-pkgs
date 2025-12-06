@@ -3,7 +3,7 @@
 
 Identifier: LuaJIT
 Version: "2.1"
-ReleaseDate: 2025-12-05
+ReleaseDate: 2025-12-06
 Section: Core
 Architecture: x86
 Replaces:
@@ -15,19 +15,19 @@ Description: Per-TerraによるLuaJITの自動ビルド
 Website:
 - https://github.com/Per-Terra/LuaJIT-Auto-Builds
 Files:
-- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2025-12-05-01-01-47/LuaJIT_2.1_Win_x86.zip
-  SHA256: 575e10e24ab97b307ecd21e594dffadd7358301c0bafc38a8edcb002a80f45b6
+- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2025-12-06-00-58-14/LuaJIT_2.1_Win_x86.zip
+  SHA256: ec698074e0d0f1611b948074b75bddf110fc97e8df4d4026c73fcc00bd27a25a
   Files:
   - Path: About-This-Build.txt
     SHA256: 40f9c348c85c753486c87aa145b89b9e2d78ded5098e66abff81ac602fa33cac
   - Path: COPYRIGHT
     SHA256: c5bbe7ecf4ae277ed8e1485a65f9e6c7e1ab9004e6ddf2b48d61e80e572140dd
   - Path: lua51.dll
-    SHA256: 9e3a9a018eaf93a9d90662b052b66f35eb9d5c5d8420142a1e5a6b2d75e99c29
+    SHA256: 70bb6b1ff72d681fd94e68488b4d8d818e075c1f8f14df4bcde93d98dfadf40b
     Install:
       TargetPath: lua51.dll
   - Path: luajit.exe
-    SHA256: 6e8ad71ff15b68059c44fe42512c89f90fd921f43f01cdf21f40bd28ceb3e0e1
+    SHA256: 4fde99d26f2b8cbf8249a5b1a2f7362f4986f5d6799295ba773bc5934e27b3ec
   - Path: README
     SHA256: 909348cbfccb03242ca8282cd0c6978977103c81f9fab6fbe9514bc5a63d0c75
   - Path: doc/bluequad-print.css
