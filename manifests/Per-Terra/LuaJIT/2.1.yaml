@@ -3,31 +3,31 @@
 
 Identifier: LuaJIT
 Version: "2.1"
-ReleaseDate: 2026-02-26
+ReleaseDate: 2026-02-27
 Section: Core
 Architecture: x86
 Replaces:
 - exedit
-InstalledSize: 1235443
+InstalledSize: 1235542
 Developer:
 - Per-Terra
 Description: Per-TerraによるLuaJITの自動ビルド
 Website:
 - https://github.com/Per-Terra/LuaJIT-Auto-Builds
 Files:
-- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2026-02-26-01-17-25/LuaJIT_2.1_Win_x86.zip
-  SHA256: b2667a4b378ad336e9a8301087863c92183f4248fb14ac628a89bfde9255824a
+- SourceUrl: https://github.com/Per-Terra/LuaJIT-Auto-Builds/releases/download/build-2026-02-27-01-16-04/LuaJIT_2.1_Win_x86.zip
+  SHA256: d0ea1828e438fd13dd874c6c078cc2d8077c7cbfc43df9954e0730e92a477098
   Files:
   - Path: About-This-Build.txt
-    SHA256: a6039ba28fb62b3e1bbd6feead465f67b41a81e4c566f90b75e0f9f539037cee
+    SHA256: b2aae6a1208ebac472681da537b1043496cad7ba0e5c0c585bc63567b2eddc03
   - Path: COPYRIGHT
     SHA256: 1b10a02c9474cb908da2d87bc908edd8798f9ad28d9a8c53fbd05c13227f7394
   - Path: lua51.dll
-    SHA256: 0aaa97a5db1c0499ab055694d3bf211541ee276e4f303fd7e2028c1bba8040d1
+    SHA256: 3fc596b891c15b9b63310e20d0f7a6368b1433034d1b3944b0426ba9925a8984
     Install:
       TargetPath: lua51.dll
   - Path: luajit.exe
-    SHA256: 0dc969f830e480091046e8b69e9b7c5f5450bc2fcb5086ab9c577c1ab4560822
+    SHA256: d1b40ae8f7dd641ef3a5129ca1fdb4f146c18ab6bdf8bf1a95d136707d9051b9
   - Path: README
     SHA256: 63a5cebd3b3bf0adad4c8cbf470bca5ab62f668d0de38e878b5fd70bc1c6c8db
   - Path: doc/bluequad-print.css
@@ -41,7 +41,7 @@ Files:
   - Path: doc/ext_c_api.html
     SHA256: 1e4c7f55d60428976d0d3f838fc59e418a1292daddd182fae804c5d2ce1a1164
   - Path: doc/ext_ffi_api.html
-    SHA256: b82e5fb4c1f35ee7103b8ad244428747e7135160289350ae64b236e693a54649
+    SHA256: fe9b873f738a4a3887261df9a01b8d064caca949112d6aa7599f0d7cae8e0055
   - Path: doc/ext_ffi_semantics.html
     SHA256: fe8165c9f4f4d5aa3cacd093a4bc8d746d82365361c9398560252fdb044e48c3
   - Path: doc/ext_ffi_tutorial.html
