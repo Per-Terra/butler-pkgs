@@ -3,7 +3,7 @@
 
 Identifier: QSVEnc
 Version: "8.13"
-ReleaseDate: 2026-05-23
+ReleaseDate: 2026-05-27
 Section: Plugin/Output
 Replaces:
 - ffmpegOut
@@ -13,7 +13,7 @@ Replaces:
 - VVenCguiEx
 - x264guiEx
 - x265guiEx
-InstalledSize: 231352721
+InstalledSize: 217722827
 Developer:
 - rigaya
 Description: |-
@@ -24,7 +24,7 @@ Website:
 - https://github.com/rigaya/QSVEnc
 Files:
 - SourceUrl: https://github.com/rigaya/QSVEnc/releases/download/8.13/Aviutl_QSVEnc_8.13.zip
-  SHA256: 7943337e7c9066a58505911e6871f196b241ba8176047f5aacf3ee4e7db881a6
+  SHA256: 0a4fa8f3de5d5302ab478266902af4b9e5fc711e8072707fc7d870379731683a
   Files:
   - Path: QSVEnc_readme.txt
     SHA256: 5ece4ee26d0d761a7acd7219bc0f040241ef7ceb6a09a284c123a4718d166580
@@ -103,7 +103,7 @@ Files:
     Install:
       TargetPath: exe_files/QSVEncC/x64/nnedi3_weights.bin
   - Path: exe_files/QSVEncC/x64/QSVEncC64.exe
-    SHA256: 36845329a2de7cc6e45637e63bed8cf897231c7ffc38c059d7a3b432b8958a3c
+    SHA256: 8f6f9393ebd3a69aafef8eeb22bec3b8e625f087e4a9ff4130841b9d2a177fce
     Install:
       TargetPath: exe_files/QSVEncC/x64/QSVEncC64.exe
       Method: Copy
@@ -111,10 +111,6 @@ Files:
     SHA256: a4d4504f3c23c4a07ee3418e177df5357f3264fbd830861a9074629ba82e609a
     Install:
       TargetPath: exe_files/QSVEncC/x64/swresample-6.dll
-  - Path: exe_files/QSVEncC/x64/license/GPLv2.txt
-    SHA256: 498d32907f132c2cd7d3ae269f304aed87156293f63e724b83d9f62ed787d55a
-    Install:
-      TargetPath: exe_files/QSVEncC/x64/license/GPLv2.txt
   - Path: exe_files/QSVEncC/x86/avcodec-62.dll
     SHA256: 358703d715f5073e3e2cac96a9418e5dc874d98453a28351d203bff188c487a2
     Install:
@@ -148,7 +144,7 @@ Files:
     Install:
       TargetPath: exe_files/QSVEncC/x86/nnedi3_weights.bin
   - Path: exe_files/QSVEncC/x86/QSVEncC.exe
-    SHA256: e070057cb0598e31cfdf3cf97c8da683b04e4cbd77c6a7e7b43db64cc1af6663
+    SHA256: ec383a3bdcfda56da5783641238193c20b608b550544a1288f2dbbe842617279
     Install:
       TargetPath: exe_files/QSVEncC/x86/QSVEncC.exe
       Method: Copy
@@ -156,26 +152,16 @@ Files:
     SHA256: b2b6a24075037a28569ecf983ae9e11ce8c3a54a59094eadd0c2e8470b312ced
     Install:
       TargetPath: exe_files/QSVEncC/x86/swresample-6.dll
-  - Path: exe_files/QSVEncC/x86/license/GPLv2.txt
-    SHA256: 498d32907f132c2cd7d3ae269f304aed87156293f63e724b83d9f62ed787d55a
-    Install:
-      TargetPath: exe_files/QSVEncC/x86/license/GPLv2.txt
-  - Path: license/GPLv2.txt
-    SHA256: 498d32907f132c2cd7d3ae269f304aed87156293f63e724b83d9f62ed787d55a
   - Path: plugins/auo_setup.auf
     SHA256: d9641b0e9476c8fbf7ded5e10b32c7509783eb0b8e5403ebc1365d7eb4af9dc8
     Install:
       TargetPath: plugins/auo_setup.auf
-  - Path: plugins/nnedi3_weights.bin
-    SHA256: 27f382430435bb7613deb1c52f3c79c300c9869812cfe29079432a9c82251d42
-    Install:
-      TargetPath: plugins/nnedi3_weights.bin
   - Path: plugins/QSVEnc_uninstall.bat
     SHA256: 0d5eb0dfd418797f9f704723b030ae5116bb690358daeaecece789b9b97836d8
     Install:
       TargetPath: plugins/QSVEnc_uninstall.bat
   - Path: plugins/QSVEnc.auo
-    SHA256: ef9693ea7553e8b19ccfc4f9fc2bc4646eb96786fc2ad8f6da68ac89ea767389
+    SHA256: eb6355e2b65766eb0199d66b2259ba315e3a35914587b7641b2704fc3cbcf136
     Install:
       TargetPath: plugins/QSVEnc.auo
   - Path: plugins/QSVEnc.en.ini
