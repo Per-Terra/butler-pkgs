@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Create comment
         id: couc
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: This Pull Request will soon be checked and approved automatically if there are no critical changes.
@@ -113,7 +113,7 @@ jobs:
 
       - name: Update Comment
         if: steps.diff.outputs.modified_manifests && steps.diff.outputs.critical_change == 'true'
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           comment-id: ${{ steps.couc.outputs.comment-id }}
           body: |
